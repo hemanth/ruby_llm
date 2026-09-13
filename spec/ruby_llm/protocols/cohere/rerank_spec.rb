@@ -90,6 +90,20 @@ RSpec.describe RubyLLM::Protocols::Cohere::Rerank do
 
       expect(rerank.tokens.input).to eq(42)
     end
+
+    it 'rejects a negative document index instead of wrapping to the last document' do
+      body['results'] = [{ 'index' => -1, 'relevance_score' => 0.9 }]
+
+      expect { protocol.send(:parse_rerank_response, response, model: 'rerank-v4.0-pro', documents: documents) }
+        .to raise_error(RubyLLM::Error, /invalid document index/)
+    end
+
+    it 'rejects an out-of-range document index instead of returning a nil document' do
+      body['results'] = [{ 'index' => documents.length, 'relevance_score' => 0.9 }]
+
+      expect { protocol.send(:parse_rerank_response, response, model: 'rerank-v4.0-pro', documents: documents) }
+        .to raise_error(RubyLLM::Error, /invalid document index/)
+    end
   end
 
   def response

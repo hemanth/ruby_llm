@@ -38,13 +38,20 @@ module RubyLLM
         def parse_rerank_results(data, documents)
           Array(data['results']).map do |result|
             index = result['index']
+            unless valid_rerank_index?(index, documents)
+              raise Error, 'Cohere reranking returned an invalid document index'
+            end
 
             RubyLLM::Rerank::Result.new(
               index: index,
-              document: result.dig('document', 'text') || (index && documents[index]),
+              document: result.dig('document', 'text') || documents[index],
               score: result['relevance_score']
             )
           end
+        end
+
+        def valid_rerank_index?(index, documents)
+          index.is_a?(Integer) && index.between?(0, documents.length - 1)
         end
       end
     end
