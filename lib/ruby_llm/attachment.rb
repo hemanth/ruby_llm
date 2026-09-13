@@ -67,6 +67,11 @@ module RubyLLM
     #
     # +config:+ is the Configuration a URL source is downloaded with, and
     # defaults to the global one.
+    #
+    # Paths and URLs must be trusted and authorized by the application.
+    # They can be read or fetched during construction to detect the MIME type.
+    # Validate upload parameters before passing them here: an unchecked String
+    # can access local files or internal network endpoints.
     def initialize(source, filename: nil, config: nil)
       @config = config
       @source = source

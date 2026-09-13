@@ -145,6 +145,10 @@ module RubyLLM
     # treating it as a final answer. Attach files with +with:+.
     # A given block receives streamed Chunk objects as they arrive.
     #
+    # String attachments read local paths or fetch URLs. Only pass trusted,
+    # authorized sources; validate user uploads before calling this method.
+    # See Attachment.new.
+    #
     #   chat.ask "What's the best way to learn Ruby?"
     #   chat.ask "What's in this image?", with: "ruby_conf.jpg"
     #   chat.ask "Analyze these files", with: ["diagram.png", "report.pdf"]

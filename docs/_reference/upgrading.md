@@ -48,6 +48,9 @@ bundle add ruby_llm --version 2.0.0.rc2
 
 Use the [API changes](#api-changes) below to update your calls, then run your tests. If you use Rails persistence, follow the steps below before deploying.
 
+If you copied the earlier Rails attachment example, replace `with: params[:uploaded_file]` with the [validated upload example]({% link _advanced/rails-persistence.md %}#attachments-and-structured-output). An unchecked String can make your server read a local file or fetch an internal URL. This requires an application code change; upgrading the gem alone does not validate controller parameters.
+{: .warning }
+
 ### 1. Generate the Rails Migrations
 
 Choose how much migration work you want to do before pausing AI activity. The default `rename` mode moves the existing model and tool-call tables into RubyLLM's ownership. The optional `copy` mode prepares and backfills while 1.16 remains active, then catches up intervening writes during finish. It also retains a protected path back to 1.16.

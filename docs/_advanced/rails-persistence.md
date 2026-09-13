@@ -213,10 +213,20 @@ No application `Batch` model is required. See [Batch Processing]({% link _advanc
 
 ## Attachments and Structured Output
 
-With Active Storage on your message model, files passed to `ask` are persisted with the user message:
+With Active Storage on your message model, files passed to `ask` are persisted with the user message. In a controller action, check that an upload parameter is a file before passing it to `ask`:
 
 ```ruby
-chat.ask("What is in this file?", with: params[:uploaded_file])
+uploaded_file = params[:uploaded_file]
+return head :bad_request unless uploaded_file.is_a?(ActionDispatch::Http::UploadedFile)
+
+chat.ask("What is in this file?", with: uploaded_file)
+```
+
+An upload field can arrive as a String, Array, or Hash. Strong parameters permit Strings, so permitting the field does not prove that it contains a file. Validate every entry when accepting multiple uploads. See [Attachment Security]({% link _core_features/attachments.md %}#attachment-security) for how RubyLLM handles file paths and URLs.
+
+You can also pass stored attachments that the current user is authorized to access:
+
+```ruby
 chat.ask("Compare these", with: project.documents)
 ```
 
