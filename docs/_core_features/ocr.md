@@ -29,7 +29,7 @@ puts ocr.markdown
 
 The file may be a local path, an `http(s)` URL, an IO object, or a `RubyLLM::Attachment`. Remote URLs must be publicly reachable.
 
-Mistral accepts PDFs, office documents, and images. Cohere Parse accepts one image per request.
+Mistral accepts PDFs, office documents, text files, and images. Cohere Parse accepts one image per request.
 
 ## Working with Pages
 

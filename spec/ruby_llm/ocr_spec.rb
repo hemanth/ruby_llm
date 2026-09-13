@@ -4,6 +4,7 @@ require 'spec_helper'
 
 RSpec.describe RubyLLM::OCR, :live do
   let(:pdf_path) { File.expand_path('../fixtures/sample.pdf', __dir__) }
+  let(:csv_path) { File.expand_path('../fixtures/sample.csv', __dir__) }
 
   describe '#pages', live: false do
     it 'preserves a normalized page and its unmodified provider data' do
@@ -33,6 +34,13 @@ RSpec.describe RubyLLM::OCR, :live do
       expect(ocr.pages.first.index).to eq(0)
       expect(ocr.markdown).to match(/sample pdf/i)
       expect(ocr.model).to eq(model_for(:mistral, :ocr))
+    end
+
+    it "mistral/#{model_for(:mistral, :ocr)} extracts markdown from a CSV file" do
+      ocr = RubyLLM.ocr(csv_path, model: model_for(:mistral, :ocr), provider: :mistral)
+
+      expect(ocr.pages.length).to eq(1)
+      expect(ocr.markdown).to include('12345')
     end
 
     it 'uses the default OCR model when none is given' do

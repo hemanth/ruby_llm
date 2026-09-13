@@ -31,6 +31,24 @@ RSpec.describe RubyLLM::Providers::Mistral::OCR do
       expect(payload[:document][:image_url]).to start_with('data:image/png;base64,')
     end
 
+    it 'inlines text files as base64 data URIs' do
+      text_path = File.expand_path('../../../fixtures/ruby.txt', __dir__)
+
+      payload = described_class.render_ocr_payload(text_path, model: 'mistral-ocr-latest')
+
+      expect(payload[:document][:type]).to eq('document_url')
+      expect(payload[:document][:document_url]).to start_with('data:text/plain;base64,')
+    end
+
+    it 'inlines XML documents as base64 data URIs' do
+      xml_path = File.expand_path('../../../fixtures/ruby.xml', __dir__)
+
+      payload = described_class.render_ocr_payload(xml_path, model: 'mistral-ocr-latest')
+
+      expect(payload[:document][:type]).to eq('document_url')
+      expect(payload[:document][:document_url]).to start_with('data:application/xml;base64,')
+    end
+
     it 'merges options into the payload in Mistral vocabulary' do
       payload = described_class.render_ocr_payload(
         'https://example.com/report.pdf',
