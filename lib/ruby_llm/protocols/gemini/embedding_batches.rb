@@ -60,6 +60,11 @@ module RubyLLM
           metadata = responses.first.fetch('metadata')
           return if responses.size < metadata.fetch('embedding_count')
 
+          positions = responses.map { |inline| inline.dig('metadata', 'embedding_index') }
+          unless positions.sort == (0...responses.size).to_a
+            return [index, nil, batch_failure(key, 'Invalid or duplicate embedding record positions')]
+          end
+
           vectors = embedding_batch_vectors(responses)
           return [index, nil, batch_failure(key, 'Gemini returned no embedding')] unless vectors
 
