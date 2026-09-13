@@ -503,6 +503,8 @@ class WorkAssistant < RubyLLM::Agent
 end
 ```
 
+An agent's own `instructions` declarations take precedence over its conventional prompt. Inherited declarations are the fallback when neither exists. An empty child prompt or an explicit `instructions ""` suppresses inherited instructions. See [Agents]({% link _advanced/agents.md %}#default-instructions-prompt).
+
 ### Provider-Specific Options
 
 Use `provider_options` for options specific to a provider, on chat instances, agent and tool classes, and media calls:

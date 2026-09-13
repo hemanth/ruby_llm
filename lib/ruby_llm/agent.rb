@@ -53,8 +53,7 @@ module RubyLLM
       :@input_names => [],
       :@fallbacks => [],
       :@fallback_options => {},
-      :@rescue_handlers => [],
-      :@instructions => []
+      :@rescue_handlers => []
     }.freeze
     # Simple value options: a class-level getter/setter macro whose value the
     # agent forwards to the matching Chat#with_* when it builds its chat.
@@ -177,15 +176,16 @@ module RubyLLM
       #     "Today is #{Date.current}"
       #   end
       #
-      # A named agent uses its conventional template automatically when it
-      # exists, even without calling this method. In Rails mode, declarations
-      # persist when the record is created unless <tt>persist: false</tt>;
+      # The class's own declarations take precedence over its conventional
+      # template. Inherited declarations are used only when neither exists.
+      # In Rails mode, declarations persist when the record is created unless
+      # <tt>persist: false</tt>;
       # ::find always reapplies them without rewriting history. Called with no
       # arguments, returns the declarations.
       def instructions(text = nil, append: false, persist: true, cache_until_here: false, **prompt_locals, &block)
         return instruction_declarations if text.nil? && prompt_locals.empty? && !block_given?
 
-        instruction_declarations << {
+        (@instruction_declarations ||= []) << {
           value: block || text || { prompt: 'instructions', locals: prompt_locals },
           append: append,
           persist: persist,
@@ -611,6 +611,8 @@ module RubyLLM
       end
 
       def copy_inherited_config_to(subclass)
+        subclass.instance_variable_set(:@inherited_instruction_declarations, instruction_declarations.dup)
+
         DUPED_INHERITED_CONFIG.each do |ivar, default|
           value = instance_variable_defined?(ivar) ? instance_variable_get(ivar) : default
           subclass.instance_variable_set(ivar, value.respond_to?(:dup) ? value.dup : value)
@@ -767,8 +769,7 @@ module RubyLLM
       end
 
       def instructions_config
-        return instruction_declarations if instruction_declarations.any?
-        return [] unless default_instructions_prompt_exists?
+        return instruction_declarations if @instruction_declarations&.any? || !default_instructions_prompt_exists?
 
         [{
           value: { prompt: 'instructions', locals: {} },
@@ -779,7 +780,7 @@ module RubyLLM
       end
 
       def instruction_declarations
-        @instruction_declarations ||= []
+        @instruction_declarations || @inherited_instruction_declarations || []
       end
 
       def rails_chat_record?(chat)

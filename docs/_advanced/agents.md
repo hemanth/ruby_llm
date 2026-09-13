@@ -254,7 +254,15 @@ RubyLLM looks for:
 
 * `app/prompts/work_assistant/instructions.txt.erb`
 
-If the file exists, it is rendered and used as instructions automatically. If it does not exist and you did not set `instructions`, the agent starts without system instructions. To require a prompt and fail loudly when it is missing, reference it explicitly:
+Instructions are selected in this order:
+
+1. `instructions` declarations on the agent class.
+2. The agent's conventional `instructions.txt.erb` template.
+3. Inherited `instructions` declarations, including their persistence and cache settings.
+
+Child declarations and templates replace inherited instructions. An empty child template or an explicit `instructions ""` means no instructions. If none of these sources exists, the agent starts without system instructions.
+
+To require a prompt and fail loudly when it is missing, reference it explicitly:
 
 ```ruby
 class WorkAssistant < RubyLLM::Agent

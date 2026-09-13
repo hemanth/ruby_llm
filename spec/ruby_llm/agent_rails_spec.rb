@@ -209,6 +209,50 @@ RSpec.describe RubyLLM::Agent do
     expect(chat.reload.messages.where(role: 'system').pluck(:content)).to eq(['Stable two'])
   end
 
+  it 'preserves inherited instruction persistence and caching on create and find' do
+    parent = Class.new(RubyLLM::Agent) do
+      chat_model Chat
+      model model_for(:openai, :temperature)
+      instructions 'Inherited policy', cache_until_here: true
+      instructions(append: true, persist: false) { "Runtime chat #{chat.id}" }
+    end
+    child = Class.new(parent)
+
+    created = child.create!
+    loaded = child.find(created.id)
+
+    [created, loaded].each do |record|
+      expect(record.messages.where(role: 'system').pluck(:content, :cache_until_here)).to eq([
+                                                                                               ['Inherited policy',
+                                                                                                true]
+                                                                                             ])
+      expect(record.to_llm.messages.map(&:content)).to eq(['Inherited policy', "Runtime chat #{created.id}"])
+      expect(record.to_llm.messages.map(&:cache_until_here?)).to eq([true, false])
+    end
+  end
+
+  it 'prefers child declarations and prompts to inherited instructions on Rails records' do
+    prompt_dir = write_prompt('spec_inherited_rails_agent', 'Child prompt')
+    parent = Class.new(RubyLLM::Agent) do
+      chat_model Chat
+      model model_for(:openai, :temperature)
+      instructions 'Inherited policy', cache_until_here: true
+    end
+    child = stub_const('SpecInheritedRailsAgent', Class.new(parent))
+
+    record = child.create!
+    expect(record.messages.where(role: 'system').pluck(:content, :cache_until_here)).to eq([['Child prompt', false]])
+
+    child.instructions 'Child inline instructions', append: true
+    child.sync_instructions(record)
+
+    expect(record.reload.messages.where(role: 'system').pluck(:content)).to eq(['Child prompt',
+                                                                                'Child inline instructions'])
+    expect(child.create!.messages.where(role: 'system').pluck(:content)).to eq(['Child inline instructions'])
+  ensure
+    FileUtils.rm_rf(prompt_dir) if prompt_dir
+  end
+
   it 'keeps runtime instructions on repeated to_llm calls after find' do
     prompt_dir = write_prompt(
       'spec_runtime_reuse_agent',
