@@ -1023,7 +1023,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:07:16 GMT
+      - Mon, 14 Sep 2026 11:08:00 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -1031,13 +1031,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Req-Cost-Time:
-      - '67'
+      - '58'
       Req-Arrive-Time:
-      - '1788955637399'
+      - '1789384080086'
       Resp-Start-Time:
-      - '1788955637467'
+      - '1789384080144'
       X-Envoy-Upstream-Service-Time:
-      - '60'
+      - '52'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -1046,5 +1046,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"error":{"code":400,"message":"request (10015 tokens) exceeds the
         available context size (8192 tokens), try increasing it","type":"exceed_context_size_error","n_prompt_tokens":10015,"n_ctx":8192}}'
-  recorded_at: Wed, 09 Sep 2026 12:07:17 GMT
+  recorded_at: Mon, 14 Sep 2026 11:08:00 GMT
 recorded_with: VCR 6.4.0

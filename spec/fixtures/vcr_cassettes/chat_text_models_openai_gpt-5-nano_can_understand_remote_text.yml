@@ -29,41 +29,41 @@ http_interactions:
       X-Origin-Cache:
       - HIT
       Last-Modified:
-      - Tue, 08 Sep 2026 03:44:55 GMT
+      - Mon, 14 Sep 2026 01:49:25 GMT
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"6a9f84b7-9c6"
+      - W/"6aa752a5-9c6"
       Expires:
-      - Wed, 09 Sep 2026 12:14:51 GMT
+      - Mon, 14 Sep 2026 09:48:55 GMT
       Cache-Control:
       - max-age=600
       X-Proxy-Cache:
       - MISS
       X-Github-Request-Id:
-      - 87C6:464DE:E0647A:E2BECB:6AA14B62
+      - EA64:1E29A7:5B464DB:5C2A2FF:6AA7C0AE
       X-Github-Edge-Region:
       - fra
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 09 Sep 2026 12:06:28 GMT
+      - Mon, 14 Sep 2026 09:40:22 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '66'
+      - '47'
       X-Served-By:
-      - cache-ber1080039-BER
+      - cache-ber1080023-BER
       X-Cache:
       - HIT
       X-Cache-Hits:
       - '1'
       X-Timer:
-      - S1788955588.447609,VS0,VE1
+      - S1789378823.676904,VS0,VE1
       Vary:
       - Accept-Encoding
       X-Fastly-Request-Id:
-      - d8f4c5739e202c9e9b8f161f47909ca78a6969ec
+      - 7fb1d6a1ce455d662638a9405186d721fde0e5e9
     body:
       encoding: ASCII-8BIT
       string: "Ruby is copyrighted free software by Yukihiro Matsumoto <matz@netlab.jp>.\nYou
@@ -99,7 +99,7 @@ http_interactions:
         \"AS IS\" AND WITHOUT ANY EXPRESS OR\n     IMPLIED WARRANTIES, INCLUDING,
         WITHOUT LIMITATION, THE IMPLIED\n     WARRANTIES OF MERCHANTABILITY AND FITNESS
         FOR A PARTICULAR\n     PURPOSE.\n"
-  recorded_at: Wed, 09 Sep 2026 12:06:28 GMT
+  recorded_at: Mon, 14 Sep 2026 09:40:22 GMT
 - request:
     method: post
     uri: https://api.openai.com/v1/responses
@@ -157,7 +157,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:06:41 GMT
+      - Mon, 14 Sep 2026 09:40:32 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -181,7 +181,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '12154'
+      - '9330'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -193,11 +193,11 @@ http_interactions:
       X-Ratelimit-Remaining-Requests:
       - '4999'
       X-Ratelimit-Remaining-Tokens:
-      - '1998543'
+      - '1998903'
       X-Ratelimit-Reset-Requests:
       - 12ms
       X-Ratelimit-Reset-Tokens:
-      - 43ms
+      - 32ms
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Set-Cookie:
@@ -208,15 +208,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "resp_02235149502a9ba8016aa14bc4da7487d2a8c0633c03a2e832",
+          "id": "resp_02e7cc854aaf9bc0016aa7c106d8c087d2916170b67cac3b0c",
           "object": "response",
-          "created_at": 1788955588,
+          "created_at": 1789378822,
           "status": "completed",
           "background": false,
           "billing": {
             "payer": "developer"
           },
-          "completed_at": 1788955600,
+          "completed_at": 1789378832,
           "error": null,
           "frequency_penalty": 0.0,
           "incomplete_details": null,
@@ -227,14 +227,14 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "rs_02235149502a9ba8016aa14bc54a8c87d2869cc178ea362cda",
+              "id": "rs_02e7cc854aaf9bc0016aa7c10817b087d299120c599b21524f",
               "type": "reasoning",
               "content": [],
-              "encrypted_content": "gAAAAABqoUvQf-ShLNQ-CRFWgg3lGlnOTfuWXJRAlIWhXs3xmtfrx2FP9vOCL_XZuerc5wpdbnEBTEZkpNtrZGy16ZeWtXPqIqHCeXNbX9jQoiN7tOIGcMFWTcPBLtprG9sNcGhIEN0PbTw6D-hh87UmS2BCcjPpJiRb2CRvOhdjjyK9GgMqqfYaZN-SlRR4CXJoTuWzxmv8-CaYplIYf5WAE-P5tw_Js05zSKrQ8Sz1dP4vUflNEbFvhdZaTDdzyWzxSypUBVrfbViFfN-5MXgqiBCq88wtUj2jRN6W6GV4QGTX_bpDkfPIDJmwWO6QKPrukfyvVqODOBE_mhSkw6602cCbQ32OYKnxDx9kQbjcZLngrxVLUJSes0B89kPeZZT0qbWWK7EN5rNdOfTkdOR_BCfCZRsos8bDULJ94GWwvLLj-z9Qf--Fu7ClO-nCi1JrfMkB2z7kq4ly_Wrg60XdPqTan_SARCuUxCgzsL9jVbkP_NYnwaplxGiOsh23DTT4hdCYjLk7WYCtQEObL93YyzywRl-sIQG-dJdLAYsYpaRp6bPMhDa16wMUHn-03n6FCC57gk0GR2yM24jjtkYn7nAZ3NtgZFCJpNosVZ8MamDsWd0nQe4LIvKqBSFB8FbcOdNwLYUcnnKBLHAwd6P4exK28RpEogHqCJsdvgd4_LDGDZVwHWdKI2fRlId0pb5082H-_Y-9ecYHSzLu-bvlboH0a8XOTVYvKL58qzgASeYOc2vhdVxs5LkVfkACQKMiUtcQUnTsj6T-eOSJHiSBty04Pe6BwySrz5OCXGtzVtPdiDmSaXrmaqU4AG7m3ZVgzlH_sLeiBEwJeBSmlBToh2J39TJFmOpuWgUhvIuSS5-o3ZfwBwbBbPW1GYnFVACYedcBpKv5OCxxDGK5LjFy52YjHmg1Q6hT2GGagpbpiSkdrqSGFFMPx1OekiVJ60IbsXwA9O8sDjQv8WECX4MiFzhrD03ZGGRlbEHm7qUhLQnEiP9qGG8EQlXT_RB-25B8hQ8Ie2X2Wf5hlcAYxL_2bU9eFqkH3IfDGqILK1WWy7pdL6ewaJfKA9CabcPOUvMCPJDZ6Q4DHUveaxKwSimTFA2Etpe2MZELG8FLcM_N2ReP8RSoiV5oIohXY9pbuapZoVzt65tVZ7fMlXJ95rXwKjClw86Ccb6dFbNEicwtlMTwkbncgBHdAXZ61y6Z4SNhOSQOcnog0Nx5g784Hi5z8DewpfkABqDSAs0lwllOM3sT6FrFxXO620Dnueh7GqPHUO3lgwDE4GeWQ-_WHYxzynOUqrU2Ctm0SKK2Bhf0NQleH6aD3MM973hN8YbM8nY8T3oYozeb0-KP9d2T7QBwVjHHx42bJ-2FU8Mhk8d88kgxxG5wd7g35gYhVj_C31fR2VuZLlyhLEq-Eux7Kd6hELP_9tSj9iXlALZBq_wDr7DYpQFHnK4Q3epjCW7rVy9VuYSHSKgwcGfudFkbYtDXKg1CE0fue17-BJAh95Y2pjNnJL5PkgbtGPAd2SEIoNFexkt6Lv_LzD08DptOG___avZdqa9IqwxgfSCoOaKUZhyIvZEOPJL_bRyejqgsYWTRx9zUUUT4YFHZ-dZuqEoI7mKEx4skq7hVKhVsYag7_h67JHQc6hi3kjWTb8TYGzGaWF2_71OLeZI0BNDWZtS3c-4je_D7Ix2CmGJm5w5bWXGbyuBbYxbd7Hv2B43TbehDTT5azy24_wQ2BRXu5AOPN1FQMHAuTtzwNagyLEOT6bTYSG-6wiid4LBaF-nghA0BtWqbX5Z_GXPm79SKxFOgez9D7tlmAK_L8JJRpv0fVLqym1vSd2xRSsWFrO1hMlmf_bPB38Qq6dF0wmO8dNEKVOUwZz8JJthflI_glirRPOnpSfm7Yo3hTpsLiV0nFC4iR07eB9AuP4flkiUeHIgSMdrB1k5_rqAKrRgfD4r8gGuztzKex8IiVUbOG88WrP-fq5xjMIcE8lEhRwrGEbxKpN_aumW9pa2SeSL_iDl2oChHhqDGqL2csPZc6UmBsVdjmNybhXU4yYaxH2sPJ6KYO7pVaPwZk0m24EgT_IVeWbyAwgjjkAXKN7RUTF2ieIqLBkmkAo_lv_8r0-IM4Grv60f28G6AmlGsy73gmPrBmXMUAg-ad9BZQk-KkXvLEh9KzxdOnsTvlYptkvj_3qbWNCp0VxxNP1UlIMBMajYk6Gj5zyGVF5_iD_GlS3M65VMXOnJSVQsRXbnU9Ys8CvUNuf63E8wp0ZKSAYNDAUC6FRk-AM0uZahnTY15kI9IA1pE6f5lnVNBWfAJ6tZ-NH9cT7OW_d0mu1brhBmaKuhJRRqwNQau4DSNslq2XqNU5VY9p8bhADAPmHyavx0GiJPaiFEhs7jNVeHane8OkmCoI_w6TQJ6wCnUwPzO5axFvo5BST7lhYP7izfaB1Tp2DWop7pcVjogwbnneidBK_W_LmYqjgj6_X2CYBsqWM4qpsYDDQZADrZ-pf_As3NhpmlEPNdsjjfs1x7v7FU4MtTaEadeU-l3TF8zUqHCgL6-a-aC1MRuO6TTX2E5-h6Zi9z_rTtJHzgHskUG0lwvY_VHp7HPdVjcSIfPuoZGSu8_I3EsQmDwDqgMVs-ex3_2EG9_OVAOUl7T2YHrSjcHPUupxOGlLsvIU-3JYQFtsrkBG6iivlorTOE6fTicPILbK_yi3OVc7oFjpfJQfPS6pfNj0NOKkQI5z1Tru3VqnYS1R2VK5U_iRmTev-P7jKMn7jBVNqKIZRZZI0MJ0VEny9VmH4oJV06jdKXYPhaFp0eNOMiEe1l25Xa3oFdCNh1DbvG0y4nkRDieyPeeRbB7yXqLtPTmicqE-oscbmRUiXHfx74O41N2yGP4Vt6zFx3zgAENm8echtAbLUa89is54coFz2ReZw3Mq-zs3E0gm3knpmDnZwOsS27a1N7jjPFBAMnuWFR-XUrnYN9JvWhRnKI_1N3umvfKp739TRJPWQIE6WQyaHXV7pczUI8zOBPubkeqnf9F4kh5chK0ooOaaOzWcHrfIw2PDmIYIaEQJ_OukB2RBZGUapJDZu4ZtuPedqILQKa_dGM5XnsAj8zQvijDIV_r8xxrsMLvs_DhBahCWu0wEH5gm-aXHT5clj8Xmu-nJ2dmFd-4Q_EjnXn39UrvqR0bwyDRLSTxn6s_CzizOwyOqseniBbmq7A4q_zvJWMhlZTP_m3NvxiUMkBmb4vjSavtvSuzpBjM3Hp03NvCr79LlGnPDH_5Ji_oKu9fFovdSpUTC3rMl7GHeXbtWv4EqCOrnb7RpikAohmrJVyL0zS0Q90JrAXZKk9G6tbwVl6a8_yLM-5EVs56uwCV0ZEqaRv-Wm2K9AxXg6IRMpQiCwcQAt9t0BvQqyi9SN10amwI2WGPhQS5U94eXGfrvMLHbe8cc6MVUFD_OfjG5y8c-f__ktV-7XNEsHioA-Jh1ItFLSnHKGGC7s10cIYT7Rh9fu2d8WDsluAelWuIARSS80BDD6qeJvyWtmxSU8PiJfULfMlAe9FasWGvgQp_PrUs1aHCzu89I9ABdb119-jQYWYCIytcRMCjdRTmKRGi6iRkNeIaan40xE5zXhtAohL_UGATLsW6kkS_QVYwD9zjDliWMvtPajnJZ70GokApVMxyCv_uEG0WZyTs9vVVurwh6iAqSEFIrLMl_9HsoMaPCjDOQKxxsGzkaDQaHND8bv6HHuQJmk4V13Et2SyaepOn3-N0dBGtZ-K68hbZaPP9fbSK0otsZZym0XTT91a1B_3O7OmyG3ROB9jyWxS7IWRNazqcF0WZRlTj4gELZEz2xd7nEQV633Pjrm7HE2_gOTrfAHK7Ve8gjy76XP1IckHywFag-f73mfM9IN3gHV2x10DfUy8_Sda86xycz1twkeS8gyRKKvVTpWnt-oXHp7zRZ7UJ07YzumbNeWkSpQBRxdgWmpZEgr1s3iYiItMSuxWaTkGdwPjplIdiOMK6x_-bEBNfAIRCyUy85p-VN-gMdE0uJHA-8m6xn9kCkmvzFEA8slAciY05yufNWROCELAATvV5M8MOYqaqpNmGFJbWXf3NQ3qXSpcWhZzL-ABeaEi7JEYlXJKvtdirsfzat4cZ_RHg8JzE2TKAxrJKNjvqEPJHe0P41rJMUaIaSinLBgsdGnN6UYFyVMvUwY9YzH3U-42gBlsDYU0fVIihA8uVrJuAhAGwNQQUxkb5DQGn-Uf-gT2DPRYw8cEO1BJrwYFNIq5gH6tOA4Li75-gyYSPTQ5cLFlJS5VLP7mQCLZY8JQ6pZmv-ngLiBKHwFfbbBXWF5bgksoTI6ju0V2wBnlOGpGeaVmXdtXZWww0mBApK_XUKQz9nLLpHd_OplnHnDMTkY-Wc4hERF2RUvI1dZSs8mPJJXMwkK0Rx1vyg9lViOZsoNVw33L1FAj4e5eInmfGS0Q3h3mEzxgOmTt-bfbOTq2S-o2M-kyRzFPZdI9e96Fe4zomEIeKyihZViAwPiN7AvnZLVAbJsPyHP9YDrQq4RuOT5P_OG9cV07NxA1mZO-fCm7WIGxiGR-9HTvJQJDSW2CSKyo_g9kw46PAbZCfyZOFZDtbchMXtmQ7ghRsry33pYH4g2kkwEJdz7Z4QiDg0qHE0zkcZMiC3eraVXr5w6O_PytPSl_jdH5BESKQezxARCguqMZj9GyPjZpviyX_t0brNYqzYUpV9gDWmMOc9MpDx4Q1O5_WSEq8_Hw_ygsHFEIcgnIaQJM3i602l70nE2ZyYJ3_cGpuMZze_Azksv9OjhTSDY3AwLNGv5gGtxmKj6wAiruFqTchLMybdmNH5G_enjCzxFhM93_d2dfvNEbik4_NTVXmJcQXjOP-_nZbx1sCWZDnyIZIkmE2U5SUWZDToZV_2uMSXgW0xHBYKYV0eaJbwFBnNN8uNfpM5CB0ZSKq53YrjtZdnYXh2115Ma29qBNhPJ4Bz0_C9ZghGmKSxne0jvY-tqwssv46CYs8RCLf-CD_8Id7NnLhK2AVpaRSKzDlNOtcfjr-VXsHBOpdPiooz4Lt8H9NszqbWXQ-hGxGX6Ln_D1qz9wf3Jrx0NrQPG5ePWB2yB5lhqXCyzfrjaRAan8Q1JsCH1rSMXGg7CI8Tj3gjiLC1gx9D7DikvrFfhYg4rd2qmgvpKbA882yAQ9QqWWFBJDsGixpMG-Y0nY0_yIcQU2qx-1yG7LFE8bxgmpW3_E0hRsLzZDaMJNSLtxAGLydGNqREFmcG60ThExsPBWu4CqwnqwzQWYSGEEvVn-Imc8Pb0MPE682_lojeiKDycSpcAh1zLhVLCQRHV5bI157BUBVTEBu4b8plu2VlOh1dY8Tf2GJ0RiW-CA53xfryNgLRR2zF5mmr-l5z-yBZCDAX9pS-iRZOJ1-Owe9MIbFaOceFwbV1leZnvDhQ_BbX492g0D2Qm4FBBZHKz4YKxX_zmMte9nROWj5wutfJRGwWSjMuthkSbCVCkMVhxBaytXx6GcUHXttoHMDIG6-Q3v72IA_Pc--PYoJ6HZxMW5GuPmjFv-1_HXuzEuPQIQXxO9f05ReagxkgR8qHI_HHcBJnD6tjDan3L-mPQCp-4g3pc5k0zQsNJhmEQFAwd_nurl3bpgZ8S7QFSSLHECnt7p9CvLfgWCkFzl8Yz38rEB03ehZWx0DAwt9MkThSORc-Ssvzi_E-49kdmq5CLIy4pdQK03_Y6yLo7s3qi_4f8wElmkHgGcsmmP5dovBvEKYatX91pJD1vMxWPwoWvYM-zay99WW3zJtlGeiLniAm97eNkS-JhUBLlxj3tw-GtN1GocZW58zObQZeDaIE5fZNnGFQQd59iL562QQ2JyM6fJDhmT9CHN_j6CFm7S69Tl-eyHloCKdpbNiOtqio7iNXDrLJ-MdYMqlBHjdXvTGIjvvIEJ77_xGkVPUeW0XM_jpndlWU-ne5iTG1Nu0serc1Z4O5623tT9fAgii7sOTyajsfD31xgt30SbePFKqamBBJg1jUS1GRYO86JuG0OnryUJdD4202X71nG5ZAx6PAtQ8EVQHTY4-P_SLpwooN2wTjowS_DLcfFZJjeJMPqQNOMUUK--VMVEuq_hupS1tqCuyucPS9fjzcrJnjRHBvyLJthby7odlnoQV9tP8LLm5Mr-04Pj7dyvhyUJyV6jsyh25o-AhB7cqq3AIqnZtcO9gUhyLgubIsf4LbcFuitcb8wUQsV7afCsxDuuwvt8GoOl9l5i1J5hUEWZ3gowY9GbykVPFXBfKC3wOxYXBFIFTpA6Bcl1Q06vNRAlpzg38smhqMCE-1j46JzpabVzzMkPDIpwm337eNdJWRgQg8bJ3jnKl8hLRFgrpQhbgHUMhP_NMCjOiCg70WBVLMd22daunE_GggryyRGNRaw6QPXu_xLgCdwyVgU2tEm8SSmqD_ZRJk3eO_qfDcLmBleIetd-dJRp-Uadc5_gCFhUo2YMkXpb6aGGbUgoRUTLD578dUN_yJAYWLcBDqAqSddgWEWCvhgxEqiYND26AgGE_hYJXkq0EhXI1YFa7vp5HeUC1CTVDGxroWF97KFNbVNOgb5pgDzv8PwIf-g8grFHASAM8l4lKYeBuJ4hfZvq0NGRjeR29KzHdnqQoYkdcEPQGNNmso2IoKVn2bGOu6JDbeeyiKqJMu2gmptM0tKMdkoyo-t3iXjR68M4YycaIKfCDw3WKTOyu8xbe7rM5RlGPbas0KZSAFZHM8bWTzMdpApFYGGvhA7IvLGDGoq3mXM1sEe3XfwUV6FY3OAT78nzADtCCsfsn5voXcexD0q1mDiwx3mWx80QrEnWsdrqSK246lb_QEn6JGiGcJvTK-EuCgyN1zgK6sUIVOqMFPkAi9om-L_qSu-v2grAXGs_nRP-2WotisI_x6E2fPb3fCNsRqzVPV7J1Nipe0jtXGyYRQwRI65MB00UoJIBf6sMSa2EUcwD2zdHQYjB8_xH1Ey7Pjgs6gPA05p22wR4mTgWkAQxoA-Bc7mYor0DJb7yMM4Xudfns_WcDqY9laG-i6ckTVCLvjppuLdCPjR_qOC4KDH7TNZCnNOya5qpgcgpUlGWrn4JjIqhRHX0JLElAypRUhr6-KZ4hDEgNfcPc4kJnRJAb_lQ2yg82e0ZbRH6VWYpSXmveMg7YRIdX7MoihccG7pl09XkJAgCthsaK6N0247O0neHqQaUVU37UyrjZTGw2Occ4iM6bfmD9r_BLSZllrxUiTMOh9-3qda2LNCS0rG-fCP5ZEdn0_49m8BdZ6feuXWk_ABgYSDxtNdw2DTJdq29-FkDI60vGNnZGSrxzymDZekQemUiTm8v82iMwMMBj2Lt47E4Jrdu57qU61uWj_8yo_xE5luUwf8j45bG6j2ylE_IqCEM2mfUa1Cm1fLtuZ6YFbU5BvF7kCEQH-A88kuPc_S6YUnwyeJIUthSnOEdFzbNdmL9aVv13cJYyyVv3gnld0Nj-otuRK3eVGb_I-PCs1SK5lRP5TRuV5IQl-PeYRt2V4QvGVSPi8X3KpTVrCAvN0kBIQEa02qFlbfbOHihf02KliduU5gTv8kGbjeECga4TojNNtNHvJXRk1DInspGe0VX0iPZvkBvcCVA-9HOyou2uhC6uxJblae-hnYRY3vvKzBaM33YpL5omzXjQpVmfxfBa6p4vE3NNzo5VgEWD9USv6f7fugZtMBPABnFZ0KH7J2IOq1TvbWEL9Fm5QQNyvMeMUCLoVCYqs-lZjQaRI6GJKh6VImhMgZSRWM3sGeb74ARQO8neur8O9kuGH2HEDa-S21fN9ZPVSfsXzg3pFmAkvSrPAm_JI_cBNcqoweDtJVvu-qoXg1qHmX5nRNf53i9GUQDutEAUC9wSaacmoj5xoBMOm87t2F5TrwBL5NSoM3HRn5FI1LmJmif23YOlKKFQFf4I13zF_MoOzVhPHC_HmR51aPQon7lt00EcMVZqKa8xDd8OHZap7pTGU0uKkPqCSNFCiuHRQZU4DI6bW8Gg9GzBHpqgqilY8u4b8awBgbg8mHp9B1A3lUrd-Ko1qvqgHNzpayfhoetE6j49EwvLL3BBWrk4X89yRxRnXeKMdkw3YYVsIHPtpD6HT2E6DWYCRM66gGxcqQffp-OgL3_fHhMrbbg7fpqxJq4Cc_gaRKQtZI5b-_0JhYA31lMmY6Lt9kG0qjPSBnZ6rKAF_pBAJSzsrYODI76QGyCPliCKOfrT8j-19SDJLvKW7eAMk_sb5oem2Q79brh2ggmU_3hoqQE49P2dKTK_8yavUBfKqjB67_qrbbQQowBtlIGYM2R6rtWmE0gVJy8ODVoRBWJnhkCdsBrCFSPOIXm_4CCsR3xq7ZT0pN871cY3G9fdOG85eU89eSqkxohK0jhF-Bn5vs_PzjgUKisf6C6WiqP4d5WE7S3MKzStZHY93lkkTx90JXc24XZCA6iE0US0E2lrjOaWxFzD0Zpon3hlMZMn3xgG2TbBllsIylrHErnOHO0xk9-FIqyoaFxgnaJBLtlgtHXvE8X3oKfTTxCAvvZ-C2mY-266kSVCww5SWiIkj_dqOTOg1Fz46YFN0W-Hcqo37K_8lweDl7ikkYxLKjwDz8FVH-YuHZA6MGBP01o-AzTW7QX0HZDDnkaS2Cwh1r4ICgVWXj1oQB4UOp7X0YUUcd7BagLUs4rPokygpWo8l1CrxyOzCdMdeULuZbhkpEXc3wLfDH8iTt3RdEuV48pInxsR5Ph2rv69avK7Jorp_Y_q7LZ6R9r5KScQH_EoD-Y9S2dXrd8zLcXBQrFUDrD8Pe4mAKmTtgCOwIE_L7_JKFb7ysvk6MouDjCGZjb9lKoZnf5sxBZgdRVXT7CzN9BxrvVpsiEajGxkR3UCv4n0pINBtRvIa8tPqRy0wpIQZk9feix6LPH-Qo2ghbyKDa2gLul_XaLjtX6UIyfu8aOUOrGl6NRS1UIQAgkGta8pJYw2sw97KpeTMB-AcotVDfENXCC2TJgFEXnJg6UlEwe-Vb94gj5UjbuGhuZqEtm3oDNMUrIf7P2Xq-PgPmpLlJItc49nd93Lfd-vAg0FbuJBBELQtGIKq71tQZrqpaYmRCf4sh-afbA_J7YlLnCuz8R7Qb4k3OGcsrlqvIaE0WSLlYsVjtWmypev4rn5BTAGWFrQfm-XuQJRikQMgMqOqWMvKI4N-ugU-9r3-7r7Mrn_DR11sqb9ZJO6akTM0TDAEX-lQN7mAoap1_q7nXjHQpb5BOQ1MaayOKmYaA-vJdgGFlrT9CSkEp63FxD1BSI3pOrUzF5KbmA9obxObhwNjkr_p5x8o-NK4FOI-D4LdW4-p3GpNh72fIOrW2x-Vk3THF6Yu_Ml-10mdp0-aWqT1FoSxVJhCfxSG7Nk2ezaNWlpmtI7RnWxMRoNAIRk0FvJlRoHoF836wnqtEojbXtFK5j03pBm6FAaE-X9M7Ky2tjZR_BEFX7uXz8zYDWW1Rxfb4teTdWaSSgcBlYnY01fqEGGNmeKilJwWs6EAo7NXA35zCdI3OkpkdY1QX6Wse0TbOlg7wzroBIAMiCt1Mb5iaktna1jowxbM637cRoXdNfqPzcZ_T8tXHdsEyEGZRiCE0vwIw8bHjg-z4I8-tjrJmTIWHc=",
+              "encrypted_content": "gAAAAABqp8EQ7ICyiF9hEK5HCnetAVKsLqk9elbirDadFq694IybrBLnO_g5dPv1w9amcxZPE7mU-E3XVbvFgRIgTu4ne0a5OxbPc_CkKlSdkdbeMeiwIbmz7g65iJN4rPdfW8VZwqAxmRYN4ULLu3fyEKb-B6AvCDve0yyIJklA7KL-XhahiGFtr2dr6xW2alj-QZz7rZViPOBmszyWRx-q33q4_lWhGU-Ij9SOZqKe1TDNIHTAVTOZaJsYFk8-alTV5UH9MlgiB4Yv_asKHvueDM45p8jp9Y55zhRqO2Gl9EfVXQtfquxhbvAcqhcu1WNfIqfh0OjcNKw2Gusa_WhzEdRefX9KibthoRiHOAfdZWf9j-jGGo1jFCKEIgEG38_PEKxS9v4mZfZt3-n-2WRmMkmW_eJq_LxzOEK9ik98moNO8Q6XrwFA28-C8_aRxrS_NTm5A41JQIPhtH1-pyf8BhgNhy1__lAGzEa3ZjmKhIPxDJBaqROhn5FY_qslrwig8rBA3fkD4Q4P1zZ27msfn0vsM3nlvXqyWi2CYmr6FLt4S6jRUc9-uLR81Tmx6ZqrnXxhC4hA4R0uxwTKkoT9G3o0K3m_lhUJdwwOR_lvhss8DZsy8FyC5Q3BzP2DEVp9MOb108gjoKlycjWcR_d45eNH8GhdrE7LVwuy8DrG_Ubwn5kef-K5Y7ggs6yIhG0cJBY7RX9d7bTkZfLJz2bhdDngOEW0eScgKy48poTzXsiGgdBX6z6EVgFzZB5x5CQzE2dAIo4O_lTE72mjLUsGBj6UOS7_oUMnfu8cFva6FbiK55MZQUt-AAe6gM7PUXrwH41e0rKw26cGmXzbPyjwqOg0p1cQkw5AgmMDBK8BmYEbBf0qoqdVWZdLDjmzHelUhdHNacYWtuIYQinbk4TLm5zWlawpSIZXY9mXmyAcBnW8Vrwxf1w6pYBlzv23Ox0I-qwfZTzYHCGEIHxgbQPnKilsNKcb5HwqEacXYjvB0Y71BgmGdA921uC0g-dkza-qvp1SaivED1upXdrklDJEgH3iAdcd9zUufiYjuiNuH51lrFukT-7A0wdtG2hu30djNBCpyabNatoyWPWByYbTNGWn3gqQZ5GunaO1gyyg_5kG-FT3RMDSX4u99njRXwgK5MHv-ti1yEbReZevUFmioNrEw4KCe6nEWW9g5yOW4RwFS_K5Z1YbwI55FMdkDnRvLoKnqAWYdRwEFSRP5kc-RjnqSf65BStkSC21RR9ieTOa1eWcOonF4NNsDJl8_s_lo9tqM88lqQfmoQq25k0kKYj8tihGrIBHCkrjaRHbo5Lkzz-LaFDlGbkl4VE5umuycG5BTVbbW54QVqJhPNvj3wz_MtbqEEBPQrq__3WrYSuiONWd3ctURJKIJpm5cmWhKVS7OLU96RcTZ3XnlSreYyo_FiSaDkKchpt4d-_ZogAEfWaqKqXs_QWjxgNQMWjfEGWMQqaKkVCa3X-oiFbiakUy15-nPiG4bkxHiV4wTCdDo1-w3V8gw_nCZivk7M1M7FoZ00cvQcYogQpc6F3NiM12vltt4NwEZfA3wipqVXch3xeoETmJwS70m5q2W-2csEB7_DD2JUhQVlaARPdtOVB4_ql58baWX3-1ScfVrEC-1UtSKTzVHHg7oDCjuXtEDu9mwNM0rTG9y7eOAqPV01VY8_PBvLzAxC8LlxgFcsEt0e8T235zNYFFTAoNjOll31zXt_2Wu1fPJNdCRzNi8ngn-PxoWpdghnvPrd3anlDClkEx2WwVVtqaa0MnSPCrkTTZx52c72t3zH_GO8V8j7ck-gvzMf1rs_2pnAv8ejtIH0Se_0hnYhdMBQ54gdyVpuSRr3sBlkO6iOmOidAuRvG9b4bJTAnPLoMlA6ND9YPHyCjNKaaS_vJl1qy4jrd63oZw4CL5xwR-_5SPNttZSLBWZceqHZf9SOVaBhdZ6uW9ZzhhUOmvesnFOXO8vk_KwXsMPM9y2kj2sb_ULLMjMMkKxyaI3lLcg057D84AH11tuNtKb_vEY4mRK8RfEuaD-73qBvOAbLxEpYojmrrROLp-fh4FTKq-FO491xP7BuCHNzI9e8fm5qGNq0TfrGi90UxJT0zmmgue_aoZQw8asjYUT-c0Pbq961eOaw5UqdNnH2UzaLun2MSh1cvhXyaUNsEHhvUvqnhYSGI5MWxZTqupUXiD39GkBGqyxSCb683ZI6Zzct3ZahXRdTgz1km7smbGhC15HyxK7RYpdka_yExNElnLOt8zdjAwd8EM4D115m_ogYXYUoLRpxg3jgUPMv5jKkF8H9bv5D9hzIDCSTNkoKCgGeFHtCStS1BWSk1ef2x3GF1CXRqpzTmWIBXDhZeWxuZLDPRhIOvpCBygRdtPVZkDP7agS-ALh2Yf355bCiA-gFB1qrU13PAHZ21ov_xzcQLlIS29dnHP4R5VJ1729kOSkS2PnihuZOW96BnQKVulk4ymckV67YCroqmlHRk90wzZ63Wsj85bOyG9-utle01P-t8B3WZPBKWtB1xtIQkSUlZflNdYSNwODZY986mx2nvG8OJlyNVU7vKa1V4SMEgBIGd9jvsmDQLjTCh_VK9FhUGpOv4qrp8I0FEgjjy2xosvHXu4uXAzXdkNbxI9_Q9C92dFzFFTLQFUvhcFsu6s4xQBqtqR1C1UwMLDPcedqqEkUU4BO89xLIA7yhBLqUq_ZgWawOGMrXyIbfo4OEXyCrSV7a1UHImrm_rqjFGGJ48AC6Ne7yD8jzYY_Wj6C7U8PvLtIWh2C3wR92Wdfg3DJB-YhQ7fWPpbFHcUllYXZz3xyqQbWwxKORDeSMUKzLJkc1GpTmuJPkRzsfNX8f274nGLmbkSp3NnnS6DNgWo21xysvKlvjjTSf0V2BtiKvppPhgRAioxG0EJgDUjdUpO9XzZ5IoYoONVYCzZVy0uxIsAww073mrcOSpDTx8AbSPV5gdxT_ei5Hl6TEldNI_Z3h7GaszmnfHsRUwU_5KW1OvvwUyAwn2k4-egF9AR6I2g72yib9fppnBdHr3DpRkEyrBSdJST9V3EOgalty3bL4wvgcaUSy4DgdIYu0nbP0UfYd3jwDENG5u2kTHxakhv221aT41w_WTzRJAFhmTQwaLoq945Vei2My6ES4O1Rx5NwX08S5hgKVZVJPmPZstPFYB3sr3QcNdkkUZbiJqaI7aAsmjPaHBhUE1I_iIKE9xGNM_6LIKAqWsJcYuDwjQxva5HiQ5DtD47-fJYyJtR5FBItsmpos-6iKpR7bslcO2rFfWmbmxZD5s-BHbHfF3a_WBxTR64lsL7VgjSeKbfMpXggvZp35rnxGXx4zP6p1khnj3FjxrMMVyPP5K8WC5n0GciFUuXcaG9mlnSPqCAWacVugBPA2Q1vImnXDZTEPoTLDIYYfRBMhAf2qv8StO-Vjb3IWG62_KCYFYiV079yNm8YcBPkCiLon3EmEqOplUDzBQcLwRqt2M3JjdlPBb25QsNqYf8ggOvYLOrGelY-r8fEKmrOjL1UzYkrypoZiC1HMVKGCmQ2Tpw_bk98D6QK5AYTMls92Yit9pbJGY4OKU5mMNX33DoB7ElXpUzUra6ryp6NMBU70Gb3HDzDeQqCt3eMUsw-otK6-NZLIX_yIYW4k5EznVsMVp42ikAWVuj86oywCA5AhIsZlOelYxVYzNLlH1izcORKL5kYu-52newbLIW3smwe13yfaldl36dLQDAK_Wcy8eJ7shl2yh-FQCyVQG9U93RM77T0sCX25CbX4DfWvEOYq1-Rdesq2XYdbZhguDL6QsRJ_yutqGxTC-KKpudxUz_dmuKzD3Af9lG0MYP49PaatFVOMiCdqrxQVjsyjMJ8KbPO1qMBHaOKdQ2qfNgq05fyrszPxCl1KK0FMKAZ2ZW2fu2tsRw5Fr6espKCD88oYUt-00jMvakomPUoD45LYs6hnZUtACZFw9lQE5v8xcGOv71AmURqF_0hukbGESCbrk7_ziJ-CQmCncN3_s5cHOV5a7LZndvpk9bA2uOUCLvo-0nS5nu0Z0XqdhnJMs5W4XBR0vSZopb3ssnXEMpJR7c5rrQ6xAoWdnpL9-AtAXFU9WmoFUbrXHHDqtNJSsgbxd_WNAbzhQPixmqV71L4ayn3uKFVIZP6boUoBjKEUOxwceMCxolS0NKWSV2fbTs3cXiM6S3dIka0K9lzrnLqw9mf5e-FHrzKMhGI37imLTVmVBCfNUr2F-aUIVKidHU0hupqe_VLuNwxiZrn_goW2v6xLB1fHypCaOUiYp6OFysAPVhFZjjFNtyThDvBiqFl06lEmAt2h9k80fCNodbrInkj3msWfhYfH7uCofoxF20cdUXxcz9shCzPoH4-W_hA31qbk_hNaM8WLQW7T-Bn8tSeI4d8_4fGTT1d9V3gp_zan9Popw9NtF274cd5QGj4Y1I1MOMiMLNdd1uRWJqt_56M8Da0QjBjEP4V7mQj2JijW_PVzNI-uG7EeEoyakCFQnuqQUUtAbmqeSErTONMwsqhHA2_7YSpBu4HDKSzChudB5EJcdyYS6b888r8x66r03PAtnaG7uzqz4NDIdg2jc2_V6rD76QBbvZuQWtF8CiMxwhg9-z0prae_VA6XG5RdL--VS6lh6RHRKGvqvy7aVFiH_jMGgFIYtue47wKGKXS8Vg4Z819PHgzE94BxpEGHaCynKMD3S9qq4YWjO5A3NpLb3lGqtCwqnXMvJALPnKX4AsBUzKuzndMJ5McmmItJ2gIgsRlNWVh_qW4X_E8fYZ1Dxz7dhuex8sKZ3FbPrqW9Y73kEWXQ0iKl-SWhz0_Vtzw1i_PzlwOZqmW5l31W7GBBKio9t-U_VQ32Yyw4ugFzrqsULwJV9sbP6kiHZ85PW0Yb7r81pJIbdDLPxqGS-QYZYqs6Ujhrl90E4bIwQJjpEkpnURdGJazCM9H9OV8g1w0_809iR05HF6sSTp7qx1Zgvu0fXoj87i9q8BKS3cjemhO25kbGa_XUm8JYYUB8d79QweN0HBxkm8mYZIZREXmo61tj0JZa3iRiZUVnXXNA3UxtL_2Mb7LYKAaOKDaDgZ5d4aEWaqEVPTy5hhvxUBaH6KcYqs2jEunNBKiqVw9La5S2DEb4C7btWsv4nt1iXP7a4pDTLttUE58hOpcEdq9BiRQWhxez_Ldiaa4cXkO8JAkl-zGX1Xp_IjWFKZqp_KvY7TXAIEjd3BJ3ndg-c_CesKIbZY91tWCK-PIbL8Roj9jjxHza0CSS13V04As7tE8n_p4zgNiC8OKOiAefFQrGXhuVF_B4poRR79ta2WblPuBENqDvHzjoALmTGVb-uUb1BJzNFr1bMBO519bIp9wzt1gKoJohLvIgBUwlJ3HAmjRd9wJ5SrXbK8qtpeRUjNWVfPtfTI8ruMNhJSDUiBU6KfsZMsX2K4zsUULNBtCNRyivusBrsCjpvwRboTAjal_GCnOsY2lTwCmvOAOPfuSKQbCI7EgAcXNOAopu6N0oJmCQi3E1hKgntm-QY2wdLafIA3IeXDLlxueGTgFATlOIAryl-QiHqzHzzJdiU2qDACGXtGZoX66Y217Df_rMx_scbS_YlSIhSATOXkkiu9xS55IoCyWiS9AyoIHZaAqtbbCuJIgLn2mzmd5E8tEdC6U2GocG0n9NZ3VdnWWSR7_zla8XsvgqmMs0TbWwxGIWC7NK08CFRpv4_Kk72dqsU14t5y00Nm7Ljye55pRnTv7C2wG87sNoE7HhXsV-pywyic0MmC1qW7Fj5mUL7MmdrZ-4pz67XpDqk6wRBsWdbK5v0cGUFmQmJTL4I0y1MdMtK72wNr7ZEuDMzUGIjObUk6fVH874DIPhHyrzlcZM0oEw_vt_OmyMg2jDRjwY2qZIWX6Zu-JkOnsv7m-qEmXXicFrpg7fjYXRlkjNpzDR20w_h_nF1hF-e2RHAwwfQs9eGgS_dnH5Ta910bA2T5jYhpnYR3pxT9RBKZBGRTPcc0CTaAaxcNN9obnLj-nmsJdGRm5r2xYcoYKLExcXvkA1J5WIYKsfNbBnNtF3ucrpzyrt47cwUw6_xsxu6VKBMGvOTfXzoosBJZDRljfEimtmmj_1kTP4u0TAy63458L-ryELzzIOYasGT6TOxs18MNLmKqwWg3ez5gUFuXBQlGGdn_2nXGO4OHTG8pFvoIrwEZLKlCVcPzlbH-BRe0DBwZGn4b5V1THif4ma2KJWxQw5Gy5JGrUF_lON6gBAm9NK77z2jPswDdShr85PbclB-eZngv64mDWiHKSTxXzleioe30_YwIlUWZmbinFE7D6hDnWHGOgkjVWISB2Pb25fTEBvMlW254or3yh4CW-CHhPEHjAPEX7j-tKW3TVw1zByaecnguAzqCDFgxg3-VmSseRBZCXYqQqep-ifdUHoybTJ_GkyqASthh_yrK3d0iGifx3BCFM4FyoLBOMDkDc33e0EdZxvSS8hU75kf6Z2Ntj8BMw7nk1W3qXpeUspdCtQvSjXfR6RTUX472a2TsgFS-U-yoN8SLjiAiyae0YuFaN07IdwFORnb_gz9QVPZgxdtdo9zMsAhb6JYcNuriVvp-g6VzHk2JuXXbH6pqQeRihKF1J1E42UJIH_RVakTWOj6ZReF11Vyb2wVL",
               "summary": []
             },
             {
-              "id": "msg_02235149502a9ba8016aa14bce6d6487d28465db5121f20485",
+              "id": "msg_02e7cc854aaf9bc0016aa7c10d73ec87d28382ac683cf0a4c4",
               "type": "message",
               "status": "completed",
               "content": [
@@ -242,7 +242,7 @@ http_interactions:
                   "type": "output_text",
                   "annotations": [],
                   "logprobs": [],
-                  "text": "This file is the Ruby license. It\u2019s a permissive, BSD-like license (the 2-clause BSDL) for Ruby written by Yukihiro Matsumoto. It describes how you may redistribute and modify Ruby (and some parts of distributions that include Ruby).\n\nKey points:\n\n- You may freely redistribute verbatim copies as long as you keep the original copyright notices and disclaimers.\n- You may modify the software if you do at least one of:\n  a) publish your modifications publicly or let the author include them,\n  b) use the modified software only within your organization,\n  c) distribute non-standard binaries with instructions on where to get the original,\n  d) arrange other terms with the author.\n- You may distribute the software in binary form if you do at least one of:\n  a) include binaries with instructions on where to get the original source,\n  b) accompany the distribution with machine-readable source,\n  c) distribute non-standard binaries with non-standard names and instructions to get the original,\n  d) arrange other terms with the author.\n- You may modify and include parts of the software in other software (possibly commercial), but some files in the distribution aren\u2019t written by the author and aren\u2019t necessarily under these terms; see LEGAL for those files.\n- The scripts and library files you generate or use do not automatically fall under this license; they belong to whoever generated them.\n- The software is provided \u201cas is\u201d without warranties; no express or implied warranties.\n- For files not written by the author or other exclusions, see the LEGAL file in the distribution.\n\nIf you want, I can tailor these points to your specific use case (e.g., you\u2019re packaging Ruby with your own software or distributing binaries) and explain what you\u2019d need to include to be compliant."
+                  "text": "This is the license text for the Ruby programming language.\n\nWhat it says, at a high level:\n- Ruby is licensed under a dual license: you may choose either the 2-clause BSD-style license (BSDL) or the specific terms listed in this file.\n- It covers how you may copy, modify, and distribute Ruby and its components.\n\nKey points:\n- Verbatim copies: You may redistribute exact copies as long as you keep the original copyright notices and disclaimers.\n- Modifications: You may modify the software, provided you meet at least one of these:\n  - Put your modifications in the public domain or make them freely available (e.g., posting them publicly or allowing the author to include them).\n  - Use the modified software only within your organization.\n  - Give non-standard binaries non-standard names with instructions on where to obtain the original distribution.\n  - Make other distribution arrangements with the author.\n- Distribution in binary/object code: You may distribute binaries if you meet at least one of these:\n  - Distribute binaries and library files plus instructions on where to get the original distribution.\n  - Provide the machine-readable source.\n  - Give non-standard binaries non-standard names with instructions for the original distribution.\n  - Make other distribution arrangements with the author.\n- Inclusion in other software: You may modify and include parts of the software in other software (including commercial software), but some files aren\u2019t authored by the author, so they aren\u2019t under these terms; see the LEGAL file for details.\n- Generated content: Scripts and library files you supply as input or produce as output don\u2019t automatically fall under Ruby\u2019s copyright; they belong to the generator, and may be sold or aggregated with Ruby.\n- Warranty disclaimer: The software is provided \u201cAS IS\u201d without warranties of any kind.\n\nAdditional notes:\n- The file references the BSDL and LEGAL documents for more details.\n- The author/contact listed is Yukihiro Matsumoto (matz@netlab.jp).\n\nIf you want, I can summarize this for a specific use case (e.g., including Ruby in a commercial product) or convert it into a machine-readable license reference. Also, I\u2019m not a lawyer\u2014for formal compliance, consider legal counsel."
                 }
               ],
               "role": "assistant"
@@ -298,14 +298,14 @@ http_interactions:
               "cache_write_tokens": 0,
               "cached_tokens": 0
             },
-            "output_tokens": 1674,
+            "output_tokens": 1314,
             "output_tokens_details": {
-              "reasoning_tokens": 1280
+              "reasoning_tokens": 832
             },
-            "total_tokens": 2213
+            "total_tokens": 1853
           },
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 09 Sep 2026 12:06:41 GMT
+  recorded_at: Mon, 14 Sep 2026 09:40:32 GMT
 recorded_with: VCR 6.4.0

@@ -24,24 +24,31 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:07:09 GMT
+      - Mon, 14 Sep 2026 09:40:58 GMT
       Content-Length:
-      - '1137'
+      - '1650'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-317","object":"chat.completion","created":1788955629,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        sum of 2 + 2 is **4**.","reasoning":"Okay, the user is asking \"What''s 2
-        + 2?\" That seems straightforward, but maybe they''re testing if I know basic
-        math. Let me make sure I''m not missing anything. Addition is one of the fundamental
-        operations, so 2 + 2 should be 4. Wait, could there be a trick here? Like
-        maybe they''re using a different numeral system? But the question uses standard
-        digits. Or maybe they''re referring to something else, like 2 apples plus
-        2 apples equals 4 apples? But the question is just \"2 + 2,\" so probably
-        the answer is 4. I should confirm that there''s no hidden context. Sometimes
-        people might use symbols differently, but in this case, it''s clear. Let me
-        double-check by doing the addition: 2 plus 2 equals 4. Yep, that''s right.
-        I think that''s the answer they''re looking for.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":18,"prompt_tokens_details":{"cached_tokens":5},"completion_tokens":205,"total_tokens":223}}
+      string: '{"id":"chatcmpl-491","object":"chat.completion","created":1789378858,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"2
+        + 2 equals 4.","reasoning":"Okay, the user is asking \"What''s 2 + 2?\" Let
+        me make sure I understand the question correctly. They want to know the sum
+        of 2 and 2. \n\nFirst, I should recall basic arithmetic. Addition is one of
+        the fundamental operations. When you add 2 and 2 together, you''re combining
+        two quantities. Let me visualize this. If I have two apples and add another
+        two apples, how many do I have in total? That''s 2 + 2 = 4. \n\nWait, maybe
+        I should check if there''s any trick or alternative interpretation here. Sometimes
+        people might phrase questions in a way that''s not straightforward, but in
+        this case, \"2 + 2\" is a direct arithmetic problem. There''s no mention of
+        units, context, or any other elements that would change the calculation. \n\nAnother
+        way to approach this is using number lines. Starting at 2 and moving 2 units
+        to the right would land me at 4. Alternatively, using fingers: hold up two
+        fingers and then add two more, resulting in four fingers. \n\nI should also
+        consider if there''s any alternative mathematical system where this might
+        not hold, but in standard arithmetic, 2 + 2 equals 4. It''s important to confirm
+        that there''s no ambiguity in the question. Since the user is asking for a
+        simple addition, the answer is straightforward. \n\nNo need to overcomplicate.
+        The answer is 4.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":18,"prompt_tokens_details":{"cached_tokens":3},"completion_tokens":310,"total_tokens":328}}
 
         '
-  recorded_at: Wed, 09 Sep 2026 12:07:09 GMT
+  recorded_at: Mon, 14 Sep 2026 09:40:58 GMT
 recorded_with: VCR 6.4.0

@@ -32,7 +32,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 09 Sep 2026 12:16:26 GMT
+      - Mon, 14 Sep 2026 10:13:41 GMT
       Server:
       - elb
       Vary:
@@ -40,7 +40,7 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Ds-Trace-Id:
-      - 7d298a5f6e0efa30e66182bbfbc2df0b
+      - a4c81b47fe6c0c76076a345bca0172e1
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -48,29 +48,30 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 a259e473ed71960eef79d73efea6bc7e.cloudfront.net (CloudFront)
+      - 1.1 bc899ba900b38f8013d849341ebb71c8.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TXL50-P5
+      - TXL50-P4
       X-Amz-Cf-Id:
-      - 4IFN_uz5ngHJm1Rd9pAAEKdNQCK5BHgHEbVN0wLOdWcTbDBUcazdyA==
+      - jlx1EqC9BRUdfMgV1TMAQeDzn8_lVyDywRQbRTnJ99l7vivsjJwWFA==
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"99a698b3-4cd6-4386-a880-32dc25b3f38d","object":"chat.completion","created":1788956186,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning_content":"The
-        user wants me to process the query \"test data\". I''ll invoke the content_returning
-        tool.","tool_calls":[{"index":0,"id":"call_00_95liYZ3srPL0aBKtSVUj1755","type":"function","function":{"name":"content_returning","arguments":"{\"query\":
-        \"test data\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":375,"completion_tokens":67,"total_tokens":442,"prompt_tokens_details":{"cached_tokens":256},"completion_tokens_details":{"reasoning_tokens":21},"prompt_cache_hit_tokens":256,"prompt_cache_miss_tokens":119},"system_fingerprint":"a26a7955944dc5c60445bff77fac9c8e"}'
-  recorded_at: Wed, 09 Sep 2026 12:16:27 GMT
+      string: '{"id":"798620bd-5bff-4d13-b560-169631da58c6","object":"chat.completion","created":1789380821,"model":"deepseek-flash","choices":[{"index":0,"message":{"role":"assistant","content":"I''ll
+        process that query for you.","reasoning_content":"The user wants me to process
+        a query \"test data\" using the content_returning tool. Let me call it.","tool_calls":[{"index":0,"id":"call_00_YryQKzgAVRQResWqML3D6201","type":"function","function":{"name":"content_returning","arguments":"{\"query\":
+        \"test data\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":312,"completion_tokens":71,"total_tokens":383,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":24},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":312},"system_fingerprint":"aeb56401ca74e127821c4f9126dcb669"}'
+  recorded_at: Mon, 14 Sep 2026 10:13:42 GMT
 - request:
     method: post
     uri: https://api.deepseek.com/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"deepseek-v4-flash","messages":[{"role":"user","content":"Process
-        this query: test data"},{"role":"assistant","content":"","tool_calls":[{"id":"call_00_95liYZ3srPL0aBKtSVUj1755","type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
-        data\"}"}}],"reasoning_content":"The user wants me to process the query \"test
-        data\". I''ll invoke the content_returning tool.","reasoning":"The user wants
-        me to process the query \"test data\". I''ll invoke the content_returning
-        tool."},{"role":"tool","content":"Processed: test data","tool_call_id":"call_00_95liYZ3srPL0aBKtSVUj1755"}],"stream":false,"tools":[{"type":"function","function":{"name":"content_returning","description":"Returns
+        this query: test data"},{"role":"assistant","content":"I''ll process that
+        query for you.","tool_calls":[{"id":"call_00_YryQKzgAVRQResWqML3D6201","type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
+        data\"}"}}],"reasoning_content":"The user wants me to process a query \"test
+        data\" using the content_returning tool. Let me call it.","reasoning":"The
+        user wants me to process a query \"test data\" using the content_returning
+        tool. Let me call it."},{"role":"tool","content":"Processed: test data","tool_call_id":"call_00_YryQKzgAVRQResWqML3D6201"}],"stream":false,"tools":[{"type":"function","function":{"name":"content_returning","description":"Returns
         a processed string result","parameters":{"type":"object","properties":{"query":{"type":"string","description":"Query
         to process"}},"required":["query"],"additionalProperties":false,"strict":true}}}]}'
     headers:
@@ -96,7 +97,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 09 Sep 2026 12:16:27 GMT
+      - Mon, 14 Sep 2026 10:13:42 GMT
       Server:
       - elb
       Vary:
@@ -104,7 +105,7 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Ds-Trace-Id:
-      - 770eb666ec0ee1a1d65c2e634bf07a47
+      - 8bda38303cc2449456ac4847f63d672c
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -112,16 +113,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 d58f8ae27ab00bbbe1dc072976204492.cloudfront.net (CloudFront)
+      - 1.1 192214f2b714ecde75ddd74c51389aaa.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TXL50-P4
+      - TXL52-P2
       X-Amz-Cf-Id:
-      - 5wWAi0-qDrPLAbX0bbDKaImZoJGiv6Y8kkEQIe9QFDGO-ZSCXxyn-A==
+      - s918KyaUKt69xq_dg5dPrhSSANVoSmLCT9tRWPb0zIyQkarjLwZwRA==
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"54b838b4-3cb7-4ab9-a585-4e047ba10db1","object":"chat.completion","created":1788956187,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        query **\"test data\"** has been processed successfully.\n\nResult: `Processed:
-        test data`\n\nIs there anything more specific you''d like me to do with this
-        query, or would you like to try a different input?","reasoning_content":""},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":459,"completion_tokens":48,"total_tokens":507,"prompt_tokens_details":{"cached_tokens":384},"completion_tokens_details":{"reasoning_tokens":0},"prompt_cache_hit_tokens":384,"prompt_cache_miss_tokens":75},"system_fingerprint":"a26a7955944dc5c60445bff77fac9c8e"}'
-  recorded_at: Wed, 09 Sep 2026 12:16:28 GMT
+      string: '{"id":"e3d7c0df-3249-4cc3-9156-dd2effb9165e","object":"chat.completion","created":1789380822,"model":"deepseek-flash","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        query has been processed. Result: **Processed: test data**\n\nLet me know
+        if you''d like me to process anything else.","reasoning_content":""},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":400,"completion_tokens":29,"total_tokens":429,"prompt_tokens_details":{"cached_tokens":256},"completion_tokens_details":{"reasoning_tokens":0},"prompt_cache_hit_tokens":256,"prompt_cache_miss_tokens":144},"system_fingerprint":"aeb56401ca74e127821c4f9126dcb669"}'
+  recorded_at: Mon, 14 Sep 2026 10:13:43 GMT
 recorded_with: VCR 6.4.0

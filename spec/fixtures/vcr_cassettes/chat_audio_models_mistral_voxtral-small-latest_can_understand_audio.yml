@@ -24,27 +24,25 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:10:14 GMT
+      - Mon, 14 Sep 2026 09:45:46 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a08613-686d-7074-9314-3628d4591985
+      - 01a09f4e-ec14-74fa-b87f-09067fcd62e6
       X-Kong-Request-Id:
-      - 01a08613-686d-7074-9314-3628d4591985
+      - 01a09f4e-ec14-74fa-b87f-09067fcd62e6
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '200000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '199917'
+      - '199742'
       X-Ratelimit-Tokens-Query-Cost:
-      - '83'
+      - '258'
       X-Ratelimit-Limit-Audio-Seconds-Minute:
       - '2000'
       X-Ratelimit-Remaining-Audio-Seconds-Minute:
@@ -56,33 +54,46 @@ http_interactions:
       X-Ratelimit-Remaining-Req-Minute:
       - '359'
       X-Envoy-Upstream-Service-Time:
-      - '792'
+      - '1774'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '803'
+      - '1802'
       X-Kong-Proxy-Latency:
-      - '53'
-      X-Content-Type-Options:
-      - nosniff
+      - '118'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"13e3d786b239400081a0fcf3990926b8","created":1788955814,"model":"voxtral-small-latest","usage":{"prompt_audio_seconds":3,"prompt_tokens":9,"total_tokens":458,"completion_tokens":74,"prompt_tokens_details":{"cached_tokens":0,"audio_tokens":375},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+      string: '{"id":"9a3d83d33ea14750923076983963762e","created":1789379145,"model":"voxtral-small-latest","usage":{"prompt_audio_seconds":3,"prompt_tokens":9,"total_tokens":633,"completion_tokens":249,"prompt_tokens_details":{"cached_tokens":0,"audio_tokens":375},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
         statement \"Ruby is a programming language designed for developer happiness\"
-        is expressing that Ruby, a programming language, was created with the goal
-        of making developers happy and satisfied while they write code. This could
-        mean that Ruby is designed to be easy to learn, use, and understand, and that
-        it provides features and tools that make the development process more enjoyable
-        and efficient."}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:10:14 GMT
+        is a concise description of the Ruby programming language. Here''s a breakdown:\n\n-
+        **Ruby**: This refers to the programming language Ruby, which was created
+        by Yukihiro \"Matz\" Matsumoto in the mid-1990s.\n- **Programming language**:
+        Ruby is a high-level, interpreted programming language that is known for its
+        simplicity and ease of use.\n- **Designed for developer happiness**: This
+        phrase emphasizes the primary goal of Ruby''s design. The language aims to
+        make programming enjoyable and productive for developers. It achieves this
+        through features like:\n  - **Readability**: Ruby''s syntax is designed to
+        be easy to read and write, making it accessible even for beginners.\n  - **Productivity**:
+        Ruby provides powerful features and a rich standard library that help developers
+        write code quickly and efficiently.\n  - **Flexibility**: Ruby is a dynamic
+        language that allows developers to write code in a variety of styles, from
+        procedural to object-oriented.\n  - **Community**: Ruby has a strong and supportive
+        community that contributes to its growth and development.\n\nIn summary, the
+        statement highlights Ruby''s focus on creating a pleasant and productive programming
+        experience for developers."}}]}'
+  recorded_at: Mon, 14 Sep 2026 09:45:46 GMT
 recorded_with: VCR 6.4.0

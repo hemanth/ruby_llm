@@ -3043,31 +3043,6 @@
     }
   },
   {
-    "id": "computer-use-preview-2025-04-15",
-    "name": "computer-use-preview-2025-04-15",
-    "provider": "azure",
-    "family": null,
-    "created_at": "2025-10-01 00:00:00 UTC",
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [],
-    "pricing": {},
-    "metadata": {
-      "object": "model",
-      "lifecycle_status": "preview",
-      "inference_retires_at": 1789171200
-    }
-  },
-  {
     "id": "embed-v-4-0",
     "name": "embed-v-4-0",
     "provider": "azure",
@@ -6571,11 +6546,11 @@
     }
   },
   {
-    "id": "sora-2-2025-12-08",
-    "name": "sora-2-2025-12-08",
+    "id": "sora-2",
+    "name": "sora-2",
     "provider": "azure",
     "family": null,
-    "created_at": "2025-12-08 00:00:00 UTC",
+    "created_at": "2026-03-17 00:00:00 UTC",
     "context_window": null,
     "max_output_tokens": null,
     "knowledge_cutoff": null,
@@ -6592,7 +6567,32 @@
     "metadata": {
       "object": "model",
       "lifecycle_status": "preview",
-      "inference_retires_at": 1789430400
+      "inference_retires_at": 1792022400
+    }
+  },
+  {
+    "id": "sora-2-2025-12-08",
+    "name": "sora-2-2025-12-08",
+    "provider": "azure",
+    "family": null,
+    "created_at": "2026-03-17 00:00:00 UTC",
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "lifecycle_status": "preview",
+      "inference_retires_at": 1792022400
     }
   },
   {
@@ -6750,15 +6750,16 @@
     "name": "Nova 2 Lite",
     "provider": "bedrock",
     "family": "nova",
-    "created_at": "2024-12-01 00:00:00 UTC",
-    "context_window": 128000,
-    "max_output_tokens": 4096,
+    "created_at": "2025-12-02 00:00:00 UTC",
+    "context_window": 1000000,
+    "max_output_tokens": 65535,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -6775,7 +6776,9 @@
       "text_tokens": {
         "standard": {
           "input_per_million": 0.33,
-          "output_per_million": 2.75
+          "output_per_million": 2.75,
+          "cache_read_input_per_million": 0.0825,
+          "cache_write_input_per_million": 0.33
         }
       }
     },
@@ -6783,9 +6786,9 @@
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
       "open_weights": false,
-      "attachment": false,
+      "attachment": true,
       "temperature": true,
-      "last_updated": "2024-12-01",
+      "last_updated": "2025-12-01",
       "tool_call": true,
       "reasoning": true,
       "reasoning_options": [
@@ -6803,12 +6806,15 @@
       ],
       "cost": {
         "input": 0.33,
-        "output": 2.75
+        "output": 2.75,
+        "cache_read": 0.0825,
+        "cache_write": 0.33
       },
       "limit": {
-        "context": 128000,
-        "output": 4096
-      }
+        "context": 1000000,
+        "output": 65535
+      },
+      "knowledge": "2025-10"
     }
   },
   {
@@ -6849,13 +6855,14 @@
     "family": "nova-lite",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 300000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -6872,7 +6879,8 @@
         "standard": {
           "input_per_million": 0.06,
           "output_per_million": 0.24,
-          "cache_read_input_per_million": 0.015
+          "cache_read_input_per_million": 0.015,
+          "cache_write_input_per_million": 0.06
         }
       }
     },
@@ -6895,11 +6903,12 @@
       "cost": {
         "input": 0.06,
         "output": 0.24,
-        "cache_read": 0.015
+        "cache_read": 0.015,
+        "cache_write": 0.06
       },
       "limit": {
         "context": 300000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -6911,7 +6920,7 @@
     "family": "nova-micro",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 128000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -6929,7 +6938,8 @@
         "standard": {
           "input_per_million": 0.035,
           "output_per_million": 0.14,
-          "cache_read_input_per_million": 0.00875
+          "cache_read_input_per_million": 0.00875,
+          "cache_write_input_per_million": 0.035
         }
       }
     },
@@ -6945,137 +6955,14 @@
       "cost": {
         "input": 0.035,
         "output": 0.14,
-        "cache_read": 0.00875
+        "cache_read": 0.00875,
+        "cache_write": 0.035
       },
       "limit": {
         "context": 128000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
-    }
-  },
-  {
-    "id": "amazon.nova-premier-v1:0:1000k",
-    "name": "Nova Premier",
-    "provider": "bedrock",
-    "family": "amazon",
-    "created_at": null,
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "streaming",
-      "function_calling"
-    ],
-    "pricing": {},
-    "metadata": {
-      "provider_name": "Amazon",
-      "model_arn": "arn:aws:bedrock:us-west-2::foundation-model/amazon.nova-premier-v1:0:1000k",
-      "inference_types": [],
-      "converse": {}
-    }
-  },
-  {
-    "id": "amazon.nova-premier-v1:0:20k",
-    "name": "Nova Premier",
-    "provider": "bedrock",
-    "family": "amazon",
-    "created_at": null,
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "streaming",
-      "function_calling"
-    ],
-    "pricing": {},
-    "metadata": {
-      "provider_name": "Amazon",
-      "model_arn": "arn:aws:bedrock:us-west-2::foundation-model/amazon.nova-premier-v1:0:20k",
-      "inference_types": [],
-      "converse": {}
-    }
-  },
-  {
-    "id": "amazon.nova-premier-v1:0:8k",
-    "name": "Nova Premier",
-    "provider": "bedrock",
-    "family": "amazon",
-    "created_at": null,
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "streaming",
-      "function_calling"
-    ],
-    "pricing": {},
-    "metadata": {
-      "provider_name": "Amazon",
-      "model_arn": "arn:aws:bedrock:us-west-2::foundation-model/amazon.nova-premier-v1:0:8k",
-      "inference_types": [],
-      "converse": {}
-    }
-  },
-  {
-    "id": "amazon.nova-premier-v1:0:mm",
-    "name": "Nova Premier",
-    "provider": "bedrock",
-    "family": "amazon",
-    "created_at": null,
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "streaming",
-      "function_calling"
-    ],
-    "pricing": {},
-    "metadata": {
-      "provider_name": "Amazon",
-      "model_arn": "arn:aws:bedrock:us-west-2::foundation-model/amazon.nova-premier-v1:0:mm",
-      "inference_types": [],
-      "converse": {}
     }
   },
   {
@@ -7085,13 +6972,14 @@
     "family": "nova-pro",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 300000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -7107,7 +6995,8 @@
         "standard": {
           "input_per_million": 0.8,
           "output_per_million": 3.2,
-          "cache_read_input_per_million": 0.2
+          "cache_read_input_per_million": 0.2,
+          "cache_write_input_per_million": 0.8
         }
       }
     },
@@ -7123,11 +7012,12 @@
       "cost": {
         "input": 0.8,
         "output": 3.2,
-        "cache_read": 0.2
+        "cache_read": 0.2,
+        "cache_write": 0.8
       },
       "limit": {
         "context": 300000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -7326,102 +7216,6 @@
       "model_arn": "arn:aws:bedrock:us-west-2::foundation-model/amazon.titan-embed-text-v2:0",
       "inference_types": [
         "ON_DEMAND"
-      ],
-      "converse": {}
-    }
-  },
-  {
-    "id": "anthropic.claude-3-haiku-20240307-v1:0",
-    "name": "Claude 3 Haiku",
-    "provider": "bedrock",
-    "family": "anthropic",
-    "created_at": null,
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "streaming",
-      "function_calling"
-    ],
-    "pricing": {},
-    "metadata": {
-      "provider_name": "Anthropic",
-      "model_arn": "arn:aws:bedrock:us-west-2::foundation-model/anthropic.claude-3-haiku-20240307-v1:0",
-      "inference_types": [
-        "ON_DEMAND"
-      ],
-      "converse": {}
-    }
-  },
-  {
-    "id": "anthropic.claude-3-haiku-20240307-v1:0:200k",
-    "name": "Claude 3 Haiku",
-    "provider": "bedrock",
-    "family": "anthropic",
-    "created_at": null,
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "streaming",
-      "function_calling"
-    ],
-    "pricing": {},
-    "metadata": {
-      "provider_name": "Anthropic",
-      "model_arn": "arn:aws:bedrock:us-west-2::foundation-model/anthropic.claude-3-haiku-20240307-v1:0:200k",
-      "inference_types": [
-        "PROVISIONED"
-      ],
-      "converse": {}
-    }
-  },
-  {
-    "id": "anthropic.claude-3-haiku-20240307-v1:0:48k",
-    "name": "Claude 3 Haiku",
-    "provider": "bedrock",
-    "family": "anthropic",
-    "created_at": null,
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text",
-        "image"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "streaming",
-      "function_calling"
-    ],
-    "pricing": {},
-    "metadata": {
-      "provider_name": "Anthropic",
-      "model_arn": "arn:aws:bedrock:us-west-2::foundation-model/anthropic.claude-3-haiku-20240307-v1:0:48k",
-      "inference_types": [
-        "PROVISIONED"
       ],
       "converse": {}
     }
@@ -8280,13 +8074,14 @@
     "family": "nova-lite",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 300000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -8302,7 +8097,8 @@
         "standard": {
           "input_per_million": 0.063,
           "output_per_million": 0.252,
-          "cache_read_input_per_million": 0.01575
+          "cache_read_input_per_million": 0.01575,
+          "cache_write_input_per_million": 0.063
         }
       }
     },
@@ -8318,11 +8114,12 @@
       "cost": {
         "input": 0.063,
         "output": 0.252,
-        "cache_read": 0.01575
+        "cache_read": 0.01575,
+        "cache_write": 0.063
       },
       "limit": {
         "context": 300000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -8334,7 +8131,7 @@
     "family": "nova-micro",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 128000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -8352,7 +8149,8 @@
         "standard": {
           "input_per_million": 0.037,
           "output_per_million": 0.148,
-          "cache_read_input_per_million": 0.00925
+          "cache_read_input_per_million": 0.00925,
+          "cache_write_input_per_million": 0.037
         }
       }
     },
@@ -8368,11 +8166,12 @@
       "cost": {
         "input": 0.037,
         "output": 0.148,
-        "cache_read": 0.00925
+        "cache_read": 0.00925,
+        "cache_write": 0.037
       },
       "limit": {
         "context": 128000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -8384,13 +8183,14 @@
     "family": "nova-pro",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 300000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -8406,7 +8206,8 @@
         "standard": {
           "input_per_million": 0.84,
           "output_per_million": 3.36,
-          "cache_read_input_per_million": 0.21
+          "cache_read_input_per_million": 0.21,
+          "cache_write_input_per_million": 0.84
         }
       }
     },
@@ -8422,11 +8223,12 @@
       "cost": {
         "input": 0.84,
         "output": 3.36,
-        "cache_read": 0.21
+        "cache_read": 0.21,
+        "cache_write": 0.84
       },
       "limit": {
         "context": 300000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -8989,13 +8791,14 @@
     "family": "nova-lite",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 300000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -9011,7 +8814,8 @@
         "standard": {
           "input_per_million": 0.064,
           "output_per_million": 0.256,
-          "cache_read_input_per_million": 0.016
+          "cache_read_input_per_million": 0.016,
+          "cache_write_input_per_million": 0.064
         }
       }
     },
@@ -9027,11 +8831,12 @@
       "cost": {
         "input": 0.064,
         "output": 0.256,
-        "cache_read": 0.016
+        "cache_read": 0.016,
+        "cache_write": 0.064
       },
       "limit": {
         "context": 300000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -9194,7 +8999,6 @@
       ]
     },
     "capabilities": [
-      "function_calling",
       "reasoning"
     ],
     "pricing": {
@@ -9208,11 +9012,11 @@
     "metadata": {
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
+      "open_weights": true,
       "attachment": false,
       "temperature": true,
       "last_updated": "2025-05-29",
-      "tool_call": true,
+      "tool_call": false,
       "reasoning": true,
       "reasoning_options": [],
       "cost": {
@@ -9231,7 +9035,7 @@
     "name": "DeepSeek-V3.1",
     "provider": "bedrock",
     "family": "deepseek",
-    "created_at": "2025-09-18 00:00:00 UTC",
+    "created_at": "2025-08-21 00:00:00 UTC",
     "context_window": 163840,
     "max_output_tokens": 81920,
     "knowledge_cutoff": null,
@@ -9282,10 +9086,15 @@
       "attachment": false,
       "temperature": true,
       "last_updated": "2025-09-18",
+      "interleaved": true,
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "cost": {
         "input": 0.58,
         "output": 1.68
@@ -9293,8 +9102,7 @@
       "limit": {
         "context": 163840,
         "output": 81920
-      },
-      "knowledge": "2024-07"
+      }
     }
   },
   {
@@ -9324,10 +9132,10 @@
   },
   {
     "id": "deepseek.v3.2",
-    "name": "DeepSeek-V3.2",
+    "name": "DeepSeek V3.2",
     "provider": "bedrock",
     "family": "deepseek",
-    "created_at": "2026-02-06 00:00:00 UTC",
+    "created_at": "2025-12-01 00:00:00 UTC",
     "context_window": 163840,
     "max_output_tokens": 81920,
     "knowledge_cutoff": null,
@@ -9379,10 +9187,15 @@
       "attachment": false,
       "temperature": true,
       "last_updated": "2026-02-06",
+      "interleaved": true,
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "cost": {
         "input": 0.62,
         "output": 1.85
@@ -9399,9 +9212,9 @@
     "name": "Nova 2 Lite (EU)",
     "provider": "bedrock",
     "family": "nova",
-    "created_at": "2025-12-01 00:00:00 UTC",
+    "created_at": "2025-12-02 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 64000,
+    "max_output_tokens": 65535,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -9425,7 +9238,8 @@
         "standard": {
           "input_per_million": 0.374,
           "output_per_million": 3.157,
-          "cache_read_input_per_million": 0.0935
+          "cache_read_input_per_million": 0.0935,
+          "cache_write_input_per_million": 0.374
         }
       }
     },
@@ -9454,12 +9268,14 @@
       "cost": {
         "input": 0.374,
         "output": 3.157,
-        "cache_read": 0.0935
+        "cache_read": 0.0935,
+        "cache_write": 0.374
       },
       "limit": {
         "context": 1000000,
-        "output": 64000
-      }
+        "output": 65535
+      },
+      "knowledge": "2025-10"
     }
   },
   {
@@ -9469,13 +9285,14 @@
     "family": "nova-lite",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 300000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -9491,7 +9308,8 @@
         "standard": {
           "input_per_million": 0.069,
           "output_per_million": 0.276,
-          "cache_read_input_per_million": 0.01725
+          "cache_read_input_per_million": 0.01725,
+          "cache_write_input_per_million": 0.069
         }
       }
     },
@@ -9507,11 +9325,12 @@
       "cost": {
         "input": 0.069,
         "output": 0.276,
-        "cache_read": 0.01725
+        "cache_read": 0.01725,
+        "cache_write": 0.069
       },
       "limit": {
         "context": 300000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -9523,7 +9342,7 @@
     "family": "nova-micro",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 128000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -9541,7 +9360,8 @@
         "standard": {
           "input_per_million": 0.04,
           "output_per_million": 0.16,
-          "cache_read_input_per_million": 0.01
+          "cache_read_input_per_million": 0.01,
+          "cache_write_input_per_million": 0.04
         }
       }
     },
@@ -9557,11 +9377,12 @@
       "cost": {
         "input": 0.04,
         "output": 0.16,
-        "cache_read": 0.01
+        "cache_read": 0.01,
+        "cache_write": 0.04
       },
       "limit": {
         "context": 128000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -9573,13 +9394,14 @@
     "family": "nova-pro",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 300000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -9595,7 +9417,8 @@
         "standard": {
           "input_per_million": 0.92,
           "output_per_million": 3.68,
-          "cache_read_input_per_million": 0.23
+          "cache_read_input_per_million": 0.23,
+          "cache_write_input_per_million": 0.92
         }
       }
     },
@@ -9611,11 +9434,12 @@
       "cost": {
         "input": 0.92,
         "output": 3.68,
-        "cache_read": 0.23
+        "cache_read": 0.23,
+        "cache_write": 0.92
       },
       "limit": {
         "context": 300000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -10365,9 +10189,9 @@
     "name": "Nova 2 Lite (Global)",
     "provider": "bedrock",
     "family": "nova",
-    "created_at": "2025-12-01 00:00:00 UTC",
+    "created_at": "2025-12-02 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 64000,
+    "max_output_tokens": 65535,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -10391,7 +10215,8 @@
         "standard": {
           "input_per_million": 0.3,
           "output_per_million": 2.5,
-          "cache_read_input_per_million": 0.075
+          "cache_read_input_per_million": 0.075,
+          "cache_write_input_per_million": 0.3
         }
       }
     },
@@ -10420,12 +10245,14 @@
       "cost": {
         "input": 0.3,
         "output": 2.5,
-        "cache_read": 0.075
+        "cache_read": 0.075,
+        "cache_write": 0.3
       },
       "limit": {
         "context": 1000000,
-        "output": 64000
-      }
+        "output": 65535
+      },
+      "knowledge": "2025-10"
     }
   },
   {
@@ -11208,6 +11035,7 @@
     },
     "capabilities": [
       "function_calling",
+      "structured_output",
       "reasoning",
       "vision"
     ],
@@ -11236,7 +11064,7 @@
       "temperature": false,
       "last_updated": "2026-07-09",
       "tool_call": true,
-      "structured_output": false,
+      "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -11496,6 +11324,7 @@
     },
     "capabilities": [
       "function_calling",
+      "structured_output",
       "reasoning",
       "vision"
     ],
@@ -11524,7 +11353,7 @@
       "temperature": false,
       "last_updated": "2026-09-04",
       "tool_call": true,
-      "structured_output": false,
+      "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -11637,10 +11466,10 @@
   },
   {
     "id": "google.gemma-3-12b-it",
-    "name": "Google Gemma 3 12B",
+    "name": "Gemma 3 12B IT",
     "provider": "bedrock",
     "family": "gemma",
-    "created_at": "2024-12-01 00:00:00 UTC",
+    "created_at": "2025-03-12 00:00:00 UTC",
     "context_window": 131072,
     "max_output_tokens": 8192,
     "knowledge_cutoff": null,
@@ -11661,8 +11490,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.049999999999999996,
-          "output_per_million": 0.09999999999999999
+          "input_per_million": 0.09,
+          "output_per_million": 0.29
         }
       }
     },
@@ -11691,30 +11520,30 @@
       "endpoint": "mantle",
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
-      "attachment": false,
+      "open_weights": true,
+      "attachment": true,
       "temperature": true,
-      "last_updated": "2024-12-01",
+      "last_updated": "2025-03-12",
       "tool_call": false,
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.049999999999999996,
-        "output": 0.09999999999999999
+        "input": 0.09,
+        "output": 0.29
       },
       "limit": {
         "context": 131072,
         "output": 8192
       },
-      "knowledge": "2024-12"
+      "knowledge": "2024-08"
     }
   },
   {
     "id": "google.gemma-3-27b-it",
-    "name": "Google Gemma 3 27B Instruct",
+    "name": "Gemma 3 27B IT",
     "provider": "bedrock",
     "family": "gemma",
-    "created_at": "2025-07-27 00:00:00 UTC",
+    "created_at": "2025-03-12 00:00:00 UTC",
     "context_window": 202752,
     "max_output_tokens": 8192,
     "knowledge_cutoff": null,
@@ -11728,7 +11557,6 @@
       ]
     },
     "capabilities": [
-      "function_calling",
       "structured_output",
       "vision",
       "streaming"
@@ -11736,8 +11564,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.12,
-          "output_per_million": 0.2
+          "input_per_million": 0.23,
+          "output_per_million": 0.38
         }
       }
     },
@@ -11769,19 +11597,19 @@
       "open_weights": true,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2025-07-27",
-      "tool_call": true,
+      "last_updated": "2025-03-12",
+      "tool_call": false,
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.12,
-        "output": 0.2
+        "input": 0.23,
+        "output": 0.38
       },
       "limit": {
         "context": 202752,
         "output": 8192
       },
-      "knowledge": "2025-07"
+      "knowledge": "2024-08"
     }
   },
   {
@@ -11789,8 +11617,8 @@
     "name": "Gemma 3 4B IT",
     "provider": "bedrock",
     "family": "gemma",
-    "created_at": "2024-12-01 00:00:00 UTC",
-    "context_window": 128000,
+    "created_at": "2025-03-12 00:00:00 UTC",
+    "context_window": 131072,
     "max_output_tokens": 4096,
     "knowledge_cutoff": null,
     "modalities": {
@@ -11803,7 +11631,6 @@
       ]
     },
     "capabilities": [
-      "function_calling",
       "vision",
       "streaming"
     ],
@@ -11840,95 +11667,410 @@
       "endpoint": "mantle",
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
-      "attachment": false,
+      "open_weights": true,
+      "attachment": true,
       "temperature": true,
-      "last_updated": "2024-12-01",
-      "tool_call": true,
+      "last_updated": "2025-03-12",
+      "tool_call": false,
       "reasoning": false,
       "cost": {
         "input": 0.04,
         "output": 0.08
       },
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 4096
-      }
+      },
+      "knowledge": "2024-08"
     }
   },
   {
     "id": "google.gemma-4-26b-a4b",
-    "name": "google.gemma-4-26b-a4b",
+    "name": "Gemma 4 26B A4B IT",
     "provider": "bedrock",
-    "family": null,
-    "created_at": "2026-05-04 00:00:00 UTC",
-    "context_window": null,
-    "max_output_tokens": null,
+    "family": "gemma",
+    "created_at": "2026-04-02 00:00:00 UTC",
+    "context_window": 262144,
+    "max_output_tokens": 32768,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
-        "text"
+        "text",
+        "image",
+        "video"
       ],
       "output": [
         "text"
       ]
     },
     "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "video",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.13,
+          "output_per_million": 0.4
+        }
+      }
+    },
     "metadata": {
-      "endpoint": "mantle"
+      "endpoint": "mantle",
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": true,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-04-02",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.13,
+        "output": 0.4
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      }
     }
   },
   {
     "id": "google.gemma-4-31b",
-    "name": "google.gemma-4-31b",
+    "name": "Gemma 4 31B IT",
     "provider": "bedrock",
-    "family": null,
-    "created_at": "2026-05-07 00:00:00 UTC",
-    "context_window": null,
-    "max_output_tokens": null,
+    "family": "gemma",
+    "created_at": "2026-04-02 00:00:00 UTC",
+    "context_window": 262144,
+    "max_output_tokens": 32768,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
-        "text"
+        "text",
+        "image",
+        "video"
       ],
       "output": [
         "text"
       ]
     },
     "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "video",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.14,
+          "output_per_million": 0.4
+        }
+      }
+    },
     "metadata": {
-      "endpoint": "mantle"
+      "endpoint": "mantle",
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": true,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-04-02",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.14,
+        "output": 0.4
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      }
     }
   },
   {
     "id": "google.gemma-4-e2b",
-    "name": "google.gemma-4-e2b",
+    "name": "Gemma 4 E2B IT",
     "provider": "bedrock",
-    "family": null,
-    "created_at": "2026-05-07 00:00:00 UTC",
-    "context_window": null,
-    "max_output_tokens": null,
+    "family": "gemma",
+    "created_at": "2026-04-02 00:00:00 UTC",
+    "context_window": 131072,
+    "max_output_tokens": 8192,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
-        "text"
+        "text",
+        "image",
+        "audio",
+        "video"
       ],
       "output": [
         "text"
       ]
     },
     "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "video",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.04,
+          "output_per_million": 0.08
+        }
+      }
+    },
     "metadata": {
-      "endpoint": "mantle"
+      "endpoint": "mantle",
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": true,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-04-02",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.04,
+        "output": 0.08
+      },
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      }
+    }
+  },
+  {
+    "id": "in.openai.gpt-5.6-luna",
+    "name": "GPT-5.6 Luna (India)",
+    "provider": "bedrock",
+    "family": "gpt-luna",
+    "created_at": "2026-07-09 00:00:00 UTC",
+    "context_window": 1050000,
+    "max_output_tokens": 128000,
+    "knowledge_cutoff": "2026-02-16",
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.22,
+          "output_per_million": 1.32,
+          "cache_read_input_per_million": 0.022,
+          "cache_write_input_per_million": 0.275
+        },
+        "long_context": {
+          "input_per_million": 0.44,
+          "output_per_million": 1.98,
+          "cache_read_input_per_million": 0.044,
+          "cache_write_input_per_million": 0.55
+        },
+        "long_context_threshold": 272000
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": false,
+      "last_updated": "2026-07-09",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.22,
+        "output": 1.32,
+        "cache_read": 0.022,
+        "cache_write": 0.275,
+        "tiers": [
+          {
+            "input": 0.44,
+            "output": 1.98,
+            "cache_read": 0.044,
+            "cache_write": 0.55,
+            "tier": {
+              "type": "context",
+              "size": 272000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 0.44,
+          "output": 1.98,
+          "cache_read": 0.044,
+          "cache_write": 0.55
+        }
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "knowledge": "2026-02-16"
+    }
+  },
+  {
+    "id": "in.openai.gpt-5.6-terra",
+    "name": "GPT-5.6 Terra (India)",
+    "provider": "bedrock",
+    "family": "gpt-terra",
+    "created_at": "2026-07-09 00:00:00 UTC",
+    "context_window": 1050000,
+    "max_output_tokens": 128000,
+    "knowledge_cutoff": "2026-02-16",
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "reasoning",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.2,
+          "output_per_million": 13.2,
+          "cache_read_input_per_million": 0.22,
+          "cache_write_input_per_million": 2.75
+        },
+        "long_context": {
+          "input_per_million": 4.4,
+          "output_per_million": 19.8,
+          "cache_read_input_per_million": 0.44,
+          "cache_write_input_per_million": 5.5
+        },
+        "long_context_threshold": 272000
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": false,
+      "last_updated": "2026-07-09",
+      "tool_call": true,
+      "structured_output": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 2.2,
+        "output": 13.2,
+        "cache_read": 0.22,
+        "cache_write": 2.75,
+        "tiers": [
+          {
+            "input": 4.4,
+            "output": 19.8,
+            "cache_read": 0.44,
+            "cache_write": 5.5,
+            "tier": {
+              "type": "context",
+              "size": 272000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 4.4,
+          "output": 19.8,
+          "cache_read": 0.44,
+          "cache_write": 5.5
+        }
+      },
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "knowledge": "2026-02-16"
     }
   },
   {
@@ -11936,9 +12078,9 @@
     "name": "Nova 2 Lite (JP)",
     "provider": "bedrock",
     "family": "nova",
-    "created_at": "2025-12-01 00:00:00 UTC",
+    "created_at": "2025-12-02 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 64000,
+    "max_output_tokens": 65535,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -11962,7 +12104,8 @@
         "standard": {
           "input_per_million": 0.396,
           "output_per_million": 3.311,
-          "cache_read_input_per_million": 0.099
+          "cache_read_input_per_million": 0.099,
+          "cache_write_input_per_million": 0.396
         }
       }
     },
@@ -11991,12 +12134,14 @@
       "cost": {
         "input": 0.396,
         "output": 3.311,
-        "cache_read": 0.099
+        "cache_read": 0.099,
+        "cache_write": 0.396
       },
       "limit": {
         "context": 1000000,
-        "output": 64000
-      }
+        "output": 65535
+      },
+      "knowledge": "2025-10"
     }
   },
   {
@@ -12897,7 +13042,7 @@
     "family": "llama",
     "created_at": "2025-04-05 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 16384,
+    "max_output_tokens": 8192,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -12935,7 +13080,7 @@
       },
       "limit": {
         "context": 1000000,
-        "output": 16384
+        "output": 8192
       },
       "knowledge": "2024-08"
     }
@@ -12946,8 +13091,8 @@
     "provider": "bedrock",
     "family": "llama",
     "created_at": "2025-04-05 00:00:00 UTC",
-    "context_window": 3500000,
-    "max_output_tokens": 16384,
+    "context_window": 10000000,
+    "max_output_tokens": 8192,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -12984,15 +13129,15 @@
         "output": 0.66
       },
       "limit": {
-        "context": 3500000,
-        "output": 16384
+        "context": 10000000,
+        "output": 8192
       },
       "knowledge": "2024-08"
     }
   },
   {
     "id": "minimax.minimax-m2",
-    "name": "MiniMax M2",
+    "name": "MiniMax-M2",
     "provider": "bedrock",
     "family": "minimax",
     "created_at": "2025-10-27 00:00:00 UTC",
@@ -13009,6 +13154,7 @@
     },
     "capabilities": [
       "function_calling",
+      "structured_output",
       "reasoning",
       "streaming"
     ],
@@ -13046,8 +13192,9 @@
       "attachment": false,
       "temperature": true,
       "last_updated": "2025-10-27",
+      "interleaved": true,
       "tool_call": true,
-      "structured_output": false,
+      "structured_output": true,
       "reasoning": true,
       "reasoning_options": [],
       "cost": {
@@ -13062,7 +13209,7 @@
   },
   {
     "id": "minimax.minimax-m2.1",
-    "name": "MiniMax M2.1",
+    "name": "MiniMax-M2.1",
     "provider": "bedrock",
     "family": "minimax",
     "created_at": "2025-12-23 00:00:00 UTC",
@@ -13079,6 +13226,7 @@
     },
     "capabilities": [
       "function_calling",
+      "structured_output",
       "reasoning",
       "streaming"
     ],
@@ -13116,8 +13264,9 @@
       "attachment": false,
       "temperature": true,
       "last_updated": "2025-12-23",
+      "interleaved": true,
       "tool_call": true,
-      "structured_output": false,
+      "structured_output": true,
       "reasoning": true,
       "reasoning_options": [],
       "cost": {
@@ -13132,10 +13281,10 @@
   },
   {
     "id": "minimax.minimax-m2.5",
-    "name": "MiniMax M2.5",
+    "name": "MiniMax-M2.5",
     "provider": "bedrock",
     "family": "minimax",
-    "created_at": "2026-03-18 00:00:00 UTC",
+    "created_at": "2026-02-12 00:00:00 UTC",
     "context_window": 196608,
     "max_output_tokens": 98304,
     "knowledge_cutoff": null,
@@ -13149,6 +13298,7 @@
     },
     "capabilities": [
       "function_calling",
+      "structured_output",
       "reasoning",
       "streaming"
     ],
@@ -13186,8 +13336,9 @@
       "attachment": false,
       "temperature": true,
       "last_updated": "2026-03-18",
+      "interleaved": true,
       "tool_call": true,
-      "structured_output": false,
+      "structured_output": true,
       "reasoning": true,
       "reasoning_options": [],
       "cost": {
@@ -13205,7 +13356,7 @@
     "name": "Devstral 2 123B",
     "provider": "bedrock",
     "family": "devstral",
-    "created_at": "2026-02-17 00:00:00 UTC",
+    "created_at": "2025-12-09 00:00:00 UTC",
     "context_window": 256000,
     "max_output_tokens": 8192,
     "knowledge_cutoff": null,
@@ -13253,7 +13404,7 @@
       "open_weights": true,
       "attachment": false,
       "temperature": true,
-      "last_updated": "2026-02-17",
+      "last_updated": "2025-12-09",
       "tool_call": true,
       "structured_output": true,
       "reasoning": false,
@@ -13264,7 +13415,8 @@
       "limit": {
         "context": 256000,
         "output": 8192
-      }
+      },
+      "knowledge": "2025-12"
     }
   },
   {
@@ -13272,7 +13424,7 @@
     "name": "Magistral Small 1.2",
     "provider": "bedrock",
     "family": "magistral",
-    "created_at": "2025-12-02 00:00:00 UTC",
+    "created_at": "2025-09-18 00:00:00 UTC",
     "context_window": 128000,
     "max_output_tokens": 40000,
     "knowledge_cutoff": null,
@@ -13328,9 +13480,9 @@
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
       "open_weights": true,
-      "attachment": false,
+      "attachment": true,
       "temperature": true,
-      "last_updated": "2025-12-02",
+      "last_updated": "2025-09-18",
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
@@ -13350,13 +13502,14 @@
     "name": "Ministral 14B 3.0",
     "provider": "bedrock",
     "family": "ministral",
-    "created_at": "2024-12-01 00:00:00 UTC",
+    "created_at": "2025-12-02 00:00:00 UTC",
     "context_window": 128000,
     "max_output_tokens": 4096,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "text"
@@ -13365,6 +13518,7 @@
     "capabilities": [
       "function_calling",
       "structured_output",
+      "vision",
       "streaming"
     ],
     "pricing": {
@@ -13400,10 +13554,10 @@
       "endpoint": "mantle",
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
-      "attachment": false,
+      "open_weights": true,
+      "attachment": true,
       "temperature": true,
-      "last_updated": "2024-12-01",
+      "last_updated": "2025-12-02",
       "tool_call": true,
       "structured_output": true,
       "reasoning": false,
@@ -13475,7 +13629,7 @@
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
       "open_weights": true,
-      "attachment": false,
+      "attachment": true,
       "temperature": true,
       "last_updated": "2025-12-02",
       "tool_call": true,
@@ -13496,13 +13650,14 @@
     "name": "Ministral 3 8B",
     "provider": "bedrock",
     "family": "ministral",
-    "created_at": "2024-12-01 00:00:00 UTC",
+    "created_at": "2025-12-02 00:00:00 UTC",
     "context_window": 128000,
     "max_output_tokens": 4096,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "text"
@@ -13511,6 +13666,7 @@
     "capabilities": [
       "function_calling",
       "structured_output",
+      "vision",
       "streaming"
     ],
     "pricing": {
@@ -13546,10 +13702,10 @@
       "endpoint": "mantle",
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
-      "attachment": false,
+      "open_weights": true,
+      "attachment": true,
       "temperature": true,
-      "last_updated": "2024-12-01",
+      "last_updated": "2025-12-02",
       "tool_call": true,
       "structured_output": true,
       "reasoning": false,
@@ -13660,7 +13816,7 @@
     "id": "mistral.mistral-large-3-675b-instruct",
     "name": "Mistral Large 3",
     "provider": "bedrock",
-    "family": "mistral",
+    "family": "mistral-large",
     "created_at": "2025-12-02 00:00:00 UTC",
     "context_window": 256000,
     "max_output_tokens": 8192,
@@ -13714,7 +13870,7 @@
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
       "open_weights": true,
-      "attachment": false,
+      "attachment": true,
       "temperature": true,
       "last_updated": "2025-12-02",
       "tool_call": true,
@@ -13727,7 +13883,8 @@
       "limit": {
         "context": 256000,
         "output": 8192
-      }
+      },
+      "knowledge": "2024-11"
     }
   },
   {
@@ -13765,7 +13922,7 @@
     "id": "mistral.pixtral-large-2502-v1:0",
     "name": "Pixtral Large (25.02)",
     "provider": "bedrock",
-    "family": "mistral",
+    "family": "pixtral",
     "created_at": "2025-04-08 00:00:00 UTC",
     "context_window": 128000,
     "max_output_tokens": 8192,
@@ -13795,7 +13952,7 @@
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
       "open_weights": false,
-      "attachment": false,
+      "attachment": true,
       "temperature": true,
       "last_updated": "2025-04-08",
       "tool_call": true,
@@ -13814,15 +13971,15 @@
     "id": "mistral.voxtral-mini-3b-2507",
     "name": "Voxtral Mini 3B 2507",
     "provider": "bedrock",
-    "family": "mistral",
-    "created_at": "2024-12-01 00:00:00 UTC",
-    "context_window": 128000,
+    "family": "voxtral",
+    "created_at": "2025-07-15 00:00:00 UTC",
+    "context_window": 32768,
     "max_output_tokens": 4096,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
-        "audio",
-        "text"
+        "text",
+        "audio"
       ],
       "output": [
         "text"
@@ -13861,10 +14018,10 @@
       "endpoint": "mantle",
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
-      "attachment": false,
+      "open_weights": true,
+      "attachment": true,
       "temperature": true,
-      "last_updated": "2024-12-01",
+      "last_updated": "2025-07-15",
       "tool_call": true,
       "structured_output": true,
       "reasoning": false,
@@ -13873,7 +14030,7 @@
         "output": 0.04
       },
       "limit": {
-        "context": 128000,
+        "context": 32768,
         "output": 4096
       }
     }
@@ -13882,9 +14039,9 @@
     "id": "mistral.voxtral-small-24b-2507",
     "name": "Voxtral Small 24B 2507",
     "provider": "bedrock",
-    "family": "mistral",
-    "created_at": "2025-07-01 00:00:00 UTC",
-    "context_window": 32000,
+    "family": "voxtral",
+    "created_at": "2025-07-15 00:00:00 UTC",
+    "context_window": 32768,
     "max_output_tokens": 8192,
     "knowledge_cutoff": null,
     "modalities": {
@@ -13904,8 +14061,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.15,
-          "output_per_million": 0.35
+          "input_per_million": 0.1,
+          "output_per_million": 0.3
         }
       }
     },
@@ -13932,16 +14089,16 @@
       "open_weights": true,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2025-07-01",
+      "last_updated": "2025-07-15",
       "tool_call": true,
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.15,
-        "output": 0.35
+        "input": 0.1,
+        "output": 0.3
       },
       "limit": {
-        "context": 32000,
+        "context": 32768,
         "output": 8192
       }
     }
@@ -13951,7 +14108,7 @@
     "name": "Kimi K2 Thinking",
     "provider": "bedrock",
     "family": "kimi-thinking",
-    "created_at": "2025-12-02 00:00:00 UTC",
+    "created_at": "2025-11-06 00:00:00 UTC",
     "context_window": 262143,
     "max_output_tokens": 16000,
     "knowledge_cutoff": null,
@@ -14014,7 +14171,8 @@
       "limit": {
         "context": 262143,
         "output": 16000
-      }
+      },
+      "knowledge": "2024-08"
     }
   },
   {
@@ -14046,10 +14204,10 @@
     "id": "moonshotai.kimi-k2.5",
     "name": "Kimi K2.5",
     "provider": "bedrock",
-    "family": "kimi",
-    "created_at": "2026-02-06 00:00:00 UTC",
+    "family": "kimi-k2",
+    "created_at": "2026-01-27 00:00:00 UTC",
     "context_window": 262143,
-    "max_output_tokens": 16000,
+    "max_output_tokens": 16384,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -14103,22 +14261,27 @@
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
       "open_weights": true,
-      "attachment": false,
+      "attachment": true,
       "temperature": true,
       "last_updated": "2026-02-06",
       "interleaved": true,
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "cost": {
         "input": 0.6,
         "output": 3
       },
       "limit": {
         "context": 262143,
-        "output": 16000
-      }
+        "output": 16384
+      },
+      "knowledge": "2025-01"
     }
   },
   {
@@ -14126,9 +14289,9 @@
     "name": "NVIDIA Nemotron Nano 12B v2 VL BF16",
     "provider": "bedrock",
     "family": "nemotron",
-    "created_at": "2024-12-01 00:00:00 UTC",
+    "created_at": "2025-10-28 00:00:00 UTC",
     "context_window": 128000,
-    "max_output_tokens": 4096,
+    "max_output_tokens": 8192,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -14178,10 +14341,10 @@
       "endpoint": "mantle",
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
-      "attachment": false,
+      "open_weights": true,
+      "attachment": true,
       "temperature": true,
-      "last_updated": "2024-12-01",
+      "last_updated": "2025-10-28",
       "tool_call": true,
       "structured_output": true,
       "reasoning": false,
@@ -14191,7 +14354,7 @@
       },
       "limit": {
         "context": 128000,
-        "output": 4096
+        "output": 8192
       }
     }
   },
@@ -14200,9 +14363,9 @@
     "name": "NVIDIA Nemotron Nano 3 30B",
     "provider": "bedrock",
     "family": "nemotron",
-    "created_at": "2025-12-23 00:00:00 UTC",
-    "context_window": 128000,
-    "max_output_tokens": 4096,
+    "created_at": "2025-12-15 00:00:00 UTC",
+    "context_window": 262144,
+    "max_output_tokens": 8192,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -14261,8 +14424,8 @@
         "output": 0.24
       },
       "limit": {
-        "context": 128000,
-        "output": 4096
+        "context": 262144,
+        "output": 8192
       }
     }
   },
@@ -14271,9 +14434,9 @@
     "name": "NVIDIA Nemotron Nano 9B v2",
     "provider": "bedrock",
     "family": "nemotron",
-    "created_at": "2024-12-01 00:00:00 UTC",
-    "context_window": 128000,
-    "max_output_tokens": 4096,
+    "created_at": "2025-08-18 00:00:00 UTC",
+    "context_window": 131072,
+    "max_output_tokens": 8192,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -14316,10 +14479,10 @@
       "endpoint": "mantle",
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
+      "open_weights": true,
       "attachment": false,
       "temperature": true,
-      "last_updated": "2024-12-01",
+      "last_updated": "2025-08-18",
       "tool_call": true,
       "structured_output": true,
       "reasoning": false,
@@ -14328,8 +14491,8 @@
         "output": 0.23
       },
       "limit": {
-        "context": 128000,
-        "output": 4096
+        "context": 131072,
+        "output": 8192
       }
     }
   },
@@ -15260,6 +15423,7 @@
     "capabilities": [
       "function_calling",
       "structured_output",
+      "reasoning",
       "streaming"
     ],
     "pricing": {
@@ -15298,7 +15462,17 @@
       "last_updated": "2025-10-29",
       "tool_call": true,
       "structured_output": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "cost": {
         "input": 0.15,
         "output": 0.6
@@ -15329,6 +15503,7 @@
     "capabilities": [
       "function_calling",
       "structured_output",
+      "reasoning",
       "streaming"
     ],
     "pricing": {
@@ -15367,7 +15542,17 @@
       "last_updated": "2025-10-29",
       "tool_call": true,
       "structured_output": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "cost": {
         "input": 0.07,
         "output": 0.2
@@ -15405,10 +15590,10 @@
   },
   {
     "id": "qwen.qwen3-235b-a22b-2507-v1:0",
-    "name": "Qwen3 235B A22B 2507",
+    "name": "Qwen3 235B-A22B Instruct 2507",
     "provider": "bedrock",
     "family": "qwen",
-    "created_at": "2025-09-18 00:00:00 UTC",
+    "created_at": "2025-07-21 00:00:00 UTC",
     "context_window": 262144,
     "max_output_tokens": 131072,
     "knowledge_cutoff": null,
@@ -15466,8 +15651,7 @@
       "limit": {
         "context": 262144,
         "output": 131072
-      },
-      "knowledge": "2024-04"
+      }
     }
   },
   {
@@ -15497,11 +15681,11 @@
   },
   {
     "id": "qwen.qwen3-32b-v1:0",
-    "name": "Qwen3 32B (dense)",
+    "name": "Qwen3 32B",
     "provider": "bedrock",
     "family": "qwen",
-    "created_at": "2025-09-18 00:00:00 UTC",
-    "context_window": 16384,
+    "created_at": "2025-04-01 00:00:00 UTC",
+    "context_window": 32768,
     "max_output_tokens": 16384,
     "knowledge_cutoff": null,
     "modalities": {
@@ -15551,19 +15735,24 @@
       "attachment": false,
       "temperature": true,
       "last_updated": "2025-09-18",
+      "interleaved": true,
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "cost": {
         "input": 0.15,
         "output": 0.6
       },
       "limit": {
-        "context": 16384,
+        "context": 32768,
         "output": 16384
       },
-      "knowledge": "2024-04"
+      "knowledge": "2025-04"
     }
   },
   {
@@ -15593,10 +15782,10 @@
   },
   {
     "id": "qwen.qwen3-coder-30b-a3b-v1:0",
-    "name": "Qwen3 Coder 30B A3B Instruct",
+    "name": "Qwen3-Coder 30B-A3B Instruct",
     "provider": "bedrock",
     "family": "qwen",
-    "created_at": "2025-09-18 00:00:00 UTC",
+    "created_at": "2025-07-31 00:00:00 UTC",
     "context_window": 262144,
     "max_output_tokens": 131072,
     "knowledge_cutoff": null,
@@ -15640,7 +15829,7 @@
       },
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
+      "open_weights": true,
       "attachment": false,
       "temperature": true,
       "last_updated": "2025-09-18",
@@ -15655,7 +15844,7 @@
         "context": 262144,
         "output": 131072
       },
-      "knowledge": "2024-04"
+      "knowledge": "2025-04"
     }
   },
   {
@@ -15685,10 +15874,10 @@
   },
   {
     "id": "qwen.qwen3-coder-480b-a35b-v1:0",
-    "name": "Qwen3 Coder 480B A35B Instruct",
+    "name": "Qwen3-Coder 480B-A35B Instruct",
     "provider": "bedrock",
     "family": "qwen",
-    "created_at": "2025-09-18 00:00:00 UTC",
+    "created_at": "2025-07-23 00:00:00 UTC",
     "context_window": 131072,
     "max_output_tokens": 65536,
     "knowledge_cutoff": null,
@@ -15708,7 +15897,7 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.22,
+          "input_per_million": 0.45,
           "output_per_million": 1.8
         }
       }
@@ -15740,14 +15929,14 @@
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.22,
+        "input": 0.45,
         "output": 1.8
       },
       "limit": {
         "context": 131072,
         "output": 65536
       },
-      "knowledge": "2024-04"
+      "knowledge": "2025-04"
     }
   },
   {
@@ -15755,8 +15944,8 @@
     "name": "Qwen3 Coder Next",
     "provider": "bedrock",
     "family": "qwen",
-    "created_at": "2026-02-06 00:00:00 UTC",
-    "context_window": 131072,
+    "created_at": "2026-02-03 00:00:00 UTC",
+    "context_window": 262144,
     "max_output_tokens": 65536,
     "knowledge_cutoff": null,
     "modalities": {
@@ -15770,14 +15959,13 @@
     "capabilities": [
       "function_calling",
       "structured_output",
-      "reasoning",
       "streaming"
     ],
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.22,
-          "output_per_million": 1.8
+          "input_per_million": 0.5,
+          "output_per_million": 1.2
         }
       }
     },
@@ -15791,25 +15979,25 @@
       "last_updated": "2026-02-06",
       "tool_call": true,
       "structured_output": true,
-      "reasoning": true,
-      "reasoning_options": [],
+      "reasoning": false,
       "cost": {
-        "input": 0.22,
-        "output": 1.8
+        "input": 0.5,
+        "output": 1.2
       },
       "limit": {
-        "context": 131072,
+        "context": 262144,
         "output": 65536
-      }
+      },
+      "knowledge": "2025-09"
     }
   },
   {
     "id": "qwen.qwen3-next-80b-a3b",
-    "name": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+    "name": "Qwen3-Next 80B-A3B Instruct",
     "provider": "bedrock",
     "family": "qwen",
-    "created_at": "2025-09-18 00:00:00 UTC",
-    "context_window": 262000,
+    "created_at": "2025-09-11 00:00:00 UTC",
+    "context_window": 262144,
     "max_output_tokens": 262000,
     "knowledge_cutoff": null,
     "modalities": {
@@ -15828,8 +16016,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.14,
-          "output_per_million": 1.4
+          "input_per_million": 0.15,
+          "output_per_million": 1.2
         }
       }
     },
@@ -15854,7 +16042,7 @@
       },
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
+      "open_weights": true,
       "attachment": false,
       "temperature": true,
       "last_updated": "2025-11-25",
@@ -15862,13 +16050,14 @@
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.14,
-        "output": 1.4
+        "input": 0.15,
+        "output": 1.2
       },
       "limit": {
-        "context": 262000,
+        "context": 262144,
         "output": 262000
-      }
+      },
+      "knowledge": "2025-04"
     }
   },
   {
@@ -15898,13 +16087,13 @@
   },
   {
     "id": "qwen.qwen3-vl-235b-a22b",
-    "name": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+    "name": "Qwen3 VL 235B A22B Instruct",
     "provider": "bedrock",
     "family": "qwen",
-    "created_at": "2025-10-04 00:00:00 UTC",
-    "context_window": 262000,
+    "created_at": "2025-09-23 00:00:00 UTC",
+    "context_window": 262144,
     "max_output_tokens": 262000,
-    "knowledge_cutoff": null,
+    "knowledge_cutoff": "2025-03-31",
     "modalities": {
       "input": [
         "text",
@@ -15923,8 +16112,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.3,
-          "output_per_million": 1.5
+          "input_per_million": 0.53,
+          "output_per_million": 2.66
         }
       }
     },
@@ -15954,7 +16143,7 @@
       },
       "source": "models.dev",
       "provider_id": "amazon-bedrock",
-      "open_weights": false,
+      "open_weights": true,
       "attachment": true,
       "temperature": true,
       "last_updated": "2025-11-25",
@@ -15962,13 +16151,14 @@
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.3,
-        "output": 1.5
+        "input": 0.53,
+        "output": 2.66
       },
       "limit": {
-        "context": 262000,
+        "context": 262144,
         "output": 262000
-      }
+      },
+      "knowledge": "2025-03-31"
     }
   },
   {
@@ -16082,13 +16272,133 @@
     }
   },
   {
+    "id": "us-gov.openai.gpt-oss-120b-1:0",
+    "name": "gpt-oss-120b (GovCloud)",
+    "provider": "bedrock",
+    "family": "gpt-oss",
+    "created_at": "2025-08-05 00:00:00 UTC",
+    "context_window": 128000,
+    "max_output_tokens": 16384,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.18,
+          "output_per_million": 0.72
+        }
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": true,
+      "attachment": false,
+      "temperature": true,
+      "last_updated": "2025-08-05",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.18,
+        "output": 0.72
+      },
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      }
+    }
+  },
+  {
+    "id": "us-gov.openai.gpt-oss-20b-1:0",
+    "name": "gpt-oss-20b (GovCloud)",
+    "provider": "bedrock",
+    "family": "gpt-oss",
+    "created_at": "2025-08-05 00:00:00 UTC",
+    "context_window": 128000,
+    "max_output_tokens": 16384,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.084,
+          "output_per_million": 0.36
+        }
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": true,
+      "attachment": false,
+      "temperature": true,
+      "last_updated": "2025-08-05",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.084,
+        "output": 0.36
+      },
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      }
+    }
+  },
+  {
     "id": "us.amazon.nova-2-lite-v1:0",
     "name": "Nova 2 Lite (US)",
     "provider": "bedrock",
     "family": "nova",
-    "created_at": "2025-12-01 00:00:00 UTC",
+    "created_at": "2025-12-02 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 64000,
+    "max_output_tokens": 65535,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -16114,7 +16424,8 @@
         "standard": {
           "input_per_million": 0.33,
           "output_per_million": 2.75,
-          "cache_read_input_per_million": 0.0825
+          "cache_read_input_per_million": 0.0825,
+          "cache_write_input_per_million": 0.33
         }
       }
     },
@@ -16179,12 +16490,14 @@
       "cost": {
         "input": 0.33,
         "output": 2.75,
-        "cache_read": 0.0825
+        "cache_read": 0.0825,
+        "cache_write": 0.33
       },
       "limit": {
         "context": 1000000,
-        "output": 64000
-      }
+        "output": 65535
+      },
+      "knowledge": "2025-10"
     }
   },
   {
@@ -16194,13 +16507,14 @@
     "family": "nova-lite",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 300000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -16216,7 +16530,8 @@
         "standard": {
           "input_per_million": 0.06,
           "output_per_million": 0.24,
-          "cache_read_input_per_million": 0.015
+          "cache_read_input_per_million": 0.015,
+          "cache_write_input_per_million": 0.06
         }
       }
     },
@@ -16232,11 +16547,12 @@
       "cost": {
         "input": 0.06,
         "output": 0.24,
-        "cache_read": 0.015
+        "cache_read": 0.015,
+        "cache_write": 0.06
       },
       "limit": {
         "context": 300000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -16248,7 +16564,7 @@
     "family": "nova-micro",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 128000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -16267,7 +16583,8 @@
         "standard": {
           "input_per_million": 0.035,
           "output_per_million": 0.14,
-          "cache_read_input_per_million": 0.00875
+          "cache_read_input_per_million": 0.00875,
+          "cache_write_input_per_million": 0.035
         }
       }
     },
@@ -16289,46 +16606,73 @@
       "cost": {
         "input": 0.035,
         "output": 0.14,
-        "cache_read": 0.00875
+        "cache_read": 0.00875,
+        "cache_write": 0.035
       },
       "limit": {
         "context": 128000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
   },
   {
     "id": "us.amazon.nova-premier-v1:0",
-    "name": "Nova Premier",
+    "name": "Nova Premier (US)",
     "provider": "bedrock",
-    "family": "amazon",
-    "created_at": null,
-    "context_window": null,
-    "max_output_tokens": null,
+    "family": "nova",
+    "created_at": "2025-04-30 00:00:00 UTC",
+    "context_window": 1000000,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
       ]
     },
     "capabilities": [
-      "streaming",
-      "function_calling"
+      "function_calling",
+      "vision",
+      "video"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.5,
+          "output_per_million": 12.5,
+          "cache_read_input_per_million": 0.625,
+          "cache_write_input_per_million": 2.5
+        }
+      }
+    },
     "metadata": {
-      "provider_name": "Amazon",
-      "model_arn": "arn:aws:bedrock:us-west-2::foundation-model/amazon.nova-premier-v1:0",
-      "inference_types": [
-        "INFERENCE_PROFILE"
-      ],
-      "converse": {}
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2025-04-30",
+      "status": "deprecated",
+      "tool_call": true,
+      "structured_output": false,
+      "reasoning": false,
+      "cost": {
+        "input": 2.5,
+        "output": 12.5,
+        "cache_read": 0.625,
+        "cache_write": 2.5
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 10000
+      },
+      "knowledge": "2024-10"
     }
   },
   {
@@ -16338,13 +16682,14 @@
     "family": "nova-pro",
     "created_at": "2024-12-03 00:00:00 UTC",
     "context_window": 300000,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 10000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
         "image",
-        "video"
+        "video",
+        "pdf"
       ],
       "output": [
         "text"
@@ -16361,7 +16706,8 @@
         "standard": {
           "input_per_million": 0.8,
           "output_per_million": 3.2,
-          "cache_read_input_per_million": 0.2
+          "cache_read_input_per_million": 0.2,
+          "cache_write_input_per_million": 0.8
         }
       }
     },
@@ -16411,11 +16757,12 @@
       "cost": {
         "input": 0.8,
         "output": 3.2,
-        "cache_read": 0.2
+        "cache_read": 0.2,
+        "cache_write": 0.8
       },
       "limit": {
         "context": 300000,
-        "output": 8192
+        "output": 10000
       },
       "knowledge": "2024-10"
     }
@@ -17653,7 +18000,6 @@
       ]
     },
     "capabilities": [
-      "function_calling",
       "reasoning",
       "streaming"
     ],
@@ -17678,7 +18024,7 @@
       "attachment": false,
       "temperature": true,
       "last_updated": "2025-05-29",
-      "tool_call": true,
+      "tool_call": false,
       "reasoning": true,
       "reasoning_options": [],
       "cost": {
@@ -17850,7 +18196,7 @@
     "family": "llama",
     "created_at": "2025-04-05 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 16384,
+    "max_output_tokens": 8192,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -17895,7 +18241,7 @@
       },
       "limit": {
         "context": 1000000,
-        "output": 16384
+        "output": 8192
       },
       "knowledge": "2024-08"
     }
@@ -17906,8 +18252,8 @@
     "provider": "bedrock",
     "family": "llama",
     "created_at": "2025-04-05 00:00:00 UTC",
-    "context_window": 3500000,
-    "max_output_tokens": 16384,
+    "context_window": 10000000,
+    "max_output_tokens": 8192,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -17951,8 +18297,8 @@
         "output": 0.66
       },
       "limit": {
-        "context": 3500000,
-        "output": 16384
+        "context": 10000000,
+        "output": 8192
       },
       "knowledge": "2024-08"
     }
@@ -18034,6 +18380,7 @@
     },
     "capabilities": [
       "function_calling",
+      "structured_output",
       "reasoning",
       "vision",
       "streaming"
@@ -18086,7 +18433,7 @@
       "temperature": false,
       "last_updated": "2026-07-09",
       "tool_call": true,
-      "structured_output": false,
+      "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -18394,6 +18741,7 @@
     },
     "capabilities": [
       "function_calling",
+      "structured_output",
       "reasoning",
       "vision",
       "streaming"
@@ -18448,7 +18796,7 @@
       "temperature": false,
       "last_updated": "2026-09-04",
       "tool_call": true,
-      "structured_output": false,
+      "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -18907,7 +19255,7 @@
     "name": "Palmyra X4 (US)",
     "provider": "bedrock",
     "family": "palmyra",
-    "created_at": "2025-04-28 00:00:00 UTC",
+    "created_at": "2024-10-09 00:00:00 UTC",
     "context_window": 122880,
     "max_output_tokens": 8192,
     "knowledge_cutoff": null,
@@ -19010,6 +19358,7 @@
       },
       "limit": {
         "context": 1040000,
+        "input": 1040000,
         "output": 8192
       }
     }
@@ -19156,7 +19505,7 @@
     "name": "Palmyra X4",
     "provider": "bedrock",
     "family": "palmyra",
-    "created_at": "2025-04-28 00:00:00 UTC",
+    "created_at": "2024-10-09 00:00:00 UTC",
     "context_window": 122880,
     "max_output_tokens": 8192,
     "knowledge_cutoff": null,
@@ -19245,6 +19594,7 @@
       },
       "limit": {
         "context": 1040000,
+        "input": 1040000,
         "output": 8192
       }
     }
@@ -19466,13 +19816,15 @@
       "attachment": false,
       "temperature": true,
       "last_updated": "2025-12-22",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
+      "interleaved": true,
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "cost": {
         "input": 0.6,
         "output": 2.2
@@ -19541,10 +19893,15 @@
       "attachment": false,
       "temperature": true,
       "last_updated": "2026-01-19",
+      "interleaved": true,
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "cost": {
         "input": 0.07,
         "output": 0.4
@@ -19561,9 +19918,9 @@
     "name": "GLM-5",
     "provider": "bedrock",
     "family": "glm",
-    "created_at": "2026-03-18 00:00:00 UTC",
+    "created_at": "2026-02-12 00:00:00 UTC",
     "context_window": 202752,
-    "max_output_tokens": 101376,
+    "max_output_tokens": 131072,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -19613,20 +19970,22 @@
       "attachment": false,
       "temperature": true,
       "last_updated": "2026-03-18",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
+      "interleaved": true,
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "cost": {
         "input": 1,
         "output": 3.2
       },
       "limit": {
         "context": 202752,
-        "output": 101376
+        "output": 131072
       }
     }
   },
@@ -20828,9 +21187,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output",
-      "json_mode"
+      "streaming"
     ],
     "pricing": {},
     "metadata": {
@@ -20841,8 +21198,6 @@
       "default_endpoints": [],
       "features": [
         "logprobs",
-        "json_mode",
-        "json_schema",
         "safety_modes"
       ],
       "finetuned": false,
@@ -21407,7 +21762,7 @@
         "en",
         "en-PH"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "amalthea",
       "accent": "Filipino",
       "age": "Young Adult",
@@ -21450,7 +21805,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "andromeda",
       "accent": "American",
       "age": "Adult",
@@ -21542,7 +21897,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "apollo",
       "accent": "American",
       "age": "Adult",
@@ -21631,7 +21986,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "arcas",
       "accent": "American",
       "age": "Adult",
@@ -21676,7 +22031,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "aries",
       "accent": "American",
       "age": "Adult",
@@ -21719,7 +22074,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "asteria",
       "accent": "American",
       "age": "Adult",
@@ -21763,7 +22118,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "athena",
       "accent": "American",
       "age": "Mature",
@@ -21806,7 +22161,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "atlas",
       "accent": "American",
       "age": "Mature",
@@ -21897,7 +22252,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "aurora",
       "accent": "American",
       "age": "Adult",
@@ -21989,7 +22344,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "callista",
       "accent": "American",
       "age": "Adult",
@@ -22224,7 +22579,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "cora",
       "accent": "American",
       "age": "Adult",
@@ -22267,7 +22622,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "cordelia",
       "accent": "American",
       "age": "Young Adult",
@@ -22408,7 +22763,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "delia",
       "accent": "American",
       "age": "Young Adult",
@@ -22591,7 +22946,7 @@
         "en",
         "en-GB"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "draco",
       "accent": "British",
       "age": "Adult",
@@ -22730,7 +23085,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "electra",
       "accent": "American",
       "age": "Adult",
@@ -23059,7 +23414,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "harmonia",
       "accent": "American",
       "age": "Adult",
@@ -23150,7 +23505,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "helena",
       "accent": "American",
       "age": "Adult",
@@ -23196,7 +23551,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "hera",
       "accent": "American",
       "age": "Adult",
@@ -23239,7 +23594,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "hermes",
       "accent": "American",
       "age": "Adult",
@@ -23331,7 +23686,7 @@
         "en",
         "en-AU"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "hyperion",
       "accent": "Australian",
       "age": "Adult",
@@ -23374,7 +23729,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "iris",
       "accent": "American",
       "age": "Young Adult",
@@ -23466,7 +23821,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "janus",
       "accent": "American",
       "age": "Adult",
@@ -23604,7 +23959,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "juno",
       "accent": "American",
       "age": "Adult",
@@ -23648,7 +24003,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "jupiter",
       "accent": "American",
       "age": "Adult",
@@ -23979,7 +24334,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "luna",
       "accent": "American",
       "age": "Young Adult",
@@ -24070,7 +24425,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "mars",
       "accent": "American",
       "age": "Adult",
@@ -24162,7 +24517,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "minerva",
       "accent": "American",
       "age": "Adult",
@@ -24205,7 +24560,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "neptune",
       "accent": "American",
       "age": "Adult",
@@ -24295,7 +24650,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "odysseus",
       "accent": "American",
       "age": "Adult",
@@ -24387,7 +24742,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "ophelia",
       "accent": "American",
       "age": "Adult",
@@ -24430,7 +24785,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "orion",
       "accent": "American",
       "age": "Adult",
@@ -24474,7 +24829,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "orpheus",
       "accent": "American",
       "age": "Adult",
@@ -24519,7 +24874,7 @@
         "en",
         "en-GB"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "pandora",
       "accent": "British",
       "age": "Adult",
@@ -24563,7 +24918,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "phoebe",
       "accent": "American",
       "age": "Adult",
@@ -24606,7 +24961,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "pluto",
       "accent": "American",
       "age": "Adult",
@@ -24797,7 +25152,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "saturn",
       "accent": "American",
       "age": "Adult",
@@ -24886,7 +25241,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "selene",
       "accent": "American",
       "age": "Adult",
@@ -25023,7 +25378,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "thalia",
       "accent": "American",
       "age": "Adult",
@@ -25069,7 +25424,7 @@
         "en",
         "en-AU"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "theia",
       "accent": "Australian",
       "age": "Adult",
@@ -25209,7 +25564,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "vesta",
       "accent": "American",
       "age": "Adult",
@@ -25303,7 +25658,7 @@
         "en",
         "en-US"
       ],
-      "version": "2025-04-15.4",
+      "version": "2025-04-15.3",
       "voice": "zeus",
       "accent": "American",
       "age": "Adult",
@@ -28030,85 +28385,11 @@
     }
   },
   {
-    "id": "deepseek-v4-flash",
-    "name": "DeepSeek V4 Flash",
+    "id": "deepseek-flash",
+    "name": "DeepSeek V4.1 Flash",
     "provider": "deepseek",
     "family": "deepseek-flash",
-    "created_at": "2026-07-31 00:00:00 UTC",
-    "context_window": 1000000,
-    "max_output_tokens": 384000,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "function_calling",
-      "structured_output",
-      "reasoning",
-      "tool_choice"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.14,
-          "output_per_million": 0.28,
-          "cache_read_input_per_million": 0.0028,
-          "reasoning_output_per_million": 0.28
-        }
-      }
-    },
-    "metadata": {
-      "object": "model",
-      "owned_by": "deepseek",
-      "source": "models.dev",
-      "provider_id": "deepseek",
-      "open_weights": true,
-      "attachment": false,
-      "temperature": true,
-      "last_updated": "2026-07-31",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "tool_call": true,
-      "structured_output": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "cost": {
-        "input": 0.14,
-        "output": 0.28,
-        "reasoning": 0.28,
-        "cache_read": 0.0028
-      },
-      "limit": {
-        "context": 1000000,
-        "output": 384000
-      },
-      "knowledge": "2025-05"
-    }
-  },
-  {
-    "id": "deepseek-v4-flash-vision-exp",
-    "name": "DeepSeek V4 Flash Vision Exp",
-    "provider": "deepseek",
-    "family": "deepseek-flash",
-    "created_at": "2026-08-21 00:00:00 UTC",
+    "created_at": "2026-09-10 00:00:00 UTC",
     "context_window": 1000000,
     "max_output_tokens": 384000,
     "knowledge_cutoff": null,
@@ -28131,10 +28412,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.14,
-          "output_per_million": 0.28,
-          "cache_read_input_per_million": 0.0028,
-          "reasoning_output_per_million": 0.28
+          "input_per_million": 0.15,
+          "output_per_million": 0.6,
+          "cache_read_input_per_million": 0.003,
+          "reasoning_output_per_million": 0.6
         }
       }
     },
@@ -28143,11 +28424,10 @@
       "owned_by": "deepseek",
       "source": "models.dev",
       "provider_id": "deepseek",
-      "open_weights": false,
+      "open_weights": true,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2026-08-21",
-      "status": "beta",
+      "last_updated": "2026-09-10",
       "interleaved": {
         "field": "reasoning_content"
       },
@@ -28168,15 +28448,164 @@
         }
       ],
       "cost": {
-        "input": 0.14,
-        "output": 0.28,
-        "reasoning": 0.28,
-        "cache_read": 0.0028
+        "input": 0.15,
+        "output": 0.6,
+        "reasoning": 0.6,
+        "cache_read": 0.003
       },
       "limit": {
         "context": 1000000,
         "output": 384000
+      },
+      "knowledge": "2025-05"
+    }
+  },
+  {
+    "id": "deepseek-v4-flash",
+    "name": "DeepSeek V4 Flash",
+    "provider": "deepseek",
+    "family": "deepseek-flash",
+    "created_at": "2026-09-10 00:00:00 UTC",
+    "context_window": 1000000,
+    "max_output_tokens": 384000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "tool_choice"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.15,
+          "output_per_million": 0.6,
+          "cache_read_input_per_million": 0.003,
+          "reasoning_output_per_million": 0.6
+        }
       }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "deepseek",
+      "open_weights": true,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-09-10",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "reasoning": 0.6,
+        "cache_read": 0.003
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "knowledge": "2025-05"
+    }
+  },
+  {
+    "id": "deepseek-v4-flash-vision-exp",
+    "name": "DeepSeek V4 Flash Vision Exp",
+    "provider": "deepseek",
+    "family": "deepseek-flash",
+    "created_at": "2026-09-10 00:00:00 UTC",
+    "context_window": 1000000,
+    "max_output_tokens": 384000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "tool_choice"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.15,
+          "output_per_million": 0.6,
+          "cache_read_input_per_million": 0.003,
+          "reasoning_output_per_million": 0.6
+        }
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "deepseek",
+      "open_weights": true,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-09-10",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "reasoning": 0.6,
+        "cache_read": 0.003
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "knowledge": "2025-05"
     }
   },
   {
@@ -31602,6 +32031,29 @@
       "supported_generation_methods": [
         "generateContent",
         "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "lyria-realtime-exp",
+    "name": "Lyria Realtime Experimental",
+    "provider": "gemini",
+    "family": null,
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "version": "lyria-realtime-exp",
+      "description": "Lyria Realtime Experimental",
+      "supported_generation_methods": [
+        "bidiGenerateMusic"
       ]
     }
   },
@@ -35501,12 +35953,12 @@
   },
   {
     "id": "deepseek-v4-pro:0813",
-    "name": "deepseek-v4-pro:0813",
+    "name": "DeepSeek V4 Pro 0813",
     "provider": "ollama_cloud",
-    "family": "ollama",
-    "created_at": "2026-08-13 15:00:00 UTC",
-    "context_window": null,
-    "max_output_tokens": null,
+    "family": "deepseek-thinking",
+    "created_at": "2026-08-12 00:00:00 UTC",
+    "context_window": 1048576,
+    "max_output_tokens": 1048576,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -35517,13 +35969,99 @@
       ]
     },
     "capabilities": [
-      "streaming",
       "function_calling",
-      "reasoning"
+      "structured_output",
+      "reasoning",
+      "streaming"
     ],
     "pricing": {},
     "metadata": {
-      "owned_by": "ollama"
+      "owned_by": "ollama",
+      "source": "models.dev",
+      "provider_id": "ollama-cloud",
+      "open_weights": true,
+      "attachment": false,
+      "temperature": true,
+      "last_updated": "2026-08-22",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      }
+    }
+  },
+  {
+    "id": "deepseek-v4.1-flash",
+    "name": "DeepSeek V4.1 Flash",
+    "provider": "ollama_cloud",
+    "family": "deepseek-flash",
+    "created_at": "2026-09-10 00:00:00 UTC",
+    "context_window": 1048576,
+    "max_output_tokens": 384000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "owned_by": "ollama",
+      "source": "models.dev",
+      "provider_id": "ollama-cloud",
+      "open_weights": true,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-09-10",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "knowledge": "2025-05"
     }
   },
   {
@@ -37752,7 +38290,8 @@
     "pricing": {},
     "metadata": {
       "object": "model",
-      "owned_by": "system"
+      "owned_by": "system",
+      "shutdown_date": "2027-02-26"
     }
   },
   {
@@ -37927,7 +38466,8 @@
     "pricing": {},
     "metadata": {
       "object": "model",
-      "owned_by": "system"
+      "owned_by": "system",
+      "shutdown_date": "2027-02-26"
     }
   },
   {
@@ -37949,7 +38489,8 @@
     "pricing": {},
     "metadata": {
       "object": "model",
-      "owned_by": "system"
+      "owned_by": "system",
+      "shutdown_date": "2027-02-26"
     }
   },
   {
@@ -41321,6 +41862,106 @@
     }
   },
   {
+    "id": "gpt-image-2.5-flare",
+    "name": "gpt-image-2.5-flare",
+    "provider": "openai",
+    "family": null,
+    "created_at": "2026-09-04 23:05:47 UTC",
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "system"
+    }
+  },
+  {
+    "id": "gpt-image-2.5-flare-2026-09-08",
+    "name": "gpt-image-2.5-flare-2026-09-08",
+    "provider": "openai",
+    "family": null,
+    "created_at": "2026-09-08 07:03:26 UTC",
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "system"
+    }
+  },
+  {
+    "id": "gpt-image-2.5-sunburst",
+    "name": "gpt-image-2.5-sunburst",
+    "provider": "openai",
+    "family": null,
+    "created_at": "2026-09-04 23:06:02 UTC",
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "system"
+    }
+  },
+  {
+    "id": "gpt-image-2.5-sunburst-2026-09-08",
+    "name": "gpt-image-2.5-sunburst-2026-09-08",
+    "provider": "openai",
+    "family": null,
+    "created_at": "2026-09-08 07:03:30 UTC",
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "system"
+    }
+  },
+  {
+    "id": "gpt-live-1",
+    "name": "gpt-live-1",
+    "provider": "openai",
+    "family": null,
+    "created_at": "2026-09-08 17:43:27 UTC",
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "system"
+    }
+  },
+  {
     "id": "gpt-live-transcribe",
     "name": "gpt-live-transcribe",
     "provider": "openai",
@@ -42892,7 +43533,8 @@
     "pricing": {},
     "metadata": {
       "object": "model",
-      "owned_by": "openai-internal"
+      "owned_by": "openai-internal",
+      "shutdown_date": "2027-02-26"
     }
   },
   {
@@ -45033,7 +45675,7 @@
       "top_provider": {
         "context_length": 1000000,
         "max_completion_tokens": 128000,
-        "is_moderated": true
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -47952,7 +48594,7 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 15.0
+          "input_per_million": 7.0
         }
       }
     },
@@ -48813,7 +49455,7 @@
     "family": "deepseek",
     "created_at": "2025-12-01 00:00:00 UTC",
     "context_window": 163840,
-    "max_output_tokens": 16384,
+    "max_output_tokens": 16000,
     "knowledge_cutoff": "2024-07-31",
     "modalities": {
       "input": [
@@ -48833,8 +49475,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.32,
-          "output_per_million": 0.89
+          "input_per_million": 0.2574,
+          "output_per_million": 1.0287
         }
       }
     },
@@ -48852,8 +49494,8 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 163840,
-        "max_completion_tokens": 16384,
+        "context_length": 128000,
+        "max_completion_tokens": 16000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -48885,12 +49527,12 @@
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.32,
-        "output": 0.89
+        "input": 0.2574,
+        "output": 1.0287
       },
       "limit": {
         "context": 163840,
-        "output": 16384
+        "output": 16000
       },
       "knowledge": "2025-09"
     }
@@ -48922,9 +49564,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.29,
-          "output_per_million": 1.14,
-          "cache_read_input_per_million": 0.11
+          "input_per_million": 0.25,
+          "output_per_million": 1
         }
       }
     },
@@ -48977,9 +49618,8 @@
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.29,
-        "output": 1.14,
-        "cache_read": 0.11
+        "input": 0.25,
+        "output": 1
       },
       "limit": {
         "context": 163840,
@@ -49108,7 +49748,6 @@
     },
     "capabilities": [
       "function_calling",
-      "structured_output",
       "reasoning",
       "streaming",
       "tool_choice"
@@ -49150,7 +49789,6 @@
         "response_format",
         "seed",
         "stop",
-        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
@@ -49165,7 +49803,7 @@
       "temperature": true,
       "last_updated": "2025-05-29",
       "tool_call": true,
-      "structured_output": true,
+      "structured_output": false,
       "reasoning": true,
       "reasoning_options": [],
       "cost": {
@@ -49805,9 +50443,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.065,
-          "output_per_million": 0.18,
-          "cache_read_input_per_million": 0.016
+          "input_per_million": 0.06,
+          "output_per_million": 0.12,
+          "cache_read_input_per_million": 0.012
         }
       }
     },
@@ -49878,9 +50516,9 @@
         }
       ],
       "cost": {
-        "input": 0.065,
-        "output": 0.18,
-        "cache_read": 0.016
+        "input": 0.06,
+        "output": 0.12,
+        "cache_read": 0.012
       },
       "limit": {
         "context": 1310720,
@@ -50161,7 +50799,7 @@
     "family": "deepseek-thinking",
     "created_at": "2026-04-24 00:00:00 UTC",
     "context_window": 1048576,
-    "max_output_tokens": 384000,
+    "max_output_tokens": 393216,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -50182,9 +50820,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.95526,
-          "output_per_million": 1.91052,
-          "cache_read_input_per_million": 0.079605
+          "input_per_million": 1.6,
+          "output_per_million": 3.2,
+          "cache_read_input_per_million": 0.135
         }
       }
     },
@@ -50202,8 +50840,8 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 1024000,
-        "max_completion_tokens": 384000,
+        "context_length": 1048576,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -50256,13 +50894,13 @@
         }
       ],
       "cost": {
-        "input": 0.95526,
-        "output": 1.91052,
-        "cache_read": 0.079605
+        "input": 1.6,
+        "output": 3.2,
+        "cache_read": 0.135
       },
       "limit": {
         "context": 1048576,
-        "output": 384000
+        "output": 393216
       },
       "knowledge": "2025-05"
     }
@@ -50295,9 +50933,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 1.0494,
-          "output_per_million": 3.1482,
-          "cache_read_input_per_million": 0.03498
+          "input_per_million": 0.9834,
+          "output_per_million": 2.9502,
+          "cache_read_input_per_million": 0.03278
         }
       }
     },
@@ -50366,9 +51004,9 @@
         }
       ],
       "cost": {
-        "input": 1.0494,
-        "output": 3.1482,
-        "cache_read": 0.03498
+        "input": 0.9834,
+        "output": 2.9502,
+        "cache_read": 0.03278
       },
       "limit": {
         "context": 1048576,
@@ -50450,6 +51088,119 @@
         "top_p"
       ],
       "expiration_date": null
+    }
+  },
+  {
+    "id": "deepseek/deepseek-v4.1-flash",
+    "name": "DeepSeek V4.1 Flash",
+    "provider": "openrouter",
+    "family": "deepseek-flash",
+    "created_at": "2026-09-10 00:00:00 UTC",
+    "context_window": 1048576,
+    "max_output_tokens": 384000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "streaming",
+      "tool_choice",
+      "predicted_outputs"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.3,
+          "output_per_million": 1.2,
+          "cache_read_input_per_million": 0.006
+        }
+      }
+    },
+    "metadata": {
+      "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "DeepSeek",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 384000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": true,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-09-10",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.006
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "knowledge": "2025-05"
     }
   },
   {
@@ -54375,10 +55126,10 @@
   },
   {
     "id": "google/gemma-3-12b-it",
-    "name": "Gemma 3 12B",
+    "name": "Gemma 3 12B IT",
     "provider": "openrouter",
     "family": "gemma",
-    "created_at": "2025-03-13 00:00:00 UTC",
+    "created_at": "2025-03-12 00:00:00 UTC",
     "context_window": 131072,
     "max_output_tokens": 16384,
     "knowledge_cutoff": "2024-08-31",
@@ -54450,7 +55201,7 @@
       "open_weights": true,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2025-03-13",
+      "last_updated": "2025-03-12",
       "tool_call": true,
       "structured_output": true,
       "reasoning": false,
@@ -54462,12 +55213,12 @@
         "context": 131072,
         "output": 16384
       },
-      "knowledge": "2024-08-31"
+      "knowledge": "2024-08"
     }
   },
   {
     "id": "google/gemma-3-27b-it",
-    "name": "Gemma 3 27B",
+    "name": "Gemma 3 27B IT",
     "provider": "openrouter",
     "family": "gemma",
     "created_at": "2025-03-12 00:00:00 UTC",
@@ -54558,15 +55309,15 @@
         "context": 131072,
         "output": 117964
       },
-      "knowledge": "2024-08-31"
+      "knowledge": "2024-08"
     }
   },
   {
     "id": "google/gemma-3-4b-it",
-    "name": "Gemma 3 4B",
+    "name": "Gemma 3 4B IT",
     "provider": "openrouter",
     "family": "gemma",
-    "created_at": "2025-03-13 00:00:00 UTC",
+    "created_at": "2025-03-12 00:00:00 UTC",
     "context_window": 131072,
     "max_output_tokens": 16384,
     "knowledge_cutoff": "2024-08-31",
@@ -54634,7 +55385,7 @@
       "open_weights": true,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2025-03-13",
+      "last_updated": "2025-03-12",
       "tool_call": false,
       "structured_output": true,
       "reasoning": false,
@@ -54646,7 +55397,7 @@
         "context": 131072,
         "output": 16384
       },
-      "knowledge": "2024-08-31"
+      "knowledge": "2024-08"
     }
   },
   {
@@ -54656,7 +55407,7 @@
     "family": "gemma",
     "created_at": "2026-04-02 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 16384,
+    "max_output_tokens": 235929,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -54681,8 +55432,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.07,
-          "output_per_million": 0.34
+          "input_per_million": 0.09,
+          "output_per_million": 0.3,
+          "cache_read_input_per_million": 0.05
         }
       }
     },
@@ -54703,7 +55455,7 @@
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 16384,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -54744,12 +55496,13 @@
         }
       ],
       "cost": {
-        "input": 0.07,
-        "output": 0.34
+        "input": 0.09,
+        "output": 0.3,
+        "cache_read": 0.05
       },
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 235929
       }
     }
   },
@@ -56194,6 +56947,378 @@
     }
   },
   {
+    "id": "inclusionai/ling-3.0-flash-vl",
+    "name": "Ling 3.0 Flash VL",
+    "provider": "openrouter",
+    "family": "ling",
+    "created_at": "2026-09-10 00:00:00 UTC",
+    "context_window": 131072,
+    "max_output_tokens": 32768,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "video",
+      "streaming",
+      "tool_choice",
+      "predicted_outputs"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.06,
+          "output_per_million": 0.18,
+          "cache_read_input_per_million": 0.012
+        }
+      }
+    },
+    "metadata": {
+      "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
+      "architecture": {
+        "modality": "text+image+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": 32768,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": true,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-09-10",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "cost": {
+        "input": 0.06,
+        "output": 0.18,
+        "cache_read": 0.012
+      },
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      }
+    }
+  },
+  {
+    "id": "inclusionai/ling-3.0-flash-vl:free",
+    "name": "Ling 3.0 Flash VL (free)",
+    "provider": "openrouter",
+    "family": "ling",
+    "created_at": "2026-09-10 00:00:00 UTC",
+    "context_window": 262144,
+    "max_output_tokens": 32768,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "reasoning",
+      "vision",
+      "video",
+      "streaming",
+      "tool_choice"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0,
+          "output_per_million": 0
+        }
+      }
+    },
+    "metadata": {
+      "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
+      "architecture": {
+        "modality": "text+image+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 32768,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": true,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-09-10",
+      "tool_call": true,
+      "structured_output": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      }
+    }
+  },
+  {
+    "id": "inference-net/schematron-v2-small",
+    "name": "Schematron V2 Small",
+    "provider": "openrouter",
+    "family": "inference-net",
+    "created_at": "2026-09-12 00:00:00 UTC",
+    "context_window": 128000,
+    "max_output_tokens": 4096,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "structured_output",
+      "streaming",
+      "predicted_outputs"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.05,
+          "output_per_million": 0.23,
+          "cache_read_input_per_million": 0.05
+        }
+      }
+    },
+    "metadata": {
+      "description": "Schematron V2 Small is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes extraction quality for complex schemas and long pages. Extraction instructions must be supplied through a JSON schema...",
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 128000,
+        "max_completion_tokens": 4096,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": true,
+      "attachment": false,
+      "temperature": true,
+      "last_updated": "2026-09-12",
+      "tool_call": false,
+      "structured_output": true,
+      "reasoning": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0.23,
+        "cache_read": 0.05
+      },
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      }
+    }
+  },
+  {
+    "id": "inference-net/schematron-v2-turbo",
+    "name": "Schematron V2 Turbo",
+    "provider": "openrouter",
+    "family": "inference-net",
+    "created_at": "2026-09-12 00:00:00 UTC",
+    "context_window": 128000,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "structured_output",
+      "streaming",
+      "predicted_outputs"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.03,
+          "output_per_million": 0.15,
+          "cache_read_input_per_million": 0.03
+        }
+      }
+    },
+    "metadata": {
+      "description": "Schematron V2 Turbo is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes throughput for high-volume extraction workloads. Extraction instructions must be supplied through a JSON schema in response_format rather...",
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 128000,
+        "max_completion_tokens": 8192,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": true,
+      "attachment": false,
+      "temperature": true,
+      "last_updated": "2026-09-12",
+      "tool_call": false,
+      "structured_output": true,
+      "reasoning": false,
+      "cost": {
+        "input": 0.03,
+        "output": 0.15,
+        "cache_read": 0.03
+      },
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      }
+    }
+  },
+  {
     "id": "intfloat/e5-base-v2",
     "name": "Intfloat: E5-Base-v2",
     "provider": "openrouter",
@@ -56832,8 +57957,7 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
-        "top_p"
+        "top_logprobs"
       ],
       "expiration_date": null,
       "source": "models.dev",
@@ -57838,8 +58962,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.3,
-          "output_per_million": 1.1,
+          "input_per_million": 0.35,
+          "output_per_million": 1.5,
           "cache_read_input_per_million": 0.04
         }
       }
@@ -57908,8 +59032,8 @@
         }
       ],
       "cost": {
-        "input": 0.3,
-        "output": 1.1,
+        "input": 0.35,
+        "output": 1.5,
         "cache_read": 0.04
       },
       "limit": {
@@ -58585,8 +59709,65 @@
     }
   },
   {
+    "id": "meta/muse-voice-transcribe-1.0",
+    "name": "Meta: Muse Voice Transcribe 1.0",
+    "provider": "openrouter",
+    "family": "meta",
+    "created_at": "2026-09-11 17:15:31 UTC",
+    "context_window": 0,
+    "max_output_tokens": 0,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "transcription"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 180000.0
+        }
+      }
+    },
+    "metadata": {
+      "description": "Muse Voice Transcribe 1.0 is a synchronous speech-to-text model from Meta. It is suited for push-to-talk, endpointing, and speaker-aware transcription, with keyword biasing for domain terms and language biasing through...",
+      "architecture": {
+        "modality": "audio->transcription",
+        "input_modalities": [
+          "audio"
+        ],
+        "output_modalities": [
+          "transcription"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 0,
+        "max_completion_tokens": 0,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "max_tokens",
+        "repetition_penalty",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "expiration_date": null
+    }
+  },
+  {
     "id": "microsoft/mai-image-2.5",
-    "name": "MicrosoftAI: MAI-Image-2.5",
+    "name": "Microsoft AI: MAI-Image-2.5",
     "provider": "openrouter",
     "family": "microsoft",
     "created_at": "2026-06-02 18:28:16 UTC",
@@ -58608,7 +59789,7 @@
     ],
     "pricing": {},
     "metadata": {
-      "description": "Microsoft's MAI-Image-2.5 is a high-quality image generation model available via Azure AI Foundry. It produces photorealistic and artistic images from text prompts with support for various aspect ratios.",
+      "description": "Microsoft AI's MAI-Image-2.5 is a high-quality image generation model available via Azure AI Foundry. It produces photorealistic and artistic images from text prompts with support for various aspect ratios.",
       "architecture": {
         "input_modalities": [
           "text",
@@ -58650,7 +59831,7 @@
   },
   {
     "id": "microsoft/mai-image-2.5-pro",
-    "name": "MicrosoftAI: MAI-Image-2.5 Pro",
+    "name": "Microsoft AI: MAI-Image-2.5 Pro",
     "provider": "openrouter",
     "family": "microsoft",
     "created_at": "2026-07-23 17:28:21 UTC",
@@ -58672,7 +59853,7 @@
     ],
     "pricing": {},
     "metadata": {
-      "description": "Microsoft's MAI-Image-2.5 is a high-quality image generation model available via Azure AI Foundry. It produces photorealistic and artistic images from text prompts with support for various aspect ratios.",
+      "description": "Microsoft AI's MAI-Image-2.5 is a high-quality image generation model available via Azure AI Foundry. It produces photorealistic and artistic images from text prompts with support for various aspect ratios.",
       "architecture": {
         "input_modalities": [
           "text",
@@ -58714,7 +59895,7 @@
   },
   {
     "id": "microsoft/mai-image-2.6",
-    "name": "MicrosoftAI: MAI-Image-2.6",
+    "name": "Microsoft AI: MAI-Image-2.6",
     "provider": "openrouter",
     "family": "microsoft",
     "created_at": "2026-09-04 19:39:02 UTC",
@@ -58736,7 +59917,7 @@
     ],
     "pricing": {},
     "metadata": {
-      "description": "Microsoft's MAI-Image-2.6 is an image generation and editing model available via Azure AI Foundry. It creates images from text prompts and supports image-guided editing across multiple aspect ratios.",
+      "description": "MAI-Image-2.6 is an image generation and editing model from Microsoft AI, the precision tier of the MAI-Image-2.6 family alongside the faster [MAI-Image-2.6 Flash](/microsoft/mai-image-2.6-flash). It is suited for design-ready visuals and...",
       "architecture": {
         "input_modalities": [
           "text",
@@ -58778,7 +59959,7 @@
   },
   {
     "id": "microsoft/mai-image-2.6-flash",
-    "name": "MicrosoftAI: MAI-Image-2.6 Flash",
+    "name": "Microsoft AI: MAI-Image-2.6 Flash",
     "provider": "openrouter",
     "family": "microsoft",
     "created_at": "2026-09-04 19:38:55 UTC",
@@ -58800,7 +59981,7 @@
     ],
     "pricing": {},
     "metadata": {
-      "description": "Microsoft's MAI-Image-2.6 Flash is the lower-latency variant of MAI-Image-2.6, available via Azure AI Foundry. It supports image generation and image-guided editing across multiple aspect ratios.",
+      "description": "MAI-Image-2.6 Flash is the lower-latency, lower-cost member of the [MAI-Image-2.6](/microsoft/mai-image-2.6) family from Microsoft AI, built for latency-sensitive, high-throughput production image generation and editing at comparable quality to the precision tier....",
       "architecture": {
         "input_modalities": [
           "text",
@@ -58842,7 +60023,7 @@
   },
   {
     "id": "microsoft/mai-transcribe-1.5",
-    "name": "MicrosoftAI: MAI-Transcribe 1.5",
+    "name": "Microsoft AI: MAI-Transcribe 1.5",
     "provider": "openrouter",
     "family": "microsoft",
     "created_at": "2026-06-02 18:31:35 UTC",
@@ -58898,7 +60079,7 @@
   },
   {
     "id": "microsoft/mai-transcribe-2",
-    "name": "MicrosoftAI: MAI-Transcribe 2",
+    "name": "Microsoft AI: MAI-Transcribe 2",
     "provider": "openrouter",
     "family": "microsoft",
     "created_at": "2026-09-03 00:49:46 UTC",
@@ -58954,7 +60135,7 @@
   },
   {
     "id": "microsoft/mai-voice-2",
-    "name": "MicrosoftAI: MAI-Voice-2",
+    "name": "Microsoft AI: MAI-Voice-2",
     "provider": "openrouter",
     "family": "microsoft",
     "created_at": "2026-06-02 18:31:37 UTC",
@@ -58981,7 +60162,7 @@
       }
     },
     "metadata": {
-      "description": "MAI-Voice-2 is an expressive text-to-speech model from Microsoft. It is suited for conversational assistants, media narration, accessibility, education, and other long-form voice applications. It supports 15 languages across 18 locales,...",
+      "description": "MAI-Voice-2 is an expressive text-to-speech model from Microsoft AI. It is suited for conversational assistants, media narration, accessibility, education, and other long-form voice applications. It supports 15 languages across 18...",
       "architecture": {
         "modality": "text->speech",
         "input_modalities": [
@@ -59010,7 +60191,7 @@
   },
   {
     "id": "microsoft/mai-voice-2-flash",
-    "name": "MicrosoftAI: MAI-Voice-2-Flash",
+    "name": "Microsoft AI: MAI-Voice-2-Flash",
     "provider": "openrouter",
     "family": "microsoft",
     "created_at": "2026-07-23 15:54:40 UTC",
@@ -59037,7 +60218,7 @@
       }
     },
     "metadata": {
-      "description": "MAI-Voice-2-Flash is a low-latency text-to-speech model from Microsoft for voice agents, assistants, call centers, accessibility, narration, and other interactive applications. It generates expressive 24 kHz mono speech across 15 languages...",
+      "description": "MAI-Voice-2-Flash is a low-latency text-to-speech model from Microsoft AI for voice agents, assistants, call centers, accessibility, narration, and other interactive applications. It generates expressive 24 kHz mono speech across 15...",
       "architecture": {
         "modality": "text->speech",
         "input_modalities": [
@@ -60235,6 +61416,76 @@
     }
   },
   {
+    "id": "mistralai/codestral-2508:batch",
+    "name": "Mistral: Codestral 2508 (batch)",
+    "provider": "openrouter",
+    "family": "mistralai",
+    "created_at": "2025-08-01 20:20:30 UTC",
+    "context_window": 256000,
+    "max_output_tokens": 204800,
+    "knowledge_cutoff": "2025-03-31",
+    "modalities": {
+      "input": [
+        "text",
+        "file"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "tool_choice",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.15,
+          "output_per_million": 0.44999999999999996,
+          "cache_read_input_per_million": 0.015
+        }
+      }
+    },
+    "metadata": {
+      "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
+      "architecture": {
+        "modality": "text+file->text",
+        "input_modalities": [
+          "text",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 256000,
+        "max_completion_tokens": 204800,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "prediction",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "expiration_date": null
+    }
+  },
+  {
     "id": "mistralai/codestral-embed-2505",
     "name": "Mistral: Codestral Embed 2505",
     "provider": "openrouter",
@@ -60649,6 +61900,75 @@
     }
   },
   {
+    "id": "mistralai/ministral-8b-2512:batch",
+    "name": "Mistral: Ministral 3 8B 2512 (batch)",
+    "provider": "openrouter",
+    "family": "mistralai",
+    "created_at": "2025-12-02 13:20:54 UTC",
+    "context_window": 262144,
+    "max_output_tokens": 209715,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "tool_choice",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.075,
+          "cache_read_input_per_million": 0.0075
+        }
+      }
+    },
+    "metadata": {
+      "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 209715,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "expiration_date": null
+    }
+  },
+  {
     "id": "mistralai/mistral-embed-2312",
     "name": "Mistral: Mistral Embed 2312",
     "provider": "openrouter",
@@ -60892,7 +62212,7 @@
     "name": "Mistral Large 3",
     "provider": "openrouter",
     "family": "mistral-large",
-    "created_at": "2024-11-01 00:00:00 UTC",
+    "created_at": "2025-12-02 00:00:00 UTC",
     "context_window": 262144,
     "max_output_tokens": 209715,
     "knowledge_cutoff": null,
@@ -60976,6 +62296,77 @@
         "output": 209715
       },
       "knowledge": "2024-11"
+    }
+  },
+  {
+    "id": "mistralai/mistral-large-2512:batch",
+    "name": "Mistral: Mistral Large 3 2512 (batch)",
+    "provider": "openrouter",
+    "family": "mistralai",
+    "created_at": "2025-12-01 21:27:52 UTC",
+    "context_window": 262144,
+    "max_output_tokens": 209715,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "tool_choice",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.25,
+          "output_per_million": 0.75,
+          "cache_read_input_per_million": 0.024999999999999998
+        }
+      }
+    },
+    "metadata": {
+      "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 209715,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "expiration_date": null
     }
   },
   {
@@ -61335,6 +62726,77 @@
     }
   },
   {
+    "id": "mistralai/mistral-medium-3.1:batch",
+    "name": "Mistral: Mistral Medium 3.1 (batch)",
+    "provider": "openrouter",
+    "family": "mistralai",
+    "created_at": "2025-08-13 14:33:59 UTC",
+    "context_window": 131072,
+    "max_output_tokens": 104857,
+    "knowledge_cutoff": "2025-06-30",
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "tool_choice",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.19999999999999998,
+          "output_per_million": 1.0,
+          "cache_read_input_per_million": 0.02
+        }
+      }
+    },
+    "metadata": {
+      "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": 104857,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "expiration_date": null
+    }
+  },
+  {
     "id": "mistralai/mistral-nemo",
     "name": "Mistral Nemo",
     "provider": "openrouter",
@@ -61377,7 +62839,7 @@
           "text"
         ],
         "tokenizer": "Mistral",
-        "instruct_type": "mistral"
+        "instruct_type": null
       },
       "top_provider": {
         "context_length": 131072,
@@ -61703,6 +63165,78 @@
     }
   },
   {
+    "id": "mistralai/mistral-small-2603:batch",
+    "name": "Mistral: Mistral Small 4 (batch)",
+    "provider": "openrouter",
+    "family": "mistralai",
+    "created_at": "2026-03-16 21:14:45 UTC",
+    "context_window": 262144,
+    "max_output_tokens": 209715,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "tool_choice",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3,
+          "cache_read_input_per_million": 0.0075
+        }
+      }
+    },
+    "metadata": {
+      "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 209715,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "expiration_date": null
+    }
+  },
+  {
     "id": "mistralai/mistral-small-3.1-24b-instruct",
     "name": "Mistral Small 3.1 24B",
     "provider": "openrouter",
@@ -61795,7 +63329,7 @@
     "provider": "openrouter",
     "family": "mistral-small",
     "created_at": "2025-06-20 00:00:00 UTC",
-    "context_window": 131072,
+    "context_window": 256000,
     "max_output_tokens": 16384,
     "knowledge_cutoff": "2023-10-31",
     "modalities": {
@@ -61877,7 +63411,7 @@
         "output": 0.2
       },
       "limit": {
-        "context": 131072,
+        "context": 256000,
         "output": 16384
       },
       "knowledge": "2023-10-31"
@@ -62164,8 +63698,8 @@
     "id": "mistralai/voxtral-small-24b-2507",
     "name": "Voxtral Small 24B 2507",
     "provider": "openrouter",
-    "family": "mistral",
-    "created_at": "2025-10-30 00:00:00 UTC",
+    "family": "voxtral",
+    "created_at": "2025-07-15 00:00:00 UTC",
     "context_window": 32768,
     "max_output_tokens": 26214,
     "knowledge_cutoff": null,
@@ -62235,7 +63769,7 @@
       "open_weights": true,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2025-10-30",
+      "last_updated": "2025-07-15",
       "tool_call": true,
       "structured_output": true,
       "reasoning": false,
@@ -62321,7 +63855,7 @@
     "family": "kimi-k2",
     "created_at": "2025-07-11 00:00:00 UTC",
     "context_window": 131072,
-    "max_output_tokens": 100352,
+    "max_output_tokens": 98304,
     "knowledge_cutoff": "2024-12-31",
     "modalities": {
       "input": [
@@ -62359,7 +63893,7 @@
       },
       "top_provider": {
         "context_length": 131072,
-        "max_completion_tokens": 100352,
+        "max_completion_tokens": 98304,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -62392,7 +63926,7 @@
       },
       "limit": {
         "context": 131072,
-        "output": 100352
+        "output": 98304
       },
       "knowledge": "2024-12-31"
     }
@@ -62404,7 +63938,7 @@
     "family": "kimi-k2",
     "created_at": "2025-09-04 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 100352,
+    "max_output_tokens": 98304,
     "knowledge_cutoff": "2024-12-31",
     "modalities": {
       "input": [
@@ -62443,7 +63977,7 @@
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 100352,
+        "max_completion_tokens": 98304,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -62478,7 +64012,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 100352
+        "output": 98304
       },
       "knowledge": "2024-12-31"
     }
@@ -62490,7 +64024,7 @@
     "family": "kimi-thinking",
     "created_at": "2025-11-06 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 235929,
+    "max_output_tokens": 98304,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -62511,7 +64045,8 @@
       "text_tokens": {
         "standard": {
           "input_per_million": 0.6,
-          "output_per_million": 2.5
+          "output_per_million": 2.5,
+          "cache_read_input_per_million": 0.15
         }
       }
     },
@@ -62530,7 +64065,7 @@
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 235929,
+        "max_completion_tokens": 98304,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -62569,11 +64104,12 @@
       "reasoning_options": [],
       "cost": {
         "input": 0.6,
-        "output": 2.5
+        "output": 2.5,
+        "cache_read": 0.15
       },
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 98304
       },
       "knowledge": "2024-08"
     }
@@ -62928,9 +64464,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 3,
-          "output_per_million": 15,
-          "cache_read_input_per_million": 0.3
+          "input_per_million": 2.648138,
+          "output_per_million": 13.282724,
+          "cache_read_input_per_million": 0.302644
         }
       }
     },
@@ -63001,9 +64537,9 @@
         }
       ],
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3
+        "input": 2.648138,
+        "output": 13.282724,
+        "cache_read": 0.302644
       },
       "limit": {
         "context": 1048576,
@@ -63249,7 +64785,8 @@
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
-        "text"
+        "text",
+        "image"
       ],
       "output": [
         "text"
@@ -63259,6 +64796,7 @@
       "function_calling",
       "structured_output",
       "reasoning",
+      "vision",
       "streaming",
       "tool_choice"
     ],
@@ -63273,9 +64811,10 @@
     "metadata": {
       "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
       "architecture": {
-        "modality": "text->text",
+        "modality": "text+image->text",
         "input_modalities": [
-          "text"
+          "text",
+          "image"
         ],
         "output_modalities": [
           "text"
@@ -63308,7 +64847,7 @@
       "source": "models.dev",
       "provider_id": "openrouter",
       "open_weights": true,
-      "attachment": false,
+      "attachment": true,
       "temperature": true,
       "last_updated": "2026-09-08",
       "tool_call": true,
@@ -63690,92 +65229,6 @@
     }
   },
   {
-    "id": "nousresearch/hermes-4-70b",
-    "name": "Hermes 4 70B",
-    "provider": "openrouter",
-    "family": "hermes",
-    "created_at": "2025-08-26 00:00:00 UTC",
-    "context_window": 131072,
-    "max_output_tokens": 117964,
-    "knowledge_cutoff": "2024-08-31",
-    "modalities": {
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "reasoning",
-      "streaming"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.13,
-          "output_per_million": 0.4
-        }
-      }
-    },
-    "metadata": {
-      "description": "Hermes 4 70B is a hybrid reasoning model from Nous Research, built on Meta-Llama-3.1-70B. It introduces the same hybrid mode as the larger 405B release, allowing the model to either...",
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Llama3",
-        "instruct_type": null
-      },
-      "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 117964,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "response_format",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "expiration_date": null,
-      "source": "models.dev",
-      "provider_id": "openrouter",
-      "open_weights": true,
-      "attachment": false,
-      "temperature": true,
-      "last_updated": "2025-08-26",
-      "tool_call": false,
-      "structured_output": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "cost": {
-        "input": 0.13,
-        "output": 0.4
-      },
-      "limit": {
-        "context": 131072,
-        "output": 117964
-      },
-      "knowledge": "2024-08-31"
-    }
-  },
-  {
     "id": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
     "name": "NVIDIA: Llama Nemotron Embed VL 1B V2 (free)",
     "provider": "openrouter",
@@ -64141,6 +65594,7 @@
     },
     "capabilities": [
       "function_calling",
+      "structured_output",
       "reasoning",
       "streaming",
       "tool_choice",
@@ -64177,6 +65631,7 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
+        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -64186,10 +65641,12 @@
         "response_format",
         "seed",
         "stop",
+        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
         "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "expiration_date": null,
@@ -64200,7 +65657,7 @@
       "temperature": true,
       "last_updated": "2026-03-11",
       "tool_call": true,
-      "structured_output": false,
+      "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -64333,7 +65790,7 @@
     "family": "nemotron",
     "created_at": "2026-06-04 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 32768,
+    "max_output_tokens": 182520,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -64354,9 +65811,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.625,
-          "output_per_million": 3.125,
-          "cache_read_input_per_million": 0.1875
+          "input_per_million": 0.6,
+          "output_per_million": 2.4,
+          "cache_read_input_per_million": 0.12
         }
       }
     },
@@ -64374,8 +65831,8 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 256000,
-        "max_completion_tokens": 32768,
+        "context_length": 202800,
+        "max_completion_tokens": 182520,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -64425,13 +65882,13 @@
         }
       ],
       "cost": {
-        "input": 0.625,
-        "output": 3.125,
-        "cache_read": 0.1875
+        "input": 0.6,
+        "output": 2.4,
+        "cache_read": 0.12
       },
       "limit": {
         "context": 262144,
-        "output": 32768
+        "output": 182520
       }
     }
   },
@@ -65481,7 +66938,7 @@
       "top_provider": {
         "context_length": 8191,
         "max_completion_tokens": 4096,
-        "is_moderated": false
+        "is_moderated": true
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -72484,6 +73941,7 @@
           "type": "enum",
           "values": [
             "auto",
+            "transparent",
             "opaque"
           ]
         },
@@ -72572,6 +74030,7 @@
           "type": "enum",
           "values": [
             "auto",
+            "transparent",
             "opaque"
           ]
         },
@@ -72949,7 +74408,7 @@
   },
   {
     "id": "openai/gpt-oss-safeguard-20b",
-    "name": "gpt-oss-safeguard-20b",
+    "name": "GPT OSS Safeguard 20B",
     "provider": "openrouter",
     "family": "gpt-oss",
     "created_at": "2025-10-29 00:00:00 UTC",
@@ -76712,7 +78171,7 @@
     "family": "qwen",
     "created_at": "2025-04-28 00:00:00 UTC",
     "context_window": 131072,
-    "max_output_tokens": 8192,
+    "max_output_tokens": 16384,
     "knowledge_cutoff": "2025-03-31",
     "modalities": {
       "input": [
@@ -76733,8 +78192,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.2275,
-          "output_per_million": 0.91
+          "input_per_million": 0.12,
+          "output_per_million": 0.24
         }
       }
     },
@@ -76752,8 +78211,8 @@
         "instruct_type": "qwen3"
       },
       "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 8192,
+        "context_length": 40960,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -76794,12 +78253,12 @@
         }
       ],
       "cost": {
-        "input": 0.2275,
-        "output": 0.91
+        "input": 0.12,
+        "output": 0.24
       },
       "limit": {
         "context": 131072,
-        "output": 8192
+        "output": 16384
       },
       "knowledge": "2025-03-31"
     }
@@ -76902,7 +78361,7 @@
     "family": "qwen",
     "created_at": "2025-07-21 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 16384,
+    "max_output_tokens": 235929,
     "knowledge_cutoff": "2025-06-30",
     "modalities": {
       "input": [
@@ -76922,8 +78381,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.22,
-          "output_per_million": 0.88
+          "input_per_million": 0.0875,
+          "output_per_million": 0.35,
+          "cache_read_input_per_million": 0.0175
         }
       }
     },
@@ -76942,7 +78402,7 @@
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 16384,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -76976,12 +78436,13 @@
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.22,
-        "output": 0.88
+        "input": 0.0875,
+        "output": 0.35,
+        "cache_read": 0.0175
       },
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 235929
       },
       "knowledge": "2025-06-30"
     }
@@ -79505,7 +80966,7 @@
     "family": "qwen",
     "created_at": "2026-02-23 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 81920,
+    "max_output_tokens": 65536,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -79530,8 +80991,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.29,
-          "output_per_million": 2.4
+          "input_per_million": 0.26,
+          "output_per_million": 2.08
         }
       }
     },
@@ -79552,7 +81013,7 @@
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 81920,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -79593,12 +81054,12 @@
         }
       ],
       "cost": {
-        "input": 0.29,
-        "output": 2.4
+        "input": 0.26,
+        "output": 2.08
       },
       "limit": {
         "context": 262144,
-        "output": 81920
+        "output": 65536
       }
     }
   },
@@ -81586,9 +83047,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.42,
-          "output_per_million": 3,
-          "cache_read_input_per_million": 0.085
+          "input_per_million": 0.214,
+          "output_per_million": 2.55,
+          "cache_read_input_per_million": 0.15
         }
       }
     },
@@ -81608,7 +83069,7 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 1000000,
+        "context_length": 262144,
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
@@ -81631,6 +83092,7 @@
         "temperature",
         "tool_choice",
         "tools",
+        "top_a",
         "top_k",
         "top_logprobs",
         "top_p"
@@ -81659,9 +83121,9 @@
         }
       ],
       "cost": {
-        "input": 0.42,
-        "output": 3,
-        "cache_read": 0.085
+        "input": 0.214,
+        "output": 2.55,
+        "cache_read": 0.15
       },
       "limit": {
         "context": 1000000,
@@ -81695,7 +83157,8 @@
       "vision",
       "video",
       "streaming",
-      "tool_choice"
+      "tool_choice",
+      "predicted_outputs"
     ],
     "pricing": {
       "text_tokens": {
@@ -81731,10 +83194,13 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "logprobs",
         "max_tokens",
+        "min_p",
         "presence_penalty",
         "reasoning",
+        "repetition_penalty",
         "response_format",
         "seed",
         "stop",
@@ -83207,6 +84673,103 @@
     }
   },
   {
+    "id": "sakana/fugu-max",
+    "name": "Fugu Max",
+    "provider": "openrouter",
+    "family": "fugu",
+    "created_at": "2026-09-11 00:00:00 UTC",
+    "context_window": 1000000,
+    "max_output_tokens": 128000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "streaming",
+      "tool_choice"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2,
+          "output_per_million": 6,
+          "cache_read_input_per_million": 0.25
+        }
+      }
+    },
+    "metadata": {
+      "description": "Fugu Max is the cost-performance model in Sakana AI's Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to route...",
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 128000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "reasoning",
+        "reasoning_effort",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "web_search_options"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": false,
+      "last_updated": "2026-09-11",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.25
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      }
+    }
+  },
+  {
     "id": "sakana/fugu-ultra",
     "name": "Fugu Ultra",
     "provider": "openrouter",
@@ -83321,6 +84884,126 @@
         "context": 1000000,
         "output": 128000
       }
+    }
+  },
+  {
+    "id": "sakana/fugu-ultra-v2",
+    "name": "Fugu Ultra v2",
+    "provider": "openrouter",
+    "family": "fugu",
+    "created_at": "2026-09-11 00:00:00 UTC",
+    "context_window": 1000000,
+    "max_output_tokens": 128000,
+    "knowledge_cutoff": "2026-08-28",
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "streaming",
+      "tool_choice"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 5,
+          "output_per_million": 30,
+          "cache_read_input_per_million": 0.5
+        },
+        "long_context": {
+          "input_per_million": 10,
+          "output_per_million": 45,
+          "cache_read_input_per_million": 1
+        },
+        "long_context_threshold": 272000
+      }
+    },
+    "metadata": {
+      "description": "Fugu Ultra v2 is the higher-performance model in Sakana AI's Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to...",
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 128000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "reasoning",
+        "reasoning_effort",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "web_search_options"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": false,
+      "last_updated": "2026-09-11",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 5,
+        "output": 30,
+        "cache_read": 0.5,
+        "tiers": [
+          {
+            "input": 10,
+            "output": 45,
+            "cache_read": 1,
+            "tier": {
+              "type": "context",
+              "size": 272000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 10,
+          "output": 45,
+          "cache_read": 1
+        }
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "knowledge": "2026-08-28"
     }
   },
   {
@@ -85928,7 +87611,6 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logprobs",
         "max_tokens",
         "presence_penalty",
         "reasoning",
@@ -85937,7 +87619,6 @@
         "stop",
         "temperature",
         "tools",
-        "top_logprobs",
         "top_p"
       ],
       "expiration_date": null,
@@ -86357,9 +88038,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.03,
-          "output_per_million": 0.12,
-          "cache_read_input_per_million": 0.006
+          "input_per_million": 0.09,
+          "output_per_million": 0.36,
+          "cache_read_input_per_million": 0.018
         }
       }
     },
@@ -86412,9 +88093,9 @@
         }
       ],
       "cost": {
-        "input": 0.03,
-        "output": 0.12,
-        "cache_read": 0.006
+        "input": 0.09,
+        "output": 0.36,
+        "cache_read": 0.018
       },
       "limit": {
         "context": 524288,
@@ -88729,7 +90410,7 @@
     "provider": "openrouter",
     "family": "glm-flash",
     "created_at": "2026-01-19 00:00:00 UTC",
-    "context_window": 202752,
+    "context_window": 200000,
     "max_output_tokens": 117964,
     "knowledge_cutoff": null,
     "modalities": {
@@ -88819,7 +90500,7 @@
         "output": 0.4
       },
       "limit": {
-        "context": 202752,
+        "context": 200000,
         "output": 117964
       },
       "knowledge": "2025-04"
@@ -88847,8 +90528,7 @@
       "structured_output",
       "reasoning",
       "streaming",
-      "tool_choice",
-      "predicted_outputs"
+      "tool_choice"
     ],
     "pricing": {
       "text_tokens": {
@@ -88881,10 +90561,8 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "logprobs",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -89151,9 +90829,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.966,
-          "output_per_million": 3.036,
-          "cache_read_input_per_million": 0.1932
+          "input_per_million": 0.6832,
+          "output_per_million": 2.1472,
+          "cache_read_input_per_million": 0.12688
         }
       }
     },
@@ -89225,9 +90903,9 @@
         }
       ],
       "cost": {
-        "input": 0.966,
-        "output": 3.036,
-        "cache_read": 0.1932
+        "input": 0.6832,
+        "output": 2.1472,
+        "cache_read": 0.12688
       },
       "limit": {
         "context": 1048576,
@@ -89317,7 +90995,7 @@
     "family": "glm",
     "created_at": "2026-08-14 00:00:00 UTC",
     "context_window": 1310720,
-    "max_output_tokens": 943718,
+    "max_output_tokens": 943717,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -89359,8 +91037,8 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "context_length": 1048575,
+        "max_completion_tokens": 943717,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -89414,7 +91092,7 @@
       },
       "limit": {
         "context": 1310720,
-        "output": 943718
+        "output": 943717
       }
     }
   },
@@ -89450,9 +91128,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.075,
-          "output_per_million": 0.25,
-          "cache_read_input_per_million": 0.015
+          "input_per_million": 0.15,
+          "output_per_million": 0.5,
+          "cache_read_input_per_million": 0.03
         }
       }
     },
@@ -89520,9 +91198,9 @@
         }
       ],
       "cost": {
-        "input": 0.075,
-        "output": 0.25,
-        "cache_read": 0.015
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
       },
       "limit": {
         "context": 1310720,
@@ -89884,7 +91562,7 @@
   },
   {
     "id": "~anthropic/claude-haiku-latest",
-    "name": "Anthropic Claude Haiku Latest",
+    "name": "Claude Haiku Latest",
     "provider": "openrouter",
     "family": "claude-haiku",
     "created_at": "2026-04-27 00:00:00 UTC",
@@ -89920,7 +91598,7 @@
       }
     },
     "metadata": {
-      "description": "This model always redirects to the latest model in the Anthropic Claude Haiku family.",
+      "description": "This model always redirects to the latest model in the Claude Haiku family.",
       "architecture": {
         "modality": "text+image+file->text",
         "input_modalities": [
@@ -90092,7 +91770,7 @@
   },
   {
     "id": "~anthropic/claude-sonnet-latest",
-    "name": "Anthropic Claude Sonnet Latest",
+    "name": "Claude Sonnet Latest",
     "provider": "openrouter",
     "family": "claude-sonnet",
     "created_at": "2026-04-27 00:00:00 UTC",
@@ -90128,7 +91806,7 @@
       }
     },
     "metadata": {
-      "description": "This model always redirects to the latest model in the Anthropic Claude Sonnet family.",
+      "description": "This model always redirects to the latest model in the Claude Sonnet family.",
       "architecture": {
         "modality": "text+image+file->text",
         "input_modalities": [
@@ -90206,7 +91884,7 @@
     "family": "deepseek",
     "created_at": "2026-08-01 00:00:00 UTC",
     "context_window": 1310720,
-    "max_output_tokens": 393216,
+    "max_output_tokens": 131072,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -90228,9 +91906,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.05,
-          "output_per_million": 0.16,
-          "cache_read_input_per_million": 0.013
+          "input_per_million": 0.0352,
+          "output_per_million": 0.1056,
+          "cache_read_input_per_million": 0.00112
         }
       }
     },
@@ -90249,7 +91927,7 @@
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 393216,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -90301,19 +91979,19 @@
         }
       ],
       "cost": {
-        "input": 0.05,
-        "output": 0.16,
-        "cache_read": 0.013
+        "input": 0.0352,
+        "output": 0.1056,
+        "cache_read": 0.00112
       },
       "limit": {
         "context": 1310720,
-        "output": 393216
+        "output": 131072
       }
     }
   },
   {
     "id": "~google/gemini-flash-latest",
-    "name": "Google Gemini Flash Latest",
+    "name": "Gemini Flash Latest",
     "provider": "openrouter",
     "family": "gemini-flash",
     "created_at": "2026-04-27 00:00:00 UTC",
@@ -90353,7 +92031,7 @@
       }
     },
     "metadata": {
-      "description": "This model always redirects to the latest model in the Google Gemini Flash family.",
+      "description": "This model always redirects to the latest model in the Gemini Flash family.",
       "architecture": {
         "modality": "text+image+file+audio+video->text",
         "input_modalities": [
@@ -90425,7 +92103,7 @@
   },
   {
     "id": "~google/gemini-pro-latest",
-    "name": "Google Gemini Pro Latest",
+    "name": "Gemini Pro Latest",
     "provider": "openrouter",
     "family": "gemini-pro",
     "created_at": "2026-04-27 00:00:00 UTC",
@@ -90471,7 +92149,7 @@
       }
     },
     "metadata": {
-      "description": "This model always redirects to the latest model in the Google Gemini Pro family.",
+      "description": "This model always redirects to the latest model in the Gemini Pro family.",
       "architecture": {
         "modality": "text+image+file+audio+video->text",
         "input_modalities": [
@@ -90559,7 +92237,7 @@
   },
   {
     "id": "~moonshotai/kimi-latest",
-    "name": "MoonshotAI Kimi Latest",
+    "name": "Kimi Latest",
     "provider": "openrouter",
     "family": "kimi",
     "created_at": "2026-04-27 00:00:00 UTC",
@@ -90589,14 +92267,14 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 2.4,
-          "output_per_million": 12,
-          "cache_read_input_per_million": 0.24
+          "input_per_million": 2.1,
+          "output_per_million": 10.95,
+          "cache_read_input_per_million": 0.23
         }
       }
     },
     "metadata": {
-      "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
+      "description": "This model always redirects to the latest model in the Kimi family.",
       "architecture": {
         "modality": "text+image+video->text",
         "input_modalities": [
@@ -90662,9 +92340,9 @@
         }
       ],
       "cost": {
-        "input": 2.4,
-        "output": 12,
-        "cache_read": 0.24
+        "input": 2.1,
+        "output": 10.95,
+        "cache_read": 0.23
       },
       "limit": {
         "context": 1048576,
@@ -90673,11 +92351,140 @@
     }
   },
   {
-    "id": "~openai/gpt-latest",
-    "name": "OpenAI GPT Latest",
+    "id": "~openai/gpt-astra-latest",
+    "name": "GPT Astra Latest",
     "provider": "openrouter",
-    "family": "gpt",
-    "created_at": "2026-04-27 00:00:00 UTC",
+    "family": "gpt-astra",
+    "created_at": "2026-09-11 00:00:00 UTC",
+    "context_window": 1050000,
+    "max_output_tokens": 128000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "pdf",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "streaming",
+      "tool_choice"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 10,
+          "output_per_million": 50,
+          "cache_read_input_per_million": 1,
+          "cache_write_input_per_million": 12.5
+        },
+        "long_context": {
+          "input_per_million": 20,
+          "output_per_million": 75,
+          "cache_read_input_per_million": 2,
+          "cache_write_input_per_million": 25
+        },
+        "long_context_threshold": 272000
+      }
+    },
+    "metadata": {
+      "description": "This model always redirects to the latest model in the GPT Astra family.",
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": false,
+      "last_updated": "2026-09-11",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 10,
+        "output": 50,
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "tiers": [
+          {
+            "input": 20,
+            "output": 75,
+            "cache_read": 2,
+            "cache_write": 25,
+            "tier": {
+              "type": "context",
+              "size": 272000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 20,
+          "output": 75,
+          "cache_read": 2,
+          "cache_write": 25
+        }
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      }
+    }
+  },
+  {
+    "id": "~openai/gpt-luna-latest",
+    "name": "GPT Luna Latest",
+    "provider": "openrouter",
+    "family": "gpt-luna",
+    "created_at": "2026-09-11 00:00:00 UTC",
     "context_window": 1050000,
     "max_output_tokens": 128000,
     "knowledge_cutoff": "2026-02-16",
@@ -90702,22 +92509,22 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 2,
-          "output_per_million": 10,
-          "cache_read_input_per_million": 0.2,
-          "cache_write_input_per_million": 2.5
+          "input_per_million": 0.2,
+          "output_per_million": 1.2,
+          "cache_read_input_per_million": 0.02,
+          "cache_write_input_per_million": 0.25
         },
         "long_context": {
-          "input_per_million": 4,
-          "output_per_million": 15,
-          "cache_read_input_per_million": 0.4,
-          "cache_write_input_per_million": 5
+          "input_per_million": 0.4,
+          "output_per_million": 1.8,
+          "cache_read_input_per_million": 0.04,
+          "cache_write_input_per_million": 0.5
         },
         "long_context_threshold": 272000
       }
     },
     "metadata": {
-      "description": "This model always redirects to the latest model in the OpenAI GPT family.",
+      "description": "This model always redirects to the latest model in the GPT Luna family.",
       "architecture": {
         "modality": "text+image+file->text",
         "input_modalities": [
@@ -90734,7 +92541,7 @@
       "top_provider": {
         "context_length": 1050000,
         "max_completion_tokens": 128000,
-        "is_moderated": true
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -90755,7 +92562,7 @@
       "open_weights": false,
       "attachment": true,
       "temperature": false,
-      "last_updated": "2026-04-27",
+      "last_updated": "2026-09-11",
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
@@ -90773,16 +92580,16 @@
         }
       ],
       "cost": {
-        "input": 2,
-        "output": 10,
-        "cache_read": 0.2,
-        "cache_write": 2.5,
+        "input": 0.2,
+        "output": 1.2,
+        "cache_read": 0.02,
+        "cache_write": 0.25,
         "tiers": [
           {
-            "input": 4,
-            "output": 15,
-            "cache_read": 0.4,
-            "cache_write": 5,
+            "input": 0.4,
+            "output": 1.8,
+            "cache_read": 0.04,
+            "cache_write": 0.5,
             "tier": {
               "type": "context",
               "size": 272000
@@ -90790,10 +92597,10 @@
           }
         ],
         "context_over_200k": {
-          "input": 4,
-          "output": 15,
-          "cache_read": 0.4,
-          "cache_write": 5
+          "input": 0.4,
+          "output": 1.8,
+          "cache_read": 0.04,
+          "cache_write": 0.5
         }
       },
       "limit": {
@@ -90805,7 +92612,7 @@
   },
   {
     "id": "~openai/gpt-mini-latest",
-    "name": "OpenAI GPT Mini Latest",
+    "name": "GPT Mini Latest",
     "provider": "openrouter",
     "family": "gpt-mini",
     "created_at": "2026-04-27 00:00:00 UTC",
@@ -90840,7 +92647,7 @@
       }
     },
     "metadata": {
-      "description": "This model always redirects to the latest model in the OpenAI GPT Mini family.",
+      "description": "This model always redirects to the latest model in the GPT Mini family.",
       "architecture": {
         "modality": "text+image+file->text",
         "input_modalities": [
@@ -90904,6 +92711,268 @@
         "output": 128000
       },
       "knowledge": "2025-08-31"
+    }
+  },
+  {
+    "id": "~openai/gpt-sol-latest",
+    "name": "GPT Sol Latest",
+    "provider": "openrouter",
+    "family": "gpt-sol",
+    "created_at": "2026-09-11 00:00:00 UTC",
+    "context_window": 1050000,
+    "max_output_tokens": 128000,
+    "knowledge_cutoff": "2026-02-16",
+    "modalities": {
+      "input": [
+        "pdf",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "streaming",
+      "tool_choice"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2,
+          "output_per_million": 10,
+          "cache_read_input_per_million": 0.2,
+          "cache_write_input_per_million": 2.5
+        },
+        "long_context": {
+          "input_per_million": 4,
+          "output_per_million": 15,
+          "cache_read_input_per_million": 0.4,
+          "cache_write_input_per_million": 5
+        },
+        "long_context_threshold": 272000
+      }
+    },
+    "metadata": {
+      "description": "This model always redirects to the latest model in the GPT Sol family.",
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": false,
+      "last_updated": "2026-09-11",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 2,
+        "output": 10,
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "tiers": [
+          {
+            "input": 4,
+            "output": 15,
+            "cache_read": 0.4,
+            "cache_write": 5,
+            "tier": {
+              "type": "context",
+              "size": 272000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 4,
+          "output": 15,
+          "cache_read": 0.4,
+          "cache_write": 5
+        }
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "knowledge": "2026-02-16"
+    }
+  },
+  {
+    "id": "~openai/gpt-terra-latest",
+    "name": "GPT Terra Latest",
+    "provider": "openrouter",
+    "family": "gpt-terra",
+    "created_at": "2026-09-11 00:00:00 UTC",
+    "context_window": 1050000,
+    "max_output_tokens": 128000,
+    "knowledge_cutoff": "2026-02-16",
+    "modalities": {
+      "input": [
+        "pdf",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "streaming",
+      "tool_choice"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2,
+          "output_per_million": 12,
+          "cache_read_input_per_million": 0.2,
+          "cache_write_input_per_million": 2.5
+        },
+        "long_context": {
+          "input_per_million": 4,
+          "output_per_million": 18,
+          "cache_read_input_per_million": 0.4,
+          "cache_write_input_per_million": 5
+        },
+        "long_context_threshold": 272000
+      }
+    },
+    "metadata": {
+      "description": "This model always redirects to the latest model in the GPT Terra family.",
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": false,
+      "last_updated": "2026-09-11",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 2,
+        "output": 12,
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "tiers": [
+          {
+            "input": 4,
+            "output": 18,
+            "cache_read": 0.4,
+            "cache_write": 5,
+            "tier": {
+              "type": "context",
+              "size": 272000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 4,
+          "output": 18,
+          "cache_read": 0.4,
+          "cache_write": 5
+        }
+      },
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "knowledge": "2026-02-16"
     }
   },
   {
@@ -91041,7 +93110,7 @@
     "family": "glm-flash",
     "created_at": "2026-08-27 00:00:00 UTC",
     "context_window": 1310720,
-    "max_output_tokens": 943718,
+    "max_output_tokens": 131072,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -91089,7 +93158,7 @@
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -91142,7 +93211,7 @@
       },
       "limit": {
         "context": 1310720,
-        "output": 943718
+        "output": 131072
       }
     }
   },
@@ -91153,7 +93222,7 @@
     "family": "glm",
     "created_at": "2026-08-19 00:00:00 UTC",
     "context_window": 1310720,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 943718,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -91175,9 +93244,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 1.113,
-          "output_per_million": 3.498,
-          "cache_read_input_per_million": 0.2067
+          "input_per_million": 0.92,
+          "output_per_million": 3.1372,
+          "cache_read_input_per_million": 0.184
         }
       }
     },
@@ -91195,8 +93264,8 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 1024000,
-        "max_completion_tokens": 128000,
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -91244,13 +93313,13 @@
         }
       ],
       "cost": {
-        "input": 1.113,
-        "output": 3.498,
-        "cache_read": 0.2067
+        "input": 0.92,
+        "output": 3.1372,
+        "cache_read": 0.184
       },
       "limit": {
         "context": 1310720,
-        "output": 128000
+        "output": 943718
       }
     }
   },
@@ -94722,7 +96791,7 @@
         "requestAccess": {
           "references": {
             "global": {
-              "uri": "https://console.cloud.google.com/vertex-ai/model-garden/questionnaire?model=publishers/anthropic/models/claude-opus-4-7&mp=anthropic/anthropic-895.cloudpartnerservices.goog&service=anthropic-895.cloudpartnerservices.goog&enableLoggingDisclaimer=true&enableWebsearchDisclaimer=true"
+              "uri": "https://console.cloud.google.com/vertex-ai/model-garden/questionnaire?model=publishers/anthropic/models/claude-opus-4-7&mp=anthropic/anthropic-895.cloudpartnerservices.goog&service=anthropic-895.cloudpartnerservices.goog&enableLoggingDisclaimer=true&enableWebsearchDisclaimer=true&optionalAdvanceAISafetyAddendum=true"
             }
           }
         },
@@ -94856,7 +96925,7 @@
         "requestAccess": {
           "references": {
             "global": {
-              "uri": "https://console.cloud.google.com/vertex-ai/model-garden/questionnaire?model=publishers/anthropic/models/claude-opus-4-8&mp=anthropic/anthropic-897.cloudpartnerservices.goog&service=anthropic-897.cloudpartnerservices.goog&enableLoggingDisclaimer=true&enableWebsearchDisclaimer=true"
+              "uri": "https://console.cloud.google.com/vertex-ai/model-garden/questionnaire?model=publishers/anthropic/models/claude-opus-4-8&mp=anthropic/anthropic-897.cloudpartnerservices.goog&service=anthropic-897.cloudpartnerservices.goog&enableLoggingDisclaimer=true&enableWebsearchDisclaimer=true&optionalAdvanceAISafetyAddendum=true"
             }
           }
         },
@@ -94983,7 +97052,7 @@
         "requestAccess": {
           "references": {
             "global": {
-              "uri": "https://console.cloud.google.com/vertex-ai/model-garden/questionnaire?model=publishers/anthropic/models/claude-opus-5&mp=anthropic/anthropic-904.cloudpartnerservices.goog&service=anthropic-904.cloudpartnerservices.goog&enableLoggingDisclaimer=true&enableWebsearchDisclaimer=true"
+              "uri": "https://console.cloud.google.com/vertex-ai/model-garden/questionnaire?model=publishers/anthropic/models/claude-opus-5&mp=anthropic/anthropic-904.cloudpartnerservices.goog&service=anthropic-904.cloudpartnerservices.goog&enableLoggingDisclaimer=true&enableWebsearchDisclaimer=true&optionalAdvanceAISafetyAddendum=true&dataSharing=true"
             }
           }
         },
@@ -95395,7 +97464,7 @@
         "requestAccess": {
           "references": {
             "global": {
-              "uri": "https://console.cloud.google.com/vertex-ai/model-garden/questionnaire?model=publishers/anthropic/models/claude-sonnet-5&mp=anthropic/anthropic-896.cloudpartnerservices.goog&service=anthropic-896.cloudpartnerservices.goog&enableLoggingDisclaimer=true&enableWebsearchDisclaimer=true"
+              "uri": "https://console.cloud.google.com/vertex-ai/model-garden/questionnaire?model=publishers/anthropic/models/claude-sonnet-5&mp=anthropic/anthropic-896.cloudpartnerservices.goog&service=anthropic-896.cloudpartnerservices.goog&enableLoggingDisclaimer=true&enableWebsearchDisclaimer=true&optionalAdvanceAISafetyAddendum=true"
             }
           }
         },
@@ -96969,8 +99038,7 @@
       "reasoning",
       "vision",
       "video",
-      "transcription",
-      "streaming"
+      "transcription"
     ],
     "pricing": {
       "text_tokens": {
@@ -96987,19 +99055,6 @@
       }
     },
     "metadata": {
-      "version_id": "default",
-      "open_source_category": null,
-      "launch_stage": "PUBLIC_PREVIEW",
-      "supported_actions": {
-        "openGenerationAiStudio": {
-          "references": {
-            "us-central1": {
-              "uri": "https://console.cloud.google.com/vertex-ai/generative/multimodal/create/text?model=gemini-3.1-flash-lite-preview"
-            }
-          }
-        }
-      },
-      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/gemini-3.1-flash-lite-preview@default",
       "source": "models.dev",
       "provider_id": "google-vertex",
       "open_weights": false,
@@ -99047,6 +101102,425 @@
       "launch_stage": "GA",
       "supported_actions": null,
       "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/textembedding-gecko@003"
+    }
+  },
+  {
+    "id": "xai/grok-4.1-fast-non-reasoning",
+    "name": "Grok 4.1 Fast",
+    "provider": "vertexai",
+    "family": "grok",
+    "created_at": "2025-11-19 00:00:00 UTC",
+    "context_window": 128000,
+    "max_output_tokens": 30000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.2,
+          "output_per_million": 0.5,
+          "cache_read_input_per_million": 0.05
+        }
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "google-vertex",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2025-11-19",
+      "status": "deprecated",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": false,
+      "cost": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_read": 0.05
+      },
+      "limit": {
+        "context": 128000,
+        "output": 30000
+      }
+    }
+  },
+  {
+    "id": "xai/grok-4.1-fast-reasoning",
+    "name": "Grok 4.1 Fast (Reasoning)",
+    "provider": "vertexai",
+    "family": "grok",
+    "created_at": "2025-11-19 00:00:00 UTC",
+    "context_window": 128000,
+    "max_output_tokens": 30000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.2,
+          "output_per_million": 0.5,
+          "cache_read_input_per_million": 0.05
+        }
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "google-vertex",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2025-11-19",
+      "status": "deprecated",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "cost": {
+        "input": 0.2,
+        "output": 0.5,
+        "cache_read": 0.05
+      },
+      "limit": {
+        "context": 128000,
+        "output": 30000
+      }
+    }
+  },
+  {
+    "id": "xai/grok-4.20-non-reasoning",
+    "name": "Grok 4.20 (Non-Reasoning)",
+    "provider": "vertexai",
+    "family": "grok",
+    "created_at": "2026-03-09 00:00:00 UTC",
+    "context_window": 2000000,
+    "max_output_tokens": 30000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 1.25,
+          "output_per_million": 2.5,
+          "cache_read_input_per_million": 0.2
+        },
+        "long_context": {
+          "input_per_million": 2.5,
+          "output_per_million": 5,
+          "cache_read_input_per_million": 0.4
+        },
+        "long_context_threshold": 200000
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "google-vertex",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-03-09",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": false,
+      "cost": {
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4,
+            "tier": {
+              "type": "context",
+              "size": 200000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 2.5,
+          "output": 5,
+          "cache_read": 0.4
+        }
+      },
+      "limit": {
+        "context": 2000000,
+        "output": 30000
+      }
+    }
+  },
+  {
+    "id": "xai/grok-4.20-reasoning",
+    "name": "Grok 4.20 (Reasoning)",
+    "provider": "vertexai",
+    "family": "grok",
+    "created_at": "2026-03-09 00:00:00 UTC",
+    "context_window": 2000000,
+    "max_output_tokens": 30000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 1.25,
+          "output_per_million": 2.5,
+          "cache_read_input_per_million": 0.2
+        },
+        "long_context": {
+          "input_per_million": 2.5,
+          "output_per_million": 5,
+          "cache_read_input_per_million": 0.4
+        },
+        "long_context_threshold": 200000
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "google-vertex",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-03-09",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "cost": {
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4,
+            "tier": {
+              "type": "context",
+              "size": 200000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 2.5,
+          "output": 5,
+          "cache_read": 0.4
+        }
+      },
+      "limit": {
+        "context": 2000000,
+        "output": 30000
+      }
+    }
+  },
+  {
+    "id": "xai/grok-4.3",
+    "name": "Grok 4.3",
+    "provider": "vertexai",
+    "family": "grok",
+    "created_at": "2026-04-17 00:00:00 UTC",
+    "context_window": 200000,
+    "max_output_tokens": 30000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 1.25,
+          "output_per_million": 2.5,
+          "cache_read_input_per_million": 0.2
+        },
+        "long_context": {
+          "input_per_million": 2.5,
+          "output_per_million": 5,
+          "cache_read_input_per_million": 0.4
+        },
+        "long_context_threshold": 200000
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "google-vertex",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-04-17",
+      "status": "beta",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "cost": {
+        "input": 1.25,
+        "output": 2.5,
+        "cache_read": 0.2,
+        "tiers": [
+          {
+            "input": 2.5,
+            "output": 5,
+            "cache_read": 0.4,
+            "tier": {
+              "type": "context",
+              "size": 200000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 2.5,
+          "output": 5,
+          "cache_read": 0.4
+        }
+      },
+      "limit": {
+        "context": 200000,
+        "output": 30000
+      }
+    }
+  },
+  {
+    "id": "xai/grok-4.6",
+    "name": "Grok 4.6",
+    "provider": "vertexai",
+    "family": "grok",
+    "created_at": "2026-08-12 00:00:00 UTC",
+    "context_window": 524288,
+    "max_output_tokens": 500000,
+    "knowledge_cutoff": "2026-02-01",
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2,
+          "output_per_million": 6,
+          "cache_read_input_per_million": 0.5
+        },
+        "long_context": {
+          "input_per_million": 4,
+          "output_per_million": 12,
+          "cache_read_input_per_million": 1
+        },
+        "long_context_threshold": 200000
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "google-vertex",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-08-12",
+      "status": "beta",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "cost": {
+        "input": 2,
+        "output": 6,
+        "cache_read": 0.5,
+        "tiers": [
+          {
+            "input": 4,
+            "output": 12,
+            "cache_read": 1,
+            "tier": {
+              "type": "context",
+              "size": 200000
+            }
+          }
+        ],
+        "context_over_200k": {
+          "input": 4,
+          "output": 12,
+          "cache_read": 1
+        }
+      },
+      "limit": {
+        "context": 524288,
+        "output": 500000
+      },
+      "knowledge": "2026-02-01"
     }
   },
   {

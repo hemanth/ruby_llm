@@ -26,20 +26,20 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Req-Arrive-Time:
+      - '1789384122193'
+      Date:
+      - Mon, 14 Sep 2026 11:08:41 GMT
+      Server:
+      - istio-envoy
       Content-Type:
       - application/json; charset=utf-8
       Req-Cost-Time:
-      - '1694'
-      Req-Arrive-Time:
-      - '1788955494017'
+      - '1314'
       Resp-Start-Time:
-      - '1788955495711'
+      - '1789384123508'
       X-Envoy-Upstream-Service-Time:
-      - '1614'
-      Date:
-      - Wed, 09 Sep 2026 12:04:53 GMT
-      Server:
-      - istio-envoy
+      - '1308'
       Access-Control-Allow-Origin:
       - ''
       Vary:
@@ -51,35 +51,34 @@ http_interactions:
       string: '{"choices":[{"finish_reason":"tool_calls","index":0,"message":{"role":"assistant","content":"","reasoning_content":"Okay,
         the user is asking for the weather in Berlin, and they provided the coordinates
         52.5200 and 13.4050. I need to use the weather function here. Let me check
-        the parameters required. The function needs latitude and longitude as strings.
-        The user has given both, so I should format them into the function call. Make
-        sure to put them in the correct order, latitude first then longitude. Also,
-        the parameters should be in a JSON object within the tool_call tags. Let me
-        double-check the syntax to avoid any errors. Alright, that should do it.\n","tool_calls":[{"type":"function","function":{"name":"weather","arguments":"{\"latitude\":
-        \"52.5200\", \"longitude\": \"13.4050\"}"},"id":"8HUlIUfYw1MFS1TwxJbK9BZNh4EO6eDX"}]}}],"created":1788955495,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":166,"prompt_tokens":231,"total_tokens":397,"prompt_tokens_details":{"cached_tokens":0}},"id":"chatcmpl-TXQjN22JwY09w8FB1Pnjg8nNLygBuBVL","timings":{"cache_n":0,"prompt_n":231,"prompt_ms":202.786,"prompt_per_token_ms":0.8778614718614719,"prompt_per_second":1139.1318927342122,"predicted_n":166,"predicted_ms":1331.503,"predicted_per_token_ms":8.069715151515151,"predicted_per_second":123.92011133283215}}'
-  recorded_at: Wed, 09 Sep 2026 12:04:55 GMT
+        the function parameters. The function requires latitude and longitude as strings.
+        The user has given both values, so I should format them into the tool call.
+        Make sure the JSON is correctly structured with the right keys. No other parameters
+        are needed, so just pass those two. Alright, that should get the current weather
+        for Berlin.\n","tool_calls":[{"type":"function","function":{"name":"weather","arguments":"{\"latitude\":
+        \"52.5200\", \"longitude\": \"13.4050\"}"},"id":"KvzJ7NBJy51FgGv0lZovHEv5mNMiQNIQ"}]}}],"created":1789384123,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":153,"prompt_tokens":231,"total_tokens":384,"prompt_tokens_details":{"cached_tokens":1}},"id":"chatcmpl-iaZZDTnrFm9hYs6AV76oF9Cr8wfyOTyn","timings":{"cache_n":1,"prompt_n":230,"prompt_ms":58.964,"prompt_per_token_ms":0.25636521739130436,"prompt_per_second":3900.6851638287767,"predicted_n":153,"predicted_ms":1214.661,"predicted_per_token_ms":7.991190789473684,"predicted_per_second":125.13779564833314}}'
+  recorded_at: Mon, 14 Sep 2026 11:08:43 GMT
 - request:
     method: post
     uri: "<GPUSTACK_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"What''s the
-        weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"8HUlIUfYw1MFS1TwxJbK9BZNh4EO6eDX","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"Okay,
+        weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"KvzJ7NBJy51FgGv0lZovHEv5mNMiQNIQ","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"Okay,
         the user is asking for the weather in Berlin, and they provided the coordinates
         52.5200 and 13.4050. I need to use the weather function here. Let me check
-        the parameters required. The function needs latitude and longitude as strings.
-        The user has given both, so I should format them into the function call. Make
-        sure to put them in the correct order, latitude first then longitude. Also,
-        the parameters should be in a JSON object within the tool_call tags. Let me
-        double-check the syntax to avoid any errors. Alright, that should do it.\n","reasoning_content":"Okay,
-        the user is asking for the weather in Berlin, and they provided the coordinates
-        52.5200 and 13.4050. I need to use the weather function here. Let me check
-        the parameters required. The function needs latitude and longitude as strings.
-        The user has given both, so I should format them into the function call. Make
-        sure to put them in the correct order, latitude first then longitude. Also,
-        the parameters should be in a JSON object within the tool_call tags. Let me
-        double-check the syntax to avoid any errors. Alright, that should do it.\n"},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"8HUlIUfYw1MFS1TwxJbK9BZNh4EO6eDX"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        the function parameters. The function requires latitude and longitude as strings.
+        The user has given both values, so I should format them into the tool call.
+        Make sure the JSON is correctly structured with the right keys. No other parameters
+        are needed, so just pass those two. Alright, that should get the current weather
+        for Berlin.\n","reasoning_content":"Okay, the user is asking for the weather
+        in Berlin, and they provided the coordinates 52.5200 and 13.4050. I need to
+        use the weather function here. Let me check the function parameters. The function
+        requires latitude and longitude as strings. The user has given both values,
+        so I should format them into the tool call. Make sure the JSON is correctly
+        structured with the right keys. No other parameters are needed, so just pass
+        those two. Alright, that should get the current weather for Berlin.\n"},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"KvzJ7NBJy51FgGv0lZovHEv5mNMiQNIQ"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
@@ -99,22 +98,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Date:
+      - Mon, 14 Sep 2026 11:08:43 GMT
       Access-Control-Allow-Origin:
       - ''
       Content-Type:
       - application/json; charset=utf-8
-      Req-Cost-Time:
-      - '1511'
+      Req-Arrive-Time:
+      - '1789384123514'
       Resp-Start-Time:
-      - '1788955497233'
+      - '1789384124693'
       X-Envoy-Upstream-Service-Time:
-      - '1496'
-      Date:
-      - Wed, 09 Sep 2026 12:04:55 GMT
+      - '1171'
       Server:
       - istio-envoy
-      Req-Arrive-Time:
-      - '1788955495722'
+      Req-Cost-Time:
+      - '1178'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -122,6 +121,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiQ3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbiAoNTIuNTIwMCwgMTMuNDA1MCk6ICBcbvCfjKHvuI8gVGVtcGVyYXR1cmU6IDE1wrBDICBcbvCfjKzvuI8gV2luZDogMTAga20vaCAgXG5cblRoZSB3ZWF0aGVyIGFwcGVhcnMgbWlsZCBhbmQgY29tZm9ydGFibGUhIExldCBtZSBrbm93IGlmIHlvdSdkIGxpa2UgYWRkaXRpb25hbCBkZXRhaWxzLiIsInJlYXNvbmluZ19jb250ZW50IjoiT2theSwgdGhlIHVzZXIgYXNrZWQgZm9yIHRoZSB3ZWF0aGVyIGluIEJlcmxpbiB3aXRoIHRoZSBjb29yZGluYXRlcyBwcm92aWRlZC4gSSBjYWxsZWQgdGhlIHdlYXRoZXIgZnVuY3Rpb24gd2l0aCB0aG9zZSBjb29yZGluYXRlcy4gVGhlIHJlc3BvbnNlIGNhbWUgYmFjayBhcyAxNcKwQyB3aXRoIHdpbmQgYXQgMTAga20vaC4gTm93IEkgbmVlZCB0byBwcmVzZW50IHRoaXMgaW5mb3JtYXRpb24gY2xlYXJseS4gTGV0IG1lIHN0YXJ0IGJ5IHN0YXRpbmcgdGhlIGN1cnJlbnQgd2VhdGhlciBpbiBCZXJsaW4uIEkgc2hvdWxkIG1lbnRpb24gdGhlIHRlbXBlcmF0dXJlIGFuZCB3aW5kIHNwZWVkLiBLZWVwIGl0IHN0cmFpZ2h0Zm9yd2FyZCBhbmQgZnJpZW5kbHkuIE1heWJlIGFkZCBhIG5vdGUgYWJvdXQgdGhlIHdlYXRoZXIgYmVpbmcgbWlsZCBvciBjb21mb3J0YWJsZSBiYXNlZCBvbiB0aGUgdGVtcGVyYXR1cmUuIE1ha2Ugc3VyZSB0byBmb3JtYXQgaXQgbmVhdGx5IGFuZCBjb25maXJtIHRoZSBsb2NhdGlvbiB0byBhdm9pZCBhbnkgY29uZnVzaW9uLiBBbHJpZ2h0LCB0aGF0IHNob3VsZCBjb3ZlciBpdC5cbiJ9fV0sImNyZWF0ZWQiOjE3ODg5NTU0OTcsIm1vZGVsIjoicXdlbjMiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJiMTA4MzAtNDY1ZTQ5YjljIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwidXNhZ2UiOnsiY29tcGxldGlvbl90b2tlbnMiOjE3OSwicHJvbXB0X3Rva2VucyI6NDQzLCJ0b3RhbF90b2tlbnMiOjYyMiwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjM5Nn19LCJpZCI6ImNoYXRjbXBsLU5OaUpXZ01HeWp6bEdZb0xrbWJKT0NOaDFFa3kzRmdGIiwidGltaW5ncyI6eyJjYWNoZV9uIjozOTYsInByb21wdF9uIjo0NywicHJvbXB0X21zIjoyMS4xNjIsInByb21wdF9wZXJfdG9rZW5fbXMiOjAuNDUwMjU1MzE5MTQ4OTM2MTMsInByb21wdF9wZXJfc2Vjb25kIjoyMjIwLjk2MjEwMTg4MDcyOTcsInByZWRpY3RlZF9uIjoxNzksInByZWRpY3RlZF9tcyI6MTQ1OS44OTksInByZWRpY3RlZF9wZXJfdG9rZW5fbXMiOjguMjAxNjc5Nzc1MjgwODk4LCJwcmVkaWN0ZWRfcGVyX3NlY29uZCI6MTIxLjkyNjI0Mjg0MjgyNjgxfX0=
-  recorded_at: Wed, 09 Sep 2026 12:04:57 GMT
+        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiQ3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbjogMTXCsEMsIFdpbmQ6IDEwIGttL2guIiwicmVhc29uaW5nX2NvbnRlbnQiOiJPa2F5LCB0aGUgdXNlciBhc2tlZCBmb3IgdGhlIHdlYXRoZXIgaW4gQmVybGluIHdpdGggdGhlIGNvb3JkaW5hdGVzIHByb3ZpZGVkLiBJIGNhbGxlZCB0aGUgd2VhdGhlciBmdW5jdGlvbiB3aXRoIHRob3NlIGNvb3JkaW5hdGVzLiBUaGUgcmVzcG9uc2UgY2FtZSBiYWNrIGFzIDE1wrBDIHdpdGggd2luZCBhdCAxMCBrbS9oLiBOb3cgSSBuZWVkIHRvIHByZXNlbnQgdGhpcyBpbmZvcm1hdGlvbiBjbGVhcmx5LiBMZXQgbWUgc3RhcnQgYnkgc3RhdGluZyB0aGUgY3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbi4gTWVudGlvbiB0aGUgdGVtcGVyYXR1cmUgYW5kIHdpbmQgc3BlZWQuIEtlZXAgaXQgY29uY2lzZSBhbmQgZnJpZW5kbHkuIE1ha2Ugc3VyZSB0byB1c2UgdGhlIGRlZ3JlZXMgc3ltYm9sIGFuZCB0aGUgd2luZCBub3RhdGlvbi4gQ2hlY2sgaWYgdGhlcmUncyBhbnl0aGluZyBlbHNlIG5lZWRlZCwgYnV0IHNpbmNlIHRoZSB1c2VyIG9ubHkgYXNrZWQgZm9yIHRoZSB3ZWF0aGVyLCB0aGlzIHNob3VsZCBjb3ZlciBpdC4gQWxyaWdodCwgdGltZSB0byBwdXQgaXQgYWxsIHRvZ2V0aGVyLlxuIn19XSwiY3JlYXRlZCI6MTc4OTM4NDEyNCwibW9kZWwiOiJxd2VuMyIsInN5c3RlbV9maW5nZXJwcmludCI6ImIxMDgzMC00NjVlNDliOWMiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJ1c2FnZSI6eyJjb21wbGV0aW9uX3Rva2VucyI6MTQyLCJwcm9tcHRfdG9rZW5zIjo0MzAsInRvdGFsX3Rva2VucyI6NTcyLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MzgzfX0sImlkIjoiY2hhdGNtcGwtN3FYeFNZM0NGdXVqeGZnSm51UlpNUjdhNDgybGNyTm0iLCJ0aW1pbmdzIjp7ImNhY2hlX24iOjM4MywicHJvbXB0X24iOjQ3LCJwcm9tcHRfbXMiOjE5Ljk3MywicHJvbXB0X3Blcl90b2tlbl9tcyI6MC40MjQ5NTc0NDY4MDg1MTA2LCJwcm9tcHRfcGVyX3NlY29uZCI6MjM1My4xNzY3ODg2NjQ2OTc2LCJwcmVkaWN0ZWRfbiI6MTQyLCJwcmVkaWN0ZWRfbXMiOjExMzMuNDkzLCJwcmVkaWN0ZWRfcGVyX3Rva2VuX21zIjo4LjAzODk1NzQ0NjgwODUxLCJwcmVkaWN0ZWRfcGVyX3NlY29uZCI6MTI0LjM5NDIzOTc1MjY5MzY2fX0=
+  recorded_at: Mon, 14 Sep 2026 11:08:44 GMT
 recorded_with: VCR 6.4.0

@@ -24,11 +24,11 @@ http_interactions:
       message: OK
     headers:
       Content-Length:
-      - '1506'
+      - '1509'
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:06:07 GMT
+      - Mon, 14 Sep 2026 09:40:05 GMT
       Server:
       - istio-envoy
       Azureai-Fe-Is-Streaming:
@@ -70,7 +70,7 @@ http_interactions:
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Apim-Request-Id:
-      - '069735a9-d756-4c40-b5dc-af98074432f3'
+      - c314ce4b-c80f-49da-bdd9-5913a19854b9
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -79,10 +79,10 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"choices":[{"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"protected_material_code":{"detected":false,"filtered":false},"protected_material_text":{"detected":false,"filtered":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}},"finish_reason":"stop","index":0,"logprobs":null,"message":{"annotations":[],"content":"8","refusal":null,"role":"assistant"}}],"created":1788955568,"id":"chatcmpl-EMBM0vPyRtgEHtfrmOVDUp6LDi3Ns","model":"gpt-5-nano-2025-08-07","object":"chat.completion","prompt_filter_results":[{"prompt_index":0,"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"jailbreak":{"detected":false,"filtered":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}}}],"routing":{"serving_pipereplica":"d20260817094147-a25d4d07-default-r1-dp0-default"},"service_tier":"default","system_fingerprint":null,"usage":{"completion_tokens":75,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":64,"rejected_prediction_tokens":0},"latency_checkpoint":{"engine_tbt_ms":6,"engine_ttft_ms":19,"engine_ttlt_ms":603,"pre_inference_ms":214,"service_tbt_ms":6,"service_ttft_ms":481,"service_ttlt_ms":1060,"user_visible_ttft_ms":267},"prompt_tokens":14,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":89}}
+      string: '{"choices":[{"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"protected_material_code":{"detected":false,"filtered":false},"protected_material_text":{"detected":false,"filtered":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}},"finish_reason":"stop","index":0,"logprobs":null,"message":{"annotations":[],"content":"8","refusal":null,"role":"assistant"}}],"created":1789378805,"id":"chatcmpl-ENxSPygKT5HnlU1LwbfaLBlE1LuGG","model":"gpt-5-nano-2025-08-07","object":"chat.completion","prompt_filter_results":[{"prompt_index":0,"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"jailbreak":{"detected":false,"filtered":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}}}],"routing":{"serving_pipereplica":"d20260817094147-a25d4d07-default-r1-dp0-default"},"service_tier":"default","system_fingerprint":null,"usage":{"completion_tokens":203,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":192,"rejected_prediction_tokens":0},"latency_checkpoint":{"engine_tbt_ms":3,"engine_ttft_ms":17,"engine_ttlt_ms":790,"pre_inference_ms":208,"service_tbt_ms":3,"service_ttft_ms":521,"service_ttlt_ms":1232,"user_visible_ttft_ms":313},"prompt_tokens":14,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":217}}
 
         '
-  recorded_at: Wed, 09 Sep 2026 12:06:09 GMT
+  recorded_at: Mon, 14 Sep 2026 09:40:07 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
@@ -108,11 +108,11 @@ http_interactions:
       message: OK
     headers:
       Content-Length:
-      - '1510'
+      - '1511'
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:06:09 GMT
+      - Mon, 14 Sep 2026 09:40:07 GMT
       Server:
       - istio-envoy
       Azureai-Fe-Is-Streaming:
@@ -154,7 +154,7 @@ http_interactions:
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Apim-Request-Id:
-      - 0d8e486f-b186-4352-8f33-385a2e724ff6
+      - 85624206-c8d7-49c5-9828-5025f8a69678
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -163,8 +163,8 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"choices":[{"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"protected_material_code":{"detected":false,"filtered":false},"protected_material_text":{"detected":false,"filtered":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}},"finish_reason":"stop","index":0,"logprobs":null,"message":{"annotations":[],"content":"16","refusal":null,"role":"assistant"}}],"created":1788955569,"id":"chatcmpl-EMBM1iTn0W9ubIrTyqzEVJd0OPeuC","model":"gpt-5-nano-2025-08-07","object":"chat.completion","prompt_filter_results":[{"prompt_index":0,"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"jailbreak":{"detected":false,"filtered":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}}}],"routing":{"serving_pipereplica":"d20260817094147-a25d4d07-default-r0-dp0-default"},"service_tier":"default","system_fingerprint":null,"usage":{"completion_tokens":139,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":128,"rejected_prediction_tokens":0},"latency_checkpoint":{"engine_tbt_ms":5,"engine_ttft_ms":17,"engine_ttlt_ms":692,"pre_inference_ms":147,"service_tbt_ms":5,"service_ttft_ms":411,"service_ttlt_ms":1071,"user_visible_ttft_ms":264},"prompt_tokens":31,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":170}}
+      string: '{"choices":[{"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"protected_material_code":{"detected":false,"filtered":false},"protected_material_text":{"detected":false,"filtered":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}},"finish_reason":"stop","index":0,"logprobs":null,"message":{"annotations":[],"content":"16","refusal":null,"role":"assistant"}}],"created":1789378807,"id":"chatcmpl-ENxSRoKCyRkcfiVTGDp5V0j0QUTez","model":"gpt-5-nano-2025-08-07","object":"chat.completion","prompt_filter_results":[{"prompt_index":0,"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"jailbreak":{"detected":false,"filtered":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}}}],"routing":{"serving_pipereplica":"d20260817094147-a25d4d07-default-r1-dp0-default"},"service_tier":"default","system_fingerprint":null,"usage":{"completion_tokens":139,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":128,"rejected_prediction_tokens":0},"latency_checkpoint":{"engine_tbt_ms":8,"engine_ttft_ms":19,"engine_ttlt_ms":1612,"pre_inference_ms":249,"service_tbt_ms":8,"service_ttft_ms":507,"service_ttlt_ms":2096,"user_visible_ttft_ms":258},"prompt_tokens":31,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":170}}
 
         '
-  recorded_at: Wed, 09 Sep 2026 12:06:11 GMT
+  recorded_at: Mon, 14 Sep 2026 09:40:10 GMT
 recorded_with: VCR 6.4.0

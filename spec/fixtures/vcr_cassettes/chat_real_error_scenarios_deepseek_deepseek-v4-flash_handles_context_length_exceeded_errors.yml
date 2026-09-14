@@ -29,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 09 Sep 2026 12:07:09 GMT
+      - Mon, 14 Sep 2026 09:41:22 GMT
       Server:
       - elb
       Vary:
@@ -37,7 +37,7 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Ds-Trace-Id:
-      - e1ddf66bee4ed72389b2a78ad3d13d7c
+      - ac7ebbdf460619e9053003d1fcdadad6
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -45,15 +45,15 @@ http_interactions:
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 309f16a82e9f6132954a6c8e7d8ac26e.cloudfront.net (CloudFront)
+      - 1.1 5f778d35c6d984dad3799b4a47e97e44.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TXL52-P2
+      - TXL50-P6
       X-Amz-Cf-Id:
-      - 8k61JJYtM3ljR5LgMdBs3Pqf5wA9auspIDbpWpVVmqGLQ0KC0jb7Og==
+      - dDWgH2gziEAVndAAxHWDb2YSxw6lcD7IPhcSLpuY3i8QzT2BW1KYsg==
     body:
       encoding: UTF-8
       string: '{"error":{"message":"This model''s maximum context length is 1048576
-        tokens. However, you requested 1250104 tokens (1250104 in the messages, 0
+        tokens. However, you requested 1250051 tokens (1250051 in the messages, 0
         in the completion). Please reduce the length of the messages or completion.","type":"invalid_request_error","param":null,"code":"invalid_request_error"}}'
-  recorded_at: Wed, 09 Sep 2026 12:07:09 GMT
+  recorded_at: Mon, 14 Sep 2026 09:41:23 GMT
 recorded_with: VCR 6.4.0

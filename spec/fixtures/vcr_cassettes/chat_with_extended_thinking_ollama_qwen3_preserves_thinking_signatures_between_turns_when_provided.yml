@@ -24,91 +24,64 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:09:17 GMT
-      Transfer-Encoding:
-      - chunked
+      - Mon, 14 Sep 2026 09:42:22 GMT
+      Content-Length:
+      - '1483'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-51","object":"chat.completion","created":1788955757,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        sum of 5 and 3 is calculated by adding the two numbers together. \n\n**Step-by-Step
-        Explanation:**\n1. Start with the number 5.\n2. Add 3 to it: $ 5 + 3 $.\n3.
-        Count the total: $ 5 + 3 = 8 $.\n\n**Final Answer:**  \n$ \\boxed{8} $","reasoning":"Okay,
-        the user is asking \"What is 5 + 3?\" That''s a basic arithmetic problem.
-        Let me think about how to approach this.\n\nFirst, I know that addition is
-        one of the fundamental operations in mathematics. When you add two numbers,
-        you''re combining their quantities. So, 5 and 3 are both positive integers.
-        Adding them together should give a result that''s the sum of both numbers.\n\nLet
-        me visualize it. If I have 5 apples and then add 3 more apples, how many apples
-        do I have in total? Well, 5 plus 3 is 8. That makes sense because 5 + 3 equals
-        8. But wait, maybe I should double-check that. Let me count: 1, 2, 3, 4, 5
-        and then 6, 7, 8. Yep, that''s 8. So the sum is 8.\n\nAlternatively, I can
-        use the number line method. Starting at 5 and moving 3 units to the right:
-        5 to 6 is one, 6 to 7 is two, 7 to 8 is three. That also gives 8. \n\nAnother
-        way is to break it down. 5 + 2 is 7, and then adding 1 more makes it 8. That''s
-        another way to see it. \n\nI should also consider if there''s any possibility
-        of a trick question here. The user might be testing if I recognize a simple
-        problem, but given the straightforward nature of the question, it''s likely
-        just a basic addition. \n\nNo negative numbers or decimals involved, so the
-        answer should be straightforward. I don''t think there''s any ambiguity here.
-        The answer is definitely 8. \n\nWait, maybe the user is expecting a different
-        answer? No, 5 + 3 is a standard problem. Unless there''s some context I''m
-        missing, but the question is presented in isolation. \n\nSo, in conclusion,
-        the answer should be 8. No need for any complicated steps. Just basic addition.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":18,"prompt_tokens_details":{"cached_tokens":1},"completion_tokens":507,"total_tokens":525}}
+      string: '{"id":"chatcmpl-223","object":"chat.completion","created":1789378942,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        sum of 5 and 3 is calculated by combining their quantities. Starting at 5
+        and adding 3 sequentially: 5 + 1 = 6, 6 + 1 = 7, 7 + 1 = 8. Alternatively,
+        recognizing that 5 + 5 = 10 and subtracting 2 gives 8. Verification through
+        counting fingers or using commutative property confirms the result. \n\n**Answer:**
+        8","reasoning":"Okay, let me figure out what 5 plus 3 is. Hmm, so I need to
+        add these two numbers together. Let me start by recalling basic addition.
+        When you add numbers, you''re combining their quantities. So, 5 and 3. Let
+        me count. Starting from 5, if I add 1, that''s 6, then 7, then 8. Wait, that''s
+        adding 3 ones. So 5 + 1 is 6, plus another 1 is 7, and then another 1 is 8.
+        So that should be 8. But maybe there''s a quicker way. I remember that 5 +
+        5 is 10, so if I take away 2 from 5, that would be 3, so 5 + 3 is like 5 +
+        5 - 2, which is 10 - 2 = 8. Yeah, that checks out. Alternatively, I can think
+        of it as 3 + 5. Since addition is commutative, the order doesn''t matter.
+        So 3 + 5 is also 8. Let me verify with fingers. If I hold up 5 fingers and
+        then add 3 more, that''s 8 fingers total. Okay, that makes sense. I think
+        the answer is 8.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":18,"prompt_tokens_details":{"cached_tokens":1},"completion_tokens":375,"total_tokens":393}}
 
         '
-  recorded_at: Wed, 09 Sep 2026 12:09:17 GMT
+  recorded_at: Mon, 14 Sep 2026 09:42:22 GMT
 - request:
     method: post
     uri: "<OLLAMA_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"What is 5 +
-        3?"},{"role":"assistant","content":"The sum of 5 and 3 is calculated by adding
-        the two numbers together. \n\n**Step-by-Step Explanation:**\n1. Start with
-        the number 5.\n2. Add 3 to it: $ 5 + 3 $.\n3. Count the total: $ 5 + 3 = 8
-        $.\n\n**Final Answer:**  \n$ \\boxed{8} $","reasoning":"Okay, the user is
-        asking \"What is 5 + 3?\" That''s a basic arithmetic problem. Let me think
-        about how to approach this.\n\nFirst, I know that addition is one of the fundamental
-        operations in mathematics. When you add two numbers, you''re combining their
-        quantities. So, 5 and 3 are both positive integers. Adding them together should
-        give a result that''s the sum of both numbers.\n\nLet me visualize it. If
-        I have 5 apples and then add 3 more apples, how many apples do I have in total?
-        Well, 5 plus 3 is 8. That makes sense because 5 + 3 equals 8. But wait, maybe
-        I should double-check that. Let me count: 1, 2, 3, 4, 5 and then 6, 7, 8.
-        Yep, that''s 8. So the sum is 8.\n\nAlternatively, I can use the number line
-        method. Starting at 5 and moving 3 units to the right: 5 to 6 is one, 6 to
-        7 is two, 7 to 8 is three. That also gives 8. \n\nAnother way is to break
-        it down. 5 + 2 is 7, and then adding 1 more makes it 8. That''s another way
-        to see it. \n\nI should also consider if there''s any possibility of a trick
-        question here. The user might be testing if I recognize a simple problem,
-        but given the straightforward nature of the question, it''s likely just a
-        basic addition. \n\nNo negative numbers or decimals involved, so the answer
-        should be straightforward. I don''t think there''s any ambiguity here. The
-        answer is definitely 8. \n\nWait, maybe the user is expecting a different
-        answer? No, 5 + 3 is a standard problem. Unless there''s some context I''m
-        missing, but the question is presented in isolation. \n\nSo, in conclusion,
-        the answer should be 8. No need for any complicated steps. Just basic addition.\n","reasoning_content":"Okay,
-        the user is asking \"What is 5 + 3?\" That''s a basic arithmetic problem.
-        Let me think about how to approach this.\n\nFirst, I know that addition is
-        one of the fundamental operations in mathematics. When you add two numbers,
-        you''re combining their quantities. So, 5 and 3 are both positive integers.
-        Adding them together should give a result that''s the sum of both numbers.\n\nLet
-        me visualize it. If I have 5 apples and then add 3 more apples, how many apples
-        do I have in total? Well, 5 plus 3 is 8. That makes sense because 5 + 3 equals
-        8. But wait, maybe I should double-check that. Let me count: 1, 2, 3, 4, 5
-        and then 6, 7, 8. Yep, that''s 8. So the sum is 8.\n\nAlternatively, I can
-        use the number line method. Starting at 5 and moving 3 units to the right:
-        5 to 6 is one, 6 to 7 is two, 7 to 8 is three. That also gives 8. \n\nAnother
-        way is to break it down. 5 + 2 is 7, and then adding 1 more makes it 8. That''s
-        another way to see it. \n\nI should also consider if there''s any possibility
-        of a trick question here. The user might be testing if I recognize a simple
-        problem, but given the straightforward nature of the question, it''s likely
-        just a basic addition. \n\nNo negative numbers or decimals involved, so the
-        answer should be straightforward. I don''t think there''s any ambiguity here.
-        The answer is definitely 8. \n\nWait, maybe the user is expecting a different
-        answer? No, 5 + 3 is a standard problem. Unless there''s some context I''m
-        missing, but the question is presented in isolation. \n\nSo, in conclusion,
-        the answer should be 8. No need for any complicated steps. Just basic addition.\n"},{"role":"user","content":"Now
+        3?"},{"role":"assistant","content":"The sum of 5 and 3 is calculated by combining
+        their quantities. Starting at 5 and adding 3 sequentially: 5 + 1 = 6, 6 +
+        1 = 7, 7 + 1 = 8. Alternatively, recognizing that 5 + 5 = 10 and subtracting
+        2 gives 8. Verification through counting fingers or using commutative property
+        confirms the result. \n\n**Answer:** 8","reasoning":"Okay, let me figure out
+        what 5 plus 3 is. Hmm, so I need to add these two numbers together. Let me
+        start by recalling basic addition. When you add numbers, you''re combining
+        their quantities. So, 5 and 3. Let me count. Starting from 5, if I add 1,
+        that''s 6, then 7, then 8. Wait, that''s adding 3 ones. So 5 + 1 is 6, plus
+        another 1 is 7, and then another 1 is 8. So that should be 8. But maybe there''s
+        a quicker way. I remember that 5 + 5 is 10, so if I take away 2 from 5, that
+        would be 3, so 5 + 3 is like 5 + 5 - 2, which is 10 - 2 = 8. Yeah, that checks
+        out. Alternatively, I can think of it as 3 + 5. Since addition is commutative,
+        the order doesn''t matter. So 3 + 5 is also 8. Let me verify with fingers.
+        If I hold up 5 fingers and then add 3 more, that''s 8 fingers total. Okay,
+        that makes sense. I think the answer is 8.\n","reasoning_content":"Okay, let
+        me figure out what 5 plus 3 is. Hmm, so I need to add these two numbers together.
+        Let me start by recalling basic addition. When you add numbers, you''re combining
+        their quantities. So, 5 and 3. Let me count. Starting from 5, if I add 1,
+        that''s 6, then 7, then 8. Wait, that''s adding 3 ones. So 5 + 1 is 6, plus
+        another 1 is 7, and then another 1 is 8. So that should be 8. But maybe there''s
+        a quicker way. I remember that 5 + 5 is 10, so if I take away 2 from 5, that
+        would be 3, so 5 + 3 is like 5 + 5 - 2, which is 10 - 2 = 8. Yeah, that checks
+        out. Alternatively, I can think of it as 3 + 5. Since addition is commutative,
+        the order doesn''t matter. So 3 + 5 is also 8. Let me verify with fingers.
+        If I hold up 5 fingers and then add 3 more, that''s 8 fingers total. Okay,
+        that makes sense. I think the answer is 8.\n"},{"role":"user","content":"Now
         multiply that by 2"}],"stream":false}'
     headers:
       User-Agent:
@@ -127,67 +100,12 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:09:30 GMT
+      - Mon, 14 Sep 2026 09:42:30 GMT
       Transfer-Encoding:
       - chunked
     body:
-      encoding: UTF-8
-      string: '{"id":"chatcmpl-677","object":"chat.completion","created":1788955770,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"To
-        solve the problem, let''s start with the given value:\n\n- From the previous
-        calculation:  \n  $ 5 + 3 = 8 $\n\nNow, we are asked to **multiply that result
-        by $ \\frac{2}{3} $**.  \nSo we compute:\n\n$$\n8 \\times \\frac{2}{3} = \\frac{8
-        \\times 2}{3} = \\frac{16}{3}\n$$\n\nThis fraction is already in its simplest
-        form. If you prefer, you can also write it as a mixed number:\n\n$$\n\\frac{16}{3}
-        = 5 \\frac{1}{3}\n$$\n\nHowever, as an exact value, the improper fraction
-        $ \\frac{16}{3} $ is typically preferred in mathematical contexts unless otherwise
-        specified.\n\n---\n\n**Final Answer:**\n\n$$\n\\boxed{\\dfrac{16}{3}}\n$$","reasoning":"Okay,
-        the user just asked to multiply the previous result by 2/3. Let me recall
-        the previous answer. Earlier, they asked what is 5 + 3, and I answered 8.
-        Now they want to multiply that by 2/3.\n\nFirst, I need to make sure I understand
-        the operation correctly. Multiplying 8 by 2/3. Let me think about fractions.
-        When you multiply a whole number by a fraction, you can convert the whole
-        number into a fraction by putting it over 1. So 8 becomes 8/1. Then multiply
-        the numerators and denominators: 8 * 2 = 16, and 1 * 3 = 3. So the result
-        is 16/3. \n\nWait, but 16 divided by 3 is a repeating decimal. Should I present
-        it as an improper fraction or convert it to a mixed number? The user didn''t
-        specify, but in mathematical contexts, improper fractions are often acceptable
-        unless stated otherwise. Alternatively, maybe they want a decimal? Let me
-        check.\n\nAlternatively, maybe I should simplify it. 16/3 is approximately
-        5.333... So if I write that as a decimal, it''s 5.333... with the 3 repeating.
-        But the exact value is 16/3. Since the original problem involved fractions,
-        maybe the answer should be in fraction form. \n\nWait, but the user might
-        expect a simplified answer. Let me verify my calculation again. 8 multiplied
-        by 2/3. Yes, 8*(2/3) is (8*2)/3 = 16/3. That''s correct. \n\nAlternatively,
-        maybe the user made a typo and meant 2/3 or something else? But the question
-        says \"multiply that by 2 /think\". Wait, the original instruction was \"Now
-        multiply that by 2 /think\". Wait, maybe there''s a formatting issue here.
-        The user wrote \"Now multiply that by 2 /think\". The \"/think\" might be
-        a mistake, perhaps they meant 2/3? Because 2 divided by 3 is 2/3. Alternatively,
-        maybe they meant multiplying by 2 and then dividing by 3? But the way it''s
-        written is \"multiply that by 2 /think\". Maybe the \"/think\" is an error,
-        and they intended 2/3. \n\nAlternatively, maybe the user is using a different
-        notation. Let me check. If it''s \"multiply that by 2 /think\", perhaps they
-        meant 2 divided by 3? Or maybe the \"/think\" is part of the question? Wait,
-        the user might have intended to write \"2/3\" but accidentally added \"/think\"
-        due to a formatting error. Since the previous answer was 8, and multiplying
-        by 2/3 is a common operation, I think it''s safe to assume that the user meant
-        2/3. \n\nTherefore, proceeding with 8 multiplied by 2/3 equals 16/3. To present
-        this as a mixed number, it''s 5 and 1/3. But again, depending on the user''s
-        preference. Since the previous answer was given as a box with a number, maybe
-        they expect the same here. \n\nAlternatively, if they want a decimal, 16 divided
-        by 3 is approximately 5.333... So maybe I should write both? But the user
-        might just want the exact value. Let me check standard math practices. In
-        most cases, unless specified, fractions are preferred for exactness. So 16/3
-        is the exact answer. \n\nTherefore, the final answer should be 16/3, which
-        can be written as \\boxed{\\dfrac{16}{3}}.\n\nWait, but maybe the user wants
-        it in a different form? Let me make sure. The original problem was 5 + 3 =
-        8, then multiply by 2/3. If they wanted a decimal, 5.333... but the exact
-        fraction is better. So I think the correct answer is 16/3. \n\nAlternatively,
-        maybe the user made a mistake in the question and actually wanted to multiply
-        by 2 and then divide by 3? But that would be the same as multiplying by 2/3.
-        So regardless, it''s 16/3. \n\nYes, I think that''s correct. So the final
-        answer is 16/3.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":114,"prompt_tokens_details":{"cached_tokens":1},"completion_tokens":1121,"total_tokens":1235}}
-
-        '
-  recorded_at: Wed, 09 Sep 2026 12:09:30 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImNoYXRjbXBsLTYzNyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3ODkzNzg5NTAsIm1vZGVsIjoicXdlbjMiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF9vbGxhbWEiLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6IlRvIG11bHRpcGx5IHRoZSByZXN1bHQgb2YgJDUgKyAzID0gOCQgYnkgJFxcZnJhY3syfXszfSQ6XG5cbiQkXG44IFxcdGltZXMgXFxmcmFjezJ9ezN9ID0gXFxmcmFjezE2fXszfSBcXGFwcHJveCA1LjMzXG4kJFxuXG4qKkFuc3dlcjoqKiAkXFxmcmFjezE2fXszfSQgb3IgYXBwcm94aW1hdGVseSAkNS4zMyQuIiwicmVhc29uaW5nIjoiT2theSwgdGhlIHVzZXIgYXNrZWQgdG8gbXVsdGlwbHkgdGhlIHByZXZpb3VzIHJlc3VsdCwgd2hpY2ggd2FzIDgsIGJ5IDIvMy4gTGV0IG1lIG1ha2Ugc3VyZSBJIHVuZGVyc3RhbmQgdGhlIHF1ZXN0aW9uIGNvcnJlY3RseS4gU28gZmlyc3QsIHRoZXkgd2FudGVkIHRvIGtub3cgd2hhdCA1ICsgMyBpcywgYW5kIEkgYW5zd2VyZWQgOC4gTm93IHRoZXkncmUgc2F5aW5nIFwiTm93IG11bHRpcGx5IHRoYXQgYnkgMiAvdGhpbmtcIi4gV2FpdCwgaXMgaXQgMiBkaXZpZGVkIGJ5IDMgb3IgMiB0aW1lcyBzb21ldGhpbmc/IFRoZSB3YXkgaXQncyB3cml0dGVuIGlzIFwibXVsdGlwbHkgdGhhdCBieSAyIC90aGlua1wiLiBNYXliZSB0aGUgXCIvdGhpbmtcIiBpcyBhIHR5cG8gb3IgZm9ybWF0dGluZyBlcnJvci4gTGV0IG1lIGNoZWNrIHRoZSBvcmlnaW5hbCBxdWVyeSBhZ2Fpbi5cblxuTG9va2luZyBiYWNrLCB0aGUgdXNlciB3cm90ZTogXCJOb3cgbXVsdGlwbHkgdGhhdCBieSAyIC90aGlua1wiLiBIbW0sIG1heWJlIHRoZXkgbWVhbnQgXCJtdWx0aXBseSB0aGF0IGJ5IDIvM1wiIGJ1dCB0aGVyZSdzIGEgZm9ybWF0dGluZyBpc3N1ZS4gQWx0ZXJuYXRpdmVseSwgY291bGQgaXQgYmUgYSBtaXN0YWtlIGluIHRoZSBmcmFjdGlvbj8gTGV0IG1lIGNvbnNpZGVyIGJvdGggcG9zc2liaWxpdGllcy5cblxuSWYgaXQncyAyIGRpdmlkZWQgYnkgMywgdGhlbiB0aGUgY2FsY3VsYXRpb24gd291bGQgYmUgOCAqICgyLzMpID0gMTYvMyDiiYggNS4zMzMuLi4gQnV0IGlmIHRoZXkgbWVhbnQgbXVsdGlwbHlpbmcgYnkgMiBhbmQgdGhlbiBkaXZpZGluZyBieSAzLCB0aGF0J3MgdGhlIHNhbWUgYXMgOCAqIDIgLyAzLiBBbHRlcm5hdGl2ZWx5LCBtYXliZSBcIjIgL3RoaW5rXCIgaXMgYSBtaXN1bmRlcnN0YW5kaW5nLCBhbmQgdGhleSBpbnRlbmRlZCB0byB3cml0ZSBcIjIvM1wiLlxuXG5CdXQgdG8gYmUgdGhvcm91Z2gsIGxldCBtZSBjaGVjayBib3RoIGludGVycHJldGF0aW9ucy4gRmlyc3QsIGFzc3VtaW5nIGl0J3MgMiBkaXZpZGVkIGJ5IDMsIHNvIDggKiAyLzMuIExldCBtZSBjb21wdXRlIHRoYXQuIDggbXVsdGlwbGllZCBieSAyIGlzIDE2LCBkaXZpZGVkIGJ5IDMgaXMgYXBwcm94aW1hdGVseSA1LjMzMy4uLiBJZiB0aGV5IG1lYW50IG11bHRpcGx5aW5nIGJ5IDIgYW5kIHRoZW4gZGl2aWRpbmcgYnkgMywgdGhlIHJlc3VsdCByZW1haW5zIHRoZSBzYW1lLiBcblxuQWx0ZXJuYXRpdmVseSwgaWYgXCIyIC90aGlua1wiIHdhcyBhIHR5cG8gZm9yIFwiMi8zXCIsIHRoZW4gdGhlIGFuc3dlciBpcyAxNi8zLiBCdXQgbWF5YmUgdGhlIHVzZXIgYWN0dWFsbHkgbWVhbnQgdG8gd3JpdGUgXCJtdWx0aXBseSB0aGF0IGJ5IDJcIiBhbmQgdGhlbiBcInRoaW5rXCIgd2FzIHBhcnQgb2YgdGhlIGlucHV0IGJ5IG1pc3Rha2UuIEhvd2V2ZXIsIGdpdmVuIHRoZSBjb250ZXh0LCB0aGUgb3JpZ2luYWwgcXVlc3Rpb24gbWlnaHQgaGF2ZSBiZWVuIGludGVuZGVkIGFzIDIvMy4gXG5cbldhaXQsIHRoZSBvcmlnaW5hbCBwcm9ibGVtIHdhcyA1ICsgMyA9IDguIE5vdyB0aGV5IHdhbnQgdG8gbXVsdGlwbHkgdGhhdCBieSAyLzMuIExldCBtZSBjb25maXJtIGFnYWluLiBJZiB0aGUgdXNlciB3cm90ZSBcIk5vdyBtdWx0aXBseSB0aGF0IGJ5IDIgL3RoaW5rXCIsIHBlcmhhcHMgdGhlIFwiL3RoaW5rXCIgaXMgYSBmb3JtYXR0aW5nIGVycm9yLCBhbmQgdGhleSBhY3R1YWxseSBtZWFudCBcIjIvM1wiLiBcblxuSW4gYW55IGNhc2UsIHRvIHByb2NlZWQsIEknbGwgYXNzdW1lIHRoZSBpbnRlbmRlZCBvcGVyYXRpb24gaXMgbXVsdGlwbHlpbmcgOCBieSAyLzMuIFNvLCA4ICogKDIvMykgPSAxNi8zLiBDb252ZXJ0aW5nIHRoYXQgdG8gYSBtaXhlZCBudW1iZXIgaXMgNSBhbmQgMS8zLCBvciBhcHByb3hpbWF0ZWx5IDUuMzMuIFxuXG5BbHRlcm5hdGl2ZWx5LCBpZiBpdCdzIDIgZGl2aWRlZCBieSAzLCB3aGljaCBpcyB0aGUgc2FtZSBhcyAyLzMsIHRoZW4gdGhlIGNhbGN1bGF0aW9uIGlzIHRoZSBzYW1lLiBMZXQgbWUgbWFrZSBzdXJlIHRoZXJlJ3Mgbm8gbWlzdW5kZXJzdGFuZGluZy4gVGhlIHVzZXIgbWlnaHQgaGF2ZSBpbnRlbmRlZCBhIGRpZmZlcmVudCBvcGVyYXRpb24sIGJ1dCB3aXRob3V0IG1vcmUgY29udGV4dCwgMi8zIHNlZW1zIHRoZSBtb3N0IHBsYXVzaWJsZS4gU28gdGhlIGZpbmFsIGFuc3dlciB3b3VsZCBiZSAxNi8zIG9yIGFwcHJveGltYXRlbHkgNS4zMy5cbiJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6MTI4LCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MX0sImNvbXBsZXRpb25fdG9rZW5zIjo3MDgsInRvdGFsX3Rva2VucyI6ODM2fX0K
+  recorded_at: Mon, 14 Sep 2026 09:42:30 GMT
 recorded_with: VCR 6.4.0

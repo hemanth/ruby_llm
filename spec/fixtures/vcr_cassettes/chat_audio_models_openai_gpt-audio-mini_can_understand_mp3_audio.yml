@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:10:10 GMT
+      - Mon, 14 Sep 2026 09:45:41 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -48,7 +48,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '515'
+      - '526'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -75,44 +75,7 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: |
-        {
-          "id": "chatcmpl-EMBPuDysr9kM1f8sZLSZvGwQcXQMQ",
-          "object": "chat.completion",
-          "created": 1788955810,
-          "model": "gpt-audio-mini-2025-12-15",
-          "choices": [
-            {
-              "index": 0,
-              "message": {
-                "role": "assistant",
-                "content": "It seems like the statement being said is: \"Ruby is a programming language designed for developer happiness.\" This highlights that Ruby was created with the goal of making programming more enjoyable and pleasant for developers.",
-                "refusal": null,
-                "annotations": []
-              },
-              "finish_reason": "stop"
-            }
-          ],
-          "usage": {
-            "prompt_tokens": 59,
-            "completion_tokens": 39,
-            "total_tokens": 98,
-            "prompt_tokens_details": {
-              "cached_tokens": 0,
-              "audio_tokens": 43,
-              "text_tokens": 16,
-              "image_tokens": 0
-            },
-            "completion_tokens_details": {
-              "reasoning_tokens": 0,
-              "audio_tokens": 0,
-              "accepted_prediction_tokens": 0,
-              "rejected_prediction_tokens": 0,
-              "text_tokens": 39
-            }
-          },
-          "service_tier": "default",
-          "system_fingerprint": "fp_82b6592a1d"
-        }
-  recorded_at: Wed, 09 Sep 2026 12:10:10 GMT
+      string: !binary |-
+        ewogICJpZCI6ICJjaGF0Y21wbC1FTnhYcGhhWG1BZTIybm9TRGVLNUo3Y1NqMnZOYiIsCiAgIm9iamVjdCI6ICJjaGF0LmNvbXBsZXRpb24iLAogICJjcmVhdGVkIjogMTc4OTM3OTE0MSwKICAibW9kZWwiOiAiZ3B0LWF1ZGlvLW1pbmktMjAyNS0xMi0xNSIsCiAgImNob2ljZXMiOiBbCiAgICB7CiAgICAgICJpbmRleCI6IDAsCiAgICAgICJtZXNzYWdlIjogewogICAgICAgICJyb2xlIjogImFzc2lzdGFudCIsCiAgICAgICAgImNvbnRlbnQiOiAiSXTigJlzIG1lbnRpb25lZCB0aGF0IFJ1YnkgaXMgYSBwcm9ncmFtbWluZyBsYW5ndWFnZSBkZXNpZ25lZCBmb3IgZGV2ZWxvcGVyIGhhcHBpbmVzcy4gVGhpcyBtZWFucyB0aGF0IFJ1YnkgZW1waGFzaXplcyBzaW1wbGljaXR5IGFuZCBwcm9kdWN0aXZpdHksIGFpbWluZyB0byBtYWtlIGNvZGluZyBtb3JlIGVuam95YWJsZSBhbmQgbGVzcyBjdW1iZXJzb21lIGZvciBkZXZlbG9wZXJzLiBXb3VsZCB5b3UgbGlrZSBtb3JlIGluZm9ybWF0aW9uIG9uIFJ1Ynkgb3IgcmVsYXRlZCBmZWF0dXJlcz8iLAogICAgICAgICJyZWZ1c2FsIjogbnVsbCwKICAgICAgICAiYW5ub3RhdGlvbnMiOiBbXQogICAgICB9LAogICAgICAiZmluaXNoX3JlYXNvbiI6ICJzdG9wIgogICAgfQogIF0sCiAgInVzYWdlIjogewogICAgInByb21wdF90b2tlbnMiOiA1OSwKICAgICJjb21wbGV0aW9uX3Rva2VucyI6IDQ2LAogICAgInRvdGFsX3Rva2VucyI6IDEwNSwKICAgICJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOiB7CiAgICAgICJjYWNoZWRfdG9rZW5zIjogMCwKICAgICAgImF1ZGlvX3Rva2VucyI6IDQzLAogICAgICAidGV4dF90b2tlbnMiOiAxNiwKICAgICAgImltYWdlX3Rva2VucyI6IDAKICAgIH0sCiAgICAiY29tcGxldGlvbl90b2tlbnNfZGV0YWlscyI6IHsKICAgICAgInJlYXNvbmluZ190b2tlbnMiOiAwLAogICAgICAiYXVkaW9fdG9rZW5zIjogMCwKICAgICAgImFjY2VwdGVkX3ByZWRpY3Rpb25fdG9rZW5zIjogMCwKICAgICAgInJlamVjdGVkX3ByZWRpY3Rpb25fdG9rZW5zIjogMCwKICAgICAgInRleHRfdG9rZW5zIjogNDYKICAgIH0KICB9LAogICJzZXJ2aWNlX3RpZXIiOiAiZGVmYXVsdCIsCiAgInN5c3RlbV9maW5nZXJwcmludCI6ICJmcF84MmI2NTkyYTFkIgp9Cg==
+  recorded_at: Mon, 14 Sep 2026 09:45:41 GMT
 recorded_with: VCR 6.4.0

@@ -24,53 +24,53 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:13:47 GMT
+      - Mon, 14 Sep 2026 09:48:43 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a08616-a7e1-723c-a2bc-b8516e530cb4
+      - 01a09f51-a56a-75b7-8829-2018cb407f0f
       X-Kong-Request-Id:
-      - 01a08616-a7e1-723c-a2bc-b8516e530cb4
+      - 01a09f51-a56a-75b7-8829-2018cb407f0f
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '80316'
+      - '99922'
       X-Ratelimit-Tokens-Query-Cost:
       - '78'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '95'
+      - '99'
       X-Envoy-Upstream-Service-Time:
-      - '350'
+      - '516'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '351'
+      - '517'
       X-Kong-Proxy-Latency:
-      - '17'
-      X-Content-Type-Options:
-      - nosniff
+      - '43'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"5b259ebaa2fa4512b3f95661efe96351","created":1788956026,"model":"mistral-small-latest","usage":{"prompt_tokens":69,"total_tokens":78,"completion_tokens":9,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"BLUE-LANTERN-42"}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:13:47 GMT
+      string: '{"id":"9c07a0f41abb4df19a2012a4b1b3f9a4","created":1789379323,"model":"mistral-small-latest","usage":{"prompt_tokens":69,"total_tokens":78,"completion_tokens":9,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"BLUE-LANTERN-42"}}]}'
+  recorded_at: Mon, 14 Sep 2026 09:48:43 GMT
 recorded_with: VCR 6.4.0

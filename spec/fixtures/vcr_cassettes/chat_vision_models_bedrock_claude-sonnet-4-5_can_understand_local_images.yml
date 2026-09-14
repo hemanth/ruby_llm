@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260909T120724Z
+      - 20260914T094114Z
       X-Amz-Content-Sha256:
       - d41c783d2a3e558d5aed2e01edbd778c8c2b0d628da0bd3a2a9f8760c2d0d9bb
       Authorization:
@@ -29,22 +29,28 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:07:28 GMT
+      - Mon, 14 Sep 2026 09:41:19 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '644'
+      - '1126'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - daf08cac-7321-476c-85a7-760d1d45a33f
+      - dd6eb00d-ed37-4d57-a846-e007030dddf4
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":3369},"output":{"message":{"content":[{"text":"I
-        can see a red, stylized ruby or gemstone icon. It appears to be a logo with
-        facets and highlights that give it a three-dimensional, polished appearance.
-        The gem is rendered in various shades of red with white highlights along its
-        edges to create depth and a shiny, reflective surface. This is the Ruby programming
-        language logo."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":43,"outputTokens":76,"serverToolUsage":{},"totalTokens":119}}'
-  recorded_at: Wed, 09 Sep 2026 12:07:28 GMT
+      string: '{"metrics":{"latencyMs":4982},"output":{"message":{"content":[{"text":"#
+        Ruby Programming Language Logo\n\nThis image shows the **Ruby logo**, which
+        represents the Ruby programming language. The logo depicts a stylized, faceted
+        ruby gemstone rendered in rich red tones with highlights and shading that
+        give it a three-dimensional, polished appearance.\n\n## Key characteristics:\n-
+        **Deep red coloring** - representing the ruby gemstone\n- **Geometric, faceted
+        design** - showing multiple cut faces like a real gem\n- **Glossy highlights**
+        - giving it a polished, reflective quality\n- **3D appearance** - created
+        through shading and lighting effects\n\nRuby is a dynamic, open-source programming
+        language known for its elegant syntax and is particularly famous for the Ruby
+        on Rails web framework. The gemstone logo is fitting since the language was
+        named after the precious stone."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":43,"outputTokens":174,"serverToolUsage":{},"totalTokens":217}}'
+  recorded_at: Mon, 14 Sep 2026 09:41:20 GMT
 recorded_with: VCR 6.4.0

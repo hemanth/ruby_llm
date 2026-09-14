@@ -31,34 +31,37 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 8bbfc54fe6b9f83c353638274218dc75a0607b2d
+      - e1bfa3ca90691234d6d12e4b2096594fe0d5770a
       X-Build-Time:
-      - '2026-09-08T18:19:14-07:00'
+      - '2026-09-13T23:26:13-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '644'
+      - '959'
       Date:
-      - Wed, 09 Sep 2026 12:10:22 GMT
+      - Mon, 14 Sep 2026 09:43:25 GMT
       Server:
       - Google Frontend
-      Traceparent:
-      - 00-d2faf3244a1e0c94442ea4b4770b2fda-34018efc76e0049a-00
       X-Cloud-Trace-Context:
-      - d2faf3244a1e0c94442ea4b4770b2fda/3747433579926258842
+      - a41ddd3705dd754460da3bf1c8554e98/17649460471441061659
+      Traceparent:
+      - 00-a41ddd3705dd754460da3bf1c8554e98-f4ef7ac9b58af71b-00
       Via:
       - 1.1 google
       Alt-Svc:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-359","object":"chat.completion","created":1788955822,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
-        need to call the function array_params with tags [\"red\",\"blue\"], then
-        output combined tags. Probably function returns combined? The tool likely
-        concatenates? Not sure. We''ll call it.","tool_calls":[{"id":"call_ipa0xinf","index":0,"type":"function","function":{"name":"array_params","arguments":"{\"tags\":[\"red\",\"blue\"]}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":147,"completion_tokens":74,"total_tokens":221}}
+      string: '{"id":"chatcmpl-813","object":"chat.completion","created":1789379005,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
+        need to call the function array_params with tags [\"red\",\"blue\"] and then
+        respond with combined tags. The function description: \"Uses params DSL array
+        support\" and type array_params = (_: { tags: any[], }) =\u003e any; So we
+        need to call function with tags array. Then output combined tags, presumably
+        the function returns something like concatenated? Not sure what function does.
+        Likely returns something combined, maybe join? We''ll call it and see.","tool_calls":[{"id":"call_j05vp4bu","index":0,"type":"function","function":{"name":"array_params","arguments":"{\"tags\":[\"red\",\"blue\"]}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":147,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":130,"total_tokens":277}}
 
         '
-  recorded_at: Wed, 09 Sep 2026 12:10:22 GMT
+  recorded_at: Mon, 14 Sep 2026 09:43:25 GMT
 recorded_with: VCR 6.4.0

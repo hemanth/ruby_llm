@@ -30,7 +30,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:48:07 GMT
+      - Mon, 14 Sep 2026 10:14:07 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -42,25 +42,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-09T12:48:06Z'
+      - '2026-09-14T10:14:07Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-09T12:48:07Z'
+      - '2026-09-14T10:14:07Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-09T12:48:06Z'
+      - '2026-09-14T10:14:06Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-09T12:48:06Z'
+      - '2026-09-14T10:14:07Z'
       Server:
       - cloudflare
       Request-Id:
@@ -72,7 +72,7 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-e300a2546b3a8c6f50d4b1271323689c-ee049cadb4c02283-01
+      - 00-743cd1829bec2b33baacc69085729ac8-ce49c0da2f3e277e-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
@@ -85,15 +85,15 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011CestfDXfDobnvGdG8Rdxb","type":"message","role":"assistant","content":[{"type":"tool_use","id":"toolu_01JhexovBWmQGoj4JhcVe2m9","name":"weather","input":{"latitude":"52.5200","longitude":"13.4050"},"caller":{"type":"direct"}}],"container":null,"stop_reason":"tool_use","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":735,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":59,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 09 Sep 2026 12:48:07 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf39xgjmfjSFwW1p2ZRjX","type":"message","role":"assistant","content":[{"type":"tool_use","id":"toolu_01UcRA7fzxzAavd1GhHnjXaM","name":"weather","input":{"latitude":"52.5200","longitude":"13.4050"},"caller":{"type":"direct"}}],"container":null,"stop_reason":"tool_use","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":735,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":59,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Mon, 14 Sep 2026 10:14:07 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
     body:
       encoding: UTF-8
       string: '{"model":"claude-haiku-4-5-20251001","messages":[{"role":"user","content":[{"type":"text","text":"When
-        was the fall of Rome?"}]},{"role":"assistant","content":[{"type":"tool_use","id":"toolu_01JhexovBWmQGoj4JhcVe2m9","name":"weather","input":{"latitude":"52.5200","longitude":"13.4050"}}]},{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu_01JhexovBWmQGoj4JhcVe2m9","content":[{"type":"text","text":"Current
+        was the fall of Rome?"}]},{"role":"assistant","content":[{"type":"tool_use","id":"toolu_01UcRA7fzxzAavd1GhHnjXaM","name":"weather","input":{"latitude":"52.5200","longitude":"13.4050"}}]},{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu_01UcRA7fzxzAavd1GhHnjXaM","content":[{"type":"text","text":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}]}],"stream":false,"max_tokens":4096,"tools":[{"name":"weather","description":"Gets
         current weather for a location","input_schema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
@@ -118,7 +118,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:48:10 GMT
+      - Mon, 14 Sep 2026 10:14:10 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -130,25 +130,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '9999000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-09T12:48:07Z'
+      - '2026-09-14T10:14:07Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-09T12:48:10Z'
+      - '2026-09-14T10:14:10Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-09T12:48:07Z'
+      - '2026-09-14T10:14:07Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '11999000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-09T12:48:07Z'
+      - '2026-09-14T10:14:07Z'
       Server:
       - cloudflare
       Request-Id:
@@ -160,7 +160,7 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-1998b1aebb76dd1e8a71710465d6aeab-fc6af5ca16d186d5-01
+      - 00-edc0a8597de237613eef0e1afae37770-4cb237d77e302df1-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
@@ -173,7 +173,22 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJtb2RlbCI6ImNsYXVkZS1oYWlrdS00LTUtMjAyNTEwMDEiLCJpZCI6Im1zZ18wMTFDZXN0ZkhtdHNVZ3RmWDVkQUpSTTQiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJJIGFwcHJlY2lhdGUgdGhlIHF1ZXN0aW9uLCBidXQgSSBzaG91bGQgY2xhcmlmeSB0aGF0IHRoZSB3ZWF0aGVyIHRvb2wgSSBoYXZlIGF2YWlsYWJsZSBpc24ndCByZWxldmFudCB0byB5b3VyIGhpc3RvcmljYWwgcXVlc3Rpb24uIExldCBtZSBhbnN3ZXIgeW91ciBxdWVzdGlvbiBhYm91dCB0aGUgZmFsbCBvZiBSb21lIGRpcmVjdGx5OlxuXG5UaGUgKipmYWxsIG9mIHRoZSBSb21hbiBFbXBpcmUqKiAoc3BlY2lmaWNhbGx5IHRoZSBXZXN0ZXJuIFJvbWFuIEVtcGlyZSkgaXMgdHJhZGl0aW9uYWxseSBkYXRlZCB0byAqKjQ3NiBDRSoqLCB3aGVuIHRoZSBsYXN0IFdlc3Rlcm4gUm9tYW4gRW1wZXJvciwgUm9tdWx1cyBBdWd1c3R1bHVzLCB3YXMgZGVwb3NlZCBieSB0aGUgR2VybWFuaWMgY2hpZWZ0YWluIE9kb2FjZXIuIFRoaXMgbWFya2VkIHRoZSBvZmZpY2lhbCBlbmQgb2YgdGhlIFdlc3Rlcm4gUm9tYW4gRW1waXJlLlxuXG5Ib3dldmVyLCBpdCdzIGltcG9ydGFudCB0byBub3RlIHRoYXQ6XG5cbjEuICoqVGhlIGRlY2xpbmUgd2FzIGdyYWR1YWwqKiDigJQgcmF0aGVyIHRoYW4gYSBzdWRkZW4gY29sbGFwc2UsIHRoZSBXZXN0ZXJuIFJvbWFuIEVtcGlyZSBleHBlcmllbmNlZCBjZW50dXJpZXMgb2YgZGVjbGluZSBtYXJrZWQgYnkgbWlsaXRhcnksIGVjb25vbWljLCBhbmQgcG9saXRpY2FsIHRyb3VibGVzLlxuXG4yLiAqKlRoZSBFYXN0ZXJuIFJvbWFuIEVtcGlyZSAoQnl6YW50aW5lIEVtcGlyZSkgY29udGludWVkKiog4oCUIEl0IHBlcnNpc3RlZCBmb3IgYW5vdGhlciB0aG91c2FuZCB5ZWFycyB1bnRpbCAxNDUzIENFIHdoZW4gQ29uc3RhbnRpbm9wbGUgZmVsbCB0byB0aGUgT3R0b21hbiBFbXBpcmUuXG5cbjMuICoqSGlzdG9yaWFucyBkZWJhdGUgdGhlIGNhdXNlcyoqIOKAlCBpbmNsdWRpbmcgYmFyYmFyaWFuIGludmFzaW9ucywgZWNvbm9taWMgdHJvdWJsZXMsIG1pbGl0YXJ5IG92ZXJzdHJldGNoaW5nLCBwb2xpdGljYWwgaW5zdGFiaWxpdHksIGFuZCB0aGUgc3ByZWFkIG9mIENocmlzdGlhbml0eS5cblxuVGhlIHllYXIgNDc2IENFIGlzIHVzZWQgYXMgYSBzeW1ib2xpYyBkYXRlIGZvciBjb252ZW5pZW5jZSwgYnV0IHRoZSB0cmFuc2Zvcm1hdGlvbiBvZiBSb21hbiBjaXZpbGl6YXRpb24gaW50byBlYXJseSBtZWRpZXZhbCBFdXJvcGVhbiBzb2NpZXR5IHdhcyBhY3R1YWxseSBhIGNvbXBsZXgsIGNlbnR1cmllcy1sb25nIHByb2Nlc3MuIn1dLCJjb250YWluZXIiOm51bGwsInN0b3BfcmVhc29uIjoiZW5kX3R1cm4iLCJzdG9wX3NlcXVlbmNlIjpudWxsLCJzdG9wX2RldGFpbHMiOm51bGwsInVzYWdlIjp7ImlucHV0X3Rva2VucyI6NzU4LCJjYWNoZV9jcmVhdGlvbl9pbnB1dF90b2tlbnMiOjAsImNhY2hlX3JlYWRfaW5wdXRfdG9rZW5zIjowLCJjYWNoZV9jcmVhdGlvbiI6eyJlcGhlbWVyYWxfNW1faW5wdXRfdG9rZW5zIjowLCJlcGhlbWVyYWxfMWhfaW5wdXRfdG9rZW5zIjowfSwib3V0cHV0X3Rva2VucyI6MjU4LCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCIsImluZmVyZW5jZV9nZW8iOiJub3RfYXZhaWxhYmxlIn19
-  recorded_at: Wed, 09 Sep 2026 12:48:10 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf39xkxXKmaKvYGL2cJQf","type":"message","role":"assistant","content":[{"type":"text","text":"I
+        apologize, but your question about the fall of Rome is a historical question
+        that doesn''t require the weather tool I have access to. Let me answer it
+        directly:\n\n**The fall of Rome** is typically dated to **476 CE (Common Era)**,
+        when the last Western Roman Emperor, Romulus Augustulus, was deposed by the
+        Germanic chieftain Odoacer. This marked the end of the Roman Empire in the
+        West.\n\nHowever, it''s important to note that:\n\n1. **The fall was gradual**:
+        Rather than a single event, Rome''s decline happened over several centuries,
+        with increasing political instability, economic troubles, military pressures,
+        and barbarian invasions.\n\n2. **The Eastern Roman Empire continued**: The
+        Byzantine Empire (Eastern Roman Empire) persisted for another thousand years
+        until 1453 CE when Constantinople fell to the Ottoman Empire.\n\n3. **Different
+        perspectives**: Historians debate whether to emphasize 476 CE, or to consider
+        the broader period of decline from the 3rd century onward, or even earlier
+        signs of trouble.\n\nThe fall of Rome is one of the most studied events in
+        history, marking the transition from the Classical period to the Middle Ages
+        in European history."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":758,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":261,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Mon, 14 Sep 2026 10:14:10 GMT
 recorded_with: VCR 6.4.0

@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:17:05 GMT
+      - Mon, 14 Sep 2026 10:14:19 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -45,15 +45,17 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-4f55dd5ef540ca447808271055a7d5ab-5b05015a000b411a-00
+      - 00-acddbda4f0991578ff31b70024f5d300-3498c7c5000a5d46-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - d1fbac53-0771-4133-8a8d-9b7eb5bb5507
+      - e9595886-35bd-42d1-8e70-87dc30e6a2b4
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
+      X-Ms-Inference-Retry-History:
+      - '{"v":1,"entries":[{"service_id":"mir.frontdoor","layer":"regional","role":"direct","retries":0}]}'
       Azureai-Requested-Tier:
       - default
       Azureai-Processed-Tier:
@@ -85,7 +87,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - d1fbac53-0771-4133-8a8d-9b7eb5bb5507
+      - e9595886-35bd-42d1-8e70-87dc30e6a2b4
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -93,8 +95,13 @@ http_interactions:
       X-Ms-Region:
       - West Europe
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6ImY2ZDZmZDA1LWQ1NzgtNDUwYS04MzFlLWM4ZjI2NGZlNTNmOSIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJJJ20gc29ycnksIGJ1dCBJIGRvbid0IGhhdmUgcmVhbC10aW1lIGFjY2VzcyB0byBjdXJyZW50IHdlYXRoZXIgZGF0YSB3aXRob3V0IHVzaW5nIHRvb2xzLCB3aGljaCB5b3UndmUgYXNrZWQgbWUgdG8gYXZvaWQuIEFzIG9mIG15IGxhc3QgdHJhaW5pbmcgZGF0YSwgQmVybGluIHR5cGljYWxseSBoYXMgYSB0ZW1wZXJhdGUgY2xpbWF0ZeKAlGNvb2wgYW5kIG9mdGVuIHJhaW55IGluIHNwcmluZyBsaWtlIG5vdywgd2l0aCBhdmVyYWdlIGhpZ2hzIGFyb3VuZCAxNS0xOMKwQyAoNTktNjTCsEYpIGluIE1heS4gRm9yIHVwLXRvLWRhdGUgaW5mbywgSSdkIG5vcm1hbGx5IGNoZWNrIGEgd2VhdGhlciBzZXJ2aWNlISJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6Mjg4LCJjb21wbGV0aW9uX3Rva2VucyI6NzksInRvdGFsX3Rva2VucyI6MzY3LCJhdWRpb19wcm9tcHRfdG9rZW5zIjowLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MzE0LCJhdWRpb190b2tlbnMiOjAsInRleHRfdG9rZW5zIjoyODgsImltYWdlX3Rva2VucyI6MH0sImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6MCwiYXVkaW9fdG9rZW5zIjowLCJhY2NlcHRlZF9wcmVkaWN0aW9uX3Rva2VucyI6MCwicmVqZWN0ZWRfcHJlZGljdGlvbl90b2tlbnMiOjB9LCJudW1fc291cmNlc191c2VkIjowfSwiY3JlYXRlZCI6MTc4ODk1NjIyNSwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwicHJvbXB0X2ZpbHRlcl9yZXN1bHRzIjpudWxsfQ==
-  recorded_at: Wed, 09 Sep 2026 12:17:07 GMT
+      encoding: UTF-8
+      string: '{"id":"fd6037ed-a25f-4d95-89ce-7b55935636a3","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"I''m
+        sorry, but my existing knowledge doesn''t include real-time weather data for
+        Berlin (or anywhere else). As of my last update, I can''t provide current
+        conditions without using external tools or APIs. For accurate, up-to-date
+        info, I''d recommend checking a reliable weather service like weather.com
+        or your local forecast app. If you have a general question about Berlin''s
+        climate (e.g., typical summer temps), I can share that!"},"finish_reason":"stop"}],"usage":{"prompt_tokens":288,"completion_tokens":85,"total_tokens":373,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":314,"audio_tokens":0,"text_tokens":288,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789380860,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Mon, 14 Sep 2026 10:14:21 GMT
 recorded_with: VCR 6.4.0

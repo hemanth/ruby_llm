@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - text/event-stream
       Date:
-      - Wed, 09 Sep 2026 12:06:05 GMT
+      - Mon, 14 Sep 2026 09:40:10 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -45,15 +45,17 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-1260756e858d3a7fe8702bb3d2cbafad-6699953900064f10-00
+      - 00-8d3949327953a4346492f48ba1b2cb35-a1f37f3100095cf8-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 551e4754-3be2-4dd3-b905-86f7e19c35eb
+      - 3e2290da-0767-45d9-8544-cd5b40c60272
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
+      X-Ms-Inference-Retry-History:
+      - '{"v":1,"entries":[{"service_id":"mir.frontdoor","layer":"regional","role":"direct","retries":0}]}'
       Azureai-Requested-Tier:
       - default
       Azureai-Processed-Tier:
@@ -63,9 +65,9 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '47'
+      - '45'
       X-Ratelimit-Reset-Requests:
-      - '3'
+      - '5'
       X-Ratelimit-Limit-Requests:
       - '50'
       X-Ratelimit-Renewalperiod-Requests:
@@ -85,7 +87,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 551e4754-3be2-4dd3-b905-86f7e19c35eb
+      - 3e2290da-0767-45d9-8544-cd5b40c60272
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -95,23 +97,23 @@ http_interactions:
     body:
       encoding: UTF-8
       string: |+
-        data: {"id":"5e6bc0d7-7a05-4b28-baaf-daffab03e75f","object":"chat.completion.chunk","created":1788955566,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"role":"assistant","tool_calls":[{"id":"call_19555804","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"},"index":0,"type":"function"}]}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"42deafdc-05b9-4e6e-b2ae-658673e76a68","object":"chat.completion.chunk","created":1789378810,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"role":"assistant","tool_calls":[{"id":"call_23594642","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"},"index":0,"type":"function"}]}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id":"5e6bc0d7-7a05-4b28-baaf-daffab03e75f","object":"chat.completion.chunk","created":1788955566,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{},"finish_reason":"tool_calls"}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"42deafdc-05b9-4e6e-b2ae-658673e76a68","object":"chat.completion.chunk","created":1789378810,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{},"finish_reason":"tool_calls"}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id": "5e6bc0d7-7a05-4b28-baaf-daffab03e75f", "object": "chat.completion.chunk", "created": 1788955566, "model": "grok-4-1-fast-non-reasoning", "choices": [], "usage": {"prompt_tokens": 249, "completion_tokens": 40, "total_tokens": 289, "prompt_tokens_details": {"text_tokens": 249, "audio_tokens": 0, "image_tokens": 0, "cached_tokens": 416}, "completion_tokens_details": {"reasoning_tokens": 0, "audio_tokens": 0, "accepted_prediction_tokens": 0, "rejected_prediction_tokens": 0}, "num_sources_used": 0, "cost_in_usd_ticks": 0}, "system_fingerprint": "fp_49c5j0a323", "service_tier": "default"}
+        data: {"id": "42deafdc-05b9-4e6e-b2ae-658673e76a68", "object": "chat.completion.chunk", "created": 1789378810, "model": "grok-4-1-fast-non-reasoning", "choices": [], "usage": {"prompt_tokens": 249, "completion_tokens": 40, "total_tokens": 289, "prompt_tokens_details": {"text_tokens": 249, "audio_tokens": 0, "image_tokens": 0, "cached_tokens": 416}, "completion_tokens_details": {"reasoning_tokens": 0, "audio_tokens": 0, "accepted_prediction_tokens": 0, "rejected_prediction_tokens": 0}, "num_sources_used": 0, "cost_in_usd_ticks": 0}, "system_fingerprint": "fp_49c5j0a323", "service_tier": "default"}
 
         data: [DONE]
 
-  recorded_at: Wed, 09 Sep 2026 12:06:06 GMT
+  recorded_at: Mon, 14 Sep 2026 09:40:10 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
     body:
       encoding: UTF-8
       string: '{"model":"grok-4-1-fast-non-reasoning","messages":[{"role":"user","content":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_19555804","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_19555804"}],"stream":true,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_23594642","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_23594642"}],"stream":true,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}],"stream_options":{"include_usage":true}}'
@@ -134,7 +136,7 @@ http_interactions:
       Content-Type:
       - text/event-stream
       Date:
-      - Wed, 09 Sep 2026 12:06:06 GMT
+      - Mon, 14 Sep 2026 09:40:11 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -150,13 +152,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-c99d56c09a71ec476793f7dac104fc07-6699953900064f34-00
+      - 00-3ad4171680c370f3a99d2b80dee0d9a4-c788f2390007c562-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 41c60287-1b3b-4ebf-8e9e-9c98b9481c2c
+      - ac4298d1-fdf9-41f7-b27e-949f0d765998
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -170,9 +172,9 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '47'
+      - '45'
       X-Ratelimit-Reset-Requests:
-      - '3'
+      - '5'
       X-Ratelimit-Limit-Requests:
       - '50'
       X-Ratelimit-Renewalperiod-Requests:
@@ -192,7 +194,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 41c60287-1b3b-4ebf-8e9e-9c98b9481c2c
+      - ac4298d1-fdf9-41f7-b27e-949f0d765998
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -202,17 +204,17 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ZGF0YTogeyJpZCI6IjkyOWU2OTIzLWVhNTAtNDQ4Ny04Yjg3LWU1MzdmMDA2MmE0OSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjYsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiJUaGUiLCJyb2xlIjoiYXNzaXN0YW50In19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjkyOWU2OTIzLWVhNTAtNDQ4Ny04Yjg3LWU1MzdmMDA2MmE0OSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjYsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgY3VycmVudCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI5MjllNjkyMy1lYTUwLTQ0ODctOGI4Ny1lNTM3ZjAwNjJhNDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY2LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIHdlYXRoZXIifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NiwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiBpbiJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI5MjllNjkyMy1lYTUwLTQ0ODctOGI4Ny1lNTM3ZjAwNjJhNDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY2LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIEJlcmxpbiJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI5MjllNjkyMy1lYTUwLTQ0ODctOGI4Ny1lNTM3ZjAwNjJhNDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY2LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiICgifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NiwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IjUyIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjkyOWU2OTIzLWVhNTAtNDQ4Ny04Yjg3LWU1MzdmMDA2MmE0OSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjYsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIuIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjkyOWU2OTIzLWVhNTAtNDQ4Ny04Yjg3LWU1MzdmMDA2MmE0OSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjcsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiI1MjAifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NywibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IjAifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NywibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiwifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NywibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiAifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NywibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IjEzIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjkyOWU2OTIzLWVhNTAtNDQ4Ny04Yjg3LWU1MzdmMDA2MmE0OSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjcsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIuIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjkyOWU2OTIzLWVhNTAtNDQ4Ny04Yjg3LWU1MzdmMDA2MmE0OSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjcsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiI0MDUifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NywibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IjAifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NywibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IikifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NywibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiBpcyJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI5MjllNjkyMy1lYTUwLTQ0ODctOGI4Ny1lNTM3ZjAwNjJhNDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY3LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiICJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI5MjllNjkyMy1lYTUwLTQ0ODctOGI4Ny1lNTM3ZjAwNjJhNDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY3LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiMTUifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NywibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IsKwQyJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI5MjllNjkyMy1lYTUwLTQ0ODctOGI4Ny1lNTM3ZjAwNjJhNDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY3LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIHdpdGgifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiOTI5ZTY5MjMtZWE1MC00NDg3LThiODctZTUzN2YwMDYyYTQ5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2NywibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiB3aW5kcyJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI5MjllNjkyMy1lYTUwLTQ0ODctOGI4Ny1lNTM3ZjAwNjJhNDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY3LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIGF0In19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjkyOWU2OTIzLWVhNTAtNDQ4Ny04Yjg3LWU1MzdmMDA2MmE0OSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjcsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjkyOWU2OTIzLWVhNTAtNDQ4Ny04Yjg3LWU1MzdmMDA2MmE0OSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjcsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIxMCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI5MjllNjkyMy1lYTUwLTQ0ODctOGI4Ny1lNTM3ZjAwNjJhNDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY3LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIGttIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjkyOWU2OTIzLWVhNTAtNDQ4Ny04Yjg3LWU1MzdmMDA2MmE0OSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjcsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIvaCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI5MjllNjkyMy1lYTUwLTQ0ODctOGI4Ny1lNTM3ZjAwNjJhNDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY3LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiLiJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI5MjllNjkyMy1lYTUwLTQ0ODctOGI4Ny1lNTM3ZjAwNjJhNDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY3LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6e30sImZpbmlzaF9yZWFzb24iOiJzdG9wIn1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjogIjkyOWU2OTIzLWVhNTAtNDQ4Ny04Yjg3LWU1MzdmMDA2MmE0OSIsICJvYmplY3QiOiAiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwgImNyZWF0ZWQiOiAxNzg4OTU1NTY3LCAibW9kZWwiOiAiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwgImNob2ljZXMiOiBbXSwgInVzYWdlIjogeyJwcm9tcHRfdG9rZW5zIjogMzI1LCAiY29tcGxldGlvbl90b2tlbnMiOiAyOSwgInRvdGFsX3Rva2VucyI6IDM1NCwgInByb21wdF90b2tlbnNfZGV0YWlscyI6IHsidGV4dF90b2tlbnMiOiAzMjUsICJhdWRpb190b2tlbnMiOiAwLCAiaW1hZ2VfdG9rZW5zIjogMCwgImNhY2hlZF90b2tlbnMiOiA0OTJ9LCAiY29tcGxldGlvbl90b2tlbnNfZGV0YWlscyI6IHsicmVhc29uaW5nX3Rva2VucyI6IDAsICJhdWRpb190b2tlbnMiOiAwLCAiYWNjZXB0ZWRfcHJlZGljdGlvbl90b2tlbnMiOiAwLCAicmVqZWN0ZWRfcHJlZGljdGlvbl90b2tlbnMiOiAwfSwgIm51bV9zb3VyY2VzX3VzZWQiOiAwLCAiY29zdF9pbl91c2RfdGlja3MiOiAwfSwgInN5c3RlbV9maW5nZXJwcmludCI6ICJmcF80OWM1ajBhMzIzIiwgInNlcnZpY2VfdGllciI6ICJkZWZhdWx0In0KCmRhdGE6IFtET05FXQoK
-  recorded_at: Wed, 09 Sep 2026 12:06:07 GMT
+        ZGF0YTogeyJpZCI6ImE3OWQ3MzEzLTNlMDUtNDU4ZC05OTllLTY4ZWE4NWM4MmUxYyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTEsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiJUaGUiLCJyb2xlIjoiYXNzaXN0YW50In19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6ImE3OWQ3MzEzLTNlMDUtNDU4ZC05OTllLTY4ZWE4NWM4MmUxYyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTEsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgY3VycmVudCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiJhNzlkNzMxMy0zZTA1LTQ1OGQtOTk5ZS02OGVhODVjODJlMWMiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg5Mzc4ODExLCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIHdlYXRoZXIifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiYTc5ZDczMTMtM2UwNS00NThkLTk5OWUtNjhlYTg1YzgyZTFjIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiBpbiJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiJhNzlkNzMxMy0zZTA1LTQ1OGQtOTk5ZS02OGVhODVjODJlMWMiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg5Mzc4ODExLCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIEJlcmxpbiJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiJhNzlkNzMxMy0zZTA1LTQ1OGQtOTk5ZS02OGVhODVjODJlMWMiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg5Mzc4ODExLCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIGlzIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6ImE3OWQ3MzEzLTNlMDUtNDU4ZC05OTllLTY4ZWE4NWM4MmUxYyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTEsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6ImE3OWQ3MzEzLTNlMDUtNDU4ZC05OTllLTY4ZWE4NWM4MmUxYyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTEsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIxNSJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiJhNzlkNzMxMy0zZTA1LTQ1OGQtOTk5ZS02OGVhODVjODJlMWMiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg5Mzc4ODExLCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiwrBDIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6ImE3OWQ3MzEzLTNlMDUtNDU4ZC05OTllLTY4ZWE4NWM4MmUxYyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTEsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgd2l0aCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiJhNzlkNzMxMy0zZTA1LTQ1OGQtOTk5ZS02OGVhODVjODJlMWMiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg5Mzc4ODExLCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIHdpbmRzIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6ImE3OWQ3MzEzLTNlMDUtNDU4ZC05OTllLTY4ZWE4NWM4MmUxYyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTEsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgYXQifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiYTc5ZDczMTMtM2UwNS00NThkLTk5OWUtNjhlYTg1YzgyZTFjIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiAifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiYTc5ZDczMTMtM2UwNS00NThkLTk5OWUtNjhlYTg1YzgyZTFjIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IjEwIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6ImE3OWQ3MzEzLTNlMDUtNDU4ZC05OTllLTY4ZWE4NWM4MmUxYyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTEsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIga20ifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiYTc5ZDczMTMtM2UwNS00NThkLTk5OWUtNjhlYTg1YzgyZTFjIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6Ii9oIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6ImE3OWQ3MzEzLTNlMDUtNDU4ZC05OTllLTY4ZWE4NWM4MmUxYyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTEsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIuIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6ImE3OWQ3MzEzLTNlMDUtNDU4ZC05OTllLTY4ZWE4NWM4MmUxYyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTEsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7fSwiZmluaXNoX3JlYXNvbiI6InN0b3AifV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiAiYTc5ZDczMTMtM2UwNS00NThkLTk5OWUtNjhlYTg1YzgyZTFjIiwgIm9iamVjdCI6ICJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCAiY3JlYXRlZCI6IDE3ODkzNzg4MTEsICJtb2RlbCI6ICJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCAiY2hvaWNlcyI6IFtdLCAidXNhZ2UiOiB7InByb21wdF90b2tlbnMiOiAzMjUsICJjb21wbGV0aW9uX3Rva2VucyI6IDE3LCAidG90YWxfdG9rZW5zIjogMzQyLCAicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjogeyJ0ZXh0X3Rva2VucyI6IDMyNSwgImF1ZGlvX3Rva2VucyI6IDAsICJpbWFnZV90b2tlbnMiOiAwLCAiY2FjaGVkX3Rva2VucyI6IDQ5Mn0sICJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjogeyJyZWFzb25pbmdfdG9rZW5zIjogMCwgImF1ZGlvX3Rva2VucyI6IDAsICJhY2NlcHRlZF9wcmVkaWN0aW9uX3Rva2VucyI6IDAsICJyZWplY3RlZF9wcmVkaWN0aW9uX3Rva2VucyI6IDB9LCAibnVtX3NvdXJjZXNfdXNlZCI6IDAsICJjb3N0X2luX3VzZF90aWNrcyI6IDB9LCAic3lzdGVtX2ZpbmdlcnByaW50IjogImZwXzQ5YzVqMGEzMjMiLCAic2VydmljZV90aWVyIjogImRlZmF1bHQifQoKZGF0YTogW0RPTkVdCgo=
+  recorded_at: Mon, 14 Sep 2026 09:40:11 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
     body:
       encoding: UTF-8
       string: '{"model":"grok-4-1-fast-non-reasoning","messages":[{"role":"user","content":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_19555804","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_19555804"},{"role":"assistant","content":"The
-        current weather in Berlin (52.5200, 13.4050) is 15°C with winds at 10 km/h."},{"role":"user","content":"What''s
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_23594642","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_23594642"},{"role":"assistant","content":"The
+        current weather in Berlin is 15°C with winds at 10 km/h."},{"role":"user","content":"What''s
         the weather in Paris? (48.8575, 2.3514)"}],"stream":true,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
@@ -236,7 +238,7 @@ http_interactions:
       Content-Type:
       - text/event-stream
       Date:
-      - Wed, 09 Sep 2026 12:06:07 GMT
+      - Mon, 14 Sep 2026 09:40:11 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -252,13 +254,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-4d1dec597c19b2242869cdca3254578c-12145f0b001294a4-00
+      - 00-7efa90880f35ae97f2d35649d9f1bfa0-779aa2f40005ef2b-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - d4450a8b-8057-49e5-b55a-3fd58df7b3df
+      - 9d35dd7f-fcf3-494d-b3d5-11606dcf5f34
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -272,9 +274,9 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '47'
+      - '45'
       X-Ratelimit-Reset-Requests:
-      - '3'
+      - '6'
       X-Ratelimit-Limit-Requests:
       - '50'
       X-Ratelimit-Renewalperiod-Requests:
@@ -282,7 +284,7 @@ http_interactions:
       X-Ratelimit-Abusepenalty-Active:
       - 'False'
       X-Ratelimit-Remaining-Tokens:
-      - '49737'
+      - '49742'
       X-Ratelimit-Reset-Tokens:
       - '0'
       X-Ratelimit-Limit-Tokens:
@@ -294,7 +296,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - d4450a8b-8057-49e5-b55a-3fd58df7b3df
+      - 9d35dd7f-fcf3-494d-b3d5-11606dcf5f34
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -304,26 +306,26 @@ http_interactions:
     body:
       encoding: UTF-8
       string: |+
-        data: {"id":"60eaf99d-8c90-44b7-8ecc-19de5642de21","object":"chat.completion.chunk","created":1788955568,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"role":"assistant","tool_calls":[{"id":"call_69493296","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"},"index":0,"type":"function"}]}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"6dc64646-ce93-4853-a287-ac6f32acc28e","object":"chat.completion.chunk","created":1789378812,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"role":"assistant","tool_calls":[{"id":"call_94977342","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"},"index":0,"type":"function"}]}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id":"60eaf99d-8c90-44b7-8ecc-19de5642de21","object":"chat.completion.chunk","created":1788955568,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{},"finish_reason":"tool_calls"}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"6dc64646-ce93-4853-a287-ac6f32acc28e","object":"chat.completion.chunk","created":1789378812,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{},"finish_reason":"tool_calls"}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id": "60eaf99d-8c90-44b7-8ecc-19de5642de21", "object": "chat.completion.chunk", "created": 1788955568, "model": "grok-4-1-fast-non-reasoning", "choices": [], "usage": {"prompt_tokens": 383, "completion_tokens": 40, "total_tokens": 423, "prompt_tokens_details": {"text_tokens": 383, "audio_tokens": 0, "image_tokens": 0, "cached_tokens": 498}, "completion_tokens_details": {"reasoning_tokens": 0, "audio_tokens": 0, "accepted_prediction_tokens": 0, "rejected_prediction_tokens": 0}, "num_sources_used": 0, "cost_in_usd_ticks": 0}, "system_fingerprint": "fp_49c5j0a323", "service_tier": "default"}
+        data: {"id": "6dc64646-ce93-4853-a287-ac6f32acc28e", "object": "chat.completion.chunk", "created": 1789378812, "model": "grok-4-1-fast-non-reasoning", "choices": [], "usage": {"prompt_tokens": 371, "completion_tokens": 40, "total_tokens": 411, "prompt_tokens_details": {"text_tokens": 371, "audio_tokens": 0, "image_tokens": 0, "cached_tokens": 538}, "completion_tokens_details": {"reasoning_tokens": 0, "audio_tokens": 0, "accepted_prediction_tokens": 0, "rejected_prediction_tokens": 0}, "num_sources_used": 0, "cost_in_usd_ticks": 0}, "system_fingerprint": "fp_49c5j0a323", "service_tier": "default"}
 
         data: [DONE]
 
-  recorded_at: Wed, 09 Sep 2026 12:06:08 GMT
+  recorded_at: Mon, 14 Sep 2026 09:40:12 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
     body:
       encoding: UTF-8
       string: '{"model":"grok-4-1-fast-non-reasoning","messages":[{"role":"user","content":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_19555804","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_19555804"},{"role":"assistant","content":"The
-        current weather in Berlin (52.5200, 13.4050) is 15°C with winds at 10 km/h."},{"role":"user","content":"What''s
-        the weather in Paris? (48.8575, 2.3514)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_69493296","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}]},{"role":"tool","content":"Current
-        weather at 48.8575, 2.3514: 15°C, Wind: 10 km/h","tool_call_id":"call_69493296"}],"stream":true,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_23594642","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_23594642"},{"role":"assistant","content":"The
+        current weather in Berlin is 15°C with winds at 10 km/h."},{"role":"user","content":"What''s
+        the weather in Paris? (48.8575, 2.3514)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_94977342","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}]},{"role":"tool","content":"Current
+        weather at 48.8575, 2.3514: 15°C, Wind: 10 km/h","tool_call_id":"call_94977342"}],"stream":true,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}],"stream_options":{"include_usage":true}}'
@@ -346,7 +348,7 @@ http_interactions:
       Content-Type:
       - text/event-stream
       Date:
-      - Wed, 09 Sep 2026 12:06:08 GMT
+      - Mon, 14 Sep 2026 09:40:12 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -362,13 +364,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-fd4aecc25b00e5b5ce836b7a5e725695-ec1f0ff600068d8c-00
+      - 00-1f27c7656e190e9f321abb1163b39b82-a1f37f3100095d04-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - bb83d96e-307c-4903-a2ec-31969b85cf64
+      - e6592dd3-1613-417a-bf43-5d99ef2ddd26
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -382,9 +384,9 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '47'
+      - '44'
       X-Ratelimit-Reset-Requests:
-      - '3'
+      - '6'
       X-Ratelimit-Limit-Requests:
       - '50'
       X-Ratelimit-Renewalperiod-Requests:
@@ -392,7 +394,7 @@ http_interactions:
       X-Ratelimit-Abusepenalty-Active:
       - 'False'
       X-Ratelimit-Remaining-Tokens:
-      - '49662'
+      - '49667'
       X-Ratelimit-Reset-Tokens:
       - '0'
       X-Ratelimit-Limit-Tokens:
@@ -404,7 +406,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - bb83d96e-307c-4903-a2ec-31969b85cf64
+      - e6592dd3-1613-417a-bf43-5d99ef2ddd26
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -414,6 +416,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ZGF0YTogeyJpZCI6IjVhYWVhZmY4LWI5ZjYtNDM4OS1hN2JjLTIwZGMwZmJkYTA3NCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjgsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiJUaGUiLCJyb2xlIjoiYXNzaXN0YW50In19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjVhYWVhZmY4LWI5ZjYtNDM4OS1hN2JjLTIwZGMwZmJkYTA3NCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjgsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgY3VycmVudCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIHdlYXRoZXIifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiNWFhZWFmZjgtYjlmNi00Mzg5LWE3YmMtMjBkYzBmYmRhMDc0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2OSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiBpbiJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIFBhcmlzIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjVhYWVhZmY4LWI5ZjYtNDM4OS1hN2JjLTIwZGMwZmJkYTA3NCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjksIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgKCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiNDgifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiNWFhZWFmZjgtYjlmNi00Mzg5LWE3YmMtMjBkYzBmYmRhMDc0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2OSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6Ii4ifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiNWFhZWFmZjgtYjlmNi00Mzg5LWE3YmMtMjBkYzBmYmRhMDc0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2OSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6Ijg1NyJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiNSJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiLCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiICJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiMiJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiLiJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiMzUxIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjVhYWVhZmY4LWI5ZjYtNDM4OS1hN2JjLTIwZGMwZmJkYTA3NCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjksIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiI0In19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjVhYWVhZmY4LWI5ZjYtNDM4OS1hN2JjLTIwZGMwZmJkYTA3NCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjksIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIpIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjVhYWVhZmY4LWI5ZjYtNDM4OS1hN2JjLTIwZGMwZmJkYTA3NCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjksIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgaXMifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiNWFhZWFmZjgtYjlmNi00Mzg5LWE3YmMtMjBkYzBmYmRhMDc0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2OSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiAifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiNWFhZWFmZjgtYjlmNi00Mzg5LWE3YmMtMjBkYzBmYmRhMDc0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2OSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IjE1In19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjVhYWVhZmY4LWI5ZjYtNDM4OS1hN2JjLTIwZGMwZmJkYTA3NCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjksIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiLCsEMifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiNWFhZWFmZjgtYjlmNi00Mzg5LWE3YmMtMjBkYzBmYmRhMDc0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2OSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiB3aXRoIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjVhYWVhZmY4LWI5ZjYtNDM4OS1hN2JjLTIwZGMwZmJkYTA3NCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODg5NTU1NjksIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgd2luZHMifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiNWFhZWFmZjgtYjlmNi00Mzg5LWE3YmMtMjBkYzBmYmRhMDc0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2OSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiBhdCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiICJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiMTAifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiNWFhZWFmZjgtYjlmNi00Mzg5LWE3YmMtMjBkYzBmYmRhMDc0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2OSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiBrbSJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg4OTU1NTY5LCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiL2gifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiNWFhZWFmZjgtYjlmNi00Mzg5LWE3YmMtMjBkYzBmYmRhMDc0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2OSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6Ii4ifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiNWFhZWFmZjgtYjlmNi00Mzg5LWE3YmMtMjBkYzBmYmRhMDc0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4ODk1NTU2OSwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnt9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6ICI1YWFlYWZmOC1iOWY2LTQzODktYTdiYy0yMGRjMGZiZGEwNzQiLCAib2JqZWN0IjogImNoYXQuY29tcGxldGlvbi5jaHVuayIsICJjcmVhdGVkIjogMTc4ODk1NTU2OSwgIm1vZGVsIjogImdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsICJjaG9pY2VzIjogW10sICJ1c2FnZSI6IHsicHJvbXB0X3Rva2VucyI6IDQ1OSwgImNvbXBsZXRpb25fdG9rZW5zIjogMjksICJ0b3RhbF90b2tlbnMiOiA0ODgsICJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOiB7InRleHRfdG9rZW5zIjogNDU5LCAiYXVkaW9fdG9rZW5zIjogMCwgImltYWdlX3Rva2VucyI6IDAsICJjYWNoZWRfdG9rZW5zIjogNTUxfSwgImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOiB7InJlYXNvbmluZ190b2tlbnMiOiAwLCAiYXVkaW9fdG9rZW5zIjogMCwgImFjY2VwdGVkX3ByZWRpY3Rpb25fdG9rZW5zIjogMCwgInJlamVjdGVkX3ByZWRpY3Rpb25fdG9rZW5zIjogMH0sICJudW1fc291cmNlc191c2VkIjogMCwgImNvc3RfaW5fdXNkX3RpY2tzIjogMH0sICJzeXN0ZW1fZmluZ2VycHJpbnQiOiAiZnBfNDljNWowYTMyMyIsICJzZXJ2aWNlX3RpZXIiOiAiZGVmYXVsdCJ9CgpkYXRhOiBbRE9ORV0KCg==
-  recorded_at: Wed, 09 Sep 2026 12:06:09 GMT
+        ZGF0YTogeyJpZCI6IjgxM2ViNDRkLTA5MWEtNGIwOS05NGVmLTE4MDZmMzA4YmYxNCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiJUaGUiLCJyb2xlIjoiYXNzaXN0YW50In19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjgxM2ViNDRkLTA5MWEtNGIwOS05NGVmLTE4MDZmMzA4YmYxNCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgY3VycmVudCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI4MTNlYjQ0ZC0wOTFhLTRiMDktOTRlZi0xODA2ZjMwOGJmMTQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg5Mzc4ODEyLCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIHdlYXRoZXIifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiODEzZWI0NGQtMDkxYS00YjA5LTk0ZWYtMTgwNmYzMDhiZjE0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMiwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiBpbiJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI4MTNlYjQ0ZC0wOTFhLTRiMDktOTRlZi0xODA2ZjMwOGJmMTQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg5Mzc4ODEyLCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiIFBhcmlzIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjgxM2ViNDRkLTA5MWEtNGIwOS05NGVmLTE4MDZmMzA4YmYxNCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgaXMifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiODEzZWI0NGQtMDkxYS00YjA5LTk0ZWYtMTgwNmYzMDhiZjE0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMiwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiAifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiODEzZWI0NGQtMDkxYS00YjA5LTk0ZWYtMTgwNmYzMDhiZjE0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMiwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IjE1In19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjgxM2ViNDRkLTA5MWEtNGIwOS05NGVmLTE4MDZmMzA4YmYxNCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiLCsEMifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiODEzZWI0NGQtMDkxYS00YjA5LTk0ZWYtMTgwNmYzMDhiZjE0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMiwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiB3aXRoIn19XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6IjgxM2ViNDRkLTA5MWEtNGIwOS05NGVmLTE4MDZmMzA4YmYxNCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsImNyZWF0ZWQiOjE3ODkzNzg4MTIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIgd2luZHMifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiODEzZWI0NGQtMDkxYS00YjA5LTk0ZWYtMTgwNmYzMDhiZjE0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMiwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiBhdCJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI4MTNlYjQ0ZC0wOTFhLTRiMDktOTRlZi0xODA2ZjMwOGJmMTQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg5Mzc4ODEyLCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiICJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI4MTNlYjQ0ZC0wOTFhLTRiMDktOTRlZi0xODA2ZjMwOGJmMTQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg5Mzc4ODEyLCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiMTAifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiODEzZWI0NGQtMDkxYS00YjA5LTk0ZWYtMTgwNmYzMDhiZjE0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMiwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiBrbSJ9fV0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzQ5YzVqMGEzMjMiLCJzZXJ2aWNlX3RpZXIiOiJkZWZhdWx0In0KCmRhdGE6IHsiaWQiOiI4MTNlYjQ0ZC0wOTFhLTRiMDktOTRlZi0xODA2ZjMwOGJmMTQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJjcmVhdGVkIjoxNzg5Mzc4ODEyLCJtb2RlbCI6Imdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsImNob2ljZXMiOlt7ImluZGV4IjowLCJkZWx0YSI6eyJjb250ZW50IjoiL2gifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiODEzZWI0NGQtMDkxYS00YjA5LTk0ZWYtMTgwNmYzMDhiZjE0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMiwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6Ii4ifX1dLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF80OWM1ajBhMzIzIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCJ9CgpkYXRhOiB7ImlkIjoiODEzZWI0NGQtMDkxYS00YjA5LTk0ZWYtMTgwNmYzMDhiZjE0Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwiY3JlYXRlZCI6MTc4OTM3ODgxMiwibW9kZWwiOiJncm9rLTQtMS1mYXN0LW5vbi1yZWFzb25pbmciLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnt9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfNDljNWowYTMyMyIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQifQoKZGF0YTogeyJpZCI6ICI4MTNlYjQ0ZC0wOTFhLTRiMDktOTRlZi0xODA2ZjMwOGJmMTQiLCAib2JqZWN0IjogImNoYXQuY29tcGxldGlvbi5jaHVuayIsICJjcmVhdGVkIjogMTc4OTM3ODgxMiwgIm1vZGVsIjogImdyb2stNC0xLWZhc3Qtbm9uLXJlYXNvbmluZyIsICJjaG9pY2VzIjogW10sICJ1c2FnZSI6IHsicHJvbXB0X3Rva2VucyI6IDQ0NywgImNvbXBsZXRpb25fdG9rZW5zIjogMTcsICJ0b3RhbF90b2tlbnMiOiA0NjQsICJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOiB7InRleHRfdG9rZW5zIjogNDQ3LCAiYXVkaW9fdG9rZW5zIjogMCwgImltYWdlX3Rva2VucyI6IDAsICJjYWNoZWRfdG9rZW5zIjogNjE0fSwgImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOiB7InJlYXNvbmluZ190b2tlbnMiOiAwLCAiYXVkaW9fdG9rZW5zIjogMCwgImFjY2VwdGVkX3ByZWRpY3Rpb25fdG9rZW5zIjogMCwgInJlamVjdGVkX3ByZWRpY3Rpb25fdG9rZW5zIjogMH0sICJudW1fc291cmNlc191c2VkIjogMCwgImNvc3RfaW5fdXNkX3RpY2tzIjogMH0sICJzeXN0ZW1fZmluZ2VycHJpbnQiOiAiZnBfNDljNWowYTMyMyIsICJzZXJ2aWNlX3RpZXIiOiAiZGVmYXVsdCJ9CgpkYXRhOiBbRE9ORV0KCg==
+  recorded_at: Mon, 14 Sep 2026 09:40:13 GMT
 recorded_with: VCR 6.4.0

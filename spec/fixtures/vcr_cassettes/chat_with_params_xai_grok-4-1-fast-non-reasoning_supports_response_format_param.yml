@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:15:40 GMT
+      - Mon, 14 Sep 2026 09:49:12 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -52,13 +52,13 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '204.4'
+      - '201.5'
       X-Metrics-Mean-Itl-Ms:
-      - '6.6'
+      - '7.6'
       X-Metrics-E2e-Ms:
-      - '1979.0'
+      - '2605.4'
       Traceparent:
-      - 00-1182496cb05df4a8faaae874269c5525-43f66d30000138b5-01
+      - 00-37cbe507fb43045df014c6ab6ec9a820-3c9ceba90000dc25-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -71,9 +71,9 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1788956139,"completed_at":1788956140,"id":"f3c9e55b-0233-9afe-a603-20ecd8ef19dc","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_f3c9e55b-0233-9afe-a603-20ecd8ef19dc","summary":[{"text":"The
+      string: '{"created_at":1789379350,"completed_at":1789379352,"id":"cea762a9-a4f2-9429-9e04-8947577e309b","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_cea762a9-a4f2-9429-9e04-8947577e309b","summary":[{"text":"The
         task is: \"What is the square root of 64? Answer with a JSON object with the
-        key `result`.\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"6wNVXsP9ARe7ZPw7uJV/f/UWIBCZ/xKU+T2gkdQco3u5bJzfBlfPLbSd2yvzd6YQhshcewNcIoDGiKOeIIh+ZNpgWnq1tHBEDKVfIW3YU3jXzNmiG/8Y/QsxgPcM3T8G2YA9om4NMCThGXmNTq6C6Nztgb6jFq8t+0qSZrnUQsjKLjmPmS5du0sQ6GXh2RSQxNZ/jRpBHgBtzmyIEckTfjNliHmkYjrm2IBLROirlGb9wrjKwFlOcEIMreqAMS29mcxyGLrLt/c6uA0NBiIoKMHz/5LQQnJpha9Xxe7kP4kzZfQkPILN/8KCj4WdqwT4O6LDzjHXYDVR/WN0U9U17VD+oWNGEzt6UL3dHM37hxT9yMNLyMWADbH63C+aywjJAmmtytsKLMTUFMuy9DIy9yL+8FD5sN+rFjTlzTGTkH+Y6VZhBk5gip3vTRqq1Y7fpPibPdS5L1crqCfVqu+kOiqF9qmIDFqlv4RL1ftScdk3wc3NCAUUc3b5QjD4XSSOMwFndisMucB5yhwo6dO7SUf5nxz0qltqJh0VCPID0Y6Mro4VW6SjSC2DvwoojPm4sA3qFBvPrduQGZXePV2sVZXHfJE5bO4c7AGR9J2mX2htQ1pMbd44EG5W6YC6CWvTaDeQ3Td24Q7ZzTGtBRHSGMQC9ND/73PHNSdU4AxaYkSzcbK3sfXl35tbegXLPymaG6xxnjh7+5cLjngu5RMuQE5owd6bilXvBiyPQNVPqTQGx7g+7NHGYnsdmWiFwLrGwwk0LFLzxNSno/EOZ2fXWCc+wOPQYI5xntqFdyR1jLOUutim50oYktxQLAtOr41v2l4VAL+RHDS32FOV3TyNvuyFPyxyCNcBRvmlNGAI+mKUC/AWVCc9yfPIq6lgdX8IDQFB/Os8gwhRNBmKRlMfysUD2a50QhJtv8V/pGMXNudm0iDp850rtS6p0g+O3hAFM3QcUB5kbAvgAcJz9BqC3pOvA7wZATxJetxI/OzlpF4T4JnEzN9QsfXfYjPed/dcK1AHvCoM+LX/2vDziw1VocqtDtUC9c/BQ6lN447bkw5DrpEZ44Q/GVmfsnbsXLXqwQ2swRSfuuntKvBtpyRzZj0rMKVKZcEb68QtLfC50SxOUhLYbtWl5Iaxa/hKpfX6yup4dWUxNoIGsEIskPAG9fjwtDMYjDAYLB9mx8vdvCN+zw8G1fhGy6OOOaG0AjNCoUFawPZsrTgIClDNkHrjvlMbcJT+/JAEEVxVunAYrTQV7GAyTqAoxAWij8CYOSjBYA"},{"content":[{"type":"output_text","text":"{\"result\":
-        8}","logprobs":[],"annotations":[]}],"id":"msg_f3c9e55b-0233-9afe-a603-20ecd8ef19dc","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"json_object"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":232,"input_tokens_details":{"cached_tokens":192},"output_tokens":234,"output_tokens_details":{"reasoning_tokens":228},"total_tokens":466,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":6734000,"context_details":{"input_tokens":232,"output_tokens":234}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Wed, 09 Sep 2026 12:15:40 GMT
+        key `result`.\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"2GdH9Nl83li/SezGFP+RGr6RjHQsKuKwUbMWNrlKVclTBnHxjPDC0pZGg1++qvmRj1mvaq91/nG/fApV68ygdY960y2GjrsMEdS+4l7mgMqdmDhuhAUqdEGUOg9U9IjA9NkUMjDcakzMP0ylrCa9FMhhOA7a6oMB8Lx+iBLYGd1K0yh3r4JD995fa5eJ237UdYelhMv3GffE1tZ1Pt6G6xt3oLz6GBL1IkD7Xl31dI+j1f2tWnqEvcvU44d93u6qyabMB77dPg8Hl2IPJM6vb1iMLFJF9YLHl6lF6pTCOJvx1Or8Xi7Y7RfUnt0e5BTMqgMkk0tRqReGpNg6DyygbWZFlABWI5lxRAYBeaA8fTpOnsO8oPcvnQXcDpsliBbhdqE4rzjeBXQRR4hRPcpAcSILaX9Txlg9cIMSvTgfxqlJL5FR3/+i2R5g5bILE42s3G3hpN9N3sE3ZlpDQoSTwhHrDNQi/Fs/eW4uxhf/21u2f3FBGcdc3Yq2A9e5Mq+ApKS2DZLEGTVMNY/aDsykWw8Bi/aVEmLhgzZbgh74bmpVadtxXjCKfh68qbwfVpQQy5nCCZM1Kz2WqF7H/6bx8fKVAjoJDwugF6FiLdEyUC1nc80LI3Z0P9KxPUhCBqc6TSfBRvrMtw6Y+KyZtbO2OhFkqFE8nAk7XFj5N0fmKF0wgndATzpAl8crT1TRdV6DLNrRgxLeMsAfGR1z8Q+haDHMOfaqxLh8qbnwbcP+eDkvLzp38tjnLzcjR+7Jci0RROu46foKISdvRnRFjBeZqg36OzJO0aILM67IvVm1RH9raJzdWVWvjVDTV7Hb+/6FklXxQ3/200J06ajBK/vJpN8va+8Xjp44dfvSlUXv6p8NivvgCwPMXdh4EEzj8cGKl+yMBGd0s8EIhCzFU01p8+n1SQArA9GJUlvC9Z4ChERKMkzBAYMD399t+DF+Rn1ViYPsHz615UDKfHRixFKnGP0tb/O4lqCA9M0nKteQXRG7oHZaUaM8dHlWzcwzObd0I8LPv7MCxWXuuENCkIVFHIQrfuxxUvdy5s7ceHhOCcGfXRod/nq5nlceZHUxDH2bhfUH/RBSIRD3hpgucVOuimSY3Mi283Insra8ygvUdEmvrugHgo9UsgdES2zrQrFSWqbrWB9WqkOnAlKNcbNr6lw5LIVOEm08HcwCVCiKI6Hy8NCtfSYaabJekfd6vmPTAiGktg9ZEucoffUkY3DOgl15D6XAyCC1qumK2y6wY7ZN+2puyArRvm0rrDYqaGEZ6Wfe87xeD3ao3YZI0tThn4SB4vB5RUbMhj3d6pVx/4PBHGJxVaDQ2StEH2SZQeUa9BDv9AfBIGwita/rmFJ72pB/xyIKocfm1mo2kphVSU7PzZxmw4twKZSzU0RsorOr2Y7QXxMWGJpfFhArJbSmxjyewjRNRg+wFg6NMjp7dtcFU5HgP51URK0nv53pmHOW2d+TDbmd8cDIPzQTghCOywVe34CM4lg18Hh7DKEtxsl7gHFJWMtTI4Ynylv0AJ8hWbt08+az4XPJmJXlg2hh6nb4FokuTwgtaGixR0ozg0/4lSEPRSRZUWUDwwNqkYWuS/cOZK02A78Ph8DK1lY"},{"content":[{"type":"output_text","text":"{\"result\":
+        8}","logprobs":[],"annotations":[]}],"id":"msg_cea762a9-a4f2-9429-9e04-8947577e309b","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"json_object"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":232,"input_tokens_details":{"cached_tokens":192},"output_tokens":291,"output_tokens_details":{"reasoning_tokens":285},"total_tokens":523,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":8159000,"context_details":{"input_tokens":232,"output_tokens":291}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Mon, 14 Sep 2026 09:49:12 GMT
 recorded_with: VCR 6.4.0

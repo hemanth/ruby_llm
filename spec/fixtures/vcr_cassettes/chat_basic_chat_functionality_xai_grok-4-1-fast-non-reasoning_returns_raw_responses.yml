@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:10:14 GMT
+      - Mon, 14 Sep 2026 09:43:22 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -52,13 +52,13 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '292.7'
+      - '334.2'
       X-Metrics-Mean-Itl-Ms:
-      - '9.1'
+      - '7.7'
       X-Metrics-E2e-Ms:
-      - '2115.1'
+      - '2674.4'
       Traceparent:
-      - 00-a60d63c2690e961da8859995771aeb98-fdc3bea5000099f1-01
+      - 00-d7d1efbc6d8aacb2d16c9692b621bd4b-46a21e5a00005b3c-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -71,7 +71,7 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1788955813,"completed_at":1788955814,"id":"13e7f80f-d144-9b2a-86f7-4fa5ed5cad94","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_13e7f80f-d144-9b2a-86f7-4fa5ed5cad94","summary":[{"text":"The
-        question is: \"What is the capital of France?\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"c56SRZy9/cUs0322ZUwApZ5q3loyLSUD3iaQQ/GiPmAMKwQVzuUnqAjEH64SC/iyFtWJbPWNd2yyLIhTZvRneYPL0s6Ng+LVCPTxpJcduw87FKWwFPqZ1MqDd+ydL3ZTuFsk+qZS14ld8QVwUHGsCmBNcPIMaPQh1+tCJc6hxT7/3HwygvdFSGmlEe68zFC5mKObfOD9ayChGk7ZyLEQF1IF3UB/fTQYNkVTjEUA6UcEnLI1mKL0xciSkXfaoPTRP8XdBV1xmpbYnMUGiCXXURZvUNnfzAteLpo8a44J97lk0WvD4FrXgxuPOwCslB0au+8sjcfdCQkt2eF1v/zMaQKvjHiXkcgpLqbpl3FjROvxYzWTC+iri+qdxkpHI3mNXN2cm8CzHaK2X+1BgeY57NMX97SvKh+hGeNQXui5DpQQf3e1kWR5HDNnbzSLGP+XrZN6VfAQevAmBysDxGZb+1MkLAfy/UygN/5ho+JnbOxRE/EM9h+TCHdeig80RP+RejUa74rzhDvKCoJclsM1UCUj/kBtKOFyfEE7zKIPm1OegzleFA6+klf/ROuy+6FJljrag7G2ADXmSMJFceIXAzB749wNTKmS0dyKMCeWC4gFaKiDeBDHpTL8GORRpCEcWQRFiv0GyGqDLSQYYfYKQiUAU/USsTjuKz+zJ6aZXvCgd9u7GHBwnlkWta16IH8RTZRMckmTbo35HJRy36fPpyxoCUopXMEXixo2c3RuPhORPDdJRQUG1KROITzQYmX7EYoLzmJ+HXXbqxKbetVm8UzqzRGCkA3m3ExBdAtPo9hXu42/PQ+EmI7VKPbPNxSCF7QuakYYq3QX5XEkqqutNKgRbDrC3teuOYEXw5t974C/uQv3j7XmbSNaj2nmcMas8WDj/wc1aUfW3nTATcW5nILTHbwKXBkPxAii/n/k9PneGD4lJ6fUCDxilFaFY5icOo2DofYeM/uVybVuM5pMlemvHh/aJYgm9o8bGMQ6Yrw0zID4/XQakWISV5QJbcXmZjICYYIAHrpGXQu/+MIkQ2ggZdM1ev3Wrqm1kSyhv9DBESzQ4VacVm0+ASd8/4hGlYb5CCmM7BuAs+L9OkaSQZfIrFTZBuijZUlW0yf0q9h++z6ixbjszCRmiEHVoaA7RR6W3pllWVzMrNf/OKb9/xnE2ZG4Znwq5A42kFt9ganzyTw3dj4G+1zI3dDCiKeFIXaof+AiJmt/WEIXHj7dSzJYwWKdOePorGoyNDFDFN63"},{"content":[{"type":"output_text","text":"Paris.","logprobs":[],"annotations":[]}],"id":"msg_13e7f80f-d144-9b2a-86f7-4fa5ed5cad94","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":199,"input_tokens_details":{"cached_tokens":192},"output_tokens":186,"output_tokens_details":{"reasoning_tokens":184},"total_tokens":385,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":5121500,"context_details":{"input_tokens":199,"output_tokens":186}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Wed, 09 Sep 2026 12:10:14 GMT
+      string: '{"created_at":1789379000,"completed_at":1789379002,"id":"d75a0b2b-8ed9-98b3-94bc-0502c19a6a7f","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_d75a0b2b-8ed9-98b3-94bc-0502c19a6a7f","summary":[{"text":"The
+        question is: \"What is the capital of France?\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"n67ZRnd5HVRxg+DuOZZ2RMu42lr35PMYRv3xeVgMlwlAe72gG+OgTz2yHUKhlnSwDcJgFG3qwU6qf0s4gGnwTYkUW/vKZ6Izr2cDCHTdMHqCnV84mxHvEGf5ZvoNpbuSt30EDzuB/IwQIoCBVlrWlLqSHw4o3ZrpOc+BEiRsi2nAaL3J5rJ1bcw8Y4cn//fpfkSiQ72XgE4koA8RJfQk6fkfyvI6IyPehUQuvhnd6hICLnPXtlL7oWzcaWbHcsmiSBzGtSdOSKqAcNMVMLXDD23VXxTwITN68Dbqfq6/kXZoV/kYvyLixXHhrSELDeY1eyqD1r69RVDEOH/d+co67J3PHAFeX6faMuxnBRK9GgRQV+RkmvNe3uoFBQSa4EX8d6tfBImnW3YLAoag+v4Bsf9w0rm1oE2p+HaC+4frx3mfdaOcYh941tMhZ7RTz4x6aN1OHKgbucJu2QwtOSk567RYEOPV109Afy26DGp17mmVdqq3n/uvvkKVlcOZh6S59089NOjHCDFo6NNK+VciT7vpIqZHXyV78ido4tbdfH+R9IDHOn/1ng99HnyjiWUae2lXzD7aplahR0N6Y9b3fUVDhRtESR9L+rSSnDSJXPUSLH+IuoTAP97KQ2ixMw0le28ff8IR0SgnI1YyPZhkiTM6cHPU61KvSx6MXd99j5H1YArM06gSaYoJGLwfqeltjHzqCJY5KWLNIOT2NwE+WMFlFcWI+yYUpe0qkecgY3UdC0jKF3NTij09RP/b6Kv/b5KmzZhJngtlT94I3OIi0JsmLo6IcoC3Sp7on1+XZIkZd8UvYucCJ+VKr3MWxlNi54+r5GfH+ds7OVb73TubJ0vRv+FtxxFHheXQ9rdecwL86f+Q19qXxJIF1dbDqekvgprR8jXy8w9nWNM2OcBrY0rRBGI6bBAiL3xVM2ylJ1e1wjBWsesEo+rtM4cCD9/csgNUnaiCTd7kMsSWirBj/gpCX3PpyFUyOgg9J+llLQ3xxs7aOEDOf9m3ijqls6IoCupv+SvHq7RTAXXjmVpymAN0sysI9RZ31U+5lKupUfZE0Pi0aD8Hu91VGAAQoyiM7BjHKHGlH3QD0/3gowjgfc8bQnOpYSP2bNtOJ39IP1LqA5PBFtfzuOgFL4asNAjrMjGSFDtJ/j+rZ2IbW3GsDtpj9gOAe/MF9B+d0CNtY+ioM14rOtqyzAyp7jskFLdyYwo2jzWauk329oTZiPQyvs+2LnJLPXqm27sEykZNVODn/xfVRRIqH9hdYcNx9fxP6jnlhj53ujG3L8dLvLIZbIAs/2TO4yCh2lyzspUUcnE58nTucSVpXY1mSUeYgDapsmhUKOgVBBSSSdI5TcnK2zghhIhAcgUj4S4yNTNUz1HRGK5mvKGBBnTvOaAOT74b1b9xm2okxRC67Xp4NA7YWT8kDmWT62Lwv/BG7OkUn9Nl0kSGh4DFeY4jTqByTwMnSopgLsk2gTJOi2LJFKE9CI/0hN+zUwBvkYmxld66wAgNf0oi9v0+xZu2qL9+C3z2HYFQFRdZLfjJJ3sKSRpUeWKn5PA2y2CUNtsp8m0AdYOxlQE71W8qZ5U5HGvPiuG+KzubYzKl9yBeru4ClQdQM4rU4ct/6m61gY+RizGzv57Ey2z/NVz0jM/X271BM1rHLzQkeSjQacrC+CIo2aV+BhE33axcw13TrZ/pIk4Cw5kBBqaGZRrEctAT3MjjwByHMwEKWDnpzcFM0AAJ3TL2CLx7g4Yyr+3Zy7puSBK+2Qv2jh+Ey6/pggE"},{"content":[{"type":"output_text","text":"Paris.","logprobs":[],"annotations":[]}],"id":"msg_d75a0b2b-8ed9-98b3-94bc-0502c19a6a7f","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":199,"input_tokens_details":{"cached_tokens":192},"output_tokens":280,"output_tokens_details":{"reasoning_tokens":278},"total_tokens":479,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":7471500,"context_details":{"input_tokens":199,"output_tokens":280}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Mon, 14 Sep 2026 09:43:22 GMT
 recorded_with: VCR 6.4.0

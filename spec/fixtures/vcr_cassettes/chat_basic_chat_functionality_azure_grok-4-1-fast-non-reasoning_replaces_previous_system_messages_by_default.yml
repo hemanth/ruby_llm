@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:05:30 GMT
+      - Mon, 14 Sep 2026 09:39:24 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -43,13 +43,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-a1c934425e50135a9621e1caecd559bf-4c7de6990010f689-00
+      - 00-ce4ef156af9664f52e1e638742587474-897d91c6000afd69-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 88c865a8-e252-437c-b1fc-0f71775277a6
+      - fd60e4ea-4595-4fd5-918e-823ee0e169c3
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -85,7 +85,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 88c865a8-e252-437c-b1fc-0f71775277a6
+      - fd60e4ea-4595-4fd5-918e-823ee0e169c3
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -93,13 +93,10 @@ http_interactions:
       X-Ms-Region:
       - West Europe
     body:
-      encoding: UTF-8
-      string: '{"id":"cfcc7208-01fe-473d-98c0-01c9619b4720","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"I''m
-        afraid I don''t have real-time access to weather data, but if you tell me
-        your location, I can give you a general overview based on typical patterns
-        or recent trends! For example, right now in many parts of the US, it''s mild
-        with some scattered showers. XKCD7392"},"finish_reason":"stop"}],"usage":{"prompt_tokens":23,"completion_tokens":58,"total_tokens":81,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":190,"audio_tokens":0,"text_tokens":23,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1788955530,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 09 Sep 2026 12:05:31 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6IjNlM2I5NTMxLTU2MzQtNDQ3My05YmY0LTI2MDIwZjI4Zjk2ZCIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJJIGNhbid0IGNoZWNrIHJlYWwtdGltZSB3ZWF0aGVyIHdpdGhvdXQgYSBzcGVjaWZpYyBsb2NhdGlvbiwgYnV0IGhlcmUncyBhIHF1aWNrIDxHT09HTEVfQ0xPVURfTE9DQVRJT04+IHNuYXBzaG90IGJhc2VkIG9uIHJlY2VudCBkYXRhIChhcyBvZiBteSBsYXN0IHVwZGF0ZSk6XG5cbi0gKipOZXcgWW9yaywgTlkqKjogUGFydGx5IGNsb3VkeSwgYXJvdW5kIDY1wrBGICgxOMKwQyksIHdpdGggYSBjaGFuY2Ugb2YgZXZlbmluZyBzaG93ZXJzLlxuLSAqKkxvbmRvbiwgVUsqKjogT3ZlcmNhc3QgYW5kIGRyaXp6bHksIGFib3V0IDU1wrBGICgxM8KwQykuXG4tICoqVG9reW8sIEphcGFuKio6IFN1bm55IGludGVydmFscywgbWlsZCBhdCA3MsKwRiAoMjLCsEMpLlxuLSAqKlN5ZG5leSwgQXVzdHJhbGlhKio6IFdhcm0gYW5kIGNsZWFyLCBoaWdoIG9mIDY4wrBGICgyMMKwQykuXG5cbkZvciB5b3VyIHNwb3QsIHRyeSBhIHdlYXRoZXIgYXBwIG9yIHNpdGUgbGlrZSBXZWF0aGVyLmNvbSB3aXRoIHlvdXIgY2l0eSEgV2hhdCdzIHlvdXIgbG9jYXRpb24/IFhLQ0Q3MzkyIn0sImZpbmlzaF9yZWFzb24iOiJzdG9wIn1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjoyMywiY29tcGxldGlvbl90b2tlbnMiOjEzNSwidG90YWxfdG9rZW5zIjoxNTgsImF1ZGlvX3Byb21wdF90b2tlbnMiOjAsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjoxOTAsImF1ZGlvX3Rva2VucyI6MCwidGV4dF90b2tlbnMiOjIzLCJpbWFnZV90b2tlbnMiOjB9LCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjAsImF1ZGlvX3Rva2VucyI6MCwiYWNjZXB0ZWRfcHJlZGljdGlvbl90b2tlbnMiOjAsInJlamVjdGVkX3ByZWRpY3Rpb25fdG9rZW5zIjowfSwibnVtX3NvdXJjZXNfdXNlZCI6MH0sImNyZWF0ZWQiOjE3ODkzNzg3NjQsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsInByb21wdF9maWx0ZXJfcmVzdWx0cyI6bnVsbH0=
+  recorded_at: Mon, 14 Sep 2026 09:39:26 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
@@ -107,11 +104,15 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"grok-4-1-fast-non-reasoning","messages":[{"role":"system","content":"You
         must include the exact phrase \"PURPLE-ELEPHANT-42\" somewhere in your response."},{"role":"user","content":"Tell
-        me about the weather."},{"role":"assistant","content":"I''m afraid I don''t
-        have real-time access to weather data, but if you tell me your location, I
-        can give you a general overview based on typical patterns or recent trends!
-        For example, right now in many parts of the US, it''s mild with some scattered
-        showers. XKCD7392"},{"role":"user","content":"What are some good books?"}],"stream":false}'
+        me about the weather."},{"role":"assistant","content":"I can''t check real-time
+        weather without a specific location, but here''s a quick <GOOGLE_CLOUD_LOCATION>
+        snapshot based on recent data (as of my last update):\n\n- **New York, NY**:
+        Partly cloudy, around 65°F (18°C), with a chance of evening showers.\n- **London,
+        UK**: Overcast and drizzly, about 55°F (13°C).\n- **Tokyo, Japan**: Sunny
+        intervals, mild at 72°F (22°C).\n- **Sydney, Australia**: Warm and clear,
+        high of 68°F (20°C).\n\nFor your spot, try a weather app or site like Weather.com
+        with your city! What''s your location? XKCD7392"},{"role":"user","content":"What
+        are some good books?"}],"stream":false}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -131,7 +132,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:05:31 GMT
+      - Mon, 14 Sep 2026 09:39:26 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -147,13 +148,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-0da6f1315b94f6d795c23f3a4fcde662-eb876675000641f9-00
+      - 00-f28f1945955d1475ac57a595087a6a71-68570368000c5497-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - c4f39887-7a9f-4563-b17e-c357d910031a
+      - 3ee2ca00-f3ba-4cac-a03f-91c3a26ae0ef
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -177,7 +178,7 @@ http_interactions:
       X-Ratelimit-Abusepenalty-Active:
       - 'False'
       X-Ratelimit-Remaining-Tokens:
-      - '49853'
+      - '49789'
       X-Ratelimit-Reset-Tokens:
       - '0'
       X-Ratelimit-Limit-Tokens:
@@ -189,7 +190,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - c4f39887-7a9f-4563-b17e-c357d910031a
+      - 3ee2ca00-f3ba-4cac-a03f-91c3a26ae0ef
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -199,6 +200,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6ImY4MzllZWM3LTY0MGMtNDk0MS1hMTNmLTM5ZjA3MTVhODRhMyIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJIZXJlIGFyZSBhIGZldyB0aW1lbGVzcyByZWNvbW1lbmRhdGlvbnMgYWNyb3NzIGdlbnJlcywgd2l0aCBxdWljayByZWFzb25zIHdoeSB0aGV5J3JlIGdyZWF0OlxuXG4tICoqVG8gS2lsbCBhIE1vY2tpbmdiaXJkKiogYnkgSGFycGVyIExlZTogQSBwcm9mb3VuZCBleHBsb3JhdGlvbiBvZiBqdXN0aWNlLCByYWNpc20sIGFuZCBjaGlsZGhvb2QgaW5ub2NlbmNlIGluIHRoZSBBbWVyaWNhbiBTb3V0aC5cbi0gKioxOTg0KiogYnkgR2VvcmdlIE9yd2VsbDogQSBjaGlsbGluZyBkeXN0b3BpYW4gd2FybmluZyBhYm91dCBzdXJ2ZWlsbGFuY2UsIHRydXRoLCBhbmQgYXV0aG9yaXRhcmlhbmlzbeKAlG1vcmUgcmVsZXZhbnQgdGhhbiBldmVyLlxuLSAqKlRoZSBIaXRjaGhpa2VyJ3MgR3VpZGUgdG8gdGhlIEdhbGF4eSoqIGJ5IERvdWdsYXMgQWRhbXM6IEhpbGFyaW91cyBzY2ktZmkgc2F0aXJlIG9uIGxpZmUsIHRoZSB1bml2ZXJzZSwgYW5kIGV2ZXJ5dGhpbmcgKGRvbid0IHBhbmljISkuXG4tICoqU2FwaWVuczogQSBCcmllZiBIaXN0b3J5IG9mIEh1bWFua2luZCoqIGJ5IFl1dmFsIE5vYWggSGFyYXJpOiBGYXNjaW5hdGluZyBub24tZmljdGlvbiBvbiBob3cgaHVtYW5zIHNoYXBlZCBoaXN0b3J5IHRocm91Z2ggbXl0aHMgYW5kIGNvb3BlcmF0aW9uLlxuLSAqKlByaWRlIGFuZCBQcmVqdWRpY2UqKiBieSBKYW5lIEF1c3RlbjogV2l0dHkgcm9tYW5jZSBhbmQgc29jaWFsIGNvbW1lbnRhcnkgdGhhdCdzIGVuZGxlc3NseSByZS1yZWFkYWJsZS5cblxuV2hhdCBnZW5yZXMgb3IgYXV0aG9ycyBkbyB5b3UgbGlrZT8gSSBjYW4gdGFpbG9yIG1vcmUgc3VnZ2VzdGlvbnMuIFBVUlBMRS1FTEVQSEFOVC00MiJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6MTAyLCJjb21wbGV0aW9uX3Rva2VucyI6MTgyLCJ0b3RhbF90b2tlbnMiOjI4NCwiYXVkaW9fcHJvbXB0X3Rva2VucyI6MCwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjE2NCwiYXVkaW9fdG9rZW5zIjowLCJ0ZXh0X3Rva2VucyI6MTAyLCJpbWFnZV90b2tlbnMiOjB9LCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjAsImF1ZGlvX3Rva2VucyI6MCwiYWNjZXB0ZWRfcHJlZGljdGlvbl90b2tlbnMiOjAsInJlamVjdGVkX3ByZWRpY3Rpb25fdG9rZW5zIjowfSwibnVtX3NvdXJjZXNfdXNlZCI6MH0sImNyZWF0ZWQiOjE3ODg5NTU1MzEsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsInByb21wdF9maWx0ZXJfcmVzdWx0cyI6bnVsbH0=
-  recorded_at: Wed, 09 Sep 2026 12:05:33 GMT
+        eyJpZCI6ImFjNDY3MDFmLTBjZTAtNGMwOC04NmQ2LTkzNWRmZDI5NWVlMiIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJIZXJlIGFyZSBzb21lIHRpbWVsZXNzIGJvb2sgcmVjb21tZW5kYXRpb25zIGFjcm9zcyBnZW5yZXMsIGhhbmRwaWNrZWQgZm9yIHRoZWlyIGltcGFjdCwgc3Rvcnl0ZWxsaW5nLCBvciBpbnNpZ2h0LiBJJ3ZlIGluY2x1ZGVkIHdoeSBJIGxpa2UgZWFjaCBhbmQga2VwdCBpdCB0byBhIHRpZ2h0IGxpc3TigJRjbGFzc2ljcyBhbmQgbW9kZXJuIGdlbXMgYWxpa2U6XG5cbiMjIyBGaWN0aW9uXG4tICoqVG8gS2lsbCBhIE1vY2tpbmdiaXJkKiogYnkgSGFycGVyIExlZSAgXG4gIEEgcG9pZ25hbnQgY29taW5nLW9mLWFnZSBzdG9yeSB0YWNrbGluZyByYWNpc20gYW5kIG1vcmFsaXR5IGluIHRoZSBBbWVyaWNhbiBTb3V0aC4gVGltZWxlc3MgZW1wYXRoeS1idWlsZGVyLlxuLSAqKjE5ODQqKiBieSBHZW9yZ2UgT3J3ZWxsICBcbiAgRHlzdG9waWFuIHdhcm5pbmcgb24gc3VydmVpbGxhbmNlIGFuZCB0b3RhbGl0YXJpYW5pc20uIENoaWxsaW5nbHkgcmVsZXZhbnQgdG9kYXkuXG4tICoqVGhlIE5pZ2h0IENpcmN1cyoqIGJ5IEVyaW4gTW9yZ2Vuc3Rlcm4gIFxuICBNYWdpY2FsLCBhdG1vc3BoZXJpYyByb21hbmNlIHdpdGggYSBjaXJjdXMgdGhhdCBvbmx5IG9wZW5zIGF0IG5pZ2h0LiBQdXJlIGVzY2FwaXNtLlxuXG4jIyMgTm9uLUZpY3Rpb25cbi0gKipTYXBpZW5zOiBBIEJyaWVmIEhpc3Rvcnkgb2YgSHVtYW5raW5kKiogYnkgWXV2YWwgTm9haCBIYXJhcmkgIFxuICBTd2VlcGluZyBvdmVydmlldyBvZiBodW1hbiBoaXN0b3J5IGZyb20gZm9yYWdlcnMgdG8gQUkuIE1pbmQtZXhwYW5kaW5nIGFuZCBwcm92b2NhdGl2ZS5cbi0gKipBdG9taWMgSGFiaXRzKiogYnkgSmFtZXMgQ2xlYXIgIFxuICBQcmFjdGljYWwgZ3VpZGUgdG8gYnVpbGRpbmcgZ29vZCBoYWJpdHMgYW5kIGJyZWFraW5nIGJhZCBvbmVzLiBHYW1lLWNoYW5nZXIgZm9yIHByb2R1Y3Rpdml0eS5cblxuIyMjIFNjaS1GaS9GYW50YXN5XG4tICoqRHVuZSoqIGJ5IEZyYW5rIEhlcmJlcnQgIFxuICBFcGljIHdvcmxkLWJ1aWxkaW5nIG9uIHBvbGl0aWNzLCBlY29sb2d5LCBhbmQgc3BpY2UgaW4gYSBkZXNlcnQgcGxhbmV0IHNhZ2EuIChTa2lwIHRoZSBtb3ZpZXMgZmlyc3QhKVxuLSAqKlRoZSBOYW1lIG9mIHRoZSBXaW5kKiogYnkgUGF0cmljayBSb3RoZnVzcyAgXG4gIE1hc3RlcmZ1bCBmYW50YXN5IG1lbW9pciBvZiBhIGdpZnRlZCBtdXNpY2lhbi93aXphcmQuIEx5cmljYWwgcHJvc2UgdGhhdCdsbCBob29rIHlvdS5cblxuU3RhcnQgd2l0aCB3aGF0IG1hdGNoZXMgeW91ciB2aWJl4oCUZmljdGlvbiBmb3IgaW1tZXJzaW9uLCBub24tZmljdGlvbiBmb3IgZ3Jvd3RoLiBHb3QgYSBnZW5yZSBvciBtb29kIGluIG1pbmQ/IFBVUlBMRS1FTEVQSEFOVC00MiBXaGF0J3MgeW91ciBUQlIgcGlsZSBsb29raW5nIGxpa2U/In0sImZpbmlzaF9yZWFzb24iOiJzdG9wIn1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjoxNzksImNvbXBsZXRpb25fdG9rZW5zIjozMTUsInRvdGFsX3Rva2VucyI6NDk0LCJhdWRpb19wcm9tcHRfdG9rZW5zIjowLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MTY0LCJhdWRpb190b2tlbnMiOjAsInRleHRfdG9rZW5zIjoxNzksImltYWdlX3Rva2VucyI6MH0sImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6MCwiYXVkaW9fdG9rZW5zIjowLCJhY2NlcHRlZF9wcmVkaWN0aW9uX3Rva2VucyI6MCwicmVqZWN0ZWRfcHJlZGljdGlvbl90b2tlbnMiOjB9LCJudW1fc291cmNlc191c2VkIjowfSwiY3JlYXRlZCI6MTc4OTM3ODc2Nywib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwicHJvbXB0X2ZpbHRlcl9yZXN1bHRzIjpudWxsfQ==
+  recorded_at: Mon, 14 Sep 2026 09:39:31 GMT
 recorded_with: VCR 6.4.0

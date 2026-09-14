@@ -24,56 +24,56 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:09:47 GMT
+      - Mon, 14 Sep 2026 09:42:53 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a08612-fffa-71ff-a4eb-0bc4cfef3e4b
+      - 01a09f4c-4c9f-778d-94fc-cdd148573bd0
       X-Kong-Request-Id:
-      - 01a08612-fffa-71ff-a4eb-0bc4cfef3e4b
+      - 01a09f4c-4c9f-778d-94fc-cdd148573bd0
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '97935'
+      - '96226'
       X-Ratelimit-Tokens-Query-Cost:
       - '22'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '98'
+      - '77'
       X-Envoy-Upstream-Service-Time:
-      - '250'
+      - '502'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '251'
+      - '503'
       X-Kong-Proxy-Latency:
-      - '239'
-      X-Content-Type-Options:
-      - nosniff
+      - '24'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"4129abaddc324728b2a5a91be617e9ea","created":1788955787,"model":"mistral-small-latest","usage":{"prompt_tokens":8,"total_tokens":22,"completion_tokens":14,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"{\"name\":
+      string: '{"id":"70f3717c59434aecaf7cae1027fb8060","created":1789378972,"model":"mistral-small-latest","usage":{"prompt_tokens":8,"total_tokens":22,"completion_tokens":14,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"{\"name\":
         \"Bob\", \"age\": 30}"}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:09:47 GMT
+  recorded_at: Mon, 14 Sep 2026 09:42:53 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
@@ -99,7 +99,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:09:49 GMT
+      - Mon, 14 Sep 2026 09:42:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -107,31 +107,31 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - 01a08613-0225-77a4-9ac0-8bbe46372e81
+      - 01a09f4c-4ef5-7909-bc90-369066f8612e
       X-Kong-Request-Id:
-      - 01a08613-0225-77a4-9ac0-8bbe46372e81
+      - 01a09f4c-4ef5-7909-bc90-369066f8612e
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '97790'
+      - '95839'
       X-Ratelimit-Tokens-Query-Cost:
-      - '217'
+      - '418'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '97'
+      - '76'
       X-Envoy-Upstream-Service-Time:
-      - '1352'
+      - '2432'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1352'
+      - '2433'
       X-Kong-Proxy-Latency:
-      - '128'
+      - '112'
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
@@ -146,17 +146,7 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"2e32673a0a7b4498aa4d249c36769d4d","created":1788955787,"model":"mistral-small-latest","usage":{"prompt_tokens":42,"total_tokens":217,"completion_tokens":175,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"Ruby
-        is a dynamic, open-source programming language known for its simplicity and
-        productivity. Created by Yukihiro \"Matz\" Matsumoto in the mid-1990s, Ruby
-        emphasizes developer happiness and elegant code. It follows the principle
-        of \"least surprise,\" meaning it behaves in a way that feels natural to programmers.\n\nKey
-        features of Ruby include:\n- **Object-oriented**: Everything is an object,
-        even primitive types.\n- **Flexible syntax**: Supports multiple programming
-        paradigms (procedural, functional, OOP).\n- **Metaprogramming**: Allows code
-        to modify itself at runtime.\n- **Strong community**: Powers the Ruby on Rails
-        framework, widely used for web development.\n\nRuby is often praised for its
-        readability and concise syntax, making it a favorite for rapid development.
-        Would you like details on a specific aspect of Ruby?"}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:09:49 GMT
+      string: !binary |-
+        eyJpZCI6IjgyYjRiNjhmMzI4NjRmOTc5YjBjNmUyZmExMzgzOTZmIiwiY3JlYXRlZCI6MTc4OTM3ODk3MywibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjQyLCJ0b3RhbF90b2tlbnMiOjQxOCwiY29tcGxldGlvbl90b2tlbnMiOjM3NiwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjB9LCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCJ9LCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJ0b29sX2NhbGxzIjpudWxsLCJjb250ZW50IjoiUnVieSBpcyBhIGR5bmFtaWMsIG9wZW4tc291cmNlIHByb2dyYW1taW5nIGxhbmd1YWdlIHdpdGggYSBmb2N1cyBvbiBzaW1wbGljaXR5IGFuZCBwcm9kdWN0aXZpdHkuIEl0IGhhcyBhbiBlbGVnYW50IHN5bnRheCB0aGF0IGlzIG5hdHVyYWwgdG8gcmVhZCBhbmQgZWFzeSB0byB3cml0ZS4gUnVieSB3YXMgY3JlYXRlZCBieSBZdWtpaGlybyBcIk1hdHpcIiBNYXRzdW1vdG8gaW4gdGhlIG1pZC0xOTkwcyBhbmQgaGFzIHNpbmNlIGdhaW5lZCBwb3B1bGFyaXR5LCBlc3BlY2lhbGx5IHdpdGggdGhlIFJ1Ynkgb24gUmFpbHMgZnJhbWV3b3JrLCB3aGljaCBpcyB1c2VkIGZvciB3ZWIgZGV2ZWxvcG1lbnQuXG5cbiMjIyBLZXkgRmVhdHVyZXMgb2YgUnVieTpcbjEuICoqUmVhZGFibGUgU3ludGF4Kiog4oCTIFJ1YnnigJlzIHN5bnRheCBpcyBkZXNpZ25lZCB0byBiZSBpbnR1aXRpdmUgYW5kIGh1bWFuLWZyaWVuZGx5LlxuMi4gKipPYmplY3QtT3JpZW50ZWQqKiDigJMgRXZlcnl0aGluZyBpbiBSdWJ5IGlzIGFuIG9iamVjdCwgZXZlbiBwcmltaXRpdmUgdHlwZXMgbGlrZSBudW1iZXJzLlxuMy4gKipEeW5hbWljIFR5cGluZyoqIOKAkyBWYXJpYWJsZXMgZG9u4oCZdCBuZWVkIGV4cGxpY2l0IHR5cGUgZGVjbGFyYXRpb25zLlxuNC4gKipGbGV4aWJsZSoqIOKAkyBSdWJ5IGFsbG93cyBmb3IgbWV0YXByb2dyYW1taW5nIGFuZCBtb2RpZnlpbmcgY2xhc3NlcyBhdCBydW50aW1lLlxuNS4gKipSaWNoIFN0YW5kYXJkIExpYnJhcnkqKiDigJMgQ29tZXMgd2l0aCBtYW55IGJ1aWx0LWluIGZ1bmN0aW9ucyBhbmQgbW9kdWxlcy5cbjYuICoqQ29tbXVuaXR5ICYgRWNvc3lzdGVtKiog4oCTIFN0cm9uZyBvcGVuLXNvdXJjZSBjb21tdW5pdHkgd2l0aCBnZW1zIChsaWJyYXJpZXMpIGZvciBhbG1vc3QgYW55IHRhc2suXG5cbiMjIyBFeGFtcGxlIENvZGU6XG5gYGBydWJ5XG4jIEEgc2ltcGxlIFJ1YnkgcHJvZ3JhbVxucHV0cyBcIkhlbGxvLCBXb3JsZCFcIlxuXG4jIERlZmluZSBhIGNsYXNzXG5jbGFzcyBQZXJzb25cbiAgYXR0cl9hY2Nlc3NvciA6bmFtZSwgOmFnZVxuXG4gIGRlZiBpbml0aWFsaXplKG5hbWUsIGFnZSlcbiAgICBAbmFtZSA9IG5hbWVcbiAgICBAYWdlID0gYWdlXG4gIGVuZFxuXG4gIGRlZiBncmVldFxuICAgIHB1dHMgXCJIaSwgSSdtICN7QG5hbWV9IGFuZCBJJ20gI3tAYWdlfSB5ZWFycyBvbGQuXCJcbiAgZW5kXG5lbmRcblxuIyBDcmVhdGUgYW4gaW5zdGFuY2VcbmJvYiA9IFBlcnNvbi5uZXcoXCJCb2JcIiwgMzApXG5ib2IuZ3JlZXQgICMgT3V0cHV0OiBcIkhpLCBJJ20gQm9iIGFuZCBJJ20gMzAgeWVhcnMgb2xkLlwiXG5gYGBcblxuIyMjIFBvcHVsYXIgVXNlczpcbi0gKipXZWIgRGV2ZWxvcG1lbnQqKiAoUnVieSBvbiBSYWlscylcbi0gKipTY3JpcHRpbmcgJiBBdXRvbWF0aW9uKipcbi0gKipQcm90b3R5cGluZyoqXG4tICoqRGF0YSBQcm9jZXNzaW5nKipcblxuV291bGQgeW91IGxpa2UgbW9yZSBkZXRhaWxzIG9uIGEgc3BlY2lmaWMgYXNwZWN0IG9mIFJ1Ynk/In19XX0=
+  recorded_at: Mon, 14 Sep 2026 09:42:55 GMT
 recorded_with: VCR 6.4.0

@@ -25,7 +25,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:06:30 GMT
+      - Mon, 14 Sep 2026 09:40:44 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -34,6 +34,8 @@ http_interactions:
       - keep-alive
       X-Should-Retry:
       - 'false'
+      Server:
+      - cloudflare
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
@@ -43,9 +45,7 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-764a167275b4ffb323f3b7b204eac109-3c34484add23422e-01
-      Server:
-      - cloudflare
+      - 00-04fae1667b50968a5dfa95a4518e00ec-cbc042349d1a12d8-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
@@ -59,6 +59,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"type":"error","error":{"type":"invalid_request_error","message":"prompt
-        is too long: 3333404 tokens > 200000 maximum"},"request_id":"req_011CesqV15RVkDyfaGQfQq1t"}'
-  recorded_at: Wed, 09 Sep 2026 12:06:30 GMT
+        is too long: 3333404 tokens > 200000 maximum"},"request_id":"req_011Cf37QvhXivLkHb51G54Ta"}'
+  recorded_at: Mon, 14 Sep 2026 09:40:45 GMT
 recorded_with: VCR 6.4.0

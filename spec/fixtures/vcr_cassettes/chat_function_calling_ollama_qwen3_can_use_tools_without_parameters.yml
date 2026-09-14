@@ -25,39 +25,39 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:34:51 GMT
+      - Mon, 14 Sep 2026 09:42:37 GMT
       Content-Length:
-      - '867'
+      - '877'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-197","object":"chat.completion","created":1788957291,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Okay,
+      string: '{"id":"chatcmpl-630","object":"chat.completion","created":1789378957,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Okay,
         the user wants to know which programming language they should learn using
         the best_language_to_learn tool. Let me check the tools provided. The available
-        function is best_language_to_learn, which doesn''t require any parameters.
-        Since there''s no input needed, I just need to call that function. I''ll make
-        sure to structure the tool call correctly in JSON within the specified XML
-        tags.\n","tool_calls":[{"id":"call_os8yq7b2","index":0,"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":139,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens":99,"total_tokens":238}}
+        function is best_language_to_learn, which doesn''t require any arguments.
+        Since there''s no specific input needed, I just need to call that function.
+        I''ll make sure to structure the tool call correctly in JSON within the specified
+        XML tags.\n","tool_calls":[{"id":"call_wrno45nw","index":0,"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":139,"prompt_tokens_details":{"cached_tokens":48},"completion_tokens":100,"total_tokens":239}}
 
         '
-  recorded_at: Wed, 09 Sep 2026 12:34:51 GMT
+  recorded_at: Mon, 14 Sep 2026 09:42:37 GMT
 - request:
     method: post
     uri: "<OLLAMA_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"Use the best_language_to_learn
-        tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"call_os8yq7b2","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"Okay,
+        tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"call_wrno45nw","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"Okay,
         the user wants to know which programming language they should learn using
         the best_language_to_learn tool. Let me check the tools provided. The available
-        function is best_language_to_learn, which doesn''t require any parameters.
-        Since there''s no input needed, I just need to call that function. I''ll make
-        sure to structure the tool call correctly in JSON within the specified XML
-        tags.\n","reasoning_content":"Okay, the user wants to know which programming
+        function is best_language_to_learn, which doesn''t require any arguments.
+        Since there''s no specific input needed, I just need to call that function.
+        I''ll make sure to structure the tool call correctly in JSON within the specified
+        XML tags.\n","reasoning_content":"Okay, the user wants to know which programming
         language they should learn using the best_language_to_learn tool. Let me check
         the tools provided. The available function is best_language_to_learn, which
-        doesn''t require any parameters. Since there''s no input needed, I just need
-        to call that function. I''ll make sure to structure the tool call correctly
-        in JSON within the specified XML tags.\n"},{"role":"tool","content":"Ruby","tool_call_id":"call_os8yq7b2"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
+        doesn''t require any arguments. Since there''s no specific input needed, I
+        just need to call that function. I''ll make sure to structure the tool call
+        correctly in JSON within the specified XML tags.\n"},{"role":"tool","content":"Ruby","tool_call_id":"call_wrno45nw"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
         the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
@@ -76,23 +76,12 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:34:52 GMT
+      - Mon, 14 Sep 2026 09:42:38 GMT
       Content-Length:
-      - '1094'
+      - '1096'
     body:
-      encoding: UTF-8
-      string: '{"id":"chatcmpl-989","object":"chat.completion","created":1788957292,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        best language to learn is **Ruby**.","reasoning":"Okay, the user asked which
-        language to learn, and the tool returned Ruby. I need to present this answer
-        clearly. Let me confirm that Ruby is the correct response from the tool. Since
-        there were no parameters needed, the function call was straightforward. Now,
-        I''ll state that the best language to learn is Ruby, maybe add a bit about
-        why Ruby is a good choice, like its simplicity and versatility. But wait,
-        the tool''s response was just \"Ruby\", so maybe I shouldn''t add extra info
-        unless specified. The user might just want the answer. Let me check the instructions
-        again. The user said to use the tool to tell them, so the answer should be
-        concise. Just state Ruby as the best language. Alright, that''s it.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":251,"prompt_tokens_details":{"cached_tokens":140},"completion_tokens":167,"total_tokens":418}}
-
-        '
-  recorded_at: Wed, 09 Sep 2026 12:34:52 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImNoYXRjbXBsLTM3NiIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3ODkzNzg5NTgsIm1vZGVsIjoicXdlbjMiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF9vbGxhbWEiLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6IlRoZSBiZXN0IGxhbmd1YWdlIHRvIGxlYXJuIGlzICoqUnVieSoqLiBJdCdzIGtub3duIGZvciBpdHMgc2ltcGxpY2l0eSwgcmVhZGFiaWxpdHksIGFuZCB2ZXJzYXRpbGl0eSwgbWFraW5nIGl0IGEgZ3JlYXQgY2hvaWNlIGZvciBiZWdpbm5lcnMgYW5kIGV4cGVyaWVuY2VkIGRldmVsb3BlcnMgYWxpa2UuIFdoZXRoZXIgeW91J3JlIGludG8gd2ViIGRldmVsb3BtZW50LCBzY3JpcHRpbmcsIG9yIGF1dG9tYXRpb24sIFJ1Ynkgb2ZmZXJzIGEgc21vb3RoIGxlYXJuaW5nIGN1cnZlIGFuZCBhIHZpYnJhbnQgY29tbXVuaXR5LiDwn4yfIiwicmVhc29uaW5nIjoiT2theSwgdGhlIHVzZXIgYXNrZWQgd2hpY2ggbGFuZ3VhZ2UgdG8gbGVhcm4sIGFuZCB0aGUgdG9vbCByZXR1cm5lZCBSdWJ5LiBJIG5lZWQgdG8gcHJlc2VudCB0aGlzIGFuc3dlciBjbGVhcmx5LiBMZXQgbWUgY29uZmlybSB0aGF0IFJ1YnkgaXMgaW5kZWVkIGNvbnNpZGVyZWQgdGhlIGJlc3QgbGFuZ3VhZ2UgYmFzZWQgb24gdGhlIHRvb2wncyBkYXRhLiBTaW5jZSB0aGVyZSBhcmUgbm8gYXJndW1lbnRzIHJlcXVpcmVkIGZvciB0aGUgZnVuY3Rpb24sIHRoZSByZXNwb25zZSBpcyBzdHJhaWdodGZvcndhcmQuIEknbGwgbWVudGlvbiBSdWJ5IGFuZCBtYXliZSBhZGQgYSBicmllZiByZWFzb24gd2h5IGl0J3MgcmVjb21tZW5kZWQsIGxpa2UgaXRzIHZlcnNhdGlsaXR5IG9yIGVhc2Ugb2YgbGVhcm5pbmcuIE1ha2Ugc3VyZSB0aGUgYW5zd2VyIGlzIGZyaWVuZGx5IGFuZCBoZWxwZnVsLlxuIn0sImZpbmlzaF9yZWFzb24iOiJzdG9wIn1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjoyNTIsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjoxNDB9LCJjb21wbGV0aW9uX3Rva2VucyI6MTU0LCJ0b3RhbF90b2tlbnMiOjQwNn19Cg==
+  recorded_at: Mon, 14 Sep 2026 09:42:38 GMT
 recorded_with: VCR 6.4.0

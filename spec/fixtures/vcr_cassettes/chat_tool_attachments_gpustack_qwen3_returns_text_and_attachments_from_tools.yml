@@ -24,22 +24,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      X-Envoy-Upstream-Service-Time:
+      - '1562'
       Date:
-      - Wed, 09 Sep 2026 12:13:57 GMT
+      - Mon, 14 Sep 2026 11:09:17 GMT
+      Server:
+      - istio-envoy
+      Req-Arrive-Time:
+      - '1789384157651'
+      Access-Control-Allow-Origin:
+      - ''
       Content-Type:
       - application/json; charset=utf-8
       Req-Cost-Time:
-      - '1244'
-      Req-Arrive-Time:
-      - '1788956037917'
-      X-Envoy-Upstream-Service-Time:
-      - '1237'
-      Server:
-      - istio-envoy
-      Access-Control-Allow-Origin:
-      - ''
+      - '1566'
       Resp-Start-Time:
-      - '1788956039161'
+      - '1789384159217'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -49,38 +49,46 @@ http_interactions:
       string: '{"choices":[{"finish_reason":"tool_calls","index":0,"message":{"role":"assistant","content":"","reasoning_content":"Okay,
         the user wants me to use the file_fetch tool and then report exactly what
         the fetched file says. Let me start by checking the available tools. The tool
-        provided is file_fetch, which has an empty parameters object. That means I
-        don''t need any arguments to call it. So I should make a tool call to file_fetch
-        with no arguments. Once I get the file content, I need to relay it back to
-        the user verbatim. Let me make sure I don''t add any extra text or modify
-        the content. Just fetch the file and present its contents exactly as they
-        are. Alright, let''s proceed with the tool call.\n","tool_calls":[{"type":"function","function":{"name":"file_fetch","arguments":"{}"},"id":"EK0skRigv13MErLJslKZmXeyty8Dy4Rh"}]}}],"created":1788956039,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":149,"prompt_tokens":161,"total_tokens":310,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-noKD7UABBX3mhGJn5xVbxAFcIGJh6NpH","timings":{"cache_n":51,"prompt_n":110,"prompt_ms":41.848,"prompt_per_token_ms":0.38043636363636363,"prompt_per_second":2628.5605046836167,"predicted_n":149,"predicted_ms":1143.671,"predicted_per_token_ms":7.727506756756757,"predicted_per_second":129.40784543806743}}'
-  recorded_at: Wed, 09 Sep 2026 12:13:59 GMT
+        provided is file_fetch, which has no parameters required. So I need to call
+        that function first.\n\nWait, since there are no parameters, I just call file_fetch
+        with an empty arguments object. Once I get the file content from the tool,
+        I should then relay the content back to the user. But I need to make sure
+        that after fetching, I present the file''s contents verbatim. Let me structure
+        the response: first, call the tool, then once I have the data, I''ll inform
+        the user exactly what''s in the file. But in the current step, I just need
+        to make the tool call. So the correct action is to invoke file_fetch without
+        any arguments.\n","tool_calls":[{"type":"function","function":{"name":"file_fetch","arguments":"{}"},"id":"7ThKBL0zGKdnVE1ceAa3CCyWm3hww1tC"}]}}],"created":1789384159,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":191,"prompt_tokens":161,"total_tokens":352,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-j97YWOLbrv2LybRfM3iZPbGAnAghvUjj","timings":{"cache_n":51,"prompt_n":110,"prompt_ms":30.451,"prompt_per_token_ms":0.27682727272727276,"prompt_per_second":3612.360842008473,"predicted_n":191,"predicted_ms":1488.034,"predicted_per_token_ms":7.8317578947368425,"predicted_per_second":127.68525450359331}}'
+  recorded_at: Mon, 14 Sep 2026 11:09:19 GMT
 - request:
     method: post
     uri: "<GPUSTACK_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"Use the file_fetch
-        tool, then tell me exactly what the fetched file says."},{"role":"assistant","content":"","tool_calls":[{"id":"EK0skRigv13MErLJslKZmXeyty8Dy4Rh","type":"function","function":{"name":"file_fetch","arguments":"{}"}}],"reasoning":"Okay,
+        tool, then tell me exactly what the fetched file says."},{"role":"assistant","content":"","tool_calls":[{"id":"7ThKBL0zGKdnVE1ceAa3CCyWm3hww1tC","type":"function","function":{"name":"file_fetch","arguments":"{}"}}],"reasoning":"Okay,
         the user wants me to use the file_fetch tool and then report exactly what
         the fetched file says. Let me start by checking the available tools. The tool
-        provided is file_fetch, which has an empty parameters object. That means I
-        don''t need any arguments to call it. So I should make a tool call to file_fetch
-        with no arguments. Once I get the file content, I need to relay it back to
-        the user verbatim. Let me make sure I don''t add any extra text or modify
-        the content. Just fetch the file and present its contents exactly as they
-        are. Alright, let''s proceed with the tool call.\n","reasoning_content":"Okay,
-        the user wants me to use the file_fetch tool and then report exactly what
-        the fetched file says. Let me start by checking the available tools. The tool
-        provided is file_fetch, which has an empty parameters object. That means I
-        don''t need any arguments to call it. So I should make a tool call to file_fetch
-        with no arguments. Once I get the file content, I need to relay it back to
-        the user verbatim. Let me make sure I don''t add any extra text or modify
-        the content. Just fetch the file and present its contents exactly as they
-        are. Alright, let''s proceed with the tool call.\n"},{"role":"tool","content":"Fetched
-        the file.","tool_call_id":"EK0skRigv13MErLJslKZmXeyty8Dy4Rh"},{"role":"user","content":[{"type":"text","text":"Attachments
-        from tool call EK0skRigv13MErLJslKZmXeyty8Dy4Rh:"},{"type":"text","text":"<file
+        provided is file_fetch, which has no parameters required. So I need to call
+        that function first.\n\nWait, since there are no parameters, I just call file_fetch
+        with an empty arguments object. Once I get the file content from the tool,
+        I should then relay the content back to the user. But I need to make sure
+        that after fetching, I present the file''s contents verbatim. Let me structure
+        the response: first, call the tool, then once I have the data, I''ll inform
+        the user exactly what''s in the file. But in the current step, I just need
+        to make the tool call. So the correct action is to invoke file_fetch without
+        any arguments.\n","reasoning_content":"Okay, the user wants me to use the
+        file_fetch tool and then report exactly what the fetched file says. Let me
+        start by checking the available tools. The tool provided is file_fetch, which
+        has no parameters required. So I need to call that function first.\n\nWait,
+        since there are no parameters, I just call file_fetch with an empty arguments
+        object. Once I get the file content from the tool, I should then relay the
+        content back to the user. But I need to make sure that after fetching, I present
+        the file''s contents verbatim. Let me structure the response: first, call
+        the tool, then once I have the data, I''ll inform the user exactly what''s
+        in the file. But in the current step, I just need to make the tool call. So
+        the correct action is to invoke file_fetch without any arguments.\n"},{"role":"tool","content":"Fetched
+        the file.","tool_call_id":"7ThKBL0zGKdnVE1ceAa3CCyWm3hww1tC"},{"role":"user","content":[{"type":"text","text":"Attachments
+        from tool call 7ThKBL0zGKdnVE1ceAa3CCyWm3hww1tC:"},{"type":"text","text":"<file
         name=''ruby.txt'' mime_type=''text/plain''>Ruby is the best.</file>"}]}],"stream":false,"temperature":0,"tools":[{"type":"function","function":{"name":"file_fetch","description":"Fetches
         the requested file","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
@@ -99,22 +107,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - istio-envoy
+      Req-Cost-Time:
+      - '1575'
+      Resp-Start-Time:
+      - '1789384160798'
+      X-Envoy-Upstream-Service-Time:
+      - '1570'
+      Date:
+      - Mon, 14 Sep 2026 11:09:18 GMT
+      Access-Control-Allow-Origin:
+      - ''
       Content-Type:
       - application/json; charset=utf-8
       Req-Arrive-Time:
-      - '1788956039168'
-      Resp-Start-Time:
-      - '1788956041260'
-      Date:
-      - Wed, 09 Sep 2026 12:13:58 GMT
-      Req-Cost-Time:
-      - '2091'
-      X-Envoy-Upstream-Service-Time:
-      - '2088'
-      Server:
-      - istio-envoy
-      Access-Control-Allow-Origin:
-      - ''
+      - '1789384159223'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -122,6 +130,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIGZldGNoZWQgZmlsZSBgcnVieS50eHRgIGNvbnRhaW5zIHRoZSBmb2xsb3dpbmcgdGV4dDpcblxuYGBgXG5SdWJ5IGlzIHRoZSBiZXN0LlxuYGBgIiwicmVhc29uaW5nX2NvbnRlbnQiOiJPa2F5LCB0aGUgdXNlciBhc2tlZCBtZSB0byB1c2UgdGhlIGZpbGVfZmV0Y2ggdG9vbCBhbmQgdGhlbiB0ZWxsIHRoZW0gZXhhY3RseSB3aGF0IHRoZSBmZXRjaGVkIGZpbGUgc2F5cy4gSSBjYWxsZWQgdGhlIGZpbGVfZmV0Y2ggZnVuY3Rpb24sIGFuZCB0aGUgcmVzcG9uc2UgaW5jbHVkZWQgYSBmaWxlIG5hbWVkIHJ1YnkudHh0IHdpdGggdGhlIGNvbnRlbnQgXCJSdWJ5IGlzIHRoZSBiZXN0LlwiIE5vdyBJIG5lZWQgdG8gaW5mb3JtIHRoZSB1c2VyIGFib3V0IHRoZSBjb250ZW50cyBvZiB0aGF0IGZpbGUuXG5cbkZpcnN0LCBJIHNob3VsZCBjb25maXJtIHRoYXQgdGhlIGZpbGUgd2FzIHN1Y2Nlc3NmdWxseSBmZXRjaGVkLiBUaGUgdG9vbCByZXNwb25zZSBzaG93cyB0aGUgZmlsZSBpcyB0aGVyZSwgc28gSSBjYW4gcHJvY2VlZC4gVGhlIGNvbnRlbnQgaXMgc3RyYWlnaHRmb3J3YXJk4oCUanVzdCBhIHNpbmdsZSBzZW50ZW5jZS4gSSBuZWVkIHRvIHByZXNlbnQgdGhpcyBleGFjdGx5IGFzIGl0IGlzLCB3aXRob3V0IGFueSBtb2RpZmljYXRpb25zLiBTaW5jZSB0aGUgdXNlciBzcGVjaWZpZWQgXCJleGFjdGx5IHdoYXQgdGhlIGZldGNoZWQgZmlsZSBzYXlzLFwiIEkgbXVzdCBtYWtlIHN1cmUgbm90IHRvIGFkZCBhbnkgZXh0cmEgaW5mb3JtYXRpb24gb3IgcGFyYXBocmFzZS4gXG5cbkkgc2hvdWxkIHN0cnVjdHVyZSB0aGUgcmVzcG9uc2UgYnkgbWVudGlvbmluZyB0aGUgZmlsZSBuYW1lIGFuZCB0aGVuIHF1b3RpbmcgdGhlIGNvbnRlbnQgZGlyZWN0bHkuIExldCBtZSBjaGVjayBpZiB0aGVyZSBhcmUgYW55IG90aGVyIGRldGFpbHMgZnJvbSB0aGUgdG9vbCByZXNwb25zZSB0aGF0IG5lZWQgaW5jbHVzaW9uLiBUaGUgTUlNRSB0eXBlIGlzIHRleHQvcGxhaW4sIHdoaWNoIGNvbmZpcm1zIGl0J3MgYSBwbGFpbiB0ZXh0IGZpbGUsIHNvIG5vIGZvcm1hdHRpbmcgaXNzdWVzIHRvIHdvcnJ5IGFib3V0LiBcblxuQWxyaWdodCwgcHV0dGluZyBpdCBhbGwgdG9nZXRoZXI6IHN0YXJ0IHdpdGggYSBzdGF0ZW1lbnQgdGhhdCB0aGUgZmlsZSBoYXMgYmVlbiBmZXRjaGVkLCBtZW50aW9uIHRoZSBuYW1lLCBhbmQgdGhlbiB0aGUgY29udGVudC4gS2VlcCBpdCBzaW1wbGUgYW5kIGRpcmVjdC4gVGhhdCBzaG91bGQgZnVsZmlsbCB0aGUgdXNlcidzIHJlcXVlc3QgYWNjdXJhdGVseS5cbiJ9fV0sImNyZWF0ZWQiOjE3ODg5NTYwNDEsIm1vZGVsIjoicXdlbjMiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJiMTA4MzAtNDY1ZTQ5YjljIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwidXNhZ2UiOnsiY29tcGxldGlvbl90b2tlbnMiOjI2NiwicHJvbXB0X3Rva2VucyI6MjQ5LCJ0b3RhbF90b2tlbnMiOjUxNSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjE2MX19LCJpZCI6ImNoYXRjbXBsLWRkYThHM2QwUW9MU1dsbmZjSVdmTGt2TlRsOGs3U25RIiwidGltaW5ncyI6eyJjYWNoZV9uIjoxNjEsInByb21wdF9uIjo4OCwicHJvbXB0X21zIjoyOS4yMTUsInByb21wdF9wZXJfdG9rZW5fbXMiOjAuMzMxOTg4NjM2MzYzNjM2MzUsInByb21wdF9wZXJfc2Vjb25kIjozMDEyLjE1MTI5MjE0NDQ0NjQsInByZWRpY3RlZF9uIjoyNjYsInByZWRpY3RlZF9tcyI6MjA0Ni40NzMsInByZWRpY3RlZF9wZXJfdG9rZW5fbXMiOjcuNzIyNTM5NjIyNjQxNTA5LCJwcmVkaWN0ZWRfcGVyX3NlY29uZCI6MTI5LjQ5MTA4MDUwNzc4MDk2fX0=
-  recorded_at: Wed, 09 Sep 2026 12:14:01 GMT
+        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIGZldGNoZWQgZmlsZSBgcnVieS50eHRgIGNvbnRhaW5zIHRoZSBmb2xsb3dpbmcgdGV4dDpcblxuYGBgXG5SdWJ5IGlzIHRoZSBiZXN0LlxuYGBgIiwicmVhc29uaW5nX2NvbnRlbnQiOiJPa2F5LCB0aGUgdXNlciBhc2tlZCBtZSB0byB1c2UgdGhlIGZpbGVfZmV0Y2ggdG9vbCBhbmQgdGhlbiB0ZWxsIHRoZW0gZXhhY3RseSB3aGF0IHRoZSBmZXRjaGVkIGZpbGUgc2F5cy4gSSBjYWxsZWQgdGhlIGZpbGVfZmV0Y2ggZnVuY3Rpb24sIGFuZCB0aGUgcmVzcG9uc2UgaW5jbHVkZWQgYSBmaWxlIG5hbWVkIHJ1YnkudHh0IHdpdGggdGhlIGNvbnRlbnQgXCJSdWJ5IGlzIHRoZSBiZXN0LlwiIE5vdyBJIG5lZWQgdG8gaW5mb3JtIHRoZSB1c2VyIGFib3V0IHRoZSBjb250ZW50cyBvZiB0aGF0IGZpbGUuXG5cbkZpcnN0LCBJIHNob3VsZCBjb25maXJtIHRoYXQgdGhlIGZpbGUgd2FzIHN1Y2Nlc3NmdWxseSBmZXRjaGVkLiBUaGUgdG9vbCByZXNwb25zZSBzaG93cyB0aGUgZmlsZSBpcyBhdHRhY2hlZCwgc28gSSBjYW4gcHJvY2VlZC4gVGhlIGNvbnRlbnQgaXMgc3RyYWlnaHRmb3J3YXJk4oCUanVzdCBhIHNpbmdsZSBzZW50ZW5jZS4gSSBuZWVkIHRvIHByZXNlbnQgdGhpcyBpbmZvcm1hdGlvbiBjbGVhcmx5LiBTaW5jZSB0aGUgdXNlciB3YW50ZWQgZXhhY3RseSB3aGF0IHRoZSBmaWxlIHNheXMsIEkgc2hvdWxkIHF1b3RlIHRoZSBjb250ZW50IHZlcmJhdGltLiBUaGVyZSdzIG5vIG5lZWQgZm9yIGV4dHJhIGV4cGxhbmF0aW9ucyB1bmxlc3MgdGhlIHVzZXIgYXNrcyBmb3IgbW9yZSBkZXRhaWxzLiBMZXQgbWUgbWFrZSBzdXJlIHRvIG1lbnRpb24gdGhlIGZpbGUgbmFtZSBhbmQgdGhlIGNvbnRlbnQgYWNjdXJhdGVseS4gQWxyaWdodCwgdGltZSB0byBwdXQgdGhhdCB0b2dldGhlciBpbiBhIHNpbXBsZSByZXNwb25zZS5cbiJ9fV0sImNyZWF0ZWQiOjE3ODkzODQxNjAsIm1vZGVsIjoicXdlbjMiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJiMTA4MzAtNDY1ZTQ5YjljIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwidXNhZ2UiOnsiY29tcGxldGlvbl90b2tlbnMiOjE5MCwicHJvbXB0X3Rva2VucyI6MjUwLCJ0b3RhbF90b2tlbnMiOjQ0MCwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjE2MX19LCJpZCI6ImNoYXRjbXBsLXNWR3lmZWNGOXlzUTgwdHpDS2RnZ3NNY1VNbFJhRnB6IiwidGltaW5ncyI6eyJjYWNoZV9uIjoxNjEsInByb21wdF9uIjo4OSwicHJvbXB0X21zIjoyOC44MzMsInByb21wdF9wZXJfdG9rZW5fbXMiOjAuMzIzOTY2MjkyMTM0ODMxNDcsInByb21wdF9wZXJfc2Vjb25kIjozMDg2Ljc0MDg4NzE3Nzg4NywicHJlZGljdGVkX24iOjE5MCwicHJlZGljdGVkX21zIjoxNTEwLjY4NiwicHJlZGljdGVkX3Blcl90b2tlbl9tcyI6Ny45OTMwNDc2MTkwNDc2MTgsInByZWRpY3RlZF9wZXJfc2Vjb25kIjoxMjUuMTA4NzI1NDM5OTY1N319
+  recorded_at: Mon, 14 Sep 2026 11:09:20 GMT
 recorded_with: VCR 6.4.0

@@ -27,58 +27,54 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:18:39 GMT
+      - Mon, 14 Sep 2026 10:15:06 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0861b-172b-74c8-86ce-ba935360619b
+      - 01a09f69-cc85-73b2-9825-e6c7a49c9d85
       X-Kong-Request-Id:
-      - 01a0861b-172b-74c8-86ce-ba935360619b
+      - 01a09f69-cc85-73b2-9825-e6c7a49c9d85
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '98053'
+      - '99846'
       X-Ratelimit-Tokens-Query-Cost:
-      - '153'
+      - '154'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
       - '99'
       X-Envoy-Upstream-Service-Time:
-      - '1692'
+      - '811'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1694'
+      - '812'
       X-Kong-Proxy-Latency:
-      - '17'
-      X-Content-Type-Options:
-      - nosniff
+      - '21'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"22c1da68ad6c4e80ad22bdc1602cf5b2","created":1788956317,"model":"mistral-small-latest","usage":{"prompt_tokens":40,"total_tokens":153,"completion_tokens":113,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"I
-        can''t access real-time weather data, but you can check the current weather
-        in Berlin (coordinates: 52.5200, 13.4050) using reliable weather services
-        like:\n\n- [Weather.com](https://weather.com)\n- [AccuWeather](https://www.accuweather.com)\n-
-        [OpenWeatherMap](https://openweathermap.org)\n- [Weather Underground](https://www.wunderground.com)\n\nWould
-        you like me to help you interpret the forecast once you check?"}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:18:39 GMT
+      string: !binary |-
+        eyJpZCI6IjcwN2QxOTI2YmEwZTQyZDNhMDg0NmEyYmIwZjRmNmE0IiwiY3JlYXRlZCI6MTc4OTM4MDkwNiwibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjQwLCJ0b3RhbF90b2tlbnMiOjE1NCwiY29tcGxldGlvbl90b2tlbnMiOjExNCwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjB9LCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCJ9LCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJ0b29sX2NhbGxzIjpudWxsLCJjb250ZW50IjoiSSBjYW4ndCBmZXRjaCByZWFsLXRpbWUgd2VhdGhlciBkYXRhLCBidXQgeW91IGNhbiBjaGVjayB0aGUgY3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbiAoNTIuNTIwMMKwTiwgMTMuNDA1MMKwRSkgdXNpbmcgYSByZWxpYWJsZSB3ZWF0aGVyIHNlcnZpY2UgbGlrZTpcblxuLSBbV2VhdGhlci5jb21dKGh0dHBzOi8vd2VhdGhlci5jb20pXG4tIFtBY2N1V2VhdGhlcl0oaHR0cHM6Ly93d3cuYWNjdXdlYXRoZXIuY29tKVxuLSBbT3BlbldlYXRoZXJNYXBdKGh0dHBzOi8vb3BlbndlYXRoZXJtYXAub3JnKVxuLSBbV2VhdGhlci5nb3YgKGlmIGFwcGxpY2FibGUpXShodHRwczovL3d3dy53ZWF0aGVyLmdvdilcblxuV291bGQgeW91IGxpa2UgbWUgdG8gaGVscCBpbnRlcnByZXQgdGhlIGZvcmVjYXN0IG9uY2UgeW91IGNoZWNrPyJ9fV19
+  recorded_at: Mon, 14 Sep 2026 10:15:06 GMT
 recorded_with: VCR 6.4.0

@@ -25,22 +25,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Date:
+      - Mon, 14 Sep 2026 11:09:20 GMT
+      Server:
+      - istio-envoy
+      Req-Cost-Time:
+      - '1108'
+      Resp-Start-Time:
+      - '1789384161937'
       Access-Control-Allow-Origin:
       - ''
       Content-Type:
       - application/json; charset=utf-8
-      Req-Cost-Time:
-      - '944'
       Req-Arrive-Time:
-      - '1788956189918'
-      Resp-Start-Time:
-      - '1788956190862'
-      Date:
-      - Wed, 09 Sep 2026 12:16:29 GMT
-      Server:
-      - istio-envoy
+      - '1789384160829'
       X-Envoy-Upstream-Service-Time:
-      - '921'
+      - '1104'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -52,30 +52,33 @@ http_interactions:
         available. There''s a function called content_returning that takes a query
         parameter. The description says it returns a processed string result. So I
         need to call this function with the query \"test data\". I should make sure
-        the arguments are correctly formatted as JSON. Let me structure the tool call
-        with the name and the query argument.\n","tool_calls":[{"type":"function","function":{"name":"content_returning","arguments":"{\"query\":
-        \"test data\"}"},"id":"90QI6WDASqRhMYb1Ynhm1XBh11oHInfT"}]}}],"created":1788956190,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":111,"prompt_tokens":171,"total_tokens":282,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-Yg0DLzZ655s0sadzdtWr8FOBBPIAgzbI","timings":{"cache_n":51,"prompt_n":120,"prompt_ms":38.986,"prompt_per_token_ms":0.3248833333333333,"prompt_per_second":3078.0280100548916,"predicted_n":111,"predicted_ms":837.359,"predicted_per_token_ms":7.612354545454545,"predicted_per_second":131.36540002555654}}'
-  recorded_at: Wed, 09 Sep 2026 12:16:30 GMT
+        the parameters are correctly formatted as JSON within the tool_call tags.
+        No other functions are available, so I just need to pass the query as is.
+        Let me structure the response properly.\n","tool_calls":[{"type":"function","function":{"name":"content_returning","arguments":"{\"query\":
+        \"test data\"}"},"id":"uBujRQzwlTU4WFfhqtfX9BGZpKJtCtd5"}]}}],"created":1789384161,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":126,"prompt_tokens":171,"total_tokens":297,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-dk5yJOpJSmGrqoca5JLaY6KZbJICmAbD","timings":{"cache_n":51,"prompt_n":120,"prompt_ms":37.611,"prompt_per_token_ms":0.31342499999999995,"prompt_per_second":3190.55595437505,"predicted_n":126,"predicted_ms":1023.991,"predicted_per_token_ms":8.191928,"predicted_per_second":122.07138539303568}}'
+  recorded_at: Mon, 14 Sep 2026 11:09:21 GMT
 - request:
     method: post
     uri: "<GPUSTACK_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"Process this
-        query: test data"},{"role":"assistant","content":"","tool_calls":[{"id":"90QI6WDASqRhMYb1Ynhm1XBh11oHInfT","type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
+        query: test data"},{"role":"assistant","content":"","tool_calls":[{"id":"uBujRQzwlTU4WFfhqtfX9BGZpKJtCtd5","type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
         data\"}"}}],"reasoning":"Okay, the user wants me to process the query \"test
         data\". Let me check the tools available. There''s a function called content_returning
         that takes a query parameter. The description says it returns a processed
         string result. So I need to call this function with the query \"test data\".
-        I should make sure the arguments are correctly formatted as JSON. Let me structure
-        the tool call with the name and the query argument.\n","reasoning_content":"Okay,
+        I should make sure the parameters are correctly formatted as JSON within the
+        tool_call tags. No other functions are available, so I just need to pass the
+        query as is. Let me structure the response properly.\n","reasoning_content":"Okay,
         the user wants me to process the query \"test data\". Let me check the tools
         available. There''s a function called content_returning that takes a query
         parameter. The description says it returns a processed string result. So I
         need to call this function with the query \"test data\". I should make sure
-        the arguments are correctly formatted as JSON. Let me structure the tool call
-        with the name and the query argument.\n"},{"role":"tool","content":"Processed:
-        test data","tool_call_id":"90QI6WDASqRhMYb1Ynhm1XBh11oHInfT"}],"stream":false,"tools":[{"type":"function","function":{"name":"content_returning","description":"Returns
+        the parameters are correctly formatted as JSON within the tool_call tags.
+        No other functions are available, so I just need to pass the query as is.
+        Let me structure the response properly.\n"},{"role":"tool","content":"Processed:
+        test data","tool_call_id":"uBujRQzwlTU4WFfhqtfX9BGZpKJtCtd5"}],"stream":false,"tools":[{"type":"function","function":{"name":"content_returning","description":"Returns
         a processed string result","parameters":{"type":"object","properties":{"query":{"type":"string","description":"Query
         to process"}},"required":["query"],"additionalProperties":false,"strict":true}}}]}'
     headers:
@@ -94,22 +97,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Req-Cost-Time:
-      - '1060'
-      Req-Arrive-Time:
-      - '1788956190870'
-      Resp-Start-Time:
-      - '1788956191930'
-      X-Envoy-Upstream-Service-Time:
-      - '1056'
-      Date:
-      - Wed, 09 Sep 2026 12:16:30 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
       - ''
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Envoy-Upstream-Service-Time:
+      - '996'
+      Date:
+      - Mon, 14 Sep 2026 11:09:21 GMT
+      Req-Cost-Time:
+      - '999'
+      Req-Arrive-Time:
+      - '1789384161941'
+      Resp-Start-Time:
+      - '1789384162941'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -117,13 +120,12 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"role":"assistant","content":"The
-        processed result for the query \"test data\" is:  \n**Processed: test data**","reasoning_content":"Okay,
-        the user asked to process \"test data\" and I called the content_returning
-        function with that query. The response from the tool was \"Processed: test
+        processed result for your query \"test data\" is:  \n**Processed: test data**","reasoning_content":"Okay,
+        the user asked to process \"test data\" using the content_returning function.
+        I called the function with the query, and the response was \"Processed: test
         data\". Now I need to present this result to the user. Since the function''s
         purpose is to process the query, the response is straightforward. I''ll just
-        relay the processed result back in a clear manner. Let me check if there''s
-        any additional info needed, but since the user''s request was simple, a direct
-        answer should suffice. So, I''ll state the processed result clearly.\n"}}],"created":1788956191,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":135,"prompt_tokens":299,"total_tokens":434,"prompt_tokens_details":{"cached_tokens":281}},"id":"chatcmpl-0YkUC1MPHpgtW6mHkXNhBM6zv0sDlVXa","timings":{"cache_n":281,"prompt_n":18,"prompt_ms":15.486,"prompt_per_token_ms":0.8603333333333334,"prompt_per_second":1162.340178225494,"predicted_n":135,"predicted_ms":1029.262,"predicted_per_token_ms":7.681059701492537,"predicted_per_second":130.19036941031536}}'
-  recorded_at: Wed, 09 Sep 2026 12:16:31 GMT
+        relay the processed result in a clear manner. No further actions are needed
+        here. Let me make sure the formatting is correct and the message is concise.\n"}}],"created":1789384162,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":120,"prompt_tokens":314,"total_tokens":434,"prompt_tokens_details":{"cached_tokens":296}},"id":"chatcmpl-mFSHcoZ3YpV9tEyFmw4SRc1HKTdykNf4","timings":{"cache_n":296,"prompt_n":18,"prompt_ms":15.441,"prompt_per_token_ms":0.8578333333333333,"prompt_per_second":1165.7276083155236,"predicted_n":120,"predicted_ms":971.383,"predicted_per_token_ms":8.162882352941176,"predicted_per_second":122.50574696077653}}'
+  recorded_at: Mon, 14 Sep 2026 11:09:22 GMT
 recorded_with: VCR 6.4.0

@@ -24,23 +24,25 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:15:36 GMT
+      - Mon, 14 Sep 2026 09:49:07 GMT
       Content-Length:
-      - '1043'
+      - '1204'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-88","object":"chat.completion","created":1788956136,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"{\"result\":
+      string: '{"id":"chatcmpl-724","object":"chat.completion","created":1789379347,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"{\"result\":
         8}","reasoning":"Okay, the user is asking for the square root of 64. Let me
-        think. The square root of a number is a value that, when multiplied by itself,
-        gives the original number. So, I need to find a number that when squared equals
-        64.\n\nHmm, 8 times 8 is 64. Wait, but there''s also -8 because multiplying
-        two negative numbers gives a positive result. However, when people ask for
-        the square root, they usually mean the principal (positive) root. So the answer
-        should be 8. \n\nThe user wants the answer in a JSON object with the key `result`.
-        So I need to structure it as {\"result\": 8}. Let me double-check. Yes, 8
-        squared is 64, and that''s the principal root. Alright, that''s the correct
-        answer.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":31,"prompt_tokens_details":{"cached_tokens":1},"completion_tokens":185,"total_tokens":216}}
+        think. Square root means a number that, when multiplied by itself, gives the
+        original number. So, what number times itself equals 64? Well, 8 times 8 is
+        64. Wait, but there''s also -8, because negative times negative is positive.
+        But usually, when people ask for the square root, they''re referring to the
+        principal (positive) root. So the answer should be 8. Let me double-check.
+        8 squared is 64, and -8 squared is also 64. But the principal square root
+        is positive. So the correct answer is 8. The user wants the answer in a JSON
+        object with the key ''result''. So I need to structure it as {\"result\":
+        8}. That''s straightforward. I don''t see any complications here. Just making
+        sure there''s no trick or anything. No, seems like a simple math question.
+        Alright, time to format the answer.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":31,"prompt_tokens_details":{"cached_tokens":1},"completion_tokens":223,"total_tokens":254}}
 
         '
-  recorded_at: Wed, 09 Sep 2026 12:15:36 GMT
+  recorded_at: Mon, 14 Sep 2026 09:49:07 GMT
 recorded_with: VCR 6.4.0

@@ -42,23 +42,23 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - 2c5771e31e630d95fd9128f59127d3c2
+      - 39054b553af22205a9ad4a320ff965c4
       Date:
-      - Wed, 09 Sep 2026 12:09:27 GMT
+      - Mon, 14 Sep 2026 09:42:25 GMT
       X-Envoy-Upstream-Service-Time:
-      - '279'
+      - '357'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"47bafcce-17a1-42f3-a6e5-38b7475f175e","message":{"role":"assistant","content":[{"type":"text","text":"{\"name\":\"Bob\",\"age\":30}"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":5,"output_tokens":10},"tokens":{"input_tokens":607,"output_tokens":13},"cached_tokens":480}}'
-  recorded_at: Wed, 09 Sep 2026 12:09:27 GMT
+      string: '{"id":"c8d7aa6a-ddf9-4f45-ac87-3389b14f773a","message":{"role":"assistant","content":[{"type":"text","text":"{\"name\":\"Bob\",\"age\":30}"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":5,"output_tokens":10},"tokens":{"input_tokens":607,"output_tokens":13},"cached_tokens":512}}'
+  recorded_at: Mon, 14 Sep 2026 09:42:25 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
@@ -94,7 +94,7 @@ http_interactions:
       Num-Chars:
       - '2808'
       Num-Tokens:
-      - '426'
+      - '474'
       Pragma:
       - no-cache
       Vary:
@@ -102,11 +102,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - 2575b0117aa7ec7bafc61f5a40aec39b
+      - 6ae63cbae6fc4c8873f1d4387d59657a
       Date:
-      - Wed, 09 Sep 2026 12:09:32 GMT
+      - Mon, 14 Sep 2026 09:42:37 GMT
       X-Envoy-Upstream-Service-Time:
-      - '5323'
+      - '11485'
       Server:
       - envoy
       Via:
@@ -117,33 +117,7 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"9412ad03-e597-43a0-b47c-c1b17afea15f","message":{"role":"assistant","content":[{"type":"text","text":"**Ruby**
-        is a dynamic, open-source programming language known for its simplicity and
-        productivity. Created by Yukihiro \"Matz\" Matsumoto in the mid-1990s, Ruby
-        was designed with the philosophy of making programming fun and efficient.
-        Here are some key features and characteristics of Ruby:\n\n1. **Syntax**:
-        Ruby has a clean and intuitive syntax that emphasizes readability and simplicity.
-        It feels natural to write and is often compared to writing in English.\n\n2.
-        **Dynamic Typing**: Ruby is dynamically typed, meaning you don''t need to
-        declare the type of a variable explicitly. This flexibility allows for quicker
-        development and easier prototyping.\n\n3. **Object-Oriented**: Everything
-        in Ruby is an object, including primitive data types like integers and strings.
-        This makes it a pure object-oriented language.\n\n4. **Mixins and Modules**:
-        Ruby supports mixins through modules, allowing you to include additional functionality
-        in classes without using inheritance.\n\n5. **Ruby on Rails**: Ruby gained
-        widespread popularity due to the **Ruby on Rails** framework, a web development
-        framework that emphasizes convention over configuration, making it easier
-        to build web applications quickly.\n\n6. **Community and Ecosystem**: Ruby
-        has a vibrant community and a rich ecosystem of libraries (gems) available
-        via RubyGems, making it easy to add functionality to your projects.\n\n7.
-        **Metaprogramming**: Ruby supports metaprogramming, allowing developers to
-        write code that writes code, enabling powerful and flexible abstractions.\n\n8.
-        **Cross-Platform**: Ruby is cross-platform and runs on various operating systems,
-        including Windows, macOS, and Linux.\n\n9. **Philosophy**: Ruby''s design
-        is guided by the principle of \"least astonishment,\" meaning the language
-        should behave in ways that are intuitive and predictable to the programmer.\n\nRuby
-        is widely used for web development, scripting, automation, and building command-line
-        tools. Its focus on developer happiness and productivity has made it a favorite
-        among programmers worldwide."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":21,"output_tokens":405},"tokens":{"input_tokens":524,"output_tokens":408},"cached_tokens":448}}'
-  recorded_at: Wed, 09 Sep 2026 12:09:32 GMT
+      string: !binary |-
+        eyJpZCI6ImNjMWI4ZjVjLTllYzItNDM3OS05ODcxLTMyOTVmMTNkYWMwMSIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOlt7InR5cGUiOiJ0ZXh0IiwidGV4dCI6IlJ1YnkgaXMgYSBkeW5hbWljLCBvcGVuLXNvdXJjZSBwcm9ncmFtbWluZyBsYW5ndWFnZSB0aGF0IGZvY3VzZXMgb24gc2ltcGxpY2l0eSBhbmQgcHJvZHVjdGl2aXR5LiBJdCB3YXMgY3JlYXRlZCBieSBZdWtpaGlybyBcIk1hdHpcIiBNYXRzdW1vdG8gaW4gdGhlIG1pZC0xOTkwcyBpbiBKYXBhbi4gSGVyZSBhcmUgc29tZSBrZXkgZmVhdHVyZXMgYW5kIGFzcGVjdHMgb2YgUnVieTpcblxuMS4gKipQaGlsb3NvcGh5Kio6IFJ1YnkgaXMgZGVzaWduZWQgdG8gYmUgaHVtYW4tZnJpZW5kbHksIGVtcGhhc2l6aW5nIHJlYWRhYmlsaXR5IGFuZCBleHByZXNzaXZlbmVzcy4gTWF0eiBvZnRlbiBzYXlzLCBcIlJ1YnkgaXMgZGVzaWduZWQgdG8gbWFrZSBwcm9ncmFtbWVycyBoYXBweS5cIlxuXG4yLiAqKlN5bnRheCoqOiBSdWJ5IGhhcyBhIGNsZWFuIGFuZCBpbnR1aXRpdmUgc3ludGF4LCB3aGljaCBtYWtlcyBpdCBlYXN5IHRvIHdyaXRlIGFuZCB1bmRlcnN0YW5kLiBJdCBzdXBwb3J0cyBtdWx0aXBsZSBwcm9ncmFtbWluZyBwYXJhZGlnbXMsIGluY2x1ZGluZyBwcm9jZWR1cmFsLCBvYmplY3Qtb3JpZW50ZWQsIGFuZCBmdW5jdGlvbmFsIHByb2dyYW1taW5nLlxuXG4zLiAqKk9iamVjdC1PcmllbnRlZCoqOiBFdmVyeXRoaW5nIGluIFJ1YnkgaXMgYW4gb2JqZWN0LCBpbmNsdWRpbmcgcHJpbWl0aXZlIGRhdGEgdHlwZXMgbGlrZSBpbnRlZ2VycyBhbmQgYm9vbGVhbnMuIFRoaXMgbWFrZXMgaXQgYSBwdXJlIG9iamVjdC1vcmllbnRlZCBsYW5ndWFnZS5cblxuNC4gKipEeW5hbWljIFR5cGluZyoqOiBSdWJ5IGlzIGR5bmFtaWNhbGx5IHR5cGVkLCBtZWFuaW5nIHlvdSBkb27igJl0IG5lZWQgdG8gZGVjbGFyZSB0aGUgdHlwZSBvZiBhIHZhcmlhYmxlLiBUaGUgdHlwZSBpcyBkZXRlcm1pbmVkIGF0IHJ1bnRpbWUuXG5cbjUuICoqRmxleGliaWxpdHkqKjogUnVieSBhbGxvd3MgZGV2ZWxvcGVycyB0byBtb2RpZnkgYW5kIGV4dGVuZCBjb3JlIGNsYXNzZXMsIGdpdmluZyB0aGVtIGEgbG90IG9mIGZsZXhpYmlsaXR5IGFuZCBwb3dlci5cblxuNi4gKipDb21tdW5pdHkgYW5kIEVjb3N5c3RlbSoqOiBSdWJ5IGhhcyBhIHZpYnJhbnQgY29tbXVuaXR5IGFuZCBhIHJpY2ggZWNvc3lzdGVtIG9mIGxpYnJhcmllcyBhbmQgZnJhbWV3b3Jrcy4gT25lIG9mIHRoZSBtb3N0IGZhbW91cyBmcmFtZXdvcmtzIGlzICoqUnVieSBvbiBSYWlscyoqLCBhIHdlYiBkZXZlbG9wbWVudCBmcmFtZXdvcmsgdGhhdCByZXZvbHV0aW9uaXplZCB3ZWIgYXBwbGljYXRpb24gZGV2ZWxvcG1lbnQgYnkgZW1waGFzaXppbmcgY29udmVudGlvbiBvdmVyIGNvbmZpZ3VyYXRpb24uXG5cbjcuICoqR2VtcyoqOiBSdWJ54oCZcyBwYWNrYWdlIG1hbmFnZXIgaXMgY2FsbGVkICoqUnVieUdlbXMqKiwgd2hpY2ggYWxsb3dzIGRldmVsb3BlcnMgdG8gZWFzaWx5IGluc3RhbGwsIHVwZGF0ZSwgYW5kIG1hbmFnZSBsaWJyYXJpZXMgKGNhbGxlZCBcImdlbXNcIikuXG5cbjguICoqQ3Jvc3MtUGxhdGZvcm0qKjogUnVieSBpcyBjcm9zcy1wbGF0Zm9ybSBhbmQgcnVucyBvbiB2YXJpb3VzIG9wZXJhdGluZyBzeXN0ZW1zLCBpbmNsdWRpbmcgV2luZG93cywgbWFjT1MsIGFuZCBMaW51eC5cblxuOS4gKipNZXRhcHJvZ3JhbW1pbmcqKjogUnVieSBzdXBwb3J0cyBtZXRhcHJvZ3JhbW1pbmcsIGFsbG93aW5nIGRldmVsb3BlcnMgdG8gd3JpdGUgY29kZSB0aGF0IHdyaXRlcyBvciBtYW5pcHVsYXRlcyBvdGhlciBjb2RlIGF0IHJ1bnRpbWUuIFRoaXMgZmVhdHVyZSBpcyBoZWF2aWx5IHVzZWQgaW4gZnJhbWV3b3JrcyBsaWtlIFJhaWxzLlxuXG4xMC4gKipDb21tdW5pdHkgYW5kIExlYXJuaW5nIFJlc291cmNlcyoqOiBUaGVyZSBhcmUgbnVtZXJvdXMgcmVzb3VyY2VzIGF2YWlsYWJsZSBmb3IgbGVhcm5pbmcgUnVieSwgaW5jbHVkaW5nIGJvb2tzLCBvbmxpbmUgdHV0b3JpYWxzLCBhbmQgY29tbXVuaXR5IGZvcnVtcy4gVGhlIFJ1YnkgY29tbXVuaXR5IGlzIGtub3duIGZvciBiZWluZyB3ZWxjb21pbmcgYW5kIHN1cHBvcnRpdmUuXG5cblJ1YnkgaXMgd2lkZWx5IHVzZWQgZm9yIHdlYiBkZXZlbG9wbWVudCwgc2NyaXB0aW5nLCBhdXRvbWF0aW9uLCBhbmQgYnVpbGRpbmcgY29tbWFuZC1saW5lIHRvb2xzLiBJdHMgZm9jdXMgb24gZGV2ZWxvcGVyIGhhcHBpbmVzcyBhbmQgcHJvZHVjdGl2aXR5IGhhcyBtYWRlIGl0IGEgZmF2b3JpdGUgYW1vbmcgbWFueSBwcm9ncmFtbWVycy4ifV19LCJmaW5pc2hfcmVhc29uIjoiQ09NUExFVEUiLCJ1c2FnZSI6eyJiaWxsZWRfdW5pdHMiOnsiaW5wdXRfdG9rZW5zIjoyMSwib3V0cHV0X3Rva2VucyI6NDUzfSwidG9rZW5zIjp7ImlucHV0X3Rva2VucyI6NTI0LCJvdXRwdXRfdG9rZW5zIjo0NTZ9LCJjYWNoZWRfdG9rZW5zIjo0NDh9fQ==
+  recorded_at: Mon, 14 Sep 2026 09:42:37 GMT
 recorded_with: VCR 6.4.0

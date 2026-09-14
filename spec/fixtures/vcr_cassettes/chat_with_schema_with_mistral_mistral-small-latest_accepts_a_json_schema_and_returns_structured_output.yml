@@ -24,54 +24,54 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:09:47 GMT
+      - Mon, 14 Sep 2026 09:42:52 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a08612-fe73-72c5-a10a-abf0f012cbc3
+      - 01a09f4c-4a69-749e-968e-f80cbb2fe8d9
       X-Kong-Request-Id:
-      - 01a08612-fe73-72c5-a10a-abf0f012cbc3
+      - 01a09f4c-4a69-749e-968e-f80cbb2fe8d9
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '97858'
+      - '96225'
       X-Ratelimit-Tokens-Query-Cost:
       - '29'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '99'
+      - '78'
       X-Envoy-Upstream-Service-Time:
-      - '291'
+      - '373'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '293'
+      - '374'
       X-Kong-Proxy-Latency:
-      - '12'
-      X-Content-Type-Options:
-      - nosniff
+      - '99'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"7a9cc634a6804ad193b665fa0065d61e","created":1788955786,"model":"mistral-small-latest","usage":{"prompt_tokens":15,"total_tokens":29,"completion_tokens":14,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"{\"name\":
+      string: '{"id":"20a776d25f22412ba9f6724a95c39905","created":1789378972,"model":"mistral-small-latest","usage":{"prompt_tokens":15,"total_tokens":29,"completion_tokens":14,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"{\"name\":
         \"John\", \"age\": 30}"}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:09:47 GMT
+  recorded_at: Mon, 14 Sep 2026 09:42:52 GMT
 recorded_with: VCR 6.4.0

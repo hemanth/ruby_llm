@@ -20,12 +20,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Pragma:
-      - no-cache
       Date:
-      - Wed, 09 Sep 2026 12:05:20 GMT
+      - Mon, 14 Sep 2026 09:39:25 GMT
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Content-Type:
@@ -52,11 +52,11 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid",
+          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/sqlservice.login",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Wed, 09 Sep 2026 12:05:20 GMT
+  recorded_at: Mon, 14 Sep 2026 09:39:25 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -90,7 +90,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:05:21 GMT
+      - Mon, 14 Sep 2026 09:39:26 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -120,18 +120,18 @@ http_interactions:
                         "latitude": "52.5200"
                       }
                     },
-                    "thoughtSignature": "Ct4CAY89a1/UA6b2eYMxATITRLrw2Dr49G/ypT0Ea4w8159PMJH/Kdl0j3YGRwl1pxc9m/acU+FABuMvrgVJW5lDI0eDA3Abvp1BAKCoCQloMQJ2pLJ5ZF6HR98guzj8kuhCSLBJ2x2xWPRZOVdeYBnTbvFE5Yh/coM2xZw/uRRDKYjfynMAY+tCQPfC5VIHCloKnkC4TRas4RV9+OOQYqmItuTgiWYGYPhyaRHglXg0QrEEhUKuXWYoxrLa2wAYLs4PLK9eKPWRnajsuZ27hsudeF9MX5V7P57S1hV4QnLRof3dXboiVxnJFhpAgdCPCHiE6PXjzvfDUJve11zVC0ANHxdHKwp21xIbQ55Z+B1lXJFO6omimr4950x0ZpXqDt2AUqtW5eTZHPmIce9HZFNmg+DXKhEmRLwkLEWVg1J7xFSuk1AuXPfZKTL9NWXODPEsZdTiJz9jOWQfWNo6iAo="
+                    "thoughtSignature": "CrICAY89a1+R9BxPZ8S69893HIgO2MJQfwkvTGzjt2WFbm4ldW9dPNKIKOvt88cL+fxHuVROIQJMBWH1TsnYp/BpmTt97ECYCySdFHUZuD5gkfOBM2cGGOX72fJfbjvOmb2+PDh2Zya8vHUOJXGUX/HjyaQBJbypT5YIgSYe7G/5BpOnmxrxzfwo4SHVnrn0CcilhhrVyNZopeDUSU7KVYVCe7xvYK5sI8ZGIiJ64RhIJlg0Z1CkjZ1BrT8mS+zmMUBD5L7/3g/Jy8msUogUyd1x/b1x0gQPZXZEDFRdYfuzRmEgm+y5dEeoV7Lmnyz+MN2T8wccrWmyug/p83nVkXsvFkhT9P2BonZdKI9QaEwFZ/j/nSttgWwScNzxLww/HQmvEQPnFMi9Etex/gCaTTRfhByw"
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.47544602786793427
+              "avgLogprobs": -0.56944532955394067
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 33,
             "candidatesTokenCount": 17,
-            "totalTokenCount": 116,
+            "totalTokenCount": 106,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -145,20 +145,20 @@ http_interactions:
                 "tokenCount": 17
               }
             ],
-            "thoughtsTokenCount": 66
+            "thoughtsTokenCount": 56
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-09-09T12:05:20.192276Z",
-          "responseId": "gEuhapTeC56Hu_EPyrqH2Qc"
+          "createTime": "2026-09-14T09:39:25.937308Z",
+          "responseId": "zcCnatyaOaCO8uMP15WWmA8"
         }
-  recorded_at: Wed, 09 Sep 2026 12:05:21 GMT
+  recorded_at: Mon, 14 Sep 2026 09:39:26 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What''s the weather in
-        Berlin? (52.5200, 13.4050)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"longitude":"13.4050","latitude":"52.5200"}},"thoughtSignature":"Ct4CAY89a1/UA6b2eYMxATITRLrw2Dr49G/ypT0Ea4w8159PMJH/Kdl0j3YGRwl1pxc9m/acU+FABuMvrgVJW5lDI0eDA3Abvp1BAKCoCQloMQJ2pLJ5ZF6HR98guzj8kuhCSLBJ2x2xWPRZOVdeYBnTbvFE5Yh/coM2xZw/uRRDKYjfynMAY+tCQPfC5VIHCloKnkC4TRas4RV9+OOQYqmItuTgiWYGYPhyaRHglXg0QrEEhUKuXWYoxrLa2wAYLs4PLK9eKPWRnajsuZ27hsudeF9MX5V7P57S1hV4QnLRof3dXboiVxnJFhpAgdCPCHiE6PXjzvfDUJve11zVC0ANHxdHKwp21xIbQ55Z+B1lXJFO6omimr4950x0ZpXqDt2AUqtW5eTZHPmIce9HZFNmg+DXKhEmRLwkLEWVg1J7xFSuk1AuXPfZKTL9NWXODPEsZdTiJz9jOWQfWNo6iAo="}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
+        Berlin? (52.5200, 13.4050)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"longitude":"13.4050","latitude":"52.5200"}},"thoughtSignature":"CrICAY89a1+R9BxPZ8S69893HIgO2MJQfwkvTGzjt2WFbm4ldW9dPNKIKOvt88cL+fxHuVROIQJMBWH1TsnYp/BpmTt97ECYCySdFHUZuD5gkfOBM2cGGOX72fJfbjvOmb2+PDh2Zya8vHUOJXGUX/HjyaQBJbypT5YIgSYe7G/5BpOnmxrxzfwo4SHVnrn0CcilhhrVyNZopeDUSU7KVYVCe7xvYK5sI8ZGIiJ64RhIJlg0Z1CkjZ1BrT8mS+zmMUBD5L7/3g/Jy8msUogUyd1x/b1x0gQPZXZEDFRdYfuzRmEgm+y5dEeoV7Lmnyz+MN2T8wccrWmyug/p83nVkXsvFkhT9P2BonZdKI9QaEwFZ/j/nSttgWwScNzxLww/HQmvEQPnFMi9Etex/gCaTTRfhByw"}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}}}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
         current weather for a location","parametersJsonSchema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
@@ -186,7 +186,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:05:21 GMT
+      - Mon, 14 Sep 2026 09:39:27 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -202,6 +202,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicm9sZSI6ICJtb2RlbCIsCiAgICAgICAgInBhcnRzIjogWwogICAgICAgICAgewogICAgICAgICAgICAidGV4dCI6ICJUaGUgd2VhdGhlciBpbiBCZXJsaW4gKDUyLjUyMDAsIDEzLjQwNTApIGlzIDE1wrBDIHdpdGggd2luZCBhdCAxMCBrbS9oLiIKICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0sCiAgICAgICJmaW5pc2hSZWFzb24iOiAiU1RPUCIsCiAgICAgICJhdmdMb2dwcm9icyI6IC0wLjA5MzkxMjU0NTAwMzM4OTA1MwogICAgfQogIF0sCiAgInVzYWdlTWV0YWRhdGEiOiB7CiAgICAicHJvbXB0VG9rZW5Db3VudCI6IDE1NiwKICAgICJjYW5kaWRhdGVzVG9rZW5Db3VudCI6IDM4LAogICAgInRvdGFsVG9rZW5Db3VudCI6IDE5NCwKICAgICJ0cmFmZmljVHlwZSI6ICJPTl9ERU1BTkQiLAogICAgInByb21wdFRva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiAxNTYKICAgICAgfQogICAgXSwKICAgICJjYW5kaWRhdGVzVG9rZW5zRGV0YWlscyI6IFsKICAgICAgewogICAgICAgICJtb2RhbGl0eSI6ICJURVhUIiwKICAgICAgICAidG9rZW5Db3VudCI6IDM4CiAgICAgIH0KICAgIF0KICB9LAogICJtb2RlbFZlcnNpb24iOiAiZ2VtaW5pLTIuNS1mbGFzaCIsCiAgImNyZWF0ZVRpbWUiOiAiMjAyNi0wOS0wOVQxMjowNToyMS4xNTE0MjlaIiwKICAicmVzcG9uc2VJZCI6ICJnVXVoYW9XZkNmX2QxUElQN3Y3QXNBdyIKfQo=
-  recorded_at: Wed, 09 Sep 2026 12:05:21 GMT
+        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicm9sZSI6ICJtb2RlbCIsCiAgICAgICAgInBhcnRzIjogWwogICAgICAgICAgewogICAgICAgICAgICAidGV4dCI6ICJUaGUgY3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbiBpcyAxNcKwQywgd2l0aCB3aW5kIGF0IDEwIGttL2guIgogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfSwKICAgICAgImZpbmlzaFJlYXNvbiI6ICJTVE9QIiwKICAgICAgImF2Z0xvZ3Byb2JzIjogLTAuMTIyNTM4NTM0MDc3NzMxMDUKICAgIH0KICBdLAogICJ1c2FnZU1ldGFkYXRhIjogewogICAgInByb21wdFRva2VuQ291bnQiOiAxNDYsCiAgICAiY2FuZGlkYXRlc1Rva2VuQ291bnQiOiAyMiwKICAgICJ0b3RhbFRva2VuQ291bnQiOiAxNjgsCiAgICAidHJhZmZpY1R5cGUiOiAiT05fREVNQU5EIiwKICAgICJwcm9tcHRUb2tlbnNEZXRhaWxzIjogWwogICAgICB7CiAgICAgICAgIm1vZGFsaXR5IjogIlRFWFQiLAogICAgICAgICJ0b2tlbkNvdW50IjogMTQ2CiAgICAgIH0KICAgIF0sCiAgICAiY2FuZGlkYXRlc1Rva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiAyMgogICAgICB9CiAgICBdCiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0yLjUtZmxhc2giLAogICJjcmVhdGVUaW1lIjogIjIwMjYtMDktMTRUMDk6Mzk6MjcuMDMxNzc2WiIsCiAgInJlc3BvbnNlSWQiOiAiejhDbmFxRDRBYTdqel9JUHhOS1NpQTgiCn0K
+  recorded_at: Mon, 14 Sep 2026 09:39:27 GMT
 recorded_with: VCR 6.4.0

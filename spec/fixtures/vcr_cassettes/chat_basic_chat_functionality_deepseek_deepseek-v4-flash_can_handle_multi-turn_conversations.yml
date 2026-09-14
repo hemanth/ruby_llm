@@ -30,7 +30,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 09 Sep 2026 12:06:01 GMT
+      - Mon, 14 Sep 2026 09:40:16 GMT
       Server:
       - elb
       Vary:
@@ -38,7 +38,7 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Ds-Trace-Id:
-      - b4b42ab6b6270b41cb03252a781b825e
+      - 822ac599a816275391f976c6159016e0
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -46,29 +46,34 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 992996e4e91d1a0396e009259f402180.cloudfront.net (CloudFront)
+      - 1.1 3ee0a52a6fdc977d833d7647d462c266.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TXL52-P3
+      - TXL52-P2
       X-Amz-Cf-Id:
-      - uL5zBh1viwlvDG9uNSti4kOaGWQgqeUrf9cEn5x5BuMGTuHnsmRoWw==
+      - uKxmb_PnM0nxWWEDjyoeMYf3zQ5gO0vNOavFI3RUnmFE_uJLh8KLtw==
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"0147bf24-5e23-4f22-a720-87808f08dacd","object":"chat.completion","created":1788955561,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        creator of the programming language Ruby is **Yukihiro Matsumoto**, often
-        known by his handle **Matz**. He released the first version of Ruby in 1995.","reasoning_content":"We
-        need answer. Ruby creator Yukihiro Matsumoto, aka Matz."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":93,"completion_tokens":56,"total_tokens":149,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":17},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":93},"system_fingerprint":"a26a7955944dc5c60445bff77fac9c8e"}'
-  recorded_at: Wed, 09 Sep 2026 12:06:02 GMT
+      string: '{"id":"6d1bfcab-f159-4028-acf1-c076aea99748","object":"chat.completion","created":1789378815,"model":"deepseek-flash","choices":[{"index":0,"message":{"role":"assistant","content":"Ruby
+        was created by **Yukihiro Matsumoto**, commonly known as **Matz**. He began
+        developing it in the mid-1990s, and Ruby was first released publicly in **1995**.","reasoning_content":"We
+        need answer. User asks who creator of programming language Ruby. Answer Yukihiro
+        Matsumoto (Matz). Need concise. Maybe mention first released 1995. Ensure
+        no controversy. Final."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":40,"completion_tokens":85,"total_tokens":125,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":41},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":40},"system_fingerprint":"aeb56401ca74e127821c4f9126dcb669"}'
+  recorded_at: Mon, 14 Sep 2026 09:40:17 GMT
 - request:
     method: post
     uri: https://api.deepseek.com/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"deepseek-v4-flash","messages":[{"role":"user","content":"Who
-        is the creator of the programming language Ruby?"},{"role":"assistant","content":"The
-        creator of the programming language Ruby is **Yukihiro Matsumoto**, often
-        known by his handle **Matz**. He released the first version of Ruby in 1995.","reasoning_content":"We
-        need answer. Ruby creator Yukihiro Matsumoto, aka Matz.","reasoning":"We need
-        answer. Ruby creator Yukihiro Matsumoto, aka Matz."},{"role":"user","content":"What
+        is the creator of the programming language Ruby?"},{"role":"assistant","content":"Ruby
+        was created by **Yukihiro Matsumoto**, commonly known as **Matz**. He began
+        developing it in the mid-1990s, and Ruby was first released publicly in **1995**.","reasoning_content":"We
+        need answer. User asks who creator of programming language Ruby. Answer Yukihiro
+        Matsumoto (Matz). Need concise. Maybe mention first released 1995. Ensure
+        no controversy. Final.","reasoning":"We need answer. User asks who creator
+        of programming language Ruby. Answer Yukihiro Matsumoto (Matz). Need concise.
+        Maybe mention first released 1995. Ensure no controversy. Final."},{"role":"user","content":"What
         year did he create Ruby?"}],"stream":false}'
     headers:
       User-Agent:
@@ -93,7 +98,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 09 Sep 2026 12:06:02 GMT
+      - Mon, 14 Sep 2026 09:40:17 GMT
       Server:
       - elb
       Vary:
@@ -101,7 +106,7 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Ds-Trace-Id:
-      - b6d90077f99a166299006f6452ce14ca
+      - 83f4f8b870d7535bd32f683b6d58e640
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -109,30 +114,30 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 4842376441adfff51e41110458fe337a.cloudfront.net (CloudFront)
+      - 1.1 51221dfe71ea280c675f3bd47a16cea4.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TXL50-P4
+      - TXL52-P3
       X-Amz-Cf-Id:
-      - ZkXVZiaETSk3dkT6aAEk-y2iaV0j7qmplcp3MwYhGExh-SkVTOHW9g==
+      - IaZUQgKH-Ggp30icvZ2ECo7_DTqwunPseSSM4-6B1pwwc1cqJk5BiA==
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"22683532-de89-4a68-8043-33bdf07d0d6f","object":"chat.completion","created":1788955562,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"To
-        clarify, while the first public release of Ruby was in **1995**, Yukihiro
-        Matsumoto actually **began creating Ruby in 1993**. He started writing the
-        language in February 1993 and released it to the public two years later, in
-        1995.","reasoning_content":"1.  **Analyze the User''s Query**:\n    *   Previous
-        turn: User asked who created Ruby. Assistant answered Yukihiro Matsumoto (Matz),
-        released first version in 1995.\n    *   Current turn: User asks \"What year
-        did he create Ruby?\".\n    *   *Self-correction/Context*: The assistant *already*
-        stated the year in the previous response (\"released the first version of
-        Ruby in 1995\"). The user might be asking for a specific year of *creation/start
-        of development* vs *release*.\n    *   Historical fact: Matsumoto began working
-        on Ruby in 1993. He released it to the public in 1995.\n    *   Need to address
-        the nuance: He *started* creating it in 1993, and publicly released the first
-        version in 1995. Since I previously said 1995 was the release, I should clarify
-        both dates to be accurate and helpful.\n\n2.  **Formulate the response**:\n    *   Acknowledge
-        the previous answer mentioned 1995 (release).\n    *   Clarify that he *began*
-        working on Ruby in **1993**.\n    *   Mention the first public release was
-        in **1995** (as previously noted).\n    *   Keep it concise and precise."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":142,"completion_tokens":335,"total_tokens":477,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":276},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":142},"system_fingerprint":"a26a7955944dc5c60445bff77fac9c8e"}'
-  recorded_at: Wed, 09 Sep 2026 12:06:05 GMT
+      string: '{"id":"c389c7ee-d2b8-4048-b213-1df4d8e57033","object":"chat.completion","created":1789378817,"model":"deepseek-flash","choices":[{"index":0,"message":{"role":"assistant","content":"He
+        began developing Ruby in **1993**, and it was first released publicly in **1995**.","reasoning_content":"We
+        need answer. User asks \"What year did he create Ruby?\" Previous answer said
+        began mid-1990s, first released publicly 1995. Need exact? Yukihiro Matsumoto
+        started developing Ruby around 1993, first public release 1995. Question:
+        \"What year did he create Ruby?\" Could interpret creation year 1995? Need
+        clarify: He began work in 1993, first released in 1995. The previous answer
+        said began mid-1990s, first released publicly 1995. Ask \"What year did he
+        create Ruby?\" We should answer: He started creating Ruby in 1993; first public
+        release was 1995. If they ask \"create\" likely 1995? Let''s be precise: Ruby
+        was created by Matz starting in 1993, and released in 1995. Many sources:
+        \"Ruby was created by Yukihiro Matsumoto in 1995\" or \"developed in the mid-1990s\"
+        and \"first appeared in 1995.\" The question likely wants 1995. But to avoid
+        ambiguity: \"He began developing it in 1993; it was first released in 1995.\"
+        That addresses. Since previous assistant said 1995 release. User asks \"What
+        year did he create Ruby?\" We can say: \"He began work on Ruby in 1993, and
+        it was first released in 1995.\" If forced single year: 1995 as first public
+        release, but creation began 1993. Need final concise."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":94,"completion_tokens":337,"total_tokens":431,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":316},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":94},"system_fingerprint":"aeb56401ca74e127821c4f9126dcb669"}'
+  recorded_at: Mon, 14 Sep 2026 09:40:19 GMT
 recorded_with: VCR 6.4.0

@@ -58,11 +58,13 @@ Some tools need a protocol other than the provider's default:
 | Provider | Select | Needed for |
 | --- | --- | --- |
 | Azure | `protocol: :responses` when the deployment does not already use it | Responses server tools |
-| DeepSeek | `protocol: :responses` | Web search and patch tools |
+| DeepSeek | `protocol: :responses` | Patch tools |
 | Gemini | `protocol: :interactions` | Remote MCP |
 | Mistral | `protocol: :conversations` | Web search, page fetching, code execution, and library search |
 | OpenRouter | `protocol: :responses` | Hosted shell, patch tools, and remote MCP |
 | GPUStack | `protocol: :responses` | Tools configured on the deployed vLLM server |
+
+DeepSeek's Responses API ignores built-in web search. On DeepSeek, `with_server_tools(:web_search)` raises `RubyLLM::UnsupportedServerToolError` before sending a request.
 
 For example, select OpenRouter's hosted shell and use the same tool alias:
 

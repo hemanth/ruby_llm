@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:05:07 GMT
+      - Mon, 14 Sep 2026 09:39:05 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,25 +38,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-09T12:05:07Z'
+      - '2026-09-14T09:39:05Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-09T12:05:07Z'
+      - '2026-09-14T09:39:05Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-09T12:05:06Z'
+      - '2026-09-14T09:39:05Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-09T12:05:07Z'
+      - '2026-09-14T09:39:05Z'
+      Server:
+      - cloudflare
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
@@ -66,13 +68,13 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-c2174d3f3d26f36c29285d1e40ae19b7-1cec571379b7577c-01
-      Server:
-      - cloudflare
+      - 00-7b86dfcf9485e8747a2b0c3e6e608724-a76b612f0a721149-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
+      Server-Timing:
+      - x-originResponse;dur=776
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -81,11 +83,10 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011CesqP4183f38YUDexfdaQ","type":"message","role":"assistant","content":[{"type":"text","text":"Yukihiro
-        Matsumoto is the creator of the programming language Ruby. He designed and
-        developed Ruby in the mid-1990s in Japan, first releasing it publicly in 1995.
-        Matsumoto is often known by his nickname \"Matz\" in the programming community."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":17,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":64,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 09 Sep 2026 12:05:07 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf37HmTUHSHQh6mT1qFEV","type":"message","role":"assistant","content":[{"type":"text","text":"Yukihiro
+        Matsumoto, often known by his nickname \"Matz,\" is the creator of the programming
+        language Ruby. He designed and first released Ruby in 1995 in Japan."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":17,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":45,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Mon, 14 Sep 2026 09:39:05 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -93,9 +94,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"claude-haiku-4-5-20251001","messages":[{"role":"user","content":[{"type":"text","text":"Who
         is the creator of the programming language Ruby?"}]},{"role":"assistant","content":[{"type":"text","text":"Yukihiro
-        Matsumoto is the creator of the programming language Ruby. He designed and
-        developed Ruby in the mid-1990s in Japan, first releasing it publicly in 1995.
-        Matsumoto is often known by his nickname \"Matz\" in the programming community."}]},{"role":"user","content":[{"type":"text","text":"What
+        Matsumoto, often known by his nickname \"Matz,\" is the creator of the programming
+        language Ruby. He designed and first released Ruby in 1995 in Japan."}]},{"role":"user","content":[{"type":"text","text":"What
         year did he create Ruby?"}]}],"stream":false,"max_tokens":64000}'
     headers:
       User-Agent:
@@ -116,7 +116,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:05:08 GMT
+      - Mon, 14 Sep 2026 09:39:06 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -128,25 +128,27 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-09T12:05:08Z'
+      - '2026-09-14T09:39:06Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-09T12:05:08Z'
+      - '2026-09-14T09:39:06Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-09T12:05:07Z'
+      - '2026-09-14T09:39:06Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-09T12:05:08Z'
+      - '2026-09-14T09:39:06Z'
+      Server:
+      - cloudflare
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
@@ -156,13 +158,13 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-d3a2ebb6ac0b4807d326fdf4095b4f75-81398d9f19fc9e17-01
-      Server:
-      - cloudflare
+      - 00-75f7bf69fa51a7cff7bbfb19a95fdd8e-21ab5ccf44f83145-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
+      Server-Timing:
+      - x-originResponse;dur=462
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -171,9 +173,7 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011CesqP9eCibkWLnTmwb2aD","type":"message","role":"assistant","content":[{"type":"text","text":"Yukihiro
-        Matsumoto created Ruby in the mid-1990s, with the first public release in
-        1995. He began designing the language around 1993-1994, so the creation process
-        spanned the early-to-mid 1990s."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":91,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":61,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 09 Sep 2026 12:05:08 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf37HqRM24dk5fCwC1BwX","type":"message","role":"assistant","content":[{"type":"text","text":"Yukihiro
+        Matsumoto created Ruby in 1995."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":72,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":18,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Mon, 14 Sep 2026 09:39:06 GMT
 recorded_with: VCR 6.4.0

@@ -20,12 +20,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Pragma:
-      - no-cache
+      Date:
+      - Mon, 14 Sep 2026 09:43:02 GMT
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
-      Date:
-      - Wed, 09 Sep 2026 12:09:52 GMT
+      Pragma:
+      - no-cache
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Content-Type:
@@ -52,11 +52,11 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/cloud-platform openid",
+          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/cloud-platform",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Wed, 09 Sep 2026 12:09:52 GMT
+  recorded_at: Mon, 14 Sep 2026 09:43:02 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -87,7 +87,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:09:56 GMT
+      - Mon, 14 Sep 2026 09:43:08 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -102,7 +102,44 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicm9sZSI6ICJtb2RlbCIsCiAgICAgICAgInBhcnRzIjogWwogICAgICAgICAgewogICAgICAgICAgICAidGV4dCI6ICJUaGUgd2VhdGhlciBpcyB0aGUgc3RhdGUgb2YgdGhlIGF0bW9zcGhlcmUgYXQgYSBwYXJ0aWN1bGFyIHBsYWNlIGFuZCB0aW1lLCBlbmNvbXBhc3NpbmcgdmFyaW91cyBwaGVub21lbmEgbGlrZSB0ZW1wZXJhdHVyZSwgaHVtaWRpdHksIHByZWNpcGl0YXRpb24gKHJhaW4sIHNub3csIGhhaWwpLCB3aW5kIHNwZWVkIGFuZCBkaXJlY3Rpb24sIGF0bW9zcGhlcmljIHByZXNzdXJlLCBhbmQgY2xvdWQgY292ZXIuIEl0J3MgY29uc3RhbnRseSBjaGFuZ2luZyBkdWUgdG8gY29tcGxleCBpbnRlcmFjdGlvbnMgd2l0aGluIHRoZSBFYXJ0aCdzIGF0bW9zcGhlcmUsIG9jZWFucywgYW5kIGxhbmQuXG5cbldoZW4gcGVvcGxlIGFzayBcIldoYXQncyB0aGUgd2VhdGhlciBsaWtlP1wiLCB0aGV5IGFyZSB1c3VhbGx5IGxvb2tpbmcgZm9yIHNwZWNpZmljczpcblxuKiAgICoqVGVtcGVyYXR1cmU6KiogSG93IGhvdCBvciBjb2xkIGl0IGlzIChlLmcuLCAyNcKwQyAvIDc3wrBGKS5cbiogICAqKlByZWNpcGl0YXRpb246KiogSXMgaXQgcmFpbmluZywgc25vd2luZywgb3IgZHJ5PyBBcmUgc2hvd2VycyBleHBlY3RlZD9cbiogICAqKldpbmQ6KiogSG93IHN0cm9uZyBpcyB0aGUgd2luZCwgYW5kIGZyb20gd2hhdCBkaXJlY3Rpb24gaXMgaXQgYmxvd2luZz8gSXMgaXQgYnJlZXp5IG9yIGNhbG0/XG4qICAgKipTa3kgQ29uZGl0aW9uOioqIElzIGl0IHN1bm55LCBjbG91ZHksIHBhcnRseSBjbG91ZHksIG9yIG92ZXJjYXN0P1xuKiAgICoqSHVtaWRpdHk6KiogSG93IG11Y2ggbW9pc3R1cmUgaXMgaW4gdGhlIGFpcj8gVGhpcyBhZmZlY3RzIGhvdyBob3Qgb3IgY29sZCBpdCBmZWVscy5cbiogICAqKkZvcmVjYXN0OioqIFdoYXQgaXMgZXhwZWN0ZWQgZm9yIHRoZSBuZXh0IGZldyBob3VycywgZGF5LCBvciB3ZWVrP1xuXG5TaW5jZSBJIGRvbid0IGhhdmUgcmVhbC10aW1lIGFjY2VzcyB0byB5b3VyIGN1cnJlbnQgbG9jYXRpb24sIEkgY2FuJ3QgZ2l2ZSB5b3UgYSBwcmVjaXNlLCB1cC10by10aGUtbWludXRlIHJlcG9ydC4gSG93ZXZlciwgaWYgeW91J2QgbGlrZSB0byBrbm93IGFib3V0IHRoZSB3ZWF0aGVyIGluIGEgc3BlY2lmaWMgY2l0eSBvciByZWdpb24sIHlvdSBjYW4gdHlwaWNhbGx5IGZpbmQgaXQgYnk6XG5cbiogICBDaGVja2luZyBhIHdlYXRoZXIgYXBwIG9uIHlvdXIgc21hcnRwaG9uZSAoZS5nLiwgQWNjdVdlYXRoZXIsIFRoZSBXZWF0aGVyIENoYW5uZWwsIEdvb2dsZSBXZWF0aGVyKS5cbiogICBMb29raW5nIGF0IGEgd2VhdGhlciB3ZWJzaXRlIChlLmcuLCB3ZWF0aGVyLmNvbSwgTk9BQSwgQkJDIFdlYXRoZXIpLlxuKiAgIFdhdGNoaW5nIGEgbG9jYWwgbmV3cyBicm9hZGNhc3QuXG4qICAgU2ltcGx5IGFza2luZyBhIHNtYXJ0IGFzc2lzdGFudCBmb3IgdGhlIHdlYXRoZXIgaW4geW91ciBsb2NhdGlvbi5cblxuVGhlIHN0dWR5IG9mIHdlYXRoZXIsIGl0cyBwYXR0ZXJucywgYW5kIGZvcmVjYXN0aW5nIGlzIGNhbGxlZCBtZXRlb3JvbG9neS4gSXQncyBhIGZhc2NpbmF0aW5nIGFuZCB2aXRhbCBmaWVsZCwgaGVscGluZyBldmVyeXRoaW5nIGZyb20gYWdyaWN1bHR1cmUgdG8gYWlyIHRyYXZlbC4gV2VhdGhlciBjYW4gYmUgYmVhdXRpZnVsIGFuZCBzZXJlbmUsIGJ1dCBpdCBjYW4gYWxzbyBiZSBleHRyZW1lIGFuZCBkYW5nZXJvdXMsIGxlYWRpbmcgdG8gcGhlbm9tZW5hIGxpa2UgaHVycmljYW5lcywgYmxpenphcmRzLCBhbmQgaGVhdHdhdmVzLiBYS0NENzM5MiBpcyBhIGZpY3Rpb25hbCB3ZWF0aGVyIGNvZGUsIGJ1dCByZWFsLXdvcmxkIHdlYXRoZXIgdXNlcyBhIHZhc3QgYXJyYXkgb2YgY29kZXMgYW5kIG1lYXN1cmVtZW50cy4iCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9LAogICAgICAiZmluaXNoUmVhc29uIjogIlNUT1AiLAogICAgICAiYXZnTG9ncHJvYnMiOiAtMC40NjIyMDYwODUzNDMxNjY3MQogICAgfQogIF0sCiAgInVzYWdlTWV0YWRhdGEiOiB7CiAgICAicHJvbXB0VG9rZW5Db3VudCI6IDI1LAogICAgImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogNDQyLAogICAgInRvdGFsVG9rZW5Db3VudCI6IDYzOSwKICAgICJ0cmFmZmljVHlwZSI6ICJPTl9ERU1BTkQiLAogICAgInByb21wdFRva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiAyNQogICAgICB9CiAgICBdLAogICAgImNhbmRpZGF0ZXNUb2tlbnNEZXRhaWxzIjogWwogICAgICB7CiAgICAgICAgIm1vZGFsaXR5IjogIlRFWFQiLAogICAgICAgICJ0b2tlbkNvdW50IjogNDQyCiAgICAgIH0KICAgIF0sCiAgICAidGhvdWdodHNUb2tlbkNvdW50IjogMTcyCiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0yLjUtZmxhc2giLAogICJjcmVhdGVUaW1lIjogIjIwMjYtMDktMDlUMTI6MDk6NTIuNTM3NzMzWiIsCiAgInJlc3BvbnNlSWQiOiAia0V5aGFvWHBJS2VSdV9FUDU1clUwUXciCn0K
-  recorded_at: Wed, 09 Sep 2026 12:09:56 GMT
+      string: |
+        {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "I'd love to tell you about the weather, but since I don't know your current location, I can only give you a general overview!\n\nGlobally, the weather is, as always, incredibly diverse. Somewhere it's sunny and warm, perfect for a picnic. Elsewhere, there might be rain showers, perhaps even a thunderstorm brewing, or a gentle snowfall blanketing the ground. Temperatures can range from well below freezing in polar regions to scorching heat in deserts.\n\n**Generally speaking, for many parts of the Northern Hemisphere, we're transitioning into or are firmly in spring,** which often brings a mix of sunshine, occasional rain (sometimes heavy), and fluctuating temperatures. Days are getting longer, and we might see some breezy conditions as weather systems move through.\n\n**In the Southern Hemisphere, autumn is in full swing,** meaning cooler temperatures, shorter days, and potentially more frequent rainfall as winter approaches.\n\nTo get the most accurate and relevant weather information for *your* specific location, I highly recommend checking a local weather app, website, or your preferred news channel. They'll have up-to-the-minute details on temperature, precipitation, wind speed, and any alerts for your area.\n\nAnd remember, always be prepared for whatever the skies might bring! XKCD7392."
+                  }
+                ]
+              },
+              "finishReason": "STOP",
+              "avgLogprobs": -0.48440546106409144
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 25,
+            "candidatesTokenCount": 270,
+            "totalTokenCount": 483,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 25
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 270
+              }
+            ],
+            "thoughtsTokenCount": 188
+          },
+          "modelVersion": "gemini-2.5-flash",
+          "createTime": "2026-09-14T09:43:02.603030Z",
+          "responseId": "psGnapbnJPi4hu0P4dz-sAI"
+        }
+  recorded_at: Mon, 14 Sep 2026 09:43:08 GMT
 recorded_with: VCR 6.4.0

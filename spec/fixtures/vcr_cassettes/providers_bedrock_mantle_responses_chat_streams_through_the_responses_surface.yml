@@ -9,7 +9,7 @@ http_interactions:
         from 1 to 5."}],"stream":true,"store":false,"include":["reasoning.encrypted_content"]}'
     headers:
       X-Amz-Date:
-      - 20260909T121635Z
+      - 20260914T095008Z
       X-Amz-Content-Sha256:
       - cbf3696d10214f5c50a9bca4dcc815b609f32c3d2122a8724949d2e40ceee1fc
       Authorization:
@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:16:36 GMT
+      - Mon, 14 Sep 2026 09:50:09 GMT
       Content-Type:
       - text/event-stream
       Transfer-Encoding:
@@ -51,40 +51,50 @@ http_interactions:
     body:
       encoding: UTF-8
       string: |+
-        data: {"response":{"background":false,"created_at":1788956196.0,"error":null,"id":"resp_ld7kybrs3wchsgz7syhacwziyt4jxlcnweoouonypeuzrezt3rxq","incomplete_details":null,"instructions":null,"metadata":null,"model":"openai.gpt-oss-20b","object":"response","output":[],"parallel_tool_calls":true,"service_tier":"auto","status":"in_progress","temperature":1.0,"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled"},"sequence_number":0,"type":"response.created"}
+        data: {"response":{"background":false,"created_at":1789379409.0,"error":null,"id":"resp_ba3rl2wwteqiuukq7vyxbimy3dduvaa6n3jakg3yeyqjyvcugp5a","incomplete_details":null,"instructions":null,"metadata":null,"model":"openai.gpt-oss-20b","object":"response","output":[],"parallel_tool_calls":true,"service_tier":"auto","status":"in_progress","temperature":1.0,"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled"},"sequence_number":0,"type":"response.created"}
 
-        data: {"response":{"background":false,"created_at":1788956196.0,"error":null,"id":"resp_ld7kybrs3wchsgz7syhacwziyt4jxlcnweoouonypeuzrezt3rxq","incomplete_details":null,"instructions":null,"metadata":null,"model":"openai.gpt-oss-20b","object":"response","output":[],"parallel_tool_calls":true,"service_tier":"auto","status":"in_progress","temperature":1.0,"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled"},"sequence_number":1,"type":"response.in_progress"}
+        data: {"response":{"background":false,"created_at":1789379409.0,"error":null,"id":"resp_ba3rl2wwteqiuukq7vyxbimy3dduvaa6n3jakg3yeyqjyvcugp5a","incomplete_details":null,"instructions":null,"metadata":null,"model":"openai.gpt-oss-20b","object":"response","output":[],"parallel_tool_calls":true,"service_tier":"auto","status":"in_progress","temperature":1.0,"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled"},"sequence_number":1,"type":"response.in_progress"}
 
-        data: {"item":{"id":"msg_bd31ab7a191e5796","status":"in_progress","summary":[],"type":"reasoning"},"output_index":0,"sequence_number":2,"type":"response.output_item.added"}
+        data: {"item":{"id":"msg_aaca09221443ef15","status":"in_progress","summary":[],"type":"reasoning"},"output_index":0,"sequence_number":2,"type":"response.output_item.added"}
 
-        data: {"content_index":0,"item_id":"msg_bd31ab7a191e5796","output_index":0,"part":{"text":"","type":"reasoning_text"},"sequence_number":3,"type":"response.reasoning_part.added"}
+        data: {"content_index":0,"item_id":"msg_aaca09221443ef15","output_index":0,"part":{"text":"","type":"reasoning_text"},"sequence_number":3,"type":"response.reasoning_part.added"}
 
-        data: {"content_index":0,"delta":"We need to respond counting 1 to 5. Likely just output \"1 2","item_id":"msg_bd31ab7a191e5796","output_index":0,"sequence_number":4,"type":"response.reasoning_text.delta"}
+        data: {"content_index":0,"delta":"The user says \"Count from 1 to 5.\" Likely expecting the assistant to actually output 1 2","item_id":"msg_aaca09221443ef15","output_index":0,"sequence_number":4,"type":"response.reasoning_text.delta"}
 
-        data: {"content_index":0,"delta":" 3 4 5\" line or each on separate lines.","item_id":"msg_bd31ab7a191e5796","output_index":0,"sequence_number":5,"type":"response.reasoning_text.delta"}
+        data: {"content_index":0,"delta":" 3 4 5 or something. Simple. No further instructions. So should","item_id":"msg_aaca09221443ef15","output_index":0,"sequence_number":5,"type":"response.reasoning_text.delta"}
 
-        data: {"content_index":0,"delta":" Probably simple.","item_id":"msg_bd31ab7a191e5796","output_index":0,"sequence_number":6,"type":"response.reasoning_text.delta"}
+        data: {"content_index":0,"delta":" just \"1, 2, 3, 4, 5\" maybe line","item_id":"msg_aaca09221443ef15","output_index":0,"sequence_number":6,"type":"response.reasoning_text.delta"}
 
-        data: {"content_index":0,"item_id":"msg_bd31ab7a191e5796","output_index":0,"sequence_number":7,"text":"We need to respond counting 1 to 5. Likely just output \"1 2 3 4 5\" line or each on separate lines. Probably simple.","type":"response.reasoning_text.done"}
+        data: {"content_index":0,"delta":" by line. Just answer.\n\nBe mindful of instructions:","item_id":"msg_aaca09221443ef15","output_index":0,"sequence_number":7,"type":"response.reasoning_text.delta"}
 
-        data: {"content_index":0,"item_id":"msg_bd31ab7a191e5796","output_index":0,"part":{"text":"We need to respond counting 1 to 5. Likely just output \"1 2 3 4 5\" line or each on separate lines. Probably simple.","type":"reasoning_text"},"sequence_number":8,"type":"response.reasoning_part.done"}
+        data: {"content_index":0,"delta":" we can answer. So answer with a simple","item_id":"msg_aaca09221443ef15","output_index":0,"sequence_number":8,"type":"response.reasoning_text.delta"}
 
-        data: {"item":{"content":[{"text":"We need to respond counting 1 to 5. Likely just output \"1 2 3 4 5\" line or each on separate lines. Probably simple.","type":"reasoning_text"}],"id":"msg_bd31ab7a191e5796","status":"completed","summary":[],"type":"reasoning"},"output_index":0,"sequence_number":9,"type":"response.output_item.done"}
+        data: {"content_index":0,"delta":" enumeration. Probably in a single line: 1","item_id":"msg_aaca09221443ef15","output_index":0,"sequence_number":9,"type":"response.reasoning_text.delta"}
 
-        data: {"item":{"content":[],"id":"msg_9d45eca35ced3246","role":"assistant","status":"in_progress","type":"message"},"output_index":1,"sequence_number":10,"type":"response.output_item.added"}
+        data: {"content_index":0,"delta":" 2 3 4 5. Or each on new line.\n\nLet's","item_id":"msg_aaca09221443ef15","output_index":0,"sequence_number":10,"type":"response.reasoning_text.delta"}
 
-        data: {"content_index":1,"item_id":"msg_9d45eca35ced3246","output_index":1,"part":{"annotations":[],"logprobs":[],"text":"","type":"output_text"},"sequence_number":11,"type":"response.content_part.added"}
+        data: {"content_index":0,"delta":" output each number on a separate line for clarity.","item_id":"msg_aaca09221443ef15","output_index":0,"sequence_number":11,"type":"response.reasoning_text.delta"}
 
-        data: {"content_index":1,"delta":"1  \n2  \n3  \n4  \n5","item_id":"msg_9d45eca35ced3246","logprobs":[],"output_index":1,"sequence_number":12,"type":"response.output_text.delta"}
+        data: {"content_index":0,"item_id":"msg_aaca09221443ef15","output_index":0,"sequence_number":12,"text":"The user says \"Count from 1 to 5.\" Likely expecting the assistant to actually output 1 2 3 4 5 or something. Simple. No further instructions. So should just \"1, 2, 3, 4, 5\" maybe line by line. Just answer.\n\nBe mindful of instructions: we can answer. So answer with a simple enumeration. Probably in a single line: 1 2 3 4 5. Or each on new line.\n\nLet's output each number on a separate line for clarity.","type":"response.reasoning_text.done"}
 
-        data: {"content_index":1,"item_id":"msg_9d45eca35ced3246","logprobs":[],"output_index":1,"sequence_number":13,"text":"1  \n2  \n3  \n4  \n5","type":"response.output_text.done"}
+        data: {"content_index":0,"item_id":"msg_aaca09221443ef15","output_index":0,"part":{"text":"The user says \"Count from 1 to 5.\" Likely expecting the assistant to actually output 1 2 3 4 5 or something. Simple. No further instructions. So should just \"1, 2, 3, 4, 5\" maybe line by line. Just answer.\n\nBe mindful of instructions: we can answer. So answer with a simple enumeration. Probably in a single line: 1 2 3 4 5. Or each on new line.\n\nLet's output each number on a separate line for clarity.","type":"reasoning_text"},"sequence_number":13,"type":"response.reasoning_part.done"}
 
-        data: {"content_index":1,"item_id":"msg_9d45eca35ced3246","output_index":1,"part":{"annotations":[],"text":"1  \n2  \n3  \n4  \n5","type":"output_text"},"sequence_number":14,"type":"response.content_part.done"}
+        data: {"item":{"content":[{"text":"The user says \"Count from 1 to 5.\" Likely expecting the assistant to actually output 1 2 3 4 5 or something. Simple. No further instructions. So should just \"1, 2, 3, 4, 5\" maybe line by line. Just answer.\n\nBe mindful of instructions: we can answer. So answer with a simple enumeration. Probably in a single line: 1 2 3 4 5. Or each on new line.\n\nLet's output each number on a separate line for clarity.","type":"reasoning_text"}],"id":"msg_aaca09221443ef15","status":"completed","summary":[],"type":"reasoning"},"output_index":0,"sequence_number":14,"type":"response.output_item.done"}
 
-        data: {"item":{"content":[{"annotations":[],"text":"1  \n2  \n3  \n4  \n5","type":"output_text"}],"id":"msg_9d45eca35ced3246","role":"assistant","status":"completed","type":"message"},"output_index":1,"sequence_number":15,"type":"response.output_item.done"}
+        data: {"item":{"content":[],"id":"msg_bff85f45a6b5cb74","role":"assistant","status":"in_progress","type":"message"},"output_index":1,"sequence_number":15,"type":"response.output_item.added"}
 
-        data: {"response":{"background":false,"created_at":1788956196.0,"error":null,"id":"resp_ld7kybrs3wchsgz7syhacwziyt4jxlcnweoouonypeuzrezt3rxq","incomplete_details":null,"instructions":null,"metadata":null,"model":"openai.gpt-oss-20b","object":"response","output":[{"content":[{"text":"We need to respond counting 1 to 5. Likely just output \"1 2 3 4 5\" line or each on separate lines. Probably simple.","type":"reasoning_text"}],"id":"msg_bd31ab7a191e5796","status":"completed","summary":[],"type":"reasoning"},{"content":[{"annotations":[],"text":"1  \n2  \n3  \n4  \n5","type":"output_text"}],"id":"msg_9d45eca35ced3246","role":"assistant","status":"completed","type":"message"}],"parallel_tool_calls":true,"service_tier":"auto","status":"completed","temperature":1.0,"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":{"input_tokens":75,"input_tokens_details":{"cached_tokens":0},"output_tokens":55,"output_tokens_details":{"reasoning_tokens":37},"total_tokens":130}},"sequence_number":16,"type":"response.completed"}
+        data: {"content_index":1,"item_id":"msg_bff85f45a6b5cb74","output_index":1,"part":{"annotations":[],"logprobs":[],"text":"","type":"output_text"},"sequence_number":16,"type":"response.content_part.added"}
 
-  recorded_at: Wed, 09 Sep 2026 12:16:37 GMT
+        data: {"content_index":1,"delta":"1  \n2  \n3  \n4  \n5","item_id":"msg_bff85f45a6b5cb74","logprobs":[],"output_index":1,"sequence_number":17,"type":"response.output_text.delta"}
+
+        data: {"content_index":1,"item_id":"msg_bff85f45a6b5cb74","logprobs":[],"output_index":1,"sequence_number":18,"text":"1  \n2  \n3  \n4  \n5","type":"response.output_text.done"}
+
+        data: {"content_index":1,"item_id":"msg_bff85f45a6b5cb74","output_index":1,"part":{"annotations":[],"text":"1  \n2  \n3  \n4  \n5","type":"output_text"},"sequence_number":19,"type":"response.content_part.done"}
+
+        data: {"item":{"content":[{"annotations":[],"text":"1  \n2  \n3  \n4  \n5","type":"output_text"}],"id":"msg_bff85f45a6b5cb74","role":"assistant","status":"completed","type":"message"},"output_index":1,"sequence_number":20,"type":"response.output_item.done"}
+
+        data: {"response":{"background":false,"created_at":1789379409.0,"error":null,"id":"resp_ba3rl2wwteqiuukq7vyxbimy3dduvaa6n3jakg3yeyqjyvcugp5a","incomplete_details":null,"instructions":null,"metadata":null,"model":"openai.gpt-oss-20b","object":"response","output":[{"content":[{"text":"The user says \"Count from 1 to 5.\" Likely expecting the assistant to actually output 1 2 3 4 5 or something. Simple. No further instructions. So should just \"1, 2, 3, 4, 5\" maybe line by line. Just answer.\n\nBe mindful of instructions: we can answer. So answer with a simple enumeration. Probably in a single line: 1 2 3 4 5. Or each on new line.\n\nLet's output each number on a separate line for clarity.","type":"reasoning_text"}],"id":"msg_aaca09221443ef15","status":"completed","summary":[],"type":"reasoning"},{"content":[{"annotations":[],"text":"1  \n2  \n3  \n4  \n5","type":"output_text"}],"id":"msg_bff85f45a6b5cb74","role":"assistant","status":"completed","type":"message"}],"parallel_tool_calls":true,"service_tier":"auto","status":"completed","temperature":1.0,"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":{"input_tokens":75,"input_tokens_details":{"cached_tokens":0},"output_tokens":134,"output_tokens_details":{"reasoning_tokens":116},"total_tokens":209}},"sequence_number":21,"type":"response.completed"}
+
+  recorded_at: Mon, 14 Sep 2026 09:50:11 GMT
 recorded_with: VCR 6.4.0
 ...

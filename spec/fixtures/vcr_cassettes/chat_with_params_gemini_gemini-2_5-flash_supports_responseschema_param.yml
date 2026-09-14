@@ -32,7 +32,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:15:41 GMT
+      - Mon, 14 Sep 2026 09:49:13 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -42,7 +42,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=808
+      - gfet4t7; dur=760
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -56,7 +56,7 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "{\"result\": 8}"
+                    "text": "{\n  \"result\": 8\n}"
                   }
                 ],
                 "role": "model"
@@ -67,19 +67,19 @@ http_interactions:
           ],
           "usageMetadata": {
             "promptTokenCount": 22,
-            "candidatesTokenCount": 6,
-            "totalTokenCount": 88,
+            "candidatesTokenCount": 10,
+            "totalTokenCount": 73,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 22
               }
             ],
-            "thoughtsTokenCount": 60,
+            "thoughtsTokenCount": 41,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "7E2haqTRN9-W3boP9raS4Qo"
+          "responseId": "GMOnapD3Hu6VkdUPouyM6AY"
         }
-  recorded_at: Wed, 09 Sep 2026 12:15:41 GMT
+  recorded_at: Mon, 14 Sep 2026 09:49:13 GMT
 recorded_with: VCR 6.4.0

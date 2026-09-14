@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:15:52 GMT
+      - Mon, 14 Sep 2026 09:49:47 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -48,7 +48,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '1759'
+      - '4889'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -75,15 +75,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "resp_0c8b1ca92da59500016aa14df7110c87d29a914016b2d4f81f",
+          "id": "resp_071fc7c7105cb1da016aa7c3361e9887d28a9c511610f0050c",
           "object": "response",
-          "created_at": 1788956151,
+          "created_at": 1789379382,
           "status": "completed",
           "background": false,
           "billing": {
             "payer": "developer"
           },
-          "completed_at": 1788956152,
+          "completed_at": 1789379386,
           "error": null,
           "frequency_penalty": 0.0,
           "incomplete_details": null,
@@ -94,7 +94,7 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "msg_0c8b1ca92da59500016aa14df7a2a087d29768935a5c252b01",
+              "id": "msg_071fc7c7105cb1da016aa7c3365bc887d2a625d0f774a15546",
               "type": "message",
               "status": "completed",
               "content": [
@@ -102,7 +102,7 @@ http_interactions:
                   "type": "output_text",
                   "annotations": [],
                   "logprobs": [],
-                  "text": "I find one of the most elegant features of Ruby to be its **blocks and iterators**. They provide a very flexible and readable way to handle collections, allowing developers to write concise code. For example, methods like `each`, `map`, and `select` utilize blocks, enabling elegant iteration and transformation of data structures.\n\nHere's a quick example:\n\n```ruby\n[1, 2, 3, 4, 5].map { |n| n * 2 }\n# => [2, 4, 6, 8, 10]\n```\n\nThis succinct syntax makes code easy to read and write, embodying Ruby's philosophy of programmer happiness and productivity. Do you have a favorite Ruby feature?"
+                  "text": "I find Ruby's **blocks and iterators** to be particularly elegant and powerful. They allow for concise and readable code when performing operations on collections. For example, using `each`, `map`, or `select` with blocks makes iteration straightforward:\n\n```ruby\n[1, 2, 3].map { |x| x * 2 }\n# => [2, 4, 6]\n```\n\nThis combination of syntax and flexibility is a hallmark of Ruby's design, enabling developers to write expressive and maintainable code. Do you have a favorite Ruby feature?"
                 }
               ],
               "role": "assistant"
@@ -157,14 +157,14 @@ http_interactions:
               "cache_write_tokens": 0,
               "cached_tokens": 0
             },
-            "output_tokens": 149,
+            "output_tokens": 118,
             "output_tokens_details": {
               "reasoning_tokens": 0
             },
-            "total_tokens": 162
+            "total_tokens": 131
           },
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 09 Sep 2026 12:15:52 GMT
+  recorded_at: Mon, 14 Sep 2026 09:49:47 GMT
 recorded_with: VCR 6.4.0

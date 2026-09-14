@@ -20,14 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Date:
+      - Mon, 14 Sep 2026 09:46:33 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
-      Pragma:
-      - no-cache
-      Date:
-      - Wed, 09 Sep 2026 12:12:25 GMT
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
       Content-Type:
       - application/json; charset=utf-8
       Vary:
@@ -56,7 +56,7 @@ http_interactions:
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Wed, 09 Sep 2026 12:12:25 GMT
+  recorded_at: Mon, 14 Sep 2026 09:46:34 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:streamGenerateContent?alt=sse
@@ -94,7 +94,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 09 Sep 2026 12:12:26 GMT
+      - Mon, 14 Sep 2026 09:46:34 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -109,21 +109,21 @@ http_interactions:
       encoding: UTF-8
       string: "data: {\"candidates\": [{\"content\": {\"role\": \"model\",\"parts\":
         [{\"functionCall\": {\"name\": \"weather\",\"args\": {\"latitude\": \"52.5200\",\"longitude\":
-        \"13.4050\"}},\"thoughtSignature\": \"CiwBjz1rX9FKvOuPF2bvCn6HwDnV5xlgOgKGkASoQAiRBf3uZx2508MdkxRjgwqGAQGPPWtfrYpvWhUSiKk13SBdkGLbCiC0zZ399r8gLEFpimwnw4ePWgSie8KVPh9WMmJTYG0gDy/QDA8O5LTIzHTz/UfoMt3b2/twsUpHD99Nv6wnObkpCOypbTFgUq/BlSgtM3oS8P2uJmecjtSiIBEKy9Hfs4BsJppIpN7GfOA6x2v+64PyCnIBjz1rXwDvZBJC1Xxt/4GmTsRa0YwvvyDI53VoLQngfvU/LJCmQV4/MxGlLpBSwFjuXLToxjnuehMZeTyUweRozD2ZqwDoReohDAViwYnylbXaBi0KMgE/IOCNUmTzr3wC3AlN2PNT/kBWUv4d+09wf8oKiwEBjz1rXxb+emeArc7hlAczuA5GhhX7NaHYH66MNSaI/9wYbDzCvG5TiUW1shUjzaY4dutmr5yi/SsP3YWzoDbq0DfUdtTq7ings90qKEtmnMgA3XCmF0teVsD5QyEX8wqwvRNI9VBWYnl1qw/RMuw0EcFX7RXdY3JsNqSWgPeqAl6xB/Nin0KZBzam\"}]},\"finishReason\":
+        \"13.4050\"}},\"thoughtSignature\": \"CiwBjz1rXxfaRZAngKX9RVCiDCNrd+7rYzV3rfH/xLjaxpzgqcmSEltT4vVZkAqIAQGPPWtfvBx8AUwgNujkY+y+RgbZsFG06osLQ5S1i1x6VFUv+RwkE+xeaHAnaj7ibNW6ugwk2f5YZQLB5bz5Ua1c5x1RzRFCXhrtyH0qfFz8cP9Fg18Xz7MoUXn2nGmErTuW4J/kNhFnNTekB7xZ65fwSjJBeNfhBs4+UJh9hTMASSHVJCk+lSwKcwGPPWtfbUIAEKQF3YvWrm+BGb5/QYPVVnl87XzEHUi403bLyabYquBbdJbc/nCqVmf9YAM0p7s18njhUov0cG+qD5Uxtwy4dJ05Oo9YCyoROxU6608Ew9+WWHOnEVENlyxEur7TXbD0Bd8OWj6+EFiiMMgKhgEBjz1rX8WnJyxIWhHZ3Hh6161n4oN4yJyXMdpXEknwoLIF4t2lHjc0Bqp+6WwWErOghtW0TLd4BBygPZ6AfR5lbnjGXZivXnf5uHK5VY9RpbShtIQIuzTe+f8+PB8a5hcmFqVtIUfitf1eCWpbbieIjQbn4k66cTsCsjrvnqY5qu5tP/JrJw==\"}]},\"finishReason\":
         \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 33,\"candidatesTokenCount\":
-        17,\"totalTokenCount\": 111,\"trafficType\": \"ON_DEMAND\",\"promptTokensDetails\":
+        17,\"totalTokenCount\": 113,\"trafficType\": \"ON_DEMAND\",\"promptTokensDetails\":
         [{\"modality\": \"TEXT\",\"tokenCount\": 33}],\"candidatesTokensDetails\":
-        [{\"modality\": \"TEXT\",\"tokenCount\": 17}],\"thoughtsTokenCount\": 61},\"modelVersion\":
-        \"gemini-2.5-flash\",\"createTime\": \"2026-09-09T12:12:25.561723Z\",\"responseId\":
-        \"KU2harukIsCN-eQPiKmB6AU\"}\r\n\r\n"
-  recorded_at: Wed, 09 Sep 2026 12:12:26 GMT
+        [{\"modality\": \"TEXT\",\"tokenCount\": 17}],\"thoughtsTokenCount\": 63},\"modelVersion\":
+        \"gemini-2.5-flash\",\"createTime\": \"2026-09-14T09:46:34.098345Z\",\"responseId\":
+        \"esKnaqmABrKNxdQPzf32yQ8\"}\r\n\r\n"
+  recorded_at: Mon, 14 Sep 2026 09:46:34 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:streamGenerateContent?alt=sse
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What''s the weather in
-        Berlin? (52.5200, 13.4050)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"latitude":"52.5200","longitude":"13.4050"}},"thoughtSignature":"CiwBjz1rX9FKvOuPF2bvCn6HwDnV5xlgOgKGkASoQAiRBf3uZx2508MdkxRjgwqGAQGPPWtfrYpvWhUSiKk13SBdkGLbCiC0zZ399r8gLEFpimwnw4ePWgSie8KVPh9WMmJTYG0gDy/QDA8O5LTIzHTz/UfoMt3b2/twsUpHD99Nv6wnObkpCOypbTFgUq/BlSgtM3oS8P2uJmecjtSiIBEKy9Hfs4BsJppIpN7GfOA6x2v+64PyCnIBjz1rXwDvZBJC1Xxt/4GmTsRa0YwvvyDI53VoLQngfvU/LJCmQV4/MxGlLpBSwFjuXLToxjnuehMZeTyUweRozD2ZqwDoReohDAViwYnylbXaBi0KMgE/IOCNUmTzr3wC3AlN2PNT/kBWUv4d+09wf8oKiwEBjz1rXxb+emeArc7hlAczuA5GhhX7NaHYH66MNSaI/9wYbDzCvG5TiUW1shUjzaY4dutmr5yi/SsP3YWzoDbq0DfUdtTq7ings90qKEtmnMgA3XCmF0teVsD5QyEX8wqwvRNI9VBWYnl1qw/RMuw0EcFX7RXdY3JsNqSWgPeqAl6xB/Nin0KZBzam"}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
+        Berlin? (52.5200, 13.4050)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"latitude":"52.5200","longitude":"13.4050"}},"thoughtSignature":"CiwBjz1rXxfaRZAngKX9RVCiDCNrd+7rYzV3rfH/xLjaxpzgqcmSEltT4vVZkAqIAQGPPWtfvBx8AUwgNujkY+y+RgbZsFG06osLQ5S1i1x6VFUv+RwkE+xeaHAnaj7ibNW6ugwk2f5YZQLB5bz5Ua1c5x1RzRFCXhrtyH0qfFz8cP9Fg18Xz7MoUXn2nGmErTuW4J/kNhFnNTekB7xZ65fwSjJBeNfhBs4+UJh9hTMASSHVJCk+lSwKcwGPPWtfbUIAEKQF3YvWrm+BGb5/QYPVVnl87XzEHUi403bLyabYquBbdJbc/nCqVmf9YAM0p7s18njhUov0cG+qD5Uxtwy4dJ05Oo9YCyoROxU6608Ew9+WWHOnEVENlyxEur7TXbD0Bd8OWj6+EFiiMMgKhgEBjz1rX8WnJyxIWhHZ3Hh6161n4oN4yJyXMdpXEknwoLIF4t2lHjc0Bqp+6WwWErOghtW0TLd4BBygPZ6AfR5lbnjGXZivXnf5uHK5VY9RpbShtIQIuzTe+f8+PB8a5hcmFqVtIUfitf1eCWpbbieIjQbn4k66cTsCsjrvnqY5qu5tP/JrJw=="}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}}}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
         current weather for a location","parametersJsonSchema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
@@ -155,7 +155,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 09 Sep 2026 12:12:26 GMT
+      - Mon, 14 Sep 2026 09:46:35 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -169,17 +169,17 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ZGF0YTogeyJjYW5kaWRhdGVzIjogW3siY29udGVudCI6IHsicm9sZSI6ICJtb2RlbCIsInBhcnRzIjogW3sidGV4dCI6ICJUaGUgY3VycmVudCB3ZWF0aGVyIGluIn1dfX1dLCJ1c2FnZU1ldGFkYXRhIjogeyJ0cmFmZmljVHlwZSI6ICJPTl9ERU1BTkQifSwibW9kZWxWZXJzaW9uIjogImdlbWluaS0yLjUtZmxhc2giLCJjcmVhdGVUaW1lIjogIjIwMjYtMDktMDlUMTI6MTI6MjYuNTI3NDIxWiIsInJlc3BvbnNlSWQiOiAiS2syaGFyMllJUHVWdV9FUDJ1cXpnUWcifQ0KDQpkYXRhOiB7ImNhbmRpZGF0ZXMiOiBbeyJjb250ZW50IjogeyJyb2xlIjogIm1vZGVsIiwicGFydHMiOiBbeyJ0ZXh0IjogIiBCZXJsaW4gaXMgMTXCsEMsIHdpdGggd2luZCBhdCAxMCBrbS9oLiJ9XX0sImZpbmlzaFJlYXNvbiI6ICJTVE9QIn1dLCJ1c2FnZU1ldGFkYXRhIjogeyJwcm9tcHRUb2tlbkNvdW50IjogMTUxLCJjYW5kaWRhdGVzVG9rZW5Db3VudCI6IDIyLCJ0b3RhbFRva2VuQ291bnQiOiAxNzMsInRyYWZmaWNUeXBlIjogIk9OX0RFTUFORCIsInByb21wdFRva2Vuc0RldGFpbHMiOiBbeyJtb2RhbGl0eSI6ICJURVhUIiwidG9rZW5Db3VudCI6IDE1MX1dLCJjYW5kaWRhdGVzVG9rZW5zRGV0YWlscyI6IFt7Im1vZGFsaXR5IjogIlRFWFQiLCJ0b2tlbkNvdW50IjogMjJ9XX0sIm1vZGVsVmVyc2lvbiI6ICJnZW1pbmktMi41LWZsYXNoIiwiY3JlYXRlVGltZSI6ICIyMDI2LTA5LTA5VDEyOjEyOjI2LjUyNzQyMVoiLCJyZXNwb25zZUlkIjogIktrMmhhcjJZSVB1VnVfRVAydXF6Z1FnIn0NCg0K
-  recorded_at: Wed, 09 Sep 2026 12:12:26 GMT
+        ZGF0YTogeyJjYW5kaWRhdGVzIjogW3siY29udGVudCI6IHsicm9sZSI6ICJtb2RlbCIsInBhcnRzIjogW3sidGV4dCI6ICJUaGUgd2VhdGhlciBpbiBCZXJsaW4gaXMgMTUifV19fV0sInVzYWdlTWV0YWRhdGEiOiB7InRyYWZmaWNUeXBlIjogIk9OX0RFTUFORCJ9LCJtb2RlbFZlcnNpb24iOiAiZ2VtaW5pLTIuNS1mbGFzaCIsImNyZWF0ZVRpbWUiOiAiMjAyNi0wOS0xNFQwOTo0NjozNC45NzM2MjRaIiwicmVzcG9uc2VJZCI6ICJlc0tuYXJpMk81V3U3YlFQb01EM3dBMCJ9DQoNCmRhdGE6IHsiY2FuZGlkYXRlcyI6IFt7ImNvbnRlbnQiOiB7InJvbGUiOiAibW9kZWwiLCJwYXJ0cyI6IFt7InRleHQiOiAiwrBDIHdpdGggYSB3aW5kIHNwZWVkIG9mIDEwIGttL2guIn1dfSwiZmluaXNoUmVhc29uIjogIlNUT1AifV0sInVzYWdlTWV0YWRhdGEiOiB7InByb21wdFRva2VuQ291bnQiOiAxNTMsImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogMjIsInRvdGFsVG9rZW5Db3VudCI6IDE3NSwidHJhZmZpY1R5cGUiOiAiT05fREVNQU5EIiwicHJvbXB0VG9rZW5zRGV0YWlscyI6IFt7Im1vZGFsaXR5IjogIlRFWFQiLCJ0b2tlbkNvdW50IjogMTUzfV0sImNhbmRpZGF0ZXNUb2tlbnNEZXRhaWxzIjogW3sibW9kYWxpdHkiOiAiVEVYVCIsInRva2VuQ291bnQiOiAyMn1dfSwibW9kZWxWZXJzaW9uIjogImdlbWluaS0yLjUtZmxhc2giLCJjcmVhdGVUaW1lIjogIjIwMjYtMDktMTRUMDk6NDY6MzQuOTczNjI0WiIsInJlc3BvbnNlSWQiOiAiZXNLbmFyaTJPNVd1N2JRUG9NRDN3QTAifQ0KDQo=
+  recorded_at: Mon, 14 Sep 2026 09:46:36 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:streamGenerateContent?alt=sse
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What''s the weather in
-        Berlin? (52.5200, 13.4050)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"latitude":"52.5200","longitude":"13.4050"}},"thoughtSignature":"CiwBjz1rX9FKvOuPF2bvCn6HwDnV5xlgOgKGkASoQAiRBf3uZx2508MdkxRjgwqGAQGPPWtfrYpvWhUSiKk13SBdkGLbCiC0zZ399r8gLEFpimwnw4ePWgSie8KVPh9WMmJTYG0gDy/QDA8O5LTIzHTz/UfoMt3b2/twsUpHD99Nv6wnObkpCOypbTFgUq/BlSgtM3oS8P2uJmecjtSiIBEKy9Hfs4BsJppIpN7GfOA6x2v+64PyCnIBjz1rXwDvZBJC1Xxt/4GmTsRa0YwvvyDI53VoLQngfvU/LJCmQV4/MxGlLpBSwFjuXLToxjnuehMZeTyUweRozD2ZqwDoReohDAViwYnylbXaBi0KMgE/IOCNUmTzr3wC3AlN2PNT/kBWUv4d+09wf8oKiwEBjz1rXxb+emeArc7hlAczuA5GhhX7NaHYH66MNSaI/9wYbDzCvG5TiUW1shUjzaY4dutmr5yi/SsP3YWzoDbq0DfUdtTq7ings90qKEtmnMgA3XCmF0teVsD5QyEX8wqwvRNI9VBWYnl1qw/RMuw0EcFX7RXdY3JsNqSWgPeqAl6xB/Nin0KZBzam"}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
+        Berlin? (52.5200, 13.4050)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"latitude":"52.5200","longitude":"13.4050"}},"thoughtSignature":"CiwBjz1rXxfaRZAngKX9RVCiDCNrd+7rYzV3rfH/xLjaxpzgqcmSEltT4vVZkAqIAQGPPWtfvBx8AUwgNujkY+y+RgbZsFG06osLQ5S1i1x6VFUv+RwkE+xeaHAnaj7ibNW6ugwk2f5YZQLB5bz5Ua1c5x1RzRFCXhrtyH0qfFz8cP9Fg18Xz7MoUXn2nGmErTuW4J/kNhFnNTekB7xZ65fwSjJBeNfhBs4+UJh9hTMASSHVJCk+lSwKcwGPPWtfbUIAEKQF3YvWrm+BGb5/QYPVVnl87XzEHUi403bLyabYquBbdJbc/nCqVmf9YAM0p7s18njhUov0cG+qD5Uxtwy4dJ05Oo9YCyoROxU6608Ew9+WWHOnEVENlyxEur7TXbD0Bd8OWj6+EFiiMMgKhgEBjz1rX8WnJyxIWhHZ3Hh6161n4oN4yJyXMdpXEknwoLIF4t2lHjc0Bqp+6WwWErOghtW0TLd4BBygPZ6AfR5lbnjGXZivXnf5uHK5VY9RpbShtIQIuzTe+f8+PB8a5hcmFqVtIUfitf1eCWpbbieIjQbn4k66cTsCsjrvnqY5qu5tP/JrJw=="}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}}}]},{"role":"model","parts":[{"text":"The
-        current weather in Berlin is 15°C, with wind at 10 km/h."}]},{"role":"user","parts":[{"text":"What''s
+        weather in Berlin is 15°C with a wind speed of 10 km/h."}]},{"role":"user","parts":[{"text":"What''s
         the weather in Paris? (48.8575, 2.3514)"}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
         current weather for a location","parametersJsonSchema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
@@ -211,7 +211,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 09 Sep 2026 12:12:27 GMT
+      - Mon, 14 Sep 2026 09:46:37 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -225,25 +225,25 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "data: {\"candidates\": [{\"content\": {\"role\": \"model\",\"parts\":
-        [{\"functionCall\": {\"name\": \"weather\",\"args\": {\"longitude\": \"2.3514\",\"latitude\":
-        \"48.8575\"}},\"thoughtSignature\": \"CiwBjz1rX3PJY06AvRMWGnz1RZKACen9/sVQvZ5XC+FFCLCT6LJqCFRZBUS22QqIAQGPPWtfb66f2Gzw48/KDfMhqi+tzyP1sUduJMX1ULJRLDq8qeu1BKaSQUIBLQaLkRJ3UYaylC4KlZo5o61oe9JeZ/1e4R/+YeP9R2PujJcnw/zk2tRVCfOlb3wT2HVisFe1DNMSk8ehx32Xp2zHKLvVkSTjsljaiZImyDUkGwoszQ9reJSq5TQKfwGPPWtfOxsfBnQbuSt1bsUjMHzpLBKghCpmO9zupo/Fk5ueSohk+tE8D42BTCaJXDiKVEfDldya1RM/KWp3X+X2AbVkb9mkAumzDPJHrOr4GOmxEX4dFbTJcY2Z1Fm02nxrOazKHQB0CAdTg/lSVY4qm3q6KUHyb1Mtswm+OgMKWgGPPWtfyWUVRW6GrB9YIqy1O139zBFa3+adjVLGrUww1dt30JcbdU/niKIFJscENfaBqGdNYmWlGI7NrhIAxhrZVplSustckE+9tyb0Wzy+0QfvPJydiVfW7A==\"}]},\"finishReason\":
+        [{\"functionCall\": {\"name\": \"weather\",\"args\": {\"latitude\": \"48.8575\",\"longitude\":
+        \"2.3514\"}},\"thoughtSignature\": \"CjcBjz1rXx/I2DgDFARR0BrqdNHT6RTnEunE7txpRjRoHZDr0yAmGImHZpr1zK+GDdjlyvkEjMv4CnABjz1rXxQSu7rmMveXSZeoJLsGiqxqbGmw5Nztz12qehsy1gm+DPF9YkCfBr8r/tvVpifcyqtekF6GZjkHR88Kx2xcEQH5b5EPKFIvG3dZRTdbo6brdBLIbG13ykqWna4jXmngOuFMFdZ0ROmMovUfCmwBjz1rX8HY+2JIwna9E2ubsiSBTuwLtPcRtyOZwtOIUi7g/1lrNQM7oZBTxUFKDbJdsv+kk9+Ugh2ZALz3tTAlxg0RJ2amGIGaDls96PVhJ62i/l/ZJjdCC3Y2A6fwkkUcSp3yDUtsDtglxDQKWgGPPWtfxtyaPPxNhUJY+nMWghnlfDd4psS7CJLO6lkKm6wkEtAjBK60kLGVBQU3cIGX57RQXyYZ26XbvEYQNtsJtU5ueeY/TpxniiPQNh/XsyAqx6tDNIQzcA==\"}]},\"finishReason\":
         \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 137,\"candidatesTokenCount\":
-        16,\"totalTokenCount\": 206,\"trafficType\": \"ON_DEMAND\",\"promptTokensDetails\":
+        16,\"totalTokenCount\": 200,\"trafficType\": \"ON_DEMAND\",\"promptTokensDetails\":
         [{\"modality\": \"TEXT\",\"tokenCount\": 137}],\"candidatesTokensDetails\":
-        [{\"modality\": \"TEXT\",\"tokenCount\": 16}],\"thoughtsTokenCount\": 53},\"modelVersion\":
-        \"gemini-2.5-flash\",\"createTime\": \"2026-09-09T12:12:27.080839Z\",\"responseId\":
-        \"K02hasf3BPSL1PIPmJ-S8Ag\"}\r\n\r\n"
-  recorded_at: Wed, 09 Sep 2026 12:12:28 GMT
+        [{\"modality\": \"TEXT\",\"tokenCount\": 16}],\"thoughtsTokenCount\": 47},\"modelVersion\":
+        \"gemini-2.5-flash\",\"createTime\": \"2026-09-14T09:46:36.093951Z\",\"responseId\":
+        \"fMKnav_dBfuwxdQPw-bcoAM\"}\r\n\r\n"
+  recorded_at: Mon, 14 Sep 2026 09:46:37 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:streamGenerateContent?alt=sse
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What''s the weather in
-        Berlin? (52.5200, 13.4050)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"latitude":"52.5200","longitude":"13.4050"}},"thoughtSignature":"CiwBjz1rX9FKvOuPF2bvCn6HwDnV5xlgOgKGkASoQAiRBf3uZx2508MdkxRjgwqGAQGPPWtfrYpvWhUSiKk13SBdkGLbCiC0zZ399r8gLEFpimwnw4ePWgSie8KVPh9WMmJTYG0gDy/QDA8O5LTIzHTz/UfoMt3b2/twsUpHD99Nv6wnObkpCOypbTFgUq/BlSgtM3oS8P2uJmecjtSiIBEKy9Hfs4BsJppIpN7GfOA6x2v+64PyCnIBjz1rXwDvZBJC1Xxt/4GmTsRa0YwvvyDI53VoLQngfvU/LJCmQV4/MxGlLpBSwFjuXLToxjnuehMZeTyUweRozD2ZqwDoReohDAViwYnylbXaBi0KMgE/IOCNUmTzr3wC3AlN2PNT/kBWUv4d+09wf8oKiwEBjz1rXxb+emeArc7hlAczuA5GhhX7NaHYH66MNSaI/9wYbDzCvG5TiUW1shUjzaY4dutmr5yi/SsP3YWzoDbq0DfUdtTq7ings90qKEtmnMgA3XCmF0teVsD5QyEX8wqwvRNI9VBWYnl1qw/RMuw0EcFX7RXdY3JsNqSWgPeqAl6xB/Nin0KZBzam"}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
+        Berlin? (52.5200, 13.4050)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"latitude":"52.5200","longitude":"13.4050"}},"thoughtSignature":"CiwBjz1rXxfaRZAngKX9RVCiDCNrd+7rYzV3rfH/xLjaxpzgqcmSEltT4vVZkAqIAQGPPWtfvBx8AUwgNujkY+y+RgbZsFG06osLQ5S1i1x6VFUv+RwkE+xeaHAnaj7ibNW6ugwk2f5YZQLB5bz5Ua1c5x1RzRFCXhrtyH0qfFz8cP9Fg18Xz7MoUXn2nGmErTuW4J/kNhFnNTekB7xZ65fwSjJBeNfhBs4+UJh9hTMASSHVJCk+lSwKcwGPPWtfbUIAEKQF3YvWrm+BGb5/QYPVVnl87XzEHUi403bLyabYquBbdJbc/nCqVmf9YAM0p7s18njhUov0cG+qD5Uxtwy4dJ05Oo9YCyoROxU6608Ew9+WWHOnEVENlyxEur7TXbD0Bd8OWj6+EFiiMMgKhgEBjz1rX8WnJyxIWhHZ3Hh6161n4oN4yJyXMdpXEknwoLIF4t2lHjc0Bqp+6WwWErOghtW0TLd4BBygPZ6AfR5lbnjGXZivXnf5uHK5VY9RpbShtIQIuzTe+f8+PB8a5hcmFqVtIUfitf1eCWpbbieIjQbn4k66cTsCsjrvnqY5qu5tP/JrJw=="}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}}}]},{"role":"model","parts":[{"text":"The
-        current weather in Berlin is 15°C, with wind at 10 km/h."}]},{"role":"user","parts":[{"text":"What''s
-        the weather in Paris? (48.8575, 2.3514)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"longitude":"2.3514","latitude":"48.8575"}},"thoughtSignature":"CiwBjz1rX3PJY06AvRMWGnz1RZKACen9/sVQvZ5XC+FFCLCT6LJqCFRZBUS22QqIAQGPPWtfb66f2Gzw48/KDfMhqi+tzyP1sUduJMX1ULJRLDq8qeu1BKaSQUIBLQaLkRJ3UYaylC4KlZo5o61oe9JeZ/1e4R/+YeP9R2PujJcnw/zk2tRVCfOlb3wT2HVisFe1DNMSk8ehx32Xp2zHKLvVkSTjsljaiZImyDUkGwoszQ9reJSq5TQKfwGPPWtfOxsfBnQbuSt1bsUjMHzpLBKghCpmO9zupo/Fk5ueSohk+tE8D42BTCaJXDiKVEfDldya1RM/KWp3X+X2AbVkb9mkAumzDPJHrOr4GOmxEX4dFbTJcY2Z1Fm02nxrOazKHQB0CAdTg/lSVY4qm3q6KUHyb1Mtswm+OgMKWgGPPWtfyWUVRW6GrB9YIqy1O139zBFa3+adjVLGrUww1dt30JcbdU/niKIFJscENfaBqGdNYmWlGI7NrhIAxhrZVplSustckE+9tyb0Wzy+0QfvPJydiVfW7A=="}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
+        weather in Berlin is 15°C with a wind speed of 10 km/h."}]},{"role":"user","parts":[{"text":"What''s
+        the weather in Paris? (48.8575, 2.3514)"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"latitude":"48.8575","longitude":"2.3514"}},"thoughtSignature":"CjcBjz1rXx/I2DgDFARR0BrqdNHT6RTnEunE7txpRjRoHZDr0yAmGImHZpr1zK+GDdjlyvkEjMv4CnABjz1rXxQSu7rmMveXSZeoJLsGiqxqbGmw5Nztz12qehsy1gm+DPF9YkCfBr8r/tvVpifcyqtekF6GZjkHR88Kx2xcEQH5b5EPKFIvG3dZRTdbo6brdBLIbG13ykqWna4jXmngOuFMFdZ0ROmMovUfCmwBjz1rX8HY+2JIwna9E2ubsiSBTuwLtPcRtyOZwtOIUi7g/1lrNQM7oZBTxUFKDbJdsv+kk9+Ugh2ZALz3tTAlxg0RJ2amGIGaDls96PVhJ62i/l/ZJjdCC3Y2A6fwkkUcSp3yDUtsDtglxDQKWgGPPWtfxtyaPPxNhUJY+nMWghnlfDd4psS7CJLO6lkKm6wkEtAjBK60kLGVBQU3cIGX57RQXyYZ26XbvEYQNtsJtU5ueeY/TpxniiPQNh/XsyAqx6tDNIQzcA=="}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
         weather at 48.8575, 2.3514: 15°C, Wind: 10 km/h"}]}}}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
         current weather for a location","parametersJsonSchema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
@@ -275,7 +275,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 09 Sep 2026 12:12:28 GMT
+      - Mon, 14 Sep 2026 09:46:37 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -289,6 +289,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ZGF0YTogeyJjYW5kaWRhdGVzIjogW3siY29udGVudCI6IHsicm9sZSI6ICJtb2RlbCIsInBhcnRzIjogW3sidGV4dCI6ICJUaGUgY3VycmVudCB3ZWF0aGVyIGluIFBhcmlzIGlzIn1dfX1dLCJ1c2FnZU1ldGFkYXRhIjogeyJ0cmFmZmljVHlwZSI6ICJPTl9ERU1BTkQifSwibW9kZWxWZXJzaW9uIjogImdlbWluaS0yLjUtZmxhc2giLCJjcmVhdGVUaW1lIjogIjIwMjYtMDktMDlUMTI6MTI6MjguMDgzOTgxWiIsInJlc3BvbnNlSWQiOiAiTEUyaGFvMlFCZXk3eF9BUDVlSDBtQVEifQ0KDQpkYXRhOiB7ImNhbmRpZGF0ZXMiOiBbeyJjb250ZW50IjogeyJyb2xlIjogIm1vZGVsIiwicGFydHMiOiBbeyJ0ZXh0IjogIiAxNcKwQywgd2l0aCB3aW5kIGF0IDEwIGttL2guIn1dfSwiZmluaXNoUmVhc29uIjogIlNUT1AifV0sInVzYWdlTWV0YWRhdGEiOiB7InByb21wdFRva2VuQ291bnQiOiAzMDYsImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogMjIsInRvdGFsVG9rZW5Db3VudCI6IDMyOCwidHJhZmZpY1R5cGUiOiAiT05fREVNQU5EIiwicHJvbXB0VG9rZW5zRGV0YWlscyI6IFt7Im1vZGFsaXR5IjogIlRFWFQiLCJ0b2tlbkNvdW50IjogMzA2fV0sImNhbmRpZGF0ZXNUb2tlbnNEZXRhaWxzIjogW3sibW9kYWxpdHkiOiAiVEVYVCIsInRva2VuQ291bnQiOiAyMn1dfSwibW9kZWxWZXJzaW9uIjogImdlbWluaS0yLjUtZmxhc2giLCJjcmVhdGVUaW1lIjogIjIwMjYtMDktMDlUMTI6MTI6MjguMDgzOTgxWiIsInJlc3BvbnNlSWQiOiAiTEUyaGFvMlFCZXk3eF9BUDVlSDBtQVEifQ0KDQo=
-  recorded_at: Wed, 09 Sep 2026 12:12:28 GMT
+        ZGF0YTogeyJjYW5kaWRhdGVzIjogW3siY29udGVudCI6IHsicm9sZSI6ICJtb2RlbCIsInBhcnRzIjogW3sidGV4dCI6ICJUaGUgd2VhdGhlciBpbiBQYXJpcyBpcyAifV19fV0sInVzYWdlTWV0YWRhdGEiOiB7InRyYWZmaWNUeXBlIjogIk9OX0RFTUFORCJ9LCJtb2RlbFZlcnNpb24iOiAiZ2VtaW5pLTIuNS1mbGFzaCIsImNyZWF0ZVRpbWUiOiAiMjAyNi0wOS0xNFQwOTo0NjozNy4yMTcxOTlaIiwicmVzcG9uc2VJZCI6ICJmY0tuYXUtZ0RlRDVzdE1Qay03azJRWSJ9DQoNCmRhdGE6IHsiY2FuZGlkYXRlcyI6IFt7ImNvbnRlbnQiOiB7InJvbGUiOiAibW9kZWwiLCJwYXJ0cyI6IFt7InRleHQiOiAiMTXCsEMgd2l0aCBhIHdpbmQgc3BlZWQgb2YgMTAga20vaC4ifV19LCJmaW5pc2hSZWFzb24iOiAiU1RPUCJ9XSwidXNhZ2VNZXRhZGF0YSI6IHsicHJvbXB0VG9rZW5Db3VudCI6IDMwMiwiY2FuZGlkYXRlc1Rva2VuQ291bnQiOiAyMiwidG90YWxUb2tlbkNvdW50IjogMzI0LCJ0cmFmZmljVHlwZSI6ICJPTl9ERU1BTkQiLCJwcm9tcHRUb2tlbnNEZXRhaWxzIjogW3sibW9kYWxpdHkiOiAiVEVYVCIsInRva2VuQ291bnQiOiAzMDJ9XSwiY2FuZGlkYXRlc1Rva2Vuc0RldGFpbHMiOiBbeyJtb2RhbGl0eSI6ICJURVhUIiwidG9rZW5Db3VudCI6IDIyfV19LCJtb2RlbFZlcnNpb24iOiAiZ2VtaW5pLTIuNS1mbGFzaCIsImNyZWF0ZVRpbWUiOiAiMjAyNi0wOS0xNFQwOTo0NjozNy4yMTcxOTlaIiwicmVzcG9uc2VJZCI6ICJmY0tuYXUtZ0RlRDVzdE1Qay03azJRWSJ9DQoNCg==
+  recorded_at: Mon, 14 Sep 2026 09:46:37 GMT
 recorded_with: VCR 6.4.0

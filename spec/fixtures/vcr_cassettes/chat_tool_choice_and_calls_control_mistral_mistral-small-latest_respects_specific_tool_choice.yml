@@ -27,25 +27,23 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:18:41 GMT
+      - Mon, 14 Sep 2026 10:15:08 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0861b-233d-7f04-8d8c-fad919d18f28
+      - 01a09f69-d582-77f7-a5f5-fb34acebe960
       X-Kong-Request-Id:
-      - 01a0861b-233d-7f04-8d8c-fad919d18f28
+      - 01a09f69-d582-77f7-a5f5-fb34acebe960
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '97489'
+      - '99145'
       X-Ratelimit-Tokens-Query-Cost:
       - '172'
       X-Ratelimit-Limit-Req-Minute:
@@ -53,38 +51,40 @@ http_interactions:
       X-Ratelimit-Remaining-Req-Minute:
       - '96'
       X-Envoy-Upstream-Service-Time:
-      - '433'
+      - '385'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '434'
+      - '385'
       X-Kong-Proxy-Latency:
-      - '20'
-      X-Content-Type-Options:
-      - nosniff
+      - '11'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"72cbf5fc93524ce2bfaa57ccc067d1bb","created":1788956320,"model":"mistral-small-latest","usage":{"prompt_tokens":144,"total_tokens":172,"completion_tokens":28,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"tool_calls","message":{"role":"assistant","tool_calls":[{"id":"NGjYts89Q","type":"function","function":{"name":"weather","arguments":"{\"latitude\":
+      string: '{"id":"1a188c22061b4281bd8533767c257d37","created":1789380908,"model":"mistral-small-latest","usage":{"prompt_tokens":144,"total_tokens":172,"completion_tokens":28,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"tool_calls","message":{"role":"assistant","tool_calls":[{"id":"2pZLX6m8r","type":"function","function":{"name":"weather","arguments":"{\"latitude\":
         \"41.9028\", \"longitude\": \"12.4964\"}"},"index":0}],"content":""}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:18:41 GMT
+  recorded_at: Mon, 14 Sep 2026 10:15:08 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"What''s
-        the fall of Rome?"},{"role":"assistant","content":"","tool_calls":[{"id":"NGjYts89Q","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"41.9028\",\"longitude\":\"12.4964\"}"}}]},{"role":"tool","content":"Current
-        weather at 41.9028, 12.4964: 15°C, Wind: 10 km/h","tool_call_id":"NGjYts89Q"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        the fall of Rome?"},{"role":"assistant","content":"","tool_calls":[{"id":"2pZLX6m8r","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"41.9028\",\"longitude\":\"12.4964\"}"}}]},{"role":"tool","content":"Current
+        weather at 41.9028, 12.4964: 15°C, Wind: 10 km/h","tool_call_id":"2pZLX6m8r"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
@@ -105,47 +105,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:18:42 GMT
+      - Mon, 14 Sep 2026 10:15:10 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0861b-255a-792b-9b85-411d06566668
+      - 01a09f69-d74f-76ad-9477-f8993df86036
       X-Kong-Request-Id:
-      - 01a0861b-255a-792b-9b85-411d06566668
+      - 01a09f69-d74f-76ad-9477-f8993df86036
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '97208'
+      - '98801'
       X-Ratelimit-Tokens-Query-Cost:
-      - '306'
+      - '344'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
       - '95'
       X-Envoy-Upstream-Service-Time:
-      - '1000'
+      - '1260'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1002'
+      - '1261'
       X-Kong-Proxy-Latency:
-      - '17'
-      X-Content-Type-Options:
-      - nosniff
+      - '12'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
@@ -153,6 +153,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6IjQ5MDkwNjUyY2NmZTQzOTc4YzE1ODFkNWRhMTlkNjdiIiwiY3JlYXRlZCI6MTc4ODk1NjMyMSwibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjIwNCwidG90YWxfdG9rZW5zIjozMDYsImNvbXBsZXRpb25fdG9rZW5zIjoxMDIsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjowfSwic2VydmljZV90aWVyIjoic3RhbmRhcmQifSwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImZpbmlzaF9yZWFzb24iOiJzdG9wIiwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwidG9vbF9jYWxscyI6bnVsbCwiY29udGVudCI6IlRoZSDigJxGYWxsIG9mIFJvbWXigJ0gaXMgYSBzaG9ydGhhbmQgZm9yIHRoZSBncmFkdWFsIGRpc2ludGVncmF0aW9uIG9mIHRoZSBXZXN0ZXJuIFJvbWFuIEVtcGlyZSBkdXJpbmcgdGhlIDV0aCBjZW50dXJ5IEFELiBJbiA0NzYgQUQgdGhlIGxhc3QgV2VzdGVybiBlbXBlcm9yLCBSb211bHVzIEF1Z3VzdHVsdXMsIHdhcyBkZXBvc2VkIGJ5IHRoZSBHZXJtYW5pYyBjaGllZnRhaW4gT2RvYWNlciwgd2hvIGRlY2xhcmVkIGhpbXNlbGYgS2luZyBvZiBJdGFseS4gVGhlIEVhc3Rlcm4gUm9tYW4gKEJ5emFudGluZSkgRW1waXJlIHN1cnZpdmVkIGZvciBhbm90aGVyIHRob3VzYW5kIHllYXJzLCBidXQgdGhlIGZhbGwgb2YgdGhlIFdlc3QgbWFya2VkIHRoZSBlbmQgb2YgYW50aXF1aXR5IGFuZCB0aGUgc3RhcnQgb2YgdGhlIEV1cm9wZWFuIE1pZGRsZSBBZ2VzLiJ9fV19
-  recorded_at: Wed, 09 Sep 2026 12:18:42 GMT
+        eyJpZCI6IjBmN2U4OTNiMGNkYzQ4YmNiMWY4MWVkMDFhYzk1MTZjIiwiY3JlYXRlZCI6MTc4OTM4MDkwOCwibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjIwNCwidG90YWxfdG9rZW5zIjozNDQsImNvbXBsZXRpb25fdG9rZW5zIjoxNDAsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjowfSwic2VydmljZV90aWVyIjoic3RhbmRhcmQifSwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImZpbmlzaF9yZWFzb24iOiJzdG9wIiwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwidG9vbF9jYWxscyI6bnVsbCwiY29udGVudCI6IlRoZSDigJxGYWxsIG9mIFJvbWXigJ0gaXMgdGhlIHRyYWRpdGlvbmFsIG5hbWUgZ2l2ZW4gdG8gdGhlIGdyYWR1YWwgY29sbGFwc2Ugb2YgdGhlIFdlc3Rlcm4gUm9tYW4gRW1waXJlIGluIHRoZSA1dGggY2VudHVyeSBBRC4gSGlzdG9yaWFucyB1c3VhbGx5IG1hcmsgaXQgYXMgb2NjdXJyaW5nIGluIDQ3NiBBRCwgd2hlbiB0aGUgbGFzdCBXZXN0ZXJuIFJvbWFuIEVtcGVyb3IsIFJvbXVsdXMgQXVndXN0dWx1cywgd2FzIGRlcG9zZWQgYnkgdGhlIEdlcm1hbmljIGNoaWVmdGFpbiBPZG9hY2VyLiBGcm9tIHRoYXQgcG9pbnQgb253YXJkLCBubyBzaW5nbGUgZW1wZXJvciBydWxlZCBpbiB0aGUgV2VzdDsgaW5zdGVhZCwgdmFyaW91cyBHZXJtYW5pYyBraW5nZG9tcyAoT3N0cm9nb3RocywgVmlzaWdvdGhzLCBGcmFua3MsIGV0Yy4pIGRpdmlkZWQgdGhlIGZvcm1lciBpbXBlcmlhbCB0ZXJyaXRvcnkuXG5cblRoZSBFYXN0ZXJuIFJvbWFuIEVtcGlyZSAoQnl6YW50aXVtKSBjb250aW51ZWQgZm9yIGFub3RoZXIgdGhvdXNhbmQgeWVhcnMsIHVudGlsIHRoZSBPdHRvbWFuIGNvbnF1ZXN0IG9mIENvbnN0YW50aW5vcGxlIGluIDE0NTMuIn19XX0=
+  recorded_at: Mon, 14 Sep 2026 10:15:10 GMT
 recorded_with: VCR 6.4.0

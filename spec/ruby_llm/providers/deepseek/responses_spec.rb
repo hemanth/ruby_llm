@@ -13,6 +13,31 @@ RSpec.describe RubyLLM::Providers::DeepSeek::Responses do
     protocol.send(:render_payload, messages, tools: {}, temperature: nil, model:, **options)
   end
 
+  describe 'server tools' do
+    include_context 'with configured RubyLLM'
+
+    let(:chat) { RubyLLM.chat(model: model_for(:deepseek), provider: :deepseek, protocol: :responses) }
+
+    it 'rejects the unsupported web search alias before sending a request' do
+      chat.with_server_tools(:web_search)
+
+      expect { chat.render }.to raise_error(RubyLLM::UnsupportedServerToolError, /:web_search.*:apply_patch/)
+    end
+
+    it 'keeps the patch tool alias' do
+      payload = chat.with_server_tools(:apply_patch).render
+
+      expect(payload[:tools]).to eq([{ type: 'custom', name: 'apply_patch' }])
+    end
+
+    it 'passes raw tool definitions through unchanged' do
+      definition = { type: 'web_search' }
+      payload = chat.with_server_tools(definition).render
+
+      expect(payload[:tools]).to eq([definition])
+    end
+  end
+
   it 'sends JSON Schema through the Responses text format' do
     schema = { name: 'person', schema: { type: 'object', properties: { name: { type: 'string' } } } }
     message = RubyLLM::Message.new(role: :user, content: 'Extract the name: Ruby')

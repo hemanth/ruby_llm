@@ -29,41 +29,41 @@ http_interactions:
       X-Origin-Cache:
       - HIT
       Last-Modified:
-      - Tue, 08 Sep 2026 03:44:55 GMT
+      - Mon, 14 Sep 2026 01:49:25 GMT
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"6a9f84b7-9c6"
+      - W/"6aa752a5-9c6"
       Expires:
-      - Wed, 09 Sep 2026 12:14:51 GMT
+      - Mon, 14 Sep 2026 09:48:55 GMT
       Cache-Control:
       - max-age=600
       X-Proxy-Cache:
       - MISS
       X-Github-Request-Id:
-      - 87C6:464DE:E0647A:E2BECB:6AA14B62
+      - EA64:1E29A7:5B464DB:5C2A2FF:6AA7C0AE
       X-Github-Edge-Region:
       - fra
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 09 Sep 2026 12:04:56 GMT
+      - Mon, 14 Sep 2026 09:39:01 GMT
       Via:
       - 1.1 varnish
       Age:
       - '6'
       X-Served-By:
-      - cache-ber1080037-BER
+      - cache-ber1080025-BER
       X-Cache:
       - HIT
       X-Cache-Hits:
       - '1'
       X-Timer:
-      - S1788955497.909544,VS0,VE1
+      - S1789378741.113459,VS0,VE1
       Vary:
       - Accept-Encoding
       X-Fastly-Request-Id:
-      - a83ea772b0fc5f5979b26cf950c9602b45ce3e7e
+      - 4bb1436a33b4f301347d6fd180fb0efacff9a42d
     body:
       encoding: ASCII-8BIT
       string: "Ruby is copyrighted free software by Yukihiro Matsumoto <matz@netlab.jp>.\nYou
@@ -99,7 +99,7 @@ http_interactions:
         \"AS IS\" AND WITHOUT ANY EXPRESS OR\n     IMPLIED WARRANTIES, INCLUDING,
         WITHOUT LIMITATION, THE IMPLIED\n     WARRANTIES OF MERCHANTABILITY AND FITNESS
         FOR A PARTICULAR\n     PURPOSE.\n"
-  recorded_at: Wed, 09 Sep 2026 12:04:56 GMT
+  recorded_at: Mon, 14 Sep 2026 09:39:01 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
@@ -159,7 +159,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:04:57 GMT
+      - Mon, 14 Sep 2026 09:39:01 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -175,15 +175,17 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-d106a194cfaa10b82fbbb2034b0d02b0-ba9eef9100181c75-00
+      - 00-390d0e7699758a3e810d1960a45b89eb-68570368000c5389-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - ffabd636-ef06-4804-92ac-d212ddc7fcbc
+      - 148aca97-5d61-45da-b14a-502b1e092637
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
+      X-Ms-Inference-Retry-History:
+      - '{"v":1,"entries":[{"service_id":"mir.frontdoor","layer":"regional","role":"direct","retries":0}]}'
       Azureai-Requested-Tier:
       - default
       Azureai-Processed-Tier:
@@ -193,7 +195,7 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '48'
+      - '49'
       X-Ratelimit-Reset-Requests:
       - '1'
       X-Ratelimit-Limit-Requests:
@@ -215,7 +217,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - ffabd636-ef06-4804-92ac-d212ddc7fcbc
+      - 148aca97-5d61-45da-b14a-502b1e092637
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -223,20 +225,8 @@ http_interactions:
       X-Ms-Region:
       - West Europe
     body:
-      encoding: UTF-8
-      string: '{"id":"9fc5a587-54cf-40f1-948f-dace9c637119","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"This
-        is the **Ruby License** (specifically, the Ruby License 1.8 or similar historical
-        version), a permissive open-source license for the Ruby programming language,
-        authored by Yukihiro Matsumoto (matz).\n\n### Key Points:\n- **Copyright**:
-        Yukihiro Matsumoto.\n- **Permissions**:\n  - Free to **redistribute** verbatim
-        source copies (with notices intact).\n  - Free to **modify** and use/distribute,
-        as long as you follow rules like making mods public domain, limiting to internal
-        use, or providing source/original access instructions.\n  - Allows embedding
-        Ruby into **commercial software**.\n  - Binaries OK with source availability
-        or instructions.\n- **No warranty**: Provided \"AS IS\".\n- **Exceptions**:
-        Some files have separate terms (see `LEGAL` or `BSDL` files).\n\nIt''s similar
-        to a BSD/MIT-style license but with unique clauses for modifications and binaries.
-        Ruby now uses a dual **BSD-2-Clause + Ruby License** model in newer versions
-        for broader compatibility."},"finish_reason":"stop"}],"usage":{"prompt_tokens":524,"completion_tokens":204,"total_tokens":728,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":169,"audio_tokens":0,"text_tokens":524,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1788955497,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 09 Sep 2026 12:05:00 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6IjNmMzI3ZTViLWVmMTYtNDc0Yy04YTM4LTlkZjJmMjY5YzQ2NyIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJUaGlzIGlzIHRoZSAqKlJ1YnkgTGljZW5zZSoqIChhbHNvIGtub3duIGFzIHRoZSBSdWJ5IExpY2Vuc2Ugb3IgbWF0eidzIGxpY2Vuc2UpLCBhIHBlcm1pc3NpdmUgb3Blbi1zb3VyY2UgbGljZW5zZSBmb3IgdGhlIFJ1YnkgcHJvZ3JhbW1pbmcgbGFuZ3VhZ2UsIGNvcHlyaWdodGVkIGJ5IFl1a2loaXJvIE1hdHN1bW90byAobWF0eikuXG5cbiMjIyBLZXkgUGVybWlzc2lvbnM6XG4tICoqUmVkaXN0cmlidXRlIHZlcmJhdGltIHNvdXJjZSoqOiBGcmVlbHksIGFzIGxvbmcgYXMgY29weXJpZ2h0IG5vdGljZXMvZGlzY2xhaW1lcnMgYXJlIGtlcHQuXG4tICoqTW9kaWZ5IHNvdXJjZSoqOiBBbGxvd2VkIGlmIHlvdSBlaXRoZXI6XG4gIC0gTWFrZSBtb2RzIHB1YmxpYyBkb21haW4vZnJlZWx5IGF2YWlsYWJsZSAoZS5nLiwgcG9zdCB0byBVc2VuZXQpLlxuICAtIFVzZSBvbmx5IGludGVybmFsbHkgaW4geW91ciBvcmcuXG4gIC0gTmFtZSBub24tc3RhbmRhcmQgYmluYXJpZXMgZGlmZmVyZW50bHkgKyBwb2ludCB0byBvcmlnaW5hbC5cbiAgLSBBcnJhbmdlIGRpcmVjdGx5IHdpdGggYXV0aG9yLlxuLSAqKkRpc3RyaWJ1dGUgYmluYXJpZXMqKjogU2ltaWxhciBjb25kaXRpb25z4oCUaW5jbHVkZSBzb3VyY2UgYWNjZXNzIGluZm8gb3Igb3JpZ2luYWwgZGlzdHJvIGxpbmtzLlxuLSAqKkVtYmVkIGluIG90aGVyIHNvZnR3YXJlKio6IE9LIChldmVuIGNvbW1lcmNpYWwpLCBidXQgY2hlY2sgYExFR0FMYCBmaWxlIGZvciB0aGlyZC1wYXJ0eSBmaWxlcyB3aXRoIGRpZmZlcmVudCB0ZXJtcy5cbi0gKipTY3JpcHRzL291dHB1dCoqOiBOb3QgY292ZXJlZDsgeW91cnMgdG8gdXNlL3NlbGwgZnJlZWx5LlxuXG4jIyMgTm90YWJsZTpcbi0gXCJBcyBpc1wiIHdpdGggKipubyB3YXJyYW50aWVzKiouXG4tIER1YWwtbGljZW5zYWJsZSB3aXRoIDItY2xhdXNlIEJTRCAoc2VlIGBCU0RMYCBmaWxlKS5cbi0gUHJlLWRhdGVzIG1vZGVybiBPU0kgYXBwcm92YWwgYnV0IGlzIE9TSS1yZWNvZ25pemVkIGFzIHBlcm1pc3NpdmUuXG5cbkZ1bGwgdGV4dCBpcyB0aGUgY2xhc3NpYyBSdWJ5IDEueC8yLnggZGlzdHJvIGBsaWNlbnNlLnR4dGAuIEV2aWRlbmNlOiBNYXRjaGVzIHZlcmJhdGltIGZyb20gcnVieS1sYW5nLm9yZyBhcmNoaXZlcyBhbmQgUnVieSBzb3VyY2UgcmVwb3MgKGUuZy4sIEdpdEh1YiBydWJ5L3J1YnkpLiJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6NTI0LCJjb21wbGV0aW9uX3Rva2VucyI6MjY4LCJ0b3RhbF90b2tlbnMiOjc5MiwiYXVkaW9fcHJvbXB0X3Rva2VucyI6MCwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjE2OSwiYXVkaW9fdG9rZW5zIjowLCJ0ZXh0X3Rva2VucyI6NTI0LCJpbWFnZV90b2tlbnMiOjB9LCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjAsImF1ZGlvX3Rva2VucyI6MCwiYWNjZXB0ZWRfcHJlZGljdGlvbl90b2tlbnMiOjAsInJlamVjdGVkX3ByZWRpY3Rpb25fdG9rZW5zIjowfSwibnVtX3NvdXJjZXNfdXNlZCI6MH0sImNyZWF0ZWQiOjE3ODkzNzg3NDEsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsInByb21wdF9maWx0ZXJfcmVzdWx0cyI6bnVsbH0=
+  recorded_at: Mon, 14 Sep 2026 09:39:05 GMT
 recorded_with: VCR 6.4.0

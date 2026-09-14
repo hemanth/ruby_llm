@@ -660,7 +660,10 @@ RSpec.describe RubyLLM::Chat, :live do
       it "#{provider}/#{model} describes images returned from tools" do
         chat = RubyLLM.chat(model: model, provider: provider).with_tools(ImageFetchTool)
 
-        response = chat.ask('Use the image_fetch tool, then describe exactly what the returned image shows.')
+        response = chat.ask(
+          'Use the image_fetch tool. Its result includes an image attachment. ' \
+          'Inspect the attachment and describe its colors and shape.'
+        )
 
         expect(response.content.downcase).to match(/ruby|gem|red/)
       end

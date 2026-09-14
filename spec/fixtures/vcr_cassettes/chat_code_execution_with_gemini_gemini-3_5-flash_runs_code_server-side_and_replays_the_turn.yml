@@ -32,7 +32,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:15:28 GMT
+      - Mon, 14 Sep 2026 09:48:38 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -42,7 +42,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=2206
+      - gfet4t7; dur=2044
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -58,21 +58,21 @@ http_interactions:
                   {
                     "executableCode": {
                       "language": "PYTHON",
-                      "code": "num1 = 123456789\nnum2 = 987654321\nproduct = num1 * num2\nprint(f\"Product: {product}\")\n",
-                      "id": "call_1092279"
+                      "code": "print(123456789 * 987654321)\n",
+                      "id": "call_4876022"
                     },
-                    "thoughtSignature": "EuABCt0BARFNMg9vXea2/bD8NwyN5p2FUTHhLifKTTU0Ih/SifHuX1nl+/jEX0wgfK/dDDDMz74imPtB4bgDlaeOEel5b8/XELoaL/4T4oSlZk+SvbKEApZHyecP5VmJNdIKbLywZB4MTKqtY36UWuZraABpb080SGDa9Qo7ZTH+BgZV6YkS6/CE42KnXal+yyc238SDj6jdYs3W35M/e8Klso7ASQIcYC86hDF7eqXLlwWaKEOttnqN7fOh3UWPrc7JIsC/zxCSiltini9AWTRmnWVWwcPX5DLkufsii/9LvEc="
+                    "thoughtSignature": "EowCCokCARFNMg9CI0TemnFsuEhSeqN2KBjKJpt/I0kg7XEikCf3Xhfr5Muyprr+9SxQ2uTIWSiKy6WWNlFj3ae72KyrpC1d4m6PCDvUkYG1pGrut7JzgNKEyVx+yR3X7IBGbrUvK+/xgwi0sdqDinISV7YPVujwW2E7xhPWAlY6WqxZLsYhQYH0qGQbigNwZC6aw9tf1TQl/wg+keV0MyYrsp0t79XuEF6T0UVHrLA4wAZ23k6igFOqJ/9nFi/6b2/HOxb561WqOEwggyWczsMeoQ+HBRWP6RbhSZw/hpN4U0xNFF6fly0PuCitcFAlOPTG2DL9Nlqg+pR7InWk/HFQ3IM7pBa2EwXCOtrUzg=="
                   },
                   {
                     "codeExecutionResult": {
                       "outcome": "OUTCOME_OK",
-                      "output": "Product: 121932631112635269\n",
-                      "id": "call_1092279"
+                      "output": "121932631112635269\n",
+                      "id": "call_4876022"
                     }
                   },
                   {
-                    "text": "The exact product of $123456789 \\times 987654321$ is **121,932,631,112,635,269** (or 121932631112635269).",
-                    "thoughtSignature": "ErgBCrUBARFNMg+yBLL/9k0My5z/iFJZGtqKVcaYRcFbrkdSIV+PExjjt8Y5qRg18CmyJmp9qCfmcu7MKArKNrpG0wCHSoFZsjcWtZLrgexrsN75ZXHicc6Ziy/iHhN88Srzp4iMe9JoxVwK9slHvNakyn6HfOmQsNCQllxW0GxkPdgCagmxPmRDzjcahZfbzE1dzlpPuiZIzAfTCg62MGbMXWdJYxINHtNa0LiStx5HYTVKP/T5/FCQ1Q=="
+                    "text": "The exact product of $123,456,789 \\times 987,654,321$ is **$121,932,631,112,635,269$**.",
+                    "thoughtSignature": "EqECCp4CARFNMg8lm6QoGubx5DSlMvV//EDIFC8NFvXNF26CSpQg8MGXh6efDV2iP3UVRskSN2zd9Sf/iArM4ANxG4AOTxlgO05mEj75AxnefKMJ+TYQbqXgF9QoUCGrQe9kXt9uDH8YFf9qOetiNGccyuGuS77I9Uw21dUAPFmBl6wTno0mPwCYkGF6s4zf4DugWyM5CnwujmillUJkmQa92PvIh5dTDvn3cz+n6yBsfCmdAPOzle0FwApT9ElkX6MJlLuG5rXxhfvM/Ue1YDEZi2v2QrShp6eDU8HI+Zd+IwBUrHl42iER0stOAZaBcdekBN++8L6M2j86SgXXYxg6lnTbjtE4EbpXFrwIK1tw40n+K68wXYxhrIYs7MPQ+tw26A=="
                   }
                 ],
                 "role": "model"
@@ -82,39 +82,38 @@ http_interactions:
             }
           ],
           "usageMetadata": {
-            "promptTokenCount": 75,
-            "candidatesTokenCount": 134,
-            "totalTokenCount": 437,
+            "promptTokenCount": 83,
+            "candidatesTokenCount": 96,
+            "totalTokenCount": 458,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 75
+                "tokenCount": 83
               }
             ],
-            "toolUsePromptTokenCount": 154,
+            "toolUsePromptTokenCount": 137,
             "toolUsePromptTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 154
+                "tokenCount": 137
               }
             ],
-            "thoughtsTokenCount": 74,
+            "thoughtsTokenCount": 142,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-3.5-flash",
-          "responseId": "3k2harLJB63jvdIPnpaNoA8"
+          "responseId": "9MKnapKRK46Q3boPzM6M-QY"
         }
-  recorded_at: Wed, 09 Sep 2026 12:15:28 GMT
+  recorded_at: Mon, 14 Sep 2026 09:48:38 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Use code execution to
-        compute 123456789 * 987654321 and report the exact product."}]},{"role":"model","parts":[{"executableCode":{"language":"PYTHON","code":"num1
-        = 123456789\nnum2 = 987654321\nproduct = num1 * num2\nprint(f\"Product: {product}\")\n","id":"call_1092279"},"thoughtSignature":"EuABCt0BARFNMg9vXea2/bD8NwyN5p2FUTHhLifKTTU0Ih/SifHuX1nl+/jEX0wgfK/dDDDMz74imPtB4bgDlaeOEel5b8/XELoaL/4T4oSlZk+SvbKEApZHyecP5VmJNdIKbLywZB4MTKqtY36UWuZraABpb080SGDa9Qo7ZTH+BgZV6YkS6/CE42KnXal+yyc238SDj6jdYs3W35M/e8Klso7ASQIcYC86hDF7eqXLlwWaKEOttnqN7fOh3UWPrc7JIsC/zxCSiltini9AWTRmnWVWwcPX5DLkufsii/9LvEc="},{"codeExecutionResult":{"outcome":"OUTCOME_OK","output":"Product:
-        121932631112635269\n","id":"call_1092279"}},{"text":"The exact product of
-        $123456789 \\times 987654321$ is **121,932,631,112,635,269** (or 121932631112635269).","thoughtSignature":"ErgBCrUBARFNMg+yBLL/9k0My5z/iFJZGtqKVcaYRcFbrkdSIV+PExjjt8Y5qRg18CmyJmp9qCfmcu7MKArKNrpG0wCHSoFZsjcWtZLrgexrsN75ZXHicc6Ziy/iHhN88Srzp4iMe9JoxVwK9slHvNakyn6HfOmQsNCQllxW0GxkPdgCagmxPmRDzjcahZfbzE1dzlpPuiZIzAfTCg62MGbMXWdJYxINHtNa0LiStx5HYTVKP/T5/FCQ1Q=="}]},{"role":"user","parts":[{"text":"Thanks.
+        compute 123456789 * 987654321 and report the exact product."}]},{"role":"model","parts":[{"executableCode":{"language":"PYTHON","code":"print(123456789
+        * 987654321)\n","id":"call_4876022"},"thoughtSignature":"EowCCokCARFNMg9CI0TemnFsuEhSeqN2KBjKJpt/I0kg7XEikCf3Xhfr5Muyprr+9SxQ2uTIWSiKy6WWNlFj3ae72KyrpC1d4m6PCDvUkYG1pGrut7JzgNKEyVx+yR3X7IBGbrUvK+/xgwi0sdqDinISV7YPVujwW2E7xhPWAlY6WqxZLsYhQYH0qGQbigNwZC6aw9tf1TQl/wg+keV0MyYrsp0t79XuEF6T0UVHrLA4wAZ23k6igFOqJ/9nFi/6b2/HOxb561WqOEwggyWczsMeoQ+HBRWP6RbhSZw/hpN4U0xNFF6fly0PuCitcFAlOPTG2DL9Nlqg+pR7InWk/HFQ3IM7pBa2EwXCOtrUzg=="},{"codeExecutionResult":{"outcome":"OUTCOME_OK","output":"121932631112635269\n","id":"call_4876022"}},{"text":"The
+        exact product of $123,456,789 \\times 987,654,321$ is **$121,932,631,112,635,269$**.","thoughtSignature":"EqECCp4CARFNMg8lm6QoGubx5DSlMvV//EDIFC8NFvXNF26CSpQg8MGXh6efDV2iP3UVRskSN2zd9Sf/iArM4ANxG4AOTxlgO05mEj75AxnefKMJ+TYQbqXgF9QoUCGrQe9kXt9uDH8YFf9qOetiNGccyuGuS77I9Uw21dUAPFmBl6wTno0mPwCYkGF6s4zf4DugWyM5CnwujmillUJkmQa92PvIh5dTDvn3cz+n6yBsfCmdAPOzle0FwApT9ElkX6MJlLuG5rXxhfvM/Ue1YDEZi2v2QrShp6eDU8HI+Zd+IwBUrHl42iER0stOAZaBcdekBN++8L6M2j86SgXXYxg6lnTbjtE4EbpXFrwIK1tw40n+K68wXYxhrIYs7MPQ+tw26A=="}]},{"role":"user","parts":[{"text":"Thanks.
         Now just say OK."}]}],"generationConfig":{},"tools":[{"code_execution":{}}]}'
     headers:
       User-Agent:
@@ -141,7 +140,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:15:29 GMT
+      - Mon, 14 Sep 2026 09:48:39 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -151,7 +150,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=895
+      - gfet4t7; dur=1154
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -165,8 +164,8 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "OK.",
-                    "thoughtSignature": "EmgKZgERTTIPIt/klpDFBRB264/R7X/e5U0MvDExkFGbnL9OP5Im/62Fx9/8b78hXRlY7If0OySlbkzWlORWD2u+Eq1EUcKmaqMOeuJukwRrmQSzmIQjTA1XZuoh7ZeZxT2jVUiUXONCUg=="
+                    "text": "OK",
+                    "thoughtSignature": "EmgKZgERTTIPNIV8NkYHxA7HA9ejLs6fIbdxhkt5Bdg3BiNGMUm0FTOuIpNLRSToYmi/Om9DkWXUtJV1ZD0XbH/TPakPmGM7o/6IEkXBQR/FD63YZ8SKr5At482NnpsjlPRSo5h7LXhNUg=="
                   }
                 ],
                 "role": "model"
@@ -176,19 +175,19 @@ http_interactions:
             }
           ],
           "usageMetadata": {
-            "promptTokenCount": 191,
-            "candidatesTokenCount": 2,
-            "totalTokenCount": 193,
+            "promptTokenCount": 243,
+            "candidatesTokenCount": 1,
+            "totalTokenCount": 244,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 191
+                "tokenCount": 243
               }
             ],
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-3.5-flash",
-          "responseId": "4E2haqOeGebZxs0Pl4v0mQI"
+          "responseId": "9sKnat2tM5bT28oPm6-32AI"
         }
-  recorded_at: Wed, 09 Sep 2026 12:15:29 GMT
+  recorded_at: Mon, 14 Sep 2026 09:48:39 GMT
 recorded_with: VCR 6.4.0

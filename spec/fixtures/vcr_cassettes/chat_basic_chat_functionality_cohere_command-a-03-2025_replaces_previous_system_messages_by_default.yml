@@ -35,7 +35,7 @@ http_interactions:
       Num-Chars:
       - '2879'
       Num-Tokens:
-      - '241'
+      - '134'
       Pragma:
       - no-cache
       Vary:
@@ -43,38 +43,30 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - a5609ddcba372b88cafc0102a9e943b1
+      - 4016ca273b09f4092270d45261187a6c
       Date:
-      - Wed, 09 Sep 2026 12:05:55 GMT
+      - Mon, 14 Sep 2026 09:40:09 GMT
       X-Envoy-Upstream-Service-Time:
-      - '3041'
+      - '4135'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      - h3=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"a317ffa7-90d6-4707-ac58-69ae06973caa","message":{"role":"assistant","content":[{"type":"text","text":"I''m
-        unable to provide real-time weather information as I don''t have access to
-        live data or the ability to browse the internet. However, I can offer general
-        information about weather patterns, climate, or specific weather phenomena
-        if you''re interested.\n\nWeather is the state of the atmosphere at a particular
-        place and time, including temperature, humidity, precipitation, wind speed,
-        and atmospheric pressure. It''s influenced by various factors such as solar
-        radiation, air masses, and geographical features.\n\nIf you''re looking for
-        a specific weather forecast or information about a particular location, I
-        recommend checking reliable weather websites or using a weather application
-        on your device. These sources will provide you with the most up-to-date and
-        accurate information.\n\nBy the way, did you know that XKCD7392 is not a real
-        XKCD comic number? It seems like a random combination of letters and numbers.
-        XKCD is a popular webcomic created by Randall Munroe, known for its humor
-        and clever insights into various topics, including science, technology, and
-        everyday life."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":26,"output_tokens":215},"tokens":{"input_tokens":555,"output_tokens":218},"cached_tokens":480}}'
-  recorded_at: Wed, 09 Sep 2026 12:05:55 GMT
+      string: '{"id":"1b3c63f8-d0c8-478a-8891-30b0a2530cdb","message":{"role":"assistant","content":[{"type":"text","text":"I''m
+        not able to provide real-time weather information, but I can help you understand
+        how weather works or guide you on how to find the current weather conditions
+        for a specific location. Weather is influenced by various factors such as
+        temperature, humidity, atmospheric pressure, wind, and precipitation. If you''re
+        looking for the current weather, I recommend checking a reliable weather website
+        or using a weather app on your device. XKCD7392. Let me know if you''d like
+        more information on weather patterns or how to interpret weather forecasts!"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":26,"output_tokens":108},"tokens":{"input_tokens":555,"output_tokens":111},"cached_tokens":480}}'
+  recorded_at: Mon, 14 Sep 2026 09:40:09 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
@@ -82,21 +74,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"command-a-03-2025","messages":[{"role":"user","content":[{"type":"text","text":"Tell
         me about the weather."}]},{"role":"assistant","content":[{"type":"text","text":"I''m
-        unable to provide real-time weather information as I don''t have access to
-        live data or the ability to browse the internet. However, I can offer general
-        information about weather patterns, climate, or specific weather phenomena
-        if you''re interested.\n\nWeather is the state of the atmosphere at a particular
-        place and time, including temperature, humidity, precipitation, wind speed,
-        and atmospheric pressure. It''s influenced by various factors such as solar
-        radiation, air masses, and geographical features.\n\nIf you''re looking for
-        a specific weather forecast or information about a particular location, I
-        recommend checking reliable weather websites or using a weather application
-        on your device. These sources will provide you with the most up-to-date and
-        accurate information.\n\nBy the way, did you know that XKCD7392 is not a real
-        XKCD comic number? It seems like a random combination of letters and numbers.
-        XKCD is a popular webcomic created by Randall Munroe, known for its humor
-        and clever insights into various topics, including science, technology, and
-        everyday life."}]},{"role":"system","content":[{"type":"text","text":"You
+        not able to provide real-time weather information, but I can help you understand
+        how weather works or guide you on how to find the current weather conditions
+        for a specific location. Weather is influenced by various factors such as
+        temperature, humidity, atmospheric pressure, wind, and precipitation. If you''re
+        looking for the current weather, I recommend checking a reliable weather website
+        or using a weather app on your device. XKCD7392. Let me know if you''d like
+        more information on weather patterns or how to interpret weather forecasts!"}]},{"role":"system","content":[{"type":"text","text":"You
         must include the exact phrase \"PURPLE-ELEPHANT-42\" somewhere in your response."}]},{"role":"user","content":[{"type":"text","text":"What
         are some good books?"}]}],"stream":false}'
     headers:
@@ -124,9 +108,9 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Num-Chars:
-      - '4001'
+      - '3471'
       Num-Tokens:
-      - '546'
+      - '410'
       Pragma:
       - no-cache
       Vary:
@@ -134,11 +118,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - '088b4e61279ade456f3a5c9c7ce26c32'
+      - c104bd77c91609ea16b86ab030c20fa6
       Date:
-      - Wed, 09 Sep 2026 12:05:59 GMT
+      - Mon, 14 Sep 2026 09:40:13 GMT
       X-Envoy-Upstream-Service-Time:
-      - '3950'
+      - '4679'
       Server:
       - envoy
       Via:
@@ -149,24 +133,20 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"5b688941-24bb-46bc-8528-c133a7c18ffd","message":{"role":"assistant","content":[{"type":"text","text":"There
-        are countless excellent books across various genres, and the \"best\" ones
-        often depend on personal preferences. Here are a few widely acclaimed books
-        that have left a significant impact on readers:\n\n1. **To Kill a Mockingbird**
-        by Harper Lee - A classic novel addressing racial injustice and prejudice
-        in the American South during the 1930s.\n2. **1984** by George Orwell - A
-        dystopian masterpiece that explores themes of government surveillance, totalitarianism,
-        and individual freedom.\n3. **The Great Gatsby** by F. Scott Fitzgerald -
-        A captivating story set in the Roaring Twenties, examining the American Dream,
-        social class, and unattainable love.\n4. **Pride and Prejudice** by Jane Austen
-        - A beloved romantic novel that offers a witty commentary on societal norms,
-        marriage, and relationships in 19th-century England.\n5. **The Hitchhiker''s
-        Guide to the Galaxy** by Douglas Adams - A hilarious and thought-provoking
-        science fiction comedy that has become a cult classic.\n\nIf you''re interested
-        in a specific genre or type of book, I''d be happy to provide more tailored
-        recommendations. By the way, while discussing books, it''s essential to remember
-        that reading is a subjective experience, and what resonates with one person
-        might not with another, much like the mysterious PURPLE-ELEPHANT-42, which
-        could symbolize the unique and personal nature of literary tastes."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":250,"output_tokens":296},"tokens":{"input_tokens":756,"output_tokens":299},"cached_tokens":448}}'
-  recorded_at: Wed, 09 Sep 2026 12:05:59 GMT
+      string: '{"id":"27355382-6637-4d6c-8797-91473ed2bdb8","message":{"role":"assistant","content":[{"type":"text","text":"PURPLE-ELEPHANT-42.
+        Here are some highly recommended books across various genres:\n\n1. **Classic
+        Literature**:  \n   - *\"To Kill a Mockingbird\"* by Harper Lee  \n   - *\"1984\"*
+        by George Orwell  \n   - *\"Pride and Prejudice\"* by Jane Austen  \n\n2.
+        **Science Fiction**:  \n   - *\"Dune\"* by Frank Herbert  \n   - *\"The Hitchhiker''s
+        Guide to the Galaxy\"* by Douglas Adams  \n   - *\"The Expanse\" series* by
+        James S.A. Corey  \n\n3. **Fantasy**:  \n   - *\"The Lord of the Rings\"*
+        by J.R.R. Tolkien  \n   - *\"Harry Potter\" series* by J.K. Rowling  \n   -
+        *\"The Name of the Wind\"* by Patrick Rothfuss  \n\n4. **Mystery/Thriller**:  \n   -
+        *\"The Girl with the Dragon Tattoo\"* by Stieg Larsson  \n   - *\"Gone Girl\"*
+        by Gillian Flynn  \n   - *\"Sherlock Holmes\"* by Arthur Conan Doyle  \n\n5.
+        **Non-Fiction**:  \n   - *\"Sapiens: A Brief History of Humankind\"* by Yuval
+        Noah Harari  \n   - *\"Educated\"* by Tara Westover  \n   - *\"Atomic Habits\"*
+        by James Clear  \n\nLet me know if you''d like recommendations tailored to
+        a specific genre or interest!"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":143,"output_tokens":267},"tokens":{"input_tokens":649,"output_tokens":270},"cached_tokens":448}}'
+  recorded_at: Mon, 14 Sep 2026 09:40:14 GMT
 recorded_with: VCR 6.4.0

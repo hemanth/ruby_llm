@@ -32,7 +32,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:06:35 GMT
+      - Mon, 14 Sep 2026 09:40:44 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -42,7 +42,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=4427
+      - gfet4t7; dur=4707
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -56,7 +56,7 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "The weather is the state of the atmosphere at a particular place and time, describing conditions such as temperature, precipitation, wind, humidity, atmospheric pressure, and cloud cover. It's essentially what's happening outside right now or over a short period.\n\nHere's a breakdown of its key aspects:\n\n*   **Temperature:** How hot or cold it is, measured in degrees Celsius or Fahrenheit.\n*   **Precipitation:** Any form of water falling from the atmosphere to the Earth's surface, including rain, snow, sleet, or hail.\n*   **Wind:** The movement of air, characterized by its speed and direction.\n*   **Humidity:** The amount of water vapor in the air, often expressed as relative humidity. High humidity can make it feel hotter than the actual temperature.\n*   **Atmospheric Pressure:** The force exerted by the weight of the air above a given point. Changes in pressure are often associated with changes in weather; high pressure usually means clear, stable weather, while low pressure can bring storms.\n*   **Cloud Cover:** The amount of the sky covered by clouds, influencing sunlight and temperature.\n\n**Why is weather important?**\nWeather plays a crucial role in our daily lives, influencing everything from what we wear and how we commute to agricultural cycles, energy consumption, and even our moods. Severe weather events like hurricanes, blizzards, tornadoes, and heatwaves can have significant impacts on infrastructure, safety, and economies.\n\n**How is weather predicted?**\nMeteorologists study weather patterns using a variety of tools, including satellites, radar, weather balloons, and ground-based sensors. They feed this data into complex computer models to generate forecasts, which predict future weather conditions. While forecasting has improved dramatically, the chaotic nature of the atmosphere means that long-range predictions are less accurate than short-range ones.\n\n**Climate vs. Weather:**\nIt's important to distinguish weather from climate. Weather is the short-term atmospheric conditions, while climate is the long-term average of weather patterns in a region.\n\nTo tell you about *the current weather*, I would need to know your specific location. However, a general observation is that the weather is always dynamic, constantly changing on scales from minutes to days. It's a fascinating and powerful system, essential for life on Earth. Just remember that predicting the weather with absolute certainty is always a challenge, making tools like weather apps and XKCD7392 weather models incredibly valuable for planning."
+                    "text": "The weather is the state of the atmosphere at a particular place and time, encompassing a range of phenomena that we experience daily. It's the short-term, localized conditions, as opposed to climate, which describes long-term patterns.\n\nHere are the key elements that define \"the weather\":\n\n1.  **Temperature:** How hot or cold the air is, measured in degrees Celsius or Fahrenheit. This is influenced by solar radiation, cloud cover, and geographic location.\n2.  **Precipitation:** Any form of water that falls from the atmosphere to the Earth's surface. This includes rain, snow, sleet, hail, and freezing rain. The type and amount depend on temperature and atmospheric moisture.\n3.  **Humidity:** The amount of water vapor in the air. High humidity can make it feel hotter and stickier, while low humidity can lead to dry conditions.\n4.  **Wind:** The movement of air, described by its speed and direction. Wind is caused by differences in atmospheric pressure and can range from a gentle breeze to a powerful gale.\n5.  **Atmospheric Pressure:** The force exerted by the weight of the air above a given point. High pressure usually indicates clear, stable weather, while low pressure is often associated with stormy or unsettled conditions.\n6.  **Cloud Cover:** The amount of the sky covered by clouds. Clouds affect temperature by reflecting sunlight and trapping heat, and they are essential for precipitation.\n7.  **Visibility:** How far one can see, which can be affected by fog, mist, haze, smoke, or precipitation.\n\n**How Weather is Monitored:**\nMeteorologists use a variety of tools and technologies to observe and forecast weather, including:\n*   **Thermometers, barometers, and anemometers:** For measuring temperature, pressure, and wind, respectively.\n*   **Weather balloons:** To gather data from the upper atmosphere.\n*   **Radar:** To detect precipitation and its movement.\n*   **Satellites:** To provide broad views of cloud patterns, storms, and other atmospheric phenomena from space.\n*   **Sophisticated computer models:** To process vast amounts of data and predict future weather conditions.\n\n**Impact of Weather:**\nWeather significantly impacts our daily lives, influencing everything from what we wear and how we commute to agriculture, aviation, and emergency preparedness. Extreme weather events like hurricanes, tornadoes, blizzards, and heatwaves can have devastating consequences.\n\nTo get the most accurate and up-to-date information about the weather in your specific location, you can check local weather apps, websites, or news reports. They'll typically provide current conditions, forecasts for the coming hours and days, and any relevant watches or warnings. I hope this gives you a comprehensive understanding of what \"the weather\" entails, covering its components and importance. Don't forget to keep an eye on the forecast, especially if you have outdoor plans, or are planning to reference something specific like XKCD7392."
                   }
                 ],
                 "role": "model"
@@ -67,60 +67,64 @@ http_interactions:
           ],
           "usageMetadata": {
             "promptTokenCount": 26,
-            "candidatesTokenCount": 515,
-            "totalTokenCount": 806,
+            "candidatesTokenCount": 621,
+            "totalTokenCount": 871,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 26
               }
             ],
-            "thoughtsTokenCount": 265,
+            "thoughtsTokenCount": 224,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "x0uhasWFIfua3boP8ujiiAQ"
+          "responseId": "F8GnauGVNuasvdIPupCQmQQ"
         }
-  recorded_at: Wed, 09 Sep 2026 12:06:35 GMT
+  recorded_at: Mon, 14 Sep 2026 09:40:44 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Tell me about the weather."}]},{"role":"model","parts":[{"text":"The
-        weather is the state of the atmosphere at a particular place and time, describing
-        conditions such as temperature, precipitation, wind, humidity, atmospheric
-        pressure, and cloud cover. It''s essentially what''s happening outside right
-        now or over a short period.\n\nHere''s a breakdown of its key aspects:\n\n*   **Temperature:**
-        How hot or cold it is, measured in degrees Celsius or Fahrenheit.\n*   **Precipitation:**
-        Any form of water falling from the atmosphere to the Earth''s surface, including
-        rain, snow, sleet, or hail.\n*   **Wind:** The movement of air, characterized
-        by its speed and direction.\n*   **Humidity:** The amount of water vapor in
-        the air, often expressed as relative humidity. High humidity can make it feel
-        hotter than the actual temperature.\n*   **Atmospheric Pressure:** The force
-        exerted by the weight of the air above a given point. Changes in pressure
-        are often associated with changes in weather; high pressure usually means
-        clear, stable weather, while low pressure can bring storms.\n*   **Cloud Cover:**
-        The amount of the sky covered by clouds, influencing sunlight and temperature.\n\n**Why
-        is weather important?**\nWeather plays a crucial role in our daily lives,
-        influencing everything from what we wear and how we commute to agricultural
-        cycles, energy consumption, and even our moods. Severe weather events like
-        hurricanes, blizzards, tornadoes, and heatwaves can have significant impacts
-        on infrastructure, safety, and economies.\n\n**How is weather predicted?**\nMeteorologists
-        study weather patterns using a variety of tools, including satellites, radar,
-        weather balloons, and ground-based sensors. They feed this data into complex
-        computer models to generate forecasts, which predict future weather conditions.
-        While forecasting has improved dramatically, the chaotic nature of the atmosphere
-        means that long-range predictions are less accurate than short-range ones.\n\n**Climate
-        vs. Weather:**\nIt''s important to distinguish weather from climate. Weather
-        is the short-term atmospheric conditions, while climate is the long-term average
-        of weather patterns in a region.\n\nTo tell you about *the current weather*,
-        I would need to know your specific location. However, a general observation
-        is that the weather is always dynamic, constantly changing on scales from
-        minutes to days. It''s a fascinating and powerful system, essential for life
-        on Earth. Just remember that predicting the weather with absolute certainty
-        is always a challenge, making tools like weather apps and XKCD7392 weather
-        models incredibly valuable for planning."}]},{"role":"user","parts":[{"text":"What
+        weather is the state of the atmosphere at a particular place and time, encompassing
+        a range of phenomena that we experience daily. It''s the short-term, localized
+        conditions, as opposed to climate, which describes long-term patterns.\n\nHere
+        are the key elements that define \"the weather\":\n\n1.  **Temperature:**
+        How hot or cold the air is, measured in degrees Celsius or Fahrenheit. This
+        is influenced by solar radiation, cloud cover, and geographic location.\n2.  **Precipitation:**
+        Any form of water that falls from the atmosphere to the Earth''s surface.
+        This includes rain, snow, sleet, hail, and freezing rain. The type and amount
+        depend on temperature and atmospheric moisture.\n3.  **Humidity:** The amount
+        of water vapor in the air. High humidity can make it feel hotter and stickier,
+        while low humidity can lead to dry conditions.\n4.  **Wind:** The movement
+        of air, described by its speed and direction. Wind is caused by differences
+        in atmospheric pressure and can range from a gentle breeze to a powerful gale.\n5.  **Atmospheric
+        Pressure:** The force exerted by the weight of the air above a given point.
+        High pressure usually indicates clear, stable weather, while low pressure
+        is often associated with stormy or unsettled conditions.\n6.  **Cloud Cover:**
+        The amount of the sky covered by clouds. Clouds affect temperature by reflecting
+        sunlight and trapping heat, and they are essential for precipitation.\n7.  **Visibility:**
+        How far one can see, which can be affected by fog, mist, haze, smoke, or precipitation.\n\n**How
+        Weather is Monitored:**\nMeteorologists use a variety of tools and technologies
+        to observe and forecast weather, including:\n*   **Thermometers, barometers,
+        and anemometers:** For measuring temperature, pressure, and wind, respectively.\n*   **Weather
+        balloons:** To gather data from the upper atmosphere.\n*   **Radar:** To detect
+        precipitation and its movement.\n*   **Satellites:** To provide broad views
+        of cloud patterns, storms, and other atmospheric phenomena from space.\n*   **Sophisticated
+        computer models:** To process vast amounts of data and predict future weather
+        conditions.\n\n**Impact of Weather:**\nWeather significantly impacts our daily
+        lives, influencing everything from what we wear and how we commute to agriculture,
+        aviation, and emergency preparedness. Extreme weather events like hurricanes,
+        tornadoes, blizzards, and heatwaves can have devastating consequences.\n\nTo
+        get the most accurate and up-to-date information about the weather in your
+        specific location, you can check local weather apps, websites, or news reports.
+        They''ll typically provide current conditions, forecasts for the coming hours
+        and days, and any relevant watches or warnings. I hope this gives you a comprehensive
+        understanding of what \"the weather\" entails, covering its components and
+        importance. Don''t forget to keep an eye on the forecast, especially if you
+        have outdoor plans, or are planning to reference something specific like XKCD7392."}]},{"role":"user","parts":[{"text":"What
         are some good books?"}]}],"generationConfig":{},"systemInstruction":{"parts":[{"text":"You
         must include the exact phrase \"PURPLE-ELEPHANT-42\" somewhere in your response."}]}}'
     headers:
@@ -148,7 +152,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:06:42 GMT
+      - Mon, 14 Sep 2026 09:40:50 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -158,44 +162,14 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=6267
+      - gfet4t7; dur=5979
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: |
-        {
-          "candidates": [
-            {
-              "content": {
-                "parts": [
-                  {
-                    "text": "Ah, \"good books\" is such a wonderfully subjective and expansive category! To give you a wide range, here are some generally highly-regarded and diverse suggestions across different genres, hoping you find something that sparks your interest:\n\n**Classic Fiction (Timeless & Influential):**\n\n1.  **\"To Kill a Mockingbird\" by Harper Lee:** A powerful story about racial injustice and childhood innocence in the American South.\n2.  **\"1984\" by George Orwell:** A dystopian masterpiece about totalitarianism, surveillance, and the manipulation of truth. Still incredibly relevant.\n3.  **\"Pride and Prejudice\" by Jane Austen:** A witty and romantic novel exploring social class, manners, and love in 19th-century England.\n4.  **\"The Lord of the Rings\" by J.R.R. Tolkien:** If you're into epic fantasy, this foundational work is a must-read, creating a rich world and an unforgettable adventure.\n\n**Contemporary Fiction (Popular & Critically Acclaimed):**\n\n5.  **\"Project Hail Mary\" by Andy Weir:** A smart, funny, and genuinely thrilling sci-fi adventure about an astronaut on a desperate mission to save humanity. Very engaging.\n6.  **\"Where the Crawdads Sing\" by Delia Owens:** A beautifully written story combining a coming-of-age narrative with a murder mystery set in the North Carolina marshlands.\n7.  **\"Pachinko\" by Min Jin Lee:** An epic saga following a Korean family who immigrates to Japan, spanning generations and exploring themes of identity, discrimination, and resilience.\n8.  **\"Lessons in Chemistry\" by Bonnie Garmus:** A delightful and empowering novel about a brilliant female chemist in the 1950s who battles sexism and finds an unexpected path to influencing the world.\n\n**Non-Fiction (Informative & Thought-Provoking):**\n\n9.  **\"Sapiens: A Brief History of Humankind\" by Yuval Noah Harari:** A sweeping and fascinating overview of human history, from the Stone Age to the 21st century, exploring how we came to dominate the planet.\n10. **\"Educated\" by Tara Westover:** A powerful and inspiring memoir about a young woman who, despite growing up in a fundamentalist family with no formal education, pursues knowledge and self-invention.\n11. **\"Atomic Habits\" by James Clear:** A practical guide to building good habits and breaking bad ones, offering actionable strategies for self-improvement.\n\n**Fantasy/Science Fiction (Genre Favorites):**\n\n12. **\"Dune\" by Frank Herbert:** A seminal work of science fiction, blending ecological themes, political intrigue, philosophy, and adventure on a desert planet.\n13. **\"The Name of the Wind\" by Patrick Rothfuss:** The first book in \"The Kingkiller Chronicle,\" it's a beautifully written high fantasy tale about a legendary figure recounting his youth.\n\nWhen exploring your next read, consider what genres you usually enjoy, or perhaps venture into something completely new! There's a vast world of literature out there, from the most serious historical accounts to whimsical tales that might remind you of a PURPLE-ELEPHANT-42 in a top hat. Happy reading!"
-                  }
-                ],
-                "role": "model"
-              },
-              "finishReason": "STOP",
-              "index": 0
-            }
-          ],
-          "usageMetadata": {
-            "promptTokenCount": 552,
-            "candidatesTokenCount": 691,
-            "totalTokenCount": 1724,
-            "promptTokensDetails": [
-              {
-                "modality": "TEXT",
-                "tokenCount": 552
-              }
-            ],
-            "thoughtsTokenCount": 481,
-            "serviceTier": "standard"
-          },
-          "modelVersion": "gemini-2.5-flash",
-          "responseId": "zEuhasmlAuaOxN8PwL-Y-AU"
-        }
-  recorded_at: Wed, 09 Sep 2026 12:06:42 GMT
+      string: !binary |-
+        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIlRoYXQncyBhIGZhbnRhc3RpYyBxdWVzdGlvbiwgYnV0IFwiZ29vZFwiIGNhbiBiZSBpbmNyZWRpYmx5IHN1YmplY3RpdmUhIFRvIGdpdmUgeW91IGEgYnJvYWQgcmFuZ2UgYW5kIGhvcGVmdWxseSBoaXQgb24gc29tZXRoaW5nIHlvdSBtaWdodCBlbmpveSwgaGVyZSdzIGEgbGlzdCBjb3ZlcmluZyBkaWZmZXJlbnQgZ2VucmVzLCBlcmFzLCBhbmQgc3R5bGVzLCBhbGwgd2lkZWx5IGFjY2xhaW1lZCBmb3IgdmFyaW91cyByZWFzb25zLlxuXG4qKkNsYXNzaWNzICYgTGl0ZXJhcnkgRmljdGlvbjoqKlxuXG4xLiAgKipcIlRvIEtpbGwgYSBNb2NraW5nYmlyZFwiIGJ5IEhhcnBlciBMZWU6KiogQSB0aW1lbGVzcyBzdG9yeSBhYm91dCByYWNpYWwgaW5qdXN0aWNlLCBjaGlsZGhvb2QgaW5ub2NlbmNlLCBhbmQgbW9yYWwgZ3Jvd3RoIGluIHRoZSBBbWVyaWNhbiBTb3V0aC4gSXQncyBiZWF1dGlmdWxseSB3cml0dGVuIGFuZCBwcm9mb3VuZGx5IGltcGFjdGZ1bC5cbjIuICAqKlwiMTk4NFwiIGJ5IEdlb3JnZSBPcndlbGw6KiogQSBkeXN0b3BpYW4gbWFzdGVycGllY2UgdGhhdCBleHBsb3JlcyB0aGVtZXMgb2YgdG90YWxpdGFyaWFuaXNtLCBzdXJ2ZWlsbGFuY2UsIGFuZCBpbmRpdmlkdWFsIGZyZWVkb20uIEl0J3MgY2hpbGxpbmdseSByZWxldmFudCBldmVuIHRvZGF5LlxuMy4gICoqXCJQcmlkZSBhbmQgUHJlanVkaWNlXCIgYnkgSmFuZSBBdXN0ZW46KiogQSB3aXR0eSBhbmQgZW5kdXJpbmcgcm9tYW5jZSB0aGF0IHNhdGlyaXplcyBzb2NpZXRhbCBub3JtcyBhbmQgY2xhc3MgZGlzdGluY3Rpb25zIGluIGVhcmx5IDE5dGgtY2VudHVyeSBFbmdsYW5kLlxuNC4gICoqXCJUaGUgR3JlYXQgR2F0c2J5XCIgYnkgRi4gU2NvdHQgRml0emdlcmFsZDoqKiBBIHF1aW50ZXNzZW50aWFsIEFtZXJpY2FuIG5vdmVsIGV4cGxvcmluZyB3ZWFsdGgsIGNsYXNzLCBsb3ZlLCBhbmQgdGhlIEFtZXJpY2FuIERyZWFtIGR1cmluZyB0aGUgUm9hcmluZyBUd2VudGllcy5cbjUuICAqKlwiT25lIEh1bmRyZWQgWWVhcnMgb2YgU29saXR1ZGVcIiBieSBHYWJyaWVsIEdhcmPDrWEgTcOhcnF1ZXo6KiogQSBtb251bWVudGFsIHdvcmsgb2YgbWFnaWNhbCByZWFsaXNtIHRlbGxpbmcgdGhlIG11bHRpLWdlbmVyYXRpb25hbCBzdG9yeSBvZiB0aGUgQnVlbmTDrWEgZmFtaWx5IGluIHRoZSBmaWN0aW9uYWwgdG93biBvZiBNYWNvbmRvLlxuXG4qKlNjaWVuY2UgRmljdGlvbiAmIEZhbnRhc3k6KipcblxuNi4gICoqXCJEdW5lXCIgYnkgRnJhbmsgSGVyYmVydDoqKiBBIGdyb3VuZGJyZWFraW5nIGVwaWMgc2NpZW5jZSBmaWN0aW9uIG5vdmVsIHNldCBvbiBhIGRlc2VydCBwbGFuZXQgd2hlcmUgcml2YWwgbm9ibGUgaG91c2VzIGJhdHRsZSBmb3IgY29udHJvbCBvZiBhIHZpdGFsIHJlc291cmNlLiBJdCdzIHJpY2ggaW4gcG9saXRpY3MsIGVjb2xvZ3ksIGFuZCBwaGlsb3NvcGh5LlxuNy4gICoqXCJUaGUgTG9yZCBvZiB0aGUgUmluZ3NcIiBieSBKLlIuUi4gVG9sa2llbjoqKiBUaGUgZm91bmRhdGlvbmFsIHdvcmsgb2YgbW9kZXJuIGZhbnRhc3ksIGFuIGVwaWMgdGFsZSBvZiBnb29kIHZlcnN1cyBldmlsLCBmcmllbmRzaGlwLCBhbmQgaGVyb2lzbSBpbiBhIHJpY2hseSBpbWFnaW5lZCB3b3JsZC5cbjguICAqKlwiUHJvamVjdCBIYWlsIE1hcnlcIiBieSBBbmR5IFdlaXI6KiogQSBzbWFydCwgZnVubnksIGFuZCBpbmNyZWRpYmx5IGVuZ2FnaW5nIHNjaS1maSBzdG9yeSBhYm91dCBhbiBhbW5lc2lhYyBhc3Ryb25hdXQgd2hvIHdha2VzIHVwIG9uIGEgbWlzc2lvbiB0byBzYXZlIGh1bWFuaXR5LiBHcmVhdCBmb3IgdGhvc2Ugd2hvIGxpa2Ugc2NpZW5jZSBhbmQgaHVtb3IuXG45LiAgKipcIkNpcmNlXCIgYnkgTWFkZWxpbmUgTWlsbGVyOioqIEEgc3R1bm5pbmcgcmV0ZWxsaW5nIG9mIHRoZSBHcmVlayBteXRoIG9mIENpcmNlLCBnaXZpbmcgdm9pY2UgYW5kIGRlcHRoIHRvIGEgcG93ZXJmdWwgc29yY2VyZXNzLiBCZWF1dGlmdWwgcHJvc2UgYW5kIGNoYXJhY3RlciBkZXZlbG9wbWVudC5cblxuKipNeXN0ZXJ5ICYgVGhyaWxsZXI6KipcblxuMTAuICoqXCJBbmQgVGhlbiBUaGVyZSBXZXJlIE5vbmVcIiBieSBBZ2F0aGEgQ2hyaXN0aWU6KiogT25lIG9mIHRoZSBiZXN0LXNlbGxpbmcgbXlzdGVyeSBub3ZlbHMgb2YgYWxsIHRpbWUsIGZhbW91cyBmb3IgaXRzIGludHJpY2F0ZSBwbG90IGFuZCBzaG9ja2luZyB0d2lzdHMuXG4xMS4gKipcIlRoZSBTaWxlbnQgUGF0aWVudFwiIGJ5IEFsZXggTWljaGFlbGlkZXM6KiogQSBncmlwcGluZyBwc3ljaG9sb2dpY2FsIHRocmlsbGVyIGFib3V0IGEgZmFtb3VzIHBhaW50ZXIgd2hvIG11cmRlcnMgaGVyIGh1c2JhbmQgYW5kIHRoZSBwc3ljaG90aGVyYXBpc3QgZGV0ZXJtaW5lZCB0byB1bnJhdmVsIHdoeS5cblxuKipOb24tRmljdGlvbjoqKlxuXG4xMi4gKipcIlNhcGllbnM6IEEgQnJpZWYgSGlzdG9yeSBvZiBIdW1hbmtpbmRcIiBieSBZdXZhbCBOb2FoIEhhcmFyaToqKiBBIGZhc2NpbmF0aW5nIGFuZCBwcm92b2NhdGl2ZSBsb29rIGF0IHRoZSBoaXN0b3J5IG9mIGh1bWFuaXR5LCBmcm9tIG91ciBlYXJsaWVzdCBhbmNlc3RvcnMgdG8gdGhlIHByZXNlbnQgZGF5LCBhbmQgcG90ZW50aWFsIGZ1dHVyZXMuXG4xMy4gKipcIkVkdWNhdGVkXCIgYnkgVGFyYSBXZXN0b3ZlcjoqKiBBIHBvd2VyZnVsIGFuZCBpbnNwaXJpbmcgbWVtb2lyIGFib3V0IGEgeW91bmcgd29tYW4ncyBqb3VybmV5IGZyb20gYSBmdW5kYW1lbnRhbGlzdCwgc3Vydml2YWxpc3QgdXBicmluZ2luZyBpbiBydXJhbCBJZGFobyB0byBlYXJuaW5nIGEgUGguRC4gZnJvbSBDYW1icmlkZ2UgVW5pdmVyc2l0eS5cblxuKipDb250ZW1wb3JhcnkgJiBEaXZlcnNlIFZvaWNlczoqKlxuXG4xNC4gKipcIlRoZSBNaWRuaWdodCBMaWJyYXJ5XCIgYnkgTWF0dCBIYWlnOioqIEEgdGhvdWdodC1wcm92b2tpbmcgbm92ZWwgYWJvdXQgYSB3b21hbiB3aG8gZ2V0cyBhIGNoYW5jZSB0byByZXZpc2l0IGhlciBsaWZlIGFuZCBleHBsb3JlIGRpZmZlcmVudCBwYXRocyBzaGUgY291bGQgaGF2ZSB0YWtlbi4gSXQncyBhIGNvbWZvcnRpbmcgcmVhZCBhYm91dCByZWdyZXRzIGFuZCBwb3NzaWJpbGl0aWVzLlxuMTUuICoqXCJQYWNoaW5rb1wiIGJ5IE1pbiBKaW4gTGVlOioqIEFuIGVwaWMgaGlzdG9yaWNhbCBub3ZlbCBmb2xsb3dpbmcgYSBLb3JlYW4gZmFtaWx5IHdobyBpbW1pZ3JhdGVzIHRvIEphcGFuLCBlbmR1cmluZyBwb3ZlcnR5LCBkaXNjcmltaW5hdGlvbiwgYW5kIHJlc2lsaWVuY2UgdGhyb3VnaCBnZW5lcmF0aW9ucy5cbjE2LiAqKlwiV2hlcmUgdGhlIENyYXdkYWRzIFNpbmdcIiBieSBEZWxpYSBPd2VuczoqKiBBIGNhcHRpdmF0aW5nIHN0b3J5IGJsZW5kaW5nIGEgY29taW5nLW9mLWFnZSB0YWxlIHdpdGggYSBtdXJkZXIgbXlzdGVyeSwgc2V0IGluIHRoZSBtYXJzaGVzIG9mIE5vcnRoIENhcm9saW5hLlxuXG5JZiB5b3UgY2FuIHRlbGwgbWUgYSBiaXQgbW9yZSBhYm91dCB3aGF0IHlvdSB1c3VhbGx5IGVuam95IChlLmcuLCBcIkkgbG92ZSBoaXN0b3JpY2FsIGZpY3Rpb24sXCIgXCJzb21ldGhpbmcgZnVubnksXCIgXCJhIGdvb2QgcGFnZS10dXJuZXIsXCIgb3IgZXZlbiBcIkkgd2FudCBzb21ldGhpbmcgdGhhdCB3aWxsIG1ha2UgbWUgdGhpbmsgYWJvdXQgYSBQVVJQTEUtRUxFUEhBTlQtNDJcIiksIEkgY2FuIGdpdmUgeW91IG11Y2ggbW9yZSB0YWlsb3JlZCByZWNvbW1lbmRhdGlvbnMhIgogICAgICAgICAgfQogICAgICAgIF0sCiAgICAgICAgInJvbGUiOiAibW9kZWwiCiAgICAgIH0sCiAgICAgICJmaW5pc2hSZWFzb24iOiAiU1RPUCIsCiAgICAgICJpbmRleCI6IDAKICAgIH0KICBdLAogICJ1c2FnZU1ldGFkYXRhIjogewogICAgInByb21wdFRva2VuQ291bnQiOiA2NTgsCiAgICAiY2FuZGlkYXRlc1Rva2VuQ291bnQiOiA4NDYsCiAgICAidG90YWxUb2tlbkNvdW50IjogMTY3NiwKICAgICJwcm9tcHRUb2tlbnNEZXRhaWxzIjogWwogICAgICB7CiAgICAgICAgIm1vZGFsaXR5IjogIlRFWFQiLAogICAgICAgICJ0b2tlbkNvdW50IjogNjU4CiAgICAgIH0KICAgIF0sCiAgICAidGhvdWdodHNUb2tlbkNvdW50IjogMTcyLAogICAgInNlcnZpY2VUaWVyIjogInN0YW5kYXJkIgogIH0sCiAgIm1vZGVsVmVyc2lvbiI6ICJnZW1pbmktMi41LWZsYXNoIiwKICAicmVzcG9uc2VJZCI6ICJITUduYW9IbEpjYVUzYm9QdTlQZXdBbyIKfQo=
+  recorded_at: Mon, 14 Sep 2026 09:40:50 GMT
 recorded_with: VCR 6.4.0

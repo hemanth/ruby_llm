@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:35:02 GMT
+      - Mon, 14 Sep 2026 09:44:37 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,7 +39,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Generation-Id:
-      - gen-1788957301-FBoe1lQeCrvlPxrjy9ct
+      - gen-1789379077-AOfztaNVEVEft2zpBAJN
       Access-Control-Expose-Headers:
       - X-Generation-Id,X-Provider-Name,request-id,cf-ray
       Set-Cookie:
@@ -57,16 +57,16 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: "\n         \n{\"id\":\"gen-1788957301-FBoe1lQeCrvlPxrjy9ct\",\"object\":\"chat.completion\",\"created\":1788957301,\"model\":\"anthropic/claude-haiku-4.5\",\"provider\":\"Amazon
-        Bedrock\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_use\",\"message\":{\"role\":\"assistant\",\"content\":null,\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"type\":\"function\",\"index\":0,\"id\":\"toolu_bdrk_01SJwHU4hfZhJAq6rEGeEDyK\",\"function\":{\"name\":\"best_language_to_learn\",\"arguments\":\"{}\"}}]}}],\"usage\":{\"prompt_tokens\":581,\"completion_tokens\":41,\"total_tokens\":622,\"cost\":0.000786,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.000786,\"upstream_inference_prompt_cost\":0.000581,\"upstream_inference_completions_cost\":0.000205},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}"
-  recorded_at: Wed, 09 Sep 2026 12:35:02 GMT
+      string: "\n         \n{\"id\":\"gen-1789379077-AOfztaNVEVEft2zpBAJN\",\"object\":\"chat.completion\",\"created\":1789379077,\"model\":\"anthropic/claude-haiku-4.5\",\"provider\":\"Amazon
+        Bedrock\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_use\",\"message\":{\"role\":\"assistant\",\"content\":null,\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"type\":\"function\",\"index\":0,\"id\":\"toolu_bdrk_016VhoHNEMkbH79UUPxgdqLY\",\"function\":{\"name\":\"best_language_to_learn\",\"arguments\":\"{}\"}}]}}],\"usage\":{\"prompt_tokens\":581,\"completion_tokens\":41,\"total_tokens\":622,\"cost\":0.000786,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.000786,\"upstream_inference_prompt_cost\":0.000581,\"upstream_inference_completions_cost\":0.000205},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}"
+  recorded_at: Mon, 14 Sep 2026 09:44:38 GMT
 - request:
     method: post
     uri: https://openrouter.ai/api/v1/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"anthropic/claude-haiku-4.5","messages":[{"role":"user","content":"Use
-        the best_language_to_learn tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"toolu_bdrk_01SJwHU4hfZhJAq6rEGeEDyK","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},{"role":"tool","content":"Ruby","tool_call_id":"toolu_bdrk_01SJwHU4hfZhJAq6rEGeEDyK"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
+        the best_language_to_learn tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"toolu_bdrk_016VhoHNEMkbH79UUPxgdqLY","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},{"role":"tool","content":"Ruby","tool_call_id":"toolu_bdrk_016VhoHNEMkbH79UUPxgdqLY"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
         the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
@@ -89,7 +89,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:35:03 GMT
+      - Mon, 14 Sep 2026 09:44:38 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -99,7 +99,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Generation-Id:
-      - gen-1788957302-CI0kgxT0yeKCTN3fAQ5a
+      - gen-1789379078-gfnfSJ9fYa04mTMNTV0h
       Access-Control-Expose-Headers:
       - X-Generation-Id,X-Provider-Name,request-id,cf-ray
       Set-Cookie:
@@ -117,15 +117,13 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: "\n         \n{\"id\":\"gen-1788957302-CI0kgxT0yeKCTN3fAQ5a\",\"object\":\"chat.completion\",\"created\":1788957302,\"model\":\"anthropic/claude-haiku-4.5\",\"provider\":\"Amazon
+      string: "\n         \n{\"id\":\"gen-1789379078-gfnfSJ9fYa04mTMNTV0h\",\"object\":\"chat.completion\",\"created\":1789379078,\"model\":\"anthropic/claude-haiku-4.5\",\"provider\":\"Amazon
         Bedrock\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"Based
-        on the tool's recommendation, **Ruby** is the best language for you to learn!\\n\\nRuby
-        is a fantastic choice if you're interested in programming. It's known for
-        being:\\n- **Beginner-friendly**: Clean and readable syntax that's easy to
-        learn\\n- **Versatile**: Used for web development (Rails framework), scripting,
-        automation, and more\\n- **Productive**: Allows you to write powerful code
-        quickly\\n- **Popular**: Has a strong community and lots of learning resources
-        available\\n\\nIf you'd like guidance on getting started with Ruby or have
-        any other questions about learning it, feel free to ask!\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":635,\"completion_tokens\":135,\"total_tokens\":770,\"cost\":0.00131,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.00131,\"upstream_inference_prompt_cost\":0.000635,\"upstream_inference_completions_cost\":0.000675},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}"
-  recorded_at: Wed, 09 Sep 2026 12:35:04 GMT
+        on the tool's recommendation, the best language for you to learn is **Ruby**!\\n\\nRuby
+        is a versatile and beginner-friendly programming language known for its clean,
+        readable syntax and elegant design. It's great for web development (especially
+        with frameworks like Ruby on Rails), automation, scripting, and general-purpose
+        programming. Whether you're just starting your programming journey or looking
+        to expand your skills, Ruby is an excellent choice!\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":635,\"completion_tokens\":93,\"total_tokens\":728,\"cost\":0.0011,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.0011,\"upstream_inference_prompt_cost\":0.000635,\"upstream_inference_completions_cost\":0.000465},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}"
+  recorded_at: Mon, 14 Sep 2026 09:44:39 GMT
 recorded_with: VCR 6.4.0

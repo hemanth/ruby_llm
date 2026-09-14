@@ -26,7 +26,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:05:23 GMT
+      - Mon, 14 Sep 2026 09:39:18 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -42,13 +42,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-64a12dbba6ba01860400f4029d054edb-56249d0900114c52-00
+      - 00-7c1f25408a1822a797912e1adfbf4aa1-c9333f2f000b7466-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - a5b36093-f696-41a1-8c58-0cf7ab4431e4
+      - ce9e6686-b978-4383-8044-b2a4c9262a86
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -84,7 +84,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - a5b36093-f696-41a1-8c58-0cf7ab4431e4
+      - ce9e6686-b978-4383-8044-b2a4c9262a86
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -93,12 +93,12 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"b8399c5b-81a1-4e27-864a-755bd98e18e3","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"**Paris**
+      string: '{"id":"cca8b8a9-b5c7-47da-aed3-0de69f62b1b2","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"**Paris**
         is the capital of France. \n\nThis has been the case since 987 AD, when Hugh
         Capet established the Capetian dynasty, and it''s confirmed by official sources
-        like the French government''s website (gouvernement.fr) and international
-        bodies like the UN. Paris serves as the political, cultural, and economic
-        center, home to the Eiffel Tower, Louvre, and the seat of the French National
-        Assembly."},"finish_reason":"stop"}],"usage":{"prompt_tokens":7,"completion_tokens":83,"total_tokens":90,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":174,"audio_tokens":0,"text_tokens":7,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1788955523,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 09 Sep 2026 12:05:25 GMT
+        like the French government''s website (e.g., diplomatie.gouv.fr) and international
+        databases such as the CIA World Factbook. Paris is home to about 2.1 million
+        people in the city proper and serves as the political, cultural, and economic
+        center."},"finish_reason":"stop"}],"usage":{"prompt_tokens":7,"completion_tokens":89,"total_tokens":96,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":164,"audio_tokens":0,"text_tokens":7,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789378758,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Mon, 14 Sep 2026 09:39:19 GMT
 recorded_with: VCR 6.4.0

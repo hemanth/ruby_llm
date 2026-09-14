@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260909T121440Z
+      - 20260914T094751Z
       X-Amz-Content-Sha256:
       - a28e1d7f145ec6abf9e71788a74513f7e39e26432272e2faecb469dc1e7c3457
       Authorization:
@@ -29,28 +29,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:14:44 GMT
+      - Mon, 14 Sep 2026 09:47:54 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '2082'
+      - '1357'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 4f113225-77ff-47cd-bc9d-d2ce12fa3764
+      - 84adc9c5-e59c-45d2-a3e0-83bf9c06d7bd
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":3063},"output":{"message":{"content":[{"toolUse":{"input":{"query":"latest
-        stable Ruby version"},"name":"nova_grounding","toolUseId":"tooluse_XbNTZqTFvQgEYCwhTw4csg","type":"server_tool_use"}},{"toolResult":{"content":[{"text":"[HIDDEN]"}],"status":"success","toolUseId":"tooluse_XbNTZqTFvQgEYCwhTw4csg","type":"nova_grounding_result"}},{"text":"The
-        latest stable Ruby version is **4.0.6**, released on July 13, 2026. This version
-        is currently under normal maintenance, with support expected to continue until
-        further notice"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/en/downloads/releases/"}}}]}},{"citationsContent":{"citations":[{"location":{"web":{"domain":"endoflife.date","url":"https://endoflife.date/ruby"}}}]}},{"text":".\n\nKey
-        points about the current Ruby versions:\n- **Ruby 4.0** (current stable) was
-        released on December 25, 2025, and is supported until at least March 31, 2029"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"endoflife.date","url":"https://endoflife.date/ruby"}}}]}},{"text":".\n-
-        **Ruby 3.4.10** (previous stable) received its last update on June 30, 2026"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/en/downloads/releases/"}}}]}},{"text":".\n-
-        **Ruby 3.3.12** (legacy) was updated as recently as July 16, 2026, and is
-        in security maintenance until March 31, 2027"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/en/downloads/releases/"}}}]}},{"text":".\n\nFor
-        production use, it is recommended to use the latest stable version (4.0.6)
-        to benefit from performance improvements, new features, and security updates"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/en/downloads/releases/"}}}]}},{"text":"."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":141,"outputTokens":204,"serverToolUsage":{},"totalTokens":345}}'
-  recorded_at: Wed, 09 Sep 2026 12:14:44 GMT
+      string: '{"metrics":{"latencyMs":2405},"output":{"message":{"content":[{"toolUse":{"input":{"query":"latest
+        stable Ruby version"},"name":"nova_grounding","toolUseId":"tooluse_iG9AHabGDvQjRc6NWJsZSw","type":"server_tool_use"}},{"toolResult":{"content":[{"text":"[HIDDEN]"}],"status":"success","toolUseId":"tooluse_iG9AHabGDvQjRc6NWJsZSw","type":"nova_grounding_result"}},{"text":"The
+        latest stable Ruby version is 4.0.6, released on July 13, 2026. This version
+        is the most recent stable release as of now"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/en/downloads/releases/"}}}]}},{"citationsContent":{"citations":[{"location":{"web":{"domain":"endoflife.date","url":"https://endoflife.date/ruby"}}}]}},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/es/downloads/"}}}]}},{"text":".\n\nRuby
+        version 4.0.6 includes various improvements and bug fixes over previous versions.
+        It is the current recommended version for production use and development"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/en/downloads/releases/"}}}]}},{"text":"."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":141,"outputTokens":100,"serverToolUsage":{},"totalTokens":241}}'
+  recorded_at: Mon, 14 Sep 2026 09:47:54 GMT
 recorded_with: VCR 6.4.0

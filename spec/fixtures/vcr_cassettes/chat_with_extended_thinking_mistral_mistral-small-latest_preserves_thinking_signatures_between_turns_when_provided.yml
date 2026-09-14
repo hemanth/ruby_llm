@@ -24,68 +24,71 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:08:30 GMT
+      - Mon, 14 Sep 2026 09:41:35 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a08611-d33f-723a-9a29-ca11fbb6bcba
+      - 01a09f4b-19b7-7c11-9399-6f9a58b82aba
       X-Kong-Request-Id:
-      - 01a08611-d33f-723a-9a29-ca11fbb6bcba
+      - 01a09f4b-19b7-7c11-9399-6f9a58b82aba
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '91751'
+      - '96937'
       X-Ratelimit-Tokens-Query-Cost:
-      - '70'
+      - '126'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '99'
+      - '97'
       X-Envoy-Upstream-Service-Time:
-      - '560'
+      - '779'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '562'
+      - '780'
       X-Kong-Proxy-Latency:
       - '16'
-      X-Content-Type-Options:
-      - nosniff
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"8cd16dc1e24b4405b4f7e6a1a375371a","created":1788955710,"model":"mistral-small-latest","usage":{"prompt_tokens":23,"total_tokens":70,"completion_tokens":47,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":[{"type":"thinking","thinking":[{"type":"text","text":"The
-        user is asking for the result of the addition of 5 and 3. This is a basic
-        arithmetic operation. I know that 5 plus 3 equals 8."}],"closed":true},{"type":"text","text":"5
-        + 3 equals **8**."}]}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:08:30 GMT
+      string: '{"id":"fb74bdc67f474580bb7820c0df9204e7","created":1789378894,"model":"mistral-small-latest","usage":{"prompt_tokens":23,"total_tokens":126,"completion_tokens":103,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":[{"type":"thinking","thinking":[{"type":"text","text":"5
+        + 3 is a simple arithmetic problem. Let me calculate it step by step.\n\nFirst,
+        I know that 5 plus 3 means adding the number 3 to the number 5. So, if I count
+        up from 5 by 3 units, I get:\n\n5 + 1 = 6\n6 + 1 = 7\n7 + 1 = 8\n\nSo, 5 +
+        3 equals 8."}],"closed":true},{"type":"text","text":"5 + 3 equals **8**."}]}}]}'
+  recorded_at: Mon, 14 Sep 2026 09:41:35 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"What
-        is 5 + 3?"},{"role":"assistant","content":[{"type":"thinking","thinking":[{"type":"text","text":"The
-        user is asking for the result of the addition of 5 and 3. This is a basic
-        arithmetic operation. I know that 5 plus 3 equals 8."}]},{"type":"text","text":"5
-        + 3 equals **8**."}]},{"role":"user","content":"Now multiply that by 2"}],"stream":false,"reasoning_effort":"high"}'
+        is 5 + 3?"},{"role":"assistant","content":[{"type":"thinking","thinking":[{"type":"text","text":"5
+        + 3 is a simple arithmetic problem. Let me calculate it step by step.\n\nFirst,
+        I know that 5 plus 3 means adding the number 3 to the number 5. So, if I count
+        up from 5 by 3 units, I get:\n\n5 + 1 = 6\n6 + 1 = 7\n7 + 1 = 8\n\nSo, 5 +
+        3 equals 8."}]},{"type":"text","text":"5 + 3 equals **8**."}]},{"role":"user","content":"Now
+        multiply that by 2"}],"stream":false,"reasoning_effort":"high"}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -103,47 +106,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:08:31 GMT
+      - Mon, 14 Sep 2026 09:41:35 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a08611-d5df-7448-a756-25cb343d55a3
+      - 01a09f4b-1d1c-7eed-844e-0fb3ce6c6581
       X-Kong-Request-Id:
-      - 01a08611-d5df-7448-a756-25cb343d55a3
+      - 01a09f4b-1d1c-7eed-844e-0fb3ce6c6581
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '91696'
+      - '96775'
       X-Ratelimit-Tokens-Query-Cost:
-      - '122'
+      - '178'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '98'
+      - '96'
       X-Envoy-Upstream-Service-Time:
-      - '447'
+      - '410'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '448'
+      - '411'
       X-Kong-Proxy-Latency:
-      - '101'
-      X-Content-Type-Options:
-      - nosniff
+      - '15'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
@@ -151,6 +154,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6ImI3NjU0OTlmZTBkZjQyNzc5M2RhZjNjZTg3M2M1YzQ4IiwiY3JlYXRlZCI6MTc4ODk1NTcxMSwibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjc4LCJ0b3RhbF90b2tlbnMiOjEyMiwiY29tcGxldGlvbl90b2tlbnMiOjQ0LCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MH0sInNlcnZpY2VfdGllciI6InN0YW5kYXJkIn0sIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNob2ljZXMiOlt7ImluZGV4IjowLCJmaW5pc2hfcmVhc29uIjoic3RvcCIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsInRvb2xfY2FsbHMiOm51bGwsImNvbnRlbnQiOlt7InR5cGUiOiJ0aGlua2luZyIsInRoaW5raW5nIjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJUaGUgdXNlciB3YW50cyBtZSB0byBtdWx0aXBseSB0aGUgcHJldmlvdXMgcmVzdWx0ICh3aGljaCB3YXMgOCkgYnkgMi4gU28sIDggbXVsdGlwbGllZCBieSAyIGVxdWFscyAxNi4ifV0sImNsb3NlZCI6dHJ1ZX0seyJ0eXBlIjoidGV4dCIsInRleHQiOiI4IMOXIDIgZXF1YWxzICoqMTYqKi4ifV19fV19
-  recorded_at: Wed, 09 Sep 2026 12:08:31 GMT
+        eyJpZCI6ImI2YzlkYzdiMDYyZTQ5NzQ5YWE4NjU4OTBhNzZiMDc1IiwiY3JlYXRlZCI6MTc4OTM3ODg5NSwibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjEzNCwidG90YWxfdG9rZW5zIjoxNzgsImNvbXBsZXRpb25fdG9rZW5zIjo0NCwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjB9LCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCJ9LCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJ0b29sX2NhbGxzIjpudWxsLCJjb250ZW50IjpbeyJ0eXBlIjoidGhpbmtpbmciLCJ0aGlua2luZyI6W3sidHlwZSI6InRleHQiLCJ0ZXh0IjoiVGhlIHVzZXIgd2FudHMgbWUgdG8gbXVsdGlwbHkgdGhlIHByZXZpb3VzIHJlc3VsdCAod2hpY2ggd2FzIDgpIGJ5IDIuIFNvLCA4IG11bHRpcGxpZWQgYnkgMiBpcyAxNi4ifV0sImNsb3NlZCI6dHJ1ZX0seyJ0eXBlIjoidGV4dCIsInRleHQiOiI4IMOXIDIgZXF1YWxzICoqMTYqKi4ifV19fV19
+  recorded_at: Mon, 14 Sep 2026 09:41:35 GMT
 recorded_with: VCR 6.4.0

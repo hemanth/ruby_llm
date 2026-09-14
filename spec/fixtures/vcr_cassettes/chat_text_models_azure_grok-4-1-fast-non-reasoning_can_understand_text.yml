@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:04:55 GMT
+      - Mon, 14 Sep 2026 09:38:59 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -43,13 +43,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-6d24bd2572bb330cb47235d2448f3966-a47070c40005cb90-00
+      - 00-1572334654cbd2c973801abc1013665b-d94b20e400306e5b-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 93657e5d-9939-428d-9082-24ae820cf351
+      - 8e4c079a-b5d4-4e76-a90a-de61a07ae137
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -85,7 +85,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 93657e5d-9939-428d-9082-24ae820cf351
+      - 8e4c079a-b5d4-4e76-a90a-de61a07ae137
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -94,9 +94,9 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"21f95c8a-dc3e-4226-ac6b-fd57b217135b","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        file `ruby.txt` contains the text: \"Ruby is the best.\""},"finish_reason":"stop"}],"usage":{"prompt_tokens":24,"completion_tokens":16,"total_tokens":40,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":161,"audio_tokens":0,"text_tokens":24,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1788955495,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 09 Sep 2026 12:04:55 GMT
+      string: '{"id":"f9fca7f4-6a66-42d9-b453-efcb8e924059","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        file `ruby.txt` contains the text: \"Ruby is the best.\""},"finish_reason":"stop"}],"usage":{"prompt_tokens":24,"completion_tokens":16,"total_tokens":40,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":161,"audio_tokens":0,"text_tokens":24,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789378739,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Mon, 14 Sep 2026 09:39:00 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
@@ -127,7 +127,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:04:56 GMT
+      - Mon, 14 Sep 2026 09:39:00 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -143,13 +143,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-3ee70e533a087493c45f735a47ebea41-a47070c40005cb9c-00
+      - 00-f19c5e47383d54c506cee79d950ae621-68570368000c5371-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 4ba23f1a-3435-4f29-aa9f-b9ad40fa8f12
+      - 67a2d9c5-ee96-4161-8420-01413ffe5b40
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -185,7 +185,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 4ba23f1a-3435-4f29-aa9f-b9ad40fa8f12
+      - 67a2d9c5-ee96-4161-8420-01413ffe5b40
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -194,7 +194,7 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"882a1ac6-3b20-44c2-83b3-25b44af656fa","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        file `ruby.xml` contains the XML: `<truism>Ruby is the best</truism>`"},"finish_reason":"stop"}],"usage":{"prompt_tokens":81,"completion_tokens":22,"total_tokens":103,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":192,"audio_tokens":0,"text_tokens":81,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1788955496,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 09 Sep 2026 12:04:56 GMT
+      string: '{"id":"9e1828db-2775-4b75-a9a0-463c6fb74686","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        file `ruby.xml` contains the following XML:\n\n```\n<truism>Ruby is the best</truism>\n```"},"finish_reason":"stop"}],"usage":{"prompt_tokens":81,"completion_tokens":25,"total_tokens":106,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":192,"audio_tokens":0,"text_tokens":81,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789378740,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Mon, 14 Sep 2026 09:39:01 GMT
 recorded_with: VCR 6.4.0

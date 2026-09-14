@@ -34,7 +34,7 @@ http_interactions:
       Num-Chars:
       - '2630'
       Num-Tokens:
-      - '115'
+      - '121'
       Pragma:
       - no-cache
       Vary:
@@ -42,11 +42,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - d009a9cf54a37a213516db571b09fd34
+      - d667cc7ad0f0e9827b4028497cc389e3
       Date:
-      - Wed, 09 Sep 2026 12:05:48 GMT
+      - Mon, 14 Sep 2026 09:39:55 GMT
       X-Envoy-Upstream-Service-Time:
-      - '1857'
+      - '2221'
       Server:
       - envoy
       Via:
@@ -57,16 +57,16 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"62c1d6db-076a-4655-bd33-c8a7c436b8f7","message":{"role":"assistant","content":[{"type":"text","text":"The
+      string: '{"id":"aa1d85b6-34a8-42ff-a2e5-bcce6081af96","message":{"role":"assistant","content":[{"type":"text","text":"The
         programming language Ruby was created by **Yukihiro \"Matz\" Matsumoto**,
         a Japanese computer scientist and software programmer. He began working on
         Ruby in 1993 and released it to the public in 1995. Matsumoto designed Ruby
-        with the goal of creating a language that balanced functional programming
-        with imperative programming, and he emphasized productivity and enjoyment
-        for developers. Ruby is known for its simplicity, flexibility, and readability,
-        and it has become particularly popular for web development, especially through
-        the Ruby on Rails framework."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":10,"output_tokens":105},"tokens":{"input_tokens":505,"output_tokens":108},"cached_tokens":448}}'
-  recorded_at: Wed, 09 Sep 2026 12:05:49 GMT
+        to be a language that balanced functional programming with imperative programming,
+        focusing on productivity and simplicity. He is known for his philosophy of
+        making programming enjoyable and flexible, often summarized by Ruby''s motto:
+        **\"Matz is nice and so we are nice\"**, which emphasizes the community''s
+        friendly and collaborative spirit."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":10,"output_tokens":111},"tokens":{"input_tokens":505,"output_tokens":114},"cached_tokens":448}}'
+  recorded_at: Mon, 14 Sep 2026 09:39:55 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
@@ -77,11 +77,11 @@ http_interactions:
         programming language Ruby was created by **Yukihiro \"Matz\" Matsumoto**,
         a Japanese computer scientist and software programmer. He began working on
         Ruby in 1993 and released it to the public in 1995. Matsumoto designed Ruby
-        with the goal of creating a language that balanced functional programming
-        with imperative programming, and he emphasized productivity and enjoyment
-        for developers. Ruby is known for its simplicity, flexibility, and readability,
-        and it has become particularly popular for web development, especially through
-        the Ruby on Rails framework."}]},{"role":"user","content":[{"type":"text","text":"What
+        to be a language that balanced functional programming with imperative programming,
+        focusing on productivity and simplicity. He is known for his philosophy of
+        making programming enjoyable and flexible, often summarized by Ruby''s motto:
+        **\"Matz is nice and so we are nice\"**, which emphasizes the community''s
+        friendly and collaborative spirit."}]},{"role":"user","content":[{"type":"text","text":"What
         year did he create Ruby?"}]}],"stream":false}'
     headers:
       User-Agent:
@@ -108,9 +108,9 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Num-Chars:
-      - '3374'
+      - '3380'
       Num-Tokens:
-      - '176'
+      - '178'
       Pragma:
       - no-cache
       Vary:
@@ -118,11 +118,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - f64ae7852187064339d090780c4eac65
+      - d7fdf9da53e368e008e21a1542ebd239
       Date:
-      - Wed, 09 Sep 2026 12:05:49 GMT
+      - Mon, 14 Sep 2026 09:40:01 GMT
       X-Envoy-Upstream-Service-Time:
-      - '687'
+      - '6027'
       Server:
       - envoy
       Via:
@@ -133,9 +133,9 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"ee475810-c89e-49e8-a6fd-99f047cd75b3","message":{"role":"assistant","content":[{"type":"text","text":"Yukihiro
-        Matsumoto began working on Ruby in **1993** and officially released it to
-        the public in **1995**. So, while development started in 1993, the language
-        was introduced to the world in 1995."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":122,"output_tokens":54},"tokens":{"input_tokens":625,"output_tokens":57},"cached_tokens":448}}'
-  recorded_at: Wed, 09 Sep 2026 12:05:49 GMT
+      string: '{"id":"8366b2eb-3213-4cdd-b6a9-3889cd7aba97","message":{"role":"assistant","content":[{"type":"text","text":"Yukihiro
+        Matsumoto began working on Ruby in **1993** and released it to the public
+        in **1995**. So, while development started in 1993, the official release year
+        is 1995."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":128,"output_tokens":50},"tokens":{"input_tokens":631,"output_tokens":53},"cached_tokens":448}}'
+  recorded_at: Mon, 14 Sep 2026 09:40:01 GMT
 recorded_with: VCR 6.4.0

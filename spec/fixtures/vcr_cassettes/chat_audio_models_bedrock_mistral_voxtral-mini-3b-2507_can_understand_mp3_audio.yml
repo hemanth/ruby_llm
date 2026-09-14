@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260909T121007Z
+      - 20260914T094538Z
       X-Amz-Content-Sha256:
       - cfa1a61e9831d27f7ba08ada9c46ca2e63d303d5d7ef3081850cf17f1f0c1eef
       Authorization:
@@ -29,11 +29,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:10:08 GMT
+      - Mon, 14 Sep 2026 09:45:39 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '978'
+      - '980'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
@@ -47,15 +47,8 @@ http_interactions:
       Access-Control-Expose-Headers:
       - x-amzn-requestid,x-request-id,date,x-amzn-usage-reservation-quota,x-amzn-usage-reservation-remaining-quota,x-amzn-usage-reservation-spillover
     body:
-      encoding: UTF-8
-      string: '{"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"Based
-        on the sentence \"Ruby is a programming language designed for developer happiness,\"
-        the main idea conveyed is:\n\n- **Ruby is Ruby Programming Language**: This
-        clearly indicates what is being referred to - the computer language Ruby.\n-
-        **Designed for Developer Happiness**: The sentence then emphasizes Ruby''s
-        particular focus or purpose. It is meant to enhance the experience, enjoyment,
-        or satisfaction of developers who use it.\n\nIn essence, developers might
-        find Ruby an easier or more pleasant language to work with than some other
-        programming languages due to its unique features and design principles.","refusal":null,"role":"assistant"}}],"created":1788955808,"id":"chatcmpl-d315d202-6611-4309-9427-490e7217c2fd","model":"mistral.voxtral-mini-3b-2507","object":"chat.completion","service_tier":"default","usage":{"completion_tokens":112,"prompt_tokens":384,"total_tokens":496}}'
-  recorded_at: Wed, 09 Sep 2026 12:10:08 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJsb2dwcm9icyI6bnVsbCwibWVzc2FnZSI6eyJjb250ZW50IjoiQmFzZWQgb24gdGhlIHBocmFzZSBcIlJ1YnkgaXMgYSBwcm9ncmFtbWluZyBsYW5ndWFnZSBkZXNpZ25lZCBmb3IgZGV2ZWxvcGVyIGhhcHBpbmVzcyxcIiBsZXQncyBicmVhayBkb3duIHRoZSBjb250ZW50OlxuXG4tICoqUnVieSoqIGlzIG5hbWVkIGFzIGEgcHJvZ3JhbW1pbmcgbGFuZ3VhZ2UuXG4tIFRoZSBwdXJwb3NlIG9yIHJlYXNvbiBmb3IgUnVieSdzIGRlc2lnbiBvciBjcmVhdGlvbiBpcyBzdGF0ZWQgdG8gYmUgKipcImRldmVsb3BlciBoYXBwaW5lc3MuXCIqKlxuXG5JbiBvdGhlciB3b3JkcywgdGhlIGNsYWltIGlzIHRoYXQgUnVieeKAlHNwZWNpZmljYWxseeKAlHdhcyBjcmVhdGVkIG9yIG9wdGltaXplZCB0byBwcmlvcml0aXplIHRoZSB3ZWxsLWJlaW5nIGFuZCBzYXRpc2ZhY3Rpb24gb2YgdGhlIGRldmVsb3BlcnMgd2hvIHVzZSBpdC4gSGFwcGluZXNzIGluIHRoaXMgY29udGV4dCBsaWtlbHkgcmVmZXJzIHRvIGEgcHJvZHVjdGl2ZSBjb2RpbmcgZXhwZXJpZW5jZSwgd2hpY2ggY291bGQgaW5jbHVkZSBzaW1wbGljaXR5LCBlbGVnYW5jZSwgYW5kIGFuIGVuam95YWJsZSBzeW50YXggbWVhbnQgdG8gcmVkdWNlIGRldmVsb3BlciBlZmZvcnQgYW5kIGZydXN0cmF0aW9uLiIsInJlZnVzYWwiOm51bGwsInJvbGUiOiJhc3Npc3RhbnQifX1dLCJjcmVhdGVkIjoxNzg5Mzc5MTM5LCJpZCI6ImNoYXRjbXBsLTYxNjVhNWNmLWExZmUtNGZmYi1hYzk4LWJkY2JiN2QwYjg3NyIsIm1vZGVsIjoibWlzdHJhbC52b3h0cmFsLW1pbmktM2ItMjUwNyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQiLCJ1c2FnZSI6eyJjb21wbGV0aW9uX3Rva2VucyI6MTE5LCJwcm9tcHRfdG9rZW5zIjozODQsInRvdGFsX3Rva2VucyI6NTAzfX0=
+  recorded_at: Mon, 14 Sep 2026 09:45:39 GMT
 recorded_with: VCR 6.4.0

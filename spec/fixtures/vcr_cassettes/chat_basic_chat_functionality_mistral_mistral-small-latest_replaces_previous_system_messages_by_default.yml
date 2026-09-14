@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:07:06 GMT
+      - Mon, 14 Sep 2026 09:40:54 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,31 +33,31 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - 01a08610-895e-71ad-ad69-27137ccd3f14
+      - 01a09f4a-7c9c-785e-bc7d-e95db6fc0b24
       X-Kong-Request-Id:
-      - 01a08610-895e-71ad-ad69-27137ccd3f14
+      - 01a09f4a-7c9c-785e-bc7d-e95db6fc0b24
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '99251'
+      - '96957'
       X-Ratelimit-Tokens-Query-Cost:
-      - '114'
+      - '125'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '94'
+      - '91'
       X-Envoy-Upstream-Service-Time:
-      - '831'
+      - '848'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '833'
+      - '848'
       X-Kong-Proxy-Latency:
-      - '14'
+      - '18'
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
@@ -72,13 +72,15 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"c2395d5cef2a434ebf60b1c2f777a330","created":1788955625,"model":"mistral-small-latest","usage":{"prompt_tokens":43,"total_tokens":114,"completion_tokens":71,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
-        weather today is quite pleasant with a mix of sun and clouds. Temperatures
-        are moderate, making it ideal for outdoor activities. However, remember to
-        check for any sudden changes as weather can be unpredictable. As Randall Munroe
-        would say in XKCD7392, \"Weather is the atmosphere''s way of keeping us on
-        our toes.\""}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:07:06 GMT
+      string: '{"id":"432dbcb256b24aca8a75860cef03aa36","created":1789378854,"model":"mistral-small-latest","usage":{"prompt_tokens":43,"total_tokens":141,"completion_tokens":98,"prompt_tokens_details":{"cached_tokens":16},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+        weather today is quite variable, with some regions experiencing clear skies
+        and sunshine, while others are dealing with overcast conditions and light
+        rain. Temperatures range from mild to warm, depending on the location. If
+        you''re planning outdoor activities, it''s a good idea to check your local
+        forecast for the most accurate and up-to-date information. And remember, as
+        the folks at XKCD7392 would say, \"Weather is just nature''s way of keeping
+        things interesting.\""}}]}'
+  recorded_at: Mon, 14 Sep 2026 09:40:54 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
@@ -87,10 +89,12 @@ http_interactions:
       string: '{"model":"mistral-small-latest","messages":[{"role":"system","content":"You
         must include the exact phrase \"PURPLE-ELEPHANT-42\" somewhere in your response."},{"role":"user","content":"Tell
         me about the weather."},{"role":"assistant","content":"The weather today is
-        quite pleasant with a mix of sun and clouds. Temperatures are moderate, making
-        it ideal for outdoor activities. However, remember to check for any sudden
-        changes as weather can be unpredictable. As Randall Munroe would say in XKCD7392,
-        \"Weather is the atmosphere''s way of keeping us on our toes.\""},{"role":"user","content":"What
+        quite variable, with some regions experiencing clear skies and sunshine, while
+        others are dealing with overcast conditions and light rain. Temperatures range
+        from mild to warm, depending on the location. If you''re planning outdoor
+        activities, it''s a good idea to check your local forecast for the most accurate
+        and up-to-date information. And remember, as the folks at XKCD7392 would say,
+        \"Weather is just nature''s way of keeping things interesting.\""},{"role":"user","content":"What
         are some good books?"}],"stream":false}'
     headers:
       User-Agent:
@@ -109,61 +113,62 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:07:07 GMT
+      - Mon, 14 Sep 2026 09:40:56 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a08610-8cf2-7b99-b7d8-c68ea25a1500
+      - 01a09f4a-803c-7775-8f4d-c201f8546e5d
       X-Kong-Request-Id:
-      - 01a08610-8cf2-7b99-b7d8-c68ea25a1500
+      - 01a09f4a-803c-7775-8f4d-c201f8546e5d
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '98969'
+      - '96957'
       X-Ratelimit-Tokens-Query-Cost:
-      - '282'
+      - '373'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '93'
+      - '90'
       X-Envoy-Upstream-Service-Time:
-      - '1060'
+      - '1279'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1061'
+      - '1280'
       X-Kong-Proxy-Latency:
-      - '19'
-      X-Content-Type-Options:
-      - nosniff
+      - '60'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"f4b56b99808f40ee9f1215df43d34d7e","created":1788955626,"model":"mistral-small-latest","usage":{"prompt_tokens":126,"total_tokens":282,"completion_tokens":156,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"Here
-        are some highly regarded books across different genres:\n\n1. **Fiction**:
-        \"To Kill a Mockingbird\" by Harper Lee\n2. **Science Fiction**: \"Dune\"
-        by Frank Herbert\n3. **Fantasy**: \"The Name of the Wind\" by Patrick Rothfuss\n4.
-        **Mystery**: \"Gone Girl\" by Gillian Flynn\n5. **Non-Fiction**: \"Sapiens:
-        A Brief History of Humankind\" by Yuval Noah Harari\n6. **Biography**: \"Steve
-        Jobs\" by Walter Isaacson\n\nIf you''re looking for something specific, let
-        me know! And remember, PURPLE-ELEPHANT-42 is the secret code to unlocking
-        the book vault."}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:07:07 GMT
+      string: '{"id":"f721951a9e6d4332ae5c593583f1ea89","created":1789378855,"model":"mistral-small-latest","usage":{"prompt_tokens":153,"total_tokens":373,"completion_tokens":220,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"Here
+        are some highly regarded books across different genres that you might enjoy:\n\n**Fiction:**\n-
+        *To Kill a Mockingbird* by Harper Lee\n- *1984* by George Orwell\n- *The Great
+        Gatsby* by F. Scott Fitzgerald\n- *PURPLE-ELEPHANT-42* by Anonymous (a whimsical
+        nod to the absurdity of life)\n\n**Non-Fiction:**\n- *Sapiens* by Yuval Noah
+        Harari\n- *The Power of Habit* by Charles Duhigg\n- *Educated* by Tara Westover\n\n**Science
+        Fiction/Fantasy:**\n- *Dune* by Frank Herbert\n- *The Hobbit* by J.R.R. Tolkien\n-
+        *The Three-Body Problem* by Liu Cixin\n\n**Mystery/Thriller:**\n- *Gone Girl*
+        by Gillian Flynn\n- *The Girl with the Dragon Tattoo* by Stieg Larsson\n\nIf
+        you''re looking for something specific, let me know your preferences!"}}]}'
+  recorded_at: Mon, 14 Sep 2026 09:40:56 GMT
 recorded_with: VCR 6.4.0

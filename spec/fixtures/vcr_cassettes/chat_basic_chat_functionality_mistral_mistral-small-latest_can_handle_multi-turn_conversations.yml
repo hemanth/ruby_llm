@@ -24,73 +24,77 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:07:04 GMT
+      - Mon, 14 Sep 2026 09:40:52 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a08610-7e9f-726e-b7bb-5ef2cd9fd71d
+      - 01a09f4a-7178-7f48-89b7-e30cf55fe21b
       X-Kong-Request-Id:
-      - 01a08610-7e9f-726e-b7bb-5ef2cd9fd71d
+      - 01a09f4a-7178-7f48-89b7-e30cf55fe21b
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '99711'
+      - '96393'
       X-Ratelimit-Tokens-Query-Cost:
-      - '183'
+      - '156'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '97'
+      - '94'
       X-Envoy-Upstream-Service-Time:
-      - '1304'
+      - '1456'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1304'
+      - '1457'
       X-Kong-Proxy-Latency:
       - '18'
-      X-Content-Type-Options:
-      - nosniff
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6IjkwNTc0NzliN2EzYzQwODFhNTQ0M2IwYzExMmE3OWY3IiwiY3JlYXRlZCI6MTc4ODk1NTYyMywibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjI1LCJ0b3RhbF90b2tlbnMiOjE4MywiY29tcGxldGlvbl90b2tlbnMiOjE1OCwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjB9LCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCJ9LCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJ0b29sX2NhbGxzIjpudWxsLCJjb250ZW50IjoiVGhlIGNyZWF0b3Igb2YgdGhlICoqUnVieSoqIHByb2dyYW1taW5nIGxhbmd1YWdlIGlzICoqWXVraWhpcm8gXCJNYXR6XCIgTWF0c3Vtb3RvKiouXG5cbkhlIGJlZ2FuIHdvcmtpbmcgb24gUnVieSBpbiAqKjE5OTMqKiBhbmQgcmVsZWFzZWQgdGhlIGZpcnN0IHB1YmxpYyB2ZXJzaW9uICgqKlJ1YnkgMC45NSoqKSBpbiAqKjE5OTUqKi4gTWF0eiBkZXNpZ25lZCBSdWJ5IHdpdGggdGhlIGdvYWwgb2YgbWFraW5nIHByb2dyYW1taW5nICoqZnVuIGFuZCBwcm9kdWN0aXZlKiosIGVtcGhhc2l6aW5nICoqc2ltcGxpY2l0eSwgZmxleGliaWxpdHksIGFuZCBkZXZlbG9wZXIgaGFwcGluZXNzKiouXG5cblJ1YnkgaXMga25vd24gZm9yIGl0cyBlbGVnYW50IHN5bnRheCwgb2JqZWN0LW9yaWVudGVkIG5hdHVyZSwgYW5kIGluZmx1ZW5jZSBmcm9tIGxhbmd1YWdlcyBsaWtlICoqUGVybCwgU21hbGx0YWxrLCBFaWZmZWwsIEFkYSwgYW5kIExpc3AqKi4gSXQgbGF0ZXIgYmVjYW1lIHRoZSBmb3VuZGF0aW9uIGZvciB0aGUgcG9wdWxhciAqKlJ1Ynkgb24gUmFpbHMqKiB3ZWIgZnJhbWV3b3JrLlxuXG5NYXR6IGNvbnRpbnVlcyB0byBiZSBhY3RpdmVseSBpbnZvbHZlZCBpbiBSdWJ5J3MgZGV2ZWxvcG1lbnQgYXMgdGhlICoqQ2hpZWYgRGVzaWduZXIqKiBvZiB0aGUgbGFuZ3VhZ2UuIPCfmoAifX1dfQ==
-  recorded_at: Wed, 09 Sep 2026 12:07:04 GMT
+      string: '{"id":"14af04bb11914263b9472104b97696a4","created":1789378851,"model":"mistral-small-latest","usage":{"prompt_tokens":25,"total_tokens":156,"completion_tokens":131,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+        creator of the **Ruby** programming language is **Yukihiro \"Matz\" Matsumoto**.\n\nHe
+        began working on Ruby in **1993** and released the first public version (**Ruby
+        0.95**) in **1995**. Matz designed Ruby with the philosophy of making programming
+        **fun and productive**, emphasizing **simplicity, productivity, and developer
+        happiness**.\n\nRuby is known for its elegant syntax, object-oriented nature,
+        and influence from languages like **Perl, Smalltalk, Eiffel, Ada, and Lisp**.\n\nWould
+        you like to know more about Ruby''s features or its history?"}}]}'
+  recorded_at: Mon, 14 Sep 2026 09:40:52 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
     body:
       encoding: UTF-8
-      string: "{\"model\":\"mistral-small-latest\",\"messages\":[{\"role\":\"user\",\"content\":\"Who
-        is the creator of the programming language Ruby?\"},{\"role\":\"assistant\",\"content\":\"The
-        creator of the **Ruby** programming language is **Yukihiro \\\"Matz\\\" Matsumoto**.\\n\\nHe
+      string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"Who
+        is the creator of the programming language Ruby?"},{"role":"assistant","content":"The
+        creator of the **Ruby** programming language is **Yukihiro \"Matz\" Matsumoto**.\n\nHe
         began working on Ruby in **1993** and released the first public version (**Ruby
-        0.95**) in **1995**. Matz designed Ruby with the goal of making programming
-        **fun and productive**, emphasizing **simplicity, flexibility, and developer
-        happiness**.\\n\\nRuby is known for its elegant syntax, object-oriented nature,
-        and influence from languages like **Perl, Smalltalk, Eiffel, Ada, and Lisp**.
-        It later became the foundation for the popular **Ruby on Rails** web framework.\\n\\nMatz
-        continues to be actively involved in Ruby's development as the **Chief Designer**
-        of the language. \U0001F680\"},{\"role\":\"user\",\"content\":\"What year
-        did he create Ruby?\"}],\"stream\":false}"
+        0.95**) in **1995**. Matz designed Ruby with the philosophy of making programming
+        **fun and productive**, emphasizing **simplicity, productivity, and developer
+        happiness**.\n\nRuby is known for its elegant syntax, object-oriented nature,
+        and influence from languages like **Perl, Smalltalk, Eiffel, Ada, and Lisp**.\n\nWould
+        you like to know more about Ruby''s features or its history?"},{"role":"user","content":"What
+        year did he create Ruby?"}],"stream":false}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -108,55 +112,55 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:07:04 GMT
+      - Mon, 14 Sep 2026 09:40:53 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a08610-843d-74dc-83b8-4e1ea704d64d
+      - 01a09f4a-777c-7aa8-8abb-240baa79480d
       X-Kong-Request-Id:
-      - 01a08610-843d-74dc-83b8-4e1ea704d64d
+      - 01a09f4a-777c-7aa8-8abb-240baa79480d
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '99475'
+      - '96693'
       X-Ratelimit-Tokens-Query-Cost:
-      - '236'
+      - '210'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '96'
+      - '93'
       X-Envoy-Upstream-Service-Time:
-      - '391'
+      - '415'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '393'
+      - '415'
       X-Kong-Proxy-Latency:
-      - '20'
-      X-Content-Type-Options:
-      - nosniff
+      - '19'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"1835d8cb184343619d678e46a1ac93b3","created":1788955624,"model":"mistral-small-latest","usage":{"prompt_tokens":192,"total_tokens":236,"completion_tokens":44,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"Yukihiro
-        \"Matz\" Matsumoto began working on Ruby in **1993** and released the first
-        public version (**Ruby 0.95**) in **1995**."}}]}'
-  recorded_at: Wed, 09 Sep 2026 12:07:04 GMT
+      string: '{"id":"c78e13dca1ca4f41a6f7842ce03e66f7","created":1789378852,"model":"mistral-small-latest","usage":{"prompt_tokens":165,"total_tokens":210,"completion_tokens":45,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"Yukihiro
+        \"Matz\" Matsumoto began working on Ruby in **1993**, and the first public
+        version (**Ruby 0.95**) was released in **1995**."}}]}'
+  recorded_at: Mon, 14 Sep 2026 09:40:53 GMT
 recorded_with: VCR 6.4.0

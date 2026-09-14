@@ -20,12 +20,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
       Date:
-      - Wed, 09 Sep 2026 12:14:19 GMT
+      - Mon, 14 Sep 2026 10:10:59 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
       Pragma:
       - no-cache
       Content-Type:
@@ -52,11 +52,11 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid",
+          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/sqlservice.login",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Wed, 09 Sep 2026 12:14:19 GMT
+  recorded_at: Mon, 14 Sep 2026 10:10:59 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -88,7 +88,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:14:20 GMT
+      - Mon, 14 Sep 2026 10:10:59 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -115,18 +115,18 @@ http_interactions:
                       "name": "file_fetch",
                       "args": {}
                     },
-                    "thoughtSignature": "CpwDAY89a1/s/lySpwOop/6oizNawv3Tytvfil8CsPVIs3YbxLmQNoCYCu31Maf9y+4wm6Xiy4vyE5bZFk6KFn3Lgp8Cw6c8p1bOVYWjRTlDivqlrLL9VX5r22Q+KKjMVemILXlbqbfCKCJx2PWw+genJjiXLCRz+yr1eb63xSGyTKvuVLVBEFf+nyoGed6J4PVu8ZkYaAxpp9/WF0V56M9+pQL7jKRxMFEfpN2PwAGKzp112u6rZsBqalmiu+GW/1AzQHqHKQQt/CwuY6sEqFYQhnZ1NXXeuADL5a6DS3AfGCmdRggI0cZLTkX/CNFVweEIwoUVDVpo4Xv3fGtn/o07Djep8HCdWOK0hvSuMx6rsBH+20CU2F0Wi1EYhuviXG04Gkur+hGAWUkJ4BgO8WbzxDPxxgHitc0WHbiLxSTzz89XFYEJuC9IPKRj8CZNUu5ALL0HyjjlvLnuAz/M1UCKc0Rvo/f9g2DLmP2nQY2hoZatYXrNBNxURblyWnOUmME9WudnRAslrXFUKfd4N8q7i2bnQsmPO4L8VNPdOQ=="
+                    "thoughtSignature": "CoAEAY89a1/bwdl2i9pyaSRgOfkZ2ED1l+dl6o68EQ9Jf08h5QyVV2KuB1npz4t99ojTcXRMNe9N44+jWbmbfl5CvK7rfpJPHJPwMyZSdbZC+ZDQEshV09mHIFYk4AbBJ8pvM4mnA2yCR5EfonV4VaJfNMdIuXupGmuprLSEUIgP0PiVsnowi1KJCj4UFXLG1mjaDqvGLET2FPMv+lkek0on19ML2pTc8CyVylXpJONzop4ZJ0bNlexnvIfM8fJNjlwEU/MQSlAEMGaWa7Ipf2rmmVWLAE9S239s9arBkHByPNPEvBMgVxXlc9XsZLfmqb3J7y1FT1LQ4Ws9Nd0oIQcNnS2+jf0IPBBYOQzyp1JwaJAzw4hFSE6dr1a4YKm5SQIkzA4BQDn3AkqK4ij43APHiol3uAVR+ixsXyviuIMK3r5aK0rxMfDWRziPBFNCcySt2lMuXEw8nkIm1H82oAssOCFzJJdQpYueqPR0fgDkYkt8DqEP0pvK32DP/eapcrIB4b6wlkJO9N+PWCB/Xyl0ZnPs3GPBTC3cKSy1dw/Lej6oObdX6S2f012rXelox+mpgQj5ciO9BLoWmCz+C1Zzif+N4/L5Z2EseytrUaGJwj2Yjq87qSKRxlLKIO0o2j60+3zpHPiOA3xkPxb3XWuI3mD6q6/u/OK+btDHm1F6isY="
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -8.0218048095703125
+              "avgLogprobs": -13.45605214436849
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 25,
             "candidatesTokenCount": 3,
-            "totalTokenCount": 128,
+            "totalTokenCount": 144,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -140,20 +140,20 @@ http_interactions:
                 "tokenCount": 3
               }
             ],
-            "thoughtsTokenCount": 100
+            "thoughtsTokenCount": 116
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-09-09T12:14:19.507399Z",
-          "responseId": "m02haof8Hu2K_NUPkomX2Qw"
+          "createTime": "2026-09-14T10:10:59.152650Z",
+          "responseId": "M8inasqoCcrBhcIPhou80Qw"
         }
-  recorded_at: Wed, 09 Sep 2026 12:14:20 GMT
+  recorded_at: Mon, 14 Sep 2026 10:10:59 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Use the file_fetch tool,
-        then tell me exactly what the fetched file says."}]},{"role":"model","parts":[{"functionCall":{"name":"file_fetch","args":{}},"thoughtSignature":"CpwDAY89a1/s/lySpwOop/6oizNawv3Tytvfil8CsPVIs3YbxLmQNoCYCu31Maf9y+4wm6Xiy4vyE5bZFk6KFn3Lgp8Cw6c8p1bOVYWjRTlDivqlrLL9VX5r22Q+KKjMVemILXlbqbfCKCJx2PWw+genJjiXLCRz+yr1eb63xSGyTKvuVLVBEFf+nyoGed6J4PVu8ZkYaAxpp9/WF0V56M9+pQL7jKRxMFEfpN2PwAGKzp112u6rZsBqalmiu+GW/1AzQHqHKQQt/CwuY6sEqFYQhnZ1NXXeuADL5a6DS3AfGCmdRggI0cZLTkX/CNFVweEIwoUVDVpo4Xv3fGtn/o07Djep8HCdWOK0hvSuMx6rsBH+20CU2F0Wi1EYhuviXG04Gkur+hGAWUkJ4BgO8WbzxDPxxgHitc0WHbiLxSTzz89XFYEJuC9IPKRj8CZNUu5ALL0HyjjlvLnuAz/M1UCKc0Rvo/f9g2DLmP2nQY2hoZatYXrNBNxURblyWnOUmME9WudnRAslrXFUKfd4N8q7i2bnQsmPO4L8VNPdOQ=="}]},{"role":"user","parts":[{"functionResponse":{"name":"file_fetch","response":{"name":"file_fetch","content":[{"text":"Fetched
+        then tell me exactly what the fetched file says."}]},{"role":"model","parts":[{"functionCall":{"name":"file_fetch","args":{}},"thoughtSignature":"CoAEAY89a1/bwdl2i9pyaSRgOfkZ2ED1l+dl6o68EQ9Jf08h5QyVV2KuB1npz4t99ojTcXRMNe9N44+jWbmbfl5CvK7rfpJPHJPwMyZSdbZC+ZDQEshV09mHIFYk4AbBJ8pvM4mnA2yCR5EfonV4VaJfNMdIuXupGmuprLSEUIgP0PiVsnowi1KJCj4UFXLG1mjaDqvGLET2FPMv+lkek0on19ML2pTc8CyVylXpJONzop4ZJ0bNlexnvIfM8fJNjlwEU/MQSlAEMGaWa7Ipf2rmmVWLAE9S239s9arBkHByPNPEvBMgVxXlc9XsZLfmqb3J7y1FT1LQ4Ws9Nd0oIQcNnS2+jf0IPBBYOQzyp1JwaJAzw4hFSE6dr1a4YKm5SQIkzA4BQDn3AkqK4ij43APHiol3uAVR+ixsXyviuIMK3r5aK0rxMfDWRziPBFNCcySt2lMuXEw8nkIm1H82oAssOCFzJJdQpYueqPR0fgDkYkt8DqEP0pvK32DP/eapcrIB4b6wlkJO9N+PWCB/Xyl0ZnPs3GPBTC3cKSy1dw/Lej6oObdX6S2f012rXelox+mpgQj5ciO9BLoWmCz+C1Zzif+N4/L5Z2EseytrUaGJwj2Yjq87qSKRxlLKIO0o2j60+3zpHPiOA3xkPxb3XWuI3mD6q6/u/OK+btDHm1F6isY="}]},{"role":"user","parts":[{"functionResponse":{"name":"file_fetch","response":{"name":"file_fetch","content":[{"text":"Fetched
         the file."}]}}},{"text":"<file name=''ruby.txt'' mime_type=''text/plain''>Ruby
         is the best.</file>"}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"file_fetch","description":"Fetches
         the requested file","parametersJsonSchema":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}]}]}'
@@ -180,7 +180,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:14:21 GMT
+      - Mon, 14 Sep 2026 10:11:00 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -203,35 +203,35 @@ http_interactions:
                 "role": "model",
                 "parts": [
                   {
-                    "text": "\nThe fetched file says: \"Ruby is the best.\""
+                    "text": "\n\nThe fetched file says: Ruby is the best."
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.0913331111272176
+              "avgLogprobs": -0.28946258805014868
             }
           ],
           "usageMetadata": {
-            "promptTokenCount": 164,
-            "candidatesTokenCount": 12,
-            "totalTokenCount": 176,
+            "promptTokenCount": 180,
+            "candidatesTokenCount": 11,
+            "totalTokenCount": 191,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 164
+                "tokenCount": 180
               }
             ],
             "candidatesTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 12
+                "tokenCount": 11
               }
             ]
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-09-09T12:14:20.805019Z",
-          "responseId": "nE2hapuRMeHR7bQP6bHysAY"
+          "createTime": "2026-09-14T10:11:00.109285Z",
+          "responseId": "NMinauXVBqCO8uMP15WWmA8"
         }
-  recorded_at: Wed, 09 Sep 2026 12:14:21 GMT
+  recorded_at: Mon, 14 Sep 2026 10:11:00 GMT
 recorded_with: VCR 6.4.0

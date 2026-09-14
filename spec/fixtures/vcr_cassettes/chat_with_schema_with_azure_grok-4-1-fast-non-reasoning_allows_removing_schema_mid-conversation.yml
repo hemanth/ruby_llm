@@ -26,7 +26,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:09:15 GMT
+      - Mon, 14 Sep 2026 09:42:13 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -42,15 +42,17 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-00c156e72949c26363fc13cdf8d2cdd7-a53dc50900059c2e-00
+      - 00-597e6c575298d60ae41b53ec778b8cf9-9faf57fa00081199-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 55057e1e-c138-48c3-a890-8a62db0790ea
+      - 02640f9d-e033-4193-b1d2-b3dbaead71b7
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
+      X-Ms-Inference-Retry-History:
+      - '{"v":1,"entries":[{"service_id":"mir.frontdoor","layer":"regional","role":"direct","retries":0}]}'
       Azureai-Requested-Tier:
       - default
       Azureai-Processed-Tier:
@@ -82,7 +84,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 55057e1e-c138-48c3-a890-8a62db0790ea
+      - 02640f9d-e033-4193-b1d2-b3dbaead71b7
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -91,9 +93,9 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"ba75f348-2d31-4422-9969-d4baffcd569e","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"{\"name\":
-        \"Bob\", \"age\": 30}"},"finish_reason":"stop"}],"usage":{"prompt_tokens":78,"completion_tokens":12,"total_tokens":90,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":158,"audio_tokens":0,"text_tokens":78,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1788955755,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 09 Sep 2026 12:09:16 GMT
+      string: '{"id":"1dc09002-bc4a-4ff1-8da4-b640106eacba","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"{\"name\":
+        \"Bob\", \"age\": 30}"},"finish_reason":"stop"}],"usage":{"prompt_tokens":78,"completion_tokens":12,"total_tokens":90,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":158,"audio_tokens":0,"text_tokens":78,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789378933,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Mon, 14 Sep 2026 09:42:14 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
@@ -121,7 +123,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:09:16 GMT
+      - Mon, 14 Sep 2026 09:42:14 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -137,15 +139,17 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-1bf9d6767de362b3bf49742b7c5f8998-a53dc50900059c3a-00
+      - 00-46644ad9f69edc14b6d3237ade3d9df2-a1f37f3100095f08-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 6b476b8a-595a-4627-a153-054d0547b734
+      - 5b6b4d0b-6808-445c-99df-8a1dd6c1fcd1
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
+      X-Ms-Inference-Retry-History:
+      - '{"v":1,"entries":[{"service_id":"mir.frontdoor","layer":"regional","role":"direct","retries":0}]}'
       Azureai-Requested-Tier:
       - default
       Azureai-Processed-Tier:
@@ -177,7 +181,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 6b476b8a-595a-4627-a153-054d0547b734
+      - 5b6b4d0b-6808-445c-99df-8a1dd6c1fcd1
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -186,7 +190,8 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"cac00e2f-54af-43f3-a05a-f7898ec3341b","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"{\"name\":
-        \"Ruby\", \"age\": 28}"},"finish_reason":"stop"}],"usage":{"prompt_tokens":34,"completion_tokens":12,"total_tokens":46,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":163,"audio_tokens":0,"text_tokens":34,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1788955756,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 09 Sep 2026 12:09:17 GMT
+      string: '{"id":"105d65e8-dda1-41eb-87da-a1c13e612593","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"{\"name\":
+        \"Ruby\", \"age\": 28, \"occupation\": \"Software Developer\", \"hobbies\":
+        [\"Coding\", \"Hiking\", \"Board Games\"]}"},"finish_reason":"stop"}],"usage":{"prompt_tokens":34,"completion_tokens":34,"total_tokens":68,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":161,"audio_tokens":0,"text_tokens":34,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789378934,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Mon, 14 Sep 2026 09:42:15 GMT
 recorded_with: VCR 6.4.0

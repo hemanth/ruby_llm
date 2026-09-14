@@ -28,34 +28,34 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 8bbfc54fe6b9f83c353638274218dc75a0607b2d
+      - e1bfa3ca90691234d6d12e4b2096594fe0d5770a
       X-Build-Time:
-      - '2026-09-08T18:19:14-07:00'
+      - '2026-09-13T23:26:13-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '451'
+      - '503'
       Date:
-      - Wed, 09 Sep 2026 12:07:42 GMT
+      - Mon, 14 Sep 2026 09:41:18 GMT
       Server:
       - Google Frontend
-      Traceparent:
-      - 00-d0b79529c4fc8a0952d2706de00ae1c6-917e28872140e2ed-00
       X-Cloud-Trace-Context:
-      - d0b79529c4fc8a0952d2706de00ae1c6/10483861543408689901
+      - 8683d8b9e499505960b561617842d499/11376873018830729211
+      Traceparent:
+      - 00-8683d8b9e499505960b561617842d499-9de2c5bbbe21affb-00
       Via:
       - 1.1 google
       Alt-Svc:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-514","object":"chat.completion","created":1788955662,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        capital of France is **Paris**.","reasoning":"The user asks \"What is the
-        capital of France?\" Straightforward question: answer: Paris. Provide concise
-        answer."},"finish_reason":"stop"}],"usage":{"prompt_tokens":74,"completion_tokens":42,"total_tokens":116}}
+      string: '{"id":"chatcmpl-678","object":"chat.completion","created":1789378878,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        capital of France is **Paris**.","reasoning":"The user asks a simple factual
+        question: \"What is the capital of France?\" The answer: Paris. Provide answer
+        concisely."},"finish_reason":"stop"}],"usage":{"prompt_tokens":74,"prompt_tokens_details":{"cached_tokens":48},"completion_tokens":46,"total_tokens":120}}
 
         '
-  recorded_at: Wed, 09 Sep 2026 12:07:42 GMT
+  recorded_at: Mon, 14 Sep 2026 09:41:18 GMT
 recorded_with: VCR 6.4.0

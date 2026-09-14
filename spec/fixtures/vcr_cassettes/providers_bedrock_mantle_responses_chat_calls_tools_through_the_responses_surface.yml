@@ -13,7 +13,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260909T121637Z
+      - 20260914T095011Z
       X-Amz-Content-Sha256:
       - d22801bf92dcb7e403b96c7a7a3b99224b5655e403adae8dc1e9276740b4fcb9
       Authorization:
@@ -31,11 +31,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:16:37 GMT
+      - Mon, 14 Sep 2026 09:50:11 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1290'
+      - '1294'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
@@ -50,18 +50,18 @@ http_interactions:
       - x-amzn-requestid,x-request-id,date,x-amzn-usage-reservation-quota,x-amzn-usage-reservation-remaining-quota,x-amzn-usage-reservation-spillover
     body:
       encoding: UTF-8
-      string: '{"background":false,"created_at":1788956197.0,"error":null,"id":"resp_cnrafoyy3wng6boltsfot7rpjdcm75bis2637uuer7iqairqw2ma","incomplete_details":null,"instructions":null,"metadata":{},"model":"openai.gpt-oss-20b","object":"response","output":[{"content":[{"text":"We
-        need to use the tool: bedrock_mantle_weather with city \"Berlin\".","type":"reasoning_text"}],"id":"msg_beeecbbbd1dc5bbf","status":"completed","summary":[],"type":"reasoning"},{"arguments":"{\"city\":\"Berlin\"}","call_id":"call_bb2644b80b8394cc","item_id":"fc_b294488b8d544937","name":"bedrock_mantle_weather","output_index":1,"status":"completed","type":"function_call"}],"parallel_tool_calls":true,"service_tier":"default","status":"completed","temperature":1.0,"text":{"format":{"type":"text"},"verbosity":"medium"},"tool_choice":"auto","tools":[{"description":"Get
-        the current weather for a city","name":"bedrock_mantle_weather","parameters":{"required":["city"],"properties":{"city":{"type":"string","description":"City
-        name"}},"type":"object","additionalProperties":false,"strict":true},"strict":false,"type":"function"}],"top_p":1.0,"truncation":"disabled","usage":{"input_tokens":139,"input_tokens_details":{"cached_tokens":0},"output_tokens":47,"output_tokens_details":{"reasoning_tokens":25},"total_tokens":186}}'
-  recorded_at: Wed, 09 Sep 2026 12:16:37 GMT
+      string: '{"background":false,"created_at":1789379411.0,"error":null,"id":"resp_knk3lioyrbhyczbhw2kvzn3zxo655duneem3t7pejnfdn7xbc5da","incomplete_details":null,"instructions":null,"metadata":{},"model":"openai.gpt-oss-20b","object":"response","output":[{"content":[{"text":"We
+        need to use the function bedrock_mantle_weather with city: \"Berlin\".","type":"reasoning_text"}],"id":"msg_ba1c6a6c218e02ad","status":"completed","summary":[],"type":"reasoning"},{"arguments":"{\"city\":\"Berlin\"}","call_id":"call_aea6ae2f6299a13b","item_id":"fc_803648629b29bea7","name":"bedrock_mantle_weather","output_index":1,"status":"completed","type":"function_call"}],"parallel_tool_calls":true,"service_tier":"default","status":"completed","temperature":1.0,"text":{"format":{"type":"text"},"verbosity":"medium"},"tool_choice":"auto","tools":[{"description":"Get
+        the current weather for a city","name":"bedrock_mantle_weather","parameters":{"type":"object","properties":{"city":{"type":"string","description":"City
+        name"}},"required":["city"],"additionalProperties":false,"strict":true},"strict":false,"type":"function"}],"top_p":1.0,"truncation":"disabled","usage":{"input_tokens":139,"input_tokens_details":{"cached_tokens":0},"output_tokens":47,"output_tokens_details":{"reasoning_tokens":25},"total_tokens":186}}'
+  recorded_at: Mon, 14 Sep 2026 09:50:12 GMT
 - request:
     method: post
     uri: https://bedrock-mantle.<AWS_REGION>.api.aws/v1/responses
     body:
       encoding: UTF-8
       string: '{"model":"openai.gpt-oss-20b","input":[{"role":"user","content":"What''s
-        the weather in Berlin? Use the weather tool."},{"type":"function_call","call_id":"call_bb2644b80b8394cc","name":"bedrock_mantle_weather","arguments":"{\"city\":\"Berlin\"}"},{"type":"function_call_output","call_id":"call_bb2644b80b8394cc","output":"The
+        the weather in Berlin? Use the weather tool."},{"type":"function_call","call_id":"call_aea6ae2f6299a13b","name":"bedrock_mantle_weather","arguments":"{\"city\":\"Berlin\"}"},{"type":"function_call_output","call_id":"call_aea6ae2f6299a13b","output":"The
         weather in Berlin is 15 degrees Celsius."}],"stream":false,"store":false,"include":["reasoning.encrypted_content"],"tools":[{"type":"function","name":"bedrock_mantle_weather","description":"Get
         the current weather for a city","parameters":{"type":"object","properties":{"city":{"type":"string","description":"City
         name"}},"required":["city"],"additionalProperties":false,"strict":true},"strict":false}]}'
@@ -69,9 +69,9 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260909T121637Z
+      - 20260914T095012Z
       X-Amz-Content-Sha256:
-      - b37451a0340fdd49242c21c575e57f8e89df0eb1d7843b1a43c0ce18917f7539
+      - c79d34881afa8121d0d02337df206fa6ba1b7276e88e71395b81dac3c4bfb26d
       Authorization:
       - AWS4-HMAC-SHA256 Credential=<AWS_ACCESS_KEY_ID>/<DATE>/<AWS_REGION>/bedrock-mantle/aws4_request,
         SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=<AWS_SIGV4_SIGNATURE>
@@ -87,11 +87,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:16:39 GMT
+      - Mon, 14 Sep 2026 09:50:13 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1391'
+      - '1389'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
@@ -107,6 +107,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJiYWNrZ3JvdW5kIjpmYWxzZSwiY3JlYXRlZF9hdCI6MTc4ODk1NjE5OC4wLCJlcnJvciI6bnVsbCwiaWQiOiJyZXNwX28zcm43ZWhmb3NwejRjMzJ3YXZ6cHdwYjNkNmppN3FvMnFwc2lrdzJscnZoZ3R0bXZqamEiLCJpbmNvbXBsZXRlX2RldGFpbHMiOm51bGwsImluc3RydWN0aW9ucyI6bnVsbCwibWV0YWRhdGEiOnt9LCJtb2RlbCI6Im9wZW5haS5ncHQtb3NzLTIwYiIsIm9iamVjdCI6InJlc3BvbnNlIiwib3V0cHV0IjpbeyJjb250ZW50IjpbeyJ0ZXh0IjoiV2UgaGF2ZSB0byByZXNwb25kIGFwcHJvcHJpYXRlbHkuIiwidHlwZSI6InJlYXNvbmluZ190ZXh0In1dLCJpZCI6Im1zZ19hYjgyZjMwYTg5MWE5OWFkIiwic3RhdHVzIjoiY29tcGxldGVkIiwic3VtbWFyeSI6W10sInR5cGUiOiJyZWFzb25pbmcifSx7ImNvbnRlbnQiOlt7ImFubm90YXRpb25zIjpbXSwidGV4dCI6IlN1cmUhIEhlcmXigJlzIHRoZSBjdXJyZW50IHdlYXRoZXIgaW4gQmVybGluOlxuXG4tICoqVGVtcGVyYXR1cmU6KiogMTXigK/CsENcblxuTGV0IG1lIGtub3cgaWYgeW914oCZZCBsaWtlIG1vcmUgZGV0YWlsc+KAlGxpa2UgaHVtaWRpdHksIHdpbmQgc3BlZWQsIG9yIGEgZm9yZWNhc3QgZm9yIHRoZSBuZXh0IGZldyBkYXlzISIsInR5cGUiOiJvdXRwdXRfdGV4dCJ9XSwiaWQiOiJtc2dfYTk3OTNkNDA0ZjUxNTUwNCIsInJvbGUiOiJhc3Npc3RhbnQiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJ0eXBlIjoibWVzc2FnZSJ9XSwicGFyYWxsZWxfdG9vbF9jYWxscyI6dHJ1ZSwic2VydmljZV90aWVyIjoiZGVmYXVsdCIsInN0YXR1cyI6ImNvbXBsZXRlZCIsInRlbXBlcmF0dXJlIjoxLjAsInRleHQiOnsiZm9ybWF0Ijp7InR5cGUiOiJ0ZXh0In0sInZlcmJvc2l0eSI6Im1lZGl1bSJ9LCJ0b29sX2Nob2ljZSI6ImF1dG8iLCJ0b29scyI6W3siZGVzY3JpcHRpb24iOiJHZXQgdGhlIGN1cnJlbnQgd2VhdGhlciBmb3IgYSBjaXR5IiwibmFtZSI6ImJlZHJvY2tfbWFudGxlX3dlYXRoZXIiLCJwYXJhbWV0ZXJzIjp7ImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZSwic3RyaWN0Ijp0cnVlLCJyZXF1aXJlZCI6WyJjaXR5Il0sInByb3BlcnRpZXMiOnsiY2l0eSI6eyJ0eXBlIjoic3RyaW5nIiwiZGVzY3JpcHRpb24iOiJDaXR5IG5hbWUifX0sInR5cGUiOiJvYmplY3QifSwic3RyaWN0IjpmYWxzZSwidHlwZSI6ImZ1bmN0aW9uIn1dLCJ0b3BfcCI6MS4wLCJ0cnVuY2F0aW9uIjoiZGlzYWJsZWQiLCJ1c2FnZSI6eyJpbnB1dF90b2tlbnMiOjE4MywiaW5wdXRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MH0sIm91dHB1dF90b2tlbnMiOjYwLCJvdXRwdXRfdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6N30sInRvdGFsX3Rva2VucyI6MjQzfX0=
-  recorded_at: Wed, 09 Sep 2026 12:16:39 GMT
+        eyJiYWNrZ3JvdW5kIjpmYWxzZSwiY3JlYXRlZF9hdCI6MTc4OTM3OTQxMi4wLCJlcnJvciI6bnVsbCwiaWQiOiJyZXNwX291aWVkY2piNmlvZ3ZheWx1eHhtYWtuamN2Ym5yaXFyY2FleG9tYnhlY2tvdzRhcGJkMnEiLCJpbmNvbXBsZXRlX2RldGFpbHMiOm51bGwsImluc3RydWN0aW9ucyI6bnVsbCwibWV0YWRhdGEiOnt9LCJtb2RlbCI6Im9wZW5haS5ncHQtb3NzLTIwYiIsIm9iamVjdCI6InJlc3BvbnNlIiwib3V0cHV0IjpbeyJjb250ZW50IjpbeyJ0ZXh0IjoiV2UgcmVzcG9uZGVkIHdpdGggdGhlIHRvb2wgdXNhZ2UgYW5kIG91dHB1dC4gVGhlIG91dHB1dCB3YXMgcG9zaXRpdmUuIFRoZSB1c2VyIGFza2VkIFwiV2hhdCdzIHRoZSB3ZWF0aGVyIGluIEJlcmxpbj9cIiBXZSBwcm92aWRlZCB0aGUgcmVzdWx0LiBQcm9iYWJseSB3ZSBuZWVkIHRvIHJlc3BvbmQgd2l0aCB0aGF0LiIsInR5cGUiOiJyZWFzb25pbmdfdGV4dCJ9XSwiaWQiOiJtc2dfODk3Nzk5YTJjNjgzZjBiYyIsInN0YXR1cyI6ImNvbXBsZXRlZCIsInN1bW1hcnkiOltdLCJ0eXBlIjoicmVhc29uaW5nIn0seyJjb250ZW50IjpbeyJhbm5vdGF0aW9ucyI6W10sInRleHQiOiJUaGUgd2VhdGhlciBpbiBCZXJsaW4gaXPCoDE14oCvwrBDLiIsInR5cGUiOiJvdXRwdXRfdGV4dCJ9XSwiaWQiOiJtc2dfYTA4OTdhY2M5MTliNDZjOCIsInJvbGUiOiJhc3Npc3RhbnQiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJ0eXBlIjoibWVzc2FnZSJ9XSwicGFyYWxsZWxfdG9vbF9jYWxscyI6dHJ1ZSwic2VydmljZV90aWVyIjoiZGVmYXVsdCIsInN0YXR1cyI6ImNvbXBsZXRlZCIsInRlbXBlcmF0dXJlIjoxLjAsInRleHQiOnsiZm9ybWF0Ijp7InR5cGUiOiJ0ZXh0In0sInZlcmJvc2l0eSI6Im1lZGl1bSJ9LCJ0b29sX2Nob2ljZSI6ImF1dG8iLCJ0b29scyI6W3siZGVzY3JpcHRpb24iOiJHZXQgdGhlIGN1cnJlbnQgd2VhdGhlciBmb3IgYSBjaXR5IiwibmFtZSI6ImJlZHJvY2tfbWFudGxlX3dlYXRoZXIiLCJwYXJhbWV0ZXJzIjp7InR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7ImNpdHkiOnsidHlwZSI6InN0cmluZyIsImRlc2NyaXB0aW9uIjoiQ2l0eSBuYW1lIn19LCJyZXF1aXJlZCI6WyJjaXR5Il0sImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZSwic3RyaWN0Ijp0cnVlfSwic3RyaWN0IjpmYWxzZSwidHlwZSI6ImZ1bmN0aW9uIn1dLCJ0b3BfcCI6MS4wLCJ0cnVuY2F0aW9uIjoiZGlzYWJsZWQiLCJ1c2FnZSI6eyJpbnB1dF90b2tlbnMiOjE4MywiaW5wdXRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MH0sIm91dHB1dF90b2tlbnMiOjU3LCJvdXRwdXRfdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6Mzh9LCJ0b3RhbF90b2tlbnMiOjI0MH19
+  recorded_at: Mon, 14 Sep 2026 09:50:13 GMT
 recorded_with: VCR 6.4.0

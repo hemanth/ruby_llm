@@ -30,7 +30,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:17:47 GMT
+      - Mon, 14 Sep 2026 09:50:46 GMT
       Server:
       - istio-envoy
       X-Ms-Aoai-Configured-Data-Retention-Days:
@@ -68,7 +68,7 @@ http_interactions:
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Apim-Request-Id:
-      - b6415459-02ae-4f60-b999-68f716c5f281
+      - c602b309-20f1-4df4-a13f-fd8d72f9c752
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -79,12 +79,12 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "id": "resp_0068cef517dffe79016aa14e6c2c208194b41fa0dd364deca2",
+          "id": "resp_0cfc66c6eaa0d254016aa7c3778ca88195986680fcc311087e",
           "object": "response",
-          "created_at": 1788956268,
+          "created_at": 1789379447,
           "status": "completed",
           "background": false,
-          "completed_at": 1788956269,
+          "completed_at": 1789379448,
           "content_filters": [
             {
               "blocked": false,
@@ -108,11 +108,11 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "fc_0068cef517dffe79016aa14e6d03588194ba748278a11dc91e",
+              "id": "fc_0cfc66c6eaa0d254016aa7c3786034819597a51854deb937f6",
               "type": "function_call",
               "status": "completed",
               "arguments": "{\"city\":\"Berlin\"}",
-              "call_id": "call_lsGnj1bocGvikMRmIPjZyY87",
+              "call_id": "call_vN78js8e3ig7sR0oyWhqihWW",
               "name": "azure_weather"
             }
           ],
@@ -197,14 +197,14 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 09 Sep 2026 12:17:49 GMT
+  recorded_at: Mon, 14 Sep 2026 09:50:48 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/openai/v1/responses
     body:
       encoding: UTF-8
       string: '{"model":"gpt-5.6-luna","input":[{"role":"user","content":"What''s
-        the weather in Berlin? Use the tool."},{"type":"function_call","call_id":"call_lsGnj1bocGvikMRmIPjZyY87","name":"azure_weather","arguments":"{\"city\":\"Berlin\"}"},{"type":"function_call_output","call_id":"call_lsGnj1bocGvikMRmIPjZyY87","output":"Current
+        the weather in Berlin? Use the tool."},{"type":"function_call","call_id":"call_vN78js8e3ig7sR0oyWhqihWW","name":"azure_weather","arguments":"{\"city\":\"Berlin\"}"},{"type":"function_call_output","call_id":"call_vN78js8e3ig7sR0oyWhqihWW","output":"Current
         weather in Berlin: 15C, wind 10 km/h"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"],"tools":[{"type":"function","name":"azure_weather","description":"Gets
         current weather for a city","parameters":{"type":"object","properties":{"city":{"type":"string","description":"City
         name"}},"required":["city"],"additionalProperties":false,"strict":true},"strict":false}]}'
@@ -229,7 +229,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:17:48 GMT
+      - Mon, 14 Sep 2026 09:50:48 GMT
       Server:
       - istio-envoy
       X-Ms-Aoai-Configured-Data-Retention-Days:
@@ -267,7 +267,7 @@ http_interactions:
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Apim-Request-Id:
-      - 8683bd2e-b8c8-4acf-be20-9988e10d070b
+      - 4af754b9-ca6f-4de8-b9b1-c77b3630c82c
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -278,12 +278,12 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "id": "resp_0de7bda85d70abf7016aa14e6dbd78819481fc9c7bb0bd9c47",
+          "id": "resp_03bb2da6494de993016aa7c378f1048190b1808ec90afe8687",
           "object": "response",
-          "created_at": 1788956269,
+          "created_at": 1789379448,
           "status": "completed",
           "background": false,
-          "completed_at": 1788956271,
+          "completed_at": 1789379450,
           "content_filters": [
             {
               "blocked": false,
@@ -307,7 +307,7 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "msg_0de7bda85d70abf7016aa14e6ee5a48194948c3adcc5844d67",
+              "id": "msg_03bb2da6494de993016aa7c379c9b8819082f6cc502f034edc",
               "type": "message",
               "status": "completed",
               "content": [
@@ -403,5 +403,5 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 09 Sep 2026 12:17:51 GMT
+  recorded_at: Mon, 14 Sep 2026 09:50:50 GMT
 recorded_with: VCR 6.4.0

@@ -32,7 +32,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:05:26 GMT
+      - Mon, 14 Sep 2026 09:39:41 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -42,7 +42,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1249
+      - gfet4t7; dur=1169
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -68,20 +68,20 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 31,
             "candidatesTokenCount": 21,
-            "totalTokenCount": 205,
+            "totalTokenCount": 192,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 31
               }
             ],
-            "thoughtsTokenCount": 153,
+            "thoughtsTokenCount": 140,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "hEuhaqWoNd-kkdUPhMCc4Qo"
+          "responseId": "3MCnavgxgfKewQ-D56SABg"
         }
-  recorded_at: Wed, 09 Sep 2026 12:05:26 GMT
+  recorded_at: Mon, 14 Sep 2026 09:39:41 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
@@ -117,7 +117,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 09 Sep 2026 12:05:27 GMT
+      - Mon, 14 Sep 2026 09:39:42 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -127,7 +127,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1834
+      - gfet4t7; dur=1205
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -141,7 +141,7 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "The file `ruby.xml` (an XML file) contains the following:\n\n```xml\n\u003ctruism\u003eRuby is the best\u003c/truism\u003e\n```"
+                    "text": "The file `ruby.xml` is an XML file and contains the following:\n\n```xml\n\u003ctruism\u003eRuby is the best\u003c/truism\u003e\n```"
                   }
                 ],
                 "role": "model"
@@ -153,18 +153,18 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 88,
             "candidatesTokenCount": 34,
-            "totalTokenCount": 410,
+            "totalTokenCount": 272,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 88
               }
             ],
-            "thoughtsTokenCount": 288,
+            "thoughtsTokenCount": 150,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "hkuhao6fC5yC3boPpr-t-A0"
+          "responseId": "3cCnaoHsDpGlxN8PpNey6Q8"
         }
-  recorded_at: Wed, 09 Sep 2026 12:05:27 GMT
+  recorded_at: Mon, 14 Sep 2026 09:39:42 GMT
 recorded_with: VCR 6.4.0

@@ -30,7 +30,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 09 Sep 2026 12:06:00 GMT
+      - Mon, 14 Sep 2026 09:40:14 GMT
       Server:
       - elb
       Vary:
@@ -38,7 +38,7 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Ds-Trace-Id:
-      - 5d1a527f2421cef7f2af1841bfdb248a
+      - fffb661c43197f49ae9268f90e0c90fe
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -46,14 +46,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 e1df9556bb1356130b1e2a47706ca86a.cloudfront.net (CloudFront)
+      - 1.1 9a63063b747d5740d535e1d571acc8a6.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TXL50-P6
+      - TXL52-P1
       X-Amz-Cf-Id:
-      - h8L-xB-17vLzzpzWUkAmjPQkBMUidr9usrp1gQ-aY-Fd3-jgO48Rxw==
+      - yuxGR_J4zkhusqrAVhTnqeqOa5UbSNuCgst_pLV_YCFEDei6u4q3Ig==
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"46ec72bf-9a3a-46ee-9514-d6432c61bf82","object":"chat.completion","created":1788955559,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"4","reasoning_content":"We
-        need answer simple. 2+2=4. Need maybe just answer."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":91,"completion_tokens":19,"total_tokens":110,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":17},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":91},"system_fingerprint":"a26a7955944dc5c60445bff77fac9c8e"}'
-  recorded_at: Wed, 09 Sep 2026 12:06:00 GMT
+      string: '{"id":"b1e7ba15-c170-4792-b32b-c2fc130e6a04","object":"chat.completion","created":1789378814,"model":"deepseek-flash","choices":[{"index":0,"message":{"role":"assistant","content":"4","reasoning_content":"We
+        need answer simple. Need comply. final? User asks What''s 2+2? Answer 4. Could
+        just. Ensure no extra. "},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":38,"completion_tokens":33,"total_tokens":71,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":31},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":38},"system_fingerprint":"aeb56401ca74e127821c4f9126dcb669"}'
+  recorded_at: Mon, 14 Sep 2026 09:40:14 GMT
 recorded_with: VCR 6.4.0

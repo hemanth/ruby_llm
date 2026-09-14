@@ -29,41 +29,41 @@ http_interactions:
       X-Origin-Cache:
       - HIT
       Last-Modified:
-      - Tue, 08 Sep 2026 03:44:55 GMT
+      - Mon, 14 Sep 2026 01:49:25 GMT
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"6a9f84b7-9c6"
+      - W/"6aa752a5-9c6"
       Expires:
-      - Wed, 09 Sep 2026 12:14:51 GMT
+      - Mon, 14 Sep 2026 09:48:55 GMT
       Cache-Control:
       - max-age=600
       X-Proxy-Cache:
       - MISS
       X-Github-Request-Id:
-      - 87C6:464DE:E0647A:E2BECB:6AA14B62
+      - EA64:1E29A7:5B464DB:5C2A2FF:6AA7C0AE
       X-Github-Edge-Region:
       - fra
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 09 Sep 2026 12:07:08 GMT
+      - Mon, 14 Sep 2026 09:40:57 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '106'
+      - '83'
       X-Served-By:
-      - cache-ber1080031-BER
+      - cache-ber1080033-BER
       X-Cache:
       - HIT
       X-Cache-Hits:
       - '1'
       X-Timer:
-      - S1788955629.518329,VS0,VE1
+      - S1789378858.693659,VS0,VE1
       Vary:
       - Accept-Encoding
       X-Fastly-Request-Id:
-      - 221b084c88ac59fcfbe6ed41c66b49f30923c2df
+      - d7a52222d5fae9a18fd81bec67ede76d9545102d
     body:
       encoding: ASCII-8BIT
       string: "Ruby is copyrighted free software by Yukihiro Matsumoto <matz@netlab.jp>.\nYou
@@ -99,7 +99,7 @@ http_interactions:
         \"AS IS\" AND WITHOUT ANY EXPRESS OR\n     IMPLIED WARRANTIES, INCLUDING,
         WITHOUT LIMITATION, THE IMPLIED\n     WARRANTIES OF MERCHANTABILITY AND FITNESS
         FOR A PARTICULAR\n     PURPOSE.\n"
-  recorded_at: Wed, 09 Sep 2026 12:07:08 GMT
+  recorded_at: Mon, 14 Sep 2026 09:40:57 GMT
 - request:
     method: post
     uri: https://api.x.ai/v1/responses
@@ -157,7 +157,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:07:12 GMT
+      - Mon, 14 Sep 2026 09:41:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -185,13 +185,13 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '272.4'
+      - '287.5'
       X-Metrics-Mean-Itl-Ms:
-      - '8.8'
+      - '9.2'
       X-Metrics-E2e-Ms:
-      - '3480.2'
+      - '4435.8'
       Traceparent:
-      - 00-247146792deb5538d6960c4b638fad76-38ff809d0000434f-01
+      - 00-d1737635542e0de607e5184df7ea9eb9-45ec9ab30000bb8e-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -204,7 +204,21 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJjcmVhdGVkX2F0IjoxNzg4OTU1NjI5LCJjb21wbGV0ZWRfYXQiOjE3ODg5NTU2MzIsImlkIjoiYjBjMGNlNDItMDJkZC05MDQzLWJhZjMtN2VhNTM4ODEwNTMxIiwibWF4X291dHB1dF90b2tlbnMiOm51bGwsIm1vZGVsIjoiZ3Jvay00LjMiLCJvYmplY3QiOiJyZXNwb25zZSIsIm91dHB1dCI6W3siaWQiOiJyc19iMGMwY2U0Mi0wMmRkLTkwNDMtYmFmMy03ZWE1Mzg4MTA1MzEiLCJzdW1tYXJ5IjpbeyJ0ZXh0IjoiVGhlIHVzZXIgaXMgYXNraW5nIFwiV2hhdCdzIGluIHRoaXMgZmlsZT9cIiBhbmQgaGFzIHByb3ZpZGVkIHRoZSBjb250ZW50IG9mIGEgZmlsZSBuYW1lZCAnbGljZW5zZS50eHQnIHdpdGggTUlNRSB0eXBlICd0ZXh0L3BsYWluJy4gVGhlIGNvbnRlbnQgaXMgdGhlIFJ1YnkgbGljZW5zZSB0ZXh0LlxuIiwidHlwZSI6InN1bW1hcnlfdGV4dCJ9XSwidHlwZSI6InJlYXNvbmluZyIsInN0YXR1cyI6ImNvbXBsZXRlZCIsImVuY3J5cHRlZF9jb250ZW50IjoiSVF2U1djNXRTSVpMNGtkcTc5QUd6ZXlOY3ZXS1Z5VUxxQU1wQVJmK2Z5NUNOYjRIZmFNbkxOY1RCNExvZmkwdG80c1E4MlVaQ1grN1F5dzNmVnppdm96UXBZRkpIbkhUTVBsbEZWVDVJd0VWaFF4dFNET1hhN2hlZFA2ZjNxUURwYmFwVGtaRG1FdHhrdzdWL3pTMkRTZlRUNTR1TDYvWjh2R2Jub1F5Zm9keExEdkgwZGJ2U2ErN1VZOUhURVE3T1hrT1l6RlBZNnlXQS9RUDJ2YVJseXpHSjlJeTBJck04Zk5iWnZHUFNKL0V1MXE0SzlzZXB6WFBTeS92ei8rMXM2UG5TS1p3dzVDcEJxNmppc1l2eFZvSnd5K1RzYlVKT1RVN0FxSy9OaFFLd3ZKK1VYQmJiL2hPZ29yTjNFTG1KdzliZmpYa0ZHN3F1Qjl6MFlycXJhV3RmUCtJRmFET0NSRkd0SHpuVWJrR2g0TTRpa3Axc0NyY0lZOHFuazFKMjJwZUJwVmhxT2RrL0V5Mkp5eTlqZm9La2hLYmdGeTEzQmZXK3p1TU1iQmtIK0tGR3hNQVlrMkxrL0liMXgzK0FnalUxRHlXQ292UmQ2MmFML3VRcnZCNlF3QjVCWUROV1dhM3F3TzZkeGdycEpPbGdpK2ZrYlh5T3RsQmo3UnZnalpZK0hPL2JvTSJ9LHsiY29udGVudCI6W3sidHlwZSI6Im91dHB1dF90ZXh0IiwidGV4dCI6IlRoaXMgaXMgdGhlICoqUnVieSBwcm9ncmFtbWluZyBsYW5ndWFnZSBsaWNlbnNlKiogKHRoZSBsaWNlbnNlIGZvciB0aGUgUnVieSBpbnRlcnByZXRlciBhbmQgY29yZSBsaWJyYXJpZXMpLlxuXG4jIyMgS2V5IHBvaW50czpcblxuLSAqKkF1dGhvcioqOiBZdWtpaGlybyBNYXRzdW1vdG8gKE1hdHopXG4tICoqTGljZW5zZSB0eXBlKio6IEl0J3MgYSAqKmR1YWwgbGljZW5zZSoqIOKAlCB5b3UgY2FuIGNob29zZSBlaXRoZXI6XG4gIC0gVGhlIDItY2xhdXNlIEJTRCBMaWNlbnNlIChCU0RMKSwgKipvcioqXG4gIC0gVGhlIGN1c3RvbSB0ZXJtcyBsaXN0ZWQgaW4gdGhpcyBmaWxlXG5cbiMjIyBNYWluIGNvbmRpdGlvbnM6XG5cbjEuICoqWW91IGNhbiBmcmVlbHkgcmVkaXN0cmlidXRlKiogdmVyYmF0aW0gY29waWVzLlxuMi4gKipZb3UgY2FuIG1vZGlmeSoqIHRoZSBzb2Z0d2FyZSwgYXMgbG9uZyBhcyB5b3UgZG8gYXQgbGVhc3Qgb25lIG9mOlxuICAgLSBNYWtlIHlvdXIgY2hhbmdlcyBwdWJsaWMgZG9tYWluIC8gZnJlZWx5IGF2YWlsYWJsZVxuICAgLSBVc2UgaXQgb25seSBpbnNpZGUgeW91ciBvd24gb3JnYW5pemF0aW9uXG4gICAtIEdpdmUgbW9kaWZpZWQgYmluYXJpZXMgZGlmZmVyZW50IG5hbWVzICsgcG9pbnQgdG8gdGhlIG9yaWdpbmFsXG4gICAtIEdldCBzcGVjaWFsIHBlcm1pc3Npb24gZnJvbSB0aGUgYXV0aG9yXG4zLiAqKkJpbmFyeSBkaXN0cmlidXRpb24qKiBoYXMgc2ltaWxhciBydWxlcyAobXVzdCBwcm92aWRlIHNvdXJjZSBvciBwb2ludCB0byB3aGVyZSB0byBnZXQgaXQpLlxuNC4gKipZb3UgY2FuIGVtYmVkKiogcGFydHMgb2YgUnVieSBpbnRvIG90aGVyIHNvZnR3YXJlIChpbmNsdWRpbmcgY29tbWVyY2lhbCksIGJ1dCBzb21lIGZpbGVzIGhhdmUgZGlmZmVyZW50IGxpY2Vuc2VzIChzZWUgYExFR0FMYCBmaWxlKS5cbjUuICoqU2NyaXB0cyBhbmQgb3V0cHV0KiogeW91IGNyZWF0ZSB3aXRoIFJ1YnkgYXJlICoqbm90KiogY292ZXJlZCBieSB0aGlzIGxpY2Vuc2Ug4oCUIHlvdSBvd24gdGhlbS5cbjYuICoqTm8gd2FycmFudHkqKiDigJQgcHJvdmlkZWQgXCJBUyBJU1wiLlxuXG5UaGlzIGlzIGEgcmVsYXRpdmVseSBwZXJtaXNzaXZlIGxpY2Vuc2UsIHNpbWlsYXIgaW4gc3Bpcml0IHRvIEJTRC9NSVQgYnV0IHdpdGggc29tZSBleHRyYSBjbGF1c2VzLiIsImxvZ3Byb2JzIjpbXSwiYW5ub3RhdGlvbnMiOltdfV0sImlkIjoibXNnX2IwYzBjZTQyLTAyZGQtOTA0My1iYWYzLTdlYTUzODgxMDUzMSIsInJvbGUiOiJhc3Npc3RhbnQiLCJ0eXBlIjoibWVzc2FnZSIsInN0YXR1cyI6ImNvbXBsZXRlZCJ9XSwicGFyYWxsZWxfdG9vbF9jYWxscyI6dHJ1ZSwicHJldmlvdXNfcmVzcG9uc2VfaWQiOm51bGwsInJlYXNvbmluZyI6eyJlZmZvcnQiOiJsb3ciLCJzdW1tYXJ5IjoiZGV0YWlsZWQifSwidGVtcGVyYXR1cmUiOjAuNywidGV4dCI6eyJmb3JtYXQiOnsidHlwZSI6InRleHQifX0sInRvb2xfY2hvaWNlIjoiYXV0byIsInRvb2xzIjpbXSwidG9wX3AiOjAuOTUsInVzYWdlIjp7ImlucHV0X3Rva2VucyI6NzE2LCJpbnB1dF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjoxMjh9LCJvdXRwdXRfdG9rZW5zIjozMzgsIm91dHB1dF90b2tlbnNfZGV0YWlscyI6eyJyZWFzb25pbmdfdG9rZW5zIjo3N30sInRvdGFsX3Rva2VucyI6MTA1NCwibnVtX3NvdXJjZXNfdXNlZCI6MCwibnVtX3NlcnZlcl9zaWRlX3Rvb2xzX3VzZWQiOjAsImNvc3RfaW5fdXNkX3RpY2tzIjoxNjA1NjAwMCwiY29udGV4dF9kZXRhaWxzIjp7ImlucHV0X3Rva2VucyI6NzE2LCJvdXRwdXRfdG9rZW5zIjozMzh9fSwidXNlciI6bnVsbCwiaW5jb21wbGV0ZV9kZXRhaWxzIjpudWxsLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJzdG9yZSI6ZmFsc2UsIm1ldGFkYXRhIjp7InN5c3RlbV9maW5nZXJwcmludCI6ImZwX2ViM2MwMDNmYzY2YzE0ZWQifSwiYmFja2dyb3VuZCI6ZmFsc2UsInNlcnZpY2VfdGllciI6ImRlZmF1bHQiLCJ0cnVuY2F0aW9uIjoiZGlzYWJsZWQiLCJ0b3BfbG9ncHJvYnMiOjAsInByZXNlbmNlX3BlbmFsdHkiOjAuMCwiZnJlcXVlbmN5X3BlbmFsdHkiOjAuMCwicHJvbXB0X2NhY2hlX2tleSI6bnVsbCwibWF4X3Rvb2xfY2FsbHMiOm51bGwsInNhZmV0eV9pZGVudGlmaWVyIjpudWxsLCJlcnJvciI6bnVsbCwiaW5zdHJ1Y3Rpb25zIjpudWxsfQ==
-  recorded_at: Wed, 09 Sep 2026 12:07:12 GMT
+      string: '{"created_at":1789378858,"completed_at":1789378862,"id":"a6547819-520a-915d-bf34-23207e667734","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_a6547819-520a-915d-bf34-23207e667734","summary":[{"text":"The
+        user is asking \"What''s in this file?\" and has provided the contents of
+        a file named ''license.txt'' with MIME type ''text/plain''. The content is
+        the Ruby license text.\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"0g4rCdIpprQ+c1LDHuLii7KoCVz/itrLIoyXeRR7KkyLQ5ejZlXUQoFyou4Vv4h2olgnaYLuMilz1bfxgxedUJTLbyuZ9uxKo3CErg1xot+s7cQW6Hg9dBav6+WSSP9u2r9RSjeeovTtEhqHgy5mHlvuhLuWxuYmm8F0VYHENMdlps5o6nzxHfKUCvxlne2liBMNQLXDLjKnYdnIqzauOh/SzaG9u/uFTQPM6lsUx02tvNYbWZXw2zB5Y0+y6Qt0uOza1+4BioINQYKBNUbKkud1p9tQ9e8MeujpMSb3IUPIPIJerQWY+MjSLPMkm/MTYVrEZTgAMWd0GR5hl97kGu9F+evNGcKpkDnGEdlNP789zilHxxn65ubvi+aiIacwqcDTBOjoYlK9C020XlvyG6cu9UIT4fQLZBV0/T3oPdfFz+/IKG10/Bk4NGNI7+iKkiBiX52GY4Yalp8Rw1ZGJ2a04ubWor6HP7smSRUI8rXToD4pJFA2wvF3N26o/iyuCbpDZHboZhDhv0UsDmOzq4M0gMqYoFm50NiDF16y+hjzEOQteoYajyER3Y+lywrTLbxiegxBusUG6ZHfZdplxNBuVrQak6ICioBobGuY5cPt6gdZat7PNF2LUaTmYWHj4uqBJIhv3DgBvc4fXfU9fzNnfAT4BhBLTeMbBu1rNFQydH32Ere+m/0NdphYiD0OgDDfme4LQpU1pg5cHC5EX8z+fMH3XzEGDUXZsafOsf9AR67dMoyD1ZbvkO7TpO5rFhzgwPzqSYG+euPyRl/Ru5aXgbX+Rvh4fHMOWbiDDaDkttxc6qdhhVXL3G23Y+Lvmh3Kd4YaUL0GVC0gudDlFaZ76mL1ZOAZxdC3UPgZqD3sFbrz6Y9lo2fsR33g5mgDGL+2zuEcw/TzbhQ+f2Mcqoz+wrnhdvRXjPganRpYmFQBDcF/zFCfeSIQWS3ICDNkHE7x8Z37y6w7derBCF0zWkBfh+vprZRkR/34P0d5WMow9zSa4S8FmEesJqQ6N8OndebZJH8gkUcEGDlTNOkR66Svt8JpHcOYVjsYIlR+6Yyjgbxw044Mc+r7M6TQR3eaaRKHPulD8kp/AIc00VJ4qCuMZj5t8k1px72qQhoApSu7ijyNgNZZyurDa4u0FRDHt9Sw+t2GR+ua6gjL5raaPCGQcckDaRgScFtNQn27f9sDdD/SWf1RZk8n458m0wH1ypG1QVSWVtKACMSEbMVZVtNzYAuQ6BPspSNxHFjDw2+wI4h1/FT7r96/aW9/0hB4G1uHdsHABLq3MBAoxShQMnLJbOxNt+QMeYyCpEEmhkbDCbRa2MnCY0RAhY45MXU2OM+RdEIzDVI/clrO29Fx7YQvF2k6sqhbkAMpSvUMRfv8jzi7f+ZQUDFTecyvNaQM8UgDqrdgThbGXGJseE24jzYl6WlU39nzPLTfh++Y94/TDovFTNHFCuBtEdXphBh5KwLGYuw6nceIw3PfKPEvza5p6+CVX7AWN2KG5t3NxQ"},{"content":[{"type":"output_text","text":"This
+        is the **Ruby License** (the main license file for the Ruby programming language).\n\nIt
+        was written by Yukihiro Matsumoto (Ruby''s creator) and permits free redistribution
+        and modification of Ruby under either:\n\n- The 2-clause BSD License (BSDL),
+        or\n- The specific terms listed in the file (which are similar but not identical
+        to the BSD license).\n\n### Key points covered:\n- You can freely copy and
+        share the source.\n- You can modify it, but must follow one of several conditions
+        (e.g., make changes public, keep it internal to your organization, use non-standard
+        names for binaries, etc.).\n- Binary distributions have similar requirements.\n-
+        Some files in the Ruby distribution have different licenses (see the `LEGAL`
+        file).\n- Scripts and libraries generated by the software belong to their
+        creators.\n- The software is provided **\"AS IS\"** with no warranties.\n\nThis
+        is the standard `license.txt` that ships with Ruby source distributions.","logprobs":[],"annotations":[]}],"id":"msg_a6547819-520a-915d-bf34-23207e667734","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":716,"input_tokens_details":{"cached_tokens":128},"output_tokens":434,"output_tokens_details":{"reasoning_tokens":240},"total_tokens":1150,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":18456000,"context_details":{"input_tokens":716,"output_tokens":434}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Mon, 14 Sep 2026 09:41:02 GMT
 recorded_with: VCR 6.4.0

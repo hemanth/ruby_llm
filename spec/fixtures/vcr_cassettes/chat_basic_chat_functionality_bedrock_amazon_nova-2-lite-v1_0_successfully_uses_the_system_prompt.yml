@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260909T120540Z
+      - 20260914T093939Z
       X-Amz-Content-Sha256:
       - 547cc625ca3c17150bece07f85b14fe7c22bea8feb53a244490c47cc4811082e
       Authorization:
@@ -29,31 +29,27 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:05:42 GMT
+      - Mon, 14 Sep 2026 09:39:40 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1224'
+      - '915'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - dfa4b137-acbc-4cc2-acfb-839e58224b4b
+      - 6d884521-b9c6-4690-b84c-30558315f990
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":1454},"output":{"message":{"content":[{"text":"The
-        weather can vary dramatically depending on your location, time of year, and
-        current atmospheric conditions. To get accurate and relevant information about
-        the weather **right now**, I recommend checking a trusted weather service
-        or app, such as the National Weather Service (NWS), Weather.com, or a smartphone
-        weather application. These platforms provide real-time updates, forecasts,
-        precipitation chances, wind speeds, and temperature trends tailored to your
-        specific area.\n\nFor example, if you''re in a region experiencing a cold
-        front, you might see lower temperatures and increased wind, while tropical
-        areas could be dealing with humidity and potential thunderstorms. Always consider
-        local advisories for severe weather events like hurricanes, tornadoes, or
-        heatwaves.\n\nIf you''re looking for a humorous take on weather complexities,
-        the comic **XKCD7392** famously illustrates the chaotic nature of weather
-        prediction with its detailed, exaggerated forecast map. Stay prepared and
-        check updates frequently!"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":69,"outputTokens":182,"serverToolUsage":{},"totalTokens":251}}'
-  recorded_at: Wed, 09 Sep 2026 12:05:42 GMT
+      string: '{"metrics":{"latencyMs":1079},"output":{"message":{"content":[{"text":"The
+        weather can vary widely depending on your location, time of year, and current
+        atmospheric conditions. To get accurate and relevant information about the
+        weather **today**, I recommend checking a reliable weather service or app
+        such as Weather.com, AccuWeather, or your device''s built-in weather functionality.
+        These platforms provide real-time updates, forecasts, precipitation chances,
+        wind speeds, and temperature trends tailored to your specific area.\n\nFor
+        a humorous yet insightful take on how weather data is often interpreted, the
+        webcomic **XKCD7392** offers a witty perspective on meteorological nuances.
+        Always remember that microclimates can cause unexpected changes, so staying
+        updated is key!"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":69,"outputTokens":132,"serverToolUsage":{},"totalTokens":201}}'
+  recorded_at: Mon, 14 Sep 2026 09:39:40 GMT
 recorded_with: VCR 6.4.0

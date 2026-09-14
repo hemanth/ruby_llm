@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260909T121108Z
+      - 20260914T094640Z
       X-Amz-Content-Sha256:
       - cd6a3cf3ac52b505f4e1f864bd38e8b91c754cc5e659a3dccc1f9d40447eb21e
       Authorization:
@@ -29,33 +29,32 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 09 Sep 2026 12:11:17 GMT
+      - Mon, 14 Sep 2026 09:46:53 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1574'
+      - '1413'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 2049d3c6-592d-411d-8c32-08263ba43758
+      - 8094f2fc-dd94-413a-bf73-165139d4fa5b
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":7995},"output":{"message":{"content":[{"text":"#
+      string: '{"metrics":{"latencyMs":11515},"output":{"message":{"content":[{"text":"#
         Image Description\n\nThe image shows the Ruby programming language logo. It
-        depicts a stylized ruby gemstone rendered in a deep red color with glossy
-        highlights and reflections. The gem is cut in a classic faceted style, showing
-        multiple angular surfaces that create depth and dimension. The logo has a
-        polished, three-dimensional appearance with lighter red highlights suggesting
-        light reflection on the gem''s surface.\n\n---\n\n# PDF Summary\n\n**Title:**
-        Sample PDF\n\nThis is a demonstration PDF file containing Lorem Ipsum placeholder
-        text. The document begins with the subtitle \"This is a simple PDF file. Fun
-        fun fun.\"\n\nThe PDF consists of four paragraphs of standard Lorem Ipsum
-        text - the classic dummy text used in publishing and design. The content is
-        purely filler text in Latin-like language, commonly used to demonstrate document
-        layout and typography without meaningful content. The paragraphs discuss various
-        fictitious subjects using words like \"consectetur adipiscing elit,\" \"Phasellus,\"
-        \"Curabitur,\" \"Pellentesque,\" and other Lorem Ipsum standard phrases.\n\nThe
-        document serves as a basic sample or test PDF file, likely used for demonstrating
-        PDF reading capabilities, testing file handling, or as a placeholder document."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":2730,"outputTokens":257,"serverToolUsage":{},"totalTokens":2987}}'
-  recorded_at: Wed, 09 Sep 2026 12:11:17 GMT
+        depicts a stylized, three-dimensional ruby gemstone rendered in rich red tones
+        with highlights and facets. The gem has a polished, reflective appearance
+        with lighter areas suggesting light reflection on its cut surfaces. The logo
+        uses deep crimson and bright red colors to create depth and dimension, giving
+        it a glossy, precious stone appearance.\n\n---\n\n# PDF Summary\n\nThe PDF
+        is titled \"Sample PDF\" and describes itself as \"a simple PDF file. Fun
+        fun fun.\"\n\nThe document consists primarily of Lorem Ipsum placeholder text
+        - standard dummy text used in publishing and design. The content is organized
+        into four main paragraphs of Latin-derived filler text that includes various
+        phrases beginning with words like \"Lorem ipsum dolor sit amet,\" \"Pellentesque
+        sit amet lectus,\" \"In mauris,\" and \"Morbi elit nunc.\"\n\nThis appears
+        to be a test or sample document used for demonstrating PDF formatting, layout,
+        or file handling capabilities rather than containing any substantive informational
+        content."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":2730,"outputTokens":226,"serverToolUsage":{},"totalTokens":2956}}'
+  recorded_at: Mon, 14 Sep 2026 09:46:53 GMT
 recorded_with: VCR 6.4.0

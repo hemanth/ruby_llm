@@ -8,7 +8,6 @@ module RubyLLM
       # instead of summaries, both in responses and in the stream.
       class Responses < Protocols::Responses
         SERVER_TOOL_ALIASES = {
-          web_search: { tool: { type: 'web_search' } },
           apply_patch: { tool: { type: 'custom', name: 'apply_patch' } }
         }.freeze
 

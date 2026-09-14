@@ -30,7 +30,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:48:11 GMT
+      - Mon, 14 Sep 2026 10:14:22 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -46,13 +46,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-447283dedfbd5110b3ed225b4331f33e-6699953900067e56-00
+      - 00-d7c2a50259e107f7e8ecfb342160ef9b-c788f2390007ec2c-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 61c37a26-cfba-4cc0-bbee-58d5ea9db3b1
+      - 1c4e19b9-a655-4bfa-89e4-1c7c7f982647
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -88,7 +88,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 61c37a26-cfba-4cc0-bbee-58d5ea9db3b1
+      - 1c4e19b9-a655-4bfa-89e4-1c7c7f982647
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -97,8 +97,8 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"e27d7e98-9742-4290-85a9-a2e4820972d4","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"call_01365817","index":0,"type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"41.9028\",\"longitude\":\"12.4964\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":259,"completion_tokens":40,"total_tokens":299,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":426,"audio_tokens":0,"text_tokens":259,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1788958092,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 09 Sep 2026 12:48:12 GMT
+      string: '{"id":"ffac0efa-3a81-4881-a308-7d2e59addccb","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"call_88355359","index":0,"type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"41.9028\",\"longitude\":\"12.4964\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":259,"completion_tokens":40,"total_tokens":299,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":157,"audio_tokens":0,"text_tokens":259,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789380863,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Mon, 14 Sep 2026 10:14:23 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
@@ -106,8 +106,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"grok-4-1-fast-non-reasoning","messages":[{"role":"system","content":"Your
         location is Berlin, at latitude 52.5200 and longitude 13.4050."},{"role":"user","content":"When
-        was the fall of Rome?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_01365817","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"41.9028\",\"longitude\":\"12.4964\"}"}}]},{"role":"tool","content":"Current
-        weather at 41.9028, 12.4964: 15°C, Wind: 10 km/h","tool_call_id":"call_01365817"}],"stream":false,"max_completion_tokens":4096,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        was the fall of Rome?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_88355359","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"41.9028\",\"longitude\":\"12.4964\"}"}}]},{"role":"tool","content":"Current
+        weather at 41.9028, 12.4964: 15°C, Wind: 10 km/h","tool_call_id":"call_88355359"}],"stream":false,"max_completion_tokens":4096,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
@@ -130,7 +130,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 09 Sep 2026 12:48:12 GMT
+      - Mon, 14 Sep 2026 10:14:23 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -146,13 +146,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-bf343ed2ecfc9d1ac2dde25ecaaabd13-d6a67d51002e287e-00
+      - 00-9f85ac4bf8b1bea7f09c81ad0744d05a-cf609a9d000b49ad-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 54d84646-5b80-4da5-95b7-b9ee9fbcba8b
+      - fcd3c01d-014d-4351-b334-c0e942585116
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -188,7 +188,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 54d84646-5b80-4da5-95b7-b9ee9fbcba8b
+      - fcd3c01d-014d-4351-b334-c0e942585116
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -197,14 +197,14 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"a1ac8e44-86fe-4b8b-9e5e-6cc68c4ab151","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        \"fall of Rome\" conventionally refers to the deposition of the last Western
-        Roman Emperor, Romulus Augustulus, on **September 4, 476 CE**, by the Germanic
-        chieftain Odoacer. This marked the end of the Western Roman Empire (though
-        the Eastern Roman/Byzantine Empire continued until 1453).\n\nHistorians debate
-        whether it was a sudden \"fall\" or a gradual decline over centuries, with
-        contributing factors like barbarian invasions, economic collapse, military
-        overextension, and internal corruption. Key precursors include the sack of
-        Rome by the Visigoths in 410 CE and by the Vandals in 455 CE."},"finish_reason":"stop"}],"usage":{"prompt_tokens":334,"completion_tokens":130,"total_tokens":464,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":501,"audio_tokens":0,"text_tokens":334,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1788958092,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 09 Sep 2026 12:48:14 GMT
+      string: '{"id":"280cb010-079b-46d3-a95b-84f11f27c8a4","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        fall of Rome is conventionally dated to **476 CE**, when the Germanic chieftain
+        Odoacer deposed Romulus Augustulus, the last Western Roman emperor, in Ravenna.
+        This marked the end of the Western Roman Empire (though the Eastern/Byzantine
+        Empire continued for nearly a millennium until 1453).\n\nHistorians debate
+        the exact \"fall,\" viewing it as a gradual process involving economic decline,
+        barbarian invasions, military weakening, and internal strife over centuries,
+        rather than a single event. Key precursors include the sack of Rome by the
+        Visigoths in 410 CE and by the Vandals in 455 CE."},"finish_reason":"stop"}],"usage":{"prompt_tokens":334,"completion_tokens":126,"total_tokens":460,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":312,"audio_tokens":0,"text_tokens":334,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789380863,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Mon, 14 Sep 2026 10:14:26 GMT
 recorded_with: VCR 6.4.0
