@@ -136,6 +136,7 @@ When you find provider vocabulary in the wrong layer, move it and add the rule t
 ## Docs
 
 - The Jekyll site lives in `docs/` with four collections: `_getting_started`, `_core_features`, `_advanced`, `_reference`. Preview with `docs/bin/serve.sh`.
+- Homepage sections alternate between the base background and the darker `home-band` background. When adding, removing, or moving a section, preserve the alternation through every following section and the footer. Check the rendered result in light and dark mode, on desktop and mobile.
 - Keep docs focused on RubyLLM. Do not add provider listings, promotional links, or dedicated setup sections for third-party services that only change an existing provider's API base URL or API key. Their RubyLLM integration instructions belong in their own documentation. Document generic endpoint configuration once; provider-specific additions must satisfy the acceptance policy in `CONTRIBUTING.md`, including documentation-only PRs.
 - Voice is Rails-guides style: second person, present tense, short sentences, code first, motivate before mechanics. No em dashes. No hype, no "simply". RDoc follows the Rails API voice: "Returns the ...", one line where one line will do.
 - Let working examples show what the framework can do. Start with the shortest useful public API call, then add options, integration examples, and provider details where readers need them. Keep guide openings consistent: title, description, and "After reading this guide, you will know". Explain concepts before summarizing them in a table.

@@ -98,7 +98,7 @@ chat.ask "Hello!"
     <div class="home-provider-gem home-step">
       <div>
         <h3 class="home-step-title">Missing a provider?</h3>
-        <p class="home-step-desc">Connect another AI service to Ruby and Rails. Generate a provider gem with configuration, tests, and release setup, then adapt it to the service's API.</p>
+        <p class="home-step-desc">Scaffold a provider gem with the same infrastructure as RubyLLM: configuration, tests, release setup, and a model registry that plugs into RubyLLM at runtime. Reuse a supported protocol without writing protocol code.</p>
         <a class="home-step-link" href="{% link _reference/custom-providers.md %}#generate-the-starting-point">Provider gem guide</a>
       </div>
       <div class="home-step-code home-code-grid home-code-grid--bare" markdown="1">
@@ -414,7 +414,30 @@ bin/rails generate ruby_llm:schema Product
   </div>
 </section>
 
-<section class="home-section home-band home-companies-section">
+<section id="coding-assistants" class="home-section home-band">
+  <div class="home-section-inner">
+    <h2 class="home-heading">Ready for your coding agent</h2>
+    <p class="home-lead">
+      The RubyLLM gem includes a skill for your coding agent. Give it the API, examples, and Rails conventions that match your application.
+    </p>
+
+    <div class="home-skill-install home-code-grid home-code-grid--bare" markdown="1">
+
+```sh
+npx skills add "$(bundle show ruby_llm)" --skill rubyllm
+```
+{: .home-code-card }
+
+</div>
+
+    <p class="home-small-note">
+      Run this from your application after installing RubyLLM. Choose your coding assistant when prompted.
+      <a href="{% link _getting_started/ai-coding-assistants.md %}">Skill setup and updates</a>
+    </p>
+  </div>
+</section>
+
+<section class="home-section home-companies-section">
   <div class="home-section-inner">
     <h2 class="home-heading">Built with RubyLLM</h2>
     <p class="home-lead">
@@ -458,7 +481,7 @@ bin/rails generate ruby_llm:schema Product
   </div>
 </section>
 
-<section class="home-section home-companies-section home-sponsors-section" aria-labelledby="sponsors">
+<section class="home-section home-band home-companies-section home-sponsors-section" aria-labelledby="sponsors">
   <div class="home-section-inner">
     <h2 id="sponsors" class="home-heading">Gold sponsors</h2>
     <p class="home-lead">Their support helps fund RubyLLM's development. Thank you for investing in AI for Ruby.</p>
@@ -473,7 +496,7 @@ bin/rails generate ruby_llm:schema Product
   </div>
 </section>
 
-<section class="home-section home-band home-love-section" data-love-carousel>
+<section class="home-section home-love-section" data-love-carousel>
   <div class="home-section-inner">
     <h2 class="home-heading">Why Rubyists choose RubyLLM</h2>
   </div>
@@ -602,7 +625,7 @@ bin/rails generate ruby_llm:schema Product
   </p>
 </section>
 
-<section class="home-section home-ready-section">
+<section class="home-section home-band home-ready-section">
   <div class="home-section-inner">
     <h2 class="home-heading">Give it a try</h2>
 

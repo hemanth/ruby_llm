@@ -122,6 +122,10 @@ html:has(.VPHome) .VPNavBar > .wrapper > .container > .content > .content-body {
   background-color: var(--home-band-bg);
 }
 
+body:has(.VPHome .home-section.home-band:last-child) .VPFooter {
+  background-color: var(--home-bg);
+}
+
 .VPNavBar.home:not(.has-sidebar):not(.top) {
   background-color: var(--home-band-bg);
 }
@@ -1309,6 +1313,15 @@ html:has(.VPHome) .VPNavBar > .wrapper > .container > .content > .content-body {
 .home-ready-code {
   width: min(560px, 100%);
   margin: 38px auto 0;
+}
+
+.home-skill-install {
+  width: min(680px, 100%);
+  margin: 38px auto 0;
+}
+
+.home-skill-install .home-code-card pre {
+  padding-right: 58px !important;
 }
 
 .home-hero-install {
