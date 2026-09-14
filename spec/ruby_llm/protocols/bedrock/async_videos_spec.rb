@@ -121,6 +121,41 @@ RSpec.describe RubyLLM::Protocols::Bedrock::AsyncVideos do
     expect(request).to have_been_requested.once
   end
 
+  describe 'output prefix normalization' do
+    [
+      ['s3://test-bucket/videos', 's3://test-bucket/videos/'],
+      ['s3://test-bucket/videos/', 's3://test-bucket/videos/'],
+      ['s3://test-bucket/videos///', 's3://test-bucket/videos/'],
+      ['s3://test-bucket/nested//videos///', 's3://test-bucket/nested//videos/'],
+      ['s3://test-bucket/vidéos///', 's3://test-bucket/vidéos/']
+    ].each do |prefix, expected|
+      it "normalizes trailing slashes in #{prefix}" do
+        job = completed_job(prefix.freeze)
+        output = "#{expected}video.mp4"
+        allow(provider).to receive_messages(list_file_uris: [output], download_file: 'video bytes')
+
+        expect(job.video.to_blob).to eq('video bytes')
+        expect(provider).to have_received(:list_file_uris).with(expected)
+        expect(provider).to have_received(:download_file).with(output)
+        expect(job.raw.dig('outputDataConfig', 's3OutputDataConfig', 's3Uri')).to eq(prefix)
+      end
+    end
+
+    it 'stays fast with a long run of internal slashes' do
+      prefix = "s3://test-bucket/#{'/' * 100_000}video"
+      job = completed_job(prefix)
+      allow(provider).to receive_messages(list_file_uris: ["#{prefix}/output.mp4"], download_file: 'video bytes')
+
+      expect { Timeout.timeout(5) { job.video } }.not_to raise_error
+      expect(provider).to have_received(:list_file_uris).with("#{prefix}/")
+    end
+
+    def completed_job(prefix)
+      RubyLLM::VideoJob.new(id: job_id, protocol:, model:, status: :completed,
+                            raw: { 'outputDataConfig' => { 's3OutputDataConfig' => { 's3Uri' => prefix } } })
+    end
+  end
+
   it 'retains failed job metadata and rejects unknown or absent job states' do
     stub_request(:post, endpoint).to_return_json(body: { invocationArn: job_id })
     stub_request(:get,

@@ -64,7 +64,8 @@ module RubyLLM
           prefix = job.raw.dig('outputDataConfig', 's3OutputDataConfig', 's3Uri')
           raise Error, 'Bedrock video job has no output S3 URI' unless prefix
 
-          uris = @provider.list_file_uris("#{prefix.sub(%r{/+\z}, '')}/")
+          prefix_length = (prefix.rindex(%r{[^/]}) || -1) + 1
+          uris = @provider.list_file_uris("#{prefix[0, prefix_length]}/")
           videos = uris.select { |uri| uri.downcase.end_with?('.mp4') }
           raise Error, 'Expected exactly one MP4 in the Bedrock video output' unless videos.one?
 
