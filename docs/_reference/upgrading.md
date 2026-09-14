@@ -490,6 +490,8 @@ The tool class macro `provider_options` now requires a Hash. Passing `nil` raise
 
 `model.pricing` used to drop 0.0 prices, making a free model indistinguishable from one with no pricing data. Zero now flows through as a real price (`cost.total` returns `0.0`); `nil` means the registry has no price.
 
+Chat pricing and `response.model_info` now use the provider that handled the request when model IDs overlap. An unknown response model ID falls back to the requested model. This corrects new attempts; previously recorded costs are not recalculated.
+
 ### Model Registry Storage
 
 A custom `model_registry_store` responds to `read` and, optionally, `write(registry)`. Rails configures its database store automatically. For a file fallback, set `model_registry_file`; its default is now a per-user OS cache path.

@@ -105,6 +105,111 @@ RSpec.describe 'RubyLLM::Accounting::Usage::Tracker' do
     expect(entry).not_to be_usage_available
   end
 
+  describe 'provider-specific message pricing' do
+    let(:provider) { instance_double(RubyLLM::Provider, slug: 'custom') }
+    let(:other_model) do
+      RubyLLM::Model.new(
+        id: 'z-ai/glm-5.3-flash', provider: 'openrouter',
+        pricing: { text_tokens: { standard: { input_per_million: 0.075, output_per_million: 0.25 } } }
+      )
+    end
+    let(:model) do
+      RubyLLM::Model.new(
+        id: other_model.id, provider: 'custom',
+        pricing: { text_tokens: { standard: { input_per_million: 0.2, output_per_million: 0.5 } } }
+      )
+    end
+    let(:registry) { RubyLLM::Models.new([other_model, model]) }
+    let(:result) do
+      RubyLLM::Message.new(role: :assistant, content: 'ok', model: model.id, input_tokens: 19, output_tokens: 17)
+    end
+
+    before { allow(RubyLLM).to receive(:models).and_return(registry) }
+
+    it 'replaces a providerless lookup before recording the cost' do
+      expect(result.model_info).to eq(other_model)
+      tracker = build_tracker
+      entry = tracker.start
+
+      tracker.succeed(result)
+
+      expect(result.model_info).to eq(model)
+      expect(entry.provider).to eq('custom')
+      expect(entry.cost.total).to be_within(1e-12).of(0.0000123)
+      expect(result.cost.total).to eq(entry.cost.total)
+    end
+
+    it 'falls back to the requested model when only another provider knows the echoed id' do
+      result = RubyLLM::Message.new(role: :assistant, content: 'ok', model: 'gpt-4.1',
+                                    input_tokens: 19, output_tokens: 17)
+      registry.all_including_unlisted << RubyLLM::Model.new(other_model.to_h.merge(id: result.model))
+      tracker = build_tracker
+      entry = tracker.start
+
+      tracker.succeed(result)
+
+      expect(result.model).to eq('gpt-4.1')
+      expect(result.model_info).to eq(model)
+      expect(entry.cost.total).to be_within(1e-12).of(0.0000123)
+    end
+
+    it 'uses a different echoed model when it belongs to the same provider' do
+      echoed_model = RubyLLM::Model.new(other_model.to_h.merge(id: 'gpt-4.1', provider: 'custom'))
+      registry.all_including_unlisted << echoed_model
+      result = RubyLLM::Message.new(role: :assistant, content: 'ok', model: echoed_model.id,
+                                    input_tokens: 19, output_tokens: 17)
+      tracker = build_tracker
+      entry = tracker.start
+
+      tracker.succeed(result)
+
+      expect(result.model_info).to eq(echoed_model)
+      expect(entry.cost.total).to eq(echoed_model.cost_for(result.tokens).total)
+    end
+
+    [0.0, 0.0042].each do |amount|
+      it "preserves a provider-reported cost of #{amount}" do
+        result = RubyLLM::Message.new(role: :assistant, content: 'ok', model: model.id,
+                                      input_tokens: 19, output_tokens: 17, reported_cost: amount)
+        tracker = build_tracker
+        entry = tracker.start
+
+        tracker.succeed(result)
+
+        expect(result.model_info).to eq(model)
+        expect(entry.cost.total).to eq(amount)
+        expect(result.cost.total).to eq(amount)
+      end
+    end
+
+    it 'preserves an explicitly supplied cost' do
+      result = RubyLLM::Message.new(role: :assistant, content: 'ok', model: model.id,
+                                    input_tokens: 19, output_tokens: 17, cost: { total: 0.003 })
+      tracker = build_tracker
+      entry = tracker.start
+
+      tracker.succeed(result)
+
+      expect(entry.cost.total).to eq(0.003)
+      expect(result.cost.total).to eq(0.003)
+    end
+
+    it 'leaves missing provider pricing unknown' do
+      unpriced_model = RubyLLM::Model.new(model.to_h.merge(pricing: {}))
+      registry.all_including_unlisted.replace([other_model, unpriced_model])
+      tracker = RubyLLM::Accounting::Usage::Tracker.new(
+        operation: :chat, provider: provider, model: unpriced_model, config: RubyLLM.config
+      )
+      entry = tracker.start
+
+      tracker.succeed(result)
+
+      expect(result.model_info).to eq(unpriced_model)
+      expect(entry.cost.total).to be_nil
+      expect(result.cost.total).to be_nil
+    end
+  end
+
   it 'recognizes an exact cost even when token counts are unavailable' do
     entry = RubyLLM::Accounting::Usage::Entry.new(
       operation: :chat,

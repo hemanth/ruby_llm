@@ -249,6 +249,19 @@ RSpec.describe RubyLLM::Message do
     end
   end
 
+  describe '#model_info' do
+    it 'does not substitute another provider when the recorded model is missing' do
+      original = RubyLLM.models.find(model_for(:openai, :temperature), provider: :openai)
+      allow(RubyLLM).to receive(:models).and_return(RubyLLM::Models.new([original]))
+      entry = RubyLLM::Accounting::Usage::Entry.new(
+        operation: :chat, provider: 'custom', model: original.id, status: :succeeded
+      )
+      message = described_class.new(role: :assistant, content: 'ok', model: original.id, usage_entries: [entry])
+
+      expect(message.model_info).to be_nil
+    end
+  end
+
   describe '#to_h' do
     it 'includes finish_reason when present' do
       message = described_class.new(role: :assistant, content: 'Hello', finish_reason: 'length')

@@ -68,6 +68,8 @@ transcription.cost.total
 
 RubyLLM uses token usage from the provider and pricing from the model registry. If the registry is missing pricing for tokens that were used, the affected cost and `cost.total` return `nil` instead of pretending the cost was zero. These helpers cover token-priced conversation usage; provider-specific add-ons such as search-query charges are left to the provider's raw usage payload.
 
+Chat responses resolve model pricing within the provider you called, even when another provider uses the same model ID. If the response names a model that is unknown for that provider, RubyLLM uses the requested model. `response.model_info` returns that resolved model; `response.model` keeps the ID returned by the provider.
+
 When the provider reports a request's price, `cost.total` uses that amount instead of a registry estimate. Component costs such as `cost.input` still use registry pricing. The same rule applies to [batch costs]({% link _advanced/batches.md %}#cost-and-usage).
 
 [Hosted research]({% link _advanced/hosted-research.md %}) is billed per task. Its cost stays unknown when the service supplies no price, even if it reports zero tokens.

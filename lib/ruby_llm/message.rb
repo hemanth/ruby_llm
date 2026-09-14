@@ -35,6 +35,8 @@ module RubyLLM
     # The ID of the model that produced the message, +nil+ on user messages.
     attr_reader :model
 
+    attr_writer :model_info # :nodoc:
+
     # The tool calls the assistant requested, as a Hash of ToolCall objects
     # keyed by call ID, or +nil+.
     attr_reader :tool_calls
@@ -238,12 +240,19 @@ module RubyLLM
       }.merge(tokens.to_h).compact
     end
 
-    # Returns the Model record for #model from the model registry, or
-    # +nil+ when the message has no model or the model is unknown.
+    # Returns the response's Model from its provider's registry, falling
+    # back to the requested model when the response ID is unknown.
+    # Restored messages use the last successful attempt's provider and model.
+    # Messages without request context look up #model, or return +nil+ if unknown.
     def model_info
-      return unless model
+      return @model_info if @model_info
 
-      @model_info ||= RubyLLM.models.find(model)
+      entry = ruby_llm_usage_entries.reverse.find(&:succeeded?)
+      @model_info = if entry&.model
+                      RubyLLM.models.find(entry.model, provider: entry.provider)
+                    elsif model
+                      RubyLLM.models.find(model)
+                    end
     rescue ModelNotFoundError
       nil
     end

@@ -71,6 +71,23 @@ RSpec.describe RubyLLM::ActiveRecord::MessageMethods do
       end
     end
 
+    it 'uses the successful attempt provider when reloading an overlapping model id' do
+      original = RubyLLM.models.find(model_for(:openai, :temperature), provider: :openai)
+      custom = RubyLLM::Model.new(original.to_h.merge(provider: 'custom'))
+      registry = RubyLLM::Models.new([original, custom])
+      record = chat.add_message(role: :assistant, content: 'Answer')
+      chat.ruby_llm_usages.create!(
+        message: record, operation: 'chat', provider: 'custom', model: custom.id, status: 'succeeded'
+      )
+      chat.ruby_llm_usages.create!(
+        message: record, operation: 'chat', provider: 'openai', model: original.id, status: 'failed'
+      )
+      allow(RubyLLM).to receive(:models).and_return(registry)
+
+      expect(record.reload.model_info).to eq(custom)
+      expect(record.to_llm.model_info).to eq(custom)
+    end
+
     it 'recognizes tool calls when the provider reports a normal stop' do
       call = tool_call
       record = chat.add_message(
