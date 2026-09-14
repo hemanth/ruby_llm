@@ -25,8 +25,6 @@ This guide covers **1.16 to 2.0.0.rc3**. Coming from an earlier release? Follow 
 The online-copy workflow below is available starting in `2.0.0.rc3`. With `2.0.0.rc2`, keep AI activity paused through all three phases.
 {: .important }
 
-Starting in `2.0.0.rc3`, DeepSeek's Responses protocol rejects `with_server_tools(:web_search)` with `RubyLLM::UnsupportedServerToolError`. DeepSeek no longer supports built-in web search. Choose another provider for [server-side search]({% link _core_features/server-tools.md %}), or register your own search tool with `with_tools`.
-
 For a tour of the new features with examples, see [What's New in 2.0]({% link _getting_started/whats-new-in-2-0.md %}).
 
 The upgrade has two parts: update your Ruby code and, if you use Rails persistence, migrate your stored records. Plain Ruby applications can skip the database steps.
@@ -71,7 +69,7 @@ For example, with **100,000 synthetic chats and 1 million messages**, rename fin
 | Rename | 20 s | 20 s |
 | Online copy | 136 s | 4 s |
 
-These are medians of three runs per mode using the generated migrations at [e5827a01](https://github.com/crmne/ruby_llm/commit/e5827a01a4226a1b4bbf28a4f42c0ff252918443), PostgreSQL 15.19, a Ryzen 5 7500F and 62 GiB RAM. Each run used a fresh database clone, 10 messages per chat, 256-byte text payloads and 10,000-message batches, without concurrent writes.
+These are medians of three runs per mode using the generated migrations at [e5827a01](https://github.com/crmne/ruby_llm/commit/e5827a01a4226a1b4bbf28a4f42c0ff252918443), PostgreSQL 15.19, a Ryzen 5 7500F and 64GB RAM. Each run used a fresh database clone, 10 messages per chat, 256-byte text payloads and 10,000-message batches, without concurrent writes.
 
 See the [migration benchmark repository](https://github.com/crmne/ruby_llm_migration_bench) for raw results and instructions to reproduce the comparison.
 
