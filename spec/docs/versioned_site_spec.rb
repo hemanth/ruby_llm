@@ -108,4 +108,33 @@ RSpec.describe 'Versioned documentation site', type: :task do
                                                    ])
     end
   end
+
+  describe 'frozen 1.x assets' do
+    it 'keeps assets and copied Markdown inside the selected documentation version' do
+      write_page('_config.yml', '{}')
+      write_page('_includes/head.html', '')
+      write_page('_advanced/rails.md', File.read(File.join(root, 'spec/fixtures/docs/one_x_rails.md')))
+      write_page('_includes/head_custom.html', <<~HTML)
+        <link rel="icon" href="/assets/images/logo.svg">
+        <script defer src="/assets/js/copy-page-markdown.js"></script>
+        <script src="https://example.com/analytics.js"></script>
+      HTML
+      write_page('_layouts/default.html', <<~HTML)
+        <button data-markdown-base="{{ site.markdown_source_base_url | escape }}"
+                data-markdown-path="{{ page.path | escape }}">Copy page</button>
+      HTML
+
+      run_script('prepare_one_x_docs.rb', site)
+
+      head = File.read(File.join(site, '_includes/head_custom.html'))
+      expect(head).to include("{{ '/assets/js/copy-page-markdown.js' | relative_url }}")
+      expect(head).to include("{{ '/assets/images/logo.svg' | relative_url }}")
+      expect(head).to include('src="https://example.com/analytics.js"')
+      layout = File.read(File.join(site, '_layouts/default.html'))
+      expect(layout).to include("{{ '/' | relative_url | escape }}")
+      expect(layout).to include("{% if page.url == '/' %}index.md{% else %}")
+      expect(layout).to include("page.url | append: '.md' | replace: '/.md', '.md'")
+      expect(layout).not_to include('site.markdown_source_base_url', 'page.path')
+    end
+  end
 end

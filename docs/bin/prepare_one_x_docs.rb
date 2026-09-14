@@ -48,6 +48,20 @@ head_path = File.join(docs_dir, '_includes', 'head.html')
 head = File.read(head_path).gsub(/^\s*\{% ai_json_ld %\}\s*$\n?/, '')
 File.write(head_path, head)
 
+custom_head_path = File.join(docs_dir, '_includes', 'head_custom.html')
+custom_head = File.read(custom_head_path).gsub(/(src|href)="(\/assets\/[^\"]+)"/) do
+  "#{Regexp.last_match(1)}=\"{{ '#{Regexp.last_match(2)}' | relative_url }}\""
+end
+File.write(custom_head_path, custom_head)
+
+layout_path = File.join(docs_dir, '_layouts', 'default.html')
+layout = File.read(layout_path)
+layout = layout.sub('{{ site.markdown_source_base_url | escape }}', "{{ '/' | relative_url | escape }}")
+layout = layout.sub('{{ page.path | escape }}', <<~LIQUID.strip)
+  {% if page.url == '/' %}index.md{% else %}{{ page.url | append: '.md' | replace: '/.md', '.md' | escape }}{% endif %}
+LIQUID
+File.write(layout_path, layout)
+
 compatibility_path = File.join(docs_dir, '_plugins', 'ai_visible_content_collection_json_ld.rb')
 File.delete(compatibility_path) if File.exist?(compatibility_path)
 

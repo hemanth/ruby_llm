@@ -93,9 +93,11 @@ RSpec.describe 'Rails persistence guide', type: :request do
     let(:prompt) { 'Analyze this file' }
     let(:guide_text) do
       Dir.mktmpdir('rubyllm-frozen-docs') do |directory|
-        %w[_advanced _includes].each { |name| FileUtils.mkdir_p(File.join(directory, name)) }
+        %w[_advanced _includes _layouts].each { |name| FileUtils.mkdir_p(File.join(directory, name)) }
         File.write(File.join(directory, '_config.yml'), '{}')
         File.write(File.join(directory, '_includes/head.html'), '')
+        File.write(File.join(directory, '_includes/head_custom.html'), '')
+        File.write(File.join(directory, '_layouts/default.html'), '')
         path = File.join(directory, '_advanced/rails.md')
         FileUtils.cp(File.expand_path('../fixtures/docs/one_x_rails.md', __dir__), path)
         script = File.expand_path('../../docs/bin/prepare_one_x_docs.rb', __dir__)

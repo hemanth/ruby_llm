@@ -33,8 +33,6 @@ bundle add ruby_llm --version 2.0.0.rc3
 
 </div>
 
-    <p class="home-small-note">2.0.0.rc3 is a prerelease. Using 1.x? Read the <a href="{{ '/v1/' | relative_url }}">stable-version docs</a> or the <a href="{% link _reference/upgrading.md %}">upgrade guide</a>.</p>
-
     <div class="home-demo-frame" data-demo-video>
       <pre class="home-demo-terminal" aria-hidden="true"><code><span class="term-green">$</span> irb -r ruby_llm
 <span class="term-green">&gt;&gt;</span> chat = RubyLLM.chat
