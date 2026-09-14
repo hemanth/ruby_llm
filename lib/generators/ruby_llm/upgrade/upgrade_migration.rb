@@ -248,7 +248,8 @@ module RubyLLM
         calls = records(:ruby_llm_tool_calls).where(message_type: configuration.fetch('message_class'), result_id: nil)
         return unless calls.exists?
 
-        raise 'Finish pending tool calls and approvals before switching versions'
+        raise 'Finish pending tool calls and approvals before switching versions. ' \
+              'For abandoned legacy calls, see https://rubyllm.com/upgrading/#incomplete-tool-calls'
       end
 
       def reconcile

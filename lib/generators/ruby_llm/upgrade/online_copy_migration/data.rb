@@ -63,6 +63,15 @@ module RubyLLM
           end
         end
 
+        def discard_incomplete_tool_calls
+          source = records(configuration.fetch('tool_call_table'))
+          result_key = configuration.fetch('tool_call_foreign_key')
+          results = messages.where.not(result_key => nil).select(result_key)
+          owners = legacy_messages.select(messages.primary_key)
+          source.where(configuration.fetch('message_foreign_key') => owners)
+                .where.not(source.primary_key => results).delete_all
+        end
+
         def catch_up(passes: nil)
           sync_models
           pass = 0

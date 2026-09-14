@@ -169,6 +169,27 @@ For online copy, use this deployment order:
 
 To stop after backfill, use `bin/rails db:migrate VERSION=<backfill_timestamp>`. A plain `db:migrate` runs every pending migration, including finish. If you run all three in one release step, pause AI before that step; you do not get an online backfill window that way.
 
+#### Incomplete Tool Calls
+
+To discard all incomplete legacy tool calls during copy finish, enable cleanup when generating the migration:
+
+```bash
+bin/rails generate ruby_llm:upgrade --mode copy --phase finish \
+  --discard-incomplete-tool-calls
+```
+
+Pass the same model mappings as the other phases. If you already generated finish, enable the option on its existing call and retain the generated block:
+
+```ruby
+RubyLLM::Generators::UpgradeMigration.for.finish(discard_incomplete_tool_calls: true) do
+  # Keep the generated finish block here.
+end
+```
+
+With affected traffic and workers paused, finish removes every tool call without a result message in 1.16-owned conversations, reports the count, and reconciles the copied records before verification. This includes calls abandoned before the maintenance window. Calls with result messages, including application approval placeholders, remain intact, as do protected 2.0 conversations. Application foreign keys still apply.
+
+Discarded calls are removed from both versions' histories and are not restored by rollback or resume. Their parent messages and usage remain. Deletion commits before the remaining finish checks; retrying finish is safe if a later check fails. Without the option, incomplete calls continue to block finish. This option is unavailable in 2.0.0.rc3.
+
 ### 5. Clean Up in a Later Deployment
 
 Once you have verified the upgrade in production, generate cleanup with the same model mappings:

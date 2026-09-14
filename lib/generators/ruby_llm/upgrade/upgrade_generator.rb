@@ -26,6 +26,8 @@ module RubyLLM
                            desc: 'Generate one upgrade phase; cleanup runs in a later deployment'
       class_option :mode, type: :string, enum: %w[rename copy], default: 'rename',
                           desc: 'Copy prepares and backfills online, with protected 1.16 rollback until cleanup'
+      class_option :discard_incomplete_tool_calls, type: :boolean, default: false,
+                                                   desc: 'Discard all incomplete legacy tool calls at copy finish'
 
       argument :model_mappings,
                type: :array,
@@ -39,6 +41,7 @@ module RubyLLM
       end
 
       def create_migration_files
+        validate_cleanup_options
         parse_model_mappings(allowed_types: MODEL_MAPPING_TYPES, defaults: MODEL_MAPPING_DEFAULTS)
         say_status :models, resolved_model_mappings
 
@@ -132,6 +135,14 @@ module RubyLLM
       private
 
       def copy_mode? = options[:mode] == 'copy'
+      def discard_incomplete_tool_calls? = options[:discard_incomplete_tool_calls]
+
+      def validate_cleanup_options
+        return unless discard_incomplete_tool_calls?
+        return if copy_mode? && options[:phase].in?([nil, 'finish'])
+
+        raise Thor::Error, 'Discard incomplete tool calls only with --mode copy and the finish phase'
+      end
 
       def copy_upgrade_settings
         {

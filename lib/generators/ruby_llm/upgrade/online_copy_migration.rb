@@ -47,7 +47,7 @@ module RubyLLM
         end
       end
 
-      def finish
+      def finish(discard_incomplete_tool_calls: false)
         with_migration_lock do
           state = states.first!
           return if state.active_version == 2 && state.status == 'active' && data.finished?
@@ -55,6 +55,10 @@ module RubyLLM
           raise 'Run the copy backfill before finish' unless data.completed?
 
           pause(state, from: 1, statuses: %w[preparing active finishing])
+          if discard_incomplete_tool_calls
+            discarded = data.discard_incomplete_tool_calls
+            ::ActiveRecord::Migration.say "Discarded #{discarded} incomplete legacy tool calls"
+          end
           data.catch_up
           data.verify
           verify_completed_work

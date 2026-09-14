@@ -46,6 +46,32 @@ RSpec.describe 'RubyLLM upgrade generator', :generator, type: :generator do # ru
     end
   end
 
+  describe 'incomplete tool-call cleanup' do
+    it 'enables cleanup of all incomplete legacy calls at copy finish' do
+      Dir.mktmpdir do |destination|
+        generator = RubyLLM::Generators::UpgradeGenerator.new(
+          [], { mode: 'copy', phase: 'finish', discard_incomplete_tool_calls: true },
+          destination_root: destination
+        )
+        allow(generator).to receive_messages(postgresql?: false, mysql?: false, migration_version: '[8.1]')
+        allow(generator).to receive(:say_status)
+        generator.create_migration_files
+
+        source = File.read(Dir.glob(File.join(destination, 'db/migrate/*.rb')).sole)
+        expect(source).to include('finish(discard_incomplete_tool_calls: true)')
+      end
+    end
+
+    it 'rejects cleanup outside copy finish before generating files' do
+      [{ mode: 'rename' }, { mode: 'copy', phase: 'backfill' }].each do |options|
+        generator = RubyLLM::Generators::UpgradeGenerator.new(
+          [], options.merge(discard_incomplete_tool_calls: true)
+        )
+        expect { generator.create_migration_files }.to raise_error(Thor::Error, /finish phase/)
+      end
+    end
+  end
+
   describe 'with default model names' do
     let(:app_name) { 'test_upgrade_generator_default' }
     let(:app_path) { File.join(Dir.tmpdir, app_name) }

@@ -1,15 +1,17 @@
 # frozen_string_literal: true
 
-require 'generators/ruby_llm/upgrade/legacy_content_sql'
 <% if copy_mode? -%>
-
 require 'generators/ruby_llm/upgrade/upgrade_migration'
+<% else -%>
+require 'generators/ruby_llm/upgrade/legacy_content_sql'
 <% end -%>
 
 class <%= backfill_migration_class_name %> < ActiveRecord::Migration<%= migration_version %>
   disable_ddl_transaction!
 
+<% unless copy_mode? -%>
   BATCH_SIZE = 10_000
+<% end -%>
   PROGRESS_TABLE = :ruby_llm_v2_backfills
 
   def up
@@ -46,6 +48,7 @@ class <%= backfill_migration_class_name %> < ActiveRecord::Migration<%= migratio
     raise 'The RubyLLM 2.0 upgrade is already finished. Do not run the backfill again.'
   end
 
+<% unless copy_mode? -%>
   def backfill_required_defaults
     {
       <%= chat_table_name %>: {cancelled: false},
@@ -453,6 +456,7 @@ class <%= backfill_migration_class_name %> < ActiveRecord::Migration<%= migratio
     yield
   end
 
+<% end -%>
   def progress_records = migration_record(PROGRESS_TABLE)
 
   def migration_record(table)

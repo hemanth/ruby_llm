@@ -10,9 +10,10 @@ require 'securerandom'
 class UpgradeMigrationTemplateContext
   attr_reader :adapter, :mode
 
-  def initialize(adapter, mode: :rename)
+  def initialize(adapter, mode: :rename, discard_incomplete_tool_calls: false)
     @adapter = adapter
     @mode = mode
+    @discard_incomplete_tool_calls = discard_incomplete_tool_calls
   end
 
   def migration_version = '[8.1]'
@@ -32,6 +33,7 @@ class UpgradeMigrationTemplateContext
   def message_foreign_key = 'message_id'
   def chat_foreign_key = 'chat_id'
   def copy_mode? = mode == :copy
+  def discard_incomplete_tool_calls? = @discard_incomplete_tool_calls
   def postgresql? = adapter == 'postgresql'
   def mysql? = adapter == 'mysql2'
   def usage_operations_sql = sql_list(%w[chat embedding moderation image speech transcription ocr rerank])
@@ -76,6 +78,27 @@ RSpec.describe 'RubyLLM upgrade migration adapters', :generator do # rubocop:dis
     end
   end
 
+  it 'omits rename-only helpers from copy migrations' do
+    rename_helpers = {
+      backfill: %i[backfill_required_defaults backfill_message_content backfill_tool_results backfill_usages
+                   verify_backfills create_progress_table each_message_range],
+      finish: %i[verify_message_content verify_tool_results verify_usages usage_identity_joins
+                 legacy_usage_conditions legacy_cost_detail message_value quoted_primary_key quote_table]
+    }
+
+    %w[postgresql mysql2 sqlite3].each do |adapter|
+      copy = load_upgrade_migrations(adapter, mode: :copy)
+      rename = load_upgrade_migrations(adapter)
+
+      expect(copy.fetch(:backfill).private_instance_methods(false))
+        .to contain_exactly(:verify_upgrade_in_progress, :progress_records, :migration_record)
+      rename_helpers.each do |phase, helpers|
+        expect(copy.fetch(phase).private_instance_methods(false) & helpers).to be_empty
+        expect(rename.fetch(phase).private_instance_methods(false)).to include(*helpers)
+      end
+    end
+  end
+
   databases = {
     postgresql: ['postgresql', ENV.fetch('RUBY_LLM_POSTGRES_URL', nil)],
     mysql: ['mysql2', ENV.fetch('RUBY_LLM_MYSQL_URL', nil)],
@@ -100,6 +123,18 @@ RSpec.describe 'RubyLLM upgrade migration adapters', :generator do # rubocop:dis
 
       it 'copies and reconciles legacy data before removing the rollback schema' do
         success, output = run_in_isolated_process(adapter, url, scenario: :run_copy_scenario)
+
+        expect(success).to be(true), output
+      end
+
+      it 'discards all incomplete legacy calls at finish when enabled' do
+        success, output = run_in_isolated_process(adapter, url, scenario: :run_incomplete_tool_calls_scenario)
+
+        expect(success).to be(true), output
+      end
+
+      it 'preserves incomplete calls with application references or protected conversations' do
+        success, output = run_in_isolated_process(adapter, url, scenario: :run_protected_incomplete_tool_calls_scenario)
 
         expect(success).to be(true), output
       end
@@ -248,6 +283,62 @@ RSpec.describe 'RubyLLM upgrade migration adapters', :generator do # rubocop:dis
     verify_copy_cleanup(upgrade, migrations)
     verify_clean_install_contract(adapter)
   ensure
+    drop_test_tables
+  end
+
+  def run_incomplete_tool_calls_scenario(adapter)
+    create_v1_schema(adapter)
+    insert_identity_records
+    message = record_for(:messages).create!(chat_id: 1, model_id: 1, role: 'assistant', content: 'Calling tools')
+    calls = record_for(:tool_calls)
+    [101, 102, 103].each do |id|
+      calls.create!(id: id, message_id: message.id, tool_call_id: "call-#{id}", name: 'lookup', arguments: {})
+    end
+    placeholder = record_for(:messages).create!(chat_id: 1, model_id: 1, role: 'tool',
+                                                tool_call_id: 103, content: 'Awaiting approval')
+    migrations = load_upgrade_migrations(adapter, mode: :copy)
+    %i[prepare backfill].each { |phase| migrations.fetch(phase).new.migrate(:up) }
+    expect { migrations.fetch(:finish).new.migrate(:up) }.to raise_error(/pending tool calls/)
+    expect(calls.count).to eq(3)
+
+    calls.create!(id: 104, message_id: message.id, tool_call_id: 'late-call', name: 'lookup', arguments: {})
+    migrations = load_upgrade_migrations(adapter, mode: :copy, discard_incomplete_tool_calls: true)
+    2.times { migrations.fetch(:finish).new.migrate(:up) }
+    expect(calls.pluck(:id)).to eq([103])
+    expect(record_for(:ruby_llm_tool_calls).sole.result_id).to eq(placeholder.id)
+    expect(record_for(:ruby_llm_v2_upgrades).sole.active_version).to eq(2)
+    RubyLLM::Generators::UpgradeMigration.for.rollback
+    RubyLLM::Generators::UpgradeMigration.for.resume
+    expect(record_for(:ruby_llm_tool_calls).pluck(:legacy_key)).to eq(['103'])
+  ensure
+    drop_test_tables
+  end
+
+  def run_protected_incomplete_tool_calls_scenario(adapter)
+    create_v1_schema(adapter)
+    insert_identity_records
+    message = record_for(:messages).create!(chat_id: 1, model_id: 1, role: 'assistant', content: 'Calling tools')
+    calls = record_for(:tool_calls)
+    [101, 102].each do |id|
+      calls.create!(id: id, message_id: message.id, tool_call_id: "call-#{id}", name: 'lookup', arguments: {})
+    end
+    connection.create_table(:application_actions) { |table| table.bigint :tool_call_id }
+    connection.add_foreign_key(:application_actions, :tool_calls)
+    record_for(:application_actions).create!(tool_call_id: 102)
+    migrations = load_upgrade_migrations(adapter, mode: :copy, discard_incomplete_tool_calls: true)
+    %i[prepare backfill].each { |phase| migrations.fetch(phase).new.migrate(:up) }
+
+    expect { migrations.fetch(:finish).new.migrate(:up) }.to raise_error(ActiveRecord::InvalidForeignKey)
+    expect(calls.count).to eq(2)
+    expect(record_for(:ruby_llm_tool_calls).count).to eq(2)
+
+    connection.drop_table(:application_actions)
+    record_for(:chats).find(1).update!(ruby_llm_version: 2)
+    expect { migrations.fetch(:finish).new.migrate(:up) }.to raise_error(/pending tool calls/)
+    expect(calls.count).to eq(2)
+    expect(record_for(:ruby_llm_tool_calls).count).to eq(2)
+  ensure
+    connection.drop_table(:application_actions) if connection.table_exists?(:application_actions)
     drop_test_tables
   end
 
@@ -815,8 +906,8 @@ RSpec.describe 'RubyLLM upgrade migration adapters', :generator do # rubocop:dis
     end
   end
 
-  def load_upgrade_migrations(adapter, mode: :rename)
-    context = UpgradeMigrationTemplateContext.new(adapter, mode:)
+  def load_upgrade_migrations(adapter, mode: :rename, discard_incomplete_tool_calls: false)
+    context = UpgradeMigrationTemplateContext.new(adapter, mode:, discard_incomplete_tool_calls:)
     scope = Module.new
     {
       prepare: ['prepare_v2_upgrade.rb.tt', :PrepareRubyLlmV2Upgrade],
