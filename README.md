@@ -7,7 +7,9 @@
 
 <strong>Build AI features the Ruby way</strong>
 
-<p>The Ruby-native AI framework. Build with chats, tools, agents, images, audio, and video through one consistent API, in plain Ruby or Rails.</p>
+<p>RubyLLM is the Ruby-native AI framework. Work with models, tools, and agents through one consistent API, in plain Ruby or Rails.</p>
+
+[Website](https://rubyllm.com/) · [Getting Started](https://rubyllm.com/getting-started/) · [What's New in 2.0](https://rubyllm.com/whats-new-in-2-0/)
 
 Battle tested at [<picture><source media="(prefers-color-scheme: dark)" srcset="https://chatwithwork.com/logotype-dark.svg"><img src="https://chatwithwork.com/logotype.svg" alt="Chat with Work" height="30" align="absmiddle"></picture>](https://chatwithwork.com) - *Fully private work AI*
 
@@ -24,26 +26,19 @@ Battle tested at [<picture><source media="(prefers-color-scheme: dark)" srcset="
 
 ---
 
-Work with OpenAI, xAI, Anthropic, Google, AWS, local models, and more. Seventeen providers are built in, and you can connect an OpenAI-compatible endpoint directly.
+## 17 providers. One Ruby API.
 
-## Build a working Ruby AI chat in two minutes
+Build with the models you want. Move between hosted and local providers without rewriting your application, or connect an OpenAI-compatible endpoint.
 
-https://github.com/user-attachments/assets/65422091-9338-47da-a303-92b918bd1345
+[Browse models and pricing](https://rubyllm.com/available-models/) · [Connect a provider](https://rubyllm.com/configuration-providers/)
 
-## Why RubyLLM?
-
-Use the same Ruby methods across providers. Add files to a conversation, give an agent tools, generate media, or build a search feature with embeddings and reranking. Read response text, generated files, and usage through Ruby objects.
-
-In Rails, the API works on your own Chat and Message records, with Active Storage attachments, Hotwire streaming, and background jobs. RubyLLM maintains the supporting model registry, tool calls, usage ledger, and batches. A handful of small dependencies keeps it easy to bring into an existing application.
-
-## Show me the code
+## Start with one line. Add files, tools, and agents
 
 These examples use **2.0.0.rc3 (prerelease)**. Follow [Getting Started](https://rubyllm.com/getting-started/) to install it and configure the providers you want to try. For 1.x, use the [stable-version docs](https://rubyllm.com/v1/).
 
 ```ruby
-# Just ask questions
-chat = RubyLLM.chat
-chat.ask "What's the best way to learn Ruby?"
+# Just ask
+RubyLLM.chat.ask "What's the best way to learn Ruby?"
 ```
 
 ```ruby
@@ -155,7 +150,9 @@ response = chat.with_schema(ProductSchema).ask "Analyze this product", with: "pr
 response.parsed
 ```
 
-## Features
+## A complete AI framework for Ruby
+
+Agents, workflows, RAG, images, audio, and video. Built in, with usage tracking and Rails integration to bring them into your app.
 
 * **Chat:** Conversational AI with `RubyLLM.chat`
 * **Vision:** Analyze images and videos
@@ -210,7 +207,11 @@ end
 
 Configure the other providers used by the examples as needed: Gemini for files, xAI for video, Mistral for OCR, and Cohere for reranking. [Getting Started](https://rubyllm.com/getting-started/) shows each setup beside its example. If your app uses 1.16, follow the [upgrade guide](https://rubyllm.com/upgrading/) before deploying 2.0.
 
-## Rails
+## Feels at home in Rails
+
+Save conversations with Active Record and stream replies with Hotwire. The generators give you a working chat UI. Watch the two-minute demo.
+
+https://github.com/user-attachments/assets/65422091-9338-47da-a303-92b918bd1345
 
 ```bash
 # Install Rails Integration
@@ -231,7 +232,17 @@ chat = Chat.create! model: "gpt-5.6-luna"
 chat.ask "What's in this file?", with: "report.pdf"
 ```
 
-Visit `http://localhost:3000/chats` for a ready-to-use chat interface!
+Start your Rails server and visit `http://localhost:3000/chats` to try the chat interface. See the [Rails guide](https://rubyllm.com/rails/) for persistence, streaming, and background jobs.
+
+## AI coding assistants
+
+Give your coding assistant the RubyLLM API and documentation that match your application. From your application directory, install the skill packaged with your gem:
+
+```bash
+npx skills add "$(bundle show ruby_llm)" --skill rubyllm
+```
+
+Choose your coding assistant and installation scope when prompted. See [AI Coding Assistants](https://rubyllm.com/ai-coding-assistants/) for setup and updates.
 
 ## Documentation
 
