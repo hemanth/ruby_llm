@@ -44,7 +44,7 @@ loader.setup
 
 # RubyLLM is an AI framework for Ruby and Rails. Build conversations and
 # agents, generate media, process documents, and work with model providers
-# through one Ruby API. The guides at https://rubyllm.com/next/ introduce
+# through one Ruby API. The guides at https://rubyllm.com/ introduce
 # each feature; this reference documents its classes, arguments, and results.
 #
 #   RubyLLM.configure do |config|

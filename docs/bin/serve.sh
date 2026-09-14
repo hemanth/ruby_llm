@@ -14,25 +14,20 @@ repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 docs="$repo/docs"
 site="$docs/_site"
 versions="$docs/_data/versions.yml"
-latest="$(ruby -ryaml -e 'puts YAML.load_file(ARGV[0])["latest"]' "$versions")"
+stable="$(ruby -ryaml -e 'puts YAML.load_file(ARGV[0])["stable"]' "$versions")"
 
-# The committed versions.yml with local URLs (next at /, the latest 1.x at /v1/)
-# and a given `current`, named by item id.
-local_versions() { # <out> <current-id>
-  ruby -ryaml -e '
-    d = YAML.load_file(ARGV[0]); latest = d["latest"]
-    d["items"].each { |i| i["url"] = "/" if i["id"] == "next"; i["url"] = "/v1/" if i["id"] == latest }
-    d["current"] = d["items"].find { |i| i["id"] == ARGV[1] }.fetch("title")
-    File.write(ARGV[2], YAML.dump(d))
-  ' "$versions" "$2" "$1"
+local_versions() {
+  cp "$versions" "$1"
+  ruby "$docs/bin/prepare_versions.rb" "$1" "$2" ""
 }
 
 echo "==> Building frozen 1.x docs (@ $ONE_X_REF) -> /v1/"
 onex="$(mktemp -d)"
 git -C "$repo" archive "$ONE_X_REF" docs/ | tar -x -C "$onex"
+"$docs/bin/prepare_one_x_docs.rb" "$onex/docs"
 cp "$docs/_includes/version_select.html" "$onex/docs/_includes/"
 mkdir -p "$onex/docs/_data"
-local_versions "$onex/docs/_data/versions.yml" "$latest"
+local_versions "$onex/docs/_data/versions.yml" "$stable"
 perl -0pi -e 's{(\{% include components/header.html %\}\n)}{$1    {% include version_select.html %}\n}' \
   "$onex/docs/_layouts/default.html"
 ( cd "$onex/docs" && BUNDLE_GEMFILE="$docs/Gemfile" bundle exec jekyll build --baseurl /v1 -d "$site/v1" --quiet )

@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/crmne/ruby_llm'
   spec.metadata['changelog_uri'] = "#{spec.metadata['source_code_uri']}/releases"
-  spec.metadata['documentation_uri'] = 'https://rubyllm.com/next/'
+  spec.metadata['documentation_uri'] = 'https://rubyllm.com/'
   spec.metadata['bug_tracker_uri'] = "#{spec.metadata['source_code_uri']}/issues"
   spec.metadata['funding_uri'] = 'https://github.com/sponsors/crmne'
 
@@ -38,14 +38,14 @@ Gem::Specification.new do |spec|
       2.0 renames several APIs and changes what message content returns. Coming
       from 1.x? Read the upgrade guide before you boot:
 
-        https://rubyllm.com/next/upgrading/
+        https://rubyllm.com/upgrading/
 
       The Rails upgrade uses forward-only preparation, backfill, and finish
       phases, with cleanup later. Rename mode is the default; optional copy
       mode supports a controlled return to 1.16. Read its requirements in the
       upgrade guide and rehearse on a recent production snapshot.
 
-      Agent skill: https://rubyllm.com/next/ai-coding-assistants/
+      Agent skill: https://rubyllm.com/ai-coding-assistants/
   MESSAGE
 
   spec.files = Dir.glob('{lib,skills}/**/*') + Dir.glob('exe/*') + ['README.md', 'LICENSE', '.rdoc_options']

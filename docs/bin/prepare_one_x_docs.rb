@@ -50,3 +50,29 @@ File.write(head_path, head)
 
 compatibility_path = File.join(docs_dir, '_plugins', 'ai_visible_content_collection_json_ld.rb')
 File.delete(compatibility_path) if File.exist?(compatibility_path)
+
+rails_path = File.join(docs_dir, '_advanced', 'rails.md')
+rails = File.read(rails_path)
+unsafe_upload = <<~RUBY
+  # Works with file uploads from forms
+  chat_record.ask("Analyze this file", with: params[:uploaded_file])
+RUBY
+safe_upload = <<~MARKDOWN
+  ```
+
+  In a controller action, check that the parameter is an uploaded file:
+
+  ```ruby
+  uploaded_file = params[:uploaded_file]
+  return head :bad_request unless uploaded_file.is_a?(ActionDispatch::Http::UploadedFile)
+
+  chat_record.ask("Analyze this file", with: uploaded_file)
+  ```
+
+  A client can submit a string instead of a file. RubyLLM treats strings as local paths or URLs, so passing an unchecked parameter can expose local files or internal network resources. Strong parameters do not validate the upload's type. If you accept multiple files, check every item before processing them. Upgrading RubyLLM does not replace this application-level validation.
+
+  ```ruby
+MARKDOWN
+raise 'Expected the frozen Rails upload example' unless rails.include?(unsafe_upload)
+
+File.write(rails_path, rails.sub(unsafe_upload, safe_upload))

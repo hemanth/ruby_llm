@@ -33,6 +33,9 @@ Add the RubyLLM 2.0 release candidate with Bundler:
 bundle add ruby_llm --version 2.0.0.rc3
 ```
 
+These guides cover the 2.0 prerelease. For an existing 1.x application, use the [stable-version docs]({{ '/v1/' | relative_url }}) or follow the [upgrade guide]({% link _reference/upgrading.md %}) before switching versions.
+{: .important }
+
 ## Minimal Configuration
 
 Start with an OpenAI API key. Put this configuration at the start of your script, or in `config/initializers/ruby_llm.rb` in Rails:

@@ -13,4 +13,4 @@ case "$out" in /*) ;; *) out="$repo/$out" ;; esac
 # Both pages live at the same depth, so the module's relative links work at /api/.
 cp "$out/RubyLLM.html" "$out/index.html"
 
-( cd "$repo" && bundle exec ruby docs/bin/postprocess_api_seo.rb "$out" "${SITE_BASE_URL:-https://rubyllm.com/next}" )
+( cd "$repo" && bundle exec ruby docs/bin/postprocess_api_seo.rb "$out" "${SITE_BASE_URL:-https://rubyllm.com}" )

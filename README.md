@@ -38,7 +38,7 @@ In Rails, the API works on your own Chat and Message records, with Active Storag
 
 ## Show me the code
 
-These examples use **2.0.0.rc3**. Follow [Getting Started](https://rubyllm.com/next/getting-started/) to install it and configure the providers you want to try.
+These examples use **2.0.0.rc3 (prerelease)**. Follow [Getting Started](https://rubyllm.com/getting-started/) to install it and configure the providers you want to try. For 1.x, use the [stable-version docs](https://rubyllm.com/v1/).
 
 ```ruby
 # Just ask questions
@@ -208,7 +208,7 @@ RubyLLM.configure do |config|
 end
 ```
 
-Configure the other providers used by the examples as needed: Gemini for files, xAI for video, Mistral for OCR, and Cohere for reranking. [Getting Started](https://rubyllm.com/next/getting-started/) shows each setup beside its example. If your app uses 1.16, follow the [upgrade guide](https://rubyllm.com/next/upgrading/) before deploying 2.0.
+Configure the other providers used by the examples as needed: Gemini for files, xAI for video, Mistral for OCR, and Cohere for reranking. [Getting Started](https://rubyllm.com/getting-started/) shows each setup beside its example. If your app uses 1.16, follow the [upgrade guide](https://rubyllm.com/upgrading/) before deploying 2.0.
 
 ## Rails
 
@@ -235,7 +235,7 @@ Visit `http://localhost:3000/chats` for a ready-to-use chat interface!
 
 ## Documentation
 
-[Guides](https://rubyllm.com/next/getting-started/) · [API reference](https://rubyllm.com/next/api/) · [Models](https://rubyllm.com/available-models/) · [Upgrading](https://rubyllm.com/next/upgrading/)
+[Guides](https://rubyllm.com/getting-started/) · [API reference](https://rubyllm.com/api/) · [Models](https://rubyllm.com/available-models/) · [Upgrading](https://rubyllm.com/upgrading/) · [1.x docs](https://rubyllm.com/v1/)
 
 ## Contributing
 

@@ -2,19 +2,24 @@
 
 require 'rails_helper'
 require 'rack/test'
+require 'open3'
+require 'tmpdir'
 
 RSpec.describe 'Rails persistence guide', type: :request do
   include_context 'with configured RubyLLM'
 
   let(:chat) { RubyLLM.chat(model: model_for(:openai)) }
+  let(:guide_text) { File.read(File.expand_path('../../docs/_advanced/rails-persistence.md', __dir__)) }
+  let(:prompt) { 'What is in this file?' }
   let(:session) { Rack::Test::Session.new(Rack::MockSession.new(controller_class.action(:create))) }
   let(:controller_class) do
     path = File.expand_path('../../docs/_advanced/rails-persistence.md', __dir__)
-    example = File.read(path).scan(/```ruby\n(.*?)```/m).flatten.find { |code| code.include?('params[:uploaded_file]') }
+    example = guide_text.scan(/```ruby\n(.*?)```/m).flatten.find { |code| code.include?('params[:uploaded_file]') }
     raise 'Missing upload example in Rails persistence guide' unless example
 
     stub_const('UploadExampleController', Class.new(ActionController::Base) do
       attr_accessor :chat
+      alias_method :chat_record, :chat
     end).tap do |controller|
       action = "def create\n#{example}\nhead :no_content\nend"
       controller.class_eval(action, path, 1)
@@ -29,7 +34,7 @@ RSpec.describe 'Rails persistence guide', type: :request do
     allow(chat).to receive(:ask).and_call_original
   end
 
-  describe 'upload validation' do
+  shared_examples 'upload validation' do
     [
       'http://127.0.0.1:9292/collect',
       'http://169.254.169.254/latest/meta-data/',
@@ -75,10 +80,32 @@ RSpec.describe 'Rails persistence guide', type: :request do
       session.post('/chat', uploaded_file: upload)
 
       expect(session.last_response.status).to eq(204)
-      expect(chat).to have_received(:ask).with('What is in this file?', with: an_instance_of(ActionDispatch::Http::UploadedFile))
+      expect(chat).to have_received(:ask).with(prompt, with: an_instance_of(ActionDispatch::Http::UploadedFile))
       attachment = chat.messages.first.attachments.first
       expect(attachment.filename).to eq('ruby.txt')
       expect(attachment.content).to eq(File.read(path))
     end
+  end
+
+  it_behaves_like 'upload validation'
+
+  context 'with the frozen 1.x guide' do
+    let(:prompt) { 'Analyze this file' }
+    let(:guide_text) do
+      Dir.mktmpdir('rubyllm-frozen-docs') do |directory|
+        %w[_advanced _includes].each { |name| FileUtils.mkdir_p(File.join(directory, name)) }
+        File.write(File.join(directory, '_config.yml'), '{}')
+        File.write(File.join(directory, '_includes/head.html'), '')
+        path = File.join(directory, '_advanced/rails.md')
+        FileUtils.cp(File.expand_path('../fixtures/docs/one_x_rails.md', __dir__), path)
+        script = File.expand_path('../../docs/bin/prepare_one_x_docs.rb', __dir__)
+        output, status = Open3.capture2e(RbConfig.ruby, script, directory)
+        raise output unless status.success?
+
+        File.read(path)
+      end
+    end
+
+    it_behaves_like 'upload validation'
   end
 end

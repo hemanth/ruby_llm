@@ -189,7 +189,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Build versioned docs (1.x at /, 2.0 dev at /next/)
+      - name: Build versioned docs (2.0 at /, 1.x at /v1/)
         if: steps.registry.outputs.deploy == 'true'
         run: docs/bin/build-versions.sh
         env:
