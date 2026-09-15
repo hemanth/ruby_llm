@@ -48,6 +48,15 @@ RSpec.describe RubyLLM::Generators::UpgradeMigration, :generator do
     FileUtils.remove_entry(directory)
   end
 
+  it 'boots prepared 1.16 after application initializers configure the Active Record API' do
+    generate_copy_upgrade
+    script = File.join(repository, 'spec/fixtures/upgrade_compatibility/boot.rb')
+    output, errors, status = Open3.capture3(child_environment, RbConfig.ruby, script, directory)
+
+    expect(status.success?).to be(true), "#{errors}\n#{output}"
+    expect(JSON.parse(output.lines.last)).to eq('version' => '1.16.0', 'reloads' => 3)
+  end
+
   it 'keeps a warm 1.16 process writing through prepare and repeated backfill, then fences it at finish' do
     seed = run_stage('legacy', 'seed')
     generate_copy_upgrade
