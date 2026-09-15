@@ -62,6 +62,26 @@ class UpgradeCompatibilityApplication
       legacy_models: connection.table_exists?(:models), legacy_tools: connection.table_exists?(:tool_calls) }
   end
 
+  def autosave_legacy(_arguments)
+    messages = [true, false].map do |validate|
+      chat = ::Chat.new(model: MODEL, provider: :openai)
+      message = ::Message.new(chat:, role: :user, content: 'autosaved conversation')
+      message.save!(validate:)
+      { persisted: message.persisted?, chat_persisted: chat.persisted?, chat_id: message.reload.chat_id }
+    end
+    stale = ::Message.new(role: :user, content: 'stale message')
+    connection.execute('UPDATE ruby_llm_v2_upgrades SET epoch = epoch + 1')
+    stale.chat = ::Chat.new(model: MODEL, provider: :openai)
+    count = ::Chat.count
+    error = begin
+      stale.save!
+      nil
+    rescue ActiveRecord::ReadOnlyRecord => e
+      e.class.name
+    end
+    { messages:, stale_error: error, parent_rolled_back: ::Chat.count == count }
+  end
+
   def abort_prepare(_arguments)
     migration = load_migration(Dir[File.join(@directory, 'db/migrate/*prepare*.rb')].first)
     migration.define_singleton_method(:validate_upgrade) { raise 'Simulated interrupted preparation' }

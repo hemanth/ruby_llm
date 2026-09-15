@@ -86,6 +86,19 @@ RSpec.describe RubyLLM::Generators::UpgradeMigration, :generator do
     end
   end
 
+  it 'autosaves new parent conversations and rolls them back when the message is stale' do
+    run_stage('legacy', 'seed')
+    generate_copy_upgrade
+    run_stage('current', 'prepare')
+
+    result = run_stage('legacy', 'autosave_legacy')
+
+    expect(result.fetch('messages')).to all(
+      include('persisted' => true, 'chat_persisted' => true, 'chat_id' => a_kind_of(Integer))
+    )
+    expect(result).to include('stale_error' => 'ActiveRecord::ReadOnlyRecord', 'parent_rolled_back' => true)
+  end
+
   it 'round trips real 1.16 writes while preserving two-owned conversations and reconciling deletions' do
     seed = run_stage('legacy', 'seed')
     expect(seed.fetch('version')).to eq('1.16.0')

@@ -15,7 +15,7 @@ module RubyLLMUpgrade # :nodoc: all
       self.enumerate_columns_in_select_statements = true
       default_scope { RubyLLMUpgrade.visible(self) }
       after_initialize { @ruby_llm_upgrade_epoch = RubyLLMUpgrade.epoch }
-      around_save :guard_ruby_llm_upgrade, prepend: true
+      around_save :guard_ruby_llm_upgrade
       around_destroy :guard_ruby_llm_upgrade, prepend: true
       before_save { RubyLLMUpgrade.prepare_model(self) if ruby_llm_upgrade_kind == :chat }
     end
