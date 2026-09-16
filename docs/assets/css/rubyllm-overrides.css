@@ -241,6 +241,7 @@ body:has(.VPHome .home-section.home-band:last-child) .VPFooter {
   padding: 0 0.15em 0.04em;
   background: rgb(201 39 30 / 0.1);
   color: var(--home-red);
+  white-space: nowrap;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
@@ -2086,7 +2087,7 @@ body:has(.VPHome .home-section.home-band:last-child) .VPFooter {
 @media (max-width: 760px) {
   .VPHome .VPHero {
     padding-top: 54px;
-    padding-bottom: 60px;
+    padding-bottom: 24px;
     z-index: 4;
   }
 
@@ -2108,7 +2109,11 @@ body:has(.VPHome .home-section.home-band:last-child) .VPFooter {
 
   .VPHome .VPHero .text {
     font-size: 36px;
-    line-height: 1.05;
+    line-height: 1.12;
+  }
+
+  .home-hero-install {
+    margin-top: 0;
   }
 
   .home-section {
@@ -2174,6 +2179,10 @@ body:has(.VPHome .home-section.home-band:last-child) .VPFooter {
     position: relative;
     z-index: 6;
     gap: 8px;
+  }
+
+  .VPHome .VPHero .action {
+    padding-block: 0;
   }
 
   .VPHome .VPButton,
