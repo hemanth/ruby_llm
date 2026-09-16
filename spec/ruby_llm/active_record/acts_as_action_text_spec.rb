@@ -2,6 +2,7 @@
 
 require 'rails_helper'
 require 'stringio'
+require_relative '../../support/query_helpers'
 
 RSpec.describe RubyLLM::ActiveRecord::ActsAs do
   include_context 'with configured RubyLLM'
@@ -67,6 +68,23 @@ RSpec.describe RubyLLM::ActiveRecord::ActsAs do
   end
 
   describe 'Action Text content extraction' do
+    [1, 10].each do |message_count|
+      it "loads rich text once for a transcript with #{message_count} #{'message'.pluralize(message_count)}" do
+        message_count.times do |index|
+          chat.action_text_messages.create!(role: :user, content: "<div>Message <strong>#{index}</strong></div>")
+        end
+        fresh_chat = ActionTextChat.find(chat.id)
+
+        queries = QueryHelpers.matching(/action_text_rich_texts/i) do
+          expect(fresh_chat.to_llm.messages.map(&:content)).to eq(
+            Array.new(message_count) { |index| "Message #{index}" }
+          )
+        end
+
+        expect(queries.size).to eq(1)
+      end
+    end
+
     context 'when the message model has rich text content' do
       it 'extracts plain text from Action Text content' do
         message = chat.action_text_messages.create!(
