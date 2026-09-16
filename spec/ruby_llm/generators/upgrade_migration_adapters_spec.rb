@@ -99,6 +99,20 @@ RSpec.describe 'RubyLLM upgrade migration adapters', :generator do # rubocop:dis
     end
   end
 
+  it 'uses configured UUID primary keys for new supporting tables in both upgrade modes' do
+    template = File.expand_path('../../../lib/generators/ruby_llm/upgrade/templates/prepare_v2_upgrade.rb.tt', __dir__)
+
+    %i[rename copy].each do |mode|
+      context = UpgradeMigrationTemplateContext.new('postgresql', mode:)
+      allow(context).to receive(:reference_type).and_return(:uuid)
+      source = context.render(template)
+
+      %w[ruby_llm_usages ruby_llm_batches].each do |table|
+        expect(source).to include("create_table :#{table}, id: :uuid do |table|")
+      end
+    end
+  end
+
   databases = {
     postgresql: ['postgresql', ENV.fetch('RUBY_LLM_POSTGRES_URL', nil)],
     mysql: ['mysql2', ENV.fetch('RUBY_LLM_MYSQL_URL', nil)],

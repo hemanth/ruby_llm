@@ -382,7 +382,7 @@ class <%= prepare_migration_class_name %> < ActiveRecord::Migration<%= migration
 
   def create_usages
     unless table_exists?(:ruby_llm_usages)
-      create_table :ruby_llm_usages do |table|
+      create_table :ruby_llm_usages, id: :<%= reference_type %> do |table|
         table.references :chat, polymorphic: true, null: false,
                                 type: reference_type_for(:<%= chat_table_name %>), index: false
         table.references :message, polymorphic: true,
@@ -417,7 +417,7 @@ class <%= prepare_migration_class_name %> < ActiveRecord::Migration<%= migration
 
   def create_batches
     unless table_exists?(:ruby_llm_batches)
-      create_table :ruby_llm_batches do |table|
+      create_table :ruby_llm_batches, id: :<%= reference_type %> do |table|
         table.string :provider_batch_id, null: false
         table.string :provider, null: false
         table.string :status, null: false

@@ -43,6 +43,9 @@ bin/rails db:migrate
 bin/rails ruby_llm:load_models
 ```
 
+Generated primary and foreign keys follow your application's `config.generators` setting for
+`active_record.primary_key_type`, including `:uuid`. The default is `:bigint`.
+
 Configure a provider in the generated initializer:
 
 ```ruby

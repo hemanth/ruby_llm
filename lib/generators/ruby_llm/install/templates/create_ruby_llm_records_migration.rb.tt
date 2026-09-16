@@ -1,6 +1,6 @@
 class CreateRubyLlmRecords < ActiveRecord::Migration<%= migration_version %>
   def change
-    create_table :ruby_llm_models do |t|
+    create_table :ruby_llm_models, id: :<%= reference_type %> do |t|
       t.string :model_id, null: false
       t.string :name, null: false
       t.string :provider, null: false
@@ -37,7 +37,7 @@ class CreateRubyLlmRecords < ActiveRecord::Migration<%= migration_version %>
 <% end -%>
     end
 
-    create_table :ruby_llm_tool_calls do |t|
+    create_table :ruby_llm_tool_calls, id: :<%= reference_type %> do |t|
       t.references :message, polymorphic: true, null: false, type: :<%= reference_type %>, index: false
       t.references :result, polymorphic: true, type: :<%= reference_type %>, index: false
       t.string :tool_call_id, null: false
@@ -60,7 +60,7 @@ class CreateRubyLlmRecords < ActiveRecord::Migration<%= migration_version %>
       t.index :name
     end
 
-    create_table :ruby_llm_usages do |t|
+    create_table :ruby_llm_usages, id: :<%= reference_type %> do |t|
       t.references :chat, polymorphic: true, null: false, type: :<%= reference_type %>, index: false
       t.references :message, polymorphic: true, type: :<%= reference_type %>, index: false
       t.string :operation, null: false
@@ -87,7 +87,7 @@ class CreateRubyLlmRecords < ActiveRecord::Migration<%= migration_version %>
       t.check_constraint "status IN (<%= usage_statuses_sql %>)"
     end
 
-    create_table :ruby_llm_batches do |t|
+    create_table :ruby_llm_batches, id: :<%= reference_type %> do |t|
       t.string :provider_batch_id, null: false
       t.string :provider, null: false
       t.string :status, null: false
