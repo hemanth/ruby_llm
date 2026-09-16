@@ -44,8 +44,8 @@ replies:
 instructions: |
   Triage the report for RubyLLM. Choose at most two labels. Reply only when it
   helps the reporter: ask for a missing fact or answer a clear technical
-  question. Use the supplied replies for clarification, or request sources for
-  an answer.
+  question. Use the supplied replies for clarification and the tools to search
+  and read relevant docs, source, issues, and releases for an answer.
 
   On the first assessment of a newly opened issue, condense a long or scattered
   report into one helpful recap: the problem, relevant environment, and key
@@ -53,8 +53,8 @@ instructions: |
   check. After that, reply only with a necessary clarification, supported answer
   or workaround, applicable policy, verified released fix, or useful related-issue
   link. Never recap follow-up comments. Honor requests for the triage bot to stop.
-  Compare possible duplicates with supplied issues; close only clear duplicates
-  under the configured rules. Name a fixed version only when supplied release
+  Search and read possible duplicates; close only clear duplicates
+  under the configured rules. Name a fixed version only when release
   evidence establishes it; code on main is not a release. Error-monitoring reports
   are written for the maintainer: use the supplied exception and backtrace, distinguish facts
   from unverified causes, and do not request details already present. Ask for
