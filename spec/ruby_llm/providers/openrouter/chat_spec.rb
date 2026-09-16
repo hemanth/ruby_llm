@@ -256,8 +256,12 @@ RSpec.describe RubyLLM::Providers::OpenRouter::Chat do
       expect(payload[:cache_control]).to eq(type: 'ephemeral', ttl: '1h')
     end
 
-    it 'does not add top-level cache_control when an explicit boundary is present' do
-      messages = [RubyLLM::Message.new(role: :user, content: 'Long context').cache_until_here]
+    it 'adds top-level cache_control alongside an explicit boundary' do
+      allow(provider).to receive(:format_messages).and_call_original
+      messages = [
+        RubyLLM::Message.new(role: :user, content: 'Long context').cache_until_here,
+        RubyLLM::Message.new(role: :user, content: 'Latest question')
+      ]
 
       payload = provider.send(
         :render_payload,
@@ -269,7 +273,8 @@ RSpec.describe RubyLLM::Providers::OpenRouter::Chat do
         caching: { ttl: '1h' }
       )
 
-      expect(payload).not_to have_key(:cache_control)
+      expect(payload[:cache_control]).to eq(type: 'ephemeral', ttl: '1h')
+      expect(payload.dig(:messages, 0, :content, -1, :cache_control)).to eq(type: 'ephemeral', ttl: '1h')
     end
 
     it 'rejects caching options it cannot render' do

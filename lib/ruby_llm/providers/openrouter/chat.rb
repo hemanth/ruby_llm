@@ -47,7 +47,7 @@ module RubyLLM
 
           reasoning = build_reasoning(thinking)
           payload[:reasoning] = reasoning if reasoning
-          payload[:cache_control] = prompt_cache_control(caching) if caching && !cache_boundaries?(messages)
+          payload[:cache_control] = prompt_cache_control(caching) if caching
           payload
         end
 
@@ -140,10 +140,6 @@ module RubyLLM
 
         def format_cache_option_keys(keys)
           keys.map { |key| ":#{key}" }.join(', ')
-        end
-
-        def cache_boundaries?(messages)
-          messages.any?(&:cache_until_here?)
         end
 
         def openai_prompt_caching?

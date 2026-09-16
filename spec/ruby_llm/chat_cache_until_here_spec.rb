@@ -120,7 +120,7 @@ RSpec.describe RubyLLM::Chat, :live do
       expect(payload[:input].last[:content]).to eq(
         [{ type: 'input_text', text: 'Long context', prompt_cache_breakpoint: { mode: 'explicit' } }]
       )
-      expect(payload[:prompt_cache_options]).to eq(mode: 'explicit')
+      expect(payload).not_to have_key(:prompt_cache_options)
     end
 
     it 'sends cache-bounded instructions as input items on Responses' do
@@ -248,13 +248,13 @@ RSpec.describe RubyLLM::Chat, :live do
 
     each_model(cacheable_models) do |provider, model|
       it "#{provider}/#{model} writes then reads the prompt cache" do
-        write_chat = RubyLLM.chat(model: model, provider: provider)
+        write_chat = RubyLLM.chat(model: model, provider: provider).with_caching
         write_chat.with_instructions(cacheable_instructions)
         write_chat.cache_until_here
         first = write_chat.ask('Reply with exactly: OK')
         expect(first.tokens.cache_write.to_i + first.tokens.cache_read.to_i).to be_positive
 
-        read_chat = RubyLLM.chat(model: model, provider: provider)
+        read_chat = RubyLLM.chat(model: model, provider: provider).with_caching
         read_chat.with_instructions(cacheable_instructions)
         read_chat.cache_until_here
         second = read_chat.ask('Reply with exactly: OK')

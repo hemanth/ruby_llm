@@ -39,13 +39,12 @@ module RubyLLM
           warn_unsupported_citations(model) if citations && !model.supports?(:citations)
           tool_prefs ||= {}
           system_messages, chat_messages = separate_messages(messages)
-          explicit_boundaries = cache_boundaries?(messages, caching:)
           system_content = build_system_content(system_messages, caching:)
 
           build_base_payload(chat_messages, model, stream, thinking, citations: citations, caching:,
                                                                      max_output_tokens:).tap do |payload|
             add_optional_fields(payload, system_content:, tools:, tool_prefs:, temperature:, schema:)
-            payload[:cache_control] = prompt_cache_control(caching) if caching && !explicit_boundaries
+            payload[:cache_control] = prompt_cache_control(caching) if caching
           end
         end
 
@@ -427,10 +426,6 @@ module RubyLLM
 
         def append_formatted_content(content_blocks, msg, citations: false)
           content_blocks.concat(Media.format_content(msg.content, msg.attachments, citations: citations))
-        end
-
-        def cache_boundaries?(messages, caching: nil)
-          caching != false && messages.any?(&:cache_until_here?)
         end
 
         def cache_boundary?(message, caching: nil)

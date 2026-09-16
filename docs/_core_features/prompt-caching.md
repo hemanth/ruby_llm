@@ -83,13 +83,15 @@ chat.add_message(role: :user, content: long_context)
 chat.cache_until_here
 ```
 
-A marked boundary takes precedence over automatic boundary placement. You can combine it with a lifetime:
+Combine explicit boundaries with `with_caching` to cache a reusable prefix while automatic caching covers the growing conversation:
 
 ```ruby
 chat.with_caching(ttl: "1h")
 chat.with_instructions(large_policy_prompt).cache_until_here
 chat.ask("Apply the policy to this request: #{request_text}")
 ```
+
+RubyLLM sends both controls. The provider applies its cache behavior and breakpoint limits. On supported OpenAI-compatible models, use `with_caching(mode: "explicit")` when you want only explicit breakpoints.
 
 Boundaries are supported by Anthropic, OpenRouter, Bedrock Converse, and selected OpenAI-compatible models. Perplexity requires its [Router protocol]({% link _core_features/chat-request-control.md %}#perplexity-router). Providers without boundary support continue to use their own caching behavior.
 

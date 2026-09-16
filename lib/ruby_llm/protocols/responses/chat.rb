@@ -12,7 +12,6 @@ module RubyLLM
         OPENAI_INLINE_FILE_LIMIT = 50 * 1024 * 1024
         OPENAI_FILE_UPLOAD_LIMIT = 512 * 1024 * 1024
         PROMPT_CACHE_OPTIONS = %i[key ttl mode retention].freeze
-        CACHE_BREAKPOINT_ROLES = %i[user system].freeze
 
         module_function
 
@@ -47,7 +46,6 @@ module RubyLLM
           payload[:reasoning] = { effort: effort } if effort
           payload[:reasoning] = (payload[:reasoning] || {}).merge(summary: 'auto') if thinking&.display == :summarized
           payload.merge!(prompt_cache_params(caching)) if caching
-          force_explicit_cache_mode(payload) if caching != false && cache_boundaries?(messages)
 
           payload
         end
@@ -223,14 +221,6 @@ module RubyLLM
             'with prompt_cache_options. Use ttl: instead.'
           )
           retention
-        end
-
-        def force_explicit_cache_mode(payload)
-          payload[:prompt_cache_options] = { mode: 'explicit' }.merge(payload[:prompt_cache_options] || {})
-        end
-
-        def cache_boundaries?(messages)
-          messages.any? { |msg| msg.cache_until_here? && CACHE_BREAKPOINT_ROLES.include?(msg.role) }
         end
 
         def prompt_cache_options(caching)

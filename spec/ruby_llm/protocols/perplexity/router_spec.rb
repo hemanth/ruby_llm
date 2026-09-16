@@ -39,8 +39,8 @@ RSpec.describe RubyLLM::Protocols::Perplexity::Router do
         .with_instructions('Use the documented arithmetic tools.').cache_until_here.ask_later('Add two and two.')
     payload = chat.render
 
-    expect(payload).to include(tool_choice: :required, parallel_tool_calls: false,
-                               prompt_cache_options: { mode: 'explicit' })
+    expect(payload).to include(tool_choice: :required, parallel_tool_calls: false)
+    expect(payload).not_to have_key(:prompt_cache_options)
     expect(payload[:messages].first[:content].last).to include(prompt_cache_breakpoint: { mode: 'explicit' })
     expect(chat.with_tool_options(choice: 'add', calls: :many).render)
       .to include(tool_choice: { type: 'function', function: { name: :add } }, parallel_tool_calls: true)

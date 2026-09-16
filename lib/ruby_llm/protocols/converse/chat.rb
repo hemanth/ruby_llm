@@ -266,7 +266,6 @@ module RubyLLM
 
         def automatic_cache_target(system_messages, chat_messages, caching)
           return unless caching
-          return if (system_messages + chat_messages).any?(&:cache_until_here?)
 
           (chat_messages.reverse + system_messages.reverse).find { |msg| cacheable_message?(msg) }
         end

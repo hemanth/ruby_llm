@@ -585,7 +585,7 @@ RSpec.describe RubyLLM::Protocols::ChatCompletions::Chat do
       )
     end
 
-    it 'marks cache boundaries with explicit breakpoint parts' do
+    it 'marks cache boundaries without disabling implicit caching' do
       protocol = RubyLLM::Protocols::ChatCompletions.allocate
       message = RubyLLM::Message.new(role: :user, content: 'Long context').cache_until_here
       model = instance_double(RubyLLM::Model, id: 'gpt-5.6')
@@ -595,7 +595,20 @@ RSpec.describe RubyLLM::Protocols::ChatCompletions::Chat do
       expect(payload[:messages].first[:content]).to eq(
         [{ type: 'text', text: 'Long context', prompt_cache_breakpoint: { mode: 'explicit' } }]
       )
-      expect(payload[:prompt_cache_options]).to eq(mode: 'explicit')
+      expect(payload).not_to have_key(:prompt_cache_options)
+    end
+
+    it 'preserves cache options alongside explicit boundaries' do
+      protocol = RubyLLM::Protocols::ChatCompletions.allocate
+      message = RubyLLM::Message.new(role: :user, content: 'Long context').cache_until_here
+      model = instance_double(RubyLLM::Model, id: model_for(:openai, :temperature))
+
+      payload = protocol.send(
+        :render_payload, [message], tools: {}, temperature: nil, model: model, caching: { ttl: '30m' }
+      )
+
+      expect(payload[:prompt_cache_options]).to eq(ttl: '30m')
+      expect(payload.dig(:messages, 0, :content, -1, :prompt_cache_breakpoint)).to eq(mode: 'explicit')
     end
   end
 

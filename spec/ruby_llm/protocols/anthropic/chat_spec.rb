@@ -235,11 +235,14 @@ RSpec.describe RubyLLM::Protocols::Anthropic::Chat do
       expect(payload[:cache_control]).to eq(type: 'ephemeral', ttl: '1h')
     end
 
-    it 'does not add top-level cache_control when an explicit boundary is present' do
-      message = RubyLLM::Message.new(role: :user, content: 'Long context').cache_until_here
+    it 'adds top-level cache_control alongside an explicit system boundary' do
+      messages = [
+        RubyLLM::Message.new(role: :system, content: 'Stable instructions').cache_until_here,
+        RubyLLM::Message.new(role: :user, content: 'Latest question')
+      ]
 
       payload = described_class.render_payload(
-        [message],
+        messages,
         tools: {},
         temperature: nil,
         model: model,
@@ -248,8 +251,8 @@ RSpec.describe RubyLLM::Protocols::Anthropic::Chat do
         caching: { ttl: '1h' }
       )
 
-      expect(payload).not_to have_key(:cache_control)
-      expect(payload.dig(:messages, 0, :content, -1, :cache_control)).to eq(type: 'ephemeral', ttl: '1h')
+      expect(payload[:cache_control]).to eq(type: 'ephemeral', ttl: '1h')
+      expect(payload.dig(:system, -1, :cache_control)).to eq(type: 'ephemeral', ttl: '1h')
     end
 
     it 'rejects caching options it cannot render' do

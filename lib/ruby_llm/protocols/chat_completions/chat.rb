@@ -87,7 +87,7 @@ module RubyLLM
           payload[:reasoning_effort] = effort if effort
 
           payload[:stream_options] = { include_usage: true } if stream
-          apply_prompt_cache_params(payload, messages, caching)
+          apply_prompt_cache_params(payload, caching)
           payload
         end
 
@@ -250,11 +250,10 @@ module RubyLLM
           end
         end
 
-        def apply_prompt_cache_params(payload, messages, caching)
+        def apply_prompt_cache_params(payload, caching)
           return unless openai_prompt_caching?
 
           payload.merge!(prompt_cache_params(caching)) if caching
-          force_explicit_cache_mode(payload) if caching != false && cache_boundaries?(messages)
         end
 
         def openai_prompt_caching?
@@ -288,14 +287,6 @@ module RubyLLM
             'with prompt_cache_options. Use ttl: instead.'
           )
           retention
-        end
-
-        def force_explicit_cache_mode(payload)
-          payload[:prompt_cache_options] = { mode: 'explicit' }.merge(payload[:prompt_cache_options] || {})
-        end
-
-        def cache_boundaries?(messages)
-          messages.any?(&:cache_until_here?)
         end
 
         def prompt_cache_options(caching)

@@ -197,14 +197,14 @@ RSpec.describe RubyLLM::Protocols::Converse::Chat do
       expect(payload.dig(:messages, 1, :content).last).to eq(cachePoint: { type: 'default', ttl: '1h' })
     end
 
-    it 'does not add automatic cachePoint when an explicit boundary exists' do
+    it 'adds an automatic cachePoint alongside an explicit boundary' do
       first = RubyLLM::Message.new(role: :user, content: 'Stable context').cache_until_here
       second = RubyLLM::Message.new(role: :user, content: 'Latest question')
 
       payload = render_payload([first, second], caching: { ttl: '1h' })
 
       expect(payload.dig(:messages, 0, :content).last).to eq(cachePoint: { type: 'default', ttl: '1h' })
-      expect(payload.dig(:messages, 1, :content).last).not_to have_key(:cachePoint)
+      expect(payload.dig(:messages, 1, :content).last).to eq(cachePoint: { type: 'default', ttl: '1h' })
     end
 
     it 'rejects caching options it cannot render' do

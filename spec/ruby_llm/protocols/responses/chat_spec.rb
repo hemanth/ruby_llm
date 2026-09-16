@@ -150,7 +150,7 @@ RSpec.describe RubyLLM::Protocols::Responses::Chat do
       expect(RubyLLM.logger).to have_received(:warn).with(/retention: is deprecated/)
     end
 
-    it 'marks cache boundaries with explicit breakpoint parts' do
+    it 'marks cache boundaries without disabling implicit caching' do
       messages = [
         RubyLLM::Message.new(role: :user, content: 'Long context').cache_until_here,
         RubyLLM::Message.new(role: :user, content: 'hi')
@@ -162,7 +162,16 @@ RSpec.describe RubyLLM::Protocols::Responses::Chat do
         [{ type: 'input_text', text: 'Long context', prompt_cache_breakpoint: { mode: 'explicit' } }]
       )
       expect(payload[:input].last).to eq(role: 'user', content: 'hi')
-      expect(payload[:prompt_cache_options]).to eq(mode: 'explicit')
+      expect(payload).not_to have_key(:prompt_cache_options)
+    end
+
+    it 'preserves cache options alongside explicit boundaries' do
+      message = RubyLLM::Message.new(role: :user, content: 'Long context').cache_until_here
+
+      payload = render_payload([message], caching: { ttl: '30m' })
+
+      expect(payload[:prompt_cache_options]).to eq(ttl: '30m')
+      expect(payload.dig(:input, 0, :content, -1, :prompt_cache_breakpoint)).to eq(mode: 'explicit')
     end
 
     it 'sends cache-bounded system messages as input items' do

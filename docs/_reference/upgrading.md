@@ -462,6 +462,12 @@ Tool and agent `parameters do` / `schema do` blocks keep the same DSL. The schem
 
 The `cache_read` and `cache_write` names also apply to costs and pricing. Replace `cached_input*` and `cache_creation*` readers with `cache_read*` and `cache_write*`, such as `cost.cache_write` or `tier.cache_read_input_per_million`.
 
+### Cache Boundaries and Automatic Caching
+
+Earlier 2.0 prereleases let `cache_until_here` disable automatic cache placement. Explicit boundaries now coexist with `with_caching`, and OpenAI-compatible protocols keep the provider's default cache mode unless you choose one.
+
+On supported OpenAI-compatible models, use `with_caching(mode: "explicit")` to request only explicit breakpoints. For Anthropic, OpenRouter Chat Completions, and Bedrock Converse, omit `with_caching` to send only your marked boundaries. Providers apply their own breakpoint limits. See [Prompt Caching]({% link _core_features/prompt-caching.md %}).
+
 ### Model Metadata and Pricing
 
 Use `RubyLLM::Model` for model metadata, including entries returned by `RubyLLM.models`. Query tool-steering capabilities with `model.supports?(:tool_choice)` and `model.supports?(:parallel_tool_calls)` instead of provider predicates.
