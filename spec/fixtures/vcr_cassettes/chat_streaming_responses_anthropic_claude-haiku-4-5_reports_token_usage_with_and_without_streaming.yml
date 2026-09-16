@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:39:41 GMT
+      - Wed, 16 Sep 2026 06:48:24 GMT
       Content-Type:
       - text/event-stream; charset=utf-8
       Transfer-Encoding:
@@ -40,25 +40,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-14T09:39:41Z'
+      - '2026-09-16T06:48:24Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-14T09:39:41Z'
+      - '2026-09-16T06:48:24Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-14T09:39:41Z'
+      - '2026-09-16T06:48:24Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-14T09:39:41Z'
+      - '2026-09-16T06:48:24Z'
       Server:
       - cloudflare
       Request-Id:
@@ -70,7 +70,7 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-fbe30be12bf9a3f52591352b70112f56-a1f7dc65e03cd6d2-01
+      - 00-d0464dcc95b88dc2258797bd02bbabae-7d5d3cb4d17a15c2-01
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Vary:
@@ -85,30 +85,30 @@ http_interactions:
       encoding: UTF-8
       string: |+
         event: message_start
-        data: {"type":"message_start","message":{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf37LT1naEyqFDBUYg5DM","type":"message","role":"assistant","content":[],"container":null,"stop_reason":null,"stop_sequence":null,"stop_details":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":1,"service_tier":"standard","inference_geo":"not_available"}}            }
+        data: {"type":"message_start","message":{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6ftiMQEwu1ABnZezpGF","type":"message","role":"assistant","content":[],"container":null,"stop_reason":null,"stop_sequence":null,"stop_details":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":1,"service_tier":"standard","inference_geo":"not_available"}}      }
 
         event: content_block_start
-        data: {"type":"content_block_start","index":0,"content_block":{"type":"text","text":""}       }
+        data: {"type":"content_block_start","index":0,"content_block":{"type":"text","text":""}  }
 
         event: ping
         data: {"type": "ping"}
 
         event: content_block_delta
-        data: {"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"1,"}          }
+        data: {"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"1,"}  }
 
         event: content_block_delta
-        data: {"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":" 2, 3"}        }
+        data: {"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":" 2, 3"}         }
 
         event: content_block_stop
-        data: {"type":"content_block_stop","index":0    }
+        data: {"type":"content_block_stop","index":0}
 
         event: message_delta
-        data: {"type":"message_delta","delta":{"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"container":null},"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":11}               }
+        data: {"type":"message_delta","delta":{"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"container":null},"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":11}   }
 
         event: message_stop
-        data: {"type":"message_stop"              }
+        data: {"type":"message_stop"   }
 
-  recorded_at: Mon, 14 Sep 2026 09:39:41 GMT
+  recorded_at: Wed, 16 Sep 2026 06:48:24 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -135,7 +135,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:39:42 GMT
+      - Wed, 16 Sep 2026 06:48:25 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -147,25 +147,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-14T09:39:42Z'
+      - '2026-09-16T06:48:25Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-14T09:39:42Z'
+      - '2026-09-16T06:48:25Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-14T09:39:42Z'
+      - '2026-09-16T06:48:25Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-14T09:39:42Z'
+      - '2026-09-16T06:48:25Z'
       Server:
       - cloudflare
       Request-Id:
@@ -177,7 +177,7 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-f6957564b0af0cf4cab3aae12397000b-0ba9e1c363ca6220-01
+      - 00-21dd9cda49f51e011de3588646ec9a30-fc7a05d555e2bce8-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
@@ -190,8 +190,8 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf37LVhGPrUNvDtF38n4o","type":"message","role":"assistant","content":[{"type":"text","text":"1,
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6ftm3PK1EbNNMF9jyyd","type":"message","role":"assistant","content":[{"type":"text","text":"1,
         2, 3"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":19,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":11,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Mon, 14 Sep 2026 09:39:42 GMT
+  recorded_at: Wed, 16 Sep 2026 06:48:25 GMT
 recorded_with: VCR 6.4.0
 ...

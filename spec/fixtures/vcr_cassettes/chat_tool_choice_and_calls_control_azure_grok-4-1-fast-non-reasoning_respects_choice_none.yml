@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 10:14:19 GMT
+      - Wed, 16 Sep 2026 06:59:35 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -45,13 +45,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-acddbda4f0991578ff31b70024f5d300-3498c7c5000a5d46-00
+      - 00-57b9f6b35c02a6fad49e26b2a09ef083-03fd39f60048dbfc-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - e9595886-35bd-42d1-8e70-87dc30e6a2b4
+      - 9f9520c1-3b67-4b2d-9e3f-b08918357f49
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -87,7 +87,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - e9595886-35bd-42d1-8e70-87dc30e6a2b4
+      - 9f9520c1-3b67-4b2d-9e3f-b08918357f49
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -95,13 +95,8 @@ http_interactions:
       X-Ms-Region:
       - West Europe
     body:
-      encoding: UTF-8
-      string: '{"id":"fd6037ed-a25f-4d95-89ce-7b55935636a3","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"I''m
-        sorry, but my existing knowledge doesn''t include real-time weather data for
-        Berlin (or anywhere else). As of my last update, I can''t provide current
-        conditions without using external tools or APIs. For accurate, up-to-date
-        info, I''d recommend checking a reliable weather service like weather.com
-        or your local forecast app. If you have a general question about Berlin''s
-        climate (e.g., typical summer temps), I can share that!"},"finish_reason":"stop"}],"usage":{"prompt_tokens":288,"completion_tokens":85,"total_tokens":373,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":314,"audio_tokens":0,"text_tokens":288,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789380860,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Mon, 14 Sep 2026 10:14:21 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImViYmFjMGUxLTAxMjUtNGI2Ni1iMmU4LWZhMGNjMDA3NjNkYSIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJJJ20gYWZyYWlkIEkgZG9uJ3QgaGF2ZSByZWFsLXRpbWUgd2VhdGhlciBkYXRhLCBhcyBteSBrbm93bGVkZ2UgaXMgc3RhdGljIGFuZCBkb2Vzbid0IGluY2x1ZGUgY3VycmVudCBjb25kaXRpb25zLiBGb3IgdGhlIG1vc3QgYWNjdXJhdGUgaW5mbywgY2hlY2sgYSByZWxpYWJsZSB3ZWF0aGVyIHNlcnZpY2UhIEFzIG9mIG15IGxhc3QgdXBkYXRlLCBCZXJsaW4gaW4gSnVseSB0ZW5kcyB0byBiZSBtaWxkIGFuZCBwbGVhc2FudCwgYXJvdW5kIDIwLTI1wrBDICg2OC03N8KwRikgd2l0aCBwb3NzaWJsZSBzaG93ZXJzLiJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6Mjg4LCJjb21wbGV0aW9uX3Rva2VucyI6NjUsInRvdGFsX3Rva2VucyI6MzUzLCJhdWRpb19wcm9tcHRfdG9rZW5zIjowLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6NDEwLCJhdWRpb190b2tlbnMiOjAsInRleHRfdG9rZW5zIjoyODgsImltYWdlX3Rva2VucyI6MH0sImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6MCwiYXVkaW9fdG9rZW5zIjowLCJhY2NlcHRlZF9wcmVkaWN0aW9uX3Rva2VucyI6MCwicmVqZWN0ZWRfcHJlZGljdGlvbl90b2tlbnMiOjB9LCJudW1fc291cmNlc191c2VkIjowfSwiY3JlYXRlZCI6MTc4OTU0MTk3NSwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwicHJvbXB0X2ZpbHRlcl9yZXN1bHRzIjpudWxsfQ==
+  recorded_at: Wed, 16 Sep 2026 06:59:36 GMT
 recorded_with: VCR 6.4.0

@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.x.ai/v1/batches
     body:
       encoding: UTF-8
-      string: '{"name":"ruby_llm_d89abd339d460459"}'
+      string: '{"name":"ruby_llm_c3036980b1c5c469"}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:38:51 GMT
+      - Wed, 16 Sep 2026 06:48:16 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -35,7 +35,7 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Trace-Id:
-      - 799e927f1c19f7aa68b062a6a47e0444
+      - f70452ead5124826b7f2777ac8ed15f9
       Vary:
       - origin, access-control-request-method, access-control-request-headers, Accept-Encoding
       Access-Control-Allow-Origin:
@@ -43,7 +43,7 @@ http_interactions:
       Access-Control-Expose-Headers:
       - "*"
       X-Envoy-Upstream-Service-Time:
-      - '79'
+      - '26'
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -56,11 +56,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"batch_id":"batch_a43424a0-cee9-429b-aaed-abeec4d50bbf","name":"ruby_llm_d89abd339d460459","create_time":"2026-09-14","expire_time":"2026-10-14","create_api_key_id":"3a17dfeb-f886-479d-8d2e-ae6752427e96","cancel_time":null,"cancel_by_xai_message":null,"state":{"num_requests":0,"num_pending":0,"num_success":0,"num_error":0,"num_cancelled":0}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:51 GMT
+      string: '{"batch_id":"batch_21c4ca30-2f81-4924-9f94-7db0ca5b9395","name":"ruby_llm_c3036980b1c5c469","create_time":"2026-09-16","expire_time":"2026-10-16","create_api_key_id":"3a17dfeb-f886-479d-8d2e-ae6752427e96","cancel_time":null,"cancel_by_xai_message":null,"state":{"num_requests":0,"num_pending":0,"num_success":0,"num_error":0,"num_cancelled":0}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:16 GMT
 - request:
     method: post
-    uri: https://api.x.ai/v1/batches/batch_a43424a0-cee9-429b-aaed-abeec4d50bbf/requests
+    uri: https://api.x.ai/v1/batches/batch_21c4ca30-2f81-4924-9f94-7db0ca5b9395/requests
     body:
       encoding: UTF-8
       string: '{"batch_requests":[{"batch_request_id":"0","batch_request":{"responses":{"model":"grok-4.3","input":[{"role":"user","content":"Return
@@ -83,7 +83,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:38:52 GMT
+      - Wed, 16 Sep 2026 06:48:16 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -95,7 +95,7 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Trace-Id:
-      - ddbf0928daaf87c275ccc874b4e73787
+      - 502077177e180daa76e223fe594dbbb5
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -103,7 +103,7 @@ http_interactions:
       Access-Control-Expose-Headers:
       - "*"
       X-Envoy-Upstream-Service-Time:
-      - '297'
+      - '624'
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -117,10 +117,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: 'null'
-  recorded_at: Mon, 14 Sep 2026 09:38:52 GMT
+  recorded_at: Wed, 16 Sep 2026 06:48:16 GMT
 - request:
     method: get
-    uri: https://api.x.ai/v1/batches/batch_a43424a0-cee9-429b-aaed-abeec4d50bbf
+    uri: https://api.x.ai/v1/batches/batch_21c4ca30-2f81-4924-9f94-7db0ca5b9395
     body:
       encoding: US-ASCII
       string: ''
@@ -139,7 +139,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:38:52 GMT
+      - Wed, 16 Sep 2026 06:48:17 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -151,7 +151,7 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Trace-Id:
-      - 905810c9668d971df8be032d5362ea64
+      - 785d4a30d3778b07a4cff09365488c15
       Vary:
       - origin, access-control-request-method, access-control-request-headers, Accept-Encoding
       Access-Control-Allow-Origin:
@@ -159,7 +159,7 @@ http_interactions:
       Access-Control-Expose-Headers:
       - "*"
       X-Envoy-Upstream-Service-Time:
-      - '222'
+      - '570'
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -172,11 +172,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"batch_id":"batch_a43424a0-cee9-429b-aaed-abeec4d50bbf","name":"ruby_llm_d89abd339d460459","create_time":"2026-09-14","expire_time":"2026-10-14","create_api_key_id":"3a17dfeb-f886-479d-8d2e-ae6752427e96","cancel_time":null,"cancel_by_xai_message":null,"state":{"num_requests":2,"num_pending":2,"num_success":0,"num_error":0,"num_cancelled":0}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:52 GMT
+      string: '{"batch_id":"batch_21c4ca30-2f81-4924-9f94-7db0ca5b9395","name":"ruby_llm_c3036980b1c5c469","create_time":"2026-09-16","expire_time":"2026-10-16","create_api_key_id":"3a17dfeb-f886-479d-8d2e-ae6752427e96","cancel_time":null,"cancel_by_xai_message":null,"state":{"num_requests":2,"num_pending":2,"num_success":0,"num_error":0,"num_cancelled":0}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:17 GMT
 - request:
     method: get
-    uri: https://api.x.ai/v1/batches/batch_a43424a0-cee9-429b-aaed-abeec4d50bbf
+    uri: https://api.x.ai/v1/batches/batch_21c4ca30-2f81-4924-9f94-7db0ca5b9395
     body:
       encoding: US-ASCII
       string: ''
@@ -195,7 +195,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:38:52 GMT
+      - Wed, 16 Sep 2026 06:48:18 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -207,7 +207,7 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Trace-Id:
-      - 112286d078eb56cc5ca42806609ca55e
+      - 4a303d28c3afa6e11c31fc96f3584e02
       Vary:
       - origin, access-control-request-method, access-control-request-headers, Accept-Encoding
       Access-Control-Allow-Origin:
@@ -215,7 +215,7 @@ http_interactions:
       Access-Control-Expose-Headers:
       - "*"
       X-Envoy-Upstream-Service-Time:
-      - '221'
+      - '558'
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -228,11 +228,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"batch_id":"batch_a43424a0-cee9-429b-aaed-abeec4d50bbf","name":"ruby_llm_d89abd339d460459","create_time":"2026-09-14","expire_time":"2026-10-14","create_api_key_id":"3a17dfeb-f886-479d-8d2e-ae6752427e96","cancel_time":null,"cancel_by_xai_message":null,"state":{"num_requests":2,"num_pending":2,"num_success":0,"num_error":0,"num_cancelled":0}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:52 GMT
+      string: '{"batch_id":"batch_21c4ca30-2f81-4924-9f94-7db0ca5b9395","name":"ruby_llm_c3036980b1c5c469","create_time":"2026-09-16","expire_time":"2026-10-16","create_api_key_id":"3a17dfeb-f886-479d-8d2e-ae6752427e96","cancel_time":null,"cancel_by_xai_message":null,"state":{"num_requests":2,"num_pending":2,"num_success":0,"num_error":0,"num_cancelled":0}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:18 GMT
 - request:
     method: get
-    uri: https://api.x.ai/v1/batches/batch_a43424a0-cee9-429b-aaed-abeec4d50bbf
+    uri: https://api.x.ai/v1/batches/batch_21c4ca30-2f81-4924-9f94-7db0ca5b9395
     body:
       encoding: US-ASCII
       string: ''
@@ -251,7 +251,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:38:58 GMT
+      - Wed, 16 Sep 2026 06:48:23 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -263,7 +263,7 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Trace-Id:
-      - 271c0aba044e4bb22105944fc4233579
+      - 000f4ae3b9c16d0d555d0605bb8e9d3a
       Vary:
       - origin, access-control-request-method, access-control-request-headers, Accept-Encoding
       Access-Control-Allow-Origin:
@@ -271,7 +271,7 @@ http_interactions:
       Access-Control-Expose-Headers:
       - "*"
       X-Envoy-Upstream-Service-Time:
-      - '147'
+      - '275'
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -284,11 +284,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"batch_id":"batch_a43424a0-cee9-429b-aaed-abeec4d50bbf","name":"ruby_llm_d89abd339d460459","create_time":"2026-09-14","expire_time":"2026-10-14","create_api_key_id":"3a17dfeb-f886-479d-8d2e-ae6752427e96","cancel_time":null,"cancel_by_xai_message":null,"state":{"num_requests":2,"num_pending":0,"num_success":2,"num_error":0,"num_cancelled":0}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:58 GMT
+      string: '{"batch_id":"batch_21c4ca30-2f81-4924-9f94-7db0ca5b9395","name":"ruby_llm_c3036980b1c5c469","create_time":"2026-09-16","expire_time":"2026-10-16","create_api_key_id":"3a17dfeb-f886-479d-8d2e-ae6752427e96","cancel_time":null,"cancel_by_xai_message":null,"state":{"num_requests":2,"num_pending":0,"num_success":2,"num_error":0,"num_cancelled":0}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:23 GMT
 - request:
     method: get
-    uri: https://api.x.ai/v1/batches/batch_a43424a0-cee9-429b-aaed-abeec4d50bbf/results?limit=100
+    uri: https://api.x.ai/v1/batches/batch_21c4ca30-2f81-4924-9f94-7db0ca5b9395/results?limit=100
     body:
       encoding: US-ASCII
       string: ''
@@ -307,7 +307,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:38:58 GMT
+      - Wed, 16 Sep 2026 06:48:24 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -319,7 +319,7 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Trace-Id:
-      - f0a18cef0fa6a1073f0cb36a36cf3a43
+      - c1fc386c88c89ad3737c44564de6dd55
       Vary:
       - origin, access-control-request-method, access-control-request-headers, Accept-Encoding
       Access-Control-Allow-Origin:
@@ -327,7 +327,7 @@ http_interactions:
       Access-Control-Expose-Headers:
       - "*"
       X-Envoy-Upstream-Service-Time:
-      - '331'
+      - '592'
       Server:
       - cloudflare
       Strict-Transport-Security:
@@ -340,8 +340,8 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"results":[{"batch_request_id":"0","batch_result":{"response":{"chat_get_completion":{"id":"cc20c56b-385f-97fd-a5c9-5473cdb4e793","object":"chat.completion","created":1789378733,"model":"grok-4.3","choices":[{"index":0,"message":{"role":"assistant","content":"{\"language\":\"Ruby\"}","reasoning_content":"The
-        user said: \"Return language Ruby.\"\n","refusal":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":239,"completion_tokens":5,"total_tokens":418,"prompt_tokens_details":{"text_tokens":239,"audio_tokens":0,"image_tokens":0,"cached_tokens":192},"completion_tokens_details":{"reasoning_tokens":174,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0,"cost_in_usd_ticks":4357200},"system_fingerprint":"fp_eb3c003fc66c14ed","service_tier":"default"}}}},{"batch_request_id":"1","batch_result":{"response":{"chat_get_completion":{"id":"86d0f0de-5144-9fc3-af31-6533a892ef7d","object":"chat.completion","created":1789378732,"model":"grok-4.3","choices":[{"index":0,"message":{"role":"assistant","content":"Rails","reasoning_content":"The
-        user says: \"Reply with exactly one word: Rails\"\n","refusal":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":199,"completion_tokens":1,"total_tokens":320,"prompt_tokens_details":{"text_tokens":199,"audio_tokens":0,"image_tokens":0,"cached_tokens":192},"completion_tokens_details":{"reasoning_tokens":120,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0,"cost_in_usd_ticks":2797200},"system_fingerprint":"fp_eb3c003fc66c14ed","service_tier":"default"}}}}],"pagination_token":null}'
-  recorded_at: Mon, 14 Sep 2026 09:38:58 GMT
+      string: '{"results":[{"batch_request_id":"0","batch_result":{"response":{"chat_get_completion":{"id":"c157dc9d-900b-982c-808e-42b4364df105","object":"chat.completion","created":1789541297,"model":"grok-4.3","choices":[{"index":0,"message":{"role":"assistant","content":"{\"language\":\"Ruby\"}","reasoning_content":"The
+        user said: \"Return language Ruby.\"\n","refusal":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":239,"completion_tokens":5,"total_tokens":373,"prompt_tokens_details":{"text_tokens":239,"audio_tokens":0,"image_tokens":0,"cached_tokens":192},"completion_tokens_details":{"reasoning_tokens":129,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0,"cost_in_usd_ticks":3457200},"system_fingerprint":"fp_eb3c003fc66c14ed","service_tier":"default"}}}},{"batch_request_id":"1","batch_result":{"response":{"chat_get_completion":{"id":"695782fc-27d4-951f-a534-99520f67d051","object":"chat.completion","created":1789541298,"model":"grok-4.3","choices":[{"index":0,"message":{"role":"assistant","content":"Rails","reasoning_content":"The
+        user said: \"Reply with exactly one word: Rails\"\n","refusal":null},"finish_reason":"stop"}],"usage":{"prompt_tokens":199,"completion_tokens":1,"total_tokens":304,"prompt_tokens_details":{"text_tokens":199,"audio_tokens":0,"image_tokens":0,"cached_tokens":192},"completion_tokens_details":{"reasoning_tokens":104,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0,"cost_in_usd_ticks":2477200},"system_fingerprint":"fp_eb3c003fc66c14ed","service_tier":"default"}}}}],"pagination_token":null}'
+  recorded_at: Wed, 16 Sep 2026 06:48:24 GMT
 recorded_with: VCR 6.4.0

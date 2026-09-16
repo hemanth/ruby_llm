@@ -34,7 +34,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 10:16:01 GMT
+      - Wed, 16 Sep 2026 07:01:25 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -44,7 +44,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Generation-Id:
-      - gen-1789380960-aTYCYXlyeGr0rabnE97Q
+      - gen-1789542084-so836dqhbMlEMEVTd9N3
       Access-Control-Expose-Headers:
       - X-Generation-Id,X-Provider-Name,request-id,cf-ray
       Set-Cookie:
@@ -62,9 +62,9 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: "\n         \n{\"id\":\"gen-1789380960-aTYCYXlyeGr0rabnE97Q\",\"object\":\"chat.completion\",\"created\":1789380960,\"model\":\"upstage/solar-pro4\",\"provider\":\"Upstage\",\"system_fingerprint\":null,\"service_tier\":null,\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_calls\",\"message\":{\"role\":\"assistant\",\"content\":null,\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"type\":\"function\",\"index\":0,\"id\":\"call_148ca2a8a8974ad29ced7d58\",\"function\":{\"name\":\"weather\",\"arguments\":\"{\\\"latitude\\\":
+      string: "\n         \n{\"id\":\"gen-1789542084-so836dqhbMlEMEVTd9N3\",\"object\":\"chat.completion\",\"created\":1789542084,\"model\":\"upstage/solar-pro4\",\"provider\":\"Upstage\",\"system_fingerprint\":null,\"service_tier\":null,\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_calls\",\"message\":{\"role\":\"assistant\",\"content\":null,\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"type\":\"function\",\"index\":0,\"id\":\"call_94d20d5b198043aab6412dba\",\"function\":{\"name\":\"weather\",\"arguments\":\"{\\\"latitude\\\":
         \\\"52.5200\\\", \\\"longitude\\\": \\\"13.4050\\\"}\"}}]}}],\"usage\":{\"prompt_tokens\":378,\"completion_tokens\":30,\"total_tokens\":408,\"cost\":0.00004482,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.00004482,\"upstream_inference_prompt_cost\":0.00003402,\"upstream_inference_completions_cost\":0.0000108},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}"
-  recorded_at: Mon, 14 Sep 2026 10:16:01 GMT
+  recorded_at: Wed, 16 Sep 2026 07:01:25 GMT
 - request:
     method: post
     uri: https://openrouter.ai/api/v1/chat/completions
@@ -73,8 +73,8 @@ http_interactions:
       string: '{"model":"upstage/solar-pro4","messages":[{"role":"developer","content":"You
         must use both the weather tool for Berlin (52.5200, 13.4050) and the best
         language tool."},{"role":"user","content":"What''s the weather in Berlin and
-        what''s the best programming language?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_148ca2a8a8974ad29ced7d58","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_148ca2a8a8974ad29ced7d58"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        what''s the best programming language?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_94d20d5b198043aab6412dba","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_94d20d5b198043aab6412dba"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}},{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
@@ -100,7 +100,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 10:16:03 GMT
+      - Wed, 16 Sep 2026 07:01:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -110,72 +110,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Generation-Id:
-      - gen-1789380961-1OyAe5XWyW0Q5HkW2GAj
-      Access-Control-Expose-Headers:
-      - X-Generation-Id,X-Provider-Name,request-id,cf-ray
-      Set-Cookie:
-      - "<COOKIE>"
-      Permissions-Policy:
-      - payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com"
-        "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")
-      Referrer-Policy:
-      - no-referrer, strict-origin-when-cross-origin
-      X-Content-Type-Options:
-      - nosniff
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - "<CF_RAY>"
-    body:
-      encoding: ASCII-8BIT
-      string: "\n         \n\n         \n\n         \n{\"id\":\"gen-1789380961-1OyAe5XWyW0Q5HkW2GAj\",\"object\":\"chat.completion\",\"created\":1789380961,\"model\":\"upstage/solar-pro4\",\"provider\":\"Upstage\",\"system_fingerprint\":null,\"service_tier\":null,\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_calls\",\"message\":{\"role\":\"assistant\",\"content\":null,\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"type\":\"function\",\"index\":0,\"id\":\"call_5f67e567df7547c4b7833401\",\"function\":{\"name\":\"best_language_to_learn\",\"arguments\":\"{}\"}}]}}],\"usage\":{\"prompt_tokens\":455,\"completion_tokens\":10,\"total_tokens\":465,\"cost\":0.00004455,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.00004455,\"upstream_inference_prompt_cost\":0.00004095,\"upstream_inference_completions_cost\":0.0000036},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}"
-  recorded_at: Mon, 14 Sep 2026 10:16:09 GMT
-- request:
-    method: post
-    uri: https://openrouter.ai/api/v1/chat/completions
-    body:
-      encoding: UTF-8
-      string: '{"model":"upstage/solar-pro4","messages":[{"role":"developer","content":"You
-        must use both the weather tool for Berlin (52.5200, 13.4050) and the best
-        language tool."},{"role":"user","content":"What''s the weather in Berlin and
-        what''s the best programming language?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_148ca2a8a8974ad29ced7d58","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_148ca2a8a8974ad29ced7d58"},{"role":"assistant","content":"","tool_calls":[{"id":"call_5f67e567df7547c4b7833401","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},{"role":"tool","content":"Ruby","tool_call_id":"call_5f67e567df7547c4b7833401"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
-        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
-        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
-        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}},{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
-        the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}],"parallel_tool_calls":false}'
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      Authorization:
-      - Bearer <AUTH_TOKEN>
-      Http-Referer:
-      - https://rubyllm.com
-      X-Openrouter-Title:
-      - RubyLLM
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 14 Sep 2026 10:16:09 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Generation-Id:
-      - gen-1789380969-KZV9yBqWDV57figqqHh9
+      - gen-1789542085-dblof4C4iAG2X6SdaiIv
       Access-Control-Expose-Headers:
       - X-Generation-Id,X-Provider-Name,request-id,cf-ray
       Set-Cookie:
@@ -194,6 +129,74 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        CiAgICAgICAgIAoKICAgICAgICAgCgogICAgICAgICAKCiAgICAgICAgIAp7ImlkIjoiZ2VuLTE3ODkzODA5NjktS1pWOXlCcVdEVjU3ZmlncXFIaDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjcmVhdGVkIjoxNzg5MzgwOTY5LCJtb2RlbCI6InVwc3RhZ2Uvc29sYXItcHJvNCIsInByb3ZpZGVyIjoiVXBzdGFnZSIsInN5c3RlbV9maW5nZXJwcmludCI6bnVsbCwic2VydmljZV90aWVyIjpudWxsLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwibG9ncHJvYnMiOm51bGwsImZpbmlzaF9yZWFzb24iOiJzdG9wIiwibmF0aXZlX2ZpbmlzaF9yZWFzb24iOiJzdG9wIiwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6IioqQmVybGluIFdlYXRoZXI6KipcbkN1cnJlbnRseSBpbiBCZXJsaW4gKDUyLjUyMDAsIDEzLjQwNTApLCBpdCdzICoqMTXCsEMqKiB3aXRoIHdpbmQgYXJvdW5kICoqMTAga20vaCoqLiBMb29rcyBsaWtlIGEgbWlsZCBkYXkhXG5cbioqQmVzdCBQcm9ncmFtbWluZyBMYW5ndWFnZToqKlxuQmFzZWQgb24gdGhlIHRvb2wsIHRoZSByZWNvbW1lbmRlZCBsYW5ndWFnZSB0byBsZWFybiBpcyAqKlJ1YnkqKi4gXG5cblJ1YnkgaXMga25vd24gZm9yIGl0cyBlbGVnYW50IHN5bnRheCwgZmxleGliaWxpdHksIGFuZCBleGNlbGxlbnQgcHJvZHVjdGl2aXR5LiBJdCdzIHBhcnRpY3VsYXJseSBwb3B1bGFyIGZvciB3ZWIgZGV2ZWxvcG1lbnQgKHRoYW5rcyB0byBSdWJ5IG9uIFJhaWxzKSwgc2NyaXB0aW5nLCBhbmQgcHJvdG90eXBpbmcuIE1hbnkgZGV2ZWxvcGVycyBhcHByZWNpYXRlIGl0cyBkZXZlbG9wZXItZnJpZW5kbHkgZm9jdXMgYW5kIFwiZGV2ZWxvcGVyIGhhcHBpbmVzc1wiIHBoaWxvc29waHkuXG5cblRob3VnaCBJIHNob3VsZCBub3RlIC0gdGhlIFwiYmVzdFwiIGxhbmd1YWdlIHVsdGltYXRlbHkgZGVwZW5kcyBvbiB3aGF0IHlvdSdyZSB0cnlpbmcgdG8gYnVpbGQuIEZvciBleGFtcGxlOlxuLSAqKlB5dGhvbioqIC0gZ3JlYXQgZm9yIGRhdGEgc2NpZW5jZSwgbWFjaGluZSBsZWFybmluZywgYW5kIGdlbmVyYWwgc2NyaXB0aW5nXG4tICoqSmF2YVNjcmlwdCoqIC0gZXNzZW50aWFsIGZvciB3ZWIgZGV2ZWxvcG1lbnQgKGZyb250ZW5kICsgTm9kZS5qcyBiYWNrZW5kKVxuLSAqKlJ1c3QqKiAtIGdyb3dpbmcgcmFwaWRseSBmb3Igc3lzdGVtcyBwcm9ncmFtbWluZyB3aXRoIHNhZmV0eSBndWFyYW50ZWVzXG4tICoqSmF2YS9rb3RsaW4qKiAtIHN0cm9uZyBmb3IgZW50ZXJwcmlzZSBhcHBsaWNhdGlvbnMgYW5kIEFuZHJvaWQgZGV2ZWxvcG1lbnRcblxuSWYgeW91IGhhdmUgYSBzcGVjaWZpYyBwcm9qZWN0IG9yIGRvbWFpbiBpbiBtaW5kLCBJIGNhbiBnaXZlIG1vcmUgdGFpbG9yZWQgYWR2aWNlISIsInJlZnVzYWwiOm51bGwsInJlYXNvbmluZyI6bnVsbH19XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6NDgwLCJjb21wbGV0aW9uX3Rva2VucyI6MjE5LCJ0b3RhbF90b2tlbnMiOjY5OSwiY29zdCI6MC4wMDAxMjIwNCwiaXNfYnlvayI6ZmFsc2UsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjowLCJjYWNoZV93cml0ZV90b2tlbnMiOjAsImF1ZGlvX3Rva2VucyI6MCwidmlkZW9fdG9rZW5zIjowfSwiY29zdF9kZXRhaWxzIjp7InVwc3RyZWFtX2luZmVyZW5jZV9jb3N0IjowLjAwMDEyMjA0LCJ1cHN0cmVhbV9pbmZlcmVuY2VfcHJvbXB0X2Nvc3QiOjAuMDAwMDQzMiwidXBzdHJlYW1faW5mZXJlbmNlX2NvbXBsZXRpb25zX2Nvc3QiOjAuMDAwMDc4ODR9LCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjAsImltYWdlX3Rva2VucyI6MCwiYXVkaW9fdG9rZW5zIjowfX19
-  recorded_at: Mon, 14 Sep 2026 10:16:18 GMT
+        CiAgICAgICAgIAp7ImlkIjoiZ2VuLTE3ODk1NDIwODUtZGJsb2Y0QzRpQUcyWDZTZGFpSXYiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjcmVhdGVkIjoxNzg5NTQyMDg1LCJtb2RlbCI6InVwc3RhZ2Uvc29sYXItcHJvNCIsInByb3ZpZGVyIjoiVXBzdGFnZSIsInN5c3RlbV9maW5nZXJwcmludCI6bnVsbCwic2VydmljZV90aWVyIjpudWxsLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwibG9ncHJvYnMiOm51bGwsImZpbmlzaF9yZWFzb24iOiJ0b29sX2NhbGxzIiwibmF0aXZlX2ZpbmlzaF9yZWFzb24iOiJ0b29sX2NhbGxzIiwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6IlRoZSB3ZWF0aGVyIGluIEJlcmxpbiBpcyBjdXJyZW50bHkgMTXCsEMgd2l0aCB3aW5kIGF0IDEwIGttL2guXG5cblJlZ2FyZGluZyB0aGUgYmVzdCBsYW5ndWFnZSB0byBsZWFybiwgSSdsbCBjaGVjayB0aGF0IGZvciB5b3UgYXMgd2VsbC4iLCJyZWZ1c2FsIjpudWxsLCJyZWFzb25pbmciOm51bGwsInRvb2xfY2FsbHMiOlt7InR5cGUiOiJmdW5jdGlvbiIsImluZGV4IjowLCJpZCI6ImNhbGxfYzc5NTM5MTc0YjhmNDQyNjhmZTUwMjMxIiwiZnVuY3Rpb24iOnsibmFtZSI6ImJlc3RfbGFuZ3VhZ2VfdG9fbGVhcm4iLCJhcmd1bWVudHMiOiJ7fSJ9fV19fV0sInVzYWdlIjp7InByb21wdF90b2tlbnMiOjQ1NSwiY29tcGxldGlvbl90b2tlbnMiOjQ1LCJ0b3RhbF90b2tlbnMiOjUwMCwiY29zdCI6MC4wMDAwNTcxNSwiaXNfYnlvayI6ZmFsc2UsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjowLCJjYWNoZV93cml0ZV90b2tlbnMiOjAsImF1ZGlvX3Rva2VucyI6MCwidmlkZW9fdG9rZW5zIjowfSwiY29zdF9kZXRhaWxzIjp7InVwc3RyZWFtX2luZmVyZW5jZV9jb3N0IjowLjAwMDA1NzE1LCJ1cHN0cmVhbV9pbmZlcmVuY2VfcHJvbXB0X2Nvc3QiOjAuMDAwMDQwOTUsInVwc3RyZWFtX2luZmVyZW5jZV9jb21wbGV0aW9uc19jb3N0IjowLjAwMDAxNjJ9LCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjAsImltYWdlX3Rva2VucyI6MCwiYXVkaW9fdG9rZW5zIjowfX19
+  recorded_at: Wed, 16 Sep 2026 07:01:27 GMT
+- request:
+    method: post
+    uri: https://openrouter.ai/api/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"upstage/solar-pro4","messages":[{"role":"developer","content":"You
+        must use both the weather tool for Berlin (52.5200, 13.4050) and the best
+        language tool."},{"role":"user","content":"What''s the weather in Berlin and
+        what''s the best programming language?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_94d20d5b198043aab6412dba","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_94d20d5b198043aab6412dba"},{"role":"assistant","content":"The
+        weather in Berlin is currently 15°C with wind at 10 km/h.\n\nRegarding the
+        best language to learn, I''ll check that for you as well.","tool_calls":[{"id":"call_c79539174b8f44268fe50231","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},{"role":"tool","content":"Ruby","tool_call_id":"call_c79539174b8f44268fe50231"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}},{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
+        the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}],"parallel_tool_calls":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Http-Referer:
+      - https://rubyllm.com
+      X-Openrouter-Title:
+      - RubyLLM
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 16 Sep 2026 07:01:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Generation-Id:
+      - gen-1789542087-lbrK4TJo16cU2hqPDx99
+      Access-Control-Expose-Headers:
+      - X-Generation-Id,X-Provider-Name,request-id,cf-ray
+      Set-Cookie:
+      - "<COOKIE>"
+      Permissions-Policy:
+      - payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com"
+        "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")
+      Referrer-Policy:
+      - no-referrer, strict-origin-when-cross-origin
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - "<CF_RAY>"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        CiAgICAgICAgIAp7ImlkIjoiZ2VuLTE3ODk1NDIwODctbGJySzRUSm8xNmNVMmhxUER4OTkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjcmVhdGVkIjoxNzg5NTQyMDg3LCJtb2RlbCI6InVwc3RhZ2Uvc29sYXItcHJvNCIsInByb3ZpZGVyIjoiVXBzdGFnZSIsInN5c3RlbV9maW5nZXJwcmludCI6bnVsbCwic2VydmljZV90aWVyIjpudWxsLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwibG9ncHJvYnMiOm51bGwsImZpbmlzaF9yZWFzb24iOiJzdG9wIiwibmF0aXZlX2ZpbmlzaF9yZWFzb24iOiJzdG9wIiwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6IlRoZSB3ZWF0aGVyIGluIEJlcmxpbiBpcyBjdXJyZW50bHkgMTXCsEMgd2l0aCB3aW5kIGF0IDEwIGttL2guXG5cbkFzIGZvciB0aGUgYmVzdCBsYW5ndWFnZSB0byBsZWFybiwgdGhlIHRvb2wgc3VnZ2VzdHMgUnVieS4gSG93ZXZlciwgbm90ZSB0aGF0IHRoaXMgcmVjb21tZW5kYXRpb24gaXMgZ2VuZXJhbCBhbmQgbWF5IG5vdCBzcGVjaWZpY2FsbHkgYWRkcmVzcyBwcm9ncmFtbWluZyBsYW5ndWFnZXMuIEZvciBwcm9ncmFtbWluZyBzcGVjaWZpY2FsbHksIHBvcHVsYXIgY2hvaWNlcyBpbmNsdWRlIFB5dGhvbiwgSmF2YVNjcmlwdCwgSmF2YSwgQysrLCBhbmQgb3RoZXJzIGRlcGVuZGluZyBvbiB5b3VyIGdvYWxzICh3ZWIgZGV2ZWxvcG1lbnQsIGRhdGEgc2NpZW5jZSwgc3lzdGVtcyBwcm9ncmFtbWluZywgZXRjLikuIiwicmVmdXNhbCI6bnVsbCwicmVhc29uaW5nIjpudWxsfX1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjo1MTUsImNvbXBsZXRpb25fdG9rZW5zIjo4MiwidG90YWxfdG9rZW5zIjo1OTcsImNvc3QiOjAuMDAwMDc1ODcsImlzX2J5b2siOmZhbHNlLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MCwiY2FjaGVfd3JpdGVfdG9rZW5zIjowLCJhdWRpb190b2tlbnMiOjAsInZpZGVvX3Rva2VucyI6MH0sImNvc3RfZGV0YWlscyI6eyJ1cHN0cmVhbV9pbmZlcmVuY2VfY29zdCI6MC4wMDAwNzU4NywidXBzdHJlYW1faW5mZXJlbmNlX3Byb21wdF9jb3N0IjowLjAwMDA0NjM1LCJ1cHN0cmVhbV9pbmZlcmVuY2VfY29tcGxldGlvbnNfY29zdCI6MC4wMDAwMjk1Mn0sImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6MCwiaW1hZ2VfdG9rZW5zIjowLCJhdWRpb190b2tlbnMiOjB9fX0=
+  recorded_at: Wed, 16 Sep 2026 07:01:29 GMT
 recorded_with: VCR 6.4.0

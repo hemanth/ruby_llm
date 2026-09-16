@@ -20,14 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Mon, 14 Sep 2026 10:16:19 GMT
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Pragma:
       - no-cache
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
+      Date:
+      - Wed, 16 Sep 2026 07:01:30 GMT
       Content-Type:
       - application/json; charset=utf-8
       Vary:
@@ -52,11 +52,11 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/cloud-platform openid",
+          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Mon, 14 Sep 2026 10:16:19 GMT
+  recorded_at: Wed, 16 Sep 2026 07:01:30 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -90,7 +90,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 10:16:24 GMT
+      - Wed, 16 Sep 2026 07:01:34 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -106,6 +106,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicm9sZSI6ICJtb2RlbCIsCiAgICAgICAgInBhcnRzIjogWwogICAgICAgICAgewogICAgICAgICAgICAidGV4dCI6ICJUaGUgY3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbiwgR2VybWFueSAoYXQgNTIuNTIwMCwgMTMuNDA1MCkgaXM6XG5cbiogICAqKlRlbXBlcmF0dXJlOioqIEFyb3VuZCAqKjE3wrBDICg2M8KwRikqKlxuKiAgICoqQ29uZGl0aW9uczoqKiAqKk1vc3RseSBjbG91ZHkqKiBvciAqKnBhcnRseSBjbG91ZHkqKi5cbiogICAqKkZlZWxzIGxpa2U6KiogQXBwcm94aW1hdGVseSAqKjE2wrBDICg2McKwRikqKlxuKiAgICoqV2luZDoqKiBMaWdodCBicmVlemUsIHR5cGljYWxseSBmcm9tIHRoZSAqKndlc3Qgb3Igbm9ydGh3ZXN0KiouXG4qICAgKipIdW1pZGl0eToqKiBBcm91bmQgKio2MC03MCUqKi5cbiogICAqKlByZWNpcGl0YXRpb246KiogTG93IGNoYW5jZSBvZiByYWluIGF0IHRoZSBtb21lbnQsIGdlbmVyYWxseSBkcnkuXG5cbkl0J3MgYSBtaWxkIGFuZCBzb21ld2hhdCBvdmVyY2FzdCBkYXkgaW4gQmVybGluLlxuXG4qKFBsZWFzZSBub3RlOiBXZWF0aGVyIGNvbmRpdGlvbnMgY2FuIGNoYW5nZSByYXBpZGx5LiBUaGlzIGluZm9ybWF0aW9uIGlzIGJhc2VkIG9uIHJlYWwtdGltZSBkYXRhIGJ1dCBtaWdodCBiZSBzbGlnaHRseSBvdXRkYXRlZCBpZiB5b3UncmUgcmVhZGluZyB0aGlzIG11Y2ggbGF0ZXIuKSoiCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9LAogICAgICAiZmluaXNoUmVhc29uIjogIlNUT1AiLAogICAgICAiYXZnTG9ncHJvYnMiOiAtMS4yMDExMTE2ODI4NzA3NwogICAgfQogIF0sCiAgInVzYWdlTWV0YWRhdGEiOiB7CiAgICAicHJvbXB0VG9rZW5Db3VudCI6IDMzLAogICAgImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogMTgxLAogICAgInRvdGFsVG9rZW5Db3VudCI6IDc4NiwKICAgICJ0cmFmZmljVHlwZSI6ICJPTl9ERU1BTkQiLAogICAgInByb21wdFRva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiAzMwogICAgICB9CiAgICBdLAogICAgImNhbmRpZGF0ZXNUb2tlbnNEZXRhaWxzIjogWwogICAgICB7CiAgICAgICAgIm1vZGFsaXR5IjogIlRFWFQiLAogICAgICAgICJ0b2tlbkNvdW50IjogMTgxCiAgICAgIH0KICAgIF0sCiAgICAidGhvdWdodHNUb2tlbkNvdW50IjogNTcyCiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0yLjUtZmxhc2giLAogICJjcmVhdGVUaW1lIjogIjIwMjYtMDktMTRUMTA6MTY6MTkuNzMxMjk4WiIsCiAgInJlc3BvbnNlSWQiOiAiYzhtbmFxTFJMUDcxMVBJUHg5T0V1QVEiCn0K
-  recorded_at: Mon, 14 Sep 2026 10:16:24 GMT
+        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicm9sZSI6ICJtb2RlbCIsCiAgICAgICAgInBhcnRzIjogWwogICAgICAgICAgewogICAgICAgICAgICAidGV4dCI6ICJUaGUgY3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbiAoYXQgNTIuNTIwMCwgMTMuNDA1MCkgaXMgKipQYXJ0bHkgY2xvdWR5Kiogd2l0aCBhIHRlbXBlcmF0dXJlIG9mICoqMTguNcKwQyAoNjUuM8KwRikqKi4gSXQgZmVlbHMgbGlrZSAxOMKwQyAoNjQuNMKwRikuXG5cbkh1bWlkaXR5IGlzIDcwJSwgYW5kIHRoZXJlJ3MgYSB3ZXN0IHdpbmQgYmxvd2luZyBhdCAxNSBrbS9oICg5LjMgbXBoKS4iCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9LAogICAgICAiZmluaXNoUmVhc29uIjogIlNUT1AiLAogICAgICAiYXZnTG9ncHJvYnMiOiAtMC45MzgwMzE3Mjg2NDQxMjAxCiAgICB9CiAgXSwKICAidXNhZ2VNZXRhZGF0YSI6IHsKICAgICJwcm9tcHRUb2tlbkNvdW50IjogMzMsCiAgICAiY2FuZGlkYXRlc1Rva2VuQ291bnQiOiA5NSwKICAgICJ0b3RhbFRva2VuQ291bnQiOiA2MzksCiAgICAidHJhZmZpY1R5cGUiOiAiT05fREVNQU5EIiwKICAgICJwcm9tcHRUb2tlbnNEZXRhaWxzIjogWwogICAgICB7CiAgICAgICAgIm1vZGFsaXR5IjogIlRFWFQiLAogICAgICAgICJ0b2tlbkNvdW50IjogMzMKICAgICAgfQogICAgXSwKICAgICJjYW5kaWRhdGVzVG9rZW5zRGV0YWlscyI6IFsKICAgICAgewogICAgICAgICJtb2RhbGl0eSI6ICJURVhUIiwKICAgICAgICAidG9rZW5Db3VudCI6IDk1CiAgICAgIH0KICAgIF0sCiAgICAidGhvdWdodHNUb2tlbkNvdW50IjogNTExCiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0yLjUtZmxhc2giLAogICJjcmVhdGVUaW1lIjogIjIwMjYtMDktMTZUMDc6MDE6MzEuMTM1Mjk0WiIsCiAgInJlc3BvbnNlSWQiOiAieXo2cWF2NmdDSld1N2JRUDJlU1N5QTAiCn0K
+  recorded_at: Wed, 16 Sep 2026 07:01:34 GMT
 recorded_with: VCR 6.4.0

@@ -38,7 +38,7 @@ http_interactions:
       Num-Chars:
       - '2465'
       Num-Tokens:
-      - '122'
+      - '140'
       Pragma:
       - no-cache
       Vary:
@@ -46,34 +46,40 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - 9a37516f6b84f62d08d91cd4651f6635
+      - dfb2484cbc8920a9f1ce8d5b4d60d24f
       Date:
-      - Mon, 14 Sep 2026 09:41:50 GMT
+      - Wed, 16 Sep 2026 06:49:49 GMT
       X-Envoy-Upstream-Service-Time:
-      - '309'
+      - '409'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"fd7130cf-8dc5-404c-8ce9-0e4bd975da16","message":{"role":"assistant","content":[{"type":"thinking","thinking":"I
-        found the document. It states: \"The Ruby programming language was created
-        by Yukihiro Matsumoto in 1993.\" This directly answers the user''s question
-        about who created Ruby and when."},{"type":"text","text":"Based on the document
-        provided, Ruby was created by Yukihiro Matsumoto in 1993."}],"citations":[{"start":52,"end":70,"text":"Yukihiro
+      string: '{"id":"323f17b4-ad00-44e6-b43c-1821d69b804e","message":{"role":"assistant","content":[{"type":"thinking","thinking":"The
+        document contains the answer to the user''s question. It states that Ruby
+        was created by Yukihiro Matsumoto in 1993. I can now provide a direct answer
+        using this information."},{"type":"text","text":"Based on the document, Ruby
+        was created by Yukihiro Matsumoto in 1993. The document states that \"The
+        Ruby programming language was created by Yukihiro Matsumoto in 1993.\""}],"citations":[{"start":43,"end":61,"text":"Yukihiro
         Matsumoto","sources":[{"type":"document","id":"doc:0","document":{"id":"doc:0","text":"The
         Ruby programming language was created by Yukihiro Matsumoto in 1993. Ruby
         was designed to make programmers happy and productive. Ruby on Rails is a
         popular web framework built with Ruby. RubyLLM is a Ruby library for working
-        with large language models.\n","title":"facts.txt"}}],"type":"TEXT_CONTENT","content_index":1},{"start":74,"end":79,"text":"1993.","sources":[{"type":"document","id":"doc:0","document":{"id":"doc:0","text":"The
+        with large language models.\n","title":"facts.txt"}}],"type":"TEXT_CONTENT","content_index":1},{"start":65,"end":70,"text":"1993.","sources":[{"type":"document","id":"doc:0","document":{"id":"doc:0","text":"The
         Ruby programming language was created by Yukihiro Matsumoto in 1993. Ruby
         was designed to make programmers happy and productive. Ruby on Rails is a
         popular web framework built with Ruby. RubyLLM is a Ruby library for working
-        with large language models.\n","title":"facts.txt"}}],"type":"TEXT_CONTENT","content_index":1}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":67,"output_tokens":55},"tokens":{"input_tokens":510,"output_tokens":79,"reasoning_tokens":37},"cached_tokens":304}}'
-  recorded_at: Mon, 14 Sep 2026 09:41:50 GMT
+        with large language models.\n","title":"facts.txt"}}],"type":"TEXT_CONTENT","content_index":1},{"start":96,"end":170,"text":"\"The
+        Ruby programming language was created by Yukihiro Matsumoto in 1993.\"","sources":[{"type":"document","id":"doc:0","document":{"id":"doc:0","text":"The
+        Ruby programming language was created by Yukihiro Matsumoto in 1993. Ruby
+        was designed to make programmers happy and productive. Ruby on Rails is a
+        popular web framework built with Ruby. RubyLLM is a Ruby library for working
+        with large language models.\n","title":"facts.txt"}}],"type":"TEXT_CONTENT","content_index":1}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":67,"output_tokens":73},"tokens":{"input_tokens":510,"output_tokens":106,"reasoning_tokens":36},"cached_tokens":144}}'
+  recorded_at: Wed, 16 Sep 2026 06:49:49 GMT
 recorded_with: VCR 6.4.0

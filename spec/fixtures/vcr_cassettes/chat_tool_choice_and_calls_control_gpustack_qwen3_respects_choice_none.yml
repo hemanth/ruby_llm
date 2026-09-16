@@ -26,8 +26,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Resp-Start-Time:
+      - '1789542565355'
+      X-Envoy-Upstream-Service-Time:
+      - '1262'
       Date:
-      - Mon, 14 Sep 2026 11:09:22 GMT
+      - Wed, 16 Sep 2026 07:09:23 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -35,13 +39,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Req-Cost-Time:
-      - '1212'
+      - '1266'
       Req-Arrive-Time:
-      - '1789384162964'
-      Resp-Start-Time:
-      - '1789384164177'
-      X-Envoy-Upstream-Service-Time:
-      - '1209'
+      - '1789542564089'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -52,9 +52,10 @@ http_interactions:
         \"weather\", \"arguments\": {\"latitude\": \"52.5200\", \"longitude\": \"13.4050\"}}\n</tool_call>","reasoning_content":"Okay,
         the user is asking for the weather in Berlin, and they provided the coordinates
         52.5200 and 13.4050. I need to use the weather function here. Let me check
-        the parameters required. The function needs latitude and longitude as strings.
-        The user has given both, so I should format them into the function call. Make
-        sure to put them in the correct order and as strings. Alright, that''s all
-        I need. Let me generate the tool call.\n"}}],"created":1789384164,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":145,"prompt_tokens":231,"total_tokens":376,"prompt_tokens_details":{"cached_tokens":230}},"id":"chatcmpl-2dOrVi5qvYSduqiXQ7kkI1NeumCCDFm9","timings":{"cache_n":230,"prompt_n":1,"prompt_ms":8.275,"prompt_per_token_ms":8.275,"prompt_per_second":120.84592145015105,"predicted_n":145,"predicted_ms":1157.482,"predicted_per_token_ms":8.038069444444444,"predicted_per_second":124.40798215436611}}'
-  recorded_at: Mon, 14 Sep 2026 11:09:24 GMT
+        the function parameters. The function requires latitude and longitude as strings.
+        The user has given both, so I should format them into the tool call. Make
+        sure the JSON is correctly structured with the right keys. No other parameters
+        are needed, so just pass those two. Alright, that should get the current weather
+        data for Berlin.\n"}}],"created":1789542565,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":153,"prompt_tokens":231,"total_tokens":384,"prompt_tokens_details":{"cached_tokens":230}},"id":"chatcmpl-vMTvZeC2NIoxu8xC1nkrwmgp7tSLFv4J","timings":{"cache_n":230,"prompt_n":1,"prompt_ms":10.423,"prompt_per_token_ms":10.423,"prompt_per_second":95.94166746618056,"predicted_n":153,"predicted_ms":1222.0,"predicted_per_token_ms":8.039473684210526,"predicted_per_second":124.38625204582651}}'
+  recorded_at: Wed, 16 Sep 2026 07:09:25 GMT
 recorded_with: VCR 6.4.0

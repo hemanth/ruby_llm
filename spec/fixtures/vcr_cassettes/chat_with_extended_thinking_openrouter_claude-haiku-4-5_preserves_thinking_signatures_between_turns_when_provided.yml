@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:43:14 GMT
+      - Wed, 16 Sep 2026 06:53:19 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,7 +38,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Generation-Id:
-      - gen-1789378993-1v8JZXdkGSycBW4HzFXx
+      - gen-1789541598-QhHYlQZnLTkysxnbk51r
       Access-Control-Expose-Headers:
       - X-Generation-Id,X-Provider-Name,request-id,cf-ray
       Set-Cookie:
@@ -56,12 +56,12 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: "\n         \n{\"id\":\"gen-1789378993-1v8JZXdkGSycBW4HzFXx\",\"object\":\"chat.completion\",\"created\":1789378993,\"model\":\"anthropic/claude-haiku-4.5\",\"provider\":\"Amazon
+      string: "\n         \n{\"id\":\"gen-1789541598-QhHYlQZnLTkysxnbk51r\",\"object\":\"chat.completion\",\"created\":1789541598,\"model\":\"anthropic/claude-haiku-4.5\",\"provider\":\"Amazon
         Bedrock\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"5
         + 3 = 8\",\"refusal\":null,\"reasoning\":\"This is a simple arithmetic question.
         5 + 3 = 8.\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"This
-        is a simple arithmetic question. 5 + 3 = 8.\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"Eq8CCpwBCBEQARgCKkCyqtg4YSovHjJWjT5xWNBV0HDNY0NkeiSISwchPehu+JHqF14GKTlprSnmlk1ohL26KlGnQRhwg33jqkxTjsJiMhljbGF1ZGUtaGFpa3UtNC01LTIwMjUxMDAxOABCCHRoaW5raW5nWgw1MzY2OTcyNDk3MjhyEOIi79uJbELZgi9m1nMrW5SIAQGoAbKDn9UGsAECEgwNEiUxT/oqrbDD/gYaDN4k11X5+aKvErMQ1yIw/4muJI+JdBe1d4SFS5R4C8RE77z7VIOzDXt4wsm3WCq+G7NAwDo4Ylf1ZREGC+9AKkCV45XJ+IvgmpA8u2tbLeTc/kiG18mY7DONgdmiMfrA8b4ESwjkBVIVn72K0AIvPwVSr4cxa3V9cRAH1UZo/RviGAE=\"}]}}],\"usage\":{\"prompt_tokens\":45,\"completion_tokens\":38,\"total_tokens\":83,\"cost\":0.000235,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.000235,\"upstream_inference_prompt_cost\":0.000045,\"upstream_inference_completions_cost\":0.00019},\"completion_tokens_details\":{\"reasoning_tokens\":23,\"image_tokens\":0,\"audio_tokens\":0}}}"
-  recorded_at: Mon, 14 Sep 2026 09:43:14 GMT
+        is a simple arithmetic question. 5 + 3 = 8.\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"Eq8CCpwBCBEQARgCKkCyqtg4YSovHjJWjT5xWNBV0HDNY0NkeiSISwchPehu+JHqF14GKTlprSnmlk1ohL26KlGnQRhwg33jqkxTjsJiMhljbGF1ZGUtaGFpa3UtNC01LTIwMjUxMDAxOABCCHRoaW5raW5nWgw1MzY2OTcyNDk3MjhyEOIi79uJbELZgi9m1nMrW5SIAQGoAd/5qNUGsAECEgyMTP8huEcUzXkkKuIaDMTTd7mQ5JRJtjFnbiIwYLihS5uNbhQ8yLcNctu3ghR5IMjYWolDc704Q3mZppVfZmd3g8m7gx4WPODex0ltKkAIiSkb5/Vx6gDwUyOkMzcfMJOLpl2bPCzoVvmzimpaOubGvC1jlwiYNh9G1ImNC6XfRzvO+BWn83RFK6tR46d1GAE=\"}]}}],\"usage\":{\"prompt_tokens\":45,\"completion_tokens\":38,\"total_tokens\":83,\"cost\":0.000235,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.000235,\"upstream_inference_prompt_cost\":0.000045,\"upstream_inference_completions_cost\":0.00019},\"completion_tokens_details\":{\"reasoning_tokens\":23,\"image_tokens\":0,\"audio_tokens\":0}}}"
+  recorded_at: Wed, 16 Sep 2026 06:53:19 GMT
 - request:
     method: post
     uri: https://openrouter.ai/api/v1/chat/completions
@@ -69,7 +69,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"anthropic/claude-haiku-4.5","messages":[{"role":"user","content":"What
         is 5 + 3?"},{"role":"assistant","content":"5 + 3 = 8","reasoning_details":[{"type":"reasoning.text","text":"This
-        is a simple arithmetic question. 5 + 3 = 8.","format":"anthropic-claude-v1","index":0,"signature":"Eq8CCpwBCBEQARgCKkCyqtg4YSovHjJWjT5xWNBV0HDNY0NkeiSISwchPehu+JHqF14GKTlprSnmlk1ohL26KlGnQRhwg33jqkxTjsJiMhljbGF1ZGUtaGFpa3UtNC01LTIwMjUxMDAxOABCCHRoaW5raW5nWgw1MzY2OTcyNDk3MjhyEOIi79uJbELZgi9m1nMrW5SIAQGoAbKDn9UGsAECEgwNEiUxT/oqrbDD/gYaDN4k11X5+aKvErMQ1yIw/4muJI+JdBe1d4SFS5R4C8RE77z7VIOzDXt4wsm3WCq+G7NAwDo4Ylf1ZREGC+9AKkCV45XJ+IvgmpA8u2tbLeTc/kiG18mY7DONgdmiMfrA8b4ESwjkBVIVn72K0AIvPwVSr4cxa3V9cRAH1UZo/RviGAE="}]},{"role":"user","content":"Now
+        is a simple arithmetic question. 5 + 3 = 8.","format":"anthropic-claude-v1","index":0,"signature":"Eq8CCpwBCBEQARgCKkCyqtg4YSovHjJWjT5xWNBV0HDNY0NkeiSISwchPehu+JHqF14GKTlprSnmlk1ohL26KlGnQRhwg33jqkxTjsJiMhljbGF1ZGUtaGFpa3UtNC01LTIwMjUxMDAxOABCCHRoaW5raW5nWgw1MzY2OTcyNDk3MjhyEOIi79uJbELZgi9m1nMrW5SIAQGoAd/5qNUGsAECEgyMTP8huEcUzXkkKuIaDMTTd7mQ5JRJtjFnbiIwYLihS5uNbhQ8yLcNctu3ghR5IMjYWolDc704Q3mZppVfZmd3g8m7gx4WPODex0ltKkAIiSkb5/Vx6gDwUyOkMzcfMJOLpl2bPCzoVvmzimpaOubGvC1jlwiYNh9G1ImNC6XfRzvO+BWn83RFK6tR46d1GAE="}]},{"role":"user","content":"Now
         multiply that by 2"}],"stream":false,"reasoning":{"effort":"medium"}}'
     headers:
       User-Agent:
@@ -92,7 +92,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:43:15 GMT
+      - Wed, 16 Sep 2026 06:53:20 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -102,7 +102,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Generation-Id:
-      - gen-1789378994-iK9mSuf08MPUHfJG0MDO
+      - gen-1789541599-7TEId0YJO2wx5sTJHNVG
       Access-Control-Expose-Headers:
       - X-Generation-Id,X-Provider-Name,request-id,cf-ray
       Set-Cookie:
@@ -121,6 +121,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        CiAgICAgICAgIAp7ImlkIjoiZ2VuLTE3ODkzNzg5OTQtaUs5bVN1ZjA4TVBVSGZKRzBNRE8iLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjcmVhdGVkIjoxNzg5Mzc4OTk0LCJtb2RlbCI6ImFudGhyb3BpYy9jbGF1ZGUtaGFpa3UtNC41IiwicHJvdmlkZXIiOiJBbWF6b24gQmVkcm9jayIsInN5c3RlbV9maW5nZXJwcmludCI6bnVsbCwic2VydmljZV90aWVyIjoiZGVmYXVsdCIsImNob2ljZXMiOlt7ImluZGV4IjowLCJsb2dwcm9icyI6bnVsbCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJuYXRpdmVfZmluaXNoX3JlYXNvbiI6ImVuZF90dXJuIiwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6Ijggw5cgMiA9IDE2IiwicmVmdXNhbCI6bnVsbCwicmVhc29uaW5nIjoiVGhlIHVzZXIgaXMgYXNraW5nIG1lIHRvIG11bHRpcGx5IHRoZSBwcmV2aW91cyByZXN1bHQgYnkgMi5cblxuVGhlIHByZXZpb3VzIHJlc3VsdCB3YXMgOCAoZnJvbSA1ICsgMyA9IDgpLlxuXG44IMOXIDIgPSAxNiIsInJlYXNvbmluZ19kZXRhaWxzIjpbeyJ0eXBlIjoicmVhc29uaW5nLnRleHQiLCJ0ZXh0IjoiVGhlIHVzZXIgaXMgYXNraW5nIG1lIHRvIG11bHRpcGx5IHRoZSBwcmV2aW91cyByZXN1bHQgYnkgMi5cblxuVGhlIHByZXZpb3VzIHJlc3VsdCB3YXMgOCAoZnJvbSA1ICsgMyA9IDgpLlxuXG44IMOXIDIgPSAxNiIsImZvcm1hdCI6ImFudGhyb3BpYy1jbGF1ZGUtdjEiLCJpbmRleCI6MCwic2lnbmF0dXJlIjoiRXZVQ0Nwd0JDQkVRQVJnQ0trQjJuUlZ2S3RZTTdOYjZZYmJ5NzR4cFE2OGV1YVU4bUtqQVpOWFF6K3dQTDVWMC9pL3FHeFFEYTFwNWdHWHkxaG9wMWJGbFZ2OCs3SlBxM3BjUVFhN1pNaGxqYkdGMVpHVXRhR0ZwYTNVdE5DMDFMVEl3TWpVeE1EQXhPQUJDQ0hSb2FXNXJhVzVuV2d3MU16WTJPVGN5TkRrM01qaHlFT0lpNzl1SmJFTFpnaTltMW5Nclc1U0lBUUdvQWJPRG45VUdzQUVDRWd6MGtvUm5wRUdPbFovRkpFUWFEQUhpblIrTUJ1bU9lZk9PaGlJd0piaVFhWE5nTUIwR1RCWnZRUldKbkEvOXR4OWVob21WTEFDblVoTGtzcnJzb2ZRVmJiQ3RVSm5sWTFoU0NBdzhLb1VCeTA3YWdUUm1yb3VWeGZuVGpqcTF0SVp3NksreHJuVVh0d0NqZjhLUzhoSjhKRVdlNzJsdGt5RmlKTmhRVFFQTWVXeVMyZ3hPbnliOVJmN3Baa3VXUGZEV04xdFFJWHR4VEtNNlU4Y2k3dEpXUVlBT1dtMmhSR3dkVmNZbCtqLzJyalN4cTc4dE1FYzRWN3lPdzZGdUMvNmZsbWxySWZqSHFtKytaSE51aG0vakRkMUF0eGdCIn1dfX1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjo2NywiY29tcGxldGlvbl90b2tlbnMiOjY1LCJ0b3RhbF90b2tlbnMiOjEzMiwiY29zdCI6MC4wMDAzOTIsImlzX2J5b2siOmZhbHNlLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MCwiY2FjaGVfd3JpdGVfdG9rZW5zIjowLCJhdWRpb190b2tlbnMiOjAsInZpZGVvX3Rva2VucyI6MH0sImNvc3RfZGV0YWlscyI6eyJ1cHN0cmVhbV9pbmZlcmVuY2VfY29zdCI6MC4wMDAzOTIsInVwc3RyZWFtX2luZmVyZW5jZV9wcm9tcHRfY29zdCI6MC4wMDAwNjcsInVwc3RyZWFtX2luZmVyZW5jZV9jb21wbGV0aW9uc19jb3N0IjowLjAwMDMyNX0sImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6NTEsImltYWdlX3Rva2VucyI6MCwiYXVkaW9fdG9rZW5zIjowfX19
-  recorded_at: Mon, 14 Sep 2026 09:43:16 GMT
+        CiAgICAgICAgIAp7ImlkIjoiZ2VuLTE3ODk1NDE1OTktN1RFSWQwWUpPMnd4NXNUSkhOVkciLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjcmVhdGVkIjoxNzg5NTQxNTk5LCJtb2RlbCI6ImFudGhyb3BpYy9jbGF1ZGUtaGFpa3UtNC41IiwicHJvdmlkZXIiOiJBbWF6b24gQmVkcm9jayIsInN5c3RlbV9maW5nZXJwcmludCI6bnVsbCwic2VydmljZV90aWVyIjoiZGVmYXVsdCIsImNob2ljZXMiOlt7ImluZGV4IjowLCJsb2dwcm9icyI6bnVsbCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJuYXRpdmVfZmluaXNoX3JlYXNvbiI6ImVuZF90dXJuIiwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6Ijggw5cgMiA9IDE2IiwicmVmdXNhbCI6bnVsbCwicmVhc29uaW5nIjoiVGhlIHByZXZpb3VzIGFuc3dlciB3YXMgOC4gTm93IEkgbmVlZCB0byBtdWx0aXBseSB0aGF0IGJ5IDIuXG5cbjggw5cgMiA9IDE2IiwicmVhc29uaW5nX2RldGFpbHMiOlt7InR5cGUiOiJyZWFzb25pbmcudGV4dCIsInRleHQiOiJUaGUgcHJldmlvdXMgYW5zd2VyIHdhcyA4LiBOb3cgSSBuZWVkIHRvIG11bHRpcGx5IHRoYXQgYnkgMi5cblxuOCDDlyAyID0gMTYiLCJmb3JtYXQiOiJhbnRocm9waWMtY2xhdWRlLXYxIiwiaW5kZXgiOjAsInNpZ25hdHVyZSI6IkVzZ0NDcHdCQ0JFUUFSZ0NLa0NRS2ZDRDl1SzRpeUpKaUxBWFZwbERhT3l3NjVpa3d0VnUwVHVoT2JSK3FIQnVnd1lBdWZHQnp4aEFuNlBaUW5SbHFVbzJvNFQ1TjhLc1lUa0IzMDFZTWhsamJHRjFaR1V0YUdGcGEzVXROQzAxTFRJd01qVXhNREF4T0FCQ0NIUm9hVzVyYVc1bldndzFNelkyT1RjeU5EazNNamh5RU9JaTc5dUpiRUxaZ2k5bTFuTXJXNVNJQVFHb0FlRDVxTlVHc0FFQ0VneFIrTlF3dksrWFp4a2huSUFhREhWck9FSlJWTndlbFVtZXl5SXc2TEhnUVBsLzVkUnh4RnoyOTRMMFBBNHdRZHJFTldIaTRSczYxeHNuM3N1SjBsMGIrTEFWQ1hseTlTNHN2Q0xYS2xrL0ZIQzlUWVl0OFlXWWxuazhKa2F1bEx3RWpVNnI2WWg1TTBnR0hvOWdPZ2ZwdXhmNmlwcW9hNGw5UHRVQzY3WXZiSCs3SU5OdTlMbVBFZHd2eW42ZlMrb2pFTUF6eUxxN0lHSjlwbERJNUJGRUk3aVRUT3J2OEJnQiJ9XX19XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6NjcsImNvbXBsZXRpb25fdG9rZW5zIjo0NywidG90YWxfdG9rZW5zIjoxMTQsImNvc3QiOjAuMDAwMzAyLCJpc19ieW9rIjpmYWxzZSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjAsImNhY2hlX3dyaXRlX3Rva2VucyI6MCwiYXVkaW9fdG9rZW5zIjowLCJ2aWRlb190b2tlbnMiOjB9LCJjb3N0X2RldGFpbHMiOnsidXBzdHJlYW1faW5mZXJlbmNlX2Nvc3QiOjAuMDAwMzAyLCJ1cHN0cmVhbV9pbmZlcmVuY2VfcHJvbXB0X2Nvc3QiOjAuMDAwMDY3LCJ1cHN0cmVhbV9pbmZlcmVuY2VfY29tcGxldGlvbnNfY29zdCI6MC4wMDAyMzV9LCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjMzLCJpbWFnZV90b2tlbnMiOjAsImF1ZGlvX3Rva2VucyI6MH19fQ==
+  recorded_at: Wed, 16 Sep 2026 06:53:20 GMT
 recorded_with: VCR 6.4.0

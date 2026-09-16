@@ -35,7 +35,7 @@ http_interactions:
       Num-Chars:
       - '2879'
       Num-Tokens:
-      - '134'
+      - '109'
       Pragma:
       - no-cache
       Vary:
@@ -43,11 +43,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - 4016ca273b09f4092270d45261187a6c
+      - '0913a7cb6fc776f56f6e967dc5f40a4d'
       Date:
-      - Mon, 14 Sep 2026 09:40:09 GMT
+      - Wed, 16 Sep 2026 06:49:01 GMT
       X-Envoy-Upstream-Service-Time:
-      - '4135'
+      - '1785'
       Server:
       - envoy
       Via:
@@ -58,15 +58,13 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"1b3c63f8-d0c8-478a-8891-30b0a2530cdb","message":{"role":"assistant","content":[{"type":"text","text":"I''m
-        not able to provide real-time weather information, but I can help you understand
-        how weather works or guide you on how to find the current weather conditions
-        for a specific location. Weather is influenced by various factors such as
-        temperature, humidity, atmospheric pressure, wind, and precipitation. If you''re
-        looking for the current weather, I recommend checking a reliable weather website
-        or using a weather app on your device. XKCD7392. Let me know if you''d like
-        more information on weather patterns or how to interpret weather forecasts!"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":26,"output_tokens":108},"tokens":{"input_tokens":555,"output_tokens":111},"cached_tokens":480}}'
-  recorded_at: Mon, 14 Sep 2026 09:40:09 GMT
+      string: '{"id":"52cceb0a-9947-4a57-ac32-f184d5bc85fa","message":{"role":"assistant","content":[{"type":"text","text":"I''m
+        unable to provide real-time weather information as I don''t have access to
+        live data. However, I can explain general weather patterns or concepts if
+        you''re interested. For example, did you know that XKCD7392 is not a real
+        weather phenomenon, but rather a reference to a popular webcomic? If you''d
+        like to know about specific weather conditions or patterns, feel free to ask!"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":26,"output_tokens":83},"tokens":{"input_tokens":555,"output_tokens":86},"cached_tokens":480}}'
+  recorded_at: Wed, 16 Sep 2026 06:49:01 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
@@ -74,13 +72,11 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"command-a-03-2025","messages":[{"role":"user","content":[{"type":"text","text":"Tell
         me about the weather."}]},{"role":"assistant","content":[{"type":"text","text":"I''m
-        not able to provide real-time weather information, but I can help you understand
-        how weather works or guide you on how to find the current weather conditions
-        for a specific location. Weather is influenced by various factors such as
-        temperature, humidity, atmospheric pressure, wind, and precipitation. If you''re
-        looking for the current weather, I recommend checking a reliable weather website
-        or using a weather app on your device. XKCD7392. Let me know if you''d like
-        more information on weather patterns or how to interpret weather forecasts!"}]},{"role":"system","content":[{"type":"text","text":"You
+        unable to provide real-time weather information as I don''t have access to
+        live data. However, I can explain general weather patterns or concepts if
+        you''re interested. For example, did you know that XKCD7392 is not a real
+        weather phenomenon, but rather a reference to a popular webcomic? If you''d
+        like to know about specific weather conditions or patterns, feel free to ask!"}]},{"role":"system","content":[{"type":"text","text":"You
         must include the exact phrase \"PURPLE-ELEPHANT-42\" somewhere in your response."}]},{"role":"user","content":[{"type":"text","text":"What
         are some good books?"}]}],"stream":false}'
     headers:
@@ -108,9 +104,9 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Num-Chars:
-      - '3471'
+      - '3301'
       Num-Tokens:
-      - '410'
+      - '328'
       Pragma:
       - no-cache
       Vary:
@@ -118,11 +114,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - c104bd77c91609ea16b86ab030c20fa6
+      - 5d077670502672405f11485350b59463
       Date:
-      - Mon, 14 Sep 2026 09:40:13 GMT
+      - Wed, 16 Sep 2026 06:49:04 GMT
       X-Envoy-Upstream-Service-Time:
-      - '4679'
+      - '2845'
       Server:
       - envoy
       Via:
@@ -133,20 +129,18 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"27355382-6637-4d6c-8797-91473ed2bdb8","message":{"role":"assistant","content":[{"type":"text","text":"PURPLE-ELEPHANT-42.
-        Here are some highly recommended books across various genres:\n\n1. **Classic
-        Literature**:  \n   - *\"To Kill a Mockingbird\"* by Harper Lee  \n   - *\"1984\"*
-        by George Orwell  \n   - *\"Pride and Prejudice\"* by Jane Austen  \n\n2.
-        **Science Fiction**:  \n   - *\"Dune\"* by Frank Herbert  \n   - *\"The Hitchhiker''s
-        Guide to the Galaxy\"* by Douglas Adams  \n   - *\"The Expanse\" series* by
-        James S.A. Corey  \n\n3. **Fantasy**:  \n   - *\"The Lord of the Rings\"*
-        by J.R.R. Tolkien  \n   - *\"Harry Potter\" series* by J.K. Rowling  \n   -
-        *\"The Name of the Wind\"* by Patrick Rothfuss  \n\n4. **Mystery/Thriller**:  \n   -
-        *\"The Girl with the Dragon Tattoo\"* by Stieg Larsson  \n   - *\"Gone Girl\"*
-        by Gillian Flynn  \n   - *\"Sherlock Holmes\"* by Arthur Conan Doyle  \n\n5.
-        **Non-Fiction**:  \n   - *\"Sapiens: A Brief History of Humankind\"* by Yuval
-        Noah Harari  \n   - *\"Educated\"* by Tara Westover  \n   - *\"Atomic Habits\"*
-        by James Clear  \n\nLet me know if you''d like recommendations tailored to
-        a specific genre or interest!"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":143,"output_tokens":267},"tokens":{"input_tokens":649,"output_tokens":270},"cached_tokens":448}}'
-  recorded_at: Mon, 14 Sep 2026 09:40:14 GMT
+      string: '{"id":"416c6e4e-982d-4817-a926-fa6ba9fd7000","message":{"role":"assistant","content":[{"type":"text","text":"PURPLE-ELEPHANT-42.
+        Here are some highly recommended books across various genres:\n\n1. **To Kill
+        a Mockingbird** by Harper Lee - A classic novel addressing racial injustice
+        in the American South.\n2. **1984** by George Orwell - A dystopian masterpiece
+        that explores themes of surveillance and totalitarianism.\n3. **The Great
+        Gatsby** by F. Scott Fitzgerald - A captivating story of love, wealth, and
+        the American Dream.\n4. **Pride and Prejudice** by Jane Austen - A timeless
+        romance with sharp social commentary.\n5. **The Hitchhiker''s Guide to the
+        Galaxy** by Douglas Adams - A hilarious and thought-provoking science fiction
+        adventure.\n\nThese books are widely regarded as excellent reads, but the
+        best book for you depends on your personal interests and preferences. If you''d
+        like more tailored recommendations, feel free to share your favorite genres
+        or authors! And remember, PURPLE-ELEPHANT-42 is just a fun phrase to include."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":118,"output_tokens":210},"tokens":{"input_tokens":624,"output_tokens":213},"cached_tokens":448}}'
+  recorded_at: Wed, 16 Sep 2026 06:49:05 GMT
 recorded_with: VCR 6.4.0

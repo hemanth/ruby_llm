@@ -25,62 +25,62 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:42:03 GMT
+      - Wed, 16 Sep 2026 06:51:17 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Set-Cookie:
+      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a09f4b-8bf6-709d-8d59-fb2097d852bb
+      - 01a0a8fb-ecd2-7095-af9d-dc6eb9de2ba6
       X-Kong-Request-Id:
-      - 01a09f4b-8bf6-709d-8d59-fb2097d852bb
+      - 01a0a8fb-ecd2-7095-af9d-dc6eb9de2ba6
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '95812'
+      - '98505'
       X-Ratelimit-Tokens-Query-Cost:
       - '103'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '93'
+      - '92'
       X-Envoy-Upstream-Service-Time:
-      - '218'
+      - '253'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '219'
+      - '254'
       X-Kong-Proxy-Latency:
-      - '70'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - "<COOKIE>"
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
+      - '15'
       X-Content-Type-Options:
       - nosniff
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"144179fd9b4445c68f5f052650dc6b64","created":1789378923,"model":"mistral-small-latest","usage":{"prompt_tokens":94,"total_tokens":103,"completion_tokens":9,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"tool_calls","message":{"role":"assistant","tool_calls":[{"id":"0JpnXOsd5","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"},"index":0}],"content":""}}]}'
-  recorded_at: Mon, 14 Sep 2026 09:42:03 GMT
+      string: '{"id":"2a392309295b481588810be92df7a6e0","created":1789541477,"model":"mistral-small-latest","usage":{"prompt_tokens":94,"total_tokens":103,"completion_tokens":9,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"tool_calls","message":{"role":"assistant","tool_calls":[{"id":"bd51tKnjK","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"},"index":0}],"content":""}}]}'
+  recorded_at: Wed, 16 Sep 2026 06:51:17 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"Use
-        the best_language_to_learn tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"0JpnXOsd5","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},{"role":"tool","content":"Ruby","tool_call_id":"0JpnXOsd5"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
+        the best_language_to_learn tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"bd51tKnjK","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},{"role":"tool","content":"Ruby","tool_call_id":"bd51tKnjK"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
         the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
@@ -99,54 +99,54 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:42:04 GMT
+      - Wed, 16 Sep 2026 06:51:18 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Set-Cookie:
+      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a09f4b-8d5b-79b1-808f-50c13bcf7049
+      - 01a0a8fb-ee35-7efc-9b15-e2c520db98cd
       X-Kong-Request-Id:
-      - 01a09f4b-8d5b-79b1-808f-50c13bcf7049
+      - 01a0a8fb-ee35-7efc-9b15-e2c520db98cd
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '95775'
+      - '98453'
       X-Ratelimit-Tokens-Query-Cost:
       - '52'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '92'
+      - '91'
       X-Envoy-Upstream-Service-Time:
-      - '400'
+      - '360'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '402'
+      - '362'
       X-Kong-Proxy-Latency:
-      - '51'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - "<COOKIE>"
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
+      - '13'
       X-Content-Type-Options:
       - nosniff
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"583f101b22834c4baedbe644e7923115","created":1789378924,"model":"mistral-small-latest","usage":{"prompt_tokens":106,"total_tokens":116,"completion_tokens":10,"prompt_tokens_details":{"cached_tokens":64},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+      string: '{"id":"b449354c0639405389653e268b6b6f83","created":1789541478,"model":"mistral-small-latest","usage":{"prompt_tokens":106,"total_tokens":116,"completion_tokens":10,"prompt_tokens_details":{"cached_tokens":64},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
         best language to learn is **Ruby**."}}]}'
-  recorded_at: Mon, 14 Sep 2026 09:42:04 GMT
+  recorded_at: Wed, 16 Sep 2026 06:51:18 GMT
 recorded_with: VCR 6.4.0

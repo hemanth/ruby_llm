@@ -26,7 +26,7 @@ http_interactions:
       Content-Type:
       - text/event-stream
       Date:
-      - Mon, 14 Sep 2026 09:39:43 GMT
+      - Wed, 16 Sep 2026 06:48:26 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -42,13 +42,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-ab2a09e39a20449a8dfdf399598143cd-ab711dd500301e9b-00
+      - 00-78ebdbb6887d365956c21d685f087e5a-9faf57fa0010b679-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - dc486889-ddfe-490b-8235-3bc8b40f5731
+      - 5cf4ad35-8860-4286-8119-757127168f4f
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -62,7 +62,7 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '49'
+      - '48'
       X-Ratelimit-Reset-Requests:
       - '1'
       X-Ratelimit-Limit-Requests:
@@ -84,7 +84,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - dc486889-ddfe-490b-8235-3bc8b40f5731
+      - 5cf4ad35-8860-4286-8119-757127168f4f
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -94,27 +94,27 @@ http_interactions:
     body:
       encoding: UTF-8
       string: |+
-        data: {"id":"4d57cecb-cfe2-45b9-87d5-3d22180a08a1","object":"chat.completion.chunk","created":1789378783,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":"1","role":"assistant"}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"48fce760-02bd-4994-af13-5af655e882ef","object":"chat.completion.chunk","created":1789541306,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":"1","role":"assistant"}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id":"4d57cecb-cfe2-45b9-87d5-3d22180a08a1","object":"chat.completion.chunk","created":1789378783,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":","}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"48fce760-02bd-4994-af13-5af655e882ef","object":"chat.completion.chunk","created":1789541306,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":","}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id":"4d57cecb-cfe2-45b9-87d5-3d22180a08a1","object":"chat.completion.chunk","created":1789378783,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":" "}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"48fce760-02bd-4994-af13-5af655e882ef","object":"chat.completion.chunk","created":1789541306,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":" "}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id":"4d57cecb-cfe2-45b9-87d5-3d22180a08a1","object":"chat.completion.chunk","created":1789378784,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":"2"}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"48fce760-02bd-4994-af13-5af655e882ef","object":"chat.completion.chunk","created":1789541307,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":"2"}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id":"4d57cecb-cfe2-45b9-87d5-3d22180a08a1","object":"chat.completion.chunk","created":1789378784,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":","}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"48fce760-02bd-4994-af13-5af655e882ef","object":"chat.completion.chunk","created":1789541307,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":","}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id":"4d57cecb-cfe2-45b9-87d5-3d22180a08a1","object":"chat.completion.chunk","created":1789378784,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":" "}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"48fce760-02bd-4994-af13-5af655e882ef","object":"chat.completion.chunk","created":1789541307,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":" "}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id":"4d57cecb-cfe2-45b9-87d5-3d22180a08a1","object":"chat.completion.chunk","created":1789378784,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":"3"}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"48fce760-02bd-4994-af13-5af655e882ef","object":"chat.completion.chunk","created":1789541307,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{"content":"3"}}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id":"4d57cecb-cfe2-45b9-87d5-3d22180a08a1","object":"chat.completion.chunk","created":1789378784,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{},"finish_reason":"stop"}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
+        data: {"id":"48fce760-02bd-4994-af13-5af655e882ef","object":"chat.completion.chunk","created":1789541307,"model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"delta":{},"finish_reason":"stop"}],"system_fingerprint":"fp_49c5j0a323","service_tier":"default"}
 
-        data: {"id": "4d57cecb-cfe2-45b9-87d5-3d22180a08a1", "object": "chat.completion.chunk", "created": 1789378784, "model": "grok-4-1-fast-non-reasoning", "choices": [], "usage": {"prompt_tokens": 12, "completion_tokens": 7, "total_tokens": 19, "prompt_tokens_details": {"text_tokens": 12, "audio_tokens": 0, "image_tokens": 0, "cached_tokens": 161}, "completion_tokens_details": {"reasoning_tokens": 0, "audio_tokens": 0, "accepted_prediction_tokens": 0, "rejected_prediction_tokens": 0}, "num_sources_used": 0, "cost_in_usd_ticks": 0}, "system_fingerprint": "fp_49c5j0a323", "service_tier": "default"}
+        data: {"id": "48fce760-02bd-4994-af13-5af655e882ef", "object": "chat.completion.chunk", "created": 1789541307, "model": "grok-4-1-fast-non-reasoning", "choices": [], "usage": {"prompt_tokens": 12, "completion_tokens": 7, "total_tokens": 19, "prompt_tokens_details": {"text_tokens": 12, "audio_tokens": 0, "image_tokens": 0, "cached_tokens": 161}, "completion_tokens_details": {"reasoning_tokens": 0, "audio_tokens": 0, "accepted_prediction_tokens": 0, "rejected_prediction_tokens": 0}, "num_sources_used": 0, "cost_in_usd_ticks": 0}, "system_fingerprint": "fp_49c5j0a323", "service_tier": "default"}
 
         data: [DONE]
 
-  recorded_at: Mon, 14 Sep 2026 09:39:44 GMT
+  recorded_at: Wed, 16 Sep 2026 06:48:27 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
@@ -141,7 +141,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 09:39:44 GMT
+      - Wed, 16 Sep 2026 06:48:27 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -157,13 +157,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-d1a63e0728bd4bd1e292297794a0fc7f-6ef243b3003135ca-00
+      - 00-3b12659adb8827db0455bbae0e73672e-724a3fa500082408-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 5994ef98-dc56-4b42-8734-641dbf52f408
+      - b58a677a-b15b-4466-bfb6-0897725f1bcb
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -179,7 +179,7 @@ http_interactions:
       X-Ratelimit-Remaining-Requests:
       - '48'
       X-Ratelimit-Reset-Requests:
-      - '1'
+      - '2'
       X-Ratelimit-Limit-Requests:
       - '50'
       X-Ratelimit-Renewalperiod-Requests:
@@ -199,7 +199,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 5994ef98-dc56-4b42-8734-641dbf52f408
+      - b58a677a-b15b-4466-bfb6-0897725f1bcb
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -208,8 +208,8 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"19edf375-b8b5-482d-9cb0-8d159548e548","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"1,
-        2, 3"},"finish_reason":"stop"}],"usage":{"prompt_tokens":12,"completion_tokens":7,"total_tokens":19,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":179,"audio_tokens":0,"text_tokens":12,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789378784,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Mon, 14 Sep 2026 09:39:44 GMT
+      string: '{"id":"22f0c09a-9cbd-41a9-bbdd-d4aadb63474b","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"1,
+        2, 3"},"finish_reason":"stop"}],"usage":{"prompt_tokens":12,"completion_tokens":7,"total_tokens":19,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":179,"audio_tokens":0,"text_tokens":12,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789541307,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Wed, 16 Sep 2026 06:48:27 GMT
 recorded_with: VCR 6.4.0
 ...

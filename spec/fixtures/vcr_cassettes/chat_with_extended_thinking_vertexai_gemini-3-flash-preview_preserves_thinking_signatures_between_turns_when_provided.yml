@@ -20,14 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Pragma:
+      - no-cache
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
       Date:
-      - Mon, 14 Sep 2026 09:45:09 GMT
+      - Wed, 16 Sep 2026 06:55:11 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
-      Pragma:
-      - no-cache
       Content-Type:
       - application/json; charset=utf-8
       Vary:
@@ -52,11 +52,11 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/cloud-platform openid",
+          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/cloud-platform",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Mon, 14 Sep 2026 09:45:09 GMT
+  recorded_at: Wed, 16 Sep 2026 06:55:11 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-3-flash-preview:generateContent
@@ -86,7 +86,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 09:45:11 GMT
+      - Wed, 16 Sep 2026 06:55:12 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -109,12 +109,12 @@ http_interactions:
                 "role": "model",
                 "parts": [
                   {
-                    "text": "**My Thought Process for Calculating 5 + 3**\n\nAs an expert in my domain, my initial analysis of the user's request is straightforward: they require the computation of a simple arithmetic sum. Specifically, the input is \"5 and 3,\" which translates directly to the mathematical expression \"5 + 3.\" My internal processing immediately recognizes this as a fundamental addition operation.\n\nHaving identified the operation and the operands, my next step is to execute the calculation. I access my learned knowledge base of arithmetic principles. The sum of 5 and 3 is a core operation, and the result is readily available.\n\nTherefore, 5 plus 3 equals 8.\n\nMy final directive is to present this result with clarity and conciseness, ensuring the user receives the definitive answer to their query without ambiguity.\n\n",
+                    "text": "**My Thought Process:**\n\nAlright, so the user has presented me with a straightforward arithmetic problem. My immediate task is to ascertain the sum of two numbers: 5 and 3. This is a fundamental operation, and I can quickly process it.\n\nMy internal calculation confirms: 5 plus 3 equals 8.\n\nNow, the crucial part is to articulate this result clearly and directly to the user, who I understand to be an expert in their domain. Therefore, a concise and unambiguous statement of the answer is paramount. I will ensure my response leaves no room for interpretation regarding the calculated sum.\n\n",
                     "thought": true
                   },
                   {
                     "text": "5 + 3 = 8",
-                    "thoughtSignature": "AY89a19I+YnSg0wTbF3CnraUdRA4BfRcWldRtgzlnhwyqpmcoMSsWEVkgIp2QIia1vF8g3UYl/xwMhVxLEVou5qJFbWH2d5769G1tKgShnPom4oYpjlO6f42+4VwY2xPGFhT3e/jtsOklHP+ku6Yy/HQO3j4iuImw7sgrSqJhXnsY0Qb9aPb5RMPbN//UtfRRGQh+zCXrNgpr4uGVWEIV1QQ"
+                    "thoughtSignature": "AY89a18esRxYI50RFbJXo8IeKzBYDoYcAtDrzZtb9EMl0TNMw2LJgAqCPoOa4yOtQ3GS2SZ3B7GgDg6ODvYffThFeYKkdXbRF92a26fFI0d12Uab3sxrpQ/ZF2IvoFvbf2KDgztGNkJrM9wwYMztQ+X4rWbKQl6ydunMjex8Ij9tGnKkw09+TgDlZ1ujhLi52LMeXSArcaUQRGq8Vnft7Z2YiV8="
                   }
                 ]
               },
@@ -124,7 +124,7 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 8,
             "candidatesTokenCount": 7,
-            "totalTokenCount": 44,
+            "totalTokenCount": 45,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -138,30 +138,27 @@ http_interactions:
                 "tokenCount": 7
               }
             ],
-            "thoughtsTokenCount": 29
+            "thoughtsTokenCount": 30
           },
           "modelVersion": "gemini-3-flash-preview",
-          "createTime": "2026-09-14T09:45:09.211281Z",
-          "responseId": "JcKnatHyDPuwxdQPw-bcoAM"
+          "createTime": "2026-09-16T06:55:11.280391Z",
+          "responseId": "Tz2qaseOEZWyxfcPou-XwA0"
         }
-  recorded_at: Mon, 14 Sep 2026 09:45:11 GMT
+  recorded_at: Wed, 16 Sep 2026 06:55:12 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-3-flash-preview:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What is 5 + 3?"}]},{"role":"model","parts":[{"thought":true,"text":"**My
-        Thought Process for Calculating 5 + 3**\n\nAs an expert in my domain, my initial
-        analysis of the user''s request is straightforward: they require the computation
-        of a simple arithmetic sum. Specifically, the input is \"5 and 3,\" which
-        translates directly to the mathematical expression \"5 + 3.\" My internal
-        processing immediately recognizes this as a fundamental addition operation.\n\nHaving
-        identified the operation and the operands, my next step is to execute the
-        calculation. I access my learned knowledge base of arithmetic principles.
-        The sum of 5 and 3 is a core operation, and the result is readily available.\n\nTherefore,
-        5 plus 3 equals 8.\n\nMy final directive is to present this result with clarity
-        and conciseness, ensuring the user receives the definitive answer to their
-        query without ambiguity.\n\n","thoughtSignature":"AY89a19I+YnSg0wTbF3CnraUdRA4BfRcWldRtgzlnhwyqpmcoMSsWEVkgIp2QIia1vF8g3UYl/xwMhVxLEVou5qJFbWH2d5769G1tKgShnPom4oYpjlO6f42+4VwY2xPGFhT3e/jtsOklHP+ku6Yy/HQO3j4iuImw7sgrSqJhXnsY0Qb9aPb5RMPbN//UtfRRGQh+zCXrNgpr4uGVWEIV1QQ"},{"text":"5
+        Thought Process:**\n\nAlright, so the user has presented me with a straightforward
+        arithmetic problem. My immediate task is to ascertain the sum of two numbers:
+        5 and 3. This is a fundamental operation, and I can quickly process it.\n\nMy
+        internal calculation confirms: 5 plus 3 equals 8.\n\nNow, the crucial part
+        is to articulate this result clearly and directly to the user, who I understand
+        to be an expert in their domain. Therefore, a concise and unambiguous statement
+        of the answer is paramount. I will ensure my response leaves no room for interpretation
+        regarding the calculated sum.\n\n","thoughtSignature":"AY89a18esRxYI50RFbJXo8IeKzBYDoYcAtDrzZtb9EMl0TNMw2LJgAqCPoOa4yOtQ3GS2SZ3B7GgDg6ODvYffThFeYKkdXbRF92a26fFI0d12Uab3sxrpQ/ZF2IvoFvbf2KDgztGNkJrM9wwYMztQ+X4rWbKQl6ydunMjex8Ij9tGnKkw09+TgDlZ1ujhLi52LMeXSArcaUQRGq8Vnft7Z2YiV8="},{"text":"5
         + 3 = 8"}]},{"role":"user","parts":[{"text":"Now multiply that by 2"}]}],"generationConfig":{"thinkingConfig":{"includeThoughts":true,"thinkingLevel":"medium"}}}'
     headers:
       User-Agent:
@@ -186,7 +183,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 09:45:13 GMT
+      - Wed, 16 Sep 2026 06:55:15 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -202,6 +199,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicm9sZSI6ICJtb2RlbCIsCiAgICAgICAgInBhcnRzIjogWwogICAgICAgICAgewogICAgICAgICAgICAidGV4dCI6ICIqKk15IFRob3VnaHQgUHJvY2VzcyBmb3IgUmVhY2hpbmcgMTYqKlxuXG5BbHJpZ2h0LCBzbyB0aGUgbGFzdCB0aGluZyBJIHByb2Nlc3NlZCwgdGhlIG51bWJlciBJJ20gaG9sZGluZyBvbnRvLCBpcyBhbiA4LiBOb3csIHRoZSBpbnN0cnVjdGlvbiBpcyB0byB0YWtlIHRoYXQgOCBhbmQgbXVsdGlwbHkgaXQgYnkgMi4gU2ltcGxlIGVub3VnaC4gSSB2aXN1YWxpemUgdGhlIG9wZXJhdGlvbjogOCwgZG91YmxlZC4gVGhhdCBicmluZ3MgbWUgdG8gMTYuIFNvLCB0aGUgY3VycmVudCB2YWx1ZSBJJ3ZlIGFycml2ZWQgYXQgaXMgMTYuXG5cbiIsCiAgICAgICAgICAgICJ0aG91Z2h0IjogdHJ1ZQogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgInRleHQiOiAiOCDDlyAyID0gMTYiLAogICAgICAgICAgICAidGhvdWdodFNpZ25hdHVyZSI6ICJBWTg5YTEvdksxbGJKR1R4T1FRMS9qNmp5V3BTbFJvZnIwUm8wc2lBNlYwaVMwSndMaEMydzRQRUdROFV4VkY4WUVCb09MMVFOOW94MFA2WTZsdXNRdzBndC9DUGlLVndxVkFtaThlSW1maVM3eW9HMDJwVXczTGhzNElNdlFNZ0FCQiszdEQydXZ6c0FaMzlPS2NLSEdiSWJuV0xxOFFRV3g0c2JuYUVqRCtKMGRoOGM2RW51ZTVzUS9Ca1V0Um5OQVhCR0tqQmhnSDRUb24yMGtjejdNcFVRd1U9IgogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfSwKICAgICAgImZpbmlzaFJlYXNvbiI6ICJTVE9QIgogICAgfQogIF0sCiAgInVzYWdlTWV0YWRhdGEiOiB7CiAgICAicHJvbXB0VG9rZW5Db3VudCI6IDIxLAogICAgImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogOCwKICAgICJ0b3RhbFRva2VuQ291bnQiOiA1NywKICAgICJ0cmFmZmljVHlwZSI6ICJPTl9ERU1BTkQiLAogICAgInByb21wdFRva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiAyMQogICAgICB9CiAgICBdLAogICAgImNhbmRpZGF0ZXNUb2tlbnNEZXRhaWxzIjogWwogICAgICB7CiAgICAgICAgIm1vZGFsaXR5IjogIlRFWFQiLAogICAgICAgICJ0b2tlbkNvdW50IjogOAogICAgICB9CiAgICBdLAogICAgInRob3VnaHRzVG9rZW5Db3VudCI6IDI4CiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0zLWZsYXNoLXByZXZpZXciLAogICJjcmVhdGVUaW1lIjogIjIwMjYtMDktMTRUMDk6NDU6MTIuMDA4MTYxWiIsCiAgInJlc3BvbnNlSWQiOiAiS01LbmF1RV80cU83OFEtX18tQzVDZyIKfQo=
-  recorded_at: Mon, 14 Sep 2026 09:45:13 GMT
+        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicm9sZSI6ICJtb2RlbCIsCiAgICAgICAgInBhcnRzIjogWwogICAgICAgICAgewogICAgICAgICAgICAidGV4dCI6ICIqKk15IFRob3VnaHQgUHJvY2VzcyBmb3IgUmVhY2hpbmcgMTYqKlxuXG5BbHJpZ2h0LCBzbyB0aGUgbGFzdCB0aGluZyBJIHByb2Nlc3NlZCwgdGhlIG51bWJlciBJJ20gaG9sZGluZyBvbnRvLCBpcyBhbiA4LiBOb3csIHRoZSBpbnN0cnVjdGlvbiBpcyB0byB0YWtlIHRoYXQgOCBhbmQgbXVsdGlwbHkgaXQgYnkgMi4gU2ltcGxlIGVub3VnaC4gSSB2aXN1YWxpemUgdGhlIG9wZXJhdGlvbjogOCwgZG91YmxlZC4gVGhhdCBicmluZ3MgbWUgdG8gMTYuIFNvLCB0aGUgY3VycmVudCB2YWx1ZSBJJ3ZlIGFycml2ZWQgYXQgaXMgMTYuXG5cbiIsCiAgICAgICAgICAgICJ0aG91Z2h0IjogdHJ1ZQogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgInRleHQiOiAiOCDDlyAyID0gMTYiLAogICAgICAgICAgICAidGhvdWdodFNpZ25hdHVyZSI6ICJBWTg5YTE5ZmVocys1RG1EbHdtVldDM2FiK29ieVVCaVhVcnl6ejNOTGlmTVlocFJpU3ptOVNZaVl3NnBXMmpHMSsvNXZwODZDd1dlOUFwenNZNEtzTm9WOG94UFk4VzFRbjZ2elBOR2pjYXFUdzNlNmRsYVdiWUtlRVFrODVGekJJM2xBSUozd2xJRXNSM280eDVEUlZsOE9WVlkxdDdFdGdDNG5wUnBvWk5GVTBqdFFQazZ4bm1vblp5aG50dVFGZkFjV25hOGVPZkNHUEJHMktOdlBrOGl3bk09IgogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfSwKICAgICAgImZpbmlzaFJlYXNvbiI6ICJTVE9QIgogICAgfQogIF0sCiAgInVzYWdlTWV0YWRhdGEiOiB7CiAgICAicHJvbXB0VG9rZW5Db3VudCI6IDIxLAogICAgImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogOCwKICAgICJ0b3RhbFRva2VuQ291bnQiOiA1NywKICAgICJ0cmFmZmljVHlwZSI6ICJPTl9ERU1BTkQiLAogICAgInByb21wdFRva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiAyMQogICAgICB9CiAgICBdLAogICAgImNhbmRpZGF0ZXNUb2tlbnNEZXRhaWxzIjogWwogICAgICB7CiAgICAgICAgIm1vZGFsaXR5IjogIlRFWFQiLAogICAgICAgICJ0b2tlbkNvdW50IjogOAogICAgICB9CiAgICBdLAogICAgInRob3VnaHRzVG9rZW5Db3VudCI6IDI4CiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0zLWZsYXNoLXByZXZpZXciLAogICJjcmVhdGVUaW1lIjogIjIwMjYtMDktMTZUMDY6NTU6MTIuNzkxMzQ1WiIsCiAgInJlc3BvbnNlSWQiOiAiVUQycWFyR21NSWplLWVRUHZkanE0QXMiCn0K
+  recorded_at: Wed, 16 Sep 2026 06:55:15 GMT
 recorded_with: VCR 6.4.0

@@ -24,7 +24,7 @@ http_interactions:
       message: Payment Required
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:50:14 GMT
+      - Wed, 16 Sep 2026 06:51:37 GMT
       Server:
       - uvicorn
       Content-Type:
@@ -42,7 +42,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=1800;
       X-Trace-Id:
-      - 45fb7ceb45bf287af3a4f386efa24fd1
+      - 92eed5029eb1ae9714502fb430892748
       X-Region:
       - us-central1
       Via:
@@ -54,6 +54,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"detail":{"type":"payment_required","code":"paid_plan_required","message":"This
-        endpoint requires a Pro plan or above.","status":"paid_plan_required","request_id":"45fb7ceb45bf287af3a4f386efa24fd1"}}'
-  recorded_at: Mon, 14 Sep 2026 09:50:14 GMT
+        endpoint requires a Pro plan or above.","status":"paid_plan_required","request_id":"92eed5029eb1ae9714502fb430892748"}}'
+  recorded_at: Wed, 16 Sep 2026 06:51:37 GMT
 recorded_with: VCR 6.4.0

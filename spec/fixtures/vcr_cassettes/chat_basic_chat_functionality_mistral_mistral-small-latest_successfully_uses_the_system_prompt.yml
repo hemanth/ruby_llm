@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:40:53 GMT
+      - Wed, 16 Sep 2026 06:49:53 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,31 +33,31 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - 01a09f4a-7984-7482-8929-ea5b4e88b55e
+      - 01a0a8fa-a37a-756a-be2a-71d603159c54
       X-Kong-Request-Id:
-      - 01a09f4a-7984-7482-8929-ea5b4e88b55e
+      - 01a0a8fa-a37a-756a-be2a-71d603159c54
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '96778'
+      - '95533'
       X-Ratelimit-Tokens-Query-Cost:
-      - '114'
+      - '118'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '92'
+      - '88'
       X-Envoy-Upstream-Service-Time:
-      - '693'
+      - '684'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '694'
+      - '685'
       X-Kong-Proxy-Latency:
-      - '17'
+      - '25'
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
@@ -72,10 +72,10 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"6e4cec37f45b464c9d798b3d026306fb","created":1789378853,"model":"mistral-small-latest","usage":{"prompt_tokens":43,"total_tokens":114,"completion_tokens":71,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+      string: '{"id":"68260e18a7e24dfb9c608850b925fcfd","created":1789541393,"model":"mistral-small-latest","usage":{"prompt_tokens":43,"total_tokens":118,"completion_tokens":75,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
         weather today is quite pleasant, with a mix of sun and clouds. The temperature
-        is moderate, and there''s a gentle breeze. It''s a great day to be outdoors,
-        but don''t forget your sunscreen! As Randall Munroe would say in XKCD7392,
-        \"Weather is just chaos with a press office.\""}}]}'
-  recorded_at: Mon, 14 Sep 2026 09:40:53 GMT
+        is moderate, and there''s a light breeze. It''s a great day to be outdoors,
+        but don''t forget your sunscreen! Speaking of which, have you ever wondered
+        why we don''t have a universal weather symbol like the one in XKCD7392?"}}]}'
+  recorded_at: Wed, 16 Sep 2026 06:49:53 GMT
 recorded_with: VCR 6.4.0

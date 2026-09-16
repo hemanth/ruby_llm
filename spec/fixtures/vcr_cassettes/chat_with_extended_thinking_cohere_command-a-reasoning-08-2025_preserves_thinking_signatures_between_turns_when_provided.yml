@@ -34,7 +34,7 @@ http_interactions:
       Num-Chars:
       - '6601'
       Num-Tokens:
-      - '58'
+      - '52'
       Pragma:
       - no-cache
       Vary:
@@ -42,11 +42,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - e0009bad3f38329660f932a97116d2ca
+      - 56a045ccecb85faf1dcfbbf8adc5d7f3
       Date:
-      - Mon, 14 Sep 2026 09:40:54 GMT
+      - Wed, 16 Sep 2026 06:50:48 GMT
       X-Envoy-Upstream-Service-Time:
-      - '388'
+      - '401'
       Server:
       - envoy
       Via:
@@ -57,20 +57,20 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"a4a08eb2-586d-4819-ae58-2e36f802c244","message":{"role":"assistant","content":[{"type":"thinking","thinking":"The
+      string: '{"id":"a4d83f7b-d9e4-4ea6-8f5c-7af15a0ac4d9","message":{"role":"assistant","content":[{"type":"thinking","thinking":"The
         user is asking for the sum of 5 and 3. Since this is a straightforward arithmetic
         problem, I don''t need to use any tools. I can calculate the result directly."},{"type":"text","text":"The
-        sum of 5 and 3 is 8."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":8,"output_tokens":50},"tokens":{"input_tokens":1394,"output_tokens":55,"reasoning_tokens":38},"cached_tokens":1344}}'
-  recorded_at: Mon, 14 Sep 2026 09:40:54 GMT
+        answer is 8."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":8,"output_tokens":44},"tokens":{"input_tokens":1394,"output_tokens":49,"reasoning_tokens":38},"cached_tokens":1344}}'
+  recorded_at: Wed, 16 Sep 2026 06:50:48 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
     body:
       encoding: UTF-8
       string: '{"model":"command-a-reasoning-08-2025","messages":[{"role":"user","content":[{"type":"text","text":"What
-        is 5 + 3?"}]},{"role":"assistant","content":[{"type":"text","text":"The sum
-        of 5 and 3 is 8."}]},{"role":"user","content":[{"type":"text","text":"Now
-        multiply that by 2"}]}],"stream":false,"thinking":{"type":"enabled"}}'
+        is 5 + 3?"}]},{"role":"assistant","content":[{"type":"text","text":"The answer
+        is 8."}]},{"role":"user","content":[{"type":"text","text":"Now multiply that
+        by 2"}]}],"stream":false,"thinking":{"type":"enabled"}}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -96,9 +96,9 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Num-Chars:
-      - '6876'
+      - '6868'
       Num-Tokens:
-      - '110'
+      - '112'
       Pragma:
       - no-cache
       Vary:
@@ -106,25 +106,26 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - eda29b1a78d877f4939010544e52e13c
+      - ceeaf0f7c3234e903018599214ad7278
       Date:
-      - Mon, 14 Sep 2026 09:40:55 GMT
+      - Wed, 16 Sep 2026 06:50:49 GMT
       X-Envoy-Upstream-Service-Time:
-      - '641'
+      - '860'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"9f762a48-b88a-42a7-a5ea-c74ef974ac9d","message":{"role":"assistant","content":[{"type":"thinking","thinking":"I
-        need to multiply the previous result, which was 8, by 2.\n\nCalculating 8
-        multiplied by 2 gives 16."},{"type":"text","text":"Sure! \n\n1. **Addition:**  \n   \\(5
-        + 3 = 8\\)\n\n2. **Multiplication:**  \n   \\(8 \\times 2 = 16\\)\n\n**Final
-        Answer:** \\(\\boxed{16}\\)"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":26,"output_tokens":84},"tokens":{"input_tokens":1431,"output_tokens":89,"reasoning_tokens":32},"cached_tokens":1344}}'
-  recorded_at: Mon, 14 Sep 2026 09:40:55 GMT
+      string: '{"id":"12698825-f18f-4040-9116-6e680c79f5ac","message":{"role":"assistant","content":[{"type":"thinking","thinking":"Okay,
+        the user asked to multiply the previous result by 2. The previous result was
+        8 from adding 5 and 3. So now I need to calculate 8 multiplied by 2. Let me
+        do that: 8 times 2 equals 16. I should check if there''s any other steps or
+        tools needed, but since it''s a straightforward multiplication, no tools are
+        required. The answer should be 16."},{"type":"text","text":"16"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":20,"output_tokens":92},"tokens":{"input_tokens":1425,"output_tokens":97,"reasoning_tokens":90},"cached_tokens":1344}}'
+  recorded_at: Wed, 16 Sep 2026 06:50:50 GMT
 recorded_with: VCR 6.4.0

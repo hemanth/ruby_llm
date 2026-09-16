@@ -23,22 +23,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Date:
+      - Wed, 16 Sep 2026 07:08:34 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
       - ''
+      Resp-Start-Time:
+      - '1789542516627'
+      X-Envoy-Upstream-Service-Time:
+      - '1268'
       Content-Type:
       - application/json; charset=utf-8
-      Req-Arrive-Time:
-      - '1789384108925'
-      Date:
-      - Mon, 14 Sep 2026 11:08:28 GMT
       Req-Cost-Time:
-      - '1999'
-      Resp-Start-Time:
-      - '1789384110924'
-      X-Envoy-Upstream-Service-Time:
-      - '1991'
+      - '1272'
+      Req-Arrive-Time:
+      - '1789542515355'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -46,15 +46,13 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"role":"assistant","content":"5
-        + 3 = 8.","reasoning_content":"Okay, let''s see. The user is asking what 5
-        plus 3 is. Hmm, that seems straightforward. Wait, but maybe they want to make
-        sure I''m not making a mistake. Let me double-check. 5 plus 3... 5 and 3.
-        Adding them together. So, 5 plus 2 is 7, then plus 1 more is 8. Yeah, that''s
-        right. Or maybe count on my fingers: 5, 6, 7, 8. Yep, that''s 8. I think that''s
-        correct. No, I don''t think there''s any trick here. Just a simple addition.
-        The user might be testing if I''m paying attention or if I''m rushing. But
-        the question is pretty basic. Let me make sure I''m not confusing addition
-        with multiplication. 5 times 3 is 15, but that''s not the case here. So, definitely
-        5 + 3 equals 8. Alright, I''m confident with that answer.\n"}}],"created":1789384110,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":223,"prompt_tokens":21,"total_tokens":244,"prompt_tokens_details":{"cached_tokens":3}},"id":"chatcmpl-776BPsPlR7jaB0oQ2ElEwTQHtUoS6Mbj","timings":{"cache_n":3,"prompt_n":18,"prompt_ms":15.647,"prompt_per_token_ms":0.8692777777777778,"prompt_per_second":1150.380264587461,"predicted_n":223,"predicted_ms":1964.626,"predicted_per_token_ms":8.849666666666666,"predicted_per_second":112.99860635052168}}'
-  recorded_at: Mon, 14 Sep 2026 11:08:30 GMT
+        + 3 = 8.","reasoning_content":"Okay, the user is asking what 5 plus 3 is.
+        Let me make sure I understand the question correctly. They want the sum of
+        5 and 3. I should recall basic addition. Starting with 5, adding 3 means moving
+        three steps forward. So 5 + 1 is 6, then 7, then 8. That should be 8. Wait,
+        is there any chance they might be asking about something else, like a trick
+        question or a different base? The question seems straightforward. The user
+        mentioned to think briefly, so I don''t need to overcomplicate it. Just confirm
+        the standard addition. Yeah, 5 + 3 equals 8. I should present the answer clearly.\n"}}],"created":1789542516,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":162,"prompt_tokens":21,"total_tokens":183,"prompt_tokens_details":{"cached_tokens":3}},"id":"chatcmpl-6JoCKvJQjNpe9jlsiObonAO9yWJHT97X","timings":{"cache_n":3,"prompt_n":18,"prompt_ms":14.945,"prompt_per_token_ms":0.8302777777777778,"prompt_per_second":1204.416192706591,"predicted_n":162,"predicted_ms":1242.716,"predicted_per_token_ms":7.718732919254657,"predicted_per_second":129.5549425612932}}'
+  recorded_at: Wed, 16 Sep 2026 07:08:36 GMT
 recorded_with: VCR 6.4.0

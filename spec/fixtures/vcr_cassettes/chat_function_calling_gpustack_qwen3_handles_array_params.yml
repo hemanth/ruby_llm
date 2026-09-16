@@ -25,22 +25,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Req-Cost-Time:
+      - '980'
+      X-Envoy-Upstream-Service-Time:
+      - '977'
+      Req-Arrive-Time:
+      - '1789542555544'
+      Resp-Start-Time:
+      - '1789542556524'
       Date:
-      - Mon, 14 Sep 2026 11:09:12 GMT
+      - Wed, 16 Sep 2026 07:09:15 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
       - ''
       Content-Type:
       - application/json; charset=utf-8
-      Req-Arrive-Time:
-      - '1789384152706'
-      Resp-Start-Time:
-      - '1789384153756'
-      Req-Cost-Time:
-      - '1049'
-      X-Envoy-Upstream-Service-Time:
-      - '1046'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -54,6 +54,6 @@ http_interactions:
         those tags. I''ll make sure the JSON is correctly formatted with the tags
         as an array. No other parameters are needed since the function only requires
         tags. Let me output the tool call inside the XML tags.\n","tool_calls":[{"type":"function","function":{"name":"array_params","arguments":"{\"tags\":
-        [\"red\", \"blue\"]}"},"id":"bAtsWMdauYuZ79MW9yQoFNr8Kn3fVuXq"}]}}],"created":1789384153,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":121,"prompt_tokens":189,"total_tokens":310,"prompt_tokens_details":{"cached_tokens":3}},"id":"chatcmpl-8wlFXzHIvBJTm1ffxdeiYPEyxwpyAYpG","timings":{"cache_n":3,"prompt_n":186,"prompt_ms":43.467,"prompt_per_token_ms":0.23369354838709677,"prompt_per_second":4279.108289046863,"predicted_n":121,"predicted_ms":954.204,"predicted_per_token_ms":7.9517,"predicted_per_second":125.7592716022989}}'
-  recorded_at: Mon, 14 Sep 2026 11:09:13 GMT
+        [\"red\", \"blue\"]}"},"id":"u81MvJJiIBaF1c5U8jvOACn8OnDiiqIt"}]}}],"created":1789542556,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":121,"prompt_tokens":189,"total_tokens":310,"prompt_tokens_details":{"cached_tokens":3}},"id":"chatcmpl-NqJqXRMCn3odHPb1peluDfwg8zRg2lgK","timings":{"cache_n":3,"prompt_n":186,"prompt_ms":43.18,"prompt_per_token_ms":0.2321505376344086,"prompt_per_second":4307.549791570171,"predicted_n":121,"predicted_ms":915.271,"predicted_per_token_ms":7.627258333333333,"predicted_per_second":131.1087098793691}}'
+  recorded_at: Wed, 16 Sep 2026 07:09:16 GMT
 recorded_with: VCR 6.4.0

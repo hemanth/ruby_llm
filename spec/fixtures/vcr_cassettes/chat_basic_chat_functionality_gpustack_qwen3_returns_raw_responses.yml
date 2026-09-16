@@ -23,42 +23,29 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Req-Cost-Time:
-      - '1928'
-      Req-Arrive-Time:
-      - '1789384084697'
-      Resp-Start-Time:
-      - '1789384086625'
       Date:
-      - Mon, 14 Sep 2026 11:08:04 GMT
-      Access-Control-Allow-Origin:
-      - ''
-      X-Envoy-Upstream-Service-Time:
-      - '1922'
+      - Wed, 16 Sep 2026 07:08:14 GMT
       Server:
       - istio-envoy
+      Access-Control-Allow-Origin:
+      - ''
       Content-Type:
       - application/json; charset=utf-8
+      Req-Cost-Time:
+      - '1840'
+      Req-Arrive-Time:
+      - '1789542495148'
+      X-Envoy-Upstream-Service-Time:
+      - '1833'
+      Resp-Start-Time:
+      - '1789542496989'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"role":"assistant","content":"The
-        capital of France is **Paris**. It is a major cultural, economic, and political
-        center in Europe, home to iconic landmarks such as the Eiffel Tower, the Louvre
-        Museum, and the Notre-Dame Cathedral. Paris has served as the capital of France
-        since the 3rd century and remains the seat of the French government.","reasoning_content":"Okay,
-        the user is asking for the capital of France. Let me think. I know that France
-        is a country in Europe, and its capital is a well-known city. From what I
-        remember, the capital is Paris. But wait, I should make sure there''s no confusion
-        with other cities. For example, some people might think it''s Lyon or Marseille,
-        but those are major cities, not the capital. Paris is the political, economic,
-        and cultural center of France. Let me confirm. Yes, Paris has been the capital
-        since the 3rd century, and it''s the seat of the French government. The Eiffel
-        Tower and the Louvre Museum are iconic landmarks there. I think that''s correct.
-        No, I don''t recall any other city being the capital. So the answer should
-        be Paris.\n"}}],"created":1789384086,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":240,"prompt_tokens":15,"total_tokens":255,"prompt_tokens_details":{"cached_tokens":4}},"id":"chatcmpl-AQWAF1LV3Jiv2cdAspqtqpE5nThKxmua","timings":{"cache_n":4,"prompt_n":11,"prompt_ms":14.618,"prompt_per_token_ms":1.328909090909091,"prompt_per_second":752.4969216035024,"predicted_n":240,"predicted_ms":1880.077,"predicted_per_token_ms":7.866430962343096,"predicted_per_second":127.12245296336268}}'
-  recorded_at: Mon, 14 Sep 2026 11:08:06 GMT
+      string: !binary |-
+        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIGNhcGl0YWwgb2YgRnJhbmNlIGlzICoqUGFyaXMqKi4gSXQgaXMgbm90IG9ubHkgdGhlIHBvbGl0aWNhbCBhbmQgY3VsdHVyYWwgaGVhcnQgb2YgdGhlIGNvdW50cnkgYnV0IGFsc28gb25lIG9mIHRoZSBtb3N0IGljb25pYyBjaXRpZXMgaW4gdGhlIHdvcmxkLCBrbm93biBmb3IgbGFuZG1hcmtzIGxpa2UgdGhlIEVpZmZlbCBUb3dlciwgdGhlIExvdXZyZSBNdXNldW0sIGFuZCB0aGUgU2VpbmUgUml2ZXIuIPCfh6vwn4e34pyoIiwicmVhc29uaW5nX2NvbnRlbnQiOiJPa2F5LCB0aGUgdXNlciBpcyBhc2tpbmcgZm9yIHRoZSBjYXBpdGFsIG9mIEZyYW5jZS4gSSBuZWVkIHRvIG1ha2Ugc3VyZSBJIGdldCB0aGlzIHJpZ2h0LiBMZXQgbWUgdGhpbmsuIEZyYW5jZSBpcyBhIGNvdW50cnkgaW4gRXVyb3BlLCByaWdodD8gVGhlIGNhcGl0YWwgaXMgYSBjaXR5IHRoYXQgc2VydmVzIGFzIHRoZSBzZWF0IG9mIGdvdmVybm1lbnQuIEkgcmVtZW1iZXIgdGhhdCBQYXJpcyBpcyB0aGUgY2FwaXRhbCBvZiBGcmFuY2UuIEJ1dCB3YWl0LCBtYXliZSBJIHNob3VsZCBkb3VibGUtY2hlY2sgdG8gYXZvaWQgYW55IG1pc3Rha2VzLiBTb21ldGltZXMgdGhlcmUgY2FuIGJlIGNvbmZ1c2lvbiB3aXRoIG90aGVyIGNpdGllcywgbGlrZSBMeW9uIG9yIE1hcnNlaWxsZSwgYnV0IHRob3NlIGFyZSBtYWpvciBjaXRpZXMsIG5vdCB0aGUgY2FwaXRhbC4gTGV0IG1lIGNvbmZpcm0uIFllcywgUGFyaXMgaXMgdGhlIGNhcGl0YWwgYW5kIHRoZSBsYXJnZXN0IGNpdHkgaW4gRnJhbmNlLiBJdCdzIGFsc28ga25vd24gZm9yIHRoZSBFaWZmZWwgVG93ZXIsIHRoZSBMb3V2cmUgTXVzZXVtLCBhbmQgb3RoZXIgbGFuZG1hcmtzLiBTbyB0aGUgYW5zd2VyIHNob3VsZCBiZSBQYXJpcy4gSSBzaG91bGQgcHJlc2VudCB0aGF0IGNsZWFybHkgYW5kIG1heWJlIGFkZCBhIGJpdCBtb3JlIGNvbnRleHQgdG8gYmUgaGVscGZ1bC5cbiJ9fV0sImNyZWF0ZWQiOjE3ODk1NDI0OTYsIm1vZGVsIjoicXdlbjMiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJiMTA4MzAtNDY1ZTQ5YjljIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwidXNhZ2UiOnsiY29tcGxldGlvbl90b2tlbnMiOjIxOSwicHJvbXB0X3Rva2VucyI6MTUsInRvdGFsX3Rva2VucyI6MjM0LCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6NH19LCJpZCI6ImNoYXRjbXBsLUNJc1hCVVhUWjZIb29xMEE1YlZBNDdXb1czVnA3RUtFIiwidGltaW5ncyI6eyJjYWNoZV9uIjo0LCJwcm9tcHRfbiI6MTEsInByb21wdF9tcyI6MTUuMDQ4LCJwcm9tcHRfcGVyX3Rva2VuX21zIjoxLjM2OCwicHJvbXB0X3Blcl9zZWNvbmQiOjczMC45OTQxNTIwNDY3ODM2LCJwcmVkaWN0ZWRfbiI6MjE5LCJwcmVkaWN0ZWRfbXMiOjE3OTMuMDM2LCJwcmVkaWN0ZWRfcGVyX3Rva2VuX21zIjo4LjIyNDkzNTc3OTgxNjUxNCwicHJlZGljdGVkX3Blcl9zZWNvbmQiOjEyMS41ODE0OTY0MTE2NzI3fX0=
+  recorded_at: Wed, 16 Sep 2026 07:08:16 GMT
 recorded_with: VCR 6.4.0

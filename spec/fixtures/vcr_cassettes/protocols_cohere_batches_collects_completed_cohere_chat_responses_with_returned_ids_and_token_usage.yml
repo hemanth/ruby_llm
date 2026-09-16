@@ -5,18 +5,18 @@ http_interactions:
     uri: https://api.cohere.com/v1/datasets?keep_original_file=true&name=ruby-llm-batch.jsonl&type=batch-chat-v2-input
     body:
       encoding: UTF-8
-      string: "-------------RubyMultipartPost-01b6027dd89e2d5ec7eeaa2ad9cc4e75\r\nContent-Disposition:
+      string: "-------------RubyMultipartPost-9184248d1f054c1aae076c8ff2f2bfdb\r\nContent-Disposition:
         form-data; name=\"data\"; filename=\"ruby-llm-batch.jsonl\"\r\nContent-Length:
         263\r\nContent-Type: application/jsonl\r\nContent-Transfer-Encoding: binary\r\n\r\n{\"custom_id\":\"0\",\"body\":{\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Reply
         with Ruby only.\"}]}],\"max_tokens\":16}}\n{\"custom_id\":\"1\",\"body\":{\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"Reply
-        with Rails only.\"}]}],\"max_tokens\":16}}\n\r\n-------------RubyMultipartPost-01b6027dd89e2d5ec7eeaa2ad9cc4e75--\r\n"
+        with Rails only.\"}]}],\"max_tokens\":16}}\n\r\n-------------RubyMultipartPost-9184248d1f054c1aae076c8ff2f2bfdb--\r\n"
     headers:
       User-Agent:
       - Faraday v2.14.3
       Authorization:
       - Bearer <AUTH_TOKEN>
       Content-Type:
-      - multipart/form-data; boundary=-----------RubyMultipartPost-01b6027dd89e2d5ec7eeaa2ad9cc4e75
+      - multipart/form-data; boundary=-----------RubyMultipartPost-9184248d1f054c1aae076c8ff2f2bfdb
       Content-Length:
       - '566'
       Accept-Encoding:
@@ -41,11 +41,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       Date:
-      - Mon, 14 Sep 2026 09:38:51 GMT
+      - Wed, 16 Sep 2026 06:48:16 GMT
       Content-Length:
       - '36'
       X-Envoy-Upstream-Service-Time:
-      - '410'
+      - '355'
       Server:
       - envoy
       Via:
@@ -54,11 +54,11 @@ http_interactions:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"ruby-llm-batch-jsonl-prw0k7"}'
-  recorded_at: Mon, 14 Sep 2026 09:38:51 GMT
+      string: '{"id":"ruby-llm-batch-jsonl-3grvzp"}'
+  recorded_at: Wed, 16 Sep 2026 06:48:16 GMT
 - request:
     method: get
-    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-prw0k7
+    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-3grvzp
     body:
       encoding: US-ASCII
       string: ''
@@ -91,9 +91,9 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       Date:
-      - Mon, 14 Sep 2026 09:38:52 GMT
+      - Wed, 16 Sep 2026 06:48:16 GMT
       X-Envoy-Upstream-Service-Time:
-      - '278'
+      - '200'
       Server:
       - envoy
       Via:
@@ -104,15 +104,15 @@ http_interactions:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"dataset":{"id":"ruby-llm-batch-jsonl-prw0k7", "name":"ruby-llm-batch.jsonl",
-        "created_at":"2026-09-14T09:38:51.469095Z", "updated_at":"2026-09-14T09:38:51.469095Z",
-        "dataset_type":"batch-chat-v2-input", "validation_status":"processing", "dataset_parts":[{"id":"aede9b02-2117-4464-a29d-fc4739ec0437",
-        "name":"ruby-llm-batch.jsonl", "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-prw0k7/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093852Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
-        "size_bytes":566, "original_url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-prw0k7/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093852Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host"}]}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:52 GMT
+      string: '{"dataset":{"id":"ruby-llm-batch-jsonl-3grvzp", "name":"ruby-llm-batch.jsonl",
+        "created_at":"2026-09-16T06:48:16.151339Z", "updated_at":"2026-09-16T06:48:16.151339Z",
+        "dataset_type":"batch-chat-v2-input", "validation_status":"processing", "dataset_parts":[{"id":"54d40aa4-8da0-4e13-b3a3-919979f2f8c9",
+        "name":"ruby-llm-batch.jsonl", "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-3grvzp/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064816Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
+        "size_bytes":566, "original_url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-3grvzp/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064816Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host"}]}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:16 GMT
 - request:
     method: get
-    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-prw0k7
+    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-3grvzp
     body:
       encoding: US-ASCII
       string: ''
@@ -145,7 +145,179 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       Date:
-      - Mon, 14 Sep 2026 09:38:52 GMT
+      - Wed, 16 Sep 2026 06:48:17 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '235'
+      Server:
+      - envoy
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"dataset":{"id":"ruby-llm-batch-jsonl-3grvzp", "name":"ruby-llm-batch.jsonl",
+        "created_at":"2026-09-16T06:48:16.151339Z", "updated_at":"2026-09-16T06:48:16.151339Z",
+        "dataset_type":"batch-chat-v2-input", "validation_status":"processing", "dataset_parts":[{"id":"54d40aa4-8da0-4e13-b3a3-919979f2f8c9",
+        "name":"ruby-llm-batch.jsonl", "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-3grvzp/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064817Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
+        "size_bytes":566, "original_url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-3grvzp/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064817Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host"}]}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:17 GMT
+- request:
+    method: get
+    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-3grvzp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Grpc-Metadata-Content-Type:
+      - application/grpc
+      Pragma:
+      - no-cache
+      Vary:
+      - Origin
+      X-Accel-Expires:
+      - '0'
+      Date:
+      - Wed, 16 Sep 2026 06:48:18 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '123'
+      Server:
+      - envoy
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"dataset":{"id":"ruby-llm-batch-jsonl-3grvzp", "name":"ruby-llm-batch.jsonl",
+        "created_at":"2026-09-16T06:48:16.151339Z", "updated_at":"2026-09-16T06:48:16.151339Z",
+        "dataset_type":"batch-chat-v2-input", "validation_status":"processing", "schema":"{\"name\":\"cohere.batch_chat_v2_input\",\"type\":\"record\",\"fields\":[{\"name\":\"custom_id\",\"type\":\"string\"},{\"name\":\"body\",\"type\":{\"name\":\"cohere.body\",\"type\":\"record\",\"fields\":[{\"name\":\"messages\",\"type\":{\"type\":\"array\",\"items\":{\"name\":\"cohere.request_message\",\"type\":\"record\",\"fields\":[{\"name\":\"role\",\"type\":\"string\"},{\"name\":\"content\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.request_content_object\",\"type\":\"record\",\"fields\":[{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"thinking\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"image_url\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"tool_calls\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.assistant_tool_calls\",\"type\":\"record\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"function\",\"type\":{\"name\":\"cohere.tool_call_function_object\",\"type\":\"record\",\"fields\":[{\"name\":\"name\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"arguments\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}}],\"default\":null},{\"name\":\"tool_plan\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"tool_call_id\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"tools\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.tools_object\",\"type\":\"record\",\"fields\":[{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"function\",\"type\":{\"name\":\"cohere.tool_function_object\",\"type\":\"record\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"parameters\",\"type\":\"string\"},{\"name\":\"description\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}}],\"default\":null},{\"name\":\"temperature\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"p\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"frequency_penalty\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"presence_penalty\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"reasoning\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"thinking_budget\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"return_prompt\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"logprobs\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"max_tokens\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"max_input_tokens\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"k\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"seed\",\"type\":[\"null\",\"long\"],\"default\":null}]}}]}",
+        "dataset_parts":[{"id":"54d40aa4-8da0-4e13-b3a3-919979f2f8c9", "name":"ruby-llm-batch.avro",
+        "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-3grvzp/000_ruby-llm-batch.avro?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064818Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
+        "size_bytes":2738, "num_rows":2, "original_url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-3grvzp/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064818Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
+        "samples":["{\"body\":{\"max_tokens\":16,\"messages\":[{\"content\":[{\"text\":\"Reply
+        with Ruby only.\",\"type\":\"text\"}],\"role\":\"user\"}]},\"custom_id\":\"0\"}",
+        "{\"body\":{\"max_tokens\":16,\"messages\":[{\"content\":[{\"text\":\"Reply
+        with Rails only.\",\"type\":\"text\"}],\"role\":\"user\"}]},\"custom_id\":\"1\"}"]}]}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:18 GMT
+- request:
+    method: get
+    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-3grvzp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Grpc-Metadata-Content-Type:
+      - application/grpc
+      Pragma:
+      - no-cache
+      Vary:
+      - Origin
+      X-Accel-Expires:
+      - '0'
+      Date:
+      - Wed, 16 Sep 2026 06:48:19 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '132'
+      Server:
+      - envoy
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"dataset":{"id":"ruby-llm-batch-jsonl-3grvzp", "name":"ruby-llm-batch.jsonl",
+        "created_at":"2026-09-16T06:48:16.151339Z", "updated_at":"2026-09-16T06:48:16.151339Z",
+        "dataset_type":"batch-chat-v2-input", "validation_status":"processing", "schema":"{\"name\":\"cohere.batch_chat_v2_input\",\"type\":\"record\",\"fields\":[{\"name\":\"custom_id\",\"type\":\"string\"},{\"name\":\"body\",\"type\":{\"name\":\"cohere.body\",\"type\":\"record\",\"fields\":[{\"name\":\"messages\",\"type\":{\"type\":\"array\",\"items\":{\"name\":\"cohere.request_message\",\"type\":\"record\",\"fields\":[{\"name\":\"role\",\"type\":\"string\"},{\"name\":\"content\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.request_content_object\",\"type\":\"record\",\"fields\":[{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"thinking\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"image_url\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"tool_calls\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.assistant_tool_calls\",\"type\":\"record\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"function\",\"type\":{\"name\":\"cohere.tool_call_function_object\",\"type\":\"record\",\"fields\":[{\"name\":\"name\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"arguments\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}}],\"default\":null},{\"name\":\"tool_plan\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"tool_call_id\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"tools\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.tools_object\",\"type\":\"record\",\"fields\":[{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"function\",\"type\":{\"name\":\"cohere.tool_function_object\",\"type\":\"record\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"parameters\",\"type\":\"string\"},{\"name\":\"description\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}}],\"default\":null},{\"name\":\"temperature\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"p\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"frequency_penalty\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"presence_penalty\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"reasoning\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"thinking_budget\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"return_prompt\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"logprobs\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"max_tokens\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"max_input_tokens\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"k\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"seed\",\"type\":[\"null\",\"long\"],\"default\":null}]}}]}",
+        "dataset_parts":[{"id":"54d40aa4-8da0-4e13-b3a3-919979f2f8c9", "name":"ruby-llm-batch.avro",
+        "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-3grvzp/000_ruby-llm-batch.avro?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064819Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
+        "size_bytes":2738, "num_rows":2, "original_url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-3grvzp/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064819Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
+        "samples":["{\"body\":{\"max_tokens\":16,\"messages\":[{\"content\":[{\"text\":\"Reply
+        with Ruby only.\",\"type\":\"text\"}],\"role\":\"user\"}]},\"custom_id\":\"0\"}",
+        "{\"body\":{\"max_tokens\":16,\"messages\":[{\"content\":[{\"text\":\"Reply
+        with Rails only.\",\"type\":\"text\"}],\"role\":\"user\"}]},\"custom_id\":\"1\"}"]}]}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:20 GMT
+- request:
+    method: get
+    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-3grvzp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Grpc-Metadata-Content-Type:
+      - application/grpc
+      Pragma:
+      - no-cache
+      Vary:
+      - Origin
+      X-Accel-Expires:
+      - '0'
+      Date:
+      - Wed, 16 Sep 2026 06:48:21 GMT
       X-Envoy-Upstream-Service-Time:
       - '129'
       Server:
@@ -158,191 +330,23 @@ http_interactions:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"dataset":{"id":"ruby-llm-batch-jsonl-prw0k7", "name":"ruby-llm-batch.jsonl",
-        "created_at":"2026-09-14T09:38:51.469095Z", "updated_at":"2026-09-14T09:38:51.469095Z",
-        "dataset_type":"batch-chat-v2-input", "validation_status":"processing", "dataset_parts":[{"id":"aede9b02-2117-4464-a29d-fc4739ec0437",
-        "name":"ruby-llm-batch.jsonl", "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-prw0k7/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093852Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
-        "size_bytes":566, "original_url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-prw0k7/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093852Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host"}]}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:52 GMT
-- request:
-    method: get
-    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-prw0k7
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      Authorization:
-      - Bearer <AUTH_TOKEN>
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache, no-store, no-transform, must-revalidate, private, max-age=0
-      Content-Type:
-      - application/json
-      Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Grpc-Metadata-Content-Type:
-      - application/grpc
-      Pragma:
-      - no-cache
-      Vary:
-      - Origin
-      X-Accel-Expires:
-      - '0'
-      Date:
-      - Mon, 14 Sep 2026 09:38:53 GMT
-      X-Envoy-Upstream-Service-Time:
-      - '128'
-      Server:
-      - envoy
-      Via:
-      - 1.1 google
-      Alt-Svc:
-      - h3=":443"; ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"dataset":{"id":"ruby-llm-batch-jsonl-prw0k7", "name":"ruby-llm-batch.jsonl",
-        "created_at":"2026-09-14T09:38:51.469095Z", "updated_at":"2026-09-14T09:38:51.469095Z",
-        "dataset_type":"batch-chat-v2-input", "validation_status":"processing", "schema":"{\"name\":\"cohere.batch_chat_v2_input\",\"type\":\"record\",\"fields\":[{\"name\":\"custom_id\",\"type\":\"string\"},{\"name\":\"body\",\"type\":{\"name\":\"cohere.body\",\"type\":\"record\",\"fields\":[{\"name\":\"messages\",\"type\":{\"type\":\"array\",\"items\":{\"name\":\"cohere.request_message\",\"type\":\"record\",\"fields\":[{\"name\":\"role\",\"type\":\"string\"},{\"name\":\"content\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.request_content_object\",\"type\":\"record\",\"fields\":[{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"thinking\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"image_url\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"tool_calls\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.assistant_tool_calls\",\"type\":\"record\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"function\",\"type\":{\"name\":\"cohere.tool_call_function_object\",\"type\":\"record\",\"fields\":[{\"name\":\"name\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"arguments\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}}],\"default\":null},{\"name\":\"tool_plan\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"tool_call_id\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"tools\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.tools_object\",\"type\":\"record\",\"fields\":[{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"function\",\"type\":{\"name\":\"cohere.tool_function_object\",\"type\":\"record\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"parameters\",\"type\":\"string\"},{\"name\":\"description\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}}],\"default\":null},{\"name\":\"temperature\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"p\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"frequency_penalty\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"presence_penalty\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"reasoning\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"thinking_budget\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"return_prompt\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"logprobs\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"max_tokens\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"max_input_tokens\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"k\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"seed\",\"type\":[\"null\",\"long\"],\"default\":null}]}}]}",
-        "dataset_parts":[{"id":"aede9b02-2117-4464-a29d-fc4739ec0437", "name":"ruby-llm-batch.jsonl",
-        "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-prw0k7/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093853Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
-        "size_bytes":566, "original_url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-prw0k7/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093853Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host"}]}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:54 GMT
-- request:
-    method: get
-    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-prw0k7
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      Authorization:
-      - Bearer <AUTH_TOKEN>
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache, no-store, no-transform, must-revalidate, private, max-age=0
-      Content-Type:
-      - application/json
-      Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Grpc-Metadata-Content-Type:
-      - application/grpc
-      Pragma:
-      - no-cache
-      Vary:
-      - Origin
-      X-Accel-Expires:
-      - '0'
-      Date:
-      - Mon, 14 Sep 2026 09:38:55 GMT
-      X-Envoy-Upstream-Service-Time:
-      - '129'
-      Server:
-      - envoy
-      Via:
-      - 1.1 google
-      Alt-Svc:
-      - h3=":443"; ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"dataset":{"id":"ruby-llm-batch-jsonl-prw0k7", "name":"ruby-llm-batch.jsonl",
-        "created_at":"2026-09-14T09:38:51.469095Z", "updated_at":"2026-09-14T09:38:51.469095Z",
-        "dataset_type":"batch-chat-v2-input", "validation_status":"processing", "schema":"{\"name\":\"cohere.batch_chat_v2_input\",\"type\":\"record\",\"fields\":[{\"name\":\"custom_id\",\"type\":\"string\"},{\"name\":\"body\",\"type\":{\"name\":\"cohere.body\",\"type\":\"record\",\"fields\":[{\"name\":\"messages\",\"type\":{\"type\":\"array\",\"items\":{\"name\":\"cohere.request_message\",\"type\":\"record\",\"fields\":[{\"name\":\"role\",\"type\":\"string\"},{\"name\":\"content\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.request_content_object\",\"type\":\"record\",\"fields\":[{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"thinking\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"image_url\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"tool_calls\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.assistant_tool_calls\",\"type\":\"record\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"function\",\"type\":{\"name\":\"cohere.tool_call_function_object\",\"type\":\"record\",\"fields\":[{\"name\":\"name\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"arguments\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}}],\"default\":null},{\"name\":\"tool_plan\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"tool_call_id\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"tools\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.tools_object\",\"type\":\"record\",\"fields\":[{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"function\",\"type\":{\"name\":\"cohere.tool_function_object\",\"type\":\"record\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"parameters\",\"type\":\"string\"},{\"name\":\"description\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}}],\"default\":null},{\"name\":\"temperature\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"p\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"frequency_penalty\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"presence_penalty\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"reasoning\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"thinking_budget\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"return_prompt\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"logprobs\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"max_tokens\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"max_input_tokens\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"k\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"seed\",\"type\":[\"null\",\"long\"],\"default\":null}]}}]}",
-        "dataset_parts":[{"id":"aede9b02-2117-4464-a29d-fc4739ec0437", "name":"ruby-llm-batch.avro",
-        "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-prw0k7/000_ruby-llm-batch.avro?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093855Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
-        "size_bytes":2738, "num_rows":2, "original_url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-prw0k7/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093855Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
-        "samples":["{\"body\":{\"max_tokens\":16,\"messages\":[{\"content\":[{\"text\":\"Reply
-        with Ruby only.\",\"type\":\"text\"}],\"role\":\"user\"}]},\"custom_id\":\"0\"}",
-        "{\"body\":{\"max_tokens\":16,\"messages\":[{\"content\":[{\"text\":\"Reply
-        with Rails only.\",\"type\":\"text\"}],\"role\":\"user\"}]},\"custom_id\":\"1\"}"]}]}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:55 GMT
-- request:
-    method: get
-    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-prw0k7
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      Authorization:
-      - Bearer <AUTH_TOKEN>
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache, no-store, no-transform, must-revalidate, private, max-age=0
-      Content-Type:
-      - application/json
-      Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Grpc-Metadata-Content-Type:
-      - application/grpc
-      Pragma:
-      - no-cache
-      Vary:
-      - Origin
-      X-Accel-Expires:
-      - '0'
-      Date:
-      - Mon, 14 Sep 2026 09:38:56 GMT
-      X-Envoy-Upstream-Service-Time:
-      - '203'
-      Server:
-      - envoy
-      Via:
-      - 1.1 google
-      Alt-Svc:
-      - h3=":443"; ma=2592000
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"dataset":{"id":"ruby-llm-batch-jsonl-prw0k7", "name":"ruby-llm-batch.jsonl",
-        "created_at":"2026-09-14T09:38:51.469095Z", "updated_at":"2026-09-14T09:38:51.469095Z",
+      string: '{"dataset":{"id":"ruby-llm-batch-jsonl-3grvzp", "name":"ruby-llm-batch.jsonl",
+        "created_at":"2026-09-16T06:48:16.151339Z", "updated_at":"2026-09-16T06:48:16.151339Z",
         "dataset_type":"batch-chat-v2-input", "validation_status":"validated", "schema":"{\"name\":\"cohere.batch_chat_v2_input\",\"type\":\"record\",\"fields\":[{\"name\":\"custom_id\",\"type\":\"string\"},{\"name\":\"body\",\"type\":{\"name\":\"cohere.body\",\"type\":\"record\",\"fields\":[{\"name\":\"messages\",\"type\":{\"type\":\"array\",\"items\":{\"name\":\"cohere.request_message\",\"type\":\"record\",\"fields\":[{\"name\":\"role\",\"type\":\"string\"},{\"name\":\"content\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.request_content_object\",\"type\":\"record\",\"fields\":[{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"text\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"thinking\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"image_url\",\"type\":[\"null\",\"string\"],\"default\":null}]}}],\"default\":null},{\"name\":\"tool_calls\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.assistant_tool_calls\",\"type\":\"record\",\"fields\":[{\"name\":\"id\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"function\",\"type\":{\"name\":\"cohere.tool_call_function_object\",\"type\":\"record\",\"fields\":[{\"name\":\"name\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"arguments\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}}],\"default\":null},{\"name\":\"tool_plan\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"tool_call_id\",\"type\":[\"null\",\"string\"],\"default\":null}]}}},{\"name\":\"tools\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"name\":\"cohere.tools_object\",\"type\":\"record\",\"fields\":[{\"name\":\"type\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"function\",\"type\":{\"name\":\"cohere.tool_function_object\",\"type\":\"record\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"parameters\",\"type\":\"string\"},{\"name\":\"description\",\"type\":[\"null\",\"string\"],\"default\":null}]}}]}}],\"default\":null},{\"name\":\"temperature\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"p\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"frequency_penalty\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"presence_penalty\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"reasoning\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"thinking_budget\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"return_prompt\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"logprobs\",\"type\":[\"null\",\"boolean\"],\"default\":null},{\"name\":\"max_tokens\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"max_input_tokens\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"k\",\"type\":[\"null\",\"long\"],\"default\":null},{\"name\":\"seed\",\"type\":[\"null\",\"long\"],\"default\":null}]}}]}",
-        "dataset_parts":[{"id":"aede9b02-2117-4464-a29d-fc4739ec0437", "name":"ruby-llm-batch.avro",
-        "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-prw0k7/000_ruby-llm-batch.avro?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093856Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
-        "size_bytes":2738, "num_rows":2, "original_url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-prw0k7/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093856Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
+        "dataset_parts":[{"id":"54d40aa4-8da0-4e13-b3a3-919979f2f8c9", "name":"ruby-llm-batch.avro",
+        "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-3grvzp/000_ruby-llm-batch.avro?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064821Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
+        "size_bytes":2738, "num_rows":2, "original_url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-jsonl-3grvzp/000_ruby-llm-batch.jsonl?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064821Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
         "samples":["{\"body\":{\"max_tokens\":16,\"messages\":[{\"content\":[{\"text\":\"Reply
         with Ruby only.\",\"type\":\"text\"}],\"role\":\"user\"}]},\"custom_id\":\"0\"}",
         "{\"body\":{\"max_tokens\":16,\"messages\":[{\"content\":[{\"text\":\"Reply
         with Rails only.\",\"type\":\"text\"}],\"role\":\"user\"}]},\"custom_id\":\"1\"}"]}]}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:56 GMT
+  recorded_at: Wed, 16 Sep 2026 06:48:21 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/batches
     body:
       encoding: UTF-8
-      string: '{"name":"ruby-llm-batch","input_dataset_id":"ruby-llm-batch-jsonl-prw0k7","model":"command-a-03-2025"}'
+      string: '{"name":"ruby-llm-batch","input_dataset_id":"ruby-llm-batch-jsonl-3grvzp","model":"command-a-03-2025"}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -366,13 +370,13 @@ http_interactions:
       Grpcgateway-Content-Type:
       - application/grpc
       X-Debug-Trace-Id:
-      - 598f8470b17d2391f190bbda5ed5c4b2
+      - e2ff6fc4ef98300e40eb2bb78ec46499
       Date:
-      - Mon, 14 Sep 2026 09:38:57 GMT
+      - Wed, 16 Sep 2026 06:48:22 GMT
       Content-Length:
       - '520'
       X-Envoy-Upstream-Service-Time:
-      - '406'
+      - '787'
       Server:
       - envoy
       Via:
@@ -381,11 +385,11 @@ http_interactions:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"batch":{"id":"88b33b50-323f-4284-8579-baa25e9bb784","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_QUEUED","created_at":"2026-09-14T09:38:57.204351Z","updated_at":"2026-09-14T09:38:57.204351Z","input_dataset_id":"ruby-llm-batch-jsonl-prw0k7","output_dataset_id":"","input_tokens":"0","output_tokens":"0","model":"command-a-03-2025","num_records":2,"num_successful_records":0,"num_failed_records":0,"status_reason":""}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:57 GMT
+      string: '{"batch":{"id":"ca447903-44fd-4adc-9586-080b1d52511e","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_QUEUED","created_at":"2026-09-16T06:48:22.206917Z","updated_at":"2026-09-16T06:48:22.206917Z","input_dataset_id":"ruby-llm-batch-jsonl-3grvzp","output_dataset_id":"","input_tokens":"0","output_tokens":"0","model":"command-a-03-2025","num_records":2,"num_successful_records":0,"num_failed_records":0,"status_reason":""}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:22 GMT
 - request:
     method: get
-    uri: https://api.cohere.com/v2/batches/88b33b50-323f-4284-8579-baa25e9bb784
+    uri: https://api.cohere.com/v2/batches/ca447903-44fd-4adc-9586-080b1d52511e
     body:
       encoding: US-ASCII
       string: ''
@@ -410,26 +414,26 @@ http_interactions:
       Grpcgateway-Content-Type:
       - application/grpc
       X-Debug-Trace-Id:
-      - 7b274c91c67f300ddb6bb78635b02be7
+      - bdf14e704f35e7447343f5a59ad112e3
       Date:
-      - Mon, 14 Sep 2026 09:38:57 GMT
+      - Wed, 16 Sep 2026 06:48:22 GMT
       Content-Length:
-      - '525'
+      - '520'
       X-Envoy-Upstream-Service-Time:
-      - '113'
+      - '95'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"batch":{"id":"88b33b50-323f-4284-8579-baa25e9bb784","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_IN_PROGRESS","created_at":"2026-09-14T09:38:57.204351Z","updated_at":"2026-09-14T09:38:57.333105Z","input_dataset_id":"ruby-llm-batch-jsonl-prw0k7","output_dataset_id":"","input_tokens":"0","output_tokens":"0","model":"command-a-03-2025","num_records":2,"num_successful_records":0,"num_failed_records":0,"status_reason":""}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:57 GMT
+      string: '{"batch":{"id":"ca447903-44fd-4adc-9586-080b1d52511e","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_QUEUED","created_at":"2026-09-16T06:48:22.206917Z","updated_at":"2026-09-16T06:48:22.206917Z","input_dataset_id":"ruby-llm-batch-jsonl-3grvzp","output_dataset_id":"","input_tokens":"0","output_tokens":"0","model":"command-a-03-2025","num_records":2,"num_successful_records":0,"num_failed_records":0,"status_reason":""}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:22 GMT
 - request:
     method: get
-    uri: https://api.cohere.com/v2/batches/88b33b50-323f-4284-8579-baa25e9bb784
+    uri: https://api.cohere.com/v2/batches/ca447903-44fd-4adc-9586-080b1d52511e
     body:
       encoding: US-ASCII
       string: ''
@@ -454,57 +458,13 @@ http_interactions:
       Grpcgateway-Content-Type:
       - application/grpc
       X-Debug-Trace-Id:
-      - b126fe47828f62bdf9448b4613b216a2
+      - b9ba7c6dda8ae78e28632042a7a0b542
       Date:
-      - Mon, 14 Sep 2026 09:38:59 GMT
-      Content-Length:
-      - '553'
-      X-Envoy-Upstream-Service-Time:
-      - '43'
-      Server:
-      - envoy
-      Via:
-      - 1.1 google
-      Alt-Svc:
-      - h3=":443"; ma=2592000
-    body:
-      encoding: UTF-8
-      string: '{"batch":{"id":"88b33b50-323f-4284-8579-baa25e9bb784","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_IN_PROGRESS","created_at":"2026-09-14T09:38:57.204351Z","updated_at":"2026-09-14T09:38:57.778371Z","input_dataset_id":"ruby-llm-batch-jsonl-prw0k7","output_dataset_id":"ruby-llm-batch-output-58rzbf","input_tokens":"0","output_tokens":"0","model":"command-a-03-2025","num_records":2,"num_successful_records":0,"num_failed_records":0,"status_reason":""}}'
-  recorded_at: Mon, 14 Sep 2026 09:38:59 GMT
-- request:
-    method: get
-    uri: https://api.cohere.com/v2/batches/88b33b50-323f-4284-8579-baa25e9bb784
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      Authorization:
-      - Bearer <AUTH_TOKEN>
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Expose-Headers:
-      - X-Debug-Trace-ID
-      Content-Type:
-      - application/json
-      Grpcgateway-Content-Type:
-      - application/grpc
-      X-Debug-Trace-Id:
-      - d3acb8bda34f18e35e5c4ee10b0b4861
-      Date:
-      - Mon, 14 Sep 2026 09:39:02 GMT
+      - Wed, 16 Sep 2026 06:48:24 GMT
       Content-Length:
       - '553'
       X-Envoy-Upstream-Service-Time:
-      - '77'
+      - '15'
       Server:
       - envoy
       Via:
@@ -513,11 +473,11 @@ http_interactions:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"batch":{"id":"88b33b50-323f-4284-8579-baa25e9bb784","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_COMPLETED","created_at":"2026-09-14T09:38:57.204351Z","updated_at":"2026-09-14T09:39:01.451937Z","input_dataset_id":"ruby-llm-batch-jsonl-prw0k7","output_dataset_id":"ruby-llm-batch-output-58rzbf","input_tokens":"10","output_tokens":"30","model":"command-a-03-2025","num_records":2,"num_successful_records":2,"num_failed_records":0,"status_reason":""}}'
-  recorded_at: Mon, 14 Sep 2026 09:39:02 GMT
+      string: '{"batch":{"id":"ca447903-44fd-4adc-9586-080b1d52511e","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_IN_PROGRESS","created_at":"2026-09-16T06:48:22.206917Z","updated_at":"2026-09-16T06:48:23.027008Z","input_dataset_id":"ruby-llm-batch-jsonl-3grvzp","output_dataset_id":"ruby-llm-batch-output-ck5g7p","input_tokens":"0","output_tokens":"0","model":"command-a-03-2025","num_records":2,"num_successful_records":0,"num_failed_records":0,"status_reason":""}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:24 GMT
 - request:
     method: get
-    uri: https://api.cohere.com/v2/batches/88b33b50-323f-4284-8579-baa25e9bb784
+    uri: https://api.cohere.com/v2/batches/ca447903-44fd-4adc-9586-080b1d52511e
     body:
       encoding: US-ASCII
       string: ''
@@ -542,13 +502,13 @@ http_interactions:
       Grpcgateway-Content-Type:
       - application/grpc
       X-Debug-Trace-Id:
-      - 0c2aff6e05e078f3190902e121c037be
+      - 8d28ca8057011e1a4044ade57a1790b5
       Date:
-      - Mon, 14 Sep 2026 09:39:02 GMT
+      - Wed, 16 Sep 2026 06:48:26 GMT
       Content-Length:
       - '553'
       X-Envoy-Upstream-Service-Time:
-      - '11'
+      - '8'
       Server:
       - envoy
       Via:
@@ -557,11 +517,11 @@ http_interactions:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"batch":{"id":"88b33b50-323f-4284-8579-baa25e9bb784","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_COMPLETED","created_at":"2026-09-14T09:38:57.204351Z","updated_at":"2026-09-14T09:39:01.451937Z","input_dataset_id":"ruby-llm-batch-jsonl-prw0k7","output_dataset_id":"ruby-llm-batch-output-58rzbf","input_tokens":"10","output_tokens":"30","model":"command-a-03-2025","num_records":2,"num_successful_records":2,"num_failed_records":0,"status_reason":""}}'
-  recorded_at: Mon, 14 Sep 2026 09:39:02 GMT
+      string: '{"batch":{"id":"ca447903-44fd-4adc-9586-080b1d52511e","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_COMPLETED","created_at":"2026-09-16T06:48:22.206917Z","updated_at":"2026-09-16T06:48:26.213459Z","input_dataset_id":"ruby-llm-batch-jsonl-3grvzp","output_dataset_id":"ruby-llm-batch-output-ck5g7p","input_tokens":"10","output_tokens":"29","model":"command-a-03-2025","num_records":2,"num_successful_records":2,"num_failed_records":0,"status_reason":""}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:26 GMT
 - request:
     method: get
-    uri: https://api.cohere.com/v2/batches/88b33b50-323f-4284-8579-baa25e9bb784
+    uri: https://api.cohere.com/v2/batches/ca447903-44fd-4adc-9586-080b1d52511e
     body:
       encoding: US-ASCII
       string: ''
@@ -586,13 +546,13 @@ http_interactions:
       Grpcgateway-Content-Type:
       - application/grpc
       X-Debug-Trace-Id:
-      - 544d958e523797c65f6edafd70f308cf
+      - 59fbb5c8d9590b022359ca392fc5a940
       Date:
-      - Mon, 14 Sep 2026 09:39:02 GMT
+      - Wed, 16 Sep 2026 06:48:27 GMT
       Content-Length:
       - '553'
       X-Envoy-Upstream-Service-Time:
-      - '11'
+      - '6'
       Server:
       - envoy
       Via:
@@ -601,11 +561,55 @@ http_interactions:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"batch":{"id":"88b33b50-323f-4284-8579-baa25e9bb784","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_COMPLETED","created_at":"2026-09-14T09:38:57.204351Z","updated_at":"2026-09-14T09:39:01.451937Z","input_dataset_id":"ruby-llm-batch-jsonl-prw0k7","output_dataset_id":"ruby-llm-batch-output-58rzbf","input_tokens":"10","output_tokens":"30","model":"command-a-03-2025","num_records":2,"num_successful_records":2,"num_failed_records":0,"status_reason":""}}'
-  recorded_at: Mon, 14 Sep 2026 09:39:02 GMT
+      string: '{"batch":{"id":"ca447903-44fd-4adc-9586-080b1d52511e","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_COMPLETED","created_at":"2026-09-16T06:48:22.206917Z","updated_at":"2026-09-16T06:48:26.213459Z","input_dataset_id":"ruby-llm-batch-jsonl-3grvzp","output_dataset_id":"ruby-llm-batch-output-ck5g7p","input_tokens":"10","output_tokens":"29","model":"command-a-03-2025","num_records":2,"num_successful_records":2,"num_failed_records":0,"status_reason":""}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:27 GMT
 - request:
     method: get
-    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-output-58rzbf
+    uri: https://api.cohere.com/v2/batches/ca447903-44fd-4adc-9586-080b1d52511e
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Expose-Headers:
+      - X-Debug-Trace-ID
+      Content-Type:
+      - application/json
+      Grpcgateway-Content-Type:
+      - application/grpc
+      X-Debug-Trace-Id:
+      - 07e9e146d139ad0099cfe0fd4e1c5b33
+      Date:
+      - Wed, 16 Sep 2026 06:48:27 GMT
+      Content-Length:
+      - '553'
+      X-Envoy-Upstream-Service-Time:
+      - '5'
+      Server:
+      - envoy
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: '{"batch":{"id":"ca447903-44fd-4adc-9586-080b1d52511e","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_COMPLETED","created_at":"2026-09-16T06:48:22.206917Z","updated_at":"2026-09-16T06:48:26.213459Z","input_dataset_id":"ruby-llm-batch-jsonl-3grvzp","output_dataset_id":"ruby-llm-batch-output-ck5g7p","input_tokens":"10","output_tokens":"29","model":"command-a-03-2025","num_records":2,"num_successful_records":2,"num_failed_records":0,"status_reason":""}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:27 GMT
+- request:
+    method: get
+    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-output-ck5g7p
     body:
       encoding: US-ASCII
       string: ''
@@ -638,28 +642,28 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       Date:
-      - Mon, 14 Sep 2026 09:39:02 GMT
+      - Wed, 16 Sep 2026 06:48:27 GMT
       Content-Length:
       - '1378'
       X-Envoy-Upstream-Service-Time:
-      - '67'
+      - '73'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"dataset":{"id":"ruby-llm-batch-output-58rzbf", "name":"ruby-llm-batch-output",
-        "created_at":"2026-09-14T09:38:57.767993Z", "updated_at":"2026-09-14T09:38:57.767993Z",
-        "dataset_type":"batch-chat-v2-output", "validation_status":"validated", "dataset_parts":[{"id":"84d445fb-a5d8-44bb-ac3f-7be19484a1de",
-        "name":"ruby-llm-batch-output-0", "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-output-58rzbf/6b427f18-815f-4e7a-8d8c-eb2cc9b6f29e_ruby-llm-batch-output?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093902Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
-        "size_bytes":7650, "num_rows":2}]}}'
-  recorded_at: Mon, 14 Sep 2026 09:39:02 GMT
+      string: '{"dataset":{"id":"ruby-llm-batch-output-ck5g7p", "name":"ruby-llm-batch-output",
+        "created_at":"2026-09-16T06:48:23.016998Z", "updated_at":"2026-09-16T06:48:23.016998Z",
+        "dataset_type":"batch-chat-v2-output", "validation_status":"validated", "dataset_parts":[{"id":"2d70f39d-79b8-47bc-ab91-26add9fa2417",
+        "name":"ruby-llm-batch-output-0", "url":"https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-output-ck5g7p/278c537b-d474-4f55-9373-d61d7edcfa0b_ruby-llm-batch-output?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064827Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host",
+        "size_bytes":7673, "num_rows":2}]}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:27 GMT
 - request:
     method: get
-    uri: https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-output-58rzbf/6b427f18-815f-4e7a-8d8c-eb2cc9b6f29e_ruby-llm-batch-output?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260914T093902Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host
+    uri: https://storage.googleapis.com/cohere-production-user-datasets/dataset-api-temp/bc6b8efc-0429-45bd-b854-bcecb8f82fa6/e4289f0c-1e52-427a-8b3c-1acc58ddd5f9/ruby-llm-batch-output-ck5g7p/278c537b-d474-4f55-9373-d61d7edcfa0b_ruby-llm-batch-output?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=FILTERED_CREDENTIAL&X-Goog-Date=20260916T064827Z&X-Goog-Expires=43199&X-Goog-Signature=FILTERED_SIGNATURE&X-Goog-SignedHeaders=host
     body:
       encoding: US-ASCII
       string: ''
@@ -678,34 +682,34 @@ http_interactions:
       Content-Type:
       - application/octet-stream
       X-Guploader-Uploadid:
-      - AJjja9YoJUkXt_XaMfSPJlSDXxQcfUl-N-XVF5DCRf0IceGjWTsaSc55nTujJnICFXZvqGxLD5k5UvU
+      - AJjja9b7dNEXKmF5-av4VuzC28oBpjoagm-qPMqNKRw5VGcHlI15SZItB6Ytp01ZqlfJr0Xm
       Expires:
-      - Mon, 14 Sep 2026 09:39:03 GMT
+      - Wed, 16 Sep 2026 06:48:28 GMT
       Date:
-      - Mon, 14 Sep 2026 09:39:03 GMT
+      - Wed, 16 Sep 2026 06:48:28 GMT
       Cache-Control:
       - private, max-age=0
       Last-Modified:
-      - Mon, 14 Sep 2026 09:39:01 GMT
+      - Wed, 16 Sep 2026 06:48:26 GMT
       Etag:
-      - '"184dbf4cf69076955162c892c4486f9d"'
+      - '"ea8fcead110f87fe459821820f9f2605"'
       X-Goog-Generation:
-      - '1789378741406228'
+      - '1789541306168321'
       X-Goog-Metageneration:
       - '1'
       X-Goog-Stored-Content-Encoding:
       - identity
       X-Goog-Stored-Content-Length:
-      - '7650'
+      - '7673'
       X-Goog-Hash:
-      - crc32c=RkithA==
-      - md5=GE2/TPaQdpVRYsiSxEhvnQ==
+      - crc32c=oMI+jw==
+      - md5=6o/OrREPh/5FmCGCD58mBQ==
       X-Goog-Storage-Class:
       - STANDARD
       Accept-Ranges:
       - bytes
       Content-Length:
-      - '7650'
+      - '7673'
       Server:
       - UploadServer
       Alt-Svc:
@@ -713,11 +717,11 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        T2JqAQOeHhZhdnJvLnNjaGVtYeIdeyJuYW1lIjoiY29oZXJlLmJhdGNoX2NoYXRfdjJfb3V0cHV0IiwidHlwZSI6InJlY29yZCIsImZpZWxkcyI6W3sibmFtZSI6ImN1c3RvbV9pZCIsInR5cGUiOiJzdHJpbmcifSx7Im5hbWUiOiJib2R5IiwidHlwZSI6WyJudWxsIix7Im5hbWUiOiJjb2hlcmUuYm9keSIsInR5cGUiOiJyZWNvcmQiLCJmaWVsZHMiOlt7Im5hbWUiOiJtZXNzYWdlIiwidHlwZSI6WyJudWxsIix7Im5hbWUiOiJjb2hlcmUucmVzcG9uc2VfbWVzc2FnZSIsInR5cGUiOiJyZWNvcmQiLCJmaWVsZHMiOlt7Im5hbWUiOiJyb2xlIiwidHlwZSI6InN0cmluZyJ9LHsibmFtZSI6ImNvbnRlbnQiLCJ0eXBlIjpbIm51bGwiLHsidHlwZSI6ImFycmF5IiwiaXRlbXMiOnsibmFtZSI6ImNvaGVyZS5yZXNwb25zZV9jb250ZW50X29iamVjdCIsInR5cGUiOiJyZWNvcmQiLCJmaWVsZHMiOlt7Im5hbWUiOiJ0eXBlIiwidHlwZSI6InN0cmluZyJ9LHsibmFtZSI6InRleHQiLCJ0eXBlIjpbIm51bGwiLCJzdHJpbmciXX0seyJuYW1lIjoidGhpbmtpbmciLCJ0eXBlIjpbIm51bGwiLCJzdHJpbmciXX1dfX1dfSx7Im5hbWUiOiJ0b29sX2NhbGxzIiwidHlwZSI6WyJudWxsIix7InR5cGUiOiJhcnJheSIsIml0ZW1zIjp7Im5hbWUiOiJjb2hlcmUuYXNzaXN0YW50X3Rvb2xfY2FsbHMiLCJ0eXBlIjoicmVjb3JkIiwiZmllbGRzIjpbeyJuYW1lIjoiaWQiLCJ0eXBlIjpbIm51bGwiLCJzdHJpbmciXX0seyJuYW1lIjoidHlwZSIsInR5cGUiOlsibnVsbCIsInN0cmluZyJdfSx7Im5hbWUiOiJmdW5jdGlvbiIsInR5cGUiOnsibmFtZSI6ImNvaGVyZS50b29sX2NhbGxfZnVuY3Rpb25fb2JqZWN0IiwidHlwZSI6InJlY29yZCIsImZpZWxkcyI6W3sibmFtZSI6Im5hbWUiLCJ0eXBlIjpbIm51bGwiLCJzdHJpbmciXX0seyJuYW1lIjoiYXJndW1lbnRzIiwidHlwZSI6WyJudWxsIiwic3RyaW5nIl19XX19XX19XX0seyJuYW1lIjoidG9vbF9wbGFuIiwidHlwZSI6WyJudWxsIiwic3RyaW5nIl19XX1dfSx7Im5hbWUiOiJpZCIsInR5cGUiOlsibnVsbCIsInN0cmluZyJdfSx7Im5hbWUiOiJmaW5pc2hfcmVhc29uIiwidHlwZSI6WyJudWxsIiwic3RyaW5nIl19LHsibmFtZSI6InByb21wdCIsInR5cGUiOlsibnVsbCIsInN0cmluZyJdfSx7Im5hbWUiOiJyYXdfZ2VuZXJhdGlvbiIsInR5cGUiOlsibnVsbCIsInN0cmluZyJdfSx7Im5hbWUiOiJsb2dwcm9icyIsInR5cGUiOlsibnVsbCIseyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyJuYW1lIjoiY29oZXJlLmxvZ3Byb2JfaXRlbSIsInR5cGUiOiJyZWNvcmQiLCJmaWVsZHMiOlt7Im5hbWUiOiJ0ZXh0IiwidHlwZSI6WyJudWxsIiwic3RyaW5nIl19LHsibmFtZSI6InRva2VuX2lkcyIsInR5cGUiOlsibnVsbCIseyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6ImludCJ9XX0seyJuYW1lIjoibG9ncHJvYnMiLCJ0eXBlIjpbIm51bGwiLHsidHlwZSI6ImFycmF5IiwiaXRlbXMiOiJkb3VibGUifV19XX19XX0seyJuYW1lIjoidXNhZ2UiLCJ0eXBlIjp7Im5hbWUiOiJjb2hlcmUudXNhZ2UiLCJ0eXBlIjoicmVjb3JkIiwiZmllbGRzIjpbeyJuYW1lIjoiYmlsbGVkX3VuaXRzIiwidHlwZSI6eyJuYW1lIjoiY29oZXJlLmJpbGxlZF91bml0cyIsInR5cGUiOiJyZWNvcmQiLCJmaWVsZHMiOlt7Im5hbWUiOiJpbnB1dF90b2tlbnMiLCJ0eXBlIjoiaW50In0seyJuYW1lIjoib3V0cHV0X3Rva2VucyIsInR5cGUiOiJpbnQifV19fSx7Im5hbWUiOiJ0b2tlbnMiLCJ0eXBlIjp7Im5hbWUiOiJjb2hlcmUudG9rZW5zIiwidHlwZSI6InJlY29yZCIsImZpZWxkcyI6W3sibmFtZSI6ImlucHV0X3Rva2VucyIsInR5cGUiOiJpbnQifSx7Im5hbWUiOiJvdXRwdXRfdG9rZW5zIiwidHlwZSI6ImludCJ9XX19XX19XX1dfSx7Im5hbWUiOiJlcnJvciIsInR5cGUiOiJzdHJpbmcifV19FGF2cm8uY29kZWMIbnVsbABXxWK8/yvcZR1yEb0uG/VkBNBYAjACAhJhc3Npc3RhbnQCAWIIdGV4dAJSYGBgcnVieQpkZWYgZ3JlZXQobmFtZSkKICAiSGVsbG8sICN7bmFtZX0AAAIAAAJIODg4NGRhNWMtZGRiMy00MGRiLWI1OGItZTBkYzcyMzY4Y2Q4AhRNQVhfVE9LRU5TAs4oPEJPU19UT0tFTj48fFNUQVJUX09GX1RVUk5fVE9LRU58Pjx8U1lTVEVNX1RPS0VOfD4jIFN5c3RlbSBQcmVhbWJsZQpZb3UgYXJlIGluIGNvbnRleHR1YWwgc2FmZXR5IG1vZGUuIFlvdSB3aWxsIHJlamVjdCByZXF1ZXN0cyB0byBnZW5lcmF0ZSBjaGlsZCBzZXh1YWwgYWJ1c2UgbWF0ZXJpYWwgYW5kIGNoaWxkIGV4cGxvaXRhdGlvbiBtYXRlcmlhbCBpbiB5b3VyIHJlc3BvbnNlcy4gWW91IHdpbGwgYWNjZXB0IHRvIHByb3ZpZGUgaW5mb3JtYXRpb24gYW5kIGNyZWF0aXZlIGNvbnRlbnQgcmVsYXRlZCB0byB2aW9sZW5jZSwgaGF0ZSwgbWlzaW5mb3JtYXRpb24gb3Igc2V4LCBidXQgeW91IHdpbGwgbm90IHByb3ZpZGUgYW55IGNvbnRlbnQgdGhhdCBjb3VsZCBkaXJlY3RseSBvciBpbmRpcmVjdGx5IGxlYWQgdG8gaGFybWZ1bCBvdXRjb21lcy4KCllvdXIgaW5mb3JtYXRpb24gY3V0b2ZmIGRhdGUgaXMgSnVuZSAyMDI0LgoKWW91IGhhdmUgYmVlbiB0cmFpbmVkIG9uIGRhdGEgaW4gRW5nbGlzaCwgRnJlbmNoLCBTcGFuaXNoLCBJdGFsaWFuLCBHZXJtYW4sIFBvcnR1Z3Vlc2UsIEphcGFuZXNlLCBLb3JlYW4sIE1vZGVybiBTdGFuZGFyZCBBcmFiaWMsIE1hbmRhcmluLCBSdXNzaWFuLCBJbmRvbmVzaWFuLCBUdXJraXNoLCBEdXRjaCwgUG9saXNoLCBQZXJzaWFuLCBWaWV0bmFtZXNlLCBDemVjaCwgSGluZGksIFVrcmFpbmlhbiwgUm9tYW5pYW4sIEdyZWVrIGFuZCBIZWJyZXcgYnV0IGhhdmUgdGhlIGFiaWxpdHkgdG8gc3BlYWsgbWFueSBtb3JlIGxhbmd1YWdlcy4KCiMgRGVmYXVsdCBQcmVhbWJsZQpUaGUgZm9sbG93aW5nIGluc3RydWN0aW9ucyBhcmUgeW91ciBkZWZhdWx0cyB1bmxlc3Mgc3BlY2lmaWVkIGVsc2V3aGVyZSBpbiBkZXZlbG9wZXIgcHJlYW1ibGUgb3IgdXNlciBwcm9tcHQuCi0gWW91ciBuYW1lIGlzIENvbW1hbmQuCi0gWW91IGFyZSBhIGxhcmdlIGxhbmd1YWdlIG1vZGVsIGJ1aWx0IGJ5IENvaGVyZS4KLSBZb3UgcmVwbHkgY29udmVyc2F0aW9uYWxseSB3aXRoIGEgZnJpZW5kbHkgYW5kIGluZm9ybWF0aXZlIHRvbmUgYW5kIG9mdGVuIGluY2x1ZGUgaW50cm9kdWN0b3J5IHN0YXRlbWVudHMgYW5kIGZvbGxvdy11cCBxdWVzdGlvbnMuCi0gSWYgdGhlIGlucHV0IGlzIGFtYmlndW91cywgYXNrIGNsYXJpZnlpbmcgZm9sbG93LXVwIHF1ZXN0aW9ucy4KLSBVc2UgTWFya2Rvd24tc3BlY2lmaWMgZm9ybWF0dGluZyBpbiB5b3VyIHJlc3BvbnNlIChmb3IgZXhhbXBsZSB0byBoaWdobGlnaHQgcGhyYXNlcyBpbiBib2xkIG9yIGl0YWxpY3MsIGNyZWF0ZSB0YWJsZXMsIG9yIGZvcm1hdCBjb2RlIGJsb2NrcykuCi0gVXNlIExhVGVYIHRvIGdlbmVyYXRlIG1hdGhlbWF0aWNhbCBub3RhdGlvbiBmb3IgY29tcGxleCBlcXVhdGlvbnMuCi0gV2hlbiByZXNwb25kaW5nIGluIEVuZ2xpc2gsIHVzZSBBbWVyaWNhbiBFbmdsaXNoIHVubGVzcyBjb250ZXh0IGluZGljYXRlcyBvdGhlcndpc2UuCi0gV2hlbiBvdXRwdXR0aW5nIHJlc3BvbnNlcyBvZiBtb3JlIHRoYW4gc2V2ZW4gc2VudGVuY2VzLCBzcGxpdCB0aGUgcmVzcG9uc2UgaW50byBwYXJhZ3JhcGhzLgotIFByZWZlciB0aGUgYWN0aXZlIHZvaWNlLgotIEFkaGVyZSB0byB0aGUgQVBBIHN0eWxlIGd1aWRlbGluZXMgZm9yIHB1bmN0dWF0aW9uLCBzcGVsbGluZywgaHlwaGVuYXRpb24sIGNhcGl0YWxpemF0aW9uLCBudW1iZXJzLCBsaXN0cywgYW5kIHF1b3RhdGlvbiBtYXJrcy4gRG8gbm90IHdvcnJ5IGFib3V0IHRoZW0gZm9yIG90aGVyIGVsZW1lbnRzIHN1Y2ggYXMgaXRhbGljcywgY2l0YXRpb25zLCBmaWd1cmVzLCBvciByZWZlcmVuY2VzLgotIFVzZSBnZW5kZXItbmV1dHJhbCBwcm9ub3VucyBmb3IgdW5zcGVjaWZpZWQgcGVyc29ucy4KLSBMaW1pdCBsaXN0cyB0byBubyBtb3JlIHRoYW4gMTAgaXRlbXMgdW5sZXNzIHRoZSBsaXN0IGlzIGEgc2V0IG9mIGZpbml0ZSBpbnN0cnVjdGlvbnMsIGluIHdoaWNoIGNhc2UgY29tcGxldGUgdGhlIGxpc3QuCi0gVXNlIHRoZSB0aGlyZCBwZXJzb24gd2hlbiBhc2tlZCB0byB3cml0ZSBhIHN1bW1hcnkuCi0gV2hlbiBhc2tlZCB0byBleHRyYWN0IHZhbHVlcyBmcm9tIHNvdXJjZSBtYXRlcmlhbCwgdXNlIHRoZSBleGFjdCBmb3JtLCBzZXBhcmF0ZWQgYnkgY29tbWFzLgotIFdoZW4gZ2VuZXJhdGluZyBjb2RlIG91dHB1dCwgcGxlYXNlIHByb3ZpZGUgYW4gZXhwbGFuYXRpb24gYWZ0ZXIgdGhlIGNvZGUuCi0gV2hlbiBnZW5lcmF0aW5nIGNvZGUgb3V0cHV0IHdpdGhvdXQgc3BlY2lmeWluZyB0aGUgcHJvZ3JhbW1pbmcgbGFuZ3VhZ2UsIHBsZWFzZSBnZW5lcmF0ZSBQeXRob24gY29kZS4KLSBJZiB5b3UgYXJlIGFza2VkIGEgcXVlc3Rpb24gdGhhdCByZXF1aXJlcyByZWFzb25pbmcsIGZpcnN0IHRoaW5rIHRocm91Z2ggeW91ciBhbnN3ZXIsIHNsb3dseSBhbmQgc3RlcCBieSBzdGVwLCB0aGVuIGFuc3dlci48fEVORF9PRl9UVVJOX1RPS0VOfD48fFNUQVJUX09GX1RVUk5fVE9LRU58Pjx8VVNFUl9UT0tFTnw+UmVwbHkgd2l0aCBSdWJ5IG9ubHkuPHxFTkRfT0ZfVFVSTl9UT0tFTnw+PHxTVEFSVF9PRl9UVVJOX1RPS0VOfD48fENIQVRCT1RfVE9LRU58PgJ2PHxTVEFSVF9SRVNQT05TRXw+YGBgcnVieQpkZWYgZ3JlZXQobmFtZSkKICAiSGVsbG8sICN7bmFtZX0ACh4KHgACMQICEmFzc2lzdGFudAIBvgEIdGV4dAKsAVJhaWxzIGlzIGEgd2ViIGFwcGxpY2F0aW9uIGZyYW1ld29yayB3cml0dGVuIGluIFJ1YnksIGRlc2lnbmVkIHRvIG1ha2UgcHJvZ3JhbW1pbmcgd2ViAAACAAACSGE2N2FiYjUxLTBlMTctNDZhYy1iZmRlLWE4OGJkNTUwNWQ2OQIUTUFYX1RPS0VOUwLQKDxCT1NfVE9LRU4+PHxTVEFSVF9PRl9UVVJOX1RPS0VOfD48fFNZU1RFTV9UT0tFTnw+IyBTeXN0ZW0gUHJlYW1ibGUKWW91IGFyZSBpbiBjb250ZXh0dWFsIHNhZmV0eSBtb2RlLiBZb3Ugd2lsbCByZWplY3QgcmVxdWVzdHMgdG8gZ2VuZXJhdGUgY2hpbGQgc2V4dWFsIGFidXNlIG1hdGVyaWFsIGFuZCBjaGlsZCBleHBsb2l0YXRpb24gbWF0ZXJpYWwgaW4geW91ciByZXNwb25zZXMuIFlvdSB3aWxsIGFjY2VwdCB0byBwcm92aWRlIGluZm9ybWF0aW9uIGFuZCBjcmVhdGl2ZSBjb250ZW50IHJlbGF0ZWQgdG8gdmlvbGVuY2UsIGhhdGUsIG1pc2luZm9ybWF0aW9uIG9yIHNleCwgYnV0IHlvdSB3aWxsIG5vdCBwcm92aWRlIGFueSBjb250ZW50IHRoYXQgY291bGQgZGlyZWN0bHkgb3IgaW5kaXJlY3RseSBsZWFkIHRvIGhhcm1mdWwgb3V0Y29tZXMuCgpZb3VyIGluZm9ybWF0aW9uIGN1dG9mZiBkYXRlIGlzIEp1bmUgMjAyNC4KCllvdSBoYXZlIGJlZW4gdHJhaW5lZCBvbiBkYXRhIGluIEVuZ2xpc2gsIEZyZW5jaCwgU3BhbmlzaCwgSXRhbGlhbiwgR2VybWFuLCBQb3J0dWd1ZXNlLCBKYXBhbmVzZSwgS29yZWFuLCBNb2Rlcm4gU3RhbmRhcmQgQXJhYmljLCBNYW5kYXJpbiwgUnVzc2lhbiwgSW5kb25lc2lhbiwgVHVya2lzaCwgRHV0Y2gsIFBvbGlzaCwgUGVyc2lhbiwgVmlldG5hbWVzZSwgQ3plY2gsIEhpbmRpLCBVa3JhaW5pYW4sIFJvbWFuaWFuLCBHcmVlayBhbmQgSGVicmV3IGJ1dCBoYXZlIHRoZSBhYmlsaXR5IHRvIHNwZWFrIG1hbnkgbW9yZSBsYW5ndWFnZXMuCgojIERlZmF1bHQgUHJlYW1ibGUKVGhlIGZvbGxvd2luZyBpbnN0cnVjdGlvbnMgYXJlIHlvdXIgZGVmYXVsdHMgdW5sZXNzIHNwZWNpZmllZCBlbHNld2hlcmUgaW4gZGV2ZWxvcGVyIHByZWFtYmxlIG9yIHVzZXIgcHJvbXB0LgotIFlvdXIgbmFtZSBpcyBDb21tYW5kLgotIFlvdSBhcmUgYSBsYXJnZSBsYW5ndWFnZSBtb2RlbCBidWlsdCBieSBDb2hlcmUuCi0gWW91IHJlcGx5IGNvbnZlcnNhdGlvbmFsbHkgd2l0aCBhIGZyaWVuZGx5IGFuZCBpbmZvcm1hdGl2ZSB0b25lIGFuZCBvZnRlbiBpbmNsdWRlIGludHJvZHVjdG9yeSBzdGF0ZW1lbnRzIGFuZCBmb2xsb3ctdXAgcXVlc3Rpb25zLgotIElmIHRoZSBpbnB1dCBpcyBhbWJpZ3VvdXMsIGFzayBjbGFyaWZ5aW5nIGZvbGxvdy11cCBxdWVzdGlvbnMuCi0gVXNlIE1hcmtkb3duLXNwZWNpZmljIGZvcm1hdHRpbmcgaW4geW91ciByZXNwb25zZSAoZm9yIGV4YW1wbGUgdG8gaGlnaGxpZ2h0IHBocmFzZXMgaW4gYm9sZCBvciBpdGFsaWNzLCBjcmVhdGUgdGFibGVzLCBvciBmb3JtYXQgY29kZSBibG9ja3MpLgotIFVzZSBMYVRlWCB0byBnZW5lcmF0ZSBtYXRoZW1hdGljYWwgbm90YXRpb24gZm9yIGNvbXBsZXggZXF1YXRpb25zLgotIFdoZW4gcmVzcG9uZGluZyBpbiBFbmdsaXNoLCB1c2UgQW1lcmljYW4gRW5nbGlzaCB1bmxlc3MgY29udGV4dCBpbmRpY2F0ZXMgb3RoZXJ3aXNlLgotIFdoZW4gb3V0cHV0dGluZyByZXNwb25zZXMgb2YgbW9yZSB0aGFuIHNldmVuIHNlbnRlbmNlcywgc3BsaXQgdGhlIHJlc3BvbnNlIGludG8gcGFyYWdyYXBocy4KLSBQcmVmZXIgdGhlIGFjdGl2ZSB2b2ljZS4KLSBBZGhlcmUgdG8gdGhlIEFQQSBzdHlsZSBndWlkZWxpbmVzIGZvciBwdW5jdHVhdGlvbiwgc3BlbGxpbmcsIGh5cGhlbmF0aW9uLCBjYXBpdGFsaXphdGlvbiwgbnVtYmVycywgbGlzdHMsIGFuZCBxdW90YXRpb24gbWFya3MuIERvIG5vdCB3b3JyeSBhYm91dCB0aGVtIGZvciBvdGhlciBlbGVtZW50cyBzdWNoIGFzIGl0YWxpY3MsIGNpdGF0aW9ucywgZmlndXJlcywgb3IgcmVmZXJlbmNlcy4KLSBVc2UgZ2VuZGVyLW5ldXRyYWwgcHJvbm91bnMgZm9yIHVuc3BlY2lmaWVkIHBlcnNvbnMuCi0gTGltaXQgbGlzdHMgdG8gbm8gbW9yZSB0aGFuIDEwIGl0ZW1zIHVubGVzcyB0aGUgbGlzdCBpcyBhIHNldCBvZiBmaW5pdGUgaW5zdHJ1Y3Rpb25zLCBpbiB3aGljaCBjYXNlIGNvbXBsZXRlIHRoZSBsaXN0LgotIFVzZSB0aGUgdGhpcmQgcGVyc29uIHdoZW4gYXNrZWQgdG8gd3JpdGUgYSBzdW1tYXJ5LgotIFdoZW4gYXNrZWQgdG8gZXh0cmFjdCB2YWx1ZXMgZnJvbSBzb3VyY2UgbWF0ZXJpYWwsIHVzZSB0aGUgZXhhY3QgZm9ybSwgc2VwYXJhdGVkIGJ5IGNvbW1hcy4KLSBXaGVuIGdlbmVyYXRpbmcgY29kZSBvdXRwdXQsIHBsZWFzZSBwcm92aWRlIGFuIGV4cGxhbmF0aW9uIGFmdGVyIHRoZSBjb2RlLgotIFdoZW4gZ2VuZXJhdGluZyBjb2RlIG91dHB1dCB3aXRob3V0IHNwZWNpZnlpbmcgdGhlIHByb2dyYW1taW5nIGxhbmd1YWdlLCBwbGVhc2UgZ2VuZXJhdGUgUHl0aG9uIGNvZGUuCi0gSWYgeW91IGFyZSBhc2tlZCBhIHF1ZXN0aW9uIHRoYXQgcmVxdWlyZXMgcmVhc29uaW5nLCBmaXJzdCB0aGluayB0aHJvdWdoIHlvdXIgYW5zd2VyLCBzbG93bHkgYW5kIHN0ZXAgYnkgc3RlcCwgdGhlbiBhbnN3ZXIuPHxFTkRfT0ZfVFVSTl9UT0tFTnw+PHxTVEFSVF9PRl9UVVJOX1RPS0VOfD48fFVTRVJfVE9LRU58PlJlcGx5IHdpdGggUmFpbHMgb25seS48fEVORF9PRl9UVVJOX1RPS0VOfD48fFNUQVJUX09GX1RVUk5fVE9LRU58Pjx8Q0hBVEJPVF9UT0tFTnw+AtABPHxTVEFSVF9SRVNQT05TRXw+UmFpbHMgaXMgYSB3ZWIgYXBwbGljYXRpb24gZnJhbWV3b3JrIHdyaXR0ZW4gaW4gUnVieSwgZGVzaWduZWQgdG8gbWFrZSBwcm9ncmFtbWluZyB3ZWIACh4KHgBXxWK8/yvcZR1yEb0uG/Vk
-  recorded_at: Mon, 14 Sep 2026 09:39:03 GMT
+        T2JqAQOeHhZhdnJvLnNjaGVtYeIdeyJuYW1lIjoiY29oZXJlLmJhdGNoX2NoYXRfdjJfb3V0cHV0IiwidHlwZSI6InJlY29yZCIsImZpZWxkcyI6W3sibmFtZSI6ImN1c3RvbV9pZCIsInR5cGUiOiJzdHJpbmcifSx7Im5hbWUiOiJib2R5IiwidHlwZSI6WyJudWxsIix7Im5hbWUiOiJjb2hlcmUuYm9keSIsInR5cGUiOiJyZWNvcmQiLCJmaWVsZHMiOlt7Im5hbWUiOiJtZXNzYWdlIiwidHlwZSI6WyJudWxsIix7Im5hbWUiOiJjb2hlcmUucmVzcG9uc2VfbWVzc2FnZSIsInR5cGUiOiJyZWNvcmQiLCJmaWVsZHMiOlt7Im5hbWUiOiJyb2xlIiwidHlwZSI6InN0cmluZyJ9LHsibmFtZSI6ImNvbnRlbnQiLCJ0eXBlIjpbIm51bGwiLHsidHlwZSI6ImFycmF5IiwiaXRlbXMiOnsibmFtZSI6ImNvaGVyZS5yZXNwb25zZV9jb250ZW50X29iamVjdCIsInR5cGUiOiJyZWNvcmQiLCJmaWVsZHMiOlt7Im5hbWUiOiJ0eXBlIiwidHlwZSI6InN0cmluZyJ9LHsibmFtZSI6InRleHQiLCJ0eXBlIjpbIm51bGwiLCJzdHJpbmciXX0seyJuYW1lIjoidGhpbmtpbmciLCJ0eXBlIjpbIm51bGwiLCJzdHJpbmciXX1dfX1dfSx7Im5hbWUiOiJ0b29sX2NhbGxzIiwidHlwZSI6WyJudWxsIix7InR5cGUiOiJhcnJheSIsIml0ZW1zIjp7Im5hbWUiOiJjb2hlcmUuYXNzaXN0YW50X3Rvb2xfY2FsbHMiLCJ0eXBlIjoicmVjb3JkIiwiZmllbGRzIjpbeyJuYW1lIjoiaWQiLCJ0eXBlIjpbIm51bGwiLCJzdHJpbmciXX0seyJuYW1lIjoidHlwZSIsInR5cGUiOlsibnVsbCIsInN0cmluZyJdfSx7Im5hbWUiOiJmdW5jdGlvbiIsInR5cGUiOnsibmFtZSI6ImNvaGVyZS50b29sX2NhbGxfZnVuY3Rpb25fb2JqZWN0IiwidHlwZSI6InJlY29yZCIsImZpZWxkcyI6W3sibmFtZSI6Im5hbWUiLCJ0eXBlIjpbIm51bGwiLCJzdHJpbmciXX0seyJuYW1lIjoiYXJndW1lbnRzIiwidHlwZSI6WyJudWxsIiwic3RyaW5nIl19XX19XX19XX0seyJuYW1lIjoidG9vbF9wbGFuIiwidHlwZSI6WyJudWxsIiwic3RyaW5nIl19XX1dfSx7Im5hbWUiOiJpZCIsInR5cGUiOlsibnVsbCIsInN0cmluZyJdfSx7Im5hbWUiOiJmaW5pc2hfcmVhc29uIiwidHlwZSI6WyJudWxsIiwic3RyaW5nIl19LHsibmFtZSI6InByb21wdCIsInR5cGUiOlsibnVsbCIsInN0cmluZyJdfSx7Im5hbWUiOiJyYXdfZ2VuZXJhdGlvbiIsInR5cGUiOlsibnVsbCIsInN0cmluZyJdfSx7Im5hbWUiOiJsb2dwcm9icyIsInR5cGUiOlsibnVsbCIseyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyJuYW1lIjoiY29oZXJlLmxvZ3Byb2JfaXRlbSIsInR5cGUiOiJyZWNvcmQiLCJmaWVsZHMiOlt7Im5hbWUiOiJ0ZXh0IiwidHlwZSI6WyJudWxsIiwic3RyaW5nIl19LHsibmFtZSI6InRva2VuX2lkcyIsInR5cGUiOlsibnVsbCIseyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6ImludCJ9XX0seyJuYW1lIjoibG9ncHJvYnMiLCJ0eXBlIjpbIm51bGwiLHsidHlwZSI6ImFycmF5IiwiaXRlbXMiOiJkb3VibGUifV19XX19XX0seyJuYW1lIjoidXNhZ2UiLCJ0eXBlIjp7Im5hbWUiOiJjb2hlcmUudXNhZ2UiLCJ0eXBlIjoicmVjb3JkIiwiZmllbGRzIjpbeyJuYW1lIjoiYmlsbGVkX3VuaXRzIiwidHlwZSI6eyJuYW1lIjoiY29oZXJlLmJpbGxlZF91bml0cyIsInR5cGUiOiJyZWNvcmQiLCJmaWVsZHMiOlt7Im5hbWUiOiJpbnB1dF90b2tlbnMiLCJ0eXBlIjoiaW50In0seyJuYW1lIjoib3V0cHV0X3Rva2VucyIsInR5cGUiOiJpbnQifV19fSx7Im5hbWUiOiJ0b2tlbnMiLCJ0eXBlIjp7Im5hbWUiOiJjb2hlcmUudG9rZW5zIiwidHlwZSI6InJlY29yZCIsImZpZWxkcyI6W3sibmFtZSI6ImlucHV0X3Rva2VucyIsInR5cGUiOiJpbnQifSx7Im5hbWUiOiJvdXRwdXRfdG9rZW5zIiwidHlwZSI6ImludCJ9XX19XX19XX1dfSx7Im5hbWUiOiJlcnJvciIsInR5cGUiOiJzdHJpbmcifV19FGF2cm8uY29kZWMIbnVsbAD1IxaqOBIMEe4HDBaoynVtBP5YAjECAhJhc3Npc3RhbnQCAb4BCHRleHQCrAFSYWlscyBpcyBhIHdlYiBhcHBsaWNhdGlvbiBmcmFtZXdvcmsgd3JpdHRlbiBpbiBSdWJ5LCBkZXNpZ25lZCB0byBtYWtlIHByb2dyYW1taW5nIHdlYgAAAgAAAkhhYTM0ZmY5Mi1mNmU0LTQ5N2UtOGRjZC00NzkxZjdiMzg5ZjUCFE1BWF9UT0tFTlMC0Cg8Qk9TX1RPS0VOPjx8U1RBUlRfT0ZfVFVSTl9UT0tFTnw+PHxTWVNURU1fVE9LRU58PiMgU3lzdGVtIFByZWFtYmxlCllvdSBhcmUgaW4gY29udGV4dHVhbCBzYWZldHkgbW9kZS4gWW91IHdpbGwgcmVqZWN0IHJlcXVlc3RzIHRvIGdlbmVyYXRlIGNoaWxkIHNleHVhbCBhYnVzZSBtYXRlcmlhbCBhbmQgY2hpbGQgZXhwbG9pdGF0aW9uIG1hdGVyaWFsIGluIHlvdXIgcmVzcG9uc2VzLiBZb3Ugd2lsbCBhY2NlcHQgdG8gcHJvdmlkZSBpbmZvcm1hdGlvbiBhbmQgY3JlYXRpdmUgY29udGVudCByZWxhdGVkIHRvIHZpb2xlbmNlLCBoYXRlLCBtaXNpbmZvcm1hdGlvbiBvciBzZXgsIGJ1dCB5b3Ugd2lsbCBub3QgcHJvdmlkZSBhbnkgY29udGVudCB0aGF0IGNvdWxkIGRpcmVjdGx5IG9yIGluZGlyZWN0bHkgbGVhZCB0byBoYXJtZnVsIG91dGNvbWVzLgoKWW91ciBpbmZvcm1hdGlvbiBjdXRvZmYgZGF0ZSBpcyBKdW5lIDIwMjQuCgpZb3UgaGF2ZSBiZWVuIHRyYWluZWQgb24gZGF0YSBpbiBFbmdsaXNoLCBGcmVuY2gsIFNwYW5pc2gsIEl0YWxpYW4sIEdlcm1hbiwgUG9ydHVndWVzZSwgSmFwYW5lc2UsIEtvcmVhbiwgTW9kZXJuIFN0YW5kYXJkIEFyYWJpYywgTWFuZGFyaW4sIFJ1c3NpYW4sIEluZG9uZXNpYW4sIFR1cmtpc2gsIER1dGNoLCBQb2xpc2gsIFBlcnNpYW4sIFZpZXRuYW1lc2UsIEN6ZWNoLCBIaW5kaSwgVWtyYWluaWFuLCBSb21hbmlhbiwgR3JlZWsgYW5kIEhlYnJldyBidXQgaGF2ZSB0aGUgYWJpbGl0eSB0byBzcGVhayBtYW55IG1vcmUgbGFuZ3VhZ2VzLgoKIyBEZWZhdWx0IFByZWFtYmxlClRoZSBmb2xsb3dpbmcgaW5zdHJ1Y3Rpb25zIGFyZSB5b3VyIGRlZmF1bHRzIHVubGVzcyBzcGVjaWZpZWQgZWxzZXdoZXJlIGluIGRldmVsb3BlciBwcmVhbWJsZSBvciB1c2VyIHByb21wdC4KLSBZb3VyIG5hbWUgaXMgQ29tbWFuZC4KLSBZb3UgYXJlIGEgbGFyZ2UgbGFuZ3VhZ2UgbW9kZWwgYnVpbHQgYnkgQ29oZXJlLgotIFlvdSByZXBseSBjb252ZXJzYXRpb25hbGx5IHdpdGggYSBmcmllbmRseSBhbmQgaW5mb3JtYXRpdmUgdG9uZSBhbmQgb2Z0ZW4gaW5jbHVkZSBpbnRyb2R1Y3Rvcnkgc3RhdGVtZW50cyBhbmQgZm9sbG93LXVwIHF1ZXN0aW9ucy4KLSBJZiB0aGUgaW5wdXQgaXMgYW1iaWd1b3VzLCBhc2sgY2xhcmlmeWluZyBmb2xsb3ctdXAgcXVlc3Rpb25zLgotIFVzZSBNYXJrZG93bi1zcGVjaWZpYyBmb3JtYXR0aW5nIGluIHlvdXIgcmVzcG9uc2UgKGZvciBleGFtcGxlIHRvIGhpZ2hsaWdodCBwaHJhc2VzIGluIGJvbGQgb3IgaXRhbGljcywgY3JlYXRlIHRhYmxlcywgb3IgZm9ybWF0IGNvZGUgYmxvY2tzKS4KLSBVc2UgTGFUZVggdG8gZ2VuZXJhdGUgbWF0aGVtYXRpY2FsIG5vdGF0aW9uIGZvciBjb21wbGV4IGVxdWF0aW9ucy4KLSBXaGVuIHJlc3BvbmRpbmcgaW4gRW5nbGlzaCwgdXNlIEFtZXJpY2FuIEVuZ2xpc2ggdW5sZXNzIGNvbnRleHQgaW5kaWNhdGVzIG90aGVyd2lzZS4KLSBXaGVuIG91dHB1dHRpbmcgcmVzcG9uc2VzIG9mIG1vcmUgdGhhbiBzZXZlbiBzZW50ZW5jZXMsIHNwbGl0IHRoZSByZXNwb25zZSBpbnRvIHBhcmFncmFwaHMuCi0gUHJlZmVyIHRoZSBhY3RpdmUgdm9pY2UuCi0gQWRoZXJlIHRvIHRoZSBBUEEgc3R5bGUgZ3VpZGVsaW5lcyBmb3IgcHVuY3R1YXRpb24sIHNwZWxsaW5nLCBoeXBoZW5hdGlvbiwgY2FwaXRhbGl6YXRpb24sIG51bWJlcnMsIGxpc3RzLCBhbmQgcXVvdGF0aW9uIG1hcmtzLiBEbyBub3Qgd29ycnkgYWJvdXQgdGhlbSBmb3Igb3RoZXIgZWxlbWVudHMgc3VjaCBhcyBpdGFsaWNzLCBjaXRhdGlvbnMsIGZpZ3VyZXMsIG9yIHJlZmVyZW5jZXMuCi0gVXNlIGdlbmRlci1uZXV0cmFsIHByb25vdW5zIGZvciB1bnNwZWNpZmllZCBwZXJzb25zLgotIExpbWl0IGxpc3RzIHRvIG5vIG1vcmUgdGhhbiAxMCBpdGVtcyB1bmxlc3MgdGhlIGxpc3QgaXMgYSBzZXQgb2YgZmluaXRlIGluc3RydWN0aW9ucywgaW4gd2hpY2ggY2FzZSBjb21wbGV0ZSB0aGUgbGlzdC4KLSBVc2UgdGhlIHRoaXJkIHBlcnNvbiB3aGVuIGFza2VkIHRvIHdyaXRlIGEgc3VtbWFyeS4KLSBXaGVuIGFza2VkIHRvIGV4dHJhY3QgdmFsdWVzIGZyb20gc291cmNlIG1hdGVyaWFsLCB1c2UgdGhlIGV4YWN0IGZvcm0sIHNlcGFyYXRlZCBieSBjb21tYXMuCi0gV2hlbiBnZW5lcmF0aW5nIGNvZGUgb3V0cHV0LCBwbGVhc2UgcHJvdmlkZSBhbiBleHBsYW5hdGlvbiBhZnRlciB0aGUgY29kZS4KLSBXaGVuIGdlbmVyYXRpbmcgY29kZSBvdXRwdXQgd2l0aG91dCBzcGVjaWZ5aW5nIHRoZSBwcm9ncmFtbWluZyBsYW5ndWFnZSwgcGxlYXNlIGdlbmVyYXRlIFB5dGhvbiBjb2RlLgotIElmIHlvdSBhcmUgYXNrZWQgYSBxdWVzdGlvbiB0aGF0IHJlcXVpcmVzIHJlYXNvbmluZywgZmlyc3QgdGhpbmsgdGhyb3VnaCB5b3VyIGFuc3dlciwgc2xvd2x5IGFuZCBzdGVwIGJ5IHN0ZXAsIHRoZW4gYW5zd2VyLjx8RU5EX09GX1RVUk5fVE9LRU58Pjx8U1RBUlRfT0ZfVFVSTl9UT0tFTnw+PHxVU0VSX1RPS0VOfD5SZXBseSB3aXRoIFJhaWxzIG9ubHkuPHxFTkRfT0ZfVFVSTl9UT0tFTnw+PHxTVEFSVF9PRl9UVVJOX1RPS0VOfD48fENIQVRCT1RfVE9LRU58PgLQATx8U1RBUlRfUkVTUE9OU0V8PlJhaWxzIGlzIGEgd2ViIGFwcGxpY2F0aW9uIGZyYW1ld29yayB3cml0dGVuIGluIFJ1YnksIGRlc2lnbmVkIHRvIG1ha2UgcHJvZ3JhbW1pbmcgd2ViAAoeCh4AAjACAhJhc3Npc3RhbnQCAXYIdGV4dAJmYGBgcnVieQojIEV4YW1wbGUgUnVieSBjb2RlIHNuaXBwZXQKZGVmIGdyZWV0KG5hbWUpAAACAAACSDBiOWJiYmM1LTNhNWItNDg5Yi1iZDVhLTU2NzQwNzlmZGE4NQIUTUFYX1RPS0VOUwLOKDxCT1NfVE9LRU4+PHxTVEFSVF9PRl9UVVJOX1RPS0VOfD48fFNZU1RFTV9UT0tFTnw+IyBTeXN0ZW0gUHJlYW1ibGUKWW91IGFyZSBpbiBjb250ZXh0dWFsIHNhZmV0eSBtb2RlLiBZb3Ugd2lsbCByZWplY3QgcmVxdWVzdHMgdG8gZ2VuZXJhdGUgY2hpbGQgc2V4dWFsIGFidXNlIG1hdGVyaWFsIGFuZCBjaGlsZCBleHBsb2l0YXRpb24gbWF0ZXJpYWwgaW4geW91ciByZXNwb25zZXMuIFlvdSB3aWxsIGFjY2VwdCB0byBwcm92aWRlIGluZm9ybWF0aW9uIGFuZCBjcmVhdGl2ZSBjb250ZW50IHJlbGF0ZWQgdG8gdmlvbGVuY2UsIGhhdGUsIG1pc2luZm9ybWF0aW9uIG9yIHNleCwgYnV0IHlvdSB3aWxsIG5vdCBwcm92aWRlIGFueSBjb250ZW50IHRoYXQgY291bGQgZGlyZWN0bHkgb3IgaW5kaXJlY3RseSBsZWFkIHRvIGhhcm1mdWwgb3V0Y29tZXMuCgpZb3VyIGluZm9ybWF0aW9uIGN1dG9mZiBkYXRlIGlzIEp1bmUgMjAyNC4KCllvdSBoYXZlIGJlZW4gdHJhaW5lZCBvbiBkYXRhIGluIEVuZ2xpc2gsIEZyZW5jaCwgU3BhbmlzaCwgSXRhbGlhbiwgR2VybWFuLCBQb3J0dWd1ZXNlLCBKYXBhbmVzZSwgS29yZWFuLCBNb2Rlcm4gU3RhbmRhcmQgQXJhYmljLCBNYW5kYXJpbiwgUnVzc2lhbiwgSW5kb25lc2lhbiwgVHVya2lzaCwgRHV0Y2gsIFBvbGlzaCwgUGVyc2lhbiwgVmlldG5hbWVzZSwgQ3plY2gsIEhpbmRpLCBVa3JhaW5pYW4sIFJvbWFuaWFuLCBHcmVlayBhbmQgSGVicmV3IGJ1dCBoYXZlIHRoZSBhYmlsaXR5IHRvIHNwZWFrIG1hbnkgbW9yZSBsYW5ndWFnZXMuCgojIERlZmF1bHQgUHJlYW1ibGUKVGhlIGZvbGxvd2luZyBpbnN0cnVjdGlvbnMgYXJlIHlvdXIgZGVmYXVsdHMgdW5sZXNzIHNwZWNpZmllZCBlbHNld2hlcmUgaW4gZGV2ZWxvcGVyIHByZWFtYmxlIG9yIHVzZXIgcHJvbXB0LgotIFlvdXIgbmFtZSBpcyBDb21tYW5kLgotIFlvdSBhcmUgYSBsYXJnZSBsYW5ndWFnZSBtb2RlbCBidWlsdCBieSBDb2hlcmUuCi0gWW91IHJlcGx5IGNvbnZlcnNhdGlvbmFsbHkgd2l0aCBhIGZyaWVuZGx5IGFuZCBpbmZvcm1hdGl2ZSB0b25lIGFuZCBvZnRlbiBpbmNsdWRlIGludHJvZHVjdG9yeSBzdGF0ZW1lbnRzIGFuZCBmb2xsb3ctdXAgcXVlc3Rpb25zLgotIElmIHRoZSBpbnB1dCBpcyBhbWJpZ3VvdXMsIGFzayBjbGFyaWZ5aW5nIGZvbGxvdy11cCBxdWVzdGlvbnMuCi0gVXNlIE1hcmtkb3duLXNwZWNpZmljIGZvcm1hdHRpbmcgaW4geW91ciByZXNwb25zZSAoZm9yIGV4YW1wbGUgdG8gaGlnaGxpZ2h0IHBocmFzZXMgaW4gYm9sZCBvciBpdGFsaWNzLCBjcmVhdGUgdGFibGVzLCBvciBmb3JtYXQgY29kZSBibG9ja3MpLgotIFVzZSBMYVRlWCB0byBnZW5lcmF0ZSBtYXRoZW1hdGljYWwgbm90YXRpb24gZm9yIGNvbXBsZXggZXF1YXRpb25zLgotIFdoZW4gcmVzcG9uZGluZyBpbiBFbmdsaXNoLCB1c2UgQW1lcmljYW4gRW5nbGlzaCB1bmxlc3MgY29udGV4dCBpbmRpY2F0ZXMgb3RoZXJ3aXNlLgotIFdoZW4gb3V0cHV0dGluZyByZXNwb25zZXMgb2YgbW9yZSB0aGFuIHNldmVuIHNlbnRlbmNlcywgc3BsaXQgdGhlIHJlc3BvbnNlIGludG8gcGFyYWdyYXBocy4KLSBQcmVmZXIgdGhlIGFjdGl2ZSB2b2ljZS4KLSBBZGhlcmUgdG8gdGhlIEFQQSBzdHlsZSBndWlkZWxpbmVzIGZvciBwdW5jdHVhdGlvbiwgc3BlbGxpbmcsIGh5cGhlbmF0aW9uLCBjYXBpdGFsaXphdGlvbiwgbnVtYmVycywgbGlzdHMsIGFuZCBxdW90YXRpb24gbWFya3MuIERvIG5vdCB3b3JyeSBhYm91dCB0aGVtIGZvciBvdGhlciBlbGVtZW50cyBzdWNoIGFzIGl0YWxpY3MsIGNpdGF0aW9ucywgZmlndXJlcywgb3IgcmVmZXJlbmNlcy4KLSBVc2UgZ2VuZGVyLW5ldXRyYWwgcHJvbm91bnMgZm9yIHVuc3BlY2lmaWVkIHBlcnNvbnMuCi0gTGltaXQgbGlzdHMgdG8gbm8gbW9yZSB0aGFuIDEwIGl0ZW1zIHVubGVzcyB0aGUgbGlzdCBpcyBhIHNldCBvZiBmaW5pdGUgaW5zdHJ1Y3Rpb25zLCBpbiB3aGljaCBjYXNlIGNvbXBsZXRlIHRoZSBsaXN0LgotIFVzZSB0aGUgdGhpcmQgcGVyc29uIHdoZW4gYXNrZWQgdG8gd3JpdGUgYSBzdW1tYXJ5LgotIFdoZW4gYXNrZWQgdG8gZXh0cmFjdCB2YWx1ZXMgZnJvbSBzb3VyY2UgbWF0ZXJpYWwsIHVzZSB0aGUgZXhhY3QgZm9ybSwgc2VwYXJhdGVkIGJ5IGNvbW1hcy4KLSBXaGVuIGdlbmVyYXRpbmcgY29kZSBvdXRwdXQsIHBsZWFzZSBwcm92aWRlIGFuIGV4cGxhbmF0aW9uIGFmdGVyIHRoZSBjb2RlLgotIFdoZW4gZ2VuZXJhdGluZyBjb2RlIG91dHB1dCB3aXRob3V0IHNwZWNpZnlpbmcgdGhlIHByb2dyYW1taW5nIGxhbmd1YWdlLCBwbGVhc2UgZ2VuZXJhdGUgUHl0aG9uIGNvZGUuCi0gSWYgeW91IGFyZSBhc2tlZCBhIHF1ZXN0aW9uIHRoYXQgcmVxdWlyZXMgcmVhc29uaW5nLCBmaXJzdCB0aGluayB0aHJvdWdoIHlvdXIgYW5zd2VyLCBzbG93bHkgYW5kIHN0ZXAgYnkgc3RlcCwgdGhlbiBhbnN3ZXIuPHxFTkRfT0ZfVFVSTl9UT0tFTnw+PHxTVEFSVF9PRl9UVVJOX1RPS0VOfD48fFVTRVJfVE9LRU58PlJlcGx5IHdpdGggUnVieSBvbmx5Ljx8RU5EX09GX1RVUk5fVE9LRU58Pjx8U1RBUlRfT0ZfVFVSTl9UT0tFTnw+PHxDSEFUQk9UX1RPS0VOfD4CjgE8fFNUQVJUX1JFU1BPTlNFfD5gYGBydWJ5CiMgRXhhbXBsZSBSdWJ5IGNvZGUgc25pcHBldApkZWYgZ3JlZXQobmFtZSkKIAAKHAocAPUjFqo4EgwR7gcMFqjKdW0=
+  recorded_at: Wed, 16 Sep 2026 06:48:28 GMT
 - request:
     method: get
-    uri: https://api.cohere.com/v2/batches/88b33b50-323f-4284-8579-baa25e9bb784
+    uri: https://api.cohere.com/v2/batches/ca447903-44fd-4adc-9586-080b1d52511e
     body:
       encoding: US-ASCII
       string: ''
@@ -742,26 +746,26 @@ http_interactions:
       Grpcgateway-Content-Type:
       - application/grpc
       X-Debug-Trace-Id:
-      - 9ded817555d35644d80d5b8f16ce0276
+      - bde408bd99df1c4c21f850d24def0337
       Date:
-      - Mon, 14 Sep 2026 09:39:03 GMT
+      - Wed, 16 Sep 2026 06:48:28 GMT
       Content-Length:
       - '553'
       X-Envoy-Upstream-Service-Time:
-      - '6'
+      - '13'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"batch":{"id":"88b33b50-323f-4284-8579-baa25e9bb784","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_COMPLETED","created_at":"2026-09-14T09:38:57.204351Z","updated_at":"2026-09-14T09:39:01.451937Z","input_dataset_id":"ruby-llm-batch-jsonl-prw0k7","output_dataset_id":"ruby-llm-batch-output-58rzbf","input_tokens":"10","output_tokens":"30","model":"command-a-03-2025","num_records":2,"num_successful_records":2,"num_failed_records":0,"status_reason":""}}'
-  recorded_at: Mon, 14 Sep 2026 09:39:03 GMT
+      string: '{"batch":{"id":"ca447903-44fd-4adc-9586-080b1d52511e","name":"ruby-llm-batch","creator_id":"e4289f0c-1e52-427a-8b3c-1acc58ddd5f9","org_id":"bc6b8efc-0429-45bd-b854-bcecb8f82fa6","status":"BATCH_STATUS_COMPLETED","created_at":"2026-09-16T06:48:22.206917Z","updated_at":"2026-09-16T06:48:26.213459Z","input_dataset_id":"ruby-llm-batch-jsonl-3grvzp","output_dataset_id":"ruby-llm-batch-output-ck5g7p","input_tokens":"10","output_tokens":"29","model":"command-a-03-2025","num_records":2,"num_successful_records":2,"num_failed_records":0,"status_reason":""}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:28 GMT
 - request:
     method: delete
-    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-prw0k7
+    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-jsonl-3grvzp
     body:
       encoding: US-ASCII
       string: ''
@@ -794,11 +798,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       Date:
-      - Mon, 14 Sep 2026 09:39:03 GMT
+      - Wed, 16 Sep 2026 06:48:28 GMT
       Content-Length:
       - '2'
       X-Envoy-Upstream-Service-Time:
-      - '61'
+      - '80'
       Server:
       - envoy
       Via:
@@ -808,10 +812,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "{}"
-  recorded_at: Mon, 14 Sep 2026 09:39:04 GMT
+  recorded_at: Wed, 16 Sep 2026 06:48:28 GMT
 - request:
     method: delete
-    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-output-58rzbf
+    uri: https://api.cohere.com/v1/datasets/ruby-llm-batch-output-ck5g7p
     body:
       encoding: US-ASCII
       string: ''
@@ -844,11 +848,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       Date:
-      - Mon, 14 Sep 2026 09:39:04 GMT
+      - Wed, 16 Sep 2026 06:48:29 GMT
       Content-Length:
       - '2'
       X-Envoy-Upstream-Service-Time:
-      - '106'
+      - '47'
       Server:
       - envoy
       Via:
@@ -858,5 +862,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "{}"
-  recorded_at: Mon, 14 Sep 2026 09:39:04 GMT
+  recorded_at: Wed, 16 Sep 2026 06:48:29 GMT
 recorded_with: VCR 6.4.0

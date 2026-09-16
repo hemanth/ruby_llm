@@ -27,22 +27,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Req-Cost-Time:
+      - '1518'
+      Req-Arrive-Time:
+      - '1789542524974'
       Date:
-      - Mon, 14 Sep 2026 11:08:44 GMT
-      Server:
-      - istio-envoy
-      Resp-Start-Time:
-      - '1789384126838'
-      X-Envoy-Upstream-Service-Time:
-      - '2082'
-      Access-Control-Allow-Origin:
-      - ''
+      - Wed, 16 Sep 2026 07:08:44 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Req-Cost-Time:
-      - '2087'
-      Req-Arrive-Time:
-      - '1789384124751'
+      Resp-Start-Time:
+      - '1789542526493'
+      X-Envoy-Upstream-Service-Time:
+      - '1513'
+      Server:
+      - istio-envoy
+      Access-Control-Allow-Origin:
+      - ''
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -50,51 +50,39 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"choices":[{"finish_reason":"tool_calls","index":0,"message":{"role":"assistant","content":"","reasoning_content":"Okay,
-        let''s tackle the user''s question. They want to know two things: the weather
-        in Berlin with the given coordinates and the best language to learn.\n\nFirst,
-        I''ll check the tools provided. There''s a weather function that requires
-        latitude and longitude. The user provided both, so I can use that. The parameters
-        are strings, so I''ll make sure to input them correctly as \"52.5200\" and
-        \"13.4050\".\n\nNext, the second part is about the best language to learn.
-        There''s a function called best_language_to_learn with no parameters. Since
-        it doesn''t need any arguments, I can call it directly. \n\nI need to make
-        two separate tool calls. First, call the weather function with the provided
-        coordinates. Then, call the best_language_to_learn function. Both functions
-        are available, so I can proceed to structure the JSON for each tool call within
-        the required XML tags.\n","tool_calls":[{"type":"function","function":{"name":"weather","arguments":"{\"latitude\":
-        \"52.5200\", \"longitude\": \"13.4050\"}"},"id":"3233KcdrLAvHsbOnVfh4K8UOzLJMXiCs"},{"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"},"id":"ocpZcrubbIuVdwBfgFGZKZFkAiR6akLN"}]}}],"created":1789384126,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":250,"prompt_tokens":297,"total_tokens":547,"prompt_tokens_details":{"cached_tokens":154}},"id":"chatcmpl-dZeg7DhTjDVk4GpMEyFAUewioWlCitVc","timings":{"cache_n":154,"prompt_n":143,"prompt_ms":43.837,"prompt_per_token_ms":0.3065524475524476,"prompt_per_second":3262.0845404566917,"predicted_n":250,"predicted_ms":1987.528,"predicted_per_token_ms":7.98204016064257,"predicted_per_second":125.28125389931613}}'
-  recorded_at: Mon, 14 Sep 2026 11:08:46 GMT
+        the user is asking two things: the weather in Berlin and the best language
+        to learn. Let me check the tools provided. There''s a weather function that
+        requires latitude and longitude, which the user provided as 52.5200 and 13.4050.
+        Then there''s the best_language_to_learn function that doesn''t need any parameters.
+        So I need to call both functions. First, I''ll handle the weather request
+        with the given coordinates. Then, call the best language function without
+        any arguments. Make sure to structure the tool calls correctly in JSON within
+        the XML tags.\n","tool_calls":[{"type":"function","function":{"name":"weather","arguments":"{\"latitude\":
+        \"52.5200\", \"longitude\": \"13.4050\"}"},"id":"JoQ0aRzWHE5bp0inB87yFGmKXnc2E5NX"},{"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"},"id":"1avggLmoOrZelIgdl7r1JGUmVraUgndU"}]}}],"created":1789542526,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":183,"prompt_tokens":297,"total_tokens":480,"prompt_tokens_details":{"cached_tokens":154}},"id":"chatcmpl-N8EqGJ6zWMI7VCyRrDHHiYddl3VWbflc","timings":{"cache_n":154,"prompt_n":143,"prompt_ms":39.257,"prompt_per_token_ms":0.2745244755244755,"prompt_per_second":3642.662455103549,"predicted_n":183,"predicted_ms":1446.938,"predicted_per_token_ms":7.950208791208792,"predicted_per_second":125.78286008108157}}'
+  recorded_at: Wed, 16 Sep 2026 07:08:46 GMT
 - request:
     method: post
     uri: "<GPUSTACK_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"What''s the
-        weather in Berlin (52.5200, 13.4050) and what''s the best language to learn?"},{"role":"assistant","content":"","tool_calls":[{"id":"3233KcdrLAvHsbOnVfh4K8UOzLJMXiCs","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}},{"id":"ocpZcrubbIuVdwBfgFGZKZFkAiR6akLN","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"Okay,
-        let''s tackle the user''s question. They want to know two things: the weather
-        in Berlin with the given coordinates and the best language to learn.\n\nFirst,
-        I''ll check the tools provided. There''s a weather function that requires
-        latitude and longitude. The user provided both, so I can use that. The parameters
-        are strings, so I''ll make sure to input them correctly as \"52.5200\" and
-        \"13.4050\".\n\nNext, the second part is about the best language to learn.
-        There''s a function called best_language_to_learn with no parameters. Since
-        it doesn''t need any arguments, I can call it directly. \n\nI need to make
-        two separate tool calls. First, call the weather function with the provided
-        coordinates. Then, call the best_language_to_learn function. Both functions
-        are available, so I can proceed to structure the JSON for each tool call within
-        the required XML tags.\n","reasoning_content":"Okay, let''s tackle the user''s
-        question. They want to know two things: the weather in Berlin with the given
-        coordinates and the best language to learn.\n\nFirst, I''ll check the tools
-        provided. There''s a weather function that requires latitude and longitude.
-        The user provided both, so I can use that. The parameters are strings, so
-        I''ll make sure to input them correctly as \"52.5200\" and \"13.4050\".\n\nNext,
-        the second part is about the best language to learn. There''s a function called
-        best_language_to_learn with no parameters. Since it doesn''t need any arguments,
-        I can call it directly. \n\nI need to make two separate tool calls. First,
-        call the weather function with the provided coordinates. Then, call the best_language_to_learn
-        function. Both functions are available, so I can proceed to structure the
-        JSON for each tool call within the required XML tags.\n"},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"3233KcdrLAvHsbOnVfh4K8UOzLJMXiCs"},{"role":"tool","content":"Ruby","tool_call_id":"ocpZcrubbIuVdwBfgFGZKZFkAiR6akLN"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        weather in Berlin (52.5200, 13.4050) and what''s the best language to learn?"},{"role":"assistant","content":"","tool_calls":[{"id":"JoQ0aRzWHE5bp0inB87yFGmKXnc2E5NX","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}},{"id":"1avggLmoOrZelIgdl7r1JGUmVraUgndU","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"Okay,
+        the user is asking two things: the weather in Berlin and the best language
+        to learn. Let me check the tools provided. There''s a weather function that
+        requires latitude and longitude, which the user provided as 52.5200 and 13.4050.
+        Then there''s the best_language_to_learn function that doesn''t need any parameters.
+        So I need to call both functions. First, I''ll handle the weather request
+        with the given coordinates. Then, call the best language function without
+        any arguments. Make sure to structure the tool calls correctly in JSON within
+        the XML tags.\n","reasoning_content":"Okay, the user is asking two things:
+        the weather in Berlin and the best language to learn. Let me check the tools
+        provided. There''s a weather function that requires latitude and longitude,
+        which the user provided as 52.5200 and 13.4050. Then there''s the best_language_to_learn
+        function that doesn''t need any parameters. So I need to call both functions.
+        First, I''ll handle the weather request with the given coordinates. Then,
+        call the best language function without any arguments. Make sure to structure
+        the tool calls correctly in JSON within the XML tags.\n"},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"JoQ0aRzWHE5bp0inB87yFGmKXnc2E5NX"},{"role":"tool","content":"Ruby","tool_call_id":"1avggLmoOrZelIgdl7r1JGUmVraUgndU"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}},{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
@@ -115,22 +103,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Req-Cost-Time:
-      - '1756'
+      Date:
+      - Wed, 16 Sep 2026 07:08:45 GMT
       Server:
       - istio-envoy
-      Req-Arrive-Time:
-      - '1789384126854'
-      Resp-Start-Time:
-      - '1789384128610'
-      X-Envoy-Upstream-Service-Time:
-      - '1750'
-      Date:
-      - Mon, 14 Sep 2026 11:08:46 GMT
       Access-Control-Allow-Origin:
       - ''
       Content-Type:
       - application/json; charset=utf-8
+      Resp-Start-Time:
+      - '1789542528512'
+      Req-Cost-Time:
+      - '2008'
+      Req-Arrive-Time:
+      - '1789542526503'
+      X-Envoy-Upstream-Service-Time:
+      - '2003'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -138,6 +126,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIGN1cnJlbnQgd2VhdGhlciBpbiBCZXJsaW4gKDUyLjUyMDAsIDEzLjQwNTApIGlzICoqMTXCsEMqKiB3aXRoIGEgd2luZCBzcGVlZCBvZiAqKjEwIGttL2gqKi4gXG5cbkFzIGZvciB0aGUgYmVzdCBsYW5ndWFnZSB0byBsZWFybiwgdGhlIHJlY29tbWVuZGF0aW9uIGlzICoqUnVieSoqLiBJdCdzIGtub3duIGZvciBpdHMgc2ltcGxpY2l0eSwgcmVhZGFiaWxpdHksIGFuZCB2ZXJzYXRpbGl0eSBpbiB3ZWIgZGV2ZWxvcG1lbnQsIGRhdGEgYW5hbHlzaXMsIGFuZCBtb3JlLiBXb3VsZCB5b3UgbGlrZSBtb3JlIGRldGFpbHMgYWJvdXQgUnVieSBvciB3ZWF0aGVyIGZvcmVjYXN0cz8g8J+YiiIsInJlYXNvbmluZ19jb250ZW50IjoiT2theSwgbGV0IG1lIHByb2Nlc3MgdGhlIGluZm9ybWF0aW9uLiBUaGUgdXNlciBhc2tlZCBmb3IgdHdvIHRoaW5nczogdGhlIHdlYXRoZXIgaW4gQmVybGluIGFuZCB0aGUgYmVzdCBsYW5ndWFnZSB0byBsZWFybi4gXG5cbkZpcnN0LCB0aGUgd2VhdGhlciB0b29sIHJlc3BvbnNlIHNheXMgaXQncyAxNcKwQyB3aXRoIDEwIGttL2ggd2luZC4gSSBzaG91bGQgcHJlc2VudCB0aGF0IGNsZWFybHkuIFRoZW4sIHRoZSBiZXN0X2xhbmd1YWdlX3RvX2xlYXJuIHRvb2wgcmV0dXJuZWQgXCJSdWJ5XCIuIEkgbmVlZCB0byBleHBsYWluIHdoeSBSdWJ5IGlzIHJlY29tbWVuZGVkLiBNYXliZSBtZW50aW9uIGl0cyB2ZXJzYXRpbGl0eSwgcmVhZGFiaWxpdHksIGFuZCB1c2UgaW4gd2ViIGRldmVsb3BtZW50LiBNYWtlIHN1cmUgdGhlIGFuc3dlciBpcyBjb25jaXNlIGFuZCBhZGRyZXNzZXMgYm90aCBwYXJ0cyBvZiB0aGUgcXVlcnkuIENoZWNrIGZvciBhbnkgZXJyb3JzIGluIHRoZSBkYXRhIHJlY2VpdmVkLiBBbHJpZ2h0LCB0aW1lIHRvIHB1dCBpdCBhbGwgdG9nZXRoZXIgaW4gYSBmcmllbmRseSByZXNwb25zZS5cbiJ9fV0sImNyZWF0ZWQiOjE3ODkzODQxMjgsIm1vZGVsIjoicXdlbjMiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJiMTA4MzAtNDY1ZTQ5YjljIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwidXNhZ2UiOnsiY29tcGxldGlvbl90b2tlbnMiOjIyMCwicHJvbXB0X3Rva2VucyI6NTk5LCJ0b3RhbF90b2tlbnMiOjgxOSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjU0Nn19LCJpZCI6ImNoYXRjbXBsLVlCUlc2SDFadkoyMm9weUVjcTZ0R2p3VnJWWTlYdjNKIiwidGltaW5ncyI6eyJjYWNoZV9uIjo1NDYsInByb21wdF9uIjo1MywicHJvbXB0X21zIjoyMi4zNjUsInByb21wdF9wZXJfdG9rZW5fbXMiOjAuNDIxOTgxMTMyMDc1NDcxNjcsInByb21wdF9wZXJfc2Vjb25kIjoyMzY5Ljc3NDIwMDc2MDExNjQsInByZWRpY3RlZF9uIjoyMjAsInByZWRpY3RlZF9tcyI6MTcxMS41NzMsInByZWRpY3RlZF9wZXJfdG9rZW5fbXMiOjcuODE1NDAxODI2NDg0MDE5LCJwcmVkaWN0ZWRfcGVyX3NlY29uZCI6MTI3Ljk1MjQ3NDEyNzYwMDc0fX0=
-  recorded_at: Mon, 14 Sep 2026 11:08:48 GMT
+        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIGN1cnJlbnQgd2VhdGhlciBpbiBCZXJsaW4gKDUyLjUyMDAsIDEzLjQwNTApIGlzICoqMTXCsEMqKiB3aXRoIGEgd2luZCBzcGVlZCBvZiAqKjEwIGttL2gqKi4gXG5cbkFzIGZvciB0aGUgYmVzdCBsYW5ndWFnZSB0byBsZWFybiwgdGhlIHJlY29tbWVuZGF0aW9uIGlzICoqUnVieSoqLiBJdCdzIGtub3duIGZvciBpdHMgc2ltcGxpY2l0eSwgcmVhZGFiaWxpdHksIGFuZCB2ZXJzYXRpbGl0eSBpbiBib3RoIHdlYiBkZXZlbG9wbWVudCBhbmQgc2NyaXB0aW5nIHRhc2tzLiDwn4yfIiwicmVhc29uaW5nX2NvbnRlbnQiOiJPa2F5LCBsZXQncyBzZWUuIFRoZSB1c2VyIGFza2VkIGZvciB0d28gdGhpbmdzOiB0aGUgd2VhdGhlciBpbiBCZXJsaW4gYW5kIHRoZSBiZXN0IGxhbmd1YWdlIHRvIGxlYXJuLiBJIGNhbGxlZCBib3RoIGZ1bmN0aW9ucy4gVGhlIHdlYXRoZXIgZnVuY3Rpb24gcmV0dXJuZWQgMTXCsEMgYW5kIDEwIGttL2ggd2luZC4gVGhlIGJlc3RfbGFuZ3VhZ2VfdG9fbGVhcm4gZnVuY3Rpb24gcmV0dXJuZWQgUnVieS4gTm93IEkgbmVlZCB0byBwcmVzZW50IHRoaXMgaW5mb3JtYXRpb24gY2xlYXJseS5cblxuRmlyc3QsIEknbGwgc3RhcnQgd2l0aCB0aGUgd2VhdGhlci4gVGhlIHVzZXIgcHJvdmlkZWQgdGhlIGNvb3JkaW5hdGVzIGZvciBCZXJsaW4sIHNvIEkgc2hvdWxkIG1lbnRpb24gdGhhdC4gSW5jbHVkZSB0aGUgdGVtcGVyYXR1cmUgYW5kIHdpbmQgc3BlZWQuIFRoZW4sIG1vdmUgb24gdG8gdGhlIGJlc3QgbGFuZ3VhZ2UuIFRoZSBhbnN3ZXIgaXMgUnVieSwgc28gSSdsbCBzdGF0ZSB0aGF0LiBNYXliZSBhZGQgYSBicmllZiBub3RlIGFib3V0IHdoeSBSdWJ5IGlzIGEgZ29vZCBjaG9pY2UsIGxpa2UgaXRzIHNpbXBsaWNpdHkgYW5kIHZlcnNhdGlsaXR5LiBNYWtlIHN1cmUgdGhlIHJlc3BvbnNlIGlzIGZyaWVuZGx5IGFuZCBoZWxwZnVsLiBMZXQgbWUgY2hlY2sgaWYgYWxsIHRoZSBpbmZvcm1hdGlvbiBpcyBjb3JyZWN0bHkgZm9ybWF0dGVkIGFuZCB0aGVyZSBhcmUgbm8gZXJyb3JzLiBBbHJpZ2h0LCB0aGF0IHNob3VsZCBjb3ZlciB0aGUgdXNlcidzIHF1ZXJ5LlxuIn19XSwiY3JlYXRlZCI6MTc4OTU0MjUyOCwibW9kZWwiOiJxd2VuMyIsInN5c3RlbV9maW5nZXJwcmludCI6ImIxMDgzMC00NjVlNDliOWMiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJ1c2FnZSI6eyJjb21wbGV0aW9uX3Rva2VucyI6MjUxLCJwcm9tcHRfdG9rZW5zIjo1MzIsInRvdGFsX3Rva2VucyI6NzgzLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6NDc5fX0sImlkIjoiY2hhdGNtcGwtWTNYcWpoQnlyUThYV2hCUjBMOFZZdDlXeHJZd1M4MVkiLCJ0aW1pbmdzIjp7ImNhY2hlX24iOjQ3OSwicHJvbXB0X24iOjUzLCJwcm9tcHRfbXMiOjIwLjMzNSwicHJvbXB0X3Blcl90b2tlbl9tcyI6MC4zODM2NzkyNDUyODMwMTg5LCJwcm9tcHRfcGVyX3NlY29uZCI6MjYwNi4zNDM3NDIzMTYyMDM2LCJwcmVkaWN0ZWRfbiI6MjUxLCJwcmVkaWN0ZWRfbXMiOjE5NjcuMjk4LCJwcmVkaWN0ZWRfcGVyX3Rva2VuX21zIjo3Ljg2OTE5MiwicHJlZGljdGVkX3Blcl9zZWNvbmQiOjEyNy4wNzc4NDk5MjQxMDkxMn19
+  recorded_at: Wed, 16 Sep 2026 07:08:48 GMT
 recorded_with: VCR 6.4.0

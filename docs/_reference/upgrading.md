@@ -20,7 +20,7 @@ After reading this guide, you will know:
 * What each phase preserves and what cleanup removes.
 * How to recover if you need to abandon the upgrade.
 
-This guide covers **1.16 to 2.0.0.rc3**. Coming from an earlier release? Follow the [1.16 upgrade guide](https://rubyllm.com/upgrading/) first.
+This guide covers **1.16 to 2.0.0.rc4**. Coming from an earlier release? Follow the [1.16 upgrade guide](https://rubyllm.com/upgrading/) first.
 
 The online-copy workflow below is available starting in `2.0.0.rc3`. With `2.0.0.rc2`, keep AI activity paused through all three phases.
 {: .important }
@@ -43,7 +43,7 @@ The usage ledger records tokens and costs for each provider attempt, including r
 Update the gem in your development branch:
 
 ```bash
-bundle add ruby_llm --version 2.0.0.rc3
+bundle add ruby_llm --version 2.0.0.rc4
 ```
 
 Use the [API changes](#api-changes) below to update your calls, then run your tests. If you use Rails persistence, follow the steps below before deploying.
@@ -188,7 +188,7 @@ end
 
 With affected traffic and workers paused, finish removes every tool call without a result message in 1.16-owned conversations, reports the count, and reconciles the copied records before verification. This includes calls abandoned before the maintenance window. Calls with result messages, including application approval placeholders, remain intact, as do protected 2.0 conversations. Application foreign keys still apply.
 
-Discarded calls are removed from both versions' histories and are not restored by rollback or resume. Their parent messages and usage remain. Deletion commits before the remaining finish checks; retrying finish is safe if a later check fails. Without the option, incomplete calls continue to block finish. This option is unavailable in 2.0.0.rc3.
+Discarded calls are removed from both versions' histories and are not restored by rollback or resume. Their parent messages and usage remain. Deletion commits before the remaining finish checks; retrying finish is safe if a later check fails. Without the option, incomplete calls continue to block finish. This option is available starting in 2.0.0.rc4.
 
 ### 5. Clean Up in a Later Deployment
 

@@ -43,11 +43,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - 652bc7b4d5c237617b5ed4535680acb6
+      - def7a241c41067a4c52c2275eee1e7e7
       Date:
-      - Mon, 14 Sep 2026 10:10:36 GMT
+      - Wed, 16 Sep 2026 06:56:35 GMT
       X-Envoy-Upstream-Service-Time:
-      - '690'
+      - '855'
       Server:
       - envoy
       Via:
@@ -58,16 +58,16 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"e2dba908-bd0c-4525-a2dd-c342ae736951","message":{"role":"assistant","tool_plan":"I
-        will use the file_fetch tool to retrieve the file.","tool_calls":[{"id":"file_fetch_zmya47zt7hyw","type":"function","function":{"name":"file_fetch","arguments":"{}"}}]},"finish_reason":"TOOL_CALL","usage":{"billed_units":{"input_tokens":41,"output_tokens":17},"tokens":{"input_tokens":1439,"output_tokens":47},"cached_tokens":112}}'
-  recorded_at: Mon, 14 Sep 2026 10:10:36 GMT
+      string: '{"id":"1a12dcec-7823-4db9-ba4e-9936b6167c4d","message":{"role":"assistant","tool_plan":"I
+        will use the file_fetch tool to fetch the file.","tool_calls":[{"id":"file_fetch_mgrgc4c501yc","type":"function","function":{"name":"file_fetch","arguments":"{}"}}]},"finish_reason":"TOOL_CALL","usage":{"billed_units":{"input_tokens":41,"output_tokens":17},"tokens":{"input_tokens":1439,"output_tokens":47},"cached_tokens":112}}'
+  recorded_at: Wed, 16 Sep 2026 06:56:35 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
     body:
       encoding: UTF-8
       string: '{"model":"command-a-03-2025","messages":[{"role":"user","content":[{"type":"text","text":"Use
-        the file_fetch tool, then tell me exactly what the fetched file says."}]},{"role":"assistant","content":[{"type":"text","text":""}],"tool_calls":[{"id":"file_fetch_zmya47zt7hyw","type":"function","function":{"name":"file_fetch","arguments":"{}"}}]},{"role":"tool","tool_call_id":"file_fetch_zmya47zt7hyw","content":[{"type":"text","text":"Fetched
+        the file_fetch tool, then tell me exactly what the fetched file says."}]},{"role":"assistant","content":[{"type":"text","text":""}],"tool_calls":[{"id":"file_fetch_mgrgc4c501yc","type":"function","function":{"name":"file_fetch","arguments":"{}"}}]},{"role":"tool","tool_call_id":"file_fetch_mgrgc4c501yc","content":[{"type":"text","text":"Fetched
         the file."},{"type":"text","text":"<file name=''ruby.txt'' mime_type=''text/plain''>Ruby
         is the best.</file>"}]}],"stream":false,"tools":[{"type":"function","function":{"name":"file_fetch","description":"Fetches
         the requested file","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false}}}]}'
@@ -98,7 +98,7 @@ http_interactions:
       Num-Chars:
       - '7339'
       Num-Tokens:
-      - '83'
+      - '84'
       Pragma:
       - no-cache
       Vary:
@@ -106,11 +106,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - a7c782be5552ce894779661659322d73
+      - 6c8da486b7aae6825ce358ac063c09e8
       Date:
-      - Mon, 14 Sep 2026 10:10:36 GMT
+      - Wed, 16 Sep 2026 06:56:35 GMT
       X-Envoy-Upstream-Service-Time:
-      - '538'
+      - '492'
       Server:
       - envoy
       Via:
@@ -121,9 +121,9 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"20a1c047-6429-4612-81d6-f5bb79ccfb4c","message":{"role":"assistant","content":[{"type":"text","text":"The
-        file says: ''Ruby is the best.''"}],"citations":[{"start":15,"end":34,"text":"''Ruby
-        is the best.''","sources":[{"type":"tool","id":"file_fetch_zmya47zt7hyw:1","tool_output":{"content":"\u003cfile
-        name=''ruby.txt'' mime_type=''text/plain''\u003eRuby is the best.\u003c/file\u003e"}}],"type":"TEXT_CONTENT"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":73,"output_tokens":10},"tokens":{"input_tokens":1555,"output_tokens":23},"cached_tokens":112}}'
-  recorded_at: Mon, 14 Sep 2026 10:10:37 GMT
+      string: '{"id":"c9a4a8b1-c283-49d8-9156-bf75236775aa","message":{"role":"assistant","content":[{"type":"text","text":"The
+        file says:\n\nRuby is the best."}],"citations":[{"start":16,"end":33,"text":"Ruby
+        is the best.","sources":[{"type":"tool","id":"file_fetch_mgrgc4c501yc:1","tool_output":{"content":"\u003cfile
+        name=''ruby.txt'' mime_type=''text/plain''\u003eRuby is the best.\u003c/file\u003e"}}],"type":"TEXT_CONTENT"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":73,"output_tokens":11},"tokens":{"input_tokens":1555,"output_tokens":24},"cached_tokens":112}}'
+  recorded_at: Wed, 16 Sep 2026 06:56:35 GMT
 recorded_with: VCR 6.4.0

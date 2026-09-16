@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260914T094631Z
+      - 20260916T065614Z
       X-Amz-Content-Sha256:
       - 8382a18201fd48d10b0414a47e3376d5e1b216f008c5ea7615c6b552b274f483
       Authorization:
@@ -29,17 +29,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:46:34 GMT
+      - Wed, 16 Sep 2026 06:56:16 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '271'
+      - '270'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 0a084311-b24a-420d-8199-fc073e58d290
+      - 05efb8c5-6dbb-435a-ae44-c5ddbde4a486
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":2936},"output":{"message":{"content":[{"reasoningContent":{"reasoningText":{"text":"[REDACTED]."}}},{"text":"345"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":110,"outputTokens":154,"serverToolUsage":{},"totalTokens":264}}'
-  recorded_at: Mon, 14 Sep 2026 09:46:34 GMT
+      string: '{"metrics":{"latencyMs":964},"output":{"message":{"content":[{"reasoningContent":{"reasoningText":{"text":"[REDACTED]."}}},{"text":"345"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":110,"outputTokens":165,"serverToolUsage":{},"totalTokens":275}}'
+  recorded_at: Wed, 16 Sep 2026 06:56:16 GMT
 recorded_with: VCR 6.4.0

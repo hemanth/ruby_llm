@@ -30,7 +30,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 14 Sep 2026 09:48:32 GMT
+      - Wed, 16 Sep 2026 06:50:10 GMT
       X-Content-Type-Options:
       - nosniff
       Server:
@@ -42,113 +42,119 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Ds-Trace-Id:
-      - 537634e3780953724f785d532af84595
+      - 57b75c2aeef7e47f6c1f7a005aa8ca24
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 b14aacfdf690e6766b147237ecffcc36.cloudfront.net (CloudFront)
+      - 1.1 1e3ea313dab573eb0f8714b435227a78.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TXL52-P3
+      - TXL52-P1
       X-Amz-Cf-Id:
-      - i7dLHmWQyzUnFtx3SztVnj0bw6s1OUuUChjfK69eQIzIpPlK61bFuQ==
+      - 81oCGQXNbAVovFlJ-FqvWdrDFN98P1dfqtR5rf4hbLLf3URGlKDS_g==
     body:
       encoding: UTF-8
       string: |+
         event: response.created
-        data: {"type":"response.created","response":{"id":"e9503b62-2d86-4317-af8d-963dd5308d2a","object":"response","created_at":1789379312,"status":"in_progress","background":false,"completed_at":null,"content_filters":null,"error":null,"frequency_penalty":0.0,"incomplete_details":null,"instructions":null,"max_output_tokens":null,"max_tool_calls":null,"model":"deepseek-flash","moderation":null,"output":[],"parallel_tool_calls":true,"presence_penalty":0.0,"previous_response_id":null,"prompt_cache_key":null,"prompt_cache_retention":null,"reasoning":{"effort":null,"summary":null},"safety_identifier":null,"service_tier":"default","store":false,"temperature":1.0,"text":{"format":{"type":"text"},"verbosity":null},"tool_choice":"auto","tools":[],"top_logprobs":0,"top_p":1.0,"truncation":"disabled","usage":null,"user":null,"metadata":{}},"sequence_number":0}
+        data: {"type":"response.created","response":{"id":"71cc980d-01bd-4afd-b516-de632a78b9ad","object":"response","created_at":1789541410,"status":"in_progress","background":false,"completed_at":null,"content_filters":null,"error":null,"frequency_penalty":0.0,"incomplete_details":null,"instructions":null,"max_output_tokens":null,"max_tool_calls":null,"model":"deepseek-flash","moderation":null,"output":[],"parallel_tool_calls":true,"presence_penalty":0.0,"previous_response_id":null,"prompt_cache_key":null,"prompt_cache_retention":null,"reasoning":{"effort":null,"summary":null},"safety_identifier":null,"service_tier":"default","store":false,"temperature":1.0,"text":{"format":{"type":"text"},"verbosity":null},"tool_choice":"auto","tools":[],"top_logprobs":0,"top_p":1.0,"truncation":"disabled","usage":null,"user":null,"metadata":{}},"sequence_number":0}
 
         event: response.in_progress
-        data: {"type":"response.in_progress","response":{"id":"e9503b62-2d86-4317-af8d-963dd5308d2a","object":"response","created_at":1789379312,"status":"in_progress","background":false,"completed_at":null,"content_filters":null,"error":null,"frequency_penalty":0.0,"incomplete_details":null,"instructions":null,"max_output_tokens":null,"max_tool_calls":null,"model":"deepseek-flash","moderation":null,"output":[],"parallel_tool_calls":true,"presence_penalty":0.0,"previous_response_id":null,"prompt_cache_key":null,"prompt_cache_retention":null,"reasoning":{"effort":null,"summary":null},"safety_identifier":null,"service_tier":"default","store":false,"temperature":1.0,"text":{"format":{"type":"text"},"verbosity":null},"tool_choice":"auto","tools":[],"top_logprobs":0,"top_p":1.0,"truncation":"disabled","usage":null,"user":null,"metadata":{}},"sequence_number":1}
+        data: {"type":"response.in_progress","response":{"id":"71cc980d-01bd-4afd-b516-de632a78b9ad","object":"response","created_at":1789541410,"status":"in_progress","background":false,"completed_at":null,"content_filters":null,"error":null,"frequency_penalty":0.0,"incomplete_details":null,"instructions":null,"max_output_tokens":null,"max_tool_calls":null,"model":"deepseek-flash","moderation":null,"output":[],"parallel_tool_calls":true,"presence_penalty":0.0,"previous_response_id":null,"prompt_cache_key":null,"prompt_cache_retention":null,"reasoning":{"effort":null,"summary":null},"safety_identifier":null,"service_tier":"default","store":false,"temperature":1.0,"text":{"format":{"type":"text"},"verbosity":null},"tool_choice":"auto","tools":[],"top_logprobs":0,"top_p":1.0,"truncation":"disabled","usage":null,"user":null,"metadata":{}},"sequence_number":1}
 
         event: response.output_item.added
-        data: {"type":"response.output_item.added","item":{"type":"reasoning","id":"20151181-3308-4ed0-aa35-4a20ac624b0f","status":"in_progress","content":[],"summary":[],"encrypted_content":"e9503b62-2d86-4317-af8d-963dd5308d2a-0"},"output_index":0,"sequence_number":2}
+        data: {"type":"response.output_item.added","item":{"type":"reasoning","id":"b9e8f75a-df91-458c-a679-e2b35bb72154","status":"in_progress","content":[],"summary":[],"encrypted_content":"71cc980d-01bd-4afd-b516-de632a78b9ad-0"},"output_index":0,"sequence_number":2}
 
         event: response.content_part.added
-        data: {"type":"response.content_part.added","content_index":0,"item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"part":{"type":"reasoning_text","text":""},"sequence_number":3}
+        data: {"type":"response.content_part.added","content_index":0,"item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"part":{"type":"reasoning_text","text":""},"sequence_number":3}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"We","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":4}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"We","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":4}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" need","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":5}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" need","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":5}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" answer","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":6}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" answer","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":6}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" just","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":7}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" just","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":7}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" number","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":8}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" number","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":8}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":".","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":9}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":".","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":9}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" ","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":10}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" Need","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":10}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"2","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":11}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" comply","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":11}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"+","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":12}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":".","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":12}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"2","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":13}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" ","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":13}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"=","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":14}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"2","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":14}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"4","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":15}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"+","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":15}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":".","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":16}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"2","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":16}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" Must","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":17}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"=","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":17}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" just","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":18}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":"4","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":18}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" number","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":19}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":".","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":19}
 
         event: response.reasoning_text.delta
-        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":".","item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":20}
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" Just","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":20}
+
+        event: response.reasoning_text.delta
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":" number","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":21}
+
+        event: response.reasoning_text.delta
+        data: {"type":"response.reasoning_text.delta","content_index":0,"delta":".","item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":22}
 
         event: response.reasoning_text.done
-        data: {"type":"response.reasoning_text.done","content_index":0,"item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"sequence_number":21,"text":"We need answer just number. 2+2=4. Must just number."}
+        data: {"type":"response.reasoning_text.done","content_index":0,"item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"sequence_number":23,"text":"We need answer just number. Need comply. 2+2=4. Just number."}
 
         event: response.content_part.done
-        data: {"type":"response.content_part.done","content_index":0,"item_id":"20151181-3308-4ed0-aa35-4a20ac624b0f","output_index":0,"part":{"type":"reasoning_text","text":"We need answer just number. 2+2=4. Must just number."},"sequence_number":22}
+        data: {"type":"response.content_part.done","content_index":0,"item_id":"b9e8f75a-df91-458c-a679-e2b35bb72154","output_index":0,"part":{"type":"reasoning_text","text":"We need answer just number. Need comply. 2+2=4. Just number."},"sequence_number":24}
 
         event: response.output_item.done
-        data: {"type":"response.output_item.done","item":{"type":"reasoning","id":"20151181-3308-4ed0-aa35-4a20ac624b0f","status":"completed","content":[{"type":"reasoning_text","text":"We need answer just number. 2+2=4. Must just number."}],"summary":[],"encrypted_content":"e9503b62-2d86-4317-af8d-963dd5308d2a-0"},"output_index":0,"sequence_number":23}
+        data: {"type":"response.output_item.done","item":{"type":"reasoning","id":"b9e8f75a-df91-458c-a679-e2b35bb72154","status":"completed","content":[{"type":"reasoning_text","text":"We need answer just number. Need comply. 2+2=4. Just number."}],"summary":[],"encrypted_content":"71cc980d-01bd-4afd-b516-de632a78b9ad-0"},"output_index":0,"sequence_number":25}
 
         event: response.output_item.added
-        data: {"type":"response.output_item.added","item":{"type":"message","id":"37530424-b121-472e-886f-ef25c0dc4a45","status":"in_progress","content":[],"phase":"final_answer","role":"assistant"},"output_index":1,"sequence_number":24}
+        data: {"type":"response.output_item.added","item":{"type":"message","id":"1eb6c29d-1357-482f-ba60-a23945c7dc21","status":"in_progress","content":[],"phase":"final_answer","role":"assistant"},"output_index":1,"sequence_number":26}
 
         event: response.content_part.added
-        data: {"type":"response.content_part.added","content_index":0,"item_id":"37530424-b121-472e-886f-ef25c0dc4a45","output_index":1,"part":{"type":"output_text","annotations":[],"logprobs":[],"text":""},"sequence_number":25}
+        data: {"type":"response.content_part.added","content_index":0,"item_id":"1eb6c29d-1357-482f-ba60-a23945c7dc21","output_index":1,"part":{"type":"output_text","annotations":[],"logprobs":[],"text":""},"sequence_number":27}
 
         event: response.output_text.delta
-        data: {"type":"response.output_text.delta","content_index":0,"delta":"4","item_id":"37530424-b121-472e-886f-ef25c0dc4a45","logprobs":[],"output_index":1,"sequence_number":26}
+        data: {"type":"response.output_text.delta","content_index":0,"delta":"4","item_id":"1eb6c29d-1357-482f-ba60-a23945c7dc21","logprobs":[],"output_index":1,"sequence_number":28}
 
         event: response.output_text.done
-        data: {"type":"response.output_text.done","content_index":0,"item_id":"37530424-b121-472e-886f-ef25c0dc4a45","logprobs":[],"output_index":1,"sequence_number":27,"text":"4"}
+        data: {"type":"response.output_text.done","content_index":0,"item_id":"1eb6c29d-1357-482f-ba60-a23945c7dc21","logprobs":[],"output_index":1,"sequence_number":29,"text":"4"}
 
         event: response.content_part.done
-        data: {"type":"response.content_part.done","content_index":0,"item_id":"37530424-b121-472e-886f-ef25c0dc4a45","output_index":1,"part":{"type":"output_text","annotations":[],"logprobs":[],"text":"4"},"sequence_number":28}
+        data: {"type":"response.content_part.done","content_index":0,"item_id":"1eb6c29d-1357-482f-ba60-a23945c7dc21","output_index":1,"part":{"type":"output_text","annotations":[],"logprobs":[],"text":"4"},"sequence_number":30}
 
         event: response.output_item.done
-        data: {"type":"response.output_item.done","item":{"type":"message","id":"37530424-b121-472e-886f-ef25c0dc4a45","status":"completed","content":[{"type":"output_text","annotations":[],"logprobs":[],"text":"4"}],"phase":"final_answer","role":"assistant"},"output_index":1,"sequence_number":29}
+        data: {"type":"response.output_item.done","item":{"type":"message","id":"1eb6c29d-1357-482f-ba60-a23945c7dc21","status":"completed","content":[{"type":"output_text","annotations":[],"logprobs":[],"text":"4"}],"phase":"final_answer","role":"assistant"},"output_index":1,"sequence_number":31}
 
         event: response.completed
-        data: {"type":"response.completed","response":{"id":"e9503b62-2d86-4317-af8d-963dd5308d2a","object":"response","created_at":1789379312,"status":"completed","background":false,"completed_at":1789379312,"content_filters":null,"error":null,"frequency_penalty":0.0,"incomplete_details":null,"instructions":null,"max_output_tokens":null,"max_tool_calls":null,"model":"deepseek-flash","moderation":null,"output":[{"type":"reasoning","id":"20151181-3308-4ed0-aa35-4a20ac624b0f","status":"completed","content":[{"type":"reasoning_text","text":"We need answer just number. 2+2=4. Must just number."}],"summary":[],"encrypted_content":"e9503b62-2d86-4317-af8d-963dd5308d2a-0"},{"type":"message","id":"37530424-b121-472e-886f-ef25c0dc4a45","status":"completed","content":[{"type":"output_text","annotations":[],"logprobs":[],"text":"4"}],"phase":"final_answer","role":"assistant"}],"parallel_tool_calls":true,"presence_penalty":0.0,"previous_response_id":null,"prompt_cache_key":null,"prompt_cache_retention":null,"reasoning":{"effort":null,"summary":null},"safety_identifier":null,"service_tier":"default","store":false,"temperature":1.0,"text":{"format":{"type":"text"},"verbosity":null},"tool_choice":"auto","tools":[],"top_logprobs":0,"top_p":1.0,"truncation":"disabled","usage":{"input_tokens":42,"input_tokens_details":{"cached_tokens":0},"output_tokens":19,"output_tokens_details":{"reasoning_tokens":17},"total_tokens":61},"user":null,"metadata":{}},"sequence_number":30}
+        data: {"type":"response.completed","response":{"id":"71cc980d-01bd-4afd-b516-de632a78b9ad","object":"response","created_at":1789541410,"status":"completed","background":false,"completed_at":1789541410,"content_filters":null,"error":null,"frequency_penalty":0.0,"incomplete_details":null,"instructions":null,"max_output_tokens":null,"max_tool_calls":null,"model":"deepseek-flash","moderation":null,"output":[{"type":"reasoning","id":"b9e8f75a-df91-458c-a679-e2b35bb72154","status":"completed","content":[{"type":"reasoning_text","text":"We need answer just number. Need comply. 2+2=4. Just number."}],"summary":[],"encrypted_content":"71cc980d-01bd-4afd-b516-de632a78b9ad-0"},{"type":"message","id":"1eb6c29d-1357-482f-ba60-a23945c7dc21","status":"completed","content":[{"type":"output_text","annotations":[],"logprobs":[],"text":"4"}],"phase":"final_answer","role":"assistant"}],"parallel_tool_calls":true,"presence_penalty":0.0,"previous_response_id":null,"prompt_cache_key":null,"prompt_cache_retention":null,"reasoning":{"effort":null,"summary":null},"safety_identifier":null,"service_tier":"default","store":false,"temperature":1.0,"text":{"format":{"type":"text"},"verbosity":null},"tool_choice":"auto","tools":[],"top_logprobs":0,"top_p":1.0,"truncation":"disabled","usage":{"input_tokens":42,"input_tokens_details":{"cached_tokens":0},"output_tokens":21,"output_tokens_details":{"reasoning_tokens":19},"total_tokens":63},"user":null,"metadata":{}},"sequence_number":32}
 
-  recorded_at: Mon, 14 Sep 2026 09:48:32 GMT
+  recorded_at: Wed, 16 Sep 2026 06:50:10 GMT
 recorded_with: VCR 6.4.0
 ...

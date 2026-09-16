@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:50:17 GMT
+      - Wed, 16 Sep 2026 06:51:53 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -41,7 +41,7 @@ http_interactions:
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Openai-Processing-Ms:
-      - '266'
+      - '250'
       X-Openai-Proxy-Wasm:
       - v0.1
       Cf-Cache-Status:
@@ -62,7 +62,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "modr-9963",
+          "id": "modr-8325",
           "model": "omni-moderation-latest",
           "results": [
             {
@@ -85,17 +85,17 @@ http_interactions:
               "category_scores": {
                 "harassment": 0.0,
                 "harassment/threatening": 0.0,
-                "sexual": 0.00009253848866495987,
+                "sexual": 0.00009547317110805593,
                 "hate": 0.0,
                 "hate/threatening": 0.0,
                 "illicit": 0.0,
                 "illicit/violent": 0.0,
-                "self-harm/intent": 5.225226840386988e-6,
-                "self-harm/instructions": 2.3187477504664324e-6,
-                "self-harm": 0.0004757743918954101,
+                "self-harm/intent": 4.53978687024344e-6,
+                "self-harm/instructions": 1.9833367060283617e-6,
+                "self-harm": 0.00046915009215671465,
                 "sexual/minors": 0.0,
-                "violence": 0.0005957051194471736,
-                "violence/graphic": 0.000017674513810355872
+                "violence": 0.0005508471799444582,
+                "violence/graphic": 0.000015598027633743823
               },
               "category_applied_input_types": {
                 "harassment": [],
@@ -127,5 +127,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Mon, 14 Sep 2026 09:50:17 GMT
+  recorded_at: Wed, 16 Sep 2026 06:51:53 GMT
 recorded_with: VCR 6.4.0

@@ -26,45 +26,45 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 10:13:46 GMT
+      - Wed, 16 Sep 2026 06:59:04 GMT
       Content-Length:
-      - '1001'
+      - '1012'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-211","object":"chat.completion","created":1789380826,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Okay,
+      string: '{"id":"chatcmpl-887","object":"chat.completion","created":1789541944,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Okay,
         the user wants me to process the query \"test data\". Let me check the tools
         available. There''s a function called content_returning that takes a query
-        string. The description says it processes the query and returns a result.
-        Since the user provided the query as \"test data\", I should call that function
-        with that exact string. I don''t need to do anything else because the function
-        is supposed to handle the processing. Just make sure to format the tool call
-        correctly in JSON inside the XML tags.\n","tool_calls":[{"id":"call_s5vn16jl","index":0,"type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
-        data\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":142,"prompt_tokens_details":{"cached_tokens":48},"completion_tokens":128,"total_tokens":270}}
+        as a parameter. The description says it returns a processed string result.
+        So I need to call this function with the query \"test data\". I''ll structure
+        the tool call with the name and arguments in JSON. Make sure the arguments
+        include the query key with the value \"test data\". Let me double-check the
+        syntax to avoid any errors. Alright, that should do it.\n","tool_calls":[{"id":"call_8chj94h0","index":0,"type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
+        data\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":142,"prompt_tokens_details":{"cached_tokens":48},"completion_tokens":134,"total_tokens":276}}
 
         '
-  recorded_at: Mon, 14 Sep 2026 10:13:46 GMT
+  recorded_at: Wed, 16 Sep 2026 06:59:04 GMT
 - request:
     method: post
     uri: "<OLLAMA_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"Process this
-        query: test data"},{"role":"assistant","content":"","tool_calls":[{"id":"call_s5vn16jl","type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
+        query: test data"},{"role":"assistant","content":"","tool_calls":[{"id":"call_8chj94h0","type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
         data\"}"}}],"reasoning":"Okay, the user wants me to process the query \"test
         data\". Let me check the tools available. There''s a function called content_returning
-        that takes a query string. The description says it processes the query and
-        returns a result. Since the user provided the query as \"test data\", I should
-        call that function with that exact string. I don''t need to do anything else
-        because the function is supposed to handle the processing. Just make sure
-        to format the tool call correctly in JSON inside the XML tags.\n","reasoning_content":"Okay,
+        that takes a query as a parameter. The description says it returns a processed
+        string result. So I need to call this function with the query \"test data\".
+        I''ll structure the tool call with the name and arguments in JSON. Make sure
+        the arguments include the query key with the value \"test data\". Let me double-check
+        the syntax to avoid any errors. Alright, that should do it.\n","reasoning_content":"Okay,
         the user wants me to process the query \"test data\". Let me check the tools
         available. There''s a function called content_returning that takes a query
-        string. The description says it processes the query and returns a result.
-        Since the user provided the query as \"test data\", I should call that function
-        with that exact string. I don''t need to do anything else because the function
-        is supposed to handle the processing. Just make sure to format the tool call
-        correctly in JSON inside the XML tags.\n"},{"role":"tool","content":"Processed:
-        test data","tool_call_id":"call_s5vn16jl"}],"stream":false,"tools":[{"type":"function","function":{"name":"content_returning","description":"Returns
+        as a parameter. The description says it returns a processed string result.
+        So I need to call this function with the query \"test data\". I''ll structure
+        the tool call with the name and arguments in JSON. Make sure the arguments
+        include the query key with the value \"test data\". Let me double-check the
+        syntax to avoid any errors. Alright, that should do it.\n"},{"role":"tool","content":"Processed:
+        test data","tool_call_id":"call_8chj94h0"}],"stream":false,"tools":[{"type":"function","function":{"name":"content_returning","description":"Returns
         a processed string result","parameters":{"type":"object","properties":{"query":{"type":"string","description":"Query
         to process"}},"required":["query"],"additionalProperties":false,"strict":true}}}]}'
     headers:
@@ -84,26 +84,20 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 10:13:48 GMT
+      - Wed, 16 Sep 2026 06:59:05 GMT
       Content-Length:
-      - '1258'
+      - '822'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-592","object":"chat.completion","created":1789380828,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        query has been processed. Result: Processed: test data","reasoning":"Okay,
-        the user sent the query \"test data\" and I called the content_returning function
-        with that query. The response from the tool was \"Processed: test data\".
-        Now I need to present this result to the user.\n\nFirst, I should acknowledge
-        that the query was processed. The original query was straightforward, just
-        \"test data\". The function''s response seems to be a confirmation that it
-        was handled. Since there''s no additional information or instructions, my
-        job is to relay the result clearly.\n\nI should make sure the response is
-        concise. Maybe start with a confirmation like \"The query has been processed.\"
-        Then include the result from the tool. Since the user might be testing how
-        the system handles data, keeping it simple and direct is best. No need for
-        extra explanations unless there''s more context. Just present the processed
-        result as is.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":285,"prompt_tokens_details":{"cached_tokens":143},"completion_tokens":187,"total_tokens":472}}
+      string: '{"id":"chatcmpl-862","object":"chat.completion","created":1789541945,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        processed result for the query \"test data\" is:  \n**Processed: test data**","reasoning":"Okay,
+        the user sent the query \"test data\" and the tool called content_returning
+        was used. The response from the tool was \"Processed: test data\". Now I need
+        to present this result to the user. Since the user''s original request was
+        to process the query, the assistant should simply relay the processed result.
+        There''s no need for extra explanation here. Just state the processed result
+        clearly.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":291,"prompt_tokens_details":{"cached_tokens":143},"completion_tokens":105,"total_tokens":396}}
 
         '
-  recorded_at: Mon, 14 Sep 2026 10:13:48 GMT
+  recorded_at: Wed, 16 Sep 2026 06:59:05 GMT
 recorded_with: VCR 6.4.0

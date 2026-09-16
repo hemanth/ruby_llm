@@ -32,7 +32,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 09:39:41 GMT
+      - Wed, 16 Sep 2026 06:48:55 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -42,7 +42,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1169
+      - gfet4t7; dur=1239
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -56,7 +56,7 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "The file `ruby.txt` contains the text:\n\n```\nRuby is the best.\n```"
+                    "text": "The file `ruby.txt` contains the text: \"Ruby is the best.\""
                   }
                 ],
                 "role": "model"
@@ -67,21 +67,21 @@ http_interactions:
           ],
           "usageMetadata": {
             "promptTokenCount": 31,
-            "candidatesTokenCount": 21,
-            "totalTokenCount": 192,
+            "candidatesTokenCount": 17,
+            "totalTokenCount": 217,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 31
               }
             ],
-            "thoughtsTokenCount": 140,
+            "thoughtsTokenCount": 169,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "3MCnavgxgfKewQ-D56SABg"
+          "responseId": "1juqavewLJmzkdUPhJ__oAc"
         }
-  recorded_at: Mon, 14 Sep 2026 09:39:41 GMT
+  recorded_at: Wed, 16 Sep 2026 06:48:55 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
@@ -89,7 +89,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"What''s in this file?"},{"text":"<file
         name=''ruby.txt'' mime_type=''text/plain''>Ruby is the best.</file>"}]},{"role":"model","parts":[{"text":"The
-        file `ruby.txt` contains the text:\n\n```\nRuby is the best.\n```"}]},{"role":"user","parts":[{"text":"and
+        file `ruby.txt` contains the text: \"Ruby is the best.\""}]},{"role":"user","parts":[{"text":"and
         in this one?"},{"text":"<file name=''ruby.xml'' mime_type=''application/xml''><truism>Ruby
         is the best</truism></file>"}]}],"generationConfig":{}}'
     headers:
@@ -117,7 +117,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 09:39:42 GMT
+      - Wed, 16 Sep 2026 06:48:57 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -127,7 +127,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1205
+      - gfet4t7; dur=1283
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -141,7 +141,7 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "The file `ruby.xml` is an XML file and contains the following:\n\n```xml\n\u003ctruism\u003eRuby is the best\u003c/truism\u003e\n```"
+                    "text": "The file `ruby.xml` is an XML file containing a `truism` tag with the text \"Ruby is the best\"."
                   }
                 ],
                 "role": "model"
@@ -151,20 +151,20 @@ http_interactions:
             }
           ],
           "usageMetadata": {
-            "promptTokenCount": 88,
-            "candidatesTokenCount": 34,
-            "totalTokenCount": 272,
+            "promptTokenCount": 84,
+            "candidatesTokenCount": 27,
+            "totalTokenCount": 274,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 88
+                "tokenCount": 84
               }
             ],
-            "thoughtsTokenCount": 150,
+            "thoughtsTokenCount": 163,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "3cCnaoHsDpGlxN8PpNey6Q8"
+          "responseId": "2DuqaqTNAq3R28oPxdWQmQE"
         }
-  recorded_at: Mon, 14 Sep 2026 09:39:42 GMT
+  recorded_at: Wed, 16 Sep 2026 06:48:57 GMT
 recorded_with: VCR 6.4.0

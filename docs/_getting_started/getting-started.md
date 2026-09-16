@@ -30,7 +30,7 @@ Each example shows one feature. Try the ones your application needs, then follow
 Add the RubyLLM 2.0 release candidate with Bundler:
 
 ```sh
-bundle add ruby_llm --version 2.0.0.rc3
+bundle add ruby_llm --version 2.0.0.rc4
 ```
 
 These guides cover the 2.0 prerelease. For an existing 1.x application, use the [stable-version docs]({{ '/v1/' | relative_url }}) or follow the [upgrade guide]({% link _reference/upgrading.md %}) before switching versions.

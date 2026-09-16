@@ -27,22 +27,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      X-Envoy-Upstream-Service-Time:
-      - '2242'
       Server:
       - istio-envoy
-      Access-Control-Allow-Origin:
-      - ''
       Content-Type:
       - application/json; charset=utf-8
-      Req-Cost-Time:
-      - '2246'
-      Req-Arrive-Time:
-      - '1789384155388'
-      Resp-Start-Time:
-      - '1789384157634'
       Date:
-      - Mon, 14 Sep 2026 11:09:15 GMT
+      - Wed, 16 Sep 2026 07:09:17 GMT
+      Access-Control-Allow-Origin:
+      - ''
+      Req-Cost-Time:
+      - '1644'
+      Req-Arrive-Time:
+      - '1789542557922'
+      Resp-Start-Time:
+      - '1789542559566'
+      X-Envoy-Upstream-Service-Time:
+      - '1640'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -51,17 +51,13 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"choices":[{"finish_reason":"tool_calls","index":0,"message":{"role":"assistant","content":"","reasoning_content":"Okay,
         the user wants me to call the object_params function with a window starting
-        on 2025-01-01 and ending on 2025-01-02. Let me check the function''s parameters.\n\nThe
-        function requires a \"window\" object with \"start\" and \"end\" as required
-        fields. Both are ISO dates. The user provided exactly those dates, so I need
-        to structure the JSON accordingly. \n\nI should make sure the dates are in
-        the correct format (YYYY-MM-DD) and that the window object is properly nested.
-        No additional properties are allowed, so I''ll only include start and end.
-        \n\nPutting it all together, the arguments should be {\"window\": {\"start\":
-        \"2025-01-01\", \"end\": \"2025-01-02\"}}. The function name is object_params.
-        \n\nI need to return this in the specified XML tool_call format. Let me double-check
-        the syntax to avoid errors. Yep, that looks right. Alright, time to output
-        the tool call.\n","tool_calls":[{"type":"function","function":{"name":"object_params","arguments":"{\"window\":
-        {\"start\": \"2025-01-01\", \"end\": \"2025-01-02\"}}"},"id":"uKgmXt5iD0mzEcRcev5CQwtazRe9cn0n"}]}}],"created":1789384157,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":275,"prompt_tokens":248,"total_tokens":523,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-UtyizDHAXsjz40FmDgMpA5ydwGbr9oUm","timings":{"cache_n":51,"prompt_n":197,"prompt_ms":49.605,"prompt_per_token_ms":0.2518020304568528,"prompt_per_second":3971.3738534421936,"predicted_n":275,"predicted_ms":2153.921,"predicted_per_token_ms":7.861025547445255,"predicted_per_second":127.20986517147101}}'
-  recorded_at: Mon, 14 Sep 2026 11:09:17 GMT
+        on 2025-01-01 and ending on 2025-01-02. Let me check the function definition
+        again. The function requires a \"window\" object with \"start\" and \"end\"
+        as required fields. Both are ISO dates. The user provided exactly those dates,
+        so I need to structure the JSON accordingly. Let me make sure there are no
+        additional properties allowed. The function''s parameters specify additionalProperties
+        as false, so only start and end are allowed. I''ll format the arguments as
+        a JSON object inside the tool_call tags. That should do it.\n","tool_calls":[{"type":"function","function":{"name":"object_params","arguments":"{\"window\":
+        {\"start\": \"2025-01-01\", \"end\": \"2025-01-02\"}}"},"id":"QXnLtg35zedxjq70WugV246H6xg0FcSM"}]}}],"created":1789542559,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":193,"prompt_tokens":248,"total_tokens":441,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-O8PgOWalF4WAw93KB7xL92dsDNprHN3e","timings":{"cache_n":51,"prompt_n":197,"prompt_ms":46.786,"prompt_per_token_ms":0.23749238578680204,"prompt_per_second":4210.661308938571,"predicted_n":193,"predicted_ms":1576.607,"predicted_per_token_ms":8.211494791666667,"predicted_per_second":121.78050712701389}}'
+  recorded_at: Wed, 16 Sep 2026 07:09:19 GMT
 recorded_with: VCR 6.4.0

@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:44:54 GMT
+      - Wed, 16 Sep 2026 06:54:34 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -41,7 +41,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Generation-Id:
-      - gen-1789379093-nHZQRznd982qFEFRoYOB
+      - gen-1789541673-Zls8S0FKwg0MzyALr2hp
       Access-Control-Expose-Headers:
       - X-Generation-Id,X-Provider-Name,request-id,cf-ray
       Set-Cookie:
@@ -59,8 +59,8 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: "\n         \n{\"id\":\"gen-1789379093-nHZQRznd982qFEFRoYOB\",\"object\":\"chat.completion\",\"created\":1789379093,\"model\":\"anthropic/claude-haiku-4.5\",\"provider\":\"Amazon
-        Bedrock\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_use\",\"message\":{\"role\":\"assistant\",\"content\":null,\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"type\":\"function\",\"index\":0,\"id\":\"toolu_bdrk_014jT2aWY4MueYiAVjTo2H2G\",\"function\":{\"name\":\"any_of_params\",\"arguments\":\"{\\\"task\\\":
+      string: "\n         \n{\"id\":\"gen-1789541673-Zls8S0FKwg0MzyALr2hp\",\"object\":\"chat.completion\",\"created\":1789541673,\"model\":\"anthropic/claude-haiku-4.5\",\"provider\":\"Amazon
+        Bedrock\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"tool_calls\",\"native_finish_reason\":\"tool_use\",\"message\":{\"role\":\"assistant\",\"content\":null,\"refusal\":null,\"reasoning\":null,\"tool_calls\":[{\"type\":\"function\",\"index\":0,\"id\":\"toolu_bdrk_01EK8No34s3Su87iRe7Xj2eW\",\"function\":{\"name\":\"any_of_params\",\"arguments\":\"{\\\"task\\\":
         \\\"Review PR\\\", \\\"status\\\": \\\"pending\\\"}\"}}]}}],\"usage\":{\"prompt_tokens\":641,\"completion_tokens\":74,\"total_tokens\":715,\"cost\":0.001011,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.001011,\"upstream_inference_prompt_cost\":0.000641,\"upstream_inference_completions_cost\":0.00037},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}"
-  recorded_at: Mon, 14 Sep 2026 09:44:55 GMT
+  recorded_at: Wed, 16 Sep 2026 06:54:34 GMT
 recorded_with: VCR 6.4.0

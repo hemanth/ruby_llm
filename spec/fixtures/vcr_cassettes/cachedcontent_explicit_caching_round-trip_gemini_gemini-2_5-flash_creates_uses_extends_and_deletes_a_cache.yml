@@ -831,7 +831,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 09:49:07 GMT
+      - Wed, 16 Sep 2026 06:50:51 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -841,7 +841,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1085
+      - gfet4t7; dur=1457
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -850,24 +850,24 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "cachedContents/7trfu7a4ouuzb7umhend2t62p1bchayzy6i8caa0",
+          "name": "cachedContents/3z2syxasqcb0stnzvppo232zq6cw175eqm44qnba",
           "model": "models/gemini-2.5-flash",
-          "createTime": "2026-09-14T09:49:06.944337Z",
-          "updateTime": "2026-09-14T09:49:06.944337Z",
-          "expireTime": "2026-09-14T09:54:06.101209790Z",
+          "createTime": "2026-09-16T06:50:51.917461Z",
+          "updateTime": "2026-09-16T06:50:51.917461Z",
+          "expireTime": "2026-09-16T06:55:50.712993058Z",
           "displayName": "",
           "usageMetadata": {
             "totalTokenCount": 9609
           }
         }
-  recorded_at: Mon, 14 Sep 2026 09:49:07 GMT
+  recorded_at: Wed, 16 Sep 2026 06:50:52 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"In one short sentence,
-        what does the cached handbook describe?"}]}],"generationConfig":{},"cachedContent":"cachedContents/7trfu7a4ouuzb7umhend2t62p1bchayzy6i8caa0"}'
+        what does the cached handbook describe?"}]}],"generationConfig":{},"cachedContent":"cachedContents/3z2syxasqcb0stnzvppo232zq6cw175eqm44qnba"}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -893,7 +893,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 09:49:08 GMT
+      - Wed, 16 Sep 2026 06:50:53 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -903,7 +903,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=953
+      - gfet4t7; dur=1358
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -917,7 +917,7 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "The RubyLLM release engineering handbook describes that every change must pass cassette hygiene, provider wire format drift, backwards compatibility, and documentation accuracy reviews before release."
+                    "text": "The RubyLLM release engineering handbook describes the essential checks every change must pass before release, including cassette hygiene, provider wire format drift, backwards compatibility, and documentation accuracy."
                   }
                 ],
                 "role": "model"
@@ -928,8 +928,8 @@ http_interactions:
           ],
           "usageMetadata": {
             "promptTokenCount": 9622,
-            "candidatesTokenCount": 31,
-            "totalTokenCount": 9697,
+            "candidatesTokenCount": 34,
+            "totalTokenCount": 9796,
             "cachedContentTokenCount": 9609,
             "promptTokensDetails": [
               {
@@ -943,16 +943,16 @@ http_interactions:
                 "tokenCount": 9609
               }
             ],
-            "thoughtsTokenCount": 44,
+            "thoughtsTokenCount": 140,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "E8Onaq-kEd_4vdIPt46qoAQ"
+          "responseId": "TDyqaq_WDb6r28oPmr7-0A0"
         }
-  recorded_at: Mon, 14 Sep 2026 09:49:08 GMT
+  recorded_at: Wed, 16 Sep 2026 06:50:53 GMT
 - request:
     method: patch
-    uri: https://generativelanguage.googleapis.com/v1beta/cachedContents/7trfu7a4ouuzb7umhend2t62p1bchayzy6i8caa0
+    uri: https://generativelanguage.googleapis.com/v1beta/cachedContents/3z2syxasqcb0stnzvppo232zq6cw175eqm44qnba
     body:
       encoding: UTF-8
       string: '{"ttl":"600s"}'
@@ -979,7 +979,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 09:49:08 GMT
+      - Wed, 16 Sep 2026 06:50:54 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -989,7 +989,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=366
+      - gfet4t7; dur=715
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -998,20 +998,20 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "cachedContents/7trfu7a4ouuzb7umhend2t62p1bchayzy6i8caa0",
+          "name": "cachedContents/3z2syxasqcb0stnzvppo232zq6cw175eqm44qnba",
           "model": "models/gemini-2.5-flash",
-          "createTime": "2026-09-14T09:49:06.944337Z",
-          "updateTime": "2026-09-14T09:49:08.407068Z",
-          "expireTime": "2026-09-14T09:59:08.235072876Z",
+          "createTime": "2026-09-16T06:50:51.917461Z",
+          "updateTime": "2026-09-16T06:50:54.123732Z",
+          "expireTime": "2026-09-16T07:00:53.602824537Z",
           "displayName": "",
           "usageMetadata": {
             "totalTokenCount": 9609
           }
         }
-  recorded_at: Mon, 14 Sep 2026 09:49:08 GMT
+  recorded_at: Wed, 16 Sep 2026 06:50:54 GMT
 - request:
     method: delete
-    uri: https://generativelanguage.googleapis.com/v1beta/cachedContents/7trfu7a4ouuzb7umhend2t62p1bchayzy6i8caa0
+    uri: https://generativelanguage.googleapis.com/v1beta/cachedContents/3z2syxasqcb0stnzvppo232zq6cw175eqm44qnba
     body:
       encoding: US-ASCII
       string: ''
@@ -1036,7 +1036,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 09:49:09 GMT
+      - Wed, 16 Sep 2026 06:50:55 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -1046,7 +1046,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=555
+      - gfet4t7; dur=943
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -1054,5 +1054,5 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: "{}\n"
-  recorded_at: Mon, 14 Sep 2026 09:49:09 GMT
+  recorded_at: Wed, 16 Sep 2026 06:50:55 GMT
 recorded_with: VCR 6.4.0

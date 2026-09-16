@@ -45,11 +45,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - 81dc228367407a25a1074c89029932f8
+      - da5756adb69d2fc2d39777e15726918c
       Date:
-      - Mon, 14 Sep 2026 09:40:52 GMT
+      - Wed, 16 Sep 2026 06:50:12 GMT
       X-Envoy-Upstream-Service-Time:
-      - '1276'
+      - '944'
       Server:
       - envoy
       Via:
@@ -60,16 +60,16 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"5b8b1fbf-6a13-49f5-b8fb-1e84e203a27d","message":{"role":"assistant","tool_plan":"I
-        will use the weather tool to find the weather in Berlin.","tool_calls":[{"id":"weather_pb32jt9fqcj5","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},"finish_reason":"TOOL_CALL","usage":{"billed_units":{"input_tokens":98,"output_tokens":35},"tokens":{"input_tokens":1508,"output_tokens":67},"cached_tokens":112}}'
-  recorded_at: Mon, 14 Sep 2026 09:40:52 GMT
+      string: '{"id":"2d95ba23-dc91-4eb5-84ca-607a5dccae35","message":{"role":"assistant","tool_plan":"I
+        will use the weather tool to find the weather in Berlin.","tool_calls":[{"id":"weather_d9ez9e97jbpb","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},"finish_reason":"TOOL_CALL","usage":{"billed_units":{"input_tokens":98,"output_tokens":35},"tokens":{"input_tokens":1508,"output_tokens":67},"cached_tokens":112}}'
+  recorded_at: Wed, 16 Sep 2026 06:50:12 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
     body:
       encoding: UTF-8
       string: '{"model":"command-a-03-2025","messages":[{"role":"user","content":[{"type":"text","text":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"}]},{"role":"assistant","content":[{"type":"text","text":""}],"tool_calls":[{"id":"weather_pb32jt9fqcj5","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","tool_call_id":"weather_pb32jt9fqcj5","content":"Current
+        the weather in Berlin? (52.5200, 13.4050)"}]},{"role":"assistant","content":[{"type":"text","text":""}],"tool_calls":[{"id":"weather_d9ez9e97jbpb","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","tool_call_id":"weather_d9ez9e97jbpb","content":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
@@ -101,7 +101,7 @@ http_interactions:
       Num-Chars:
       - '7471'
       Num-Tokens:
-      - '156'
+      - '155'
       Pragma:
       - no-cache
       Vary:
@@ -109,33 +109,33 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - 5eb71a6447bc4c56f8cd0314dd3351cf
+      - 9894e7668aa7176ce5ee0c018f052acd
       Date:
-      - Mon, 14 Sep 2026 09:40:53 GMT
+      - Wed, 16 Sep 2026 06:50:13 GMT
       X-Envoy-Upstream-Service-Time:
-      - '557'
+      - '892'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      - h3=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6ImZlMjBhZmJmLTE3ZGQtNGQyMi04OGUwLThkODMzMGM3NTBkZSIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOlt7InR5cGUiOiJ0ZXh0IiwidGV4dCI6IlRoZSBjdXJyZW50IHdlYXRoZXIgaW4gQmVybGluIGlzIDE1wrBDIHdpdGggd2luZHMgb2YgMTAga20vaC4ifV0sImNpdGF0aW9ucyI6W3sic3RhcnQiOjMzLCJlbmQiOjYwLCJ0ZXh0IjoiMTXCsEMgd2l0aCB3aW5kcyBvZiAxMCBrbS9oLiIsInNvdXJjZXMiOlt7InR5cGUiOiJ0b29sIiwiaWQiOiJ3ZWF0aGVyX3BiMzJqdDlmcWNqNTowIiwidG9vbF9vdXRwdXQiOnsiY29udGVudCI6IkN1cnJlbnQgd2VhdGhlciBhdCA1Mi41MjAwLCAxMy40MDUwOiAxNcKwQywgV2luZDogMTAga20vaCJ9fV0sInR5cGUiOiJURVhUX0NPTlRFTlQifV19LCJmaW5pc2hfcmVhc29uIjoiQ09NUExFVEUiLCJ1c2FnZSI6eyJiaWxsZWRfdW5pdHMiOnsiaW5wdXRfdG9rZW5zIjoxMzUsIm91dHB1dF90b2tlbnMiOjIxfSwidG9rZW5zIjp7ImlucHV0X3Rva2VucyI6MTY0NSwib3V0cHV0X3Rva2VucyI6MzN9LCJjYWNoZWRfdG9rZW5zIjoxNDcyfX0=
-  recorded_at: Mon, 14 Sep 2026 09:40:53 GMT
+        eyJpZCI6IjZjYTkyNDhlLWRjNjAtNGFiNi05NjgxLTA5MGEzYWU3ZTkxYiIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOlt7InR5cGUiOiJ0ZXh0IiwidGV4dCI6IlRoZSBjdXJyZW50IHdlYXRoZXIgaW4gQmVybGluIGlzIDE1wrBDIHdpdGggMTAga20vaCB3aW5kcy4ifV0sImNpdGF0aW9ucyI6W3sic3RhcnQiOjMzLCJlbmQiOjU3LCJ0ZXh0IjoiMTXCsEMgd2l0aCAxMCBrbS9oIHdpbmRzLiIsInNvdXJjZXMiOlt7InR5cGUiOiJ0b29sIiwiaWQiOiJ3ZWF0aGVyX2Q5ZXo5ZTk3amJwYjowIiwidG9vbF9vdXRwdXQiOnsiY29udGVudCI6IkN1cnJlbnQgd2VhdGhlciBhdCA1Mi41MjAwLCAxMy40MDUwOiAxNcKwQywgV2luZDogMTAga20vaCJ9fV0sInR5cGUiOiJURVhUX0NPTlRFTlQifV19LCJmaW5pc2hfcmVhc29uIjoiQ09NUExFVEUiLCJ1c2FnZSI6eyJiaWxsZWRfdW5pdHMiOnsiaW5wdXRfdG9rZW5zIjoxMzUsIm91dHB1dF90b2tlbnMiOjIwfSwidG9rZW5zIjp7ImlucHV0X3Rva2VucyI6MTY0NSwib3V0cHV0X3Rva2VucyI6MzJ9LCJjYWNoZWRfdG9rZW5zIjoxNDcyfX0=
+  recorded_at: Wed, 16 Sep 2026 06:50:13 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
     body:
       encoding: UTF-8
       string: '{"model":"command-a-03-2025","messages":[{"role":"user","content":[{"type":"text","text":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"}]},{"role":"assistant","content":[{"type":"text","text":""}],"tool_calls":[{"id":"weather_pb32jt9fqcj5","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","tool_call_id":"weather_pb32jt9fqcj5","content":"Current
+        the weather in Berlin? (52.5200, 13.4050)"}]},{"role":"assistant","content":[{"type":"text","text":""}],"tool_calls":[{"id":"weather_d9ez9e97jbpb","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","tool_call_id":"weather_d9ez9e97jbpb","content":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"},{"role":"assistant","content":[{"type":"text","text":"The
-        current weather in Berlin is 15°C with winds of 10 km/h."}]},{"role":"user","content":[{"type":"text","text":"What''s
+        current weather in Berlin is 15°C with 10 km/h winds."}]},{"role":"user","content":[{"type":"text","text":"What''s
         the weather in Paris? (48.8575, 2.3514)"}]}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
@@ -165,9 +165,9 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Num-Chars:
-      - '7730'
+      - '7727'
       Num-Tokens:
-      - '215'
+      - '201'
       Pragma:
       - no-cache
       Vary:
@@ -175,11 +175,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - b2720a8bc1bf521a2da1d09299ea3d0b
+      - 2478c4152bae96cf65df371bad6a3142
       Date:
-      - Mon, 14 Sep 2026 09:40:55 GMT
+      - Wed, 16 Sep 2026 06:50:14 GMT
       X-Envoy-Upstream-Service-Time:
-      - '2137'
+      - '786'
       Server:
       - envoy
       Via:
@@ -190,19 +190,18 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"45f9a5b7-af49-4c8b-899b-53282683899f","message":{"role":"assistant","tool_plan":"I
-        will use the weather tool to find the weather in Paris.","tool_calls":[{"id":"weather_291vq4xnn00w","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}]},"finish_reason":"TOOL_CALL","usage":{"billed_units":{"input_tokens":181,"output_tokens":34},"tokens":{"input_tokens":1698,"output_tokens":66},"cached_tokens":112}}'
-  recorded_at: Mon, 14 Sep 2026 09:40:55 GMT
+      string: '{"id":"c7e938a7-4257-484d-8c55-d03a2e25a935","message":{"role":"assistant","tool_calls":[{"id":"weather_3p0hqvsxmgc4","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}]},"finish_reason":"TOOL_CALL","usage":{"billed_units":{"input_tokens":180,"output_tokens":21},"tokens":{"input_tokens":1697,"output_tokens":53},"cached_tokens":112}}'
+  recorded_at: Wed, 16 Sep 2026 06:50:14 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
     body:
       encoding: UTF-8
       string: '{"model":"command-a-03-2025","messages":[{"role":"user","content":[{"type":"text","text":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"}]},{"role":"assistant","content":[{"type":"text","text":""}],"tool_calls":[{"id":"weather_pb32jt9fqcj5","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","tool_call_id":"weather_pb32jt9fqcj5","content":"Current
+        the weather in Berlin? (52.5200, 13.4050)"}]},{"role":"assistant","content":[{"type":"text","text":""}],"tool_calls":[{"id":"weather_d9ez9e97jbpb","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},{"role":"tool","tool_call_id":"weather_d9ez9e97jbpb","content":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"},{"role":"assistant","content":[{"type":"text","text":"The
-        current weather in Berlin is 15°C with winds of 10 km/h."}]},{"role":"user","content":[{"type":"text","text":"What''s
-        the weather in Paris? (48.8575, 2.3514)"}]},{"role":"assistant","content":[{"type":"text","text":""}],"tool_calls":[{"id":"weather_291vq4xnn00w","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}]},{"role":"tool","tool_call_id":"weather_291vq4xnn00w","content":"Current
+        current weather in Berlin is 15°C with 10 km/h winds."}]},{"role":"user","content":[{"type":"text","text":"What''s
+        the weather in Paris? (48.8575, 2.3514)"}]},{"role":"assistant","content":[{"type":"text","text":""}],"tool_calls":[{"id":"weather_3p0hqvsxmgc4","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}]},{"role":"tool","tool_call_id":"weather_3p0hqvsxmgc4","content":"Current
         weather at 48.8575, 2.3514: 15°C, Wind: 10 km/h"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
@@ -232,9 +231,9 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Num-Chars:
-      - '8259'
+      - '8256'
       Num-Tokens:
-      - '238'
+      - '236'
       Pragma:
       - no-cache
       Vary:
@@ -242,11 +241,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - c7a823443a754bfec937d42866a43244
+      - ff9e7619f98c99bf9efae1c69c1f522a
       Date:
-      - Mon, 14 Sep 2026 09:40:56 GMT
+      - Wed, 16 Sep 2026 06:50:15 GMT
       X-Envoy-Upstream-Service-Time:
-      - '664'
+      - '362'
       Server:
       - envoy
       Via:
@@ -258,6 +257,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6ImRmNTkzMzcwLWRhODUtNDQwMy04OTU4LWM1NDQyNjg5ZTY4NiIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOlt7InR5cGUiOiJ0ZXh0IiwidGV4dCI6IlRoZSBjdXJyZW50IHdlYXRoZXIgaW4gUGFyaXMgaXMgMTXCsEMgd2l0aCB3aW5kcyBvZiAxMCBrbS9oLiJ9XX0sImZpbmlzaF9yZWFzb24iOiJDT01QTEVURSIsInVzYWdlIjp7ImJpbGxlZF91bml0cyI6eyJpbnB1dF90b2tlbnMiOjIxNywib3V0cHV0X3Rva2VucyI6MjF9LCJ0b2tlbnMiOnsiaW5wdXRfdG9rZW5zIjoxODMzLCJvdXRwdXRfdG9rZW5zIjoyNH0sImNhY2hlZF90b2tlbnMiOjExMn19
-  recorded_at: Mon, 14 Sep 2026 09:40:56 GMT
+        eyJpZCI6ImRlMDViNGZiLWRjODgtNGZmNi1iZDA4LTc1OWZmYTY3ZDA2NiIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOlt7InR5cGUiOiJ0ZXh0IiwidGV4dCI6IlRoZSBjdXJyZW50IHdlYXRoZXIgaW4gUGFyaXMgaXMgMTXCsEMgd2l0aCAxMCBrbS9oIHdpbmRzLiJ9XX0sImZpbmlzaF9yZWFzb24iOiJDT01QTEVURSIsInVzYWdlIjp7ImJpbGxlZF91bml0cyI6eyJpbnB1dF90b2tlbnMiOjIxNiwib3V0cHV0X3Rva2VucyI6MjB9LCJ0b2tlbnMiOnsiaW5wdXRfdG9rZW5zIjoxODMyLCJvdXRwdXRfdG9rZW5zIjoyM30sImNhY2hlZF90b2tlbnMiOjE3MTJ9fQ==
+  recorded_at: Wed, 16 Sep 2026 06:50:15 GMT
 recorded_with: VCR 6.4.0

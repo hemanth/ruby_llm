@@ -24,13 +24,16 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:40:33 GMT
+      - Wed, 16 Sep 2026 06:49:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Set-Cookie:
+      - "<COOKIE>"
+      - "<COOKIE>"
       Server:
       - cloudflare
       X-Ratelimit-Limit:
@@ -38,26 +41,25 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '82'
       X-Ratelimit-Reset:
-      - '1789378834'
+      - '1789541343'
       X-Ratelimit-Used:
       - '1'
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Access-Control-Allow-Origin:
       - "*"
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - "<COOKIE>"
-      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
       Cf-Ray:
       - "<CF_RAY>"
+      Alt-Svc:
+      - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: '{"data":[{"embedding":"9sYAAz/w//PhDAEhPgD0ARXwHd3gCQ8I5wkI1NYY6NoRFP4AKyz/0v/5QAPhIyEODxvh+wH9B9YYGgX3F93hFxwbCCQl8QD+6dvXIQTW5Ar79R8c1v8uEQnh1QEU9P8dCffrFvT8Dv79HPsQFzXC+ekh/EME9O8oDN/09xEH+hDh+iIHAgjg8e8G+hAa7hXiCw/+CPEWJdMKDuQDDAol8fwGCxwCBvUeBP4V6v4S+ygTE/3iAPcRHgjv5u/3AsIoLALuB/vu9+UUBvfYHgH/7AH3ECoO4/sd+/T9CzDqJRUS/QD7B/4IBgDvEgEKCevm9/ooAw/6GQAS7iwH6voY/Br6E/b38RXyH/jQ8eoIGCAI+vDdADYIBg/4CesxEv7gDPf6/OQaDeMpHdMdIAn7GP4MGSP49eAfAeXtA+MJ2+70AAwd4eYn9QTyFwojPusO/xDEDiTqGQIB+QkA6+7rDO4M3+f+6AcY/ukD09r8FdAHIwXqGC74ChAWBQQGCNQjIeLuAQzpIdYN8BQR/AzkGST3DQT/8QEREgQP7fLXDekeCuH37/nXJRHo2wAF4t3lBDwF3uYY6f8OAwIHLuYeFArx/AUB2AXc1goc3gDdANcCIv0EBuD98fkTDP8g/f3xJhr4vtgPExoOyykAKQH/+er0IQ4rAtsv+RT+AuvvA9cM/Rv16Soe/QQI6PIPCtjV9BIE8PWwF/b7BAIa+RHo8/IBC/sJKfQm4QXiGAT9Left8A344/3tPPYCFfwJ6AwwCAcfCdYD6QXa7iwAFuzv7tkFEu/09usFFev6FdQV++8H3gbdLBf5Hh7tHPDr9ePyCvX4/Nb4FQ0C/QUc3PwM5t38/PDZCAEe/PcMDd4iH/DjDBcN8t351OQNFwcZBiH+Exvv6ej4+eTeFfb2E+8L+APdBQUHAR8MCO0hHs4n+A4L5/n66QMZ6vD99wTu8Qv+/wX+9fUTxvj64/oVCt/t3AUD28goEgMRIEIP7Rvx6OI25fjNFuzg3QsK6CY1EfMVAiYUCD3uFe7UBBkK8d8JGQQ34uHMMewM9AH9Ge3Q/A4E/f4F9BX47ecT2A7+Bw/+AwcIAvgaCgkP4PPw0iHYAvXx3ynjAPYYCR/w7/AQ7w7q7/7+9x/5DgUb7/Pt1PcB9fz2CBUR2BwaBxgF9Pnv+gQpLeotCxkV4RQF+RPy+u4xBykfDvgH5BMcAgftBvoeBw3/DOII//Xn8wQa8wPX8f/78AcCEvf63+XZ8PUWEukFCwUEyw/2C9UR6Av7IBX8I9w29Brr/QQFBOf12hsHBQfvCBX4/w3WFfLmHPjn5QAdOuAP8enpD+kO5A3/5t0SByDy+w3o3dALJwTZ7ADL4A==","index":0,"object":"embedding"}],"model":"pplx-embed-v1-0.6b","object":"list","usage":{"cost":{"currency":"USD","input_cost":0.000000028,"total_cost":0.000000028},"prompt_tokens":7,"total_tokens":7}}
 
         '
-  recorded_at: Mon, 14 Sep 2026 09:40:33 GMT
+  recorded_at: Wed, 16 Sep 2026 06:49:02 GMT
 recorded_with: VCR 6.4.0

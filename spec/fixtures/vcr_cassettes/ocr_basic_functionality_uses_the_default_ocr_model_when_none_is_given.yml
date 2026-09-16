@@ -23,41 +23,41 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:50:24 GMT
+      - Wed, 16 Sep 2026 06:52:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Set-Cookie:
+      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a09f53-2f42-7524-a554-ec8e3b0b12dd
+      - 01a0a8fc-98ed-72ba-b3eb-60edc15dee5e
       X-Kong-Request-Id:
-      - 01a09f53-2f42-7524-a554-ec8e3b0b12dd
+      - 01a0a8fc-98ed-72ba-b3eb-60edc15dee5e
       X-Ratelimit-Limit-Ocr-Pages-Minute:
       - '125'
       X-Ratelimit-Remaining-Ocr-Pages-Minute:
-      - '123'
+      - '122'
       X-Ratelimit-Ocr-Pages-Query-Cost:
       - '1'
       X-Envoy-Upstream-Service-Time:
-      - '900'
+      - '932'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '901'
+      - '933'
       X-Kong-Proxy-Latency:
-      - '17'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - "<COOKIE>"
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
+      - '15'
       X-Content-Type-Options:
       - nosniff
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
@@ -142,5 +142,5 @@ http_interactions:
         mus. Vivamus varius. Ut sit amet diam suscipit mauris ornare aliquam. Sed
         varius. Duis arcu. Etiam tristique massa eget dui. Phasellus congue. Aenean
         est erat, tincidunt eget, venenatis quis, commodo at, quam.","confidence_scores":null,"type":"text"}]}],"model":"mistral-ocr-latest","document_annotation":null,"usage_info":{"pages_processed":1,"doc_size_bytes":18810}}'
-  recorded_at: Mon, 14 Sep 2026 09:50:25 GMT
+  recorded_at: Wed, 16 Sep 2026 06:52:02 GMT
 recorded_with: VCR 6.4.0

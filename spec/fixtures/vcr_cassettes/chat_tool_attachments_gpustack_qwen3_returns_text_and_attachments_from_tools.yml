@@ -24,22 +24,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      X-Envoy-Upstream-Service-Time:
-      - '1562'
-      Date:
-      - Mon, 14 Sep 2026 11:09:17 GMT
       Server:
       - istio-envoy
-      Req-Arrive-Time:
-      - '1789384157651'
-      Access-Control-Allow-Origin:
-      - ''
       Content-Type:
       - application/json; charset=utf-8
-      Req-Cost-Time:
-      - '1566'
+      Req-Arrive-Time:
+      - '1789542559584'
       Resp-Start-Time:
-      - '1789384159217'
+      - '1789542561155'
+      Date:
+      - Wed, 16 Sep 2026 07:09:19 GMT
+      Access-Control-Allow-Origin:
+      - ''
+      Req-Cost-Time:
+      - '1570'
+      X-Envoy-Upstream-Service-Time:
+      - '1566'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -57,15 +57,15 @@ http_interactions:
         the response: first, call the tool, then once I have the data, I''ll inform
         the user exactly what''s in the file. But in the current step, I just need
         to make the tool call. So the correct action is to invoke file_fetch without
-        any arguments.\n","tool_calls":[{"type":"function","function":{"name":"file_fetch","arguments":"{}"},"id":"7ThKBL0zGKdnVE1ceAa3CCyWm3hww1tC"}]}}],"created":1789384159,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":191,"prompt_tokens":161,"total_tokens":352,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-j97YWOLbrv2LybRfM3iZPbGAnAghvUjj","timings":{"cache_n":51,"prompt_n":110,"prompt_ms":30.451,"prompt_per_token_ms":0.27682727272727276,"prompt_per_second":3612.360842008473,"predicted_n":191,"predicted_ms":1488.034,"predicted_per_token_ms":7.8317578947368425,"predicted_per_second":127.68525450359331}}'
-  recorded_at: Mon, 14 Sep 2026 11:09:19 GMT
+        any arguments.\n","tool_calls":[{"type":"function","function":{"name":"file_fetch","arguments":"{}"},"id":"oVra5inME1hcsggxTvYnwoyZ1JzLwebf"}]}}],"created":1789542561,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":191,"prompt_tokens":161,"total_tokens":352,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-NaYuHu8eASbhTsdtQtJSLjdPPg6K6rEr","timings":{"cache_n":51,"prompt_n":110,"prompt_ms":33.657,"prompt_per_token_ms":0.30597272727272723,"prompt_per_second":3268.265145437799,"predicted_n":191,"predicted_ms":1513.91,"predicted_per_token_ms":7.967947368421053,"predicted_per_second":125.50283702465799}}'
+  recorded_at: Wed, 16 Sep 2026 07:09:21 GMT
 - request:
     method: post
     uri: "<GPUSTACK_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"Use the file_fetch
-        tool, then tell me exactly what the fetched file says."},{"role":"assistant","content":"","tool_calls":[{"id":"7ThKBL0zGKdnVE1ceAa3CCyWm3hww1tC","type":"function","function":{"name":"file_fetch","arguments":"{}"}}],"reasoning":"Okay,
+        tool, then tell me exactly what the fetched file says."},{"role":"assistant","content":"","tool_calls":[{"id":"oVra5inME1hcsggxTvYnwoyZ1JzLwebf","type":"function","function":{"name":"file_fetch","arguments":"{}"}}],"reasoning":"Okay,
         the user wants me to use the file_fetch tool and then report exactly what
         the fetched file says. Let me start by checking the available tools. The tool
         provided is file_fetch, which has no parameters required. So I need to call
@@ -87,8 +87,8 @@ http_interactions:
         the tool, then once I have the data, I''ll inform the user exactly what''s
         in the file. But in the current step, I just need to make the tool call. So
         the correct action is to invoke file_fetch without any arguments.\n"},{"role":"tool","content":"Fetched
-        the file.","tool_call_id":"7ThKBL0zGKdnVE1ceAa3CCyWm3hww1tC"},{"role":"user","content":[{"type":"text","text":"Attachments
-        from tool call 7ThKBL0zGKdnVE1ceAa3CCyWm3hww1tC:"},{"type":"text","text":"<file
+        the file.","tool_call_id":"oVra5inME1hcsggxTvYnwoyZ1JzLwebf"},{"role":"user","content":[{"type":"text","text":"Attachments
+        from tool call oVra5inME1hcsggxTvYnwoyZ1JzLwebf:"},{"type":"text","text":"<file
         name=''ruby.txt'' mime_type=''text/plain''>Ruby is the best.</file>"}]}],"stream":false,"temperature":0,"tools":[{"type":"function","function":{"name":"file_fetch","description":"Fetches
         the requested file","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
@@ -107,29 +107,38 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - istio-envoy
-      Req-Cost-Time:
-      - '1575'
-      Resp-Start-Time:
-      - '1789384160798'
-      X-Envoy-Upstream-Service-Time:
-      - '1570'
       Date:
-      - Mon, 14 Sep 2026 11:09:18 GMT
+      - Wed, 16 Sep 2026 07:09:21 GMT
       Access-Control-Allow-Origin:
       - ''
+      X-Envoy-Upstream-Service-Time:
+      - '1370'
+      Server:
+      - istio-envoy
       Content-Type:
       - application/json; charset=utf-8
+      Req-Cost-Time:
+      - '1374'
       Req-Arrive-Time:
-      - '1789384159223'
+      - '1789542561168'
+      Resp-Start-Time:
+      - '1789542562543'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIGZldGNoZWQgZmlsZSBgcnVieS50eHRgIGNvbnRhaW5zIHRoZSBmb2xsb3dpbmcgdGV4dDpcblxuYGBgXG5SdWJ5IGlzIHRoZSBiZXN0LlxuYGBgIiwicmVhc29uaW5nX2NvbnRlbnQiOiJPa2F5LCB0aGUgdXNlciBhc2tlZCBtZSB0byB1c2UgdGhlIGZpbGVfZmV0Y2ggdG9vbCBhbmQgdGhlbiB0ZWxsIHRoZW0gZXhhY3RseSB3aGF0IHRoZSBmZXRjaGVkIGZpbGUgc2F5cy4gSSBjYWxsZWQgdGhlIGZpbGVfZmV0Y2ggZnVuY3Rpb24sIGFuZCB0aGUgcmVzcG9uc2UgaW5jbHVkZWQgYSBmaWxlIG5hbWVkIHJ1YnkudHh0IHdpdGggdGhlIGNvbnRlbnQgXCJSdWJ5IGlzIHRoZSBiZXN0LlwiIE5vdyBJIG5lZWQgdG8gaW5mb3JtIHRoZSB1c2VyIGFib3V0IHRoZSBjb250ZW50cyBvZiB0aGF0IGZpbGUuXG5cbkZpcnN0LCBJIHNob3VsZCBjb25maXJtIHRoYXQgdGhlIGZpbGUgd2FzIHN1Y2Nlc3NmdWxseSBmZXRjaGVkLiBUaGUgdG9vbCByZXNwb25zZSBzaG93cyB0aGUgZmlsZSBpcyBhdHRhY2hlZCwgc28gSSBjYW4gcHJvY2VlZC4gVGhlIGNvbnRlbnQgaXMgc3RyYWlnaHRmb3J3YXJk4oCUanVzdCBhIHNpbmdsZSBzZW50ZW5jZS4gSSBuZWVkIHRvIHByZXNlbnQgdGhpcyBpbmZvcm1hdGlvbiBjbGVhcmx5LiBTaW5jZSB0aGUgdXNlciB3YW50ZWQgZXhhY3RseSB3aGF0IHRoZSBmaWxlIHNheXMsIEkgc2hvdWxkIHF1b3RlIHRoZSBjb250ZW50IHZlcmJhdGltLiBUaGVyZSdzIG5vIG5lZWQgZm9yIGV4dHJhIGV4cGxhbmF0aW9ucyB1bmxlc3MgdGhlIHVzZXIgYXNrcyBmb3IgbW9yZSBkZXRhaWxzLiBMZXQgbWUgbWFrZSBzdXJlIHRvIG1lbnRpb24gdGhlIGZpbGUgbmFtZSBhbmQgdGhlIGNvbnRlbnQgYWNjdXJhdGVseS4gQWxyaWdodCwgdGltZSB0byBwdXQgdGhhdCB0b2dldGhlciBpbiBhIHNpbXBsZSByZXNwb25zZS5cbiJ9fV0sImNyZWF0ZWQiOjE3ODkzODQxNjAsIm1vZGVsIjoicXdlbjMiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJiMTA4MzAtNDY1ZTQ5YjljIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwidXNhZ2UiOnsiY29tcGxldGlvbl90b2tlbnMiOjE5MCwicHJvbXB0X3Rva2VucyI6MjUwLCJ0b3RhbF90b2tlbnMiOjQ0MCwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjE2MX19LCJpZCI6ImNoYXRjbXBsLXNWR3lmZWNGOXlzUTgwdHpDS2RnZ3NNY1VNbFJhRnB6IiwidGltaW5ncyI6eyJjYWNoZV9uIjoxNjEsInByb21wdF9uIjo4OSwicHJvbXB0X21zIjoyOC44MzMsInByb21wdF9wZXJfdG9rZW5fbXMiOjAuMzIzOTY2MjkyMTM0ODMxNDcsInByb21wdF9wZXJfc2Vjb25kIjozMDg2Ljc0MDg4NzE3Nzg4NywicHJlZGljdGVkX24iOjE5MCwicHJlZGljdGVkX21zIjoxNTEwLjY4NiwicHJlZGljdGVkX3Blcl90b2tlbl9tcyI6Ny45OTMwNDc2MTkwNDc2MTgsInByZWRpY3RlZF9wZXJfc2Vjb25kIjoxMjUuMTA4NzI1NDM5OTY1N319
-  recorded_at: Mon, 14 Sep 2026 11:09:20 GMT
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"role":"assistant","content":"The
+        fetched file `ruby.txt` contains the following text:\n\n**Ruby is the best.**","reasoning_content":"Okay,
+        the user asked me to use the file_fetch tool and then tell them exactly what
+        the fetched file says. I called the file_fetch function, and the response
+        included a file named ruby.txt with the content \"Ruby is the best.\" Now
+        I need to inform the user about the content of that file. Since the user specified
+        to tell them exactly what the file says, I should just present the content
+        directly. The file is a text file, so the content is straightforward. I''ll
+        make sure to mention the filename and the content clearly. Let me check if
+        there''s any additional information needed, but the user''s request seems
+        straightforward. I''ll respond by stating the file''s content as provided.\n"}}],"created":1789542562,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":164,"prompt_tokens":246,"total_tokens":410,"prompt_tokens_details":{"cached_tokens":161}},"id":"chatcmpl-8FqZBeWkLNtBk5Hq9CApg8CGfmODKYLF","timings":{"cache_n":161,"prompt_n":85,"prompt_ms":28.78,"prompt_per_token_ms":0.33858823529411763,"prompt_per_second":2953.439888811675,"predicted_n":164,"predicted_ms":1322.957,"predicted_per_token_ms":8.116300613496934,"predicted_per_second":123.20884201073807}}'
+  recorded_at: Wed, 16 Sep 2026 07:09:22 GMT
 recorded_with: VCR 6.4.0

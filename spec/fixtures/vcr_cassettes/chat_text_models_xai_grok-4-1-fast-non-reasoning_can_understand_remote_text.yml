@@ -29,41 +29,41 @@ http_interactions:
       X-Origin-Cache:
       - HIT
       Last-Modified:
-      - Mon, 14 Sep 2026 01:49:25 GMT
+      - Tue, 15 Sep 2026 04:37:41 GMT
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"6aa752a5-9c6"
+      - W/"6aa8cb95-9c6"
       Expires:
-      - Mon, 14 Sep 2026 09:48:55 GMT
+      - Wed, 16 Sep 2026 06:58:18 GMT
       Cache-Control:
       - max-age=600
       X-Proxy-Cache:
       - MISS
       X-Github-Request-Id:
-      - EA64:1E29A7:5B464DB:5C2A2FF:6AA7C0AE
+      - 3868:32AFB:1F09861:1F3CEE4:6AAA3BB2
       X-Github-Edge-Region:
       - fra
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 14 Sep 2026 09:40:57 GMT
+      - Wed, 16 Sep 2026 06:50:23 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '83'
+      - '93'
       X-Served-By:
-      - cache-ber1080033-BER
+      - cache-ber1080051-BER
       X-Cache:
       - HIT
       X-Cache-Hits:
       - '1'
       X-Timer:
-      - S1789378858.693659,VS0,VE1
+      - S1789541423.146816,VS0,VE1
       Vary:
       - Accept-Encoding
       X-Fastly-Request-Id:
-      - d7a52222d5fae9a18fd81bec67ede76d9545102d
+      - 7a2b74a8dcac69c2094ad0971a2f52c7031bbb66
     body:
       encoding: ASCII-8BIT
       string: "Ruby is copyrighted free software by Yukihiro Matsumoto <matz@netlab.jp>.\nYou
@@ -99,7 +99,7 @@ http_interactions:
         \"AS IS\" AND WITHOUT ANY EXPRESS OR\n     IMPLIED WARRANTIES, INCLUDING,
         WITHOUT LIMITATION, THE IMPLIED\n     WARRANTIES OF MERCHANTABILITY AND FITNESS
         FOR A PARTICULAR\n     PURPOSE.\n"
-  recorded_at: Mon, 14 Sep 2026 09:40:57 GMT
+  recorded_at: Wed, 16 Sep 2026 06:50:23 GMT
 - request:
     method: post
     uri: https://api.x.ai/v1/responses
@@ -157,7 +157,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:41:02 GMT
+      - Wed, 16 Sep 2026 06:50:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -185,13 +185,11 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '287.5'
-      X-Metrics-Mean-Itl-Ms:
-      - '9.2'
+      - '337.6'
       X-Metrics-E2e-Ms:
-      - '4435.8'
+      - '3106.1'
       Traceparent:
-      - 00-d1737635542e0de607e5184df7ea9eb9-45ec9ab30000bb8e-01
+      - 00-fc87bb7da6ee4249f462786901a57b68-0feca2490000b0f6-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -204,21 +202,14 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1789378858,"completed_at":1789378862,"id":"a6547819-520a-915d-bf34-23207e667734","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_a6547819-520a-915d-bf34-23207e667734","summary":[{"text":"The
+      string: '{"created_at":1789541426,"completed_at":1789541426,"id":"04c054bc-4155-9cd9-9aff-d3c34080944e","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_04c054bc-4155-9cd9-9aff-d3c34080944e","summary":[{"text":"The
         user is asking \"What''s in this file?\" and has provided the contents of
         a file named ''license.txt'' with MIME type ''text/plain''. The content is
-        the Ruby license text.\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"0g4rCdIpprQ+c1LDHuLii7KoCVz/itrLIoyXeRR7KkyLQ5ejZlXUQoFyou4Vv4h2olgnaYLuMilz1bfxgxedUJTLbyuZ9uxKo3CErg1xot+s7cQW6Hg9dBav6+WSSP9u2r9RSjeeovTtEhqHgy5mHlvuhLuWxuYmm8F0VYHENMdlps5o6nzxHfKUCvxlne2liBMNQLXDLjKnYdnIqzauOh/SzaG9u/uFTQPM6lsUx02tvNYbWZXw2zB5Y0+y6Qt0uOza1+4BioINQYKBNUbKkud1p9tQ9e8MeujpMSb3IUPIPIJerQWY+MjSLPMkm/MTYVrEZTgAMWd0GR5hl97kGu9F+evNGcKpkDnGEdlNP789zilHxxn65ubvi+aiIacwqcDTBOjoYlK9C020XlvyG6cu9UIT4fQLZBV0/T3oPdfFz+/IKG10/Bk4NGNI7+iKkiBiX52GY4Yalp8Rw1ZGJ2a04ubWor6HP7smSRUI8rXToD4pJFA2wvF3N26o/iyuCbpDZHboZhDhv0UsDmOzq4M0gMqYoFm50NiDF16y+hjzEOQteoYajyER3Y+lywrTLbxiegxBusUG6ZHfZdplxNBuVrQak6ICioBobGuY5cPt6gdZat7PNF2LUaTmYWHj4uqBJIhv3DgBvc4fXfU9fzNnfAT4BhBLTeMbBu1rNFQydH32Ere+m/0NdphYiD0OgDDfme4LQpU1pg5cHC5EX8z+fMH3XzEGDUXZsafOsf9AR67dMoyD1ZbvkO7TpO5rFhzgwPzqSYG+euPyRl/Ru5aXgbX+Rvh4fHMOWbiDDaDkttxc6qdhhVXL3G23Y+Lvmh3Kd4YaUL0GVC0gudDlFaZ76mL1ZOAZxdC3UPgZqD3sFbrz6Y9lo2fsR33g5mgDGL+2zuEcw/TzbhQ+f2Mcqoz+wrnhdvRXjPganRpYmFQBDcF/zFCfeSIQWS3ICDNkHE7x8Z37y6w7derBCF0zWkBfh+vprZRkR/34P0d5WMow9zSa4S8FmEesJqQ6N8OndebZJH8gkUcEGDlTNOkR66Svt8JpHcOYVjsYIlR+6Yyjgbxw044Mc+r7M6TQR3eaaRKHPulD8kp/AIc00VJ4qCuMZj5t8k1px72qQhoApSu7ijyNgNZZyurDa4u0FRDHt9Sw+t2GR+ua6gjL5raaPCGQcckDaRgScFtNQn27f9sDdD/SWf1RZk8n458m0wH1ypG1QVSWVtKACMSEbMVZVtNzYAuQ6BPspSNxHFjDw2+wI4h1/FT7r96/aW9/0hB4G1uHdsHABLq3MBAoxShQMnLJbOxNt+QMeYyCpEEmhkbDCbRa2MnCY0RAhY45MXU2OM+RdEIzDVI/clrO29Fx7YQvF2k6sqhbkAMpSvUMRfv8jzi7f+ZQUDFTecyvNaQM8UgDqrdgThbGXGJseE24jzYl6WlU39nzPLTfh++Y94/TDovFTNHFCuBtEdXphBh5KwLGYuw6nceIw3PfKPEvza5p6+CVX7AWN2KG5t3NxQ"},{"content":[{"type":"output_text","text":"This
-        is the **Ruby License** (the main license file for the Ruby programming language).\n\nIt
-        was written by Yukihiro Matsumoto (Ruby''s creator) and permits free redistribution
-        and modification of Ruby under either:\n\n- The 2-clause BSD License (BSDL),
-        or\n- The specific terms listed in the file (which are similar but not identical
-        to the BSD license).\n\n### Key points covered:\n- You can freely copy and
-        share the source.\n- You can modify it, but must follow one of several conditions
-        (e.g., make changes public, keep it internal to your organization, use non-standard
-        names for binaries, etc.).\n- Binary distributions have similar requirements.\n-
-        Some files in the Ruby distribution have different licenses (see the `LEGAL`
-        file).\n- Scripts and libraries generated by the software belong to their
-        creators.\n- The software is provided **\"AS IS\"** with no warranties.\n\nThis
-        is the standard `license.txt` that ships with Ruby source distributions.","logprobs":[],"annotations":[]}],"id":"msg_a6547819-520a-915d-bf34-23207e667734","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":716,"input_tokens_details":{"cached_tokens":128},"output_tokens":434,"output_tokens_details":{"reasoning_tokens":240},"total_tokens":1150,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":18456000,"context_details":{"input_tokens":716,"output_tokens":434}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Mon, 14 Sep 2026 09:41:02 GMT
+        the Ruby license text.\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"gLFhiyZLPFU6WXTRLTossnaGKMjxIuAH1uviHI/D4tdalvPpO3a5dq9E60QWapdbHF/GGY2aS66VEaPSEX+AfBHjTFjhTmN2uq1Whk2M8f6/wfyhEPmnQ1sJ0CDL6JNll4Dc4qJyrcE8uUasBHNaYEpxnoyqhhnrItvupDVcrmH0eFVCaXPsczbJxKtbn8kp3XJULWCG+UfnbniZagqotFvbDiO7ukh81nACrdhmhBGol7ob7rwRyR88BBuHb35qZ8srmSTdpKD03kP66ZDaAch0MFPpzMnExc/uLRYbAlLTo6KLtC3KTg5BdcLNg4aHDz/dP0OxTCMIrcFS6LKlkp4RIER80tt65xaWBXzQMapYj9Cch1T3CHQg8Xwm5a/88wNPyZxzt8pU6T1eCqSOqG+GE/fIQsekW6l+BMGB3q7PvGZA9YC0q1lLj99VBMYiscGULAmynzXhEzQmyA+UvEFap1irkzWFVdJLiVWqv0QY1hcsa7gKISqAOOsXc8JGxYPL8ueYZ/suRvLlqiOzNa1Iudghje+3Pmjcw7KrU+/wBrdAYQjgFdEyIIJnnI6kWML+WCeB25USOlG0tXGsKUc5VQIAl0tX5OTu8Lnen+jhQSKsIYYv3AmRb8yp/jsfhK9I7pkbAMD+d2TDKZFgGW9S0q4E4jSL8mMHAdfD8S4c1+VJSi8fxBg2BdzNBZ16EfQyPdfoVIW0vdVM9VvT8j1VAFJCBkzS2/v0NtAJu3zuCfj7g8G4mmV2z8QRplaHVwJfoyBSQXJWWZOpl/lUVKMdzllEGP8kCDNj5smXTFlk55gQwH8ce8hN09b9EIzFPtQi9uz8G2lsZKG78Spgzv4qA2Ke55TtICtMX3dgTKaOak/9euVWAXLNvB6rPcuJXAPYu6ismkKWiwwTEK+0w/zIR+IDTkvWCYAsqhSYISAK2qipV4/UoK+6nwfI5iIEa3+xdz1n4dPWiieIOVaPPZl3E2n1FfBIuSiVSVzobs7/eBDwSoR6pVXA0HyR+q2BdIBBu47zKcsFJ7HlEbNe8YiBRRhsXLVZJJGC896pb99E1EwSFMRA3EdJP3Eu8Okl+vkYG67gmdebh9ATjyHVKl0pF0bBtifluwKdzCftKgBjhXuzgWsR0qQHDw8rxCemSYzAXGWCPtx1y6NGceG5HfYXI0DlljYWriBS/DzNFoIKcRWrKb7Lph3W+ab++GpoYcVbhLtjW01SKt/lKa+Sgy2USZ7eaK8ysrg"},{"content":[{"type":"output_text","text":"This
+        file contains the **Ruby programming language license** (copyrighted by Yukihiro
+        Matsumoto). It''s a permissive open-source license that allows redistribution
+        and modification of Ruby under either the 2-clause BSD License or the specific
+        terms outlined in the file (covering source distribution, binary distribution,
+        modifications, and warranty disclaimers).","logprobs":[],"annotations":[]}],"id":"msg_04c054bc-4155-9cd9-9aff-d3c34080944e","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":716,"input_tokens_details":{"cached_tokens":128},"output_tokens":244,"output_tokens_details":{"reasoning_tokens":179},"total_tokens":960,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":13706000,"context_details":{"input_tokens":716,"output_tokens":245}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Wed, 16 Sep 2026 06:50:26 GMT
 recorded_with: VCR 6.4.0

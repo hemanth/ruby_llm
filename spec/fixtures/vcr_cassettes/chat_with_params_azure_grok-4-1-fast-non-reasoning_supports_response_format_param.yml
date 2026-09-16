@@ -26,7 +26,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 09:49:03 GMT
+      - Wed, 16 Sep 2026 06:50:42 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -42,13 +42,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-77a6a57fa4f97a5d66e4fb0994296027-c914c7c8000c1218-00
+      - 00-adb67b0df4e03bb482ee835c3a2fdb28-de47c529001b9a16-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - e9211308-951b-43a3-ad71-ffa6244d873f
+      - 82d18254-afd7-4061-bf68-8d74de2371bd
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -84,7 +84,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - e9211308-951b-43a3-ad71-ffa6244d873f
+      - 82d18254-afd7-4061-bf68-8d74de2371bd
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -93,7 +93,7 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"59350dee-8a6d-44ae-bceb-ca240901e184","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"{\"result\":
-        8}"},"finish_reason":"stop"}],"usage":{"prompt_tokens":29,"completion_tokens":6,"total_tokens":35,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":170,"audio_tokens":0,"text_tokens":29,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789379343,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Mon, 14 Sep 2026 09:49:03 GMT
+      string: '{"id":"67f90e71-4106-430a-bca6-5d91ba84ccfc","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"{\"result\":
+        8}"},"finish_reason":"stop"}],"usage":{"prompt_tokens":29,"completion_tokens":6,"total_tokens":35,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":170,"audio_tokens":0,"text_tokens":29,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789541442,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Wed, 16 Sep 2026 06:50:42 GMT
 recorded_with: VCR 6.4.0

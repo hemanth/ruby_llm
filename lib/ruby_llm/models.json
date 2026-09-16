@@ -1297,7 +1297,7 @@
     "name": "DeepSeek-V4-Flash-0731",
     "provider": "azure",
     "family": null,
-    "created_at": "2026-09-04 00:00:00 UTC",
+    "created_at": "2026-08-05 00:00:00 UTC",
     "context_window": null,
     "max_output_tokens": null,
     "knowledge_cutoff": null,
@@ -1313,8 +1313,8 @@
     "pricing": {},
     "metadata": {
       "object": "model",
-      "lifecycle_status": "generally-available",
-      "inference_retires_at": 4102358400
+      "lifecycle_status": "preview",
+      "inference_retires_at": 1796256000
     }
   },
   {
@@ -1565,31 +1565,6 @@
       "object": "model",
       "lifecycle_status": "preview",
       "inference_retires_at": 1800921600
-    }
-  },
-  {
-    "id": "Kimi-K2.6",
-    "name": "Kimi-K2.6",
-    "provider": "azure",
-    "family": null,
-    "created_at": "2026-09-04 00:00:00 UTC",
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [],
-    "pricing": {},
-    "metadata": {
-      "object": "model",
-      "lifecycle_status": "generally-available",
-      "inference_retires_at": 4102358400
     }
   },
   {
@@ -6142,7 +6117,7 @@
     "metadata": {
       "object": "model",
       "lifecycle_status": "deprecating",
-      "inference_retires_at": 1792540800
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6167,7 +6142,7 @@
     "metadata": {
       "object": "model",
       "lifecycle_status": "deprecating",
-      "inference_retires_at": 1792540800
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6192,7 +6167,7 @@
     "metadata": {
       "object": "model",
       "lifecycle_status": "deprecating",
-      "inference_retires_at": 1792540800
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6217,7 +6192,7 @@
     "metadata": {
       "object": "model",
       "lifecycle_status": "deprecating",
-      "inference_retires_at": 1792540800
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6241,8 +6216,8 @@
     "pricing": {},
     "metadata": {
       "object": "model",
-      "lifecycle_status": "generally-available",
-      "inference_retires_at": 1792540800
+      "lifecycle_status": "deprecating",
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6266,8 +6241,33 @@
     "pricing": {},
     "metadata": {
       "object": "model",
-      "lifecycle_status": "generally-available",
-      "inference_retires_at": 1792540800
+      "lifecycle_status": "deprecating",
+      "inference_retires_at": 1795046400
+    }
+  },
+  {
+    "id": "o3-deep-research",
+    "name": "o3-deep-research",
+    "provider": "azure",
+    "family": null,
+    "created_at": "2025-06-18 00:00:00 UTC",
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "lifecycle_status": "deprecating",
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6291,8 +6291,8 @@
     "pricing": {},
     "metadata": {
       "object": "model",
-      "lifecycle_status": "generally-available",
-      "inference_retires_at": 1798243200
+      "lifecycle_status": "deprecating",
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6316,8 +6316,8 @@
     "pricing": {},
     "metadata": {
       "object": "model",
-      "lifecycle_status": "generally-available",
-      "inference_retires_at": 1798243200
+      "lifecycle_status": "deprecating",
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6342,7 +6342,7 @@
     "metadata": {
       "object": "model",
       "lifecycle_status": "deprecating",
-      "inference_retires_at": 1790812800
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6367,7 +6367,7 @@
     "metadata": {
       "object": "model",
       "lifecycle_status": "deprecating",
-      "inference_retires_at": 1790812800
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6392,7 +6392,7 @@
     "metadata": {
       "object": "model",
       "lifecycle_status": "deprecating",
-      "inference_retires_at": 1792108800
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -6417,7 +6417,7 @@
     "metadata": {
       "object": "model",
       "lifecycle_status": "deprecating",
-      "inference_retires_at": 1792108800
+      "inference_retires_at": 1795046400
     }
   },
   {
@@ -7428,6 +7428,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
@@ -7491,6 +7494,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
@@ -7513,10 +7519,10 @@
     "name": "Claude Opus 4.5",
     "provider": "bedrock",
     "family": "claude-opus",
-    "created_at": "2025-11-24 00:00:00 UTC",
+    "created_at": "2025-11-01 00:00:00 UTC",
     "context_window": 200000,
     "max_output_tokens": 64000,
-    "knowledge_cutoff": "2025-03-31",
+    "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
@@ -7549,11 +7555,14 @@
       "open_weights": false,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2025-08-01",
+      "last_updated": "2025-11-01",
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -7577,7 +7586,7 @@
         "context": 200000,
         "output": 64000
       },
-      "knowledge": "2025-03-31"
+      "knowledge": "2025-05"
     }
   },
   {
@@ -7608,10 +7617,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -7627,6 +7636,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -7641,10 +7653,10 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
@@ -7697,6 +7709,9 @@
       "tool_call": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -7766,6 +7781,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -7833,6 +7851,9 @@
       "tool_call": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -7904,6 +7925,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
@@ -7928,7 +7952,7 @@
     "family": "claude-sonnet",
     "created_at": "2026-02-17 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 64000,
+    "max_output_tokens": 128000,
     "knowledge_cutoff": "2025-08-31",
     "modalities": {
       "input": [
@@ -7949,10 +7973,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 3,
-          "output_per_million": 15,
-          "cache_read_input_per_million": 0.3,
-          "cache_write_input_per_million": 3.75
+          "input_per_million": 3.3,
+          "output_per_million": 16.5,
+          "cache_read_input_per_million": 0.33,
+          "cache_write_input_per_million": 4.125
         }
       }
     },
@@ -7968,6 +7992,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -7982,14 +8009,14 @@
         }
       ],
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
+        "input": 3.3,
+        "output": 16.5,
+        "cache_read": 0.33,
+        "cache_write": 4.125
       },
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "knowledge": "2025-08-31"
     }
@@ -8015,7 +8042,6 @@
     },
     "capabilities": [
       "function_calling",
-      "structured_output",
       "reasoning",
       "vision"
     ],
@@ -8037,7 +8063,7 @@
       "temperature": false,
       "last_updated": "2026-06-30",
       "tool_call": true,
-      "structured_output": true,
+      "structured_output": false,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -8234,6 +8260,72 @@
     }
   },
   {
+    "id": "apac.anthropic.claude-sonnet-4-20250514-v1:0",
+    "name": "Claude Sonnet 4 (APAC)",
+    "provider": "bedrock",
+    "family": "claude-sonnet",
+    "created_at": "2025-05-22 00:00:00 UTC",
+    "context_window": 200000,
+    "max_output_tokens": 64000,
+    "knowledge_cutoff": "2025-03-31",
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "reasoning",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3,
+          "output_per_million": 15,
+          "cache_read_input_per_million": 0.3,
+          "cache_write_input_per_million": 3.75
+        }
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2025-05-22",
+      "status": "deprecated",
+      "tool_call": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ],
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "knowledge": "2025-03-31"
+    }
+  },
+  {
     "id": "au.anthropic.claude-haiku-4-5-20251001-v1:0",
     "name": "Claude Haiku 4.5 (AU)",
     "provider": "bedrock",
@@ -8261,10 +8353,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 1,
-          "output_per_million": 5,
-          "cache_read_input_per_million": 0.1,
-          "cache_write_input_per_million": 1.25
+          "input_per_million": 1.1,
+          "output_per_million": 5.5,
+          "cache_read_input_per_million": 0.11,
+          "cache_write_input_per_million": 1.375
         }
       }
     },
@@ -8280,15 +8372,18 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
       ],
       "cost": {
-        "input": 1,
-        "output": 5,
-        "cache_read": 0.1,
-        "cache_write": 1.25
+        "input": 1.1,
+        "output": 5.5,
+        "cache_read": 0.11,
+        "cache_write": 1.375
       },
       "limit": {
         "context": 200000,
@@ -8305,7 +8400,7 @@
     "created_at": "2026-02-05 00:00:00 UTC",
     "context_window": 1000000,
     "max_output_tokens": 128000,
-    "knowledge_cutoff": null,
+    "knowledge_cutoff": "2025-05-31",
     "modalities": {
       "input": [
         "text",
@@ -8325,10 +8420,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 16.5,
-          "output_per_million": 82.5,
-          "cache_read_input_per_million": 1.65,
-          "cache_write_input_per_million": 20.625
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -8338,11 +8433,14 @@
       "open_weights": false,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2026-02-05",
+      "last_updated": "2026-03-13",
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -8358,16 +8456,16 @@
         }
       ],
       "cost": {
-        "input": 16.5,
-        "output": 82.5,
-        "cache_read": 1.65,
-        "cache_write": 20.625
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
         "output": 128000
       },
-      "knowledge": "2025-05"
+      "knowledge": "2025-05-31"
     }
   },
   {
@@ -8414,6 +8512,9 @@
       "tool_call": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -8465,10 +8566,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -8483,6 +8584,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -8494,10 +8598,10 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
@@ -8533,10 +8637,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -8551,6 +8655,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -8562,10 +8669,10 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
@@ -8602,10 +8709,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 3,
-          "output_per_million": 15,
-          "cache_read_input_per_million": 0.3,
-          "cache_write_input_per_million": 3.75
+          "input_per_million": 3.3,
+          "output_per_million": 16.5,
+          "cache_read_input_per_million": 0.33,
+          "cache_write_input_per_million": 4.125
         }
       }
     },
@@ -8621,15 +8728,18 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
       ],
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
+        "input": 3.3,
+        "output": 16.5,
+        "cache_read": 0.33,
+        "cache_write": 4.125
       },
       "limit": {
         "context": 200000,
@@ -8646,7 +8756,7 @@
     "created_at": "2026-02-17 00:00:00 UTC",
     "context_window": 1000000,
     "max_output_tokens": 128000,
-    "knowledge_cutoff": null,
+    "knowledge_cutoff": "2025-08-31",
     "modalities": {
       "input": [
         "text",
@@ -8679,11 +8789,14 @@
       "open_weights": false,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2026-02-17",
+      "last_updated": "2026-03-13",
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -8708,7 +8821,7 @@
         "context": 1000000,
         "output": 128000
       },
-      "knowledge": "2025-08"
+      "knowledge": "2025-08-31"
     }
   },
   {
@@ -8732,17 +8845,16 @@
     },
     "capabilities": [
       "function_calling",
-      "structured_output",
       "reasoning",
       "vision"
     ],
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 2,
-          "output_per_million": 10,
-          "cache_read_input_per_million": 0.2,
-          "cache_write_input_per_million": 2.5
+          "input_per_million": 2.2,
+          "output_per_million": 11,
+          "cache_read_input_per_million": 0.22,
+          "cache_write_input_per_million": 2.75
         }
       }
     },
@@ -8754,7 +8866,7 @@
       "temperature": false,
       "last_updated": "2026-06-30",
       "tool_call": true,
-      "structured_output": true,
+      "structured_output": false,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -8772,10 +8884,10 @@
         }
       ],
       "cost": {
-        "input": 2,
-        "output": 10,
-        "cache_read": 0.2,
-        "cache_write": 2.5
+        "input": 2.2,
+        "output": 11,
+        "cache_read": 0.22,
+        "cache_write": 2.75
       },
       "limit": {
         "context": 1000000,
@@ -9559,6 +9671,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
@@ -9581,10 +9696,10 @@
     "name": "Claude Opus 4.5 (EU)",
     "provider": "bedrock",
     "family": "claude-opus",
-    "created_at": "2025-11-24 00:00:00 UTC",
+    "created_at": "2025-11-01 00:00:00 UTC",
     "context_window": 200000,
     "max_output_tokens": 64000,
-    "knowledge_cutoff": "2025-03-31",
+    "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
@@ -9617,11 +9732,14 @@
       "open_weights": false,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2025-08-01",
+      "last_updated": "2025-11-01",
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -9645,7 +9763,7 @@
         "context": 200000,
         "output": 64000
       },
-      "knowledge": "2025-03-31"
+      "knowledge": "2025-05"
     }
   },
   {
@@ -9694,6 +9812,9 @@
       "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -9766,6 +9887,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -9833,6 +9957,9 @@
       "tool_call": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -9902,6 +10029,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -9923,6 +10053,72 @@
         "output": 128000
       },
       "knowledge": "2026-05"
+    }
+  },
+  {
+    "id": "eu.anthropic.claude-sonnet-4-20250514-v1:0",
+    "name": "Claude Sonnet 4 (EU)",
+    "provider": "bedrock",
+    "family": "claude-sonnet",
+    "created_at": "2025-05-22 00:00:00 UTC",
+    "context_window": 200000,
+    "max_output_tokens": 64000,
+    "knowledge_cutoff": "2025-03-31",
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "reasoning",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3,
+          "output_per_million": 15,
+          "cache_read_input_per_million": 0.3,
+          "cache_write_input_per_million": 3.75
+        }
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2025-05-22",
+      "status": "deprecated",
+      "tool_call": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ],
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "knowledge": "2025-03-31"
     }
   },
   {
@@ -9972,6 +10168,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
@@ -9996,7 +10195,7 @@
     "family": "claude-sonnet",
     "created_at": "2026-02-17 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 64000,
+    "max_output_tokens": 128000,
     "knowledge_cutoff": "2025-08-31",
     "modalities": {
       "input": [
@@ -10036,6 +10235,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -10057,7 +10259,7 @@
       },
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "knowledge": "2025-08-31"
     }
@@ -10083,7 +10285,6 @@
     },
     "capabilities": [
       "function_calling",
-      "structured_output",
       "reasoning",
       "vision"
     ],
@@ -10105,7 +10306,7 @@
       "temperature": false,
       "last_updated": "2026-06-30",
       "tool_call": true,
-      "structured_output": true,
+      "structured_output": false,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -10438,6 +10639,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
@@ -10460,10 +10664,10 @@
     "name": "Claude Opus 4.5 (Global)",
     "provider": "bedrock",
     "family": "claude-opus",
-    "created_at": "2025-11-24 00:00:00 UTC",
+    "created_at": "2025-11-01 00:00:00 UTC",
     "context_window": 200000,
     "max_output_tokens": 64000,
-    "knowledge_cutoff": "2025-03-31",
+    "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
@@ -10496,11 +10700,14 @@
       "open_weights": false,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2025-08-01",
+      "last_updated": "2025-11-01",
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -10524,7 +10731,7 @@
         "context": 200000,
         "output": 64000
       },
-      "knowledge": "2025-03-31"
+      "knowledge": "2025-05"
     }
   },
   {
@@ -10573,6 +10780,9 @@
       "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -10645,6 +10855,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -10712,6 +10925,9 @@
       "tool_call": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -10781,6 +10997,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -10802,6 +11021,72 @@
         "output": 128000
       },
       "knowledge": "2026-05"
+    }
+  },
+  {
+    "id": "global.anthropic.claude-sonnet-4-20250514-v1:0",
+    "name": "Claude Sonnet 4 (Global)",
+    "provider": "bedrock",
+    "family": "claude-sonnet",
+    "created_at": "2025-05-22 00:00:00 UTC",
+    "context_window": 200000,
+    "max_output_tokens": 64000,
+    "knowledge_cutoff": "2025-03-31",
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "reasoning",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3,
+          "output_per_million": 15,
+          "cache_read_input_per_million": 0.3,
+          "cache_write_input_per_million": 3.75
+        }
+      }
+    },
+    "metadata": {
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2025-05-22",
+      "status": "deprecated",
+      "tool_call": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ],
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "knowledge": "2025-03-31"
     }
   },
   {
@@ -10851,6 +11136,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
@@ -10875,7 +11163,7 @@
     "family": "claude-sonnet",
     "created_at": "2026-02-17 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 64000,
+    "max_output_tokens": 128000,
     "knowledge_cutoff": "2025-08-31",
     "modalities": {
       "input": [
@@ -10915,6 +11203,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -10936,7 +11227,7 @@
       },
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "knowledge": "2025-08-31"
     }
@@ -10962,7 +11253,6 @@
     },
     "capabilities": [
       "function_calling",
-      "structured_output",
       "reasoning",
       "vision"
     ],
@@ -10984,7 +11274,7 @@
       "temperature": false,
       "last_updated": "2026-06-30",
       "tool_call": true,
-      "structured_output": true,
+      "structured_output": false,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -11026,8 +11316,7 @@
     "modalities": {
       "input": [
         "text",
-        "image",
-        "pdf"
+        "image"
       ],
       "output": [
         "text"
@@ -11123,8 +11412,7 @@
     "modalities": {
       "input": [
         "text",
-        "image",
-        "pdf"
+        "image"
       ],
       "output": [
         "text"
@@ -11219,8 +11507,7 @@
     "modalities": {
       "input": [
         "text",
-        "image",
-        "pdf"
+        "image"
       ],
       "output": [
         "text"
@@ -11315,8 +11602,7 @@
     "modalities": {
       "input": [
         "text",
-        "image",
-        "pdf"
+        "image"
       ],
       "output": [
         "text"
@@ -12172,10 +12458,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 1,
-          "output_per_million": 5,
-          "cache_read_input_per_million": 0.1,
-          "cache_write_input_per_million": 1.25
+          "input_per_million": 1.1,
+          "output_per_million": 5.5,
+          "cache_read_input_per_million": 0.11,
+          "cache_write_input_per_million": 1.375
         }
       }
     },
@@ -12191,15 +12477,18 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
       ],
       "cost": {
-        "input": 1,
-        "output": 5,
-        "cache_read": 0.1,
-        "cache_write": 1.25
+        "input": 1.1,
+        "output": 5.5,
+        "cache_read": 0.11,
+        "cache_write": 1.375
       },
       "limit": {
         "context": 200000,
@@ -12235,10 +12524,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -12253,6 +12542,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -12264,10 +12556,10 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
@@ -12303,10 +12595,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -12321,6 +12613,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -12332,10 +12627,10 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
@@ -12371,10 +12666,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -12389,6 +12684,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -12400,10 +12698,10 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
@@ -12440,10 +12738,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 3,
-          "output_per_million": 15,
-          "cache_read_input_per_million": 0.3,
-          "cache_write_input_per_million": 3.75
+          "input_per_million": 3.3,
+          "output_per_million": 16.5,
+          "cache_read_input_per_million": 0.33,
+          "cache_write_input_per_million": 4.125
         }
       }
     },
@@ -12459,15 +12757,18 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
       ],
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
+        "input": 3.3,
+        "output": 16.5,
+        "cache_read": 0.33,
+        "cache_write": 4.125
       },
       "limit": {
         "context": 200000,
@@ -12483,7 +12784,7 @@
     "family": "claude-sonnet",
     "created_at": "2026-02-17 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 64000,
+    "max_output_tokens": 128000,
     "knowledge_cutoff": "2025-08-31",
     "modalities": {
       "input": [
@@ -12504,10 +12805,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 3,
-          "output_per_million": 15,
-          "cache_read_input_per_million": 0.3,
-          "cache_write_input_per_million": 3.75
+          "input_per_million": 3.3,
+          "output_per_million": 16.5,
+          "cache_read_input_per_million": 0.33,
+          "cache_write_input_per_million": 4.125
         }
       }
     },
@@ -12523,6 +12824,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -12537,14 +12841,14 @@
         }
       ],
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
+        "input": 3.3,
+        "output": 16.5,
+        "cache_read": 0.33,
+        "cache_write": 4.125
       },
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "knowledge": "2025-08-31"
     }
@@ -12570,17 +12874,16 @@
     },
     "capabilities": [
       "function_calling",
-      "structured_output",
       "reasoning",
       "vision"
     ],
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 2,
-          "output_per_million": 10,
-          "cache_read_input_per_million": 0.2,
-          "cache_write_input_per_million": 2.5
+          "input_per_million": 2.2,
+          "output_per_million": 11,
+          "cache_read_input_per_million": 0.22,
+          "cache_write_input_per_million": 2.75
         }
       }
     },
@@ -12592,7 +12895,7 @@
       "temperature": false,
       "last_updated": "2026-06-30",
       "tool_call": true,
-      "structured_output": true,
+      "structured_output": false,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -12610,10 +12913,10 @@
         }
       ],
       "cost": {
-        "input": 2,
-        "output": 10,
-        "cache_read": 0.2,
-        "cache_write": 2.5
+        "input": 2.2,
+        "output": 11,
+        "cache_read": 0.22,
+        "cache_write": 2.75
       },
       "limit": {
         "context": 1000000,
@@ -16795,10 +17098,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 10,
-          "output_per_million": 50,
-          "cache_read_input_per_million": 1,
-          "cache_write_input_per_million": 12.5
+          "input_per_million": 11,
+          "output_per_million": 55,
+          "cache_read_input_per_million": 1.1,
+          "cache_write_input_per_million": 13.75
         }
       }
     },
@@ -16849,10 +17152,10 @@
         }
       ],
       "cost": {
-        "input": 10,
-        "output": 50,
-        "cache_read": 1,
-        "cache_write": 12.5
+        "input": 11,
+        "output": 55,
+        "cache_read": 1.1,
+        "cache_write": 13.75
       },
       "limit": {
         "context": 1000000,
@@ -16984,10 +17287,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 1,
-          "output_per_million": 5,
-          "cache_read_input_per_million": 0.1,
-          "cache_write_input_per_million": 1.25
+          "input_per_million": 1.1,
+          "output_per_million": 5.5,
+          "cache_read_input_per_million": 0.11,
+          "cache_write_input_per_million": 1.375
         }
       }
     },
@@ -17028,15 +17331,18 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
       ],
       "cost": {
-        "input": 1,
-        "output": 5,
-        "cache_read": 0.1,
-        "cache_write": 1.25
+        "input": 1.1,
+        "output": 5.5,
+        "cache_read": 0.11,
+        "cache_write": 1.375
       },
       "limit": {
         "context": 200000,
@@ -17117,6 +17423,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
@@ -17139,10 +17448,10 @@
     "name": "Claude Opus 4.5 (US)",
     "provider": "bedrock",
     "family": "claude-opus",
-    "created_at": "2025-11-24 00:00:00 UTC",
+    "created_at": "2025-11-01 00:00:00 UTC",
     "context_window": 200000,
     "max_output_tokens": 64000,
-    "knowledge_cutoff": "2025-03-31",
+    "knowledge_cutoff": null,
     "modalities": {
       "input": [
         "text",
@@ -17163,10 +17472,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -17201,11 +17510,14 @@
       "open_weights": false,
       "attachment": true,
       "temperature": true,
-      "last_updated": "2025-08-01",
+      "last_updated": "2025-11-01",
       "tool_call": true,
       "structured_output": true,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -17220,16 +17532,16 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 200000,
         "output": 64000
       },
-      "knowledge": "2025-03-31"
+      "knowledge": "2025-05"
     }
   },
   {
@@ -17261,10 +17573,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -17305,6 +17617,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -17319,10 +17634,10 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
@@ -17359,10 +17674,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -17402,6 +17717,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -17413,10 +17731,10 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
@@ -17453,10 +17771,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -17496,6 +17814,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -17507,10 +17828,10 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
@@ -17547,10 +17868,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 5,
-          "output_per_million": 25,
-          "cache_read_input_per_million": 0.5,
-          "cache_write_input_per_million": 6.25
+          "input_per_million": 5.5,
+          "output_per_million": 27.5,
+          "cache_read_input_per_million": 0.55,
+          "cache_write_input_per_million": 6.875
         }
       }
     },
@@ -17590,6 +17911,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -17601,10 +17925,10 @@
         }
       ],
       "cost": {
-        "input": 5,
-        "output": 25,
-        "cache_read": 0.5,
-        "cache_write": 6.25
+        "input": 5.5,
+        "output": 27.5,
+        "cache_read": 0.55,
+        "cache_write": 6.875
       },
       "limit": {
         "context": 1000000,
@@ -17615,28 +17939,39 @@
   },
   {
     "id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
-    "name": "Claude Sonnet 4",
+    "name": "Claude Sonnet 4 (US)",
     "provider": "bedrock",
-    "family": "Claude",
-    "created_at": null,
+    "family": "claude-sonnet",
+    "created_at": "2025-05-22 00:00:00 UTC",
     "context_window": 200000,
-    "max_output_tokens": 65536,
-    "knowledge_cutoff": null,
+    "max_output_tokens": 64000,
+    "knowledge_cutoff": "2025-03-31",
     "modalities": {
       "input": [
         "text",
-        "image"
+        "image",
+        "pdf"
       ],
       "output": [
         "text"
       ]
     },
     "capabilities": [
-      "streaming",
       "function_calling",
-      "reasoning"
+      "reasoning",
+      "vision",
+      "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3,
+          "output_per_million": 15,
+          "cache_read_input_per_million": 0.3,
+          "cache_write_input_per_million": 3.75
+        }
+      }
+    },
     "metadata": {
       "provider_name": "Anthropic",
       "model_arn": "arn:aws:bedrock:us-west-2::foundation-model/anthropic.claude-sonnet-4-20250514-v1:0",
@@ -17662,7 +17997,36 @@
           "webp"
         ],
         "userVideoTypesSupported": []
-      }
+      },
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2025-05-22",
+      "status": "deprecated",
+      "tool_call": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens",
+          "min": 1024
+        }
+      ],
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3,
+        "cache_write": 3.75
+      },
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "knowledge": "2025-03-31"
     }
   },
   {
@@ -17694,10 +18058,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 3,
-          "output_per_million": 15,
-          "cache_read_input_per_million": 0.3,
-          "cache_write_input_per_million": 3.75
+          "input_per_million": 3.3,
+          "output_per_million": 16.5,
+          "cache_read_input_per_million": 0.33,
+          "cache_write_input_per_million": 4.125
         }
       }
     },
@@ -17738,15 +18102,18 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "budget_tokens",
           "min": 1024
         }
       ],
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
+        "input": 3.3,
+        "output": 16.5,
+        "cache_read": 0.33,
+        "cache_write": 4.125
       },
       "limit": {
         "context": 200000,
@@ -17762,7 +18129,7 @@
     "family": "claude-sonnet",
     "created_at": "2026-02-17 00:00:00 UTC",
     "context_window": 1000000,
-    "max_output_tokens": 64000,
+    "max_output_tokens": 128000,
     "knowledge_cutoff": "2025-08-31",
     "modalities": {
       "input": [
@@ -17784,10 +18151,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 3,
-          "output_per_million": 15,
-          "cache_read_input_per_million": 0.3,
-          "cache_write_input_per_million": 3.75
+          "input_per_million": 3.3,
+          "output_per_million": 16.5,
+          "cache_read_input_per_million": 0.33,
+          "cache_write_input_per_million": 4.125
         }
       }
     },
@@ -17828,6 +18195,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "low",
@@ -17842,14 +18212,14 @@
         }
       ],
       "cost": {
-        "input": 3,
-        "output": 15,
-        "cache_read": 0.3,
-        "cache_write": 3.75
+        "input": 3.3,
+        "output": 16.5,
+        "cache_read": 0.33,
+        "cache_write": 4.125
       },
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "knowledge": "2025-08-31"
     }
@@ -17875,7 +18245,6 @@
     },
     "capabilities": [
       "function_calling",
-      "structured_output",
       "reasoning",
       "vision",
       "streaming"
@@ -17883,10 +18252,10 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 2,
-          "output_per_million": 10,
-          "cache_read_input_per_million": 0.2,
-          "cache_write_input_per_million": 2.5
+          "input_per_million": 2.2,
+          "output_per_million": 11,
+          "cache_read_input_per_million": 0.22,
+          "cache_write_input_per_million": 2.75
         }
       }
     },
@@ -17923,7 +18292,7 @@
       "temperature": false,
       "last_updated": "2026-06-30",
       "tool_call": true,
-      "structured_output": true,
+      "structured_output": false,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -17941,10 +18310,10 @@
         }
       ],
       "cost": {
-        "input": 2,
-        "output": 10,
-        "cache_read": 0.2,
-        "cache_write": 2.5
+        "input": 2.2,
+        "output": 11,
+        "cache_read": 0.22,
+        "cache_write": 2.75
       },
       "limit": {
         "context": 1000000,
@@ -18371,8 +18740,7 @@
     "modalities": {
       "input": [
         "text",
-        "image",
-        "pdf"
+        "image"
       ],
       "output": [
         "text"
@@ -18492,8 +18860,7 @@
     "modalities": {
       "input": [
         "text",
-        "image",
-        "pdf"
+        "image"
       ],
       "output": [
         "text"
@@ -18612,8 +18979,7 @@
     "modalities": {
       "input": [
         "text",
-        "image",
-        "pdf"
+        "image"
       ],
       "output": [
         "text"
@@ -18732,8 +19098,7 @@
     "modalities": {
       "input": [
         "text",
-        "image",
-        "pdf"
+        "image"
       ],
       "output": [
         "text"
@@ -21621,7 +21986,7 @@
         "es",
         "es-ES"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "agustina",
       "accent": "Peninsular",
       "age": "Adult",
@@ -21668,7 +22033,7 @@
         "es",
         "es-ES"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "alvaro",
       "accent": "Peninsular",
       "age": "Adult",
@@ -21849,7 +22214,7 @@
         "es",
         "es-AR"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "antonia",
       "accent": "Argentine",
       "age": "Adult",
@@ -21940,7 +22305,7 @@
         "es",
         "es-419"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "aquila",
       "accent": "Latin American",
       "age": "Adult",
@@ -22388,7 +22753,7 @@
         "es",
         "es-ES"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "carina",
       "accent": "Peninsular",
       "age": "Adult",
@@ -22435,7 +22800,7 @@
         "es",
         "es-CO"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "celeste",
       "accent": "Colombian",
       "age": "Young Adult",
@@ -22853,7 +23218,7 @@
         "es",
         "es-ES"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "diana",
       "accent": "Peninsular",
       "age": "Adult",
@@ -23177,7 +23542,7 @@
         "es",
         "es-MX"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "estrella",
       "accent": "Mexican",
       "age": "Mature",
@@ -23366,7 +23731,7 @@
         "es",
         "es-CO"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "gloria",
       "accent": "Colombian",
       "age": "Young Adult",
@@ -23864,7 +24229,7 @@
         "es",
         "es-MX"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "javier",
       "accent": "Latin American",
       "age": "Adult",
@@ -24286,7 +24651,7 @@
         "es",
         "es-MX"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "luciano",
       "accent": "Mexican",
       "age": "Adult",
@@ -24603,7 +24968,7 @@
         "es",
         "es-ES"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "nestor",
       "accent": "Peninsular",
       "age": "Adult",
@@ -24694,7 +25059,7 @@
         "es",
         "es-MX"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "olivia",
       "accent": "Mexican",
       "age": "Adult",
@@ -25195,7 +25560,7 @@
         "es",
         "es-419"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "selena",
       "accent": "Latin American",
       "age": "Young Adult",
@@ -25284,7 +25649,7 @@
         "es",
         "es-ES"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "silvia",
       "accent": "Peninsular",
       "age": "Adult",
@@ -25332,7 +25697,7 @@
         "es",
         "es-MX"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "sirio",
       "accent": "Mexican",
       "age": "Adult",
@@ -25516,7 +25881,7 @@
         "es",
         "es-MX"
       ],
-      "version": "2025-10-07.3",
+      "version": "2025-10-07.2",
       "voice": "valerio",
       "accent": "Mexican",
       "age": "Adult",
@@ -28880,7 +29245,7 @@
     ],
     "pricing": {},
     "metadata": {
-      "description": "The most expressive model. Supports 70+ languages. Requires more prompt engineering than our previous models."
+      "description": "Our highly expressive model. Supports 70+ languages. Requires more prompt engineering than our previous models."
     }
   },
   {
@@ -28905,7 +29270,7 @@
     ],
     "pricing": {},
     "metadata": {
-      "description": "The most expressive model, optimized for natural dialogue in conversational agents. Supports 70+ languages. Requires more prompt engineering than our previous models."
+      "description": "Our highly expressive model, optimized for natural dialogue in conversational agents. Supports 70+ languages. Requires more prompt engineering than our previous models."
     }
   },
   {
@@ -28960,7 +29325,7 @@
     "provider": "gemini",
     "family": null,
     "created_at": null,
-    "context_window": 131072,
+    "context_window": 1048576,
     "max_output_tokens": 65536,
     "knowledge_cutoff": null,
     "modalities": {
@@ -28972,6 +29337,30 @@
     "metadata": {
       "version": "0.1",
       "description": "Preview release of Antigravity Agent (05-2026)",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "antigravity-preview-09-2026",
+    "name": "Antigravity Agent Preview",
+    "provider": "gemini",
+    "family": null,
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "version": "0.1",
+      "description": "Preview release of Antigravity Agent (09-2026)",
       "supported_generation_methods": [
         "generateContent",
         "countTokens"
@@ -31299,6 +31688,58 @@
         "context": 1048576,
         "output": 65536
       }
+    }
+  },
+  {
+    "id": "gemini-3.8-live",
+    "name": "Gemini 3.8 Live",
+    "provider": "gemini",
+    "family": null,
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "realtime"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version": "3.1-flash-live-03-2026",
+      "description": "Gemini 3.8 Live",
+      "supported_generation_methods": [
+        "bidiGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-3.8-live-extended-thinking",
+    "name": "Gemini 3.8 Live Extended Thinking",
+    "provider": "gemini",
+    "family": null,
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "realtime"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version": "3.1-flash-live-03-2026",
+      "description": "Gemini 3.8 Live Extended Thinking",
+      "supported_generation_methods": [
+        "bidiGenerateContent"
+      ]
     }
   },
   {
@@ -35822,7 +36263,15 @@
       "function_calling",
       "reasoning"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.22,
+          "output_per_million": 0.66,
+          "cache_read_input_per_million": 0.007
+        }
+      }
+    },
     "metadata": {
       "source": "models.dev",
       "provider_id": "ollama-cloud",
@@ -35843,6 +36292,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 0.22,
+        "output": 0.66,
+        "cache_read": 0.007
+      },
       "limit": {
         "context": 1048576,
         "output": 1048576
@@ -35872,7 +36326,15 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.22,
+          "output_per_million": 0.66,
+          "cache_read_input_per_million": 0.007
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -35896,6 +36358,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 0.22,
+        "output": 0.66,
+        "cache_read": 0.007
+      },
       "limit": {
         "context": 1048576,
         "output": 1048576
@@ -35924,7 +36391,15 @@
       "function_calling",
       "reasoning"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.66,
+          "output_per_million": 1.98,
+          "cache_read_input_per_million": 0.022
+        }
+      }
+    },
     "metadata": {
       "source": "models.dev",
       "provider_id": "ollama-cloud",
@@ -35945,6 +36420,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 0.66,
+        "output": 1.98,
+        "cache_read": 0.022
+      },
       "limit": {
         "context": 1048576,
         "output": 1048576
@@ -35974,7 +36454,15 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.66,
+          "output_per_million": 1.98,
+          "cache_read_input_per_million": 0.022
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -35998,6 +36486,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 0.66,
+        "output": 1.98,
+        "cache_read": 0.022
+      },
       "limit": {
         "context": 1048576,
         "output": 1048576
@@ -36029,7 +36522,15 @@
       "vision",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.15,
+          "output_per_million": 0.6,
+          "cache_read_input_per_million": 0.003
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36057,6 +36558,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.003
+      },
       "limit": {
         "context": 1048576,
         "output": 384000
@@ -36088,7 +36594,15 @@
       "vision",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.14,
+          "output_per_million": 0.4,
+          "cache_read_input_per_million": 0.05
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36103,6 +36617,11 @@
           "type": "toggle"
         }
       ],
+      "cost": {
+        "input": 0.14,
+        "output": 0.4,
+        "cache_read": 0.05
+      },
       "limit": {
         "context": 262144,
         "output": 262144
@@ -36132,7 +36651,15 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 1,
+          "output_per_million": 3.2,
+          "cache_read_input_per_million": 0.2
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36150,6 +36677,11 @@
           "type": "toggle"
         }
       ],
+      "cost": {
+        "input": 1,
+        "output": 3.2,
+        "cache_read": 0.2
+      },
       "limit": {
         "context": 202752,
         "output": 131072
@@ -36179,7 +36711,15 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 1.4,
+          "output_per_million": 4.4,
+          "cache_read_input_per_million": 0.26
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36203,6 +36743,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
+      },
       "limit": {
         "context": 976000,
         "output": 131072
@@ -36232,7 +36777,15 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 1.4,
+          "output_per_million": 4.4,
+          "cache_read_input_per_million": 0.26
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36257,6 +36810,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.26
+      },
       "limit": {
         "context": 1048576,
         "output": 131072
@@ -36267,7 +36825,7 @@
     "id": "glm-5.3-flash",
     "name": "GLM-5.3-Flash",
     "provider": "ollama_cloud",
-    "family": "glm",
+    "family": "glm-flash",
     "created_at": "2026-08-26 00:00:00 UTC",
     "context_window": 1000000,
     "max_output_tokens": 131072,
@@ -36291,7 +36849,15 @@
       "video",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.15,
+          "output_per_million": 0.5,
+          "cache_read_input_per_million": 0.03
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36316,6 +36882,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 0.15,
+        "output": 0.5,
+        "cache_read": 0.03
+      },
       "limit": {
         "context": 1000000,
         "output": 131072
@@ -36344,7 +36915,15 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.15,
+          "output_per_million": 0.6,
+          "cache_read_input_per_million": 0.014
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36364,6 +36943,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.014
+      },
       "limit": {
         "context": 131072,
         "output": 32768
@@ -36392,7 +36976,15 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.07,
+          "output_per_million": 0.3,
+          "cache_read_input_per_million": 0.035
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36412,6 +37004,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 0.07,
+        "output": 0.3,
+        "cache_read": 0.035
+      },
       "limit": {
         "context": 131072,
         "output": 32768
@@ -36485,7 +37082,15 @@
       "vision",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.95,
+          "output_per_million": 4,
+          "cache_read_input_per_million": 0.16
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36500,6 +37105,11 @@
           "type": "toggle"
         }
       ],
+      "cost": {
+        "input": 0.95,
+        "output": 4,
+        "cache_read": 0.16
+      },
       "limit": {
         "context": 262144,
         "output": 262144
@@ -36531,7 +37141,15 @@
       "vision",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.95,
+          "output_per_million": 4,
+          "cache_read_input_per_million": 0.19
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36548,6 +37166,11 @@
           "type": "toggle"
         }
       ],
+      "cost": {
+        "input": 0.95,
+        "output": 4,
+        "cache_read": 0.19
+      },
       "limit": {
         "context": 262144,
         "output": 262144
@@ -36580,7 +37203,15 @@
       "vision",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3,
+          "output_per_million": 15,
+          "cache_read_input_per_million": 0.3
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36605,6 +37236,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 3,
+        "output": 15,
+        "cache_read": 0.3
+      },
       "limit": {
         "context": 1048576,
         "output": 131072
@@ -36671,7 +37307,15 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.3,
+          "output_per_million": 1.2,
+          "cache_read_input_per_million": 0.06
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36686,6 +37330,11 @@
           "type": "toggle"
         }
       ],
+      "cost": {
+        "input": 0.3,
+        "output": 1.2,
+        "cache_read": 0.06
+      },
       "limit": {
         "context": 196608,
         "output": 196608
@@ -36718,7 +37367,15 @@
       "video",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.6,
+          "output_per_million": 2.4,
+          "cache_read_input_per_million": 0.12
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36743,6 +37400,11 @@
           ]
         }
       ],
+      "cost": {
+        "input": 0.6,
+        "output": 2.4,
+        "cache_read": 0.12
+      },
       "limit": {
         "context": 512000,
         "output": 131072
@@ -36773,7 +37435,14 @@
       "vision",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.5,
+          "output_per_million": 1.5
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36783,6 +37452,10 @@
       "last_updated": "2026-01-19",
       "tool_call": true,
       "reasoning": false,
+      "cost": {
+        "input": 0.5,
+        "output": 1.5
+      },
       "limit": {
         "context": 262144,
         "output": 262144
@@ -36811,7 +37484,14 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.06,
+          "output_per_million": 0.24
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36827,6 +37507,10 @@
           "type": "toggle"
         }
       ],
+      "cost": {
+        "input": 0.06,
+        "output": 0.24
+      },
       "limit": {
         "context": 1048576,
         "output": 131072
@@ -36855,7 +37539,15 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.015,
+          "output_per_million": 0.6,
+          "cache_read_input_per_million": 0.015
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36871,6 +37563,11 @@
           "type": "toggle"
         }
       ],
+      "cost": {
+        "input": 0.015,
+        "output": 0.6,
+        "cache_read": 0.015
+      },
       "limit": {
         "context": 262144,
         "output": 65536
@@ -36899,7 +37596,15 @@
       "reasoning",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.1,
+          "output_per_million": 3,
+          "cache_read_input_per_million": 0.1
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36915,6 +37620,11 @@
           "type": "toggle"
         }
       ],
+      "cost": {
+        "input": 0.1,
+        "output": 3,
+        "cache_read": 0.1
+      },
       "limit": {
         "context": 262144,
         "output": 128000
@@ -36945,7 +37655,14 @@
       "vision",
       "streaming"
     ],
-    "pricing": {},
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.6,
+          "output_per_million": 3.6
+        }
+      }
+    },
     "metadata": {
       "owned_by": "ollama",
       "source": "models.dev",
@@ -36963,6 +37680,10 @@
           "type": "toggle"
         }
       ],
+      "cost": {
+        "input": 0.6,
+        "output": 3.6
+      },
       "limit": {
         "context": 262144,
         "output": 65536
@@ -45118,7 +45839,7 @@
       "top_provider": {
         "context_length": 200000,
         "max_completion_tokens": 32000,
-        "is_moderated": false
+        "is_moderated": true
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -46111,7 +46832,7 @@
   },
   {
     "id": "anthropic/claude-opus-5:batch",
-    "name": "Claude Opus 5 (batch)",
+    "name": "Anthropic: Claude Opus 5 (batch)",
     "provider": "openrouter",
     "family": "anthropic",
     "created_at": "2026-07-24 17:02:24 UTC",
@@ -46988,8 +47709,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -47017,19 +47737,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -47051,8 +47759,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -47080,19 +47787,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -47114,9 +47809,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output",
-      "predicted_outputs"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -47144,20 +47837,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -48587,8 +49267,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
-      "predicted_outputs",
       "speech_generation"
     ],
     "pricing": {
@@ -48617,20 +49295,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -49151,8 +49816,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {},
     "metadata": {
@@ -49174,18 +49838,7 @@
         "is_moderated": true
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -49207,8 +49860,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {},
     "metadata": {
@@ -49230,18 +49882,7 @@
         "is_moderated": true
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -49263,8 +49904,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {},
     "metadata": {
@@ -49286,18 +49926,7 @@
         "is_moderated": true
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -51561,7 +52190,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -51590,13 +52218,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "response_format",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -52306,136 +52928,6 @@
       "limit": {
         "context": 1048576,
         "output": 65536
-      },
-      "knowledge": "2025-01-31"
-    }
-  },
-  {
-    "id": "google/gemini-2.5-pro-preview-05-06",
-    "name": "Gemini 2.5 Pro Preview 05-06",
-    "provider": "openrouter",
-    "family": "gemini-pro",
-    "created_at": "2025-05-07 00:00:00 UTC",
-    "context_window": 1048576,
-    "max_output_tokens": 65535,
-    "knowledge_cutoff": "2025-01-31",
-    "modalities": {
-      "input": [
-        "text",
-        "image",
-        "pdf",
-        "audio",
-        "video"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "function_calling",
-      "structured_output",
-      "reasoning",
-      "vision",
-      "video",
-      "streaming",
-      "tool_choice"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 1.25,
-          "output_per_million": 10,
-          "cache_read_input_per_million": 0.125,
-          "cache_write_input_per_million": 0.375,
-          "reasoning_output_per_million": 10
-        },
-        "long_context": {
-          "input_per_million": 2.5,
-          "output_per_million": 15,
-          "cache_read_input_per_million": 0.25
-        },
-        "long_context_threshold": 200000
-      }
-    },
-    "metadata": {
-      "description": "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks. It employs “thinking” capabilities, enabling it to reason through responses with enhanced accuracy...",
-      "architecture": {
-        "modality": "text+image+file+audio+video->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file",
-          "audio",
-          "video"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Gemini",
-        "instruct_type": null
-      },
-      "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 65535,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "expiration_date": null,
-      "source": "models.dev",
-      "provider_id": "openrouter",
-      "open_weights": false,
-      "attachment": true,
-      "temperature": true,
-      "last_updated": "2025-05-07",
-      "tool_call": true,
-      "structured_output": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "budget_tokens",
-          "min": 128,
-          "max": 32768
-        }
-      ],
-      "cost": {
-        "input": 1.25,
-        "output": 10,
-        "reasoning": 10,
-        "cache_read": 0.125,
-        "cache_write": 0.375,
-        "tiers": [
-          {
-            "input": 2.5,
-            "output": 15,
-            "cache_read": 0.25,
-            "tier": {
-              "type": "context",
-              "size": 200000
-            }
-          }
-        ],
-        "context_over_200k": {
-          "input": 2.5,
-          "output": 15,
-          "cache_read": 0.25
-        }
-      },
-      "limit": {
-        "context": 1048576,
-        "output": 65535
       },
       "knowledge": "2025-01-31"
     }
@@ -53525,7 +54017,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "speech_generation"
     ],
     "pricing": {
@@ -53555,13 +54046,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "response_format",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -54874,8 +55359,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -54903,13 +55387,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "response_format",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -54935,8 +55413,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -54968,13 +55445,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "response_format",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -55000,8 +55471,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -55033,13 +55503,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "response_format",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -55705,82 +56169,6 @@
     }
   },
   {
-    "id": "google/gemma-4-31b-it:batch",
-    "name": "Google: Gemma 4 31B (batch)",
-    "provider": "openrouter",
-    "family": "google",
-    "created_at": "2026-04-02 16:48:06 UTC",
-    "context_window": 262144,
-    "max_output_tokens": 235929,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "image",
-        "text",
-        "video"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "streaming",
-      "function_calling",
-      "tool_choice",
-      "structured_output",
-      "predicted_outputs"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.39,
-          "output_per_million": 0.9700000000000001
-        }
-      }
-    },
-    "metadata": {
-      "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
-      "architecture": {
-        "modality": "text+image+video->text",
-        "input_modalities": [
-          "image",
-          "text",
-          "video"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Gemma",
-        "instruct_type": null
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 235929,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "response_format",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "expiration_date": null
-    }
-  },
-  {
     "id": "google/gemma-4-31b-it:free",
     "name": "Gemma 4 31B (free)",
     "provider": "openrouter",
@@ -56137,8 +56525,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
-      "predicted_outputs",
       "speech_generation"
     ],
     "pricing": {
@@ -56167,20 +56553,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -56726,7 +57099,6 @@
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
-        "response_format",
         "seed",
         "stop",
         "structured_outputs",
@@ -57336,8 +57708,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -57365,19 +57736,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -57399,8 +57758,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -57428,19 +57786,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -57462,8 +57808,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -57491,19 +57836,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -58020,18 +58353,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -58667,7 +58989,7 @@
     "family": "llama",
     "created_at": "2025-04-05 00:00:00 UTC",
     "context_window": 1048576,
-    "max_output_tokens": 115200,
+    "max_output_tokens": 16384,
     "knowledge_cutoff": "2024-08-31",
     "modalities": {
       "input": [
@@ -58689,8 +59011,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.2,
-          "output_per_million": 0.696
+          "input_per_million": 0.1875,
+          "output_per_million": 0.6525
         }
       }
     },
@@ -58710,7 +59032,7 @@
       },
       "top_provider": {
         "context_length": 128000,
-        "max_completion_tokens": 115200,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -58744,12 +59066,12 @@
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.2,
-        "output": 0.696
+        "input": 0.1875,
+        "output": 0.6525
       },
       "limit": {
         "context": 1048576,
-        "output": 115200
+        "output": 16384
       },
       "knowledge": "2024-08-31"
     }
@@ -58904,7 +59226,6 @@
         "min_p",
         "presence_penalty",
         "repetition_penalty",
-        "response_format",
         "seed",
         "stop",
         "temperature",
@@ -59755,13 +60076,7 @@
         "is_moderated": true
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "repetition_penalty",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -60068,12 +60383,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_completion_tokens",
-        "max_tokens",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -60124,12 +60434,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_completion_tokens",
-        "max_tokens",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -60180,12 +60485,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_completion_tokens",
-        "max_tokens",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -60236,12 +60536,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_completion_tokens",
-        "max_tokens",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -60512,7 +60807,7 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.55,
+          "input_per_million": 0.4,
           "output_per_million": 2.2
         }
       }
@@ -60567,7 +60862,7 @@
         }
       ],
       "cost": {
-        "input": 0.55,
+        "input": 0.4,
         "output": 2.2
       },
       "limit": {
@@ -61262,11 +61557,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -61317,11 +61608,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -61503,8 +61790,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -61532,17 +61818,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -61986,8 +62262,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -62015,17 +62290,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -63352,8 +63617,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.075,
-          "output_per_million": 0.2
+          "input_per_million": 0.09375,
+          "output_per_million": 0.25
         }
       }
     },
@@ -63372,7 +63637,7 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 128000,
+        "context_length": 256000,
         "max_completion_tokens": 16384,
         "is_moderated": false
       },
@@ -63407,8 +63672,8 @@
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.075,
-        "output": 0.2
+        "input": 0.09375,
+        "output": 0.25
       },
       "limit": {
         "context": 256000,
@@ -63525,7 +63790,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -63554,19 +63818,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -63589,7 +63841,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -63618,17 +63869,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -63651,7 +63892,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "speech_generation"
     ],
     "pricing": {
@@ -63680,17 +63920,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -63803,7 +64033,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -63832,19 +64061,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -64361,9 +64578,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.71,
-          "output_per_million": 3.5,
-          "cache_read_input_per_million": 0.15
+          "input_per_million": 0.7062,
+          "output_per_million": 3.21,
+          "cache_read_input_per_million": 0.18
         }
       }
     },
@@ -64421,9 +64638,9 @@
       "reasoning": true,
       "reasoning_options": [],
       "cost": {
-        "input": 0.71,
-        "output": 3.5,
-        "cache_read": 0.15
+        "input": 0.7062,
+        "output": 3.21,
+        "cache_read": 0.18
       },
       "limit": {
         "context": 262144,
@@ -65113,7 +65330,6 @@
         "min_p",
         "presence_penalty",
         "repetition_penalty",
-        "response_format",
         "seed",
         "stop",
         "structured_outputs",
@@ -65270,12 +65486,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -65321,12 +65532,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -65370,12 +65576,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -65582,7 +65783,7 @@
     "family": "nemotron",
     "created_at": "2026-03-11 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 16384,
+    "max_output_tokens": 235929,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -65603,8 +65804,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.085,
-          "output_per_million": 0.4
+          "input_per_million": 0.08,
+          "output_per_million": 0.45
         }
       }
     },
@@ -65623,7 +65824,7 @@
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 16384,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -65675,12 +65876,12 @@
         }
       ],
       "cost": {
-        "input": 0.085,
-        "output": 0.4
+        "input": 0.08,
+        "output": 0.45
       },
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 235929
       }
     }
   },
@@ -65790,7 +65991,7 @@
     "family": "nemotron",
     "created_at": "2026-06-04 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 182520,
+    "max_output_tokens": 32768,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -65811,9 +66012,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.6,
-          "output_per_million": 2.4,
-          "cache_read_input_per_million": 0.12
+          "input_per_million": 0.625,
+          "output_per_million": 3.125,
+          "cache_read_input_per_million": 0.1875
         }
       }
     },
@@ -65831,8 +66032,8 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 202800,
-        "max_completion_tokens": 182520,
+        "context_length": 256000,
+        "max_completion_tokens": 32768,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -65882,13 +66083,13 @@
         }
       ],
       "cost": {
-        "input": 0.6,
-        "output": 2.4,
-        "cache_read": 0.12
+        "input": 0.625,
+        "output": 3.125,
+        "cache_read": 0.1875
       },
       "limit": {
         "context": 262144,
-        "output": 182520
+        "output": 32768
       }
     }
   },
@@ -66007,7 +66208,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -66036,19 +66236,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -66113,7 +66301,6 @@
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
-        "response_format",
         "seed",
         "stop",
         "temperature",
@@ -66433,7 +66620,6 @@
     },
     "capabilities": [
       "streaming",
-      "predicted_outputs",
       "transcription"
     ],
     "pricing": {
@@ -66462,18 +66648,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -67067,93 +67242,6 @@
         "output": 4096
       },
       "knowledge": "2023-12"
-    }
-  },
-  {
-    "id": "openai/gpt-4-turbo-preview",
-    "name": "GPT-4 Turbo Preview",
-    "provider": "openrouter",
-    "family": "gpt",
-    "created_at": "2024-01-25 00:00:00 UTC",
-    "context_window": 128000,
-    "max_output_tokens": 4096,
-    "knowledge_cutoff": "2023-12-31",
-    "modalities": {
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "function_calling",
-      "structured_output",
-      "streaming",
-      "tool_choice"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 10,
-          "output_per_million": 30
-        }
-      }
-    },
-    "metadata": {
-      "description": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023. **Note:** heavily rate limited by OpenAI while...",
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "GPT",
-        "instruct_type": null
-      },
-      "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 4096,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_logprobs",
-        "top_p"
-      ],
-      "expiration_date": null,
-      "source": "models.dev",
-      "provider_id": "openrouter",
-      "open_weights": false,
-      "attachment": false,
-      "temperature": true,
-      "last_updated": "2024-01-25",
-      "tool_call": true,
-      "structured_output": true,
-      "reasoning": false,
-      "cost": {
-        "input": 10,
-        "output": 30
-      },
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "knowledge": "2023-12-31"
     }
   },
   {
@@ -68295,7 +68383,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -68325,20 +68412,7 @@
         "is_moderated": true
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -68437,7 +68511,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -68467,20 +68540,7 @@
         "is_moderated": true
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -74338,75 +74398,6 @@
     }
   },
   {
-    "id": "openai/gpt-oss-20b:batch",
-    "name": "OpenAI: gpt-oss-20b (batch)",
-    "provider": "openrouter",
-    "family": "openai",
-    "created_at": "2025-08-05 17:17:09 UTC",
-    "context_window": 131072,
-    "max_output_tokens": 117964,
-    "knowledge_cutoff": "2024-06-30",
-    "modalities": {
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "streaming",
-      "structured_output",
-      "predicted_outputs"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.049999999999999996,
-          "output_per_million": 0.19999999999999998
-        }
-      }
-    },
-    "metadata": {
-      "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "GPT",
-        "instruct_type": null
-      },
-      "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 117964,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "reasoning",
-        "reasoning_effort",
-        "repetition_penalty",
-        "response_format",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "expiration_date": null
-    }
-  },
-  {
     "id": "openai/gpt-oss-safeguard-20b",
     "name": "GPT OSS Safeguard 20B",
     "provider": "openrouter",
@@ -74521,7 +74512,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -74550,20 +74540,7 @@
         "is_moderated": true
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -75535,8 +75512,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -75564,21 +75540,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_completion_tokens",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -75600,8 +75562,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -75629,21 +75590,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_completion_tokens",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -75665,8 +75612,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -75694,20 +75640,7 @@
         "is_moderated": true
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -75730,7 +75663,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -75759,20 +75691,7 @@
         "is_moderated": true
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -75795,8 +75714,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
-      "predicted_outputs",
       "transcription"
     ],
     "pricing": {
@@ -75825,20 +75742,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -75861,7 +75765,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -75890,19 +75793,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -76495,15 +76386,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "temperature",
-        "top_k",
-        "top_p",
-        "web_search_options"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -76553,15 +76436,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "temperature",
-        "top_k",
-        "top_p",
-        "web_search_options"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -77594,7 +77469,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "speech_generation"
     ],
     "pricing": {
@@ -77623,14 +77497,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -77653,7 +77520,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "speech_generation"
     ],
     "pricing": {
@@ -77682,14 +77548,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -79017,7 +78876,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -79046,19 +78904,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -79081,7 +78927,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -79110,19 +78955,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -79145,7 +78978,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -79174,14 +79006,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -79714,8 +79539,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -79743,19 +79567,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -79777,9 +79589,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output",
-      "predicted_outputs"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -79807,22 +79617,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -80161,7 +79956,7 @@
     "family": "qwen",
     "created_at": "2025-09-01 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 235929,
+    "max_output_tokens": 32768,
     "knowledge_cutoff": "2025-09-30",
     "modalities": {
       "input": [
@@ -80200,8 +79995,8 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 235929,
+        "context_length": 131072,
+        "max_completion_tokens": 32768,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -80241,7 +80036,7 @@
       },
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 32768
       },
       "knowledge": "2025-04"
     }
@@ -80264,9 +80059,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output",
-      "predicted_outputs"
+      "streaming"
     ],
     "pricing": {},
     "metadata": {
@@ -80288,21 +80081,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_k",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -80504,7 +80283,7 @@
     "family": "qwen",
     "created_at": "2025-10-06 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 16384,
+    "max_output_tokens": 32768,
     "knowledge_cutoff": "2025-03-31",
     "modalities": {
       "input": [
@@ -80526,8 +80305,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.15,
-          "output_per_million": 0.6
+          "input_per_million": 0.13,
+          "output_per_million": 0.52
         }
       }
     },
@@ -80546,8 +80325,8 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 16384,
+        "context_length": 131072,
+        "max_completion_tokens": 32768,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -80581,12 +80360,12 @@
       "structured_output": true,
       "reasoning": false,
       "cost": {
-        "input": 0.15,
-        "output": 0.6
+        "input": 0.13,
+        "output": 0.52
       },
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 32768
       },
       "knowledge": "2025-03-31"
     }
@@ -81174,7 +80953,7 @@
     "family": "qwen",
     "created_at": "2026-02-23 00:00:00 UTC",
     "context_window": 262144,
-    "max_output_tokens": 16384,
+    "max_output_tokens": 65536,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -81199,9 +80978,8 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.3125,
-          "output_per_million": 1.25,
-          "cache_read_input_per_million": 0.15625
+          "input_per_million": 0.1625,
+          "output_per_million": 1.3
         }
       }
     },
@@ -81221,8 +80999,8 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 256000,
-        "max_completion_tokens": 16384,
+        "context_length": 262144,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -81263,13 +81041,12 @@
         }
       ],
       "cost": {
-        "input": 0.3125,
-        "output": 1.25,
-        "cache_read": 0.15625
+        "input": 0.1625,
+        "output": 1.3
       },
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 65536
       }
     }
   },
@@ -83157,8 +82934,7 @@
       "vision",
       "video",
       "streaming",
-      "tool_choice",
-      "predicted_outputs"
+      "tool_choice"
     ],
     "pricing": {
       "text_tokens": {
@@ -83194,13 +82970,10 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "logprobs",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
-        "repetition_penalty",
         "response_format",
         "seed",
         "stop",
@@ -85247,7 +85020,6 @@
         "min_p",
         "presence_penalty",
         "repetition_penalty",
-        "response_format",
         "seed",
         "stop",
         "structured_outputs",
@@ -85379,8 +85151,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -85408,19 +85179,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -85442,8 +85201,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -85471,19 +85229,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -85505,8 +85251,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -85534,19 +85279,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -85568,8 +85301,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -85597,19 +85329,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -85631,8 +85351,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -85660,19 +85379,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -85695,7 +85402,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "speech_generation"
     ],
     "pricing": {
@@ -85724,19 +85430,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -87148,8 +86842,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -87177,19 +86870,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -87211,8 +86892,7 @@
       ]
     },
     "capabilities": [
-      "streaming",
-      "structured_output"
+      "streaming"
     ],
     "pricing": {
       "text_tokens": {
@@ -87240,19 +86920,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -87323,7 +86991,6 @@
         "reasoning",
         "reasoning_effort",
         "repetition_penalty",
-        "response_format",
         "seed",
         "stop",
         "temperature",
@@ -87475,83 +87142,6 @@
         "context": 1048576,
         "output": 262144
       }
-    }
-  },
-  {
-    "id": "thinkingmachines/inkling-small:batch",
-    "name": "Thinking Machines: Inkling Small (batch)",
-    "provider": "openrouter",
-    "family": "thinkingmachines",
-    "created_at": "2026-07-30 20:25:17 UTC",
-    "context_window": 524288,
-    "max_output_tokens": 471859,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "streaming",
-      "function_calling",
-      "tool_choice",
-      "predicted_outputs"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.5,
-          "output_per_million": 1.2,
-          "cache_read_input_per_million": 0.09999999999999999
-        }
-      }
-    },
-    "metadata": {
-      "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-      "architecture": {
-        "modality": "text+image+audio->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "audio"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "top_provider": {
-        "context_length": 524288,
-        "max_completion_tokens": 471859,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "reasoning",
-        "reasoning_effort",
-        "repetition_penalty",
-        "stop",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_logprobs",
-        "top_p"
-      ],
-      "expiration_date": null
     }
   },
   {
@@ -89508,7 +89098,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "transcription"
     ],
     "pricing": {
@@ -89537,15 +89126,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "logprobs",
-        "max_tokens",
-        "response_format",
-        "seed",
-        "temperature",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -89568,7 +89149,6 @@
     },
     "capabilities": [
       "streaming",
-      "structured_output",
       "speech_generation"
     ],
     "pricing": {
@@ -89597,15 +89177,7 @@
         "is_moderated": false
       },
       "per_request_limits": null,
-      "supported_parameters": [
-        "logprobs",
-        "max_tokens",
-        "response_format",
-        "seed",
-        "temperature",
-        "top_logprobs",
-        "top_p"
-      ],
+      "supported_parameters": [],
       "expiration_date": null
     }
   },
@@ -90807,7 +90379,7 @@
     "family": "glm",
     "created_at": "2026-06-13 00:00:00 UTC",
     "context_window": 1048576,
-    "max_output_tokens": 131072,
+    "max_output_tokens": 128000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -90829,9 +90401,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.6832,
-          "output_per_million": 2.1472,
-          "cache_read_input_per_million": 0.12688
+          "input_per_million": 1.4,
+          "output_per_million": 4.4,
+          "cache_read_input_per_million": 0.14
         }
       }
     },
@@ -90850,7 +90422,7 @@
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 128000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -90903,13 +90475,13 @@
         }
       ],
       "cost": {
-        "input": 0.6832,
-        "output": 2.1472,
-        "cache_read": 0.12688
+        "input": 1.4,
+        "output": 4.4,
+        "cache_read": 0.14
       },
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 128000
       }
     }
   },
@@ -90986,6 +90558,101 @@
         "top_p"
       ],
       "expiration_date": null
+    }
+  },
+  {
+    "id": "z-ai/glm-5.2:free",
+    "name": "GLM 5.2 (free)",
+    "provider": "openrouter",
+    "family": "glm",
+    "created_at": "2026-06-13 00:00:00 UTC",
+    "context_window": 32768,
+    "max_output_tokens": 29491,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "reasoning",
+      "streaming"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0,
+          "output_per_million": 0
+        }
+      }
+    },
+    "metadata": {
+      "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 32768,
+        "max_completion_tokens": 29491,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": true,
+      "attachment": false,
+      "temperature": true,
+      "last_updated": "2026-06-13",
+      "tool_call": false,
+      "structured_output": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "limit": {
+        "context": 32768,
+        "output": 29491
+      }
     }
   },
   {
@@ -91100,7 +90767,7 @@
     "id": "z-ai/glm-5.3-flash",
     "name": "GLM-5.3-Flash",
     "provider": "openrouter",
-    "family": "glm",
+    "family": "glm-flash",
     "created_at": "2026-08-26 00:00:00 UTC",
     "context_window": 1310720,
     "max_output_tokens": 131072,
@@ -91128,9 +90795,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.15,
-          "output_per_million": 0.5,
-          "cache_read_input_per_million": 0.03
+          "input_per_million": 0.1,
+          "output_per_million": 0.3333,
+          "cache_read_input_per_million": 0.02
         }
       }
     },
@@ -91177,7 +90844,7 @@
         "top_logprobs",
         "top_p"
       ],
-      "expiration_date": "2098-12-31",
+      "expiration_date": null,
       "source": "models.dev",
       "provider_id": "openrouter",
       "open_weights": true,
@@ -91198,9 +90865,9 @@
         }
       ],
       "cost": {
-        "input": 0.15,
-        "output": 0.5,
-        "cache_read": 0.03
+        "input": 0.1,
+        "output": 0.3333,
+        "cache_read": 0.02
       },
       "limit": {
         "context": 1310720,
@@ -91878,13 +91545,234 @@
     }
   },
   {
+    "id": "~deepseek/deepseek-flash-latest",
+    "name": "DeepSeek Flash Latest",
+    "provider": "openrouter",
+    "family": "deepseek-flash",
+    "created_at": "2026-09-14 00:00:00 UTC",
+    "context_window": 1048576,
+    "max_output_tokens": 943718,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "streaming",
+      "tool_choice",
+      "predicted_outputs"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.15,
+          "output_per_million": 0.6,
+          "cache_read_input_per_million": 0.015
+        }
+      }
+    },
+    "metadata": {
+      "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-09-14",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.15,
+        "output": 0.6,
+        "cache_read": 0.015
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      }
+    }
+  },
+  {
+    "id": "~deepseek/deepseek-pro-latest",
+    "name": "DeepSeek Pro Latest",
+    "provider": "openrouter",
+    "family": "deepseek",
+    "created_at": "2026-09-14 00:00:00 UTC",
+    "context_window": 1048576,
+    "max_output_tokens": 943718,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "streaming",
+      "tool_choice",
+      "predicted_outputs"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.96,
+          "output_per_million": 2.88,
+          "cache_read_input_per_million": 0.088
+        }
+      }
+    },
+    "metadata": {
+      "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Router",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "expiration_date": null,
+      "source": "models.dev",
+      "provider_id": "openrouter",
+      "open_weights": false,
+      "attachment": false,
+      "temperature": true,
+      "last_updated": "2026-09-14",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.96,
+        "output": 2.88,
+        "cache_read": 0.088
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      }
+    }
+  },
+  {
     "id": "~deepseek/deepseek-v4-flash-latest",
     "name": "DeepSeek V4 Flash Latest",
     "provider": "openrouter",
     "family": "deepseek",
     "created_at": "2026-08-01 00:00:00 UTC",
     "context_window": 1310720,
-    "max_output_tokens": 131072,
+    "max_output_tokens": 393216,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -91906,9 +91794,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.0352,
-          "output_per_million": 0.1056,
-          "cache_read_input_per_million": 0.00112
+          "input_per_million": 0.04,
+          "output_per_million": 0.1,
+          "cache_read_input_per_million": 0.01
         }
       }
     },
@@ -91927,7 +91815,7 @@
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 131072,
+        "max_completion_tokens": 393216,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -91979,13 +91867,13 @@
         }
       ],
       "cost": {
-        "input": 0.0352,
-        "output": 0.1056,
-        "cache_read": 0.00112
+        "input": 0.04,
+        "output": 0.1,
+        "cache_read": 0.01
       },
       "limit": {
         "context": 1310720,
-        "output": 131072
+        "output": 393216
       }
     }
   },
@@ -92267,9 +92155,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 2.1,
-          "output_per_million": 10.95,
-          "cache_read_input_per_million": 0.23
+          "input_per_million": 2,
+          "output_per_million": 11.2,
+          "cache_read_input_per_million": 0.232
         }
       }
     },
@@ -92340,9 +92228,9 @@
         }
       ],
       "cost": {
-        "input": 2.1,
-        "output": 10.95,
-        "cache_read": 0.23
+        "input": 2,
+        "output": 11.2,
+        "cache_read": 0.232
       },
       "limit": {
         "context": 1048576,
@@ -93222,7 +93110,7 @@
     "family": "glm",
     "created_at": "2026-08-19 00:00:00 UTC",
     "context_window": 1310720,
-    "max_output_tokens": 943718,
+    "max_output_tokens": 235929,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -93244,9 +93132,9 @@
     "pricing": {
       "text_tokens": {
         "standard": {
-          "input_per_million": 0.92,
-          "output_per_million": 3.1372,
-          "cache_read_input_per_million": 0.184
+          "input_per_million": 0.8775,
+          "output_per_million": 2.97,
+          "cache_read_input_per_million": 0.1755
         }
       }
     },
@@ -93264,8 +93152,8 @@
         "instruct_type": null
       },
       "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 943718,
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -93313,13 +93201,13 @@
         }
       ],
       "cost": {
-        "input": 0.92,
-        "output": 3.1372,
-        "cache_read": 0.184
+        "input": 0.8775,
+        "output": 2.97,
+        "cache_read": 0.1755
       },
       "limit": {
         "context": 1310720,
-        "output": 943718
+        "output": 235929
       }
     }
   },
@@ -95359,31 +95247,6 @@
           "input_per_million": 0.25,
           "output_per_million": 2.5,
           "cache_read_input_per_million": 0.25
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "perplexity/nemotron-3.5-lightning-30b-a3b",
-    "name": "perplexity/nemotron-3.5-lightning-30b-a3b",
-    "provider": "perplexity",
-    "family": null,
-    "created_at": null,
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [],
-      "output": []
-    },
-    "capabilities": [],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.0115,
-          "output_per_million": 0.17,
-          "cache_read_input_per_million": 0.00115
         }
       }
     },

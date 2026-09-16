@@ -15,7 +15,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260914T094127Z
+      - 20260916T064923Z
       X-Amz-Content-Sha256:
       - 22614e7063da74342d608158f9c221f1c0069f4083edb9504bdcac3a38eee1d8
       Authorization:
@@ -33,7 +33,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:41:28 GMT
+      - Wed, 16 Sep 2026 06:49:24 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -41,11 +41,11 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - fc02a2e5-5d15-45f9-a268-9dee1876f749
+      - 91f4a236-4938-42fe-9ab6-230ceefc4a52
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":619},"output":{"message":{"content":[{"citationsContent":{"citations":[{"location":{"documentChar":{"documentIndex":0,"end":73,"start":0}},"sourceContent":[{"text":"The
+      string: '{"metrics":{"latencyMs":704},"output":{"message":{"content":[{"citationsContent":{"citations":[{"location":{"documentChar":{"documentIndex":0,"end":73,"start":0}},"sourceContent":[{"text":"The
         Ruby programming language was created by Yukihiro Matsumoto in 1993. "}],"title":"facts"}],"content":[{"text":"The
         Ruby programming language was created by Yukihiro Matsumoto in 1993."}]}}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":672,"outputTokens":39,"serverToolUsage":{},"totalTokens":711}}'
-  recorded_at: Mon, 14 Sep 2026 09:41:28 GMT
+  recorded_at: Wed, 16 Sep 2026 06:49:24 GMT
 recorded_with: VCR 6.4.0

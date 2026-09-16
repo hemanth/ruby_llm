@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:43:24 GMT
+      - Wed, 16 Sep 2026 06:52:25 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -52,13 +52,13 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '325.4'
+      - '241.0'
       X-Metrics-Mean-Itl-Ms:
       - '9.0'
       X-Metrics-E2e-Ms:
-      - '1825.3'
+      - '2306.7'
       Traceparent:
-      - 00-66ccaa3aad21a7c04c97bdec7738479d-98284b4a00003d3e-01
+      - 00-989b35243fd7a9c7767bc13b5ebcb382-93da147c0000c83b-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -71,11 +71,14 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1789379003,"completed_at":1789379004,"id":"86286246-1f27-9c4e-8838-aa54f9db0206","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_86286246-1f27-9c4e-8838-aa54f9db0206","summary":[{"text":"The
-        question is: \"Who is the creator of the programming language Ruby?\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"p0OnIDsj/1qDcI7SLHz9eaAZwMMDBh9rO453zUHU6FpQ9Nu0nyu4Aq5bFUUfVa310jRhx2K/SYkCpIPNCjEIvVGeCeXWM5uA32XWgAH4XEGuzp6QNoEEnGaE8IlKBW8KE829BAyyeNS0p+MahjyVtPDMfZ28NJ5jvFKPRpW0FKkrk9K0d4QhViz26Ppy368IocOG2ps+BGeQw+efvL7qOgPyFl9ThsZwjfz/ZhkmO/d6MkcHLOFHQYs73qzqeqGMOr8MJ6cW8Q8+jjS3nim9tsaQ+buKgUxwgompHj2ivyhz9x7iiVzNddr8/Avlzo5zlyY7/jq9DwJ4XVf5qIr/PEVbKOchWe43/ONo57goWrkwWfWuZIOpXh5kwwDe/+AOlTd2W+ghG9RA+9DSVS4T5cs3f0h02PfqyYsRgHQJp0jXxfY00V68nUgok3+PItdhtlSR1y7s3tEAZQng9dQXiX/0RioiAfNgxZq6VwWLTk6Rl+4K8GCuYo3qDj1AcqEe+5SKzY0c5/C8e7f114FEMU/2FNw8VcEATlPC+ORQqCXDAyh1ZOFnN4zlHisn5kbZX3TLq8YgHCoGFgMpgAdx2xCnWIGTRQXX9JJM/TT2xq5rd+LNjiDlbxUzGNkNG9EbuirwG4aVQkPc9M6c+l8XfwpuWNYv4XjtPZ3Aa3DhQ43d1zIFkVqdDhmudkVLPLDPFtn518iYLOrh0MHPTvvCnf4Q+zcPSscAl08BzpXaDJKTj+Ex0MLSeMaGTOPIgWqGTba24JTk1gYM"},{"content":[{"type":"output_text","text":"Yukihiro
-        Matsumoto (also known as \"Matz\"). He began developing Ruby in the mid-1990s,
-        with the first public release in 1995.","logprobs":[],"annotations":[]}],"id":"msg_86286246-1f27-9c4e-8838-aa54f9db0206","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":202,"input_tokens_details":{"cached_tokens":128},"output_tokens":151,"output_tokens_details":{"reasoning_tokens":117},"total_tokens":353,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":4956000,"context_details":{"input_tokens":202,"output_tokens":151}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Mon, 14 Sep 2026 09:43:24 GMT
+      string: '{"created_at":1789541543,"completed_at":1789541545,"id":"411d2d04-4b0f-90bb-b88b-d98ebc80e0f0","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_411d2d04-4b0f-90bb-b88b-d98ebc80e0f0","summary":[{"text":"The
+        question is: \"Who is the creator of the programming language Ruby?\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"6W+asl0eCFqVh3hkwhD1jRSu3VmbjIQqCOddXJNodjIAha8oPNySj54Ryde7x0xCsdHE/f5nqth7IgyVNMQ9nXnsCmXEpxEyzIPD4JYX2WV+t7hEB7YHG6rct6IrcX4aXyEXmmzfCtZdk6ugXlpYj3Zv+fWsSpmcIc9Ex4tlKA4XaAZlv98zbwkcDI8JhRz3zkZGmAYlQYxwRHPWvDldZhjwuvL+ULJVaufloawhJhgCVtOOU1qime55rzNDBXQW9tciOf+yNfYoMDETRTFtm9eXMDPzQNlm7R/q7QHfNIBaGYRuinGuqq9nsCP5sWnkhUIBlA3i8nrVU4AtGxe9clFCOLk6KfYH+H/jnyxy/7kQ2kIPkdg3pWW3/nEF2Qb3r+GCwqYnh1OlTNqqk6tiQyZMtQVG60tchEkUQZfe2vQXYmniyen2vwcRQy1C/srD2kHanHTRyfNWtXp4DnkbLM6X3F01qsHdoqdCjYDXw1Zo7K5zOJ64Qkdm4gplcy/TxguNUuiU5LYDpgZIiaI+a0vVGxyJOGu5F6Zj+SO+xeixxzusad5iIHtv/g/0DZP4up+RaqN2Ywdesp7IuJfY83ikAk6Wm0u+huLtwkh5hFi7YQFSij5MdPUpqhDno++5bkXag8V1Nn7a4C2IJ56nupbihEF/J2V5tZLDJQnsfPf534AqnOIXEGsjxiHLD7NWtGXR+nDRkXw8xkbC8hWmzLYQYROkAL3t2btC+0Z74cGuC2jb9fbskF6jG1OgCcspnw3fDKTjChumenKk/ilu4ZjFuc7PjGtnbqQxymD5Mg"},{"content":[{"type":"output_text","text":"**Yukihiro
+        Matsumoto** (also known as \"Matz\") is the creator of the Ruby programming
+        language. He began developing it in the mid-1990s in Japan, with the first
+        public release in 1995. Ruby was designed to be a dynamic, object-oriented
+        language that emphasizes programmer happiness and productivity, drawing inspiration
+        from languages like Perl, Smalltalk, Eiffel, Ada, and Lisp.","logprobs":[],"annotations":[]}],"id":"msg_411d2d04-4b0f-90bb-b88b-d98ebc80e0f0","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":202,"input_tokens_details":{"cached_tokens":128},"output_tokens":204,"output_tokens_details":{"reasoning_tokens":122},"total_tokens":406,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":6281000,"context_details":{"input_tokens":202,"output_tokens":204}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Wed, 16 Sep 2026 06:52:25 GMT
 - request:
     method: post
     uri: https://api.x.ai/v1/responses
@@ -83,9 +86,12 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"grok-4.3","input":[{"role":"user","content":"Who is the creator
         of the programming language Ruby?"},{"type":"reasoning","summary":[{"type":"summary_text","text":"The
-        question is: \"Who is the creator of the programming language Ruby?\"\n"}],"encrypted_content":"p0OnIDsj/1qDcI7SLHz9eaAZwMMDBh9rO453zUHU6FpQ9Nu0nyu4Aq5bFUUfVa310jRhx2K/SYkCpIPNCjEIvVGeCeXWM5uA32XWgAH4XEGuzp6QNoEEnGaE8IlKBW8KE829BAyyeNS0p+MahjyVtPDMfZ28NJ5jvFKPRpW0FKkrk9K0d4QhViz26Ppy368IocOG2ps+BGeQw+efvL7qOgPyFl9ThsZwjfz/ZhkmO/d6MkcHLOFHQYs73qzqeqGMOr8MJ6cW8Q8+jjS3nim9tsaQ+buKgUxwgompHj2ivyhz9x7iiVzNddr8/Avlzo5zlyY7/jq9DwJ4XVf5qIr/PEVbKOchWe43/ONo57goWrkwWfWuZIOpXh5kwwDe/+AOlTd2W+ghG9RA+9DSVS4T5cs3f0h02PfqyYsRgHQJp0jXxfY00V68nUgok3+PItdhtlSR1y7s3tEAZQng9dQXiX/0RioiAfNgxZq6VwWLTk6Rl+4K8GCuYo3qDj1AcqEe+5SKzY0c5/C8e7f114FEMU/2FNw8VcEATlPC+ORQqCXDAyh1ZOFnN4zlHisn5kbZX3TLq8YgHCoGFgMpgAdx2xCnWIGTRQXX9JJM/TT2xq5rd+LNjiDlbxUzGNkNG9EbuirwG4aVQkPc9M6c+l8XfwpuWNYv4XjtPZ3Aa3DhQ43d1zIFkVqdDhmudkVLPLDPFtn518iYLOrh0MHPTvvCnf4Q+zcPSscAl08BzpXaDJKTj+Ex0MLSeMaGTOPIgWqGTba24JTk1gYM"},{"role":"assistant","content":[{"type":"output_text","text":"Yukihiro
-        Matsumoto (also known as \"Matz\"). He began developing Ruby in the mid-1990s,
-        with the first public release in 1995."}]},{"role":"user","content":"What
+        question is: \"Who is the creator of the programming language Ruby?\"\n"}],"encrypted_content":"6W+asl0eCFqVh3hkwhD1jRSu3VmbjIQqCOddXJNodjIAha8oPNySj54Ryde7x0xCsdHE/f5nqth7IgyVNMQ9nXnsCmXEpxEyzIPD4JYX2WV+t7hEB7YHG6rct6IrcX4aXyEXmmzfCtZdk6ugXlpYj3Zv+fWsSpmcIc9Ex4tlKA4XaAZlv98zbwkcDI8JhRz3zkZGmAYlQYxwRHPWvDldZhjwuvL+ULJVaufloawhJhgCVtOOU1qime55rzNDBXQW9tciOf+yNfYoMDETRTFtm9eXMDPzQNlm7R/q7QHfNIBaGYRuinGuqq9nsCP5sWnkhUIBlA3i8nrVU4AtGxe9clFCOLk6KfYH+H/jnyxy/7kQ2kIPkdg3pWW3/nEF2Qb3r+GCwqYnh1OlTNqqk6tiQyZMtQVG60tchEkUQZfe2vQXYmniyen2vwcRQy1C/srD2kHanHTRyfNWtXp4DnkbLM6X3F01qsHdoqdCjYDXw1Zo7K5zOJ64Qkdm4gplcy/TxguNUuiU5LYDpgZIiaI+a0vVGxyJOGu5F6Zj+SO+xeixxzusad5iIHtv/g/0DZP4up+RaqN2Ywdesp7IuJfY83ikAk6Wm0u+huLtwkh5hFi7YQFSij5MdPUpqhDno++5bkXag8V1Nn7a4C2IJ56nupbihEF/J2V5tZLDJQnsfPf534AqnOIXEGsjxiHLD7NWtGXR+nDRkXw8xkbC8hWmzLYQYROkAL3t2btC+0Z74cGuC2jb9fbskF6jG1OgCcspnw3fDKTjChumenKk/ilu4ZjFuc7PjGtnbqQxymD5Mg"},{"role":"assistant","content":[{"type":"output_text","text":"**Yukihiro
+        Matsumoto** (also known as \"Matz\") is the creator of the Ruby programming
+        language. He began developing it in the mid-1990s in Japan, with the first
+        public release in 1995. Ruby was designed to be a dynamic, object-oriented
+        language that emphasizes programmer happiness and productivity, drawing inspiration
+        from languages like Perl, Smalltalk, Eiffel, Ada, and Lisp."}]},{"role":"user","content":"What
         year did he create Ruby?"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"]}'
     headers:
       User-Agent:
@@ -104,7 +110,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:43:29 GMT
+      - Wed, 16 Sep 2026 06:52:29 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -132,13 +138,13 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '293.3'
+      - '304.4'
       X-Metrics-Mean-Itl-Ms:
-      - '7.7'
+      - '7.8'
       X-Metrics-E2e-Ms:
-      - '4273.9'
+      - '3360.9'
       Traceparent:
-      - 00-e0f5ce7758ebb70fa614613ab810a5ab-f86c119c00029a14-01
+      - 00-ba0b3d8e12c0fb58faaa9cf633b69a4b-5a3f065e0000d3fb-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -151,10 +157,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1789379005,"completed_at":1789379008,"id":"2b7c656b-d311-93ad-aebc-1cb3568e1bd6","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_2b7c656b-d311-93ad-aebc-1cb3568e1bd6","summary":[{"text":"The
+      string: '{"created_at":1789541546,"completed_at":1789541549,"id":"df4549c7-86ac-9110-827f-efc2be6a8346","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_df4549c7-86ac-9110-827f-efc2be6a8346","summary":[{"text":"The
         user is asking: \"What year did he create Ruby?\" referring to Yukihiro Matsumoto
-        and the programming language Ruby.\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"cGA2qoqFLpM53vUG/fiz5T4Ng6BIO2edalHACuQVGCFlOWucPG9ssQ+oPJ6Xoo2ABS/rJkXUYQSehVQGpz3U70WT8CnsWi2WwxdHgG/iEz9DAkTxzZ4W5uskPbLo92eBdyMiBmusdOsnqsXPGR0DbVR5CcvnqVjt4lLp+qCUvKCu/h8QEMFWPN7wSSgXZsf7qHjTLz5cOoLIB5bwCYIeI0WxANitgWHXvhBsTcQHQh8kL6SNmYxfMkHG9p5bhqy+jVwquyHaatR5G62abnPeiPX1GI6FQkGrMNCEfJgf5GlaGMnhFW1DvYRyViEVmiq1gXvaFsu7iPK6dI3c/3MbQZjo39bEtYwZV1b6VMgF9ugaf27g6XwmvcH8q67ADEiGNE3t72OVtowZoLYo9MeFg9w7YEigxSF242Q1HCiaIOSNsV1pBk5GsKYFgCKhxZxSUSp9RPCQxDavsz92M5Y2wmiJHNJ2RwItWoKfpKuufetLwXKm9en8+qdDMsdoAuMX0Q31PjSUVhydqfooh3G7EA2kk+qRh5gq7jVfgoBGE/C8lPSfiVwrkhSrfIbDuUfR+0cziuNns+QXD+qF2Ykp51fVdUNA8EEvbuuEFgAeHqjLVQUJN8iGKOtJVfS6FN2taXBVPL2X3Rc96KolwTNqgVtCTrS8vn6SjVyH95hMrPLIAiIOuOq6UzqWd5yz+q2kh7xqolN6tr72SVX859zOdRMkS5Ldm+1YpiuXRztZFVuqXLuUJFD1NbXrbXk+Iup/qrGuMxqfk4Z4F2zFXLk5JaKbwUu1/7I2JDQ0+iLBApWye3zssWL1yqwyrjYE2pFdq+jDmMeDeqvkS59ilMvFsu7azrJHd9EvlSwPhNZFjGhiiMzsesbLbvOU7bLxm3epo5ptn8uPUO1fjBOpqUyrU66A1hYGQGlod8hxg7kCb8twKjJsuYj8VtNsHDJs1aN/ciTavYmn7g6l7wvw91janGitRi/Xnl0VgMygdKQjYcV1O6aOHCtz2eDtax+de1GaotqWl6WxWckqvWu19lJIWT4IfED9ooFVw1dRnsyjC7E5JR9MYqGAqIqDvqKNxzqEI7QwgpWkhzWCUDnXKi7PcoGMdpCcxEf1+uBzM6ZOvQaCOu272EsZkJQIVDTc9ZGQgY7ixnag3m4pzDC/EMsmDHTk86QkP9T7Icrg3uLqY50ZUmEK+M16whQn0zPdgFtN+DveqUuqyl94ot8t2WeT8JuS2myJCyf/eg0qwrS6woKtSycrFLOGS6gsfdstd6yFca9FlDLJ9LeNu1ajShBJcvvO1khHY2jFcVS+tysaqyh6Ql6ne/J2Qgw3Ar+w9tWvcQHMfmotyL2qHo9iwpOAYq5jc9u9J0IqlQr5ovLYow9S+R6QS9S4PF3gJm9R+VcDhVQINfu0AgULerO2BTrDbCNcADY2KKN4kESgx/HHqpFEO42gN7MVXu6tum6VYH4aCr494i0/Sbud94bVipOfWKasZ7z94BSAcpIRbKfAAJWHlTFOzxnsIXgMBLSlbQ8N1cmU/SZNemQlL/wU7HVQ9ZQwqAu/bLQhOxowWv+tCMxbdcEDIuhUAtoriuLccKmAy6m8fgwZILY1JuHKBsfJGjxMNzgO0EqEhbI5KPVwjGw6B6T8EvO0RkzQ7f9rUr7Ztbea8INbCEPIZQer1T1BeKmW80N/VjhO2nFqPImBMSsymXrM7f7bD1o9IZLhaNvm37ZgRsujPGb2Rr5lQ0L7rguZ7LWdcV2Y4xR6EyYQ8VqrTkPi9+DsyJuA4xPBw10e4B3PvlcLxFZvk0L1z5mq3BEYGmaG54M5Kgx3v2gnq4Pmrbyp47w"},{"content":[{"type":"output_text","text":"Yukihiro
-        Matsumoto began developing Ruby in 1993; the first public release (version
-        0.95) came out in December 1995.","logprobs":[],"annotations":[]}],"id":"msg_2b7c656b-d311-93ad-aebc-1cb3568e1bd6","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":371,"input_tokens_details":{"cached_tokens":128},"output_tokens":348,"output_tokens_details":{"reasoning_tokens":317},"total_tokens":719,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":11993500,"context_details":{"input_tokens":371,"output_tokens":348}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Mon, 14 Sep 2026 09:43:29 GMT
+        from the previous context.\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"3sxnfeC6dHnovYkqPW+ZSZs0aPeovKzNWvmv4D0P8E0LEz70yearlkKWZVeoK0dgZug1XJJ6kBSCSkWSFfSbhEKckmyC6Zpcs2F0eHV4E9yV2xgDSGylY7/XTsSoqe6EWW8sSYTIR8DqT+9RHvVTq5h6L6RJmajyf2ewmLTSJRel1bfgCVeM10eqandNhlxkB4OVTz9CNHHaGD/yCD98LJkItKWcjPyCsACwU5O5SkqfKckPq4Op15UfvG8i5R4jls+P8h60ZwuvvIDt2FvkBCfUyy/KP5OWK1sJ/rCNwOp26M/1TJH0W+KPNiSUm2m2rYWjftqSzCcRZQe5IMqxYRNeZ+nw7LInFaT9qa37/vXYOCBwvnLIe8ZHT3Anml0kOTuDfHJ8YRRmavN5hE0xHW4DRM1SeZAHwQpHwEI8DIrAFqu3qYbaL0mK9hdDtc9ew0gZhKvCvRkXm49P45FUBVT3Q8Ugwb1l3UCKcZcH8uXoNBATtmXw6GFX1LxQ0sUXYSCy4dW2l8/MzeU7EtH8X5YWmqWsJq10UtGfDjqnU/plqCf08G6VL0q0lSlmdrumT2G09F9ZX0f5+02jysi/p6pXTobsrq40fLbDwSjwvguFNctsg7YWyh7DCgWbDxrIt/EC9qkSaEW8ZJ8m1Wc31+LppE/n4o00MaCPSCwQf0pZAEEAaSOPpzWTrMkLfN+K8qZXx+J2EI/k2F7Bna/cA6nLqmHsLFlYxDoIJMewebhOCrjyY/wxEfbsTav7AeWZuiXDlgU+kOpl4D34ddnY7R0ieqTk9H7+Nlh5TZTuEksRdaJPZPsex0p5R+JTFmCpEhizKpdIWzeIDDWaCJNidJoRQRrVrIFEuXtaGqWUrtJt76etzP52i9wS4Uo8MPoT9ZzhRcIAFys3IdWUJ+esbSXjI8uVMUlOYlFSUdb5wT/eSR+jOKEBOPl1HzEszpZYXGWfelAyvMIKfagkb9YIucHKkS5sFMY0v2oJ5sBnJARACe8StqeYkm/26rGFK6MfKtZhy3CEzD2MfitBiT6CHASgkAuWsLbRJsbmAjExv41STrae1pPFJmAfQYbKSBA+AANAc//7Iga3PN2vU/pAAHSYrjj0zWzjhFzQS8JZVJi9HcR3TkPd/7AlamTorTvM2/25Jvxa7q/hIO4qpn452/xB4TCcNdhzlLYVTKmJV2KQVNDcgb38sQKTrAhqSMOBStc0Fyf6kTxlPuK3JDZVcjeWsSNp2caVNohhDnzzAAZHQ/Ia5zR6jVMCFrK2NzXjzaw6EpQSeAAEWV5sf1F2KGCxssS9vJwqzLDMSR+XIww3FzyvJOEmKQNDwlQlXe8TfVABSyj2o9TTmU2L8W9JI0CxJRuWjbkduFGCllnEt/3G/pusxuS1pgvL+XvUuK2wn1ApnAYVk55fbsvuz5ukR/6+uYxvw4cKBdzLNqmam9Mk3bjUNEYYqd5y0wr7W3KzdJVXeBZUMngdyjQEB9W+ipWT/1/V+1ECuT76cBJ0SylxXyuWtL134MNGetDpsolmPKo6iu4DY84BgUz/Nh6h+M/1x5YMEvH4VqfhG9S7kPI2/Lk0SoQmg5+w/bciCHHYlJchZz2cWNbroAz5CII3ZiYZgFNIgVCZCwvn2/5LBusbePH4sAGU5zxzBe3x6vx22DywIlaLantsLew8OViiCqyKNwJxFfswOPo0+BSqboKo8/VHzYrHHHprW+ZmWvDKnMWEAAJ4KXBo/6M90J417kkJ3BCe382zwYkCCPA+eRMSF7xr"},{"content":[{"type":"output_text","text":"**1993**\n\nYukihiro
+        Matsumoto began developing Ruby in 1993 (he has cited February of that year
+        as when he started). The first public release (version 0.95) came out on December
+        21, 1995.","logprobs":[],"annotations":[]}],"id":"msg_df4549c7-86ac-9110-827f-efc2be6a8346","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":424,"input_tokens_details":{"cached_tokens":128},"output_tokens":364,"output_tokens_details":{"reasoning_tokens":314},"total_tokens":788,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":13056000,"context_details":{"input_tokens":424,"output_tokens":364}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Wed, 16 Sep 2026 06:52:29 GMT
 recorded_with: VCR 6.4.0

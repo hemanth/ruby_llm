@@ -27,21 +27,21 @@ http_interactions:
       message: OK
     headers:
       X-Envoy-Upstream-Service-Time:
-      - '1581'
+      - '1367'
       Date:
-      - Mon, 14 Sep 2026 11:09:13 GMT
+      - Wed, 16 Sep 2026 07:09:16 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
       - ''
-      Req-Cost-Time:
-      - '1586'
-      Resp-Start-Time:
-      - '1789384155367'
       Content-Type:
       - application/json; charset=utf-8
+      Req-Cost-Time:
+      - '1370'
+      Resp-Start-Time:
+      - '1789542557909'
       Req-Arrive-Time:
-      - '1789384153781'
+      - '1789542556538'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -49,16 +49,15 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"choices":[{"finish_reason":"tool_calls","index":0,"message":{"role":"assistant","content":"","reasoning_content":"Okay,
-        let''s see. The user wants me to call the any_of_params function for a task
-        called \"Review PR\" with status \"pending\". First, I need to check the function''s
-        parameters. The function requires \"task\" and \"status\". The task is given
-        as \"Review PR\", and the status is \"pending\". The status parameter has
-        an anyOf definition that allows a string enum of \"pending\" or \"done\",
-        or null. Since the user provided \"pending\", which is valid, I can use that.
-        I need to make sure the JSON structure is correct, including both required
-        parameters. No additional properties are allowed, so I shouldn''t add anything
-        else. Let me structure the tool call with the name \"any_of_params\" and the
-        arguments as specified.\n","tool_calls":[{"type":"function","function":{"name":"any_of_params","arguments":"{\"task\":
-        \"Review PR\", \"status\": \"pending\"}"},"id":"BzLrhyt6rGPpKjPLp2su7xmJH5QiXNH9"}]}}],"created":1789384155,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":189,"prompt_tokens":223,"total_tokens":412,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-YvXjQ3ncnFPFQVEKm4ClM6ls2G8uzNjJ","timings":{"cache_n":51,"prompt_n":172,"prompt_ms":42.909,"prompt_per_token_ms":0.24947093023255815,"prompt_per_second":4008.483068820061,"predicted_n":189,"predicted_ms":1500.877,"predicted_per_token_ms":7.98338829787234,"predicted_per_second":125.26009792941062}}'
-  recorded_at: Mon, 14 Sep 2026 11:09:15 GMT
+        the user wants me to call the any_of_params function for a task called \"Review
+        PR\" with status \"pending\". Let me check the function''s parameters. The
+        function requires \"task\" and \"status\". The status can be either \"pending\",
+        \"done\", or null. Since the user specified \"pending\", which is valid, I
+        need to structure the JSON arguments correctly. The task is \"Review PR\",
+        and status is \"pending\". So the tool call should include both parameters.
+        I should make sure there are no extra properties and that the JSON is properly
+        formatted. Let me double-check the required fields. Both task and status are
+        required. Alright, that''s all.\n","tool_calls":[{"type":"function","function":{"name":"any_of_params","arguments":"{\"task\":
+        \"Review PR\", \"status\": \"pending\"}"},"id":"FGg6KGLFB47P24xsePlDStrsgXTA2vz1"}]}}],"created":1789542557,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":170,"prompt_tokens":223,"total_tokens":393,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-T2cWJYeoxb7pMyjK7Z6HG5Tq5eGmOkYG","timings":{"cache_n":51,"prompt_n":172,"prompt_ms":41.66,"prompt_per_token_ms":0.24220930232558138,"prompt_per_second":4128.660585693711,"predicted_n":170,"predicted_ms":1308.75,"predicted_per_token_ms":7.744082840236686,"predicted_per_second":129.1308500477555}}'
+  recorded_at: Wed, 16 Sep 2026 07:09:17 GMT
 recorded_with: VCR 6.4.0

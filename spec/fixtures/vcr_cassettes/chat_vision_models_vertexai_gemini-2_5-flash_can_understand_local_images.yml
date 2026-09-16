@@ -20,14 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Date:
+      - Wed, 16 Sep 2026 06:51:37 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
-      Pragma:
-      - no-cache
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
-      Date:
-      - Mon, 14 Sep 2026 09:42:27 GMT
+      Pragma:
+      - no-cache
       Content-Type:
       - application/json; charset=utf-8
       Vary:
@@ -52,11 +52,11 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/cloud-platform openid",
+          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Mon, 14 Sep 2026 09:42:27 GMT
+  recorded_at: Wed, 16 Sep 2026 06:51:37 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -87,7 +87,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 09:42:37 GMT
+      - Wed, 16 Sep 2026 06:51:46 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -110,18 +110,18 @@ http_interactions:
                 "role": "model",
                 "parts": [
                   {
-                    "text": "I see an image of a stylized **red gemstone**, which is widely recognized as the **logo for the Ruby programming language**.\n\nHere are some details:\n*   **Shape:** It's an oval or oblong-shaped gem with multiple facets, giving it a cut and polished look.\n*   **Color:** It's a rich, deep red, reminiscent of a ruby.\n*   **Shine/Highlights:** There are prominent white and lighter red highlights, especially along the top-left edge and on various facets, making it appear shiny, reflective, and almost glowing. This suggests a light source illuminating it.\n*   **Facets:** The geometric facets are clearly visible, particularly in the lower right portion, creating distinct planes and depth."
+                    "text": "I see a stylized image of a **red gemstone**, specifically a **ruby**.\n\nKey features:\n*   **Color:** It's a deep, rich red.\n*   **Shape:** It has the typical faceted cut of a polished gem, with various flat surfaces reflecting light. Its overall shape is somewhat rounded, almost like an elongated oval or a rounded rectangle with a curved top.\n*   **Highlights:** There are bright white and lighter red highlights on its edges and facets, giving it a shiny, reflective, and three-dimensional appearance.\n\nThis image is widely recognized as the **logo for the Ruby programming language**."
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -1.4210330101751512
+              "avgLogprobs": -1.7866868603137112
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 266,
-            "candidatesTokenCount": 155,
-            "totalTokenCount": 1134,
+            "candidatesTokenCount": 129,
+            "totalTokenCount": 1117,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -136,14 +136,14 @@ http_interactions:
             "candidatesTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 155
+                "tokenCount": 129
               }
             ],
-            "thoughtsTokenCount": 713
+            "thoughtsTokenCount": 722
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-09-14T09:42:28.039026Z",
-          "responseId": "hMGnavKwAv2n8uMPsp-B0AY"
+          "createTime": "2026-09-16T06:51:37.554600Z",
+          "responseId": "eTyqaujsIbrkmNAP887dmQg"
         }
-  recorded_at: Mon, 14 Sep 2026 09:42:37 GMT
+  recorded_at: Wed, 16 Sep 2026 06:51:46 GMT
 recorded_with: VCR 6.4.0

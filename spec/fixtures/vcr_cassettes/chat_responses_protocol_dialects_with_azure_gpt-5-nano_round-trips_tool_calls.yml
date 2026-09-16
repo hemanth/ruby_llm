@@ -27,11 +27,11 @@ http_interactions:
       message: OK
     headers:
       Content-Length:
-      - '6652'
+      - '6203'
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 09:48:23 GMT
+      - Wed, 16 Sep 2026 06:50:02 GMT
       Server:
       - istio-envoy
       X-Ms-Aoai-Configured-Data-Retention-Days:
@@ -69,11 +69,9 @@ http_interactions:
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Apim-Request-Id:
-      - 28a17bac-f715-4575-b032-adb25a6268c9
+      - 9cfa0192-1667-4fc5-be45-d3921670c505
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
-      Traceparent:
-      - 00-28a17bacf7154575b032adb25a6268c9-05315fa7bc4efc43-01
       X-Content-Type-Options:
       - nosniff
       X-Ms-Region:
@@ -82,12 +80,12 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "id": "resp_061b58ca64ce7f5c016aa7c2e7d334819089bc6002a68657c7",
+          "id": "resp_023979fa6e094fc4016aaa3c1aa1608196acdd74a1d105a174",
           "object": "response",
-          "created_at": 1789379303,
+          "created_at": 1789541402,
           "status": "completed",
           "background": false,
-          "completed_at": 1789379306,
+          "completed_at": 1789541404,
           "content_filters": [
             {
               "blocked": false,
@@ -126,11 +124,11 @@ http_interactions:
               "source_type": "completion",
               "content_filter_raw": [],
               "content_filter_results": {
-                "protected_material_code": {
+                "protected_material_text": {
                   "detected": false,
                   "filtered": false
                 },
-                "protected_material_text": {
+                "protected_material_code": {
                   "detected": false,
                   "filtered": false
                 },
@@ -153,7 +151,7 @@ http_interactions:
               },
               "content_filter_offsets": {
                 "start_offset": 0,
-                "end_offset": 903,
+                "end_offset": 582,
                 "check_offset": 0
               }
             }
@@ -168,18 +166,18 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "rs_061b58ca64ce7f5c016aa7c2e87d688190b5b9451d33243a7d",
+              "id": "rs_023979fa6e094fc4016aaa3c1b5cc8819686650f5b669b94ba",
               "type": "reasoning",
               "content": [],
-              "encrypted_content": "gAAAAABqp8LqwNSO3n45kf3XPydFGuIDoX7Z-FH8QuWaeYQQS4ruc1rqPsIuwZu4Df9i6tEcfM80fzQ4SHicBbWBUd0_ox7MhJ-nIiX2NKR-IJlHeokXfEb1zWiaatlYtZZrDiiLvxpX1i1oCOD77GqjdzEj6X0cyEoPOObL-1BVViGAXAy0rCBSQQEVFVAIQTxW32wism68J4PjcMK1EHKJSQTGee1DJNyczw1X-f6HirEx7LG1GWjELnS8FTt-fXTlXNhN4PkiTFunmvrSOw_XpB3VNE1V_GvWJuSd-ELM-lG9dhV1frrBz93LX1nBuhnqF4Nyn7tHYfcsACmV-addWgzBFdGxUwmHAsPXWE3NSlrs4wFVricVaSDxcKNRSmx-Ee6eDUFZRy--7Rm7s6tmY4D8MY04Wk-Q1watQn_9y1s6gfLC4J6fKQpSttIHCVhOXtFXHadrrU8-nfDjP2gaxCCPg8UYVL0d2Z6hdfCuAIXKDx5rSjU3Npje1idKz6PMqgiGplIF3s-YxzlRCsodmyg_iCtgPeJPGEQeVzvpV-kWK0jZt2nUVpeCcrdpgN8SYcf1z-xrg9YUoBu44vKcYeBL_vWCfK55GVsZM2o0-_giSWa3KcAKg2Z7g-7SMSpUgdDrW0YcheIj6Nu1CfOthGV--BrTqanJYlMEKyvz5gRyBtpCweO7XjWLjNjLG77QslK7KwpZRIPwSNsY3HAa887_fhjEfEkSuh-oZpdpLtcY-vHmdwGd7l28fTZtdc4yfpH0n8bpvwQCk0D-87RXDAMGRQOhuYjimWbaUwAU4Y9orbVLuG3mKxD3Ze8bI2Fd8wrV62iRu4582Thle_QkwMFOlxOfAgrrAAYCOZgCOf9DssYRbDRiRTSjOTXFQ_CS4wD17tAJXVfka2DMHqs7fuZsrLw26mxFB1AVryVbSf_mD0A2P9bmnLkuqImcKfnY_3ZAHeeXmMVx50TB2guXTYxkB99r8aiqXvmyY_JKpV-KOlXuo_8zMpQFoSIDlxexMx-dXnHy7ZiTd1tjHVoWck-i82-3tnEz7rS9yMx-_1mdZ1kR0m9KJde1GYbzNY8kccztaCePf3sMED8xGKWQrGX2KWhvMbpzeDmBZfmijC7pds7_d8yOu2atnsf8eQUEXIdCZzT_0FB9z1xJl0UMezso0EKNGSBzuLIeVB_FKkBqxDZfSLLeNi2HNBX9HboWd_8_K514QDeZXHrzBCe5tLxcLdCMgcGyFLfXS4kpwjidhXYwtq6FvmQFgdFdEEsBabcJLptveSrAQ7GZFWhDfCdRpODfHFbipmFDVe4vPi_Y1bfifXfwItIWIJ2RoHH6E8ctu6XR6y5i1MsPc4aPQgrzuAhknlvgk6mQ4Kkl3FD_FUch52oLuy_iR92Vf6I567qAC_HUHhleHBGZS2JlNQ80PB2IPOtrFPk7oQISni-g1eAAw2cU_P2vimj0TNBsE7GC2P7AGW3fZbSdJ6hvdNT8TdyT_EHFHbJ_ItZcMbMblby-79aiCSbVZOUb581jCKA5IikIVVAvxINw0zKpp9Jh0abXvEqSNLNv42acCzClD3QtEsYAQp52VhNeHD_xwyob9FKY_OyiRjG-AQ1B8Jqb2UuFW1mNkB_moW816mKZEbNkWCgqCgVvtMpkLa219CSSJOIIy6pgwNFGS_jCMO6lEPDE1AKWeD2wVD-pdpB-J-3FjdLgEAp0hZjKeulTRZc_1DWZi4xSoxnn9KD4O6fHfNuY8TnPFi1hPgl1xPjVGG-EQfOw71hkEZ5GGNZ2pyRsG2mtpvaK2h3_fEtDGvp2pjsL5323g3ORS1vO94HNnCMDlj7KkioWa_PCBpw0VjrogQ_bB4fhohhi-ijsyvFK0qOavbOcrf4RC7-_NRIR4UzaLOKJ6oNKe5q2fYrW3OOcBGEHTxv05qjI5RW4ivIv78DXpX7KBOMD-KDwLq6pq2UFkqfUoniEStmiD1u_G_nVJN2kdwJtMJiee5igWYFC6gfTg4GBIh7kWbSJqoWJ5MM0AozsnGpdMd3o1pcH4d03fXdex_kuum3yRsOV-75SV4V8tiVIKP9HOG2H7LJyWHqx6c43ALy4Fx-lpWbsSoOjOza8JYJzRLhKmuWnL_aFOHcuV-KhIx3xH8QUqF2JvYsk2XKZB3WNvR7cAIwOE-GS3S-AXHlzIIgFk5TKH0q4TgqrbrFM-7I2u9HBUzTGBcGmIXDCBeSOFvY4cC8T1kwW4xgjQqbNJSYHbkHEqV0QTKbPKABsSZFtJR9rlYCTZNA3biyBPmtjFfZb51kOtLpb_R9N",
+              "encrypted_content": "gAAAAABqqjwcXIhYxmMvc7TYt2qvwKunJ5ToEy7C2uHk0a96W3mlJcWHogUuAphT3o5jFN9qsBxNbUkP3Rn4g1wdKzMZjKLHjtqrcNAcJS_nHKsB01rcysZd2fycqC2CjBIQ3eX6wHRhDgY_ou2-A_4sIuSphlHoAMhJrR9Gk1T5S6i5WsRPh-3h7t3bDbc-Fxqj1M6ZLAZN9Gixin90liCWfhF4eEMPN9XTxCk2Y09-Mj9-EOIt4XxUTitsOwtsUq0LdrP5T51bgB1OxrC6nPVUblwrLnK0gYbPP4llhPvq30zqqOAzgbICU8fgATRqkRCb1hfhW0U1BL2v-wL7ISOewz_UC2Fa2o_QuOi_u3AQZr2lxxsH2zE3UTU7XViyJU0kwsl7k6RlbAK4knd9wupSOxDCh1p6jcTjUHGwEgOyUL32Cta3_FbXU6JyuSYMZa3LZnXt5eBrxvbU1ZZbw0kDRzGCK2zOxEArEa8gugHvnPUez371TcQ1yxq4FtdFqVRC3RKR6eEOkziYLQV9GLORg5uVyZieLTAMp81FUnnRqt7h_dIh5_bJ4_i6_WUrPS7uG30BQuIJKJtGsCTz4mjpORDNoYaWoBJShh14bC81-pCB2KfrmkihhQ6JuXAiYKAdc3P4boWHVUzWN4BV1F3ufwBdPMrSsvHa15cX-gWlEOevR4-Y1Kjw3ohuUgskKbdgYfxJzXQ28_GSD4jVQd-OMqVliavg1wJ2yxi4lAO3IZpl7TlhICcPjhYtLWnIDkL8AIF_ZTjHKHG2rqhPwI4KSDHL5T_hdmY4zdor_29dSHPt4m9klFtpOkSOt5UzQNEOoK8NaLKpdy8fkaPdAeP0xg8pECJRWSVktOEEpPTHqTwdFYf7bNcHy2_FOouayuxjy314suD6OHqJ_rFUZjVI7T5S3cAk9-15mbOiD9NDSqDpxsJ9G_0yxYzjXtO-apE3AmFEx7YPuXsm1ZiCLVdg2UwIkz9EVK93fYhAYtKkOPkrMzKGtDkIvaSJ_DuvYnuP5OS2C6bbsCDKEUoKuZeSKVrZLj7PYZOZ7cmEg5BLw7pmuWa-dRgi9iUDh6DXSy7IiEsFyzGJZ6jvhxGmPltqlvkompDzQZX67dKGwNk8QwAyD1Q7nxBJMC4fV48XHEWP3yMtKHhJdrtSWbYcS5f0vocpvH5SoD03GkjteytQppXZSecnDEtRCewy59EYBjtFsohSBNJdeOAZpsGxMoPp7PW4armovzqu8nKgmkgRGaSe6-ufoBQgAqxG5JjTGg5H0_7FSNpqY670DdGbcUdC8_SQ4tefk_hhUzNXLJYjNf-fNeTUiywKk1su8uKhfHZ5nGH3sh03QFYibKub7-3kGSrnuYw6KZ7ja9auR-gaaZ6oBVtDrbH8bVLXtefpLzbhnB1jB1J3z3z_Guy1A-70S5jmQa1Xa7sdUzmtWbBPUJ0xi905JwYDMvP5tT9EQGHDD4GhkXockOS1ddOCL9E9b0IOHB2ev76wyhuPVLaFw0WzQWU1NErRm2USLXVB74BdxUoUvJd9PbBbQuHaW4ScRCMmqjQ8xv4mgyV8QUwRweRT0R769Jr7PGTHlx7A56JTprpNAYQ51DwP0mlvD2sHLUhutt6zklsQWuJ-rGRwbg2Q5YF2dw4yLApadKfnJkHmGf4lEkoqNChvXdGAlR3DqKvZsoNuLvnm2PSul0P7c8kEYl5nWI2E9PolhgLNi9oRQtc9ZtlMXAXpP9ldpi4uu2RO4k8rT6J8NhST30EjG9rS5W2kr430Xgh0hDYoRx66nGySRkMjFAQ_eScXC8QtoLdb7VyeYGsgLCmdPV3kpCysddNcszDvZ5V4jABkzC2BPGNy5UMm",
               "summary": []
             },
             {
-              "id": "fc_061b58ca64ce7f5c016aa7c2e9da4c8190ab7b60d32196a1f2",
+              "id": "fc_023979fa6e094fc4016aaa3c1c3b9481969f8695b67946b651",
               "type": "function_call",
               "status": "completed",
               "arguments": "{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}",
-              "call_id": "call_OMD72KTf0iww81fATqCBqezT",
+              "call_id": "call_9vzoFG9i6zf3kUZ5eZtVBmVg",
               "name": "weather"
             }
           ],
@@ -260,23 +258,23 @@ http_interactions:
               "cache_write_tokens": 0,
               "cached_tokens": 0
             },
-            "output_tokens": 219,
+            "output_tokens": 154,
             "output_tokens_details": {
-              "reasoning_tokens": 128
+              "reasoning_tokens": 64
             },
-            "total_tokens": 304
+            "total_tokens": 239
           },
           "user": null,
           "metadata": {}
         }
-  recorded_at: Mon, 14 Sep 2026 09:48:26 GMT
+  recorded_at: Wed, 16 Sep 2026 06:50:04 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/openai/v1/responses
     body:
       encoding: UTF-8
       string: '{"model":"gpt-5-nano","input":[{"role":"user","content":"What''s the
-        weather at 52.5200, 13.4050?"},{"type":"reasoning","summary":[],"encrypted_content":"gAAAAABqp8LqwNSO3n45kf3XPydFGuIDoX7Z-FH8QuWaeYQQS4ruc1rqPsIuwZu4Df9i6tEcfM80fzQ4SHicBbWBUd0_ox7MhJ-nIiX2NKR-IJlHeokXfEb1zWiaatlYtZZrDiiLvxpX1i1oCOD77GqjdzEj6X0cyEoPOObL-1BVViGAXAy0rCBSQQEVFVAIQTxW32wism68J4PjcMK1EHKJSQTGee1DJNyczw1X-f6HirEx7LG1GWjELnS8FTt-fXTlXNhN4PkiTFunmvrSOw_XpB3VNE1V_GvWJuSd-ELM-lG9dhV1frrBz93LX1nBuhnqF4Nyn7tHYfcsACmV-addWgzBFdGxUwmHAsPXWE3NSlrs4wFVricVaSDxcKNRSmx-Ee6eDUFZRy--7Rm7s6tmY4D8MY04Wk-Q1watQn_9y1s6gfLC4J6fKQpSttIHCVhOXtFXHadrrU8-nfDjP2gaxCCPg8UYVL0d2Z6hdfCuAIXKDx5rSjU3Npje1idKz6PMqgiGplIF3s-YxzlRCsodmyg_iCtgPeJPGEQeVzvpV-kWK0jZt2nUVpeCcrdpgN8SYcf1z-xrg9YUoBu44vKcYeBL_vWCfK55GVsZM2o0-_giSWa3KcAKg2Z7g-7SMSpUgdDrW0YcheIj6Nu1CfOthGV--BrTqanJYlMEKyvz5gRyBtpCweO7XjWLjNjLG77QslK7KwpZRIPwSNsY3HAa887_fhjEfEkSuh-oZpdpLtcY-vHmdwGd7l28fTZtdc4yfpH0n8bpvwQCk0D-87RXDAMGRQOhuYjimWbaUwAU4Y9orbVLuG3mKxD3Ze8bI2Fd8wrV62iRu4582Thle_QkwMFOlxOfAgrrAAYCOZgCOf9DssYRbDRiRTSjOTXFQ_CS4wD17tAJXVfka2DMHqs7fuZsrLw26mxFB1AVryVbSf_mD0A2P9bmnLkuqImcKfnY_3ZAHeeXmMVx50TB2guXTYxkB99r8aiqXvmyY_JKpV-KOlXuo_8zMpQFoSIDlxexMx-dXnHy7ZiTd1tjHVoWck-i82-3tnEz7rS9yMx-_1mdZ1kR0m9KJde1GYbzNY8kccztaCePf3sMED8xGKWQrGX2KWhvMbpzeDmBZfmijC7pds7_d8yOu2atnsf8eQUEXIdCZzT_0FB9z1xJl0UMezso0EKNGSBzuLIeVB_FKkBqxDZfSLLeNi2HNBX9HboWd_8_K514QDeZXHrzBCe5tLxcLdCMgcGyFLfXS4kpwjidhXYwtq6FvmQFgdFdEEsBabcJLptveSrAQ7GZFWhDfCdRpODfHFbipmFDVe4vPi_Y1bfifXfwItIWIJ2RoHH6E8ctu6XR6y5i1MsPc4aPQgrzuAhknlvgk6mQ4Kkl3FD_FUch52oLuy_iR92Vf6I567qAC_HUHhleHBGZS2JlNQ80PB2IPOtrFPk7oQISni-g1eAAw2cU_P2vimj0TNBsE7GC2P7AGW3fZbSdJ6hvdNT8TdyT_EHFHbJ_ItZcMbMblby-79aiCSbVZOUb581jCKA5IikIVVAvxINw0zKpp9Jh0abXvEqSNLNv42acCzClD3QtEsYAQp52VhNeHD_xwyob9FKY_OyiRjG-AQ1B8Jqb2UuFW1mNkB_moW816mKZEbNkWCgqCgVvtMpkLa219CSSJOIIy6pgwNFGS_jCMO6lEPDE1AKWeD2wVD-pdpB-J-3FjdLgEAp0hZjKeulTRZc_1DWZi4xSoxnn9KD4O6fHfNuY8TnPFi1hPgl1xPjVGG-EQfOw71hkEZ5GGNZ2pyRsG2mtpvaK2h3_fEtDGvp2pjsL5323g3ORS1vO94HNnCMDlj7KkioWa_PCBpw0VjrogQ_bB4fhohhi-ijsyvFK0qOavbOcrf4RC7-_NRIR4UzaLOKJ6oNKe5q2fYrW3OOcBGEHTxv05qjI5RW4ivIv78DXpX7KBOMD-KDwLq6pq2UFkqfUoniEStmiD1u_G_nVJN2kdwJtMJiee5igWYFC6gfTg4GBIh7kWbSJqoWJ5MM0AozsnGpdMd3o1pcH4d03fXdex_kuum3yRsOV-75SV4V8tiVIKP9HOG2H7LJyWHqx6c43ALy4Fx-lpWbsSoOjOza8JYJzRLhKmuWnL_aFOHcuV-KhIx3xH8QUqF2JvYsk2XKZB3WNvR7cAIwOE-GS3S-AXHlzIIgFk5TKH0q4TgqrbrFM-7I2u9HBUzTGBcGmIXDCBeSOFvY4cC8T1kwW4xgjQqbNJSYHbkHEqV0QTKbPKABsSZFtJR9rlYCTZNA3biyBPmtjFfZb51kOtLpb_R9N"},{"type":"function_call","call_id":"call_OMD72KTf0iww81fATqCBqezT","name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"},{"type":"function_call_output","call_id":"call_OMD72KTf0iww81fATqCBqezT","output":"Current
+        weather at 52.5200, 13.4050?"},{"type":"reasoning","summary":[],"encrypted_content":"gAAAAABqqjwcXIhYxmMvc7TYt2qvwKunJ5ToEy7C2uHk0a96W3mlJcWHogUuAphT3o5jFN9qsBxNbUkP3Rn4g1wdKzMZjKLHjtqrcNAcJS_nHKsB01rcysZd2fycqC2CjBIQ3eX6wHRhDgY_ou2-A_4sIuSphlHoAMhJrR9Gk1T5S6i5WsRPh-3h7t3bDbc-Fxqj1M6ZLAZN9Gixin90liCWfhF4eEMPN9XTxCk2Y09-Mj9-EOIt4XxUTitsOwtsUq0LdrP5T51bgB1OxrC6nPVUblwrLnK0gYbPP4llhPvq30zqqOAzgbICU8fgATRqkRCb1hfhW0U1BL2v-wL7ISOewz_UC2Fa2o_QuOi_u3AQZr2lxxsH2zE3UTU7XViyJU0kwsl7k6RlbAK4knd9wupSOxDCh1p6jcTjUHGwEgOyUL32Cta3_FbXU6JyuSYMZa3LZnXt5eBrxvbU1ZZbw0kDRzGCK2zOxEArEa8gugHvnPUez371TcQ1yxq4FtdFqVRC3RKR6eEOkziYLQV9GLORg5uVyZieLTAMp81FUnnRqt7h_dIh5_bJ4_i6_WUrPS7uG30BQuIJKJtGsCTz4mjpORDNoYaWoBJShh14bC81-pCB2KfrmkihhQ6JuXAiYKAdc3P4boWHVUzWN4BV1F3ufwBdPMrSsvHa15cX-gWlEOevR4-Y1Kjw3ohuUgskKbdgYfxJzXQ28_GSD4jVQd-OMqVliavg1wJ2yxi4lAO3IZpl7TlhICcPjhYtLWnIDkL8AIF_ZTjHKHG2rqhPwI4KSDHL5T_hdmY4zdor_29dSHPt4m9klFtpOkSOt5UzQNEOoK8NaLKpdy8fkaPdAeP0xg8pECJRWSVktOEEpPTHqTwdFYf7bNcHy2_FOouayuxjy314suD6OHqJ_rFUZjVI7T5S3cAk9-15mbOiD9NDSqDpxsJ9G_0yxYzjXtO-apE3AmFEx7YPuXsm1ZiCLVdg2UwIkz9EVK93fYhAYtKkOPkrMzKGtDkIvaSJ_DuvYnuP5OS2C6bbsCDKEUoKuZeSKVrZLj7PYZOZ7cmEg5BLw7pmuWa-dRgi9iUDh6DXSy7IiEsFyzGJZ6jvhxGmPltqlvkompDzQZX67dKGwNk8QwAyD1Q7nxBJMC4fV48XHEWP3yMtKHhJdrtSWbYcS5f0vocpvH5SoD03GkjteytQppXZSecnDEtRCewy59EYBjtFsohSBNJdeOAZpsGxMoPp7PW4armovzqu8nKgmkgRGaSe6-ufoBQgAqxG5JjTGg5H0_7FSNpqY670DdGbcUdC8_SQ4tefk_hhUzNXLJYjNf-fNeTUiywKk1su8uKhfHZ5nGH3sh03QFYibKub7-3kGSrnuYw6KZ7ja9auR-gaaZ6oBVtDrbH8bVLXtefpLzbhnB1jB1J3z3z_Guy1A-70S5jmQa1Xa7sdUzmtWbBPUJ0xi905JwYDMvP5tT9EQGHDD4GhkXockOS1ddOCL9E9b0IOHB2ev76wyhuPVLaFw0WzQWU1NErRm2USLXVB74BdxUoUvJd9PbBbQuHaW4ScRCMmqjQ8xv4mgyV8QUwRweRT0R769Jr7PGTHlx7A56JTprpNAYQ51DwP0mlvD2sHLUhutt6zklsQWuJ-rGRwbg2Q5YF2dw4yLApadKfnJkHmGf4lEkoqNChvXdGAlR3DqKvZsoNuLvnm2PSul0P7c8kEYl5nWI2E9PolhgLNi9oRQtc9ZtlMXAXpP9ldpi4uu2RO4k8rT6J8NhST30EjG9rS5W2kr430Xgh0hDYoRx66nGySRkMjFAQ_eScXC8QtoLdb7VyeYGsgLCmdPV3kpCysddNcszDvZ5V4jABkzC2BPGNy5UMm"},{"type":"function_call","call_id":"call_9vzoFG9i6zf3kUZ5eZtVBmVg","name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"},{"type":"function_call_output","call_id":"call_9vzoFG9i6zf3kUZ5eZtVBmVg","output":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"],"tools":[{"type":"function","name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
@@ -298,11 +296,11 @@ http_interactions:
       message: OK
     headers:
       Content-Length:
-      - '7558'
+      - '6828'
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 09:48:26 GMT
+      - Wed, 16 Sep 2026 06:50:04 GMT
       Server:
       - istio-envoy
       X-Ms-Aoai-Configured-Data-Retention-Days:
@@ -324,7 +322,7 @@ http_interactions:
       X-Ratelimit-Abusepenalty-Active:
       - 'False'
       X-Ratelimit-Remaining-Tokens:
-      - '249751'
+      - '249831'
       X-Ratelimit-Reset-Tokens:
       - '0'
       X-Ratelimit-Limit-Tokens:
@@ -340,7 +338,7 @@ http_interactions:
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Apim-Request-Id:
-      - ed2d1cd8-e06a-4bbe-9506-b6ca18281070
+      - 046ba64c-cb73-4ba5-8f38-d73200f2edc9
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -351,12 +349,12 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "id": "resp_0e89d6afaa6177b7016aa7c2ead1e4819387cbbc3278102aee",
+          "id": "resp_02fcfbe7b24cf383016aaa3c1d31e08196b8a4aeff2907d6fe",
           "object": "response",
-          "created_at": 1789379306,
+          "created_at": 1789541405,
           "status": "completed",
           "background": false,
-          "completed_at": 1789379310,
+          "completed_at": 1789541407,
           "content_filters": [
             {
               "blocked": false,
@@ -386,7 +384,7 @@ http_interactions:
               },
               "content_filter_offsets": {
                 "start_offset": 0,
-                "end_offset": 1070,
+                "end_offset": 747,
                 "check_offset": 0
               }
             },
@@ -422,7 +420,7 @@ http_interactions:
               },
               "content_filter_offsets": {
                 "start_offset": 0,
-                "end_offset": 1523,
+                "end_offset": 991,
                 "check_offset": 0
               }
             }
@@ -437,14 +435,14 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "rs_0e89d6afaa6177b7016aa7c2eb7b4c819388ca4198c6387458",
+              "id": "rs_02fcfbe7b24cf383016aaa3c1db25c819681c139a54d19ad75",
               "type": "reasoning",
               "content": [],
-              "encrypted_content": "gAAAAABqp8Lurg9_fNuBMnwM6loaS7PlZnBSjTTvixF1koIPhvOy15csOV2mLpnWDfu9xKWihcM27iQiGDqkD-tAX9J5c9AtXjD9mJ0fe7py1rnHBvyzA6aCDZlQuW-bW8b6rbfrx3rCzMumO7e3o4E7OG3aHmr2OqYNtP_GtbsbFE3lZ2MNW0N1rWVvRVXUJNyArpqvLwngfa4NL7ZEO0mT8EC1v_FcLW_VFyVu5kgFKQzg99g1GKnw3aF5eojb-zWVSEinOIKiEqWKRWAC3hyXPui-0AKH2acsWn-UZUIRQusBb6-NSXjCgPPy1DxOt1PLvVKIUydcn1j-5RQYoCl5d0ghQRJmvoT3y4_MYIG5fRZmVsbeYoxXOdeDAw9Vspsg0XsBFaRmGxvkgqXUuuY0gBXvGlsyUhJWgwr0LMbUgR2jB0SBh8fPAxFveNUWy2RF6KakvazgRA4WfZ-VbrKrR3K26XimayqF2HawBMGZE5XRQXZoPFB8rjCJ5n97qHOUCAsT9ejbJtEXoLe-FFpyuzQr_tUnOiKzOzKeTE1bn-Mq10C4iXMYWO2q5BrGjHtDX7-QwJuJoGGxxPZhuCDB2f-Crf99mNSwffRYl-r2oKCF_zaw12v9gVvclv6EwTavykR8f51XVowdMXtQ_tMDxX6RldVzD2MeNwZeHqRXJszHqvPN-2-uBiQIP0Xtbr2lT0vxXlXkLFV3w5SoN0ZjiK3AUziEc4TD_FK5XQNVkrzN3fKnNrU3dyNCOyFJ8gGH12THx53lTJmFX939EBiejDGaYboaUnZCIv37upD8Ekvhy2UjwhB5dQTMyGCqGE5Ta6Uh008e7i-I58ZvMZ9mVr23QFEH4XbHZBETFiklRWD2Rhw_wrb1vWVvQjIgQA5aZt307exLaIwRzBHJEC5Uwg82du2xGqFVtWWC2HF9z-OajmhqsxgG7EHIBVxnAOg2bvzOn8W41WOfAGVA4xEtKdzkOeAFK6rIXYieIgMdGgEMI-_ZqJBuF85Je0gOl8_bUSnIBwq1C7O7n7ilvd5HB965oG4rDJBIG4lsHBH8BSRqyAGzG0v__hsjlbm5Gm-c0DjFy-1SaTKrI6fOMhd5MDnLyiu1EvJVyenFfuYMPPe8wevW76elsSyxZTCwlRVjCV3PO8aX9RYCjZrV9zJAgyFcTM6jWP-s2nxK2jXLjwOX2S5ES1grywXqu7kCM5JKw4nLgp71KNdHm1f2sChoWP_XNT0EssJq_jW8oGgrp7g4JF0Kr-elRsGrVD2AU6E9sqO53QSTDDOW_4vizgus3VJC_6DI5BYYYgH8iN7cfKIC8NUNVhY9ceHdUJV-DLG7hK2lBGfhFujBN5JIOUzMF2F_m6TUV1Xq-efkv5iwnO6tSGlWZwH6udIObLRZuJJkk03d7xp51kHLHkRQ11oIdzQtOZeUNbo5Mdn-10bHXnZ2e1b0zGnLcJ-vNaYQv-MCBbuuiasDoLmVvlxnKGBEaWTCnG3Ka8XaqFXxg2M3fBmz-zQlrARSTlxWyKrqzgdjIVTjZ49-4A6GgvnpoqcRPGx4J2V5fFCRhMd7SB8eJRLU2gFxhaPOW-RPBn8K0yqIT8OqmGn9v7Jw4npJCKUP31p8Gubz9-BuaA1ltj0rMcEoMrYxMG5hjGwiEJjY9KlGfreJIqFkfCFcaDjX6ON1FnOB50go5DXMNa1rA6BapeSth8B6rIQ0E8pf0KMzDz8a2-oE2pO2SRI06h0LtYc-oUhNBaMnv2w4cSEATvTQw_Jig_ziQ2t2fsvvF5aW0vcjZ5ALRl-P5E_ucWPEejbjVK4vFU2CZF1HrEkq4hcnTTU8q3o6oHIYbOVMEQCmEfwQGNuPtwt-HCCPKRdvFqYH9ByuobAmf6orKe4Y7K9gI2gBP1fL7OWYSf_JTE3j783o1S75IOzwy6qBcCncq-MDytl-7iS4quxsemyGAzO0fcjXBrG56M4qHTPAq4K7ugk-HgNf4bP90ZOCXI0sUA5Wpm3ELn29esV30gDoTIsEh48km5m21vCZ5KH5MRNxM-80cxTrqP396R9s-oHJlpvGrj5EqUCoiZcmjSGqyRo3Ippjl7Bsqpml8xVYGfPHvm-YF14of1C7JJKppGy64jyHPCgJbjCulsKC1ei31dfAYqN4-FCUl4ewqYdQTPDpkFPNA02ypVhS8lgi_R7pXIynDnzvKkSo_UyiEV-9fcR50dVOVmoOUyTVaEBjb-JLClbmmRBGxkyyHToAQ5MSR-k0KkF6G0nmIGMu3KCV5Z6IG2XIClyEor6eRQTF3huS_vA7EdX9Snv4w8WSve23MS9zuG-fEhA6mAq2tXk6MeksOAUTaiyaSdMkta6jt1s41AijVaPFbDbcRnom5__xjZwZxEoVYRErh7EqwOpPJt4j44e9_QBLEwYEFqh0kzUoxDoCFaPbvIsLAzxQ4_Q_aC3M2wCWhXiffCFfuEyIfq5EW1YoM1nXHJJapOXZz6MOkDcVvkTFcHsaU9EuLa0mak9stNHTHjgO97ZycQtzeOj1E9tVfAbub_HyXuR5He4Rh8dlmac2IYXeTCzuNSNx4Li2r2LSSdEAEoL62DarD2KBabwZ3UpQkSa_FE-0dgPHzhLtWQa9FU_caYY8b4bGbu-dhMCQY3o619W934XfQLNXaITUWPPsT7G7wtaw4rHBUUJ30teLhu_mUVyxEF5cZw9IO9m3hb05GCtbZjakFktOY4IOKX6IcnO3vEke6uOftIUZc0r2YWknoGk8KUr6o132BXH3vHjewUqys277amHYmfFRfTqaiIcagJrz79SdcS_t_A9GghBaZjalQE4nxcGMleOY3L0pyBBSviNfUfq-3-tLe0ubJb_-iDylaxjzZtjP4yfnBw5ahIOqQ50armapNu0QaRGoeLnOThbPLuDI54L_EDVzGp6ulTnFviiCUGYt6E1h2Ue44y0slmVppjgBbrltYrduDhAoJ3aw-didY9LTHhcYyVTKNKbJUhrK_j93mtNUJcAT",
+              "encrypted_content": "gAAAAABqqjwfwbWMMQPT8Xb1ygbX4u0r6g0v4CdrNvl4lqfXRMMu0UT_OpDo0V2wQHQCgSYagcB0LOyixEYRMnfXToWDZZ4uqpj8oANWSKs6XM9EgncLYt37U2G2GNJI96bKo4DEMww_msykNHpLVK1kot1ZLpdKGVlJ0eI_lHyi_1eui0CM_aJWY5nPNc6kabr8n_rZ8kt694YgAj77MjBBgMK0ybLzCEmqq80hDyZx0svGt04PRAa04EIYIoKVD_zxdm2pYM--CUTHc5CUDlN2-uwWL9ldFp9tmoVqn08Aa6eXIxL1G8UHgHhykCcsZ_x5vVwELwi7BRjWHb2IE-RwV8wVBvGwIT_boJiG4pbOgapEKbYq6RWaXfvogsBG4sSBJd9Q-M8XoDYCSp1OXKFa9xtOxU2tLmJzaVqxU-woRQ8JjyeXB8Kz7sWUuYLIWwUBkjj6MHUExu_Qtaj0lm1KThAp-CuMoJEMVCwQb7faSwOLkMb6PlNd96gCfSzXusotZKQtpN6V26xBT89kVM09SeLXTj01bLpQ84ZQM6EffEm1pMia0N5w9qLddP4w4K7Pt6x7xbrLU5Z7x_fesdF5aKmfESAwgccgfQ--7JGBQgwV3b9-bKpV5nnzHB5g-4sswzFik4hyVeMfGZfY3UkiU7rd8V9cTW_Wr_c6tAbubwjkXGhZxWRt9SODWZsX-yn4W8NszIpbPYpr3hVcCSH174QBFhJuy-o5CCdI5ng9GtDDDEcsUgu3S79F07lMasI1r9Hfo3TqUUuL4xkxJmx4NonAi1vyASJDs0VDaKkaGFLs-xvqFADVqmWwYhMr_OJqecRh5LGGKXD8C3j1nHBm96qqlG7zueDCa06w7xrM4g04-dq97vrhePrhD_aoUlKWbCM7QOXOCPdHopQxom-NlsyV-Uk9x4jfKYYNrXLPUc7F8ujCRJW_eui3ntIm_iX9WCeE9dNTemVCxkOL2oTvdxlFGA_0weKhVotLiiTOc9YLuBIo8FsL-PwdVWj4qKwDmSI2aQFra9NdhQlJ48wI_csQhHhjoa5SJd8zzoISDVAio6a2_1gy73sK_kRci_ILp8116KEePIxp8O1p5lwBbFfBzc-OZprjubsMsAtbrjSwfDLHKK9zfMYbRTWw7Iyo5WZRYr_6GFN1O69V3vzhjdLeIpYID8laEsNpokFaPuctc12UOoYNYwoPRpjz_WiOTHsCP4ao9JvXzIn9DhsLXG60SgDBk0AJCt710MQpaTknogu_XOza8TLudgeWx338QL-oPjx3KCBGrC9i6sPhfOmTiIJ3-E6TWKYC9sa9TNd0FAteBFzI-BVUmufauvXIxyyYMApDDpcYTDtjl-WsiTKdXog1-rO8qFYXwFzVRY_VLz3jiCQrtEjb1rp8mrJeaSpIJC62D7NjU6b2TA2EmZmuONpmLD4aP9Rw028NFRWo9GKqTE8qGpbCBOL7AzXDI-7bXwNuV6NcRdNCO9NwmMyqlaZ82A_sDZO1VyWlFTK3dZrtKnQ5bdP0ZNySn-jDU-UkBdiXgZpZgR3mcS0-Kp3YvGWk2ofI0vzTgOyD51ZJh74o12zkEI6A-xGB7EINrWEAdZRC700_nPbaOVlIhxrTd0s3gxRDdngGsXrtMxOU2_e6e6dSCxuKJXzKfF44iUegrxfiFlQGcAk0X6Y0oezjcmdZ6b1oDxuMqQIJff4deecx-gcIUDrHrOP1UWKQYFy9Qdb4NoOoMQPsSqoDCqVIrAdgtgBSHaM2cJ5-QILCqc4ofI8bbrNf5_m_ip4MitffLh2YYunKOD-yvCe0obpjp_o3P9HwGnxhgCYlxPnbI-teoQvCG5Q76nK1FMqBMEZgZAtk0V_Q4GluN2eOTrNVlcic7mjTS4NUeY2bS7S2n55ZfCuYYCWfTBRnnZqsjbZ-Z0zaiRnC7TtvvCN7k-U6zMX6kYZZsyZbjwSGxmhTY1nX7HwzTzeTe-mBdx2sMqtT0iAyuHpluQN8iM4IdTg5DLupzDL4-1cnTXpAhxUf-95wA45oVuZgF6oKXFRQSBR38h508TRGAJ4P47o75cKwJZkZAf_zvDPGVAFGDFWu-RMA457tuNi3rukq_RxlKQSCdWbFyTgH7qn8f8emctRJBMeXkidmjOQdoPy84DI_W7wsHCcEqIRuzHkJOhy9FJln0UErOlXXBd6jQp3f2c4R2S2yKGVDAdtILzcPTVh_RW4kkkYo449KtDu0qwRoJye_Hqx2W5uOUmM1E1xhmud3mHXyQC4xKMmyPdeEEeQBwtQ3jqFMxzMpNp900JftWuPS2MMqXOp-ZuKs6wO9tJwC1XL-Uw==",
               "summary": []
             },
             {
-              "id": "msg_0e89d6afaa6177b7016aa7c2eda778819397d43540235a4384",
+              "id": "msg_02fcfbe7b24cf383016aaa3c1f423c81968ff39ca6bf0f60a3",
               "type": "message",
               "status": "completed",
               "content": [
@@ -452,7 +450,7 @@ http_interactions:
                   "type": "output_text",
                   "annotations": [],
                   "logprobs": [],
-                  "text": "Current weather at 52.5200, 13.4050: 15\u00b0C with a wind of 10 km/h. (Location is Berlin, Germany.)\n\nWant a forecast or more details (humidity, precipitation, etc.)?"
+                  "text": "Current weather at 52.5200, 13.4050 (Berlin): 15\u00b0C, wind 10 km/h. Would you like an hourly forecast or more details?"
                 }
               ],
               "role": "assistant"
@@ -530,19 +528,19 @@ http_interactions:
           "top_p": 1.0,
           "truncation": "disabled",
           "usage": {
-            "input_tokens": 336,
+            "input_tokens": 271,
             "input_tokens_details": {
               "cache_write_tokens": 0,
               "cached_tokens": 0
             },
-            "output_tokens": 430,
+            "output_tokens": 278,
             "output_tokens_details": {
-              "reasoning_tokens": 320
+              "reasoning_tokens": 192
             },
-            "total_tokens": 766
+            "total_tokens": 549
           },
           "user": null,
           "metadata": {}
         }
-  recorded_at: Mon, 14 Sep 2026 09:48:30 GMT
+  recorded_at: Wed, 16 Sep 2026 06:50:07 GMT
 recorded_with: VCR 6.4.0

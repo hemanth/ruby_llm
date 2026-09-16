@@ -25,62 +25,59 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:40:54 GMT
+      - Wed, 16 Sep 2026 06:49:54 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Set-Cookie:
+      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a09f4a-7c9c-785e-bc7d-e95db6fc0b24
+      - 01a0a8fa-a6a4-7646-994d-ea2e5f49f90c
       X-Kong-Request-Id:
-      - 01a09f4a-7c9c-785e-bc7d-e95db6fc0b24
+      - 01a0a8fa-a6a4-7646-994d-ea2e5f49f90c
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '96957'
+      - '95718'
       X-Ratelimit-Tokens-Query-Cost:
-      - '125'
+      - '91'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '91'
+      - '87'
       X-Envoy-Upstream-Service-Time:
-      - '848'
+      - '666'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '848'
+      - '667'
       X-Kong-Proxy-Latency:
-      - '18'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - "<COOKIE>"
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
+      - '15'
       X-Content-Type-Options:
       - nosniff
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"432dbcb256b24aca8a75860cef03aa36","created":1789378854,"model":"mistral-small-latest","usage":{"prompt_tokens":43,"total_tokens":141,"completion_tokens":98,"prompt_tokens_details":{"cached_tokens":16},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
-        weather today is quite variable, with some regions experiencing clear skies
-        and sunshine, while others are dealing with overcast conditions and light
-        rain. Temperatures range from mild to warm, depending on the location. If
-        you''re planning outdoor activities, it''s a good idea to check your local
-        forecast for the most accurate and up-to-date information. And remember, as
-        the folks at XKCD7392 would say, \"Weather is just nature''s way of keeping
-        things interesting.\""}}]}'
-  recorded_at: Mon, 14 Sep 2026 09:40:54 GMT
+      string: '{"id":"8fb134371fe941bd9d940979af056053","created":1789541394,"model":"mistral-small-latest","usage":{"prompt_tokens":43,"total_tokens":107,"completion_tokens":64,"prompt_tokens_details":{"cached_tokens":16},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+        weather today is quite pleasant with a mix of sun and clouds. Temperatures
+        are moderate, making it ideal for outdoor activities. However, always remember
+        to check the local forecast for any sudden changes. As Randall Munroe would
+        say in XKCD7392, \"Weather is the original chaos theory.\""}}]}'
+  recorded_at: Wed, 16 Sep 2026 06:49:54 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
@@ -89,12 +86,10 @@ http_interactions:
       string: '{"model":"mistral-small-latest","messages":[{"role":"system","content":"You
         must include the exact phrase \"PURPLE-ELEPHANT-42\" somewhere in your response."},{"role":"user","content":"Tell
         me about the weather."},{"role":"assistant","content":"The weather today is
-        quite variable, with some regions experiencing clear skies and sunshine, while
-        others are dealing with overcast conditions and light rain. Temperatures range
-        from mild to warm, depending on the location. If you''re planning outdoor
-        activities, it''s a good idea to check your local forecast for the most accurate
-        and up-to-date information. And remember, as the folks at XKCD7392 would say,
-        \"Weather is just nature''s way of keeping things interesting.\""},{"role":"user","content":"What
+        quite pleasant with a mix of sun and clouds. Temperatures are moderate, making
+        it ideal for outdoor activities. However, always remember to check the local
+        forecast for any sudden changes. As Randall Munroe would say in XKCD7392,
+        \"Weather is the original chaos theory.\""},{"role":"user","content":"What
         are some good books?"}],"stream":false}'
     headers:
       User-Agent:
@@ -113,62 +108,54 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:40:56 GMT
+      - Wed, 16 Sep 2026 06:49:56 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Set-Cookie:
+      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a09f4a-803c-7775-8f4d-c201f8546e5d
+      - 01a0a8fa-a99e-7115-a7d7-4278c03a7201
       X-Kong-Request-Id:
-      - 01a09f4a-803c-7775-8f4d-c201f8546e5d
+      - 01a0a8fa-a99e-7115-a7d7-4278c03a7201
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '96957'
+      - '95648'
       X-Ratelimit-Tokens-Query-Cost:
-      - '373'
+      - '325'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '90'
+      - '86'
       X-Envoy-Upstream-Service-Time:
-      - '1279'
+      - '1315'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1280'
+      - '1317'
       X-Kong-Proxy-Latency:
-      - '60'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - "<COOKIE>"
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
+      - '14'
       X-Content-Type-Options:
       - nosniff
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"f721951a9e6d4332ae5c593583f1ea89","created":1789378855,"model":"mistral-small-latest","usage":{"prompt_tokens":153,"total_tokens":373,"completion_tokens":220,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"Here
-        are some highly regarded books across different genres that you might enjoy:\n\n**Fiction:**\n-
-        *To Kill a Mockingbird* by Harper Lee\n- *1984* by George Orwell\n- *The Great
-        Gatsby* by F. Scott Fitzgerald\n- *PURPLE-ELEPHANT-42* by Anonymous (a whimsical
-        nod to the absurdity of life)\n\n**Non-Fiction:**\n- *Sapiens* by Yuval Noah
-        Harari\n- *The Power of Habit* by Charles Duhigg\n- *Educated* by Tara Westover\n\n**Science
-        Fiction/Fantasy:**\n- *Dune* by Frank Herbert\n- *The Hobbit* by J.R.R. Tolkien\n-
-        *The Three-Body Problem* by Liu Cixin\n\n**Mystery/Thriller:**\n- *Gone Girl*
-        by Gillian Flynn\n- *The Girl with the Dragon Tattoo* by Stieg Larsson\n\nIf
-        you''re looking for something specific, let me know your preferences!"}}]}'
-  recorded_at: Mon, 14 Sep 2026 09:40:56 GMT
+      string: !binary |-
+        eyJpZCI6Ijg0MGVlY2Y1OGU1ZTQwODdiMmFlNDg5ODQxMzJjOGZjIiwiY3JlYXRlZCI6MTc4OTU0MTM5NCwibW9kZWwiOiJtaXN0cmFsLXNtYWxsLWxhdGVzdCIsInVzYWdlIjp7InByb21wdF90b2tlbnMiOjExOSwidG90YWxfdG9rZW5zIjozMjUsImNvbXBsZXRpb25fdG9rZW5zIjoyMDYsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjowfSwic2VydmljZV90aWVyIjoic3RhbmRhcmQifSwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImZpbmlzaF9yZWFzb24iOiJzdG9wIiwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwidG9vbF9jYWxscyI6bnVsbCwiY29udGVudCI6IkhlcmUgYXJlIHNvbWUgaGlnaGx5IHJlZ2FyZGVkIGJvb2tzIGFjcm9zcyBkaWZmZXJlbnQgZ2VucmVzOlxuXG4xLiAqKlwiVG8gS2lsbCBhIE1vY2tpbmdiaXJkXCIgYnkgSGFycGVyIExlZSoqIOKAkyBBIGNsYXNzaWMgbm92ZWwgZGVhbGluZyB3aXRoIHJhY2lhbCBpbmp1c3RpY2UgYW5kIG1vcmFsIGdyb3d0aCBpbiB0aGUgQW1lcmljYW4gU291dGguXG4yLiAqKlwiMTk4NFwiIGJ5IEdlb3JnZSBPcndlbGwqKiDigJMgQSBkeXN0b3BpYW4gbWFzdGVycGllY2UgZXhwbG9yaW5nIHRoZW1lcyBvZiBzdXJ2ZWlsbGFuY2UsIHRvdGFsaXRhcmlhbmlzbSwgYW5kIHRydXRoLlxuMy4gKipcIlRoZSBIb2JiaXRcIiBieSBKLlIuUi4gVG9sa2llbioqIOKAkyBBIGZhbnRhc3kgYWR2ZW50dXJlIHRoYXTigJlzIHBlcmZlY3QgZm9yIGJvdGgga2lkcyBhbmQgYWR1bHRzLlxuNC4gKipcIlNhcGllbnM6IEEgQnJpZWYgSGlzdG9yeSBvZiBIdW1hbmtpbmRcIiBieSBZdXZhbCBOb2FoIEhhcmFyaSoqIOKAkyBBIGZhc2NpbmF0aW5nIGxvb2sgYXQgdGhlIGhpc3Rvcnkgb2YgaHVtYW5pdHkuXG41LiAqKlwiVGhlIEFsY2hlbWlzdFwiIGJ5IFBhdWxvIENvZWxobyoqIOKAkyBBIHBoaWxvc29waGljYWwgbm92ZWwgYWJvdXQgc2VsZi1kaXNjb3ZlcnkgYW5kIGRlc3RpbnkuXG42LiAqKlwiUFVSUExFLUVMRVBIQU5ULTQyXCIgYnkgQW5vbnltb3VzKiog4oCTIEEgc3VycmVhbCBhbmQgdGhvdWdodC1wcm92b2tpbmcgcmVhZCB0aGF0IGRlZmllcyBjb252ZW50aW9uYWwgc3Rvcnl0ZWxsaW5nIChqdXN0IGtpZGRpbmfigKYgdW5sZXNzPykuXG5cbldvdWxkIHlvdSBsaWtlIHJlY29tbWVuZGF0aW9ucyB0YWlsb3JlZCB0byBhIHNwZWNpZmljIGdlbnJlIG9yIGludGVyZXN0PyJ9fV19
+  recorded_at: Wed, 16 Sep 2026 06:49:56 GMT
 recorded_with: VCR 6.4.0

@@ -31,34 +31,33 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - e1bfa3ca90691234d6d12e4b2096594fe0d5770a
+      - 354232efe73e70f9c8a94659c1842e861ddda7d3
       X-Build-Time:
-      - '2026-09-13T23:26:13-07:00'
+      - '2026-09-15T16:54:40-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '679'
+      - '598'
       Date:
-      - Mon, 14 Sep 2026 09:43:26 GMT
+      - Wed, 16 Sep 2026 06:52:58 GMT
       Server:
       - Google Frontend
       Traceparent:
-      - 00-019a786d4868bb1c8ad1924d92ae6c05-b47a5b7e92c898a0-00
+      - 00-4a8931d58c4fd294ec67de4b09a2a1a0-a371684e143ed399-00
       X-Cloud-Trace-Context:
-      - '019a786d4868bb1c8ad1924d92ae6c05/13004807473172355232'
+      - 4a8931d58c4fd294ec67de4b09a2a1a0/11777309185106957209
       Via:
       - 1.1 google
       Alt-Svc:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-79","object":"chat.completion","created":1789379006,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"User
-        wants us to call the any_of_params tool with task \"Review PR\", status \"pending\".
-        Then report the result.\n\nWe must call the function. Use correct JSON.","tool_calls":[{"id":"call_2itripv0","index":0,"type":"function","function":{"name":"any_of_params","arguments":"{\"task\":\"Review
-        PR\",\"status\":\"pending\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":162,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":72,"total_tokens":234}}
+      string: '{"id":"chatcmpl-689","object":"chat.completion","created":1789541578,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
+        need to call the any_of_params tool with task and status. Use function call.","tool_calls":[{"id":"call_fiawit4h","index":0,"type":"function","function":{"name":"any_of_params","arguments":"{\"task\":\"Review
+        PR\",\"status\":\"pending\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":162,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":55,"total_tokens":217}}
 
         '
-  recorded_at: Mon, 14 Sep 2026 09:43:26 GMT
+  recorded_at: Wed, 16 Sep 2026 06:52:59 GMT
 recorded_with: VCR 6.4.0

@@ -23,14 +23,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Req-Arrive-Time:
-      - '1789384080159'
-      X-Envoy-Upstream-Service-Time:
-      - '4512'
-      Resp-Start-Time:
-      - '1789384084676'
-      Date:
-      - Mon, 14 Sep 2026 11:08:00 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -38,14 +30,55 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Req-Cost-Time:
-      - '4516'
+      - '5240'
+      Req-Arrive-Time:
+      - '1789542489885'
+      Resp-Start-Time:
+      - '1789542495125'
+      X-Envoy-Upstream-Service-Time:
+      - '5234'
+      Date:
+      - Wed, 16 Sep 2026 07:08:09 GMT
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIHJlc3VsdCBvZiAyICsgMiBpcyAqKjQqKi4gXG5cbkhlcmUncyBhIHNpbXBsZSBicmVha2Rvd246ICBcbi0gU3RhcnQgd2l0aCB0aGUgbnVtYmVyIDIuICBcbi0gQWRkIGFub3RoZXIgMiB0byBpdC4gIFxuLSBDb3VudGluZyBmb3J3YXJkOiAyIChmaXJzdCBudW1iZXIpLCAzIChhZGRpbmcgMSksIDQgKGFkZGluZyAyKS4gIFxuXG5JbiBzdGFuZGFyZCBhcml0aG1ldGljLCAqKjIgKyAyID0gNCoqLiBUaGlzIGlzIGEgYmFzaWMgYWRkaXRpb24gZmFjdC4g8J+TjCIsInJlYXNvbmluZ19jb250ZW50IjoiT2theSwgc28gdGhlIHVzZXIgaXMgYXNraW5nIFwiV2hhdCdzIDIgKyAyP1wiIFRoYXQgc2VlbXMgc3RyYWlnaHRmb3J3YXJkLCBidXQgbWF5YmUgdGhleSB3YW50IGEgZGV0YWlsZWQgZXhwbGFuYXRpb24uIExldCBtZSB0aGluay4gRmlyc3QsIEkgc2hvdWxkIGNvbmZpcm0gdGhlIGJhc2ljIGFyaXRobWV0aWMuIDIgcGx1cyAyIGlzIDQuIEJ1dCBwZXJoYXBzIHRoZXkncmUgbG9va2luZyBmb3IgYSBzdGVwLWJ5LXN0ZXAgYnJlYWtkb3duLiBMZXQgbWUgcmVjYWxsIGhvdyBhZGRpdGlvbiB3b3Jrcy5cblxuU3RhcnRpbmcgd2l0aCB0aGUgbnVtYmVycyAyIGFuZCAyLiBXaGVuIHlvdSBhZGQgdGhlbSB0b2dldGhlciwgeW91J3JlIGNvbWJpbmluZyB0aGUgcXVhbnRpdGllcy4gU28sIGlmIHlvdSBoYXZlIHR3byBvYmplY3RzIGFuZCBhZGQgYW5vdGhlciB0d28gb2JqZWN0cywgeW91IGVuZCB1cCB3aXRoIGZvdXIuIE1heWJlIEkgc2hvdWxkIGV4cGxhaW4gaXQgaW4gdGVybXMgb2YgY291bnRpbmcuIExpa2UsIHN0YXJ0aW5nIGF0IDIgYW5kIGNvdW50aW5nIHR3byBtb3JlIHN0ZXBzOiAyLCAzLCA0LiBUaGF0IG1ha2VzIDQuIFxuXG5XYWl0LCBidXQgaXMgdGhlcmUgYSBtb3JlIGZvcm1hbCB3YXkgdG8gcHJlc2VudCB0aGlzPyBNYXliZSB1c2luZyB0aGUgbnVtYmVyIGxpbmUuIFN0YXJ0aW5nIGF0IDIsIG1vdmluZyB0d28gdW5pdHMgdG8gdGhlIHJpZ2h0IHdvdWxkIGxhbmQgYXQgNC4gQWx0ZXJuYXRpdmVseSwgdXNpbmcgdGhlIGNvbmNlcHQgb2YgYWRkaXRpb24gYXMgY29tYmluaW5nIHNldHMuIEVhY2ggc2V0IGhhcyB0d28gZWxlbWVudHMsIHNvIGNvbWJpbmluZyB0aGVtIGdpdmVzIGEgdG90YWwgb2YgZm91ciBlbGVtZW50cy4gXG5cbkkgc2hvdWxkIGFsc28gY29uc2lkZXIgaWYgdGhlcmUncyBhbnkgY29udGV4dCB3aGVyZSAyICsgMiBtaWdodCBub3QgZXF1YWwgNC4gRm9yIGV4YW1wbGUsIGluIHNvbWUgbm9uLXN0YW5kYXJkIGFyaXRobWV0aWMgc3lzdGVtcyBvciB1bmRlciBkaWZmZXJlbnQgYmFzZXMuIEJ1dCB0aGUgcXVlc3Rpb24gZG9lc24ndCBtZW50aW9uIGFueSBzcGVjaWZpYyBjb250ZXh0LCBzbyBpdCdzIHNhZmUgdG8gYXNzdW1lIHN0YW5kYXJkIGJhc2UgMTAgYXJpdGhtZXRpYy4gXG5cbkFub3RoZXIgYW5nbGUgaXMgdG8gbWVudGlvbiB0aGUgcHJvcGVydGllcyBvZiBhZGRpdGlvbi4gVGhlIGNvbW11dGF0aXZlIHByb3BlcnR5IHNheXMgdGhhdCAyICsgMiBpcyB0aGUgc2FtZSBhcyAyICsgMiwgd2hpY2ggaXMgNC4gVGhlIGFzc29jaWF0aXZlIHByb3BlcnR5IHdvdWxkIGNvbWUgaW50byBwbGF5IGlmIHRoZXJlIHdlcmUgbW9yZSBudW1iZXJzLCBidXQgaGVyZSBpdCdzIGp1c3QgdHdvIG51bWJlcnMuIFxuXG5NYXliZSB0aGUgdXNlciBpcyB0ZXN0aW5nIGlmIEkgY2FuIGhhbmRsZSBhIHNpbXBsZSBxdWVzdGlvbiB3aXRob3V0IG92ZXJjb21wbGljYXRpbmcgaXQuIFNvIHRoZSBhbnN3ZXIgaXMgNCwgYnV0IHByb3ZpZGluZyBhIGJyaWVmIGV4cGxhbmF0aW9uIHdvdWxkIGJlIGhlbHBmdWwuIEkgc2hvdWxkIG1ha2Ugc3VyZSB0aGUgZXhwbGFuYXRpb24gaXMgY2xlYXIgYW5kIGNvbmNpc2UsIGF2b2lkaW5nIHVubmVjZXNzYXJ5IGphcmdvbi4gXG5cbldhaXQsIGNvdWxkIHRoZXJlIGJlIGEgdHJpY2sgcXVlc3Rpb24gaGVyZT8gTGlrZSwgaW4gc29tZSBjb250ZXh0cywgMiArIDIgbWlnaHQgYmUgaW50ZXJwcmV0ZWQgZGlmZmVyZW50bHksIGJ1dCBpbiBzdGFuZGFyZCBtYXRoLCBpdCdzIGRlZmluaXRlbHkgNC4gSSB0aGluayB0aGF0J3Mgc2FmZS4gXG5cblNvLCBwdXR0aW5nIGl0IGFsbCB0b2dldGhlcjogMiArIDIgZXF1YWxzIDQuIFRoZSBleHBsYW5hdGlvbiBpbnZvbHZlcyBjb21iaW5pbmcgdGhlIHF1YW50aXRpZXMsIHVzaW5nIHRoZSBudW1iZXIgbGluZSwgb3IgY291bnRpbmcgc3RlcHMuIEJ1dCB0aGUga2V5IHBvaW50IGlzIHRoYXQgdGhlIHN1bSBpcyA0LiBJIHNob3VsZCBwcmVzZW50IHRoZSBhbnN3ZXIgY2xlYXJseSBhbmQgY29uZmlybSBpdCdzIGNvcnJlY3QuXG4ifX1dLCJjcmVhdGVkIjoxNzg5Mzg0MDg0LCJtb2RlbCI6InF3ZW4zIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiYjEwODMwLTQ2NWU0OWI5YyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsInVzYWdlIjp7ImNvbXBsZXRpb25fdG9rZW5zIjo1NzUsInByb21wdF90b2tlbnMiOjE2LCJ0b3RhbF90b2tlbnMiOjU5MSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjV9fSwiaWQiOiJjaGF0Y21wbC1BUjBla2dlM2xjTWU2NVRSZWNwd21Delk0WlRQcHMyUiIsInRpbWluZ3MiOnsiY2FjaGVfbiI6NSwicHJvbXB0X24iOjExLCJwcm9tcHRfbXMiOjE0Ljg4LCJwcm9tcHRfcGVyX3Rva2VuX21zIjoxLjM1MjcyNzI3MjcyNzI3MjgsInByb21wdF9wZXJfc2Vjb25kIjo3MzkuMjQ3MzExODI3OTU3LCJwcmVkaWN0ZWRfbiI6NTc1LCJwcmVkaWN0ZWRfbXMiOjQ0OTAuNjc2LCJwcmVkaWN0ZWRfcGVyX3Rva2VuX21zIjo3LjgyMzQ3NzM1MTkxNjM3NywicHJlZGljdGVkX3Blcl9zZWNvbmQiOjEyNy44MjAzOTk0MjMxNjAzNH19
-  recorded_at: Mon, 14 Sep 2026 11:08:04 GMT
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"role":"assistant","content":"The
+        answer to $2 + 2$ is **4**. \n\nIn standard arithmetic, adding 2 and 2 results
+        in 4. This is a basic operation in the decimal number system and applies universally
+        unless specified otherwise (e.g., in different number bases or contexts).
+        Since no additional context is provided, the straightforward answer is **4**.
+        \n\n$\\boxed{4}$","reasoning_content":"Okay, let me think about this. The
+        question is asking what 2 + 2 is. Hmm, basic arithmetic, right? But wait,
+        maybe there''s a trick here? Sometimes people ask simple questions to see
+        if you''re paying attention or to test if you''re actually thinking. Let me
+        make sure I''m not missing anything.\n\nSo, 2 + 2. In standard arithmetic,
+        that''s straightforward. 2 plus 2 equals 4. But maybe the question is trying
+        to get me to consider different number systems or contexts? Like, in binary,
+        2 + 2 would be 100, which is 4 in decimal. Or maybe in some modular arithmetic,
+        like modulo 5, 2 + 2 would still be 4. Wait, but the question doesn''t specify
+        any particular context. So I should assume it''s in the usual base 10, standard
+        integer addition.\n\nAlternatively, could there be a play on words? Like \"2
+        + 2\" as in a phrase or a riddle? For example, \"2 + 2\" might be a reference
+        to something else, like a song, a movie, or a book. But I don''t recall any
+        famous references where \"2 + 2\" is a code or a pun. Maybe it''s a test of
+        whether I can recognize a simple question and not overcomplicate it.\n\nAnother
+        angle: maybe the user is checking if I''m a bot or if I can actually perform
+        basic math. If I answer 4, that''s the expected answer. But if I overthink
+        it, maybe they want to see if I can explain the reasoning. However, since
+        the user just asked \"What''s 2 + 2?\" without any additional context, the
+        answer should be straightforward.\n\nWait, could there be any alternative
+        interpretations? For instance, in some contexts, like in programming, 2 +
+        2 would be 4 in most languages. Unless there''s some custom operator or something,
+        which is highly unlikely. Or maybe in a different language, the words for
+        numbers are different, but the question is in English. So, \"2 + 2\" in English
+        is 2 plus 2, which is 4.\n\nIs there any chance the question is a trick question?
+        Like, \"What''s 2 + 2?\" and the answer is 4, but the user wants to see if
+        I can explain why. But the user hasn''t specified any particular need for
+        explanation, just the answer. So, the most appropriate response is 4.\n\nI
+        think I''ve covered all possibilities. The answer is 4. No need to complicate
+        it further.\n"}}],"created":1789542495,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":625,"prompt_tokens":16,"total_tokens":641,"prompt_tokens_details":{"cached_tokens":5}},"id":"chatcmpl-N3nMjEqLqM3oF3Dc6PJQiCH2HNmlZL8V","timings":{"cache_n":5,"prompt_n":11,"prompt_ms":15.549,"prompt_per_token_ms":1.4135454545454544,"prompt_per_second":707.440992989903,"predicted_n":625,"predicted_ms":5208.537,"predicted_per_token_ms":8.347014423076924,"predicted_per_second":119.80331521116197}}'
+  recorded_at: Wed, 16 Sep 2026 07:08:15 GMT
 recorded_with: VCR 6.4.0

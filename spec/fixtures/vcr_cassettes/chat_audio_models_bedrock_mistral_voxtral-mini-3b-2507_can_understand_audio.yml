@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260914T094536Z
+      - 20260916T065303Z
       X-Amz-Content-Sha256:
       - e332214329c25809eed50d50370151ebe46f670aa85d6861b8475f443d4a96be
       Authorization:
@@ -29,11 +29,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:45:38 GMT
+      - Wed, 16 Sep 2026 06:53:06 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1399'
+      - '1762'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
@@ -47,21 +47,8 @@ http_interactions:
       Access-Control-Expose-Headers:
       - x-amzn-requestid,x-request-id,date,x-amzn-usage-reservation-quota,x-amzn-usage-reservation-remaining-quota,x-amzn-usage-reservation-spillover
     body:
-      encoding: UTF-8
-      string: '{"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"Based
-        on the provided text \"Ruby is a programming language designed for developer
-        happiness.\", let''s break down and interpret it:\n\n\"Ruby\" is referring
-        to Ruby, a high-level, general-purpose programming language known for its
-        simplicity and elegance.\n\n\"Designed for developer happiness\" means that
-        the language was developed with the aim of making it easy for programmers
-        to write and maintain software. The concept of \"developer happiness\" in
-        this context can refer to:\n- **Simplicity**: Ruby''s syntax is designed to
-        be easy to read and write.\n- **Productivity**: It offers a wide range of
-        libraries and frameworks (like Ruby on Rails) that can speed up development.\n-
-        **Expressiveness**: The language allows programmers to express their ideas
-        directly and concisely.\n- **Community Support**: Ruby has a strong, active
-        community that provides resources, tutorials, and support.\n\nIn essence,
-        these design principles contribute to \"developer happiness\" by making work
-        more enjoyable and less frustrating for programmers.","refusal":null,"role":"assistant"}}],"created":1789379137,"id":"chatcmpl-76cbf7e4-37f7-471a-b670-74248c975b6d","model":"mistral.voxtral-mini-3b-2507","object":"chat.completion","service_tier":"default","usage":{"completion_tokens":198,"prompt_tokens":384,"total_tokens":582}}'
-  recorded_at: Mon, 14 Sep 2026 09:45:38 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJsb2dwcm9icyI6bnVsbCwibWVzc2FnZSI6eyJjb250ZW50IjoiKipJdCdzIHVuY2xlYXIgZXhhY3RseSB3aGF0IGlzIGJlaW5nIHN0YXRlZDoqKlxuXG5JbiB0aGUgcGhyYXNlICoqXCJSdWJ5IGlzIGEgcHJvZ3JhbW1pbmcgbGFuZ3VhZ2UgZGVzaWduZWQgZm9yIGRldmVsb3BlciBoYXBwaW5lc3MuXCIqKiwgdGhlIHNwZWFrZXIgZ2VuZXJhbGl6ZXMgdGhlIHNpZ25pZmljYW5jZSBvZiBSdWJ5IG9yIGFnZ3JlZ2F0ZXMgdGhlaXIgb3BpbmlvbiBhYm91dCBSdWJ5J3MgdXRpbGl0eSBhbmQgdGhlIGxhbmd1YWdlJ3MgZGVzaWduIHBoaWxvc29waHkuIFN0aWxsLCBtdWx0aXBsZSBpbnRlcnByZXRhdGlvbnMgY291bGQgcG90ZW50aWFsbHkgZmlsbCB0aG9zZSBzaG9lcy4gV2UgbWlnaHQgY29uc2lkZXI6XG4tICoqXCJSdWJ5IGlzIHVzZXItZnJpZW5kbHkgYW5kIHN0cmFpZ2h0Zm9yd2FyZCB0byBsZWFybiBmb3IgZGV2ZWxvcGVycy5cIioqIChEdWUgdG8gaXRzIHJlbGF0aXZlbHkgc2ltcGxlIHN5bnRheCBjb21wYXJlZCB0byBtb3JlIHN5bnRhY3RpY2FsbHkgc3RyaWN0IGxhbmd1YWdlcy4pXG4tICoqXCJSdWJ5IHByb21vdGVzIGRldmVsb3BlcnMnIG1lbnRhbCB3ZWxsYmVpbmcgYnkgYmVpbmcgc3ludGFjdGljYWxseSBsZXNzIGJsdWRnZW9uaW5nIGFuZCBtb3JlIGV4cHJlc3NpdmUgdGhhbiBzb21lIG90aGVyIGxhbmd1YWdlcy5cIioqIChSZWFkZXJzIHNob3VsZCByZW1lbWJlciB0aGlzIGlzIGEgbGlnaHQtaGVhcnRlZCBzdGF0ZW1lbnQsIGRvbid0JyB0YWtlIGl0IHRvbyBsaXRlcmFsbHkuKVxuLSAqKlwiUnVieSBmaXRzIGludG8gdmFyaW91cyByb2xlcywgY29udHJpYnV0aW5nIHRvIGJ1aWxkaW5nIGV2ZXJ5dGhpbmcgZnJvbSB3ZWIgYXBwbGljYXRpb25zIHRvIGdhbWUgZGV2ZWxvcG1lbnQuKipcIlxuXG5TaW5jZSBpdCBkb2VzbuKAmXQgZ2l2ZSBhIGNvbXBsZXRlIHN0YXRlbWVudCwgbGV0J3MgaW50ZXJwcmV0IHRoZXNlIGxvb3NlbHk6XG4xLiBSdWJ5IGlzIGF0dHJhY3RpbmcgZGV2ZWxvcGVycyBtb3JlIGVhc2lseSBjb21wYXJlZCB0byBzb21lIG90aGVyIGxhbmd1YWdlcyBiZWNhdXNlIGl0cyBkZXNpZ24gcGhpbG9zb3BoeSBpcyB1bmlxdWUuXG4yLiBSdWJ5J3MgcG9wdWxhcml0eSBpcyBpbmNyZWFzaW5nIHRoZSBmaXhhdGlvbiBkdWUgdG8gaXRzIFwid2FybVwiIGxhbmd1YWdlIHByb2ZpY2llbmNpZXMgcmF0aGVyIHRoYW4gXCJ0b3VnaFwiIHJpZ2lkbmVzcy5cbjMuIFJ1YnksIGJlaW5nIGFzIGZhc3QgYW5kIGFkYXB0YWJsZSBlbmNvbXBhc3NlcyBhIHZhcmlldHkgb2YgYmlnIGFuZCBzbWFsbC10aW1lIGdhbWVzIGNvbXBhcmVkIHRvIHR5cGljYWwgaW5pdGlhdGl2ZXMuXG5cbkNvbnNpZGVyIHRoZXNlIGludGVycHJldGF0aW9ucyBhcyBicm9hZGx5IGNvcnJlY3QgdW5sZXNzIHN0YXRlZCBvdGhlcndpc2UuIiwicmVmdXNhbCI6bnVsbCwicm9sZSI6ImFzc2lzdGFudCJ9fV0sImNyZWF0ZWQiOjE3ODk1NDE1ODUsImlkIjoiY2hhdGNtcGwtZmY3MzkwOTItNDJhMS00ZTMxLTk3ZTktZjA5NGYyOWFhYjlkIiwibW9kZWwiOiJtaXN0cmFsLnZveHRyYWwtbWluaS0zYi0yNTA3Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwic2VydmljZV90aWVyIjoiZGVmYXVsdCIsInVzYWdlIjp7ImNvbXBsZXRpb25fdG9rZW5zIjoyNTcsInByb21wdF90b2tlbnMiOjM4NCwidG90YWxfdG9rZW5zIjo2NDF9fQ==
+  recorded_at: Wed, 16 Sep 2026 06:53:06 GMT
 recorded_with: VCR 6.4.0

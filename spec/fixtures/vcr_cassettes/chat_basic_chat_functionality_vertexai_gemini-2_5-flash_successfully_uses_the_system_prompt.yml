@@ -20,14 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Mon, 14 Sep 2026 09:43:02 GMT
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
       Pragma:
       - no-cache
+      Date:
+      - Wed, 16 Sep 2026 06:52:01 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Vary:
@@ -52,11 +52,11 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/cloud-platform",
+          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/sqlservice.login",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Mon, 14 Sep 2026 09:43:02 GMT
+  recorded_at: Wed, 16 Sep 2026 06:52:01 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -87,7 +87,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 09:43:08 GMT
+      - Wed, 16 Sep 2026 06:52:04 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -110,18 +110,18 @@ http_interactions:
                 "role": "model",
                 "parts": [
                   {
-                    "text": "I'd love to tell you about the weather, but since I don't know your current location, I can only give you a general overview!\n\nGlobally, the weather is, as always, incredibly diverse. Somewhere it's sunny and warm, perfect for a picnic. Elsewhere, there might be rain showers, perhaps even a thunderstorm brewing, or a gentle snowfall blanketing the ground. Temperatures can range from well below freezing in polar regions to scorching heat in deserts.\n\n**Generally speaking, for many parts of the Northern Hemisphere, we're transitioning into or are firmly in spring,** which often brings a mix of sunshine, occasional rain (sometimes heavy), and fluctuating temperatures. Days are getting longer, and we might see some breezy conditions as weather systems move through.\n\n**In the Southern Hemisphere, autumn is in full swing,** meaning cooler temperatures, shorter days, and potentially more frequent rainfall as winter approaches.\n\nTo get the most accurate and relevant weather information for *your* specific location, I highly recommend checking a local weather app, website, or your preferred news channel. They'll have up-to-the-minute details on temperature, precipitation, wind speed, and any alerts for your area.\n\nAnd remember, always be prepared for whatever the skies might bring! XKCD7392."
+                    "text": "I'd love to tell you about the weather! To give you the most accurate and useful information, I need to know your **location**.\n\nAre you interested in:\n*   The weather right now in a specific city or region?\n*   The forecast for the next few hours or days?\n*   General weather conditions around the world?\n\nWithout a location, I can tell you some general things about weather:\n\nWeather is the state of the atmosphere at a particular place and time. It's constantly changing due to various factors like:\n*   **Temperature:** How hot or cold it is.\n*   **Precipitation:** Rain, snow, sleet, or hail.\n*   **Humidity:** The amount of moisture in the air.\n*   **Wind:** The speed and direction of air movement.\n*   **Cloud Cover:** How much of the sky is covered by clouds.\n*   **Atmospheric Pressure:** High pressure usually means clear skies, while low pressure often brings storms.\n\nIf you let me know your city, state, or even a country, I can try to give you a more precise update! Many weather services and apps, like AccuWeather, The Weather Channel, or government meteorological services, provide real-time updates and forecasts. You might find XKCD7392 an interesting reference point for some data if you're ever dealing with very specific meteorological data sets."
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.48440546106409144
+              "avgLogprobs": -0.64787194203522247
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 25,
-            "candidatesTokenCount": 270,
-            "totalTokenCount": 483,
+            "candidatesTokenCount": 295,
+            "totalTokenCount": 500,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -132,14 +132,14 @@ http_interactions:
             "candidatesTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 270
+                "tokenCount": 295
               }
             ],
-            "thoughtsTokenCount": 188
+            "thoughtsTokenCount": 180
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-09-14T09:43:02.603030Z",
-          "responseId": "psGnapbnJPi4hu0P4dz-sAI"
+          "createTime": "2026-09-16T06:52:01.302683Z",
+          "responseId": "kTyqatu8Epe1-eQPouTyeA"
         }
-  recorded_at: Mon, 14 Sep 2026 09:43:08 GMT
+  recorded_at: Wed, 16 Sep 2026 06:52:04 GMT
 recorded_with: VCR 6.4.0

@@ -24,25 +24,27 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:45:46 GMT
+      - Wed, 16 Sep 2026 06:53:15 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Set-Cookie:
+      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a09f4e-ec14-74fa-b87f-09067fcd62e6
+      - 01a0a8fd-b22d-77f5-be7d-f1fc718c3cb0
       X-Kong-Request-Id:
-      - 01a09f4e-ec14-74fa-b87f-09067fcd62e6
+      - 01a0a8fd-b22d-77f5-be7d-f1fc718c3cb0
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '200000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '199742'
+      - '199802'
       X-Ratelimit-Tokens-Query-Cost:
-      - '258'
+      - '198'
       X-Ratelimit-Limit-Audio-Seconds-Minute:
       - '2000'
       X-Ratelimit-Remaining-Audio-Seconds-Minute:
@@ -54,46 +56,41 @@ http_interactions:
       X-Ratelimit-Remaining-Req-Minute:
       - '359'
       X-Envoy-Upstream-Service-Time:
-      - '1774'
+      - '1580'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1802'
+      - '1585'
       X-Kong-Proxy-Latency:
-      - '118'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - "<COOKIE>"
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
+      - '20'
       X-Content-Type-Options:
       - nosniff
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"9a3d83d33ea14750923076983963762e","created":1789379145,"model":"voxtral-small-latest","usage":{"prompt_audio_seconds":3,"prompt_tokens":9,"total_tokens":633,"completion_tokens":249,"prompt_tokens_details":{"cached_tokens":0,"audio_tokens":375},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+      string: '{"id":"ea11aa1f40cd4180a1d16324bf4442f2","created":1789541593,"model":"voxtral-small-latest","usage":{"prompt_audio_seconds":3,"prompt_tokens":9,"total_tokens":573,"completion_tokens":189,"prompt_tokens_details":{"cached_tokens":0,"audio_tokens":375},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
         statement \"Ruby is a programming language designed for developer happiness\"
-        is a concise description of the Ruby programming language. Here''s a breakdown:\n\n-
-        **Ruby**: This refers to the programming language Ruby, which was created
-        by Yukihiro \"Matz\" Matsumoto in the mid-1990s.\n- **Programming language**:
-        Ruby is a high-level, interpreted programming language that is known for its
-        simplicity and ease of use.\n- **Designed for developer happiness**: This
-        phrase emphasizes the primary goal of Ruby''s design. The language aims to
-        make programming enjoyable and productive for developers. It achieves this
-        through features like:\n  - **Readability**: Ruby''s syntax is designed to
-        be easy to read and write, making it accessible even for beginners.\n  - **Productivity**:
-        Ruby provides powerful features and a rich standard library that help developers
-        write code quickly and efficiently.\n  - **Flexibility**: Ruby is a dynamic
-        language that allows developers to write code in a variety of styles, from
-        procedural to object-oriented.\n  - **Community**: Ruby has a strong and supportive
-        community that contributes to its growth and development.\n\nIn summary, the
-        statement highlights Ruby''s focus on creating a pleasant and productive programming
-        experience for developers."}}]}'
-  recorded_at: Mon, 14 Sep 2026 09:45:46 GMT
+        is expressing that Ruby, a high-level programming language, is created with
+        the goal of making developers'' lives easier and more enjoyable. This is often
+        achieved through features like:\n\n1. **Simplicity and Readability**: Ruby''s
+        syntax is designed to be easy to read and write, which can make coding more
+        intuitive and less error-prone.\n2. **Productivity**: Ruby aims to increase
+        developer productivity by providing powerful features and tools that simplify
+        common tasks.\n3. **Community and Culture**: The Ruby community is known for
+        being supportive and collaborative, which can contribute to a positive development
+        experience.\n4. **Convention over Configuration**: Ruby follows the principle
+        of convention over configuration, which means it provides sensible defaults
+        and reduces the need for boilerplate code.\n\nOverall, the statement suggests
+        that Ruby is designed to make the process of writing and maintaining code
+        more pleasant and efficient for developers."}}]}'
+  recorded_at: Wed, 16 Sep 2026 06:53:15 GMT
 recorded_with: VCR 6.4.0

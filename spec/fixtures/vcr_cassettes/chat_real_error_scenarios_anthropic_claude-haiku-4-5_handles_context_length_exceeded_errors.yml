@@ -25,7 +25,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:40:44 GMT
+      - Wed, 16 Sep 2026 06:48:34 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -45,20 +45,20 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-04fae1667b50968a5dfa95a4518e00ec-cbc042349d1a12d8-01
+      - 00-55392c18d48f44910f28390cb0ec0ad8-a9f8ed2c3b6f7ec8-01
       Vary:
       - Accept-Encoding
+      X-Robots-Tag:
+      - none
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Cf-Cache-Status:
       - DYNAMIC
-      X-Robots-Tag:
-      - none
       Cf-Ray:
       - "<CF_RAY>"
     body:
       encoding: UTF-8
       string: '{"type":"error","error":{"type":"invalid_request_error","message":"prompt
-        is too long: 3333404 tokens > 200000 maximum"},"request_id":"req_011Cf37QvhXivLkHb51G54Ta"}'
-  recorded_at: Mon, 14 Sep 2026 09:40:45 GMT
+        is too long: 3333404 tokens > 200000 maximum"},"request_id":"req_011Cf6fuDSNc4uD7Juk2EwFC"}'
+  recorded_at: Wed, 16 Sep 2026 06:48:34 GMT
 recorded_with: VCR 6.4.0

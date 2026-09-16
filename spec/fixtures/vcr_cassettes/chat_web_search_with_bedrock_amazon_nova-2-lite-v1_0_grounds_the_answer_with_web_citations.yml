@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260914T094751Z
+      - 20260916T064947Z
       X-Amz-Content-Sha256:
       - a28e1d7f145ec6abf9e71788a74513f7e39e26432272e2faecb469dc1e7c3457
       Authorization:
@@ -29,22 +29,28 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:47:54 GMT
+      - Wed, 16 Sep 2026 06:49:50 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1357'
+      - '1899'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 84adc9c5-e59c-45d2-a3e0-83bf9c06d7bd
+      - e2c012dd-cdaa-45dc-817c-f978ee06d12a
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":2405},"output":{"message":{"content":[{"toolUse":{"input":{"query":"latest
-        stable Ruby version"},"name":"nova_grounding","toolUseId":"tooluse_iG9AHabGDvQjRc6NWJsZSw","type":"server_tool_use"}},{"toolResult":{"content":[{"text":"[HIDDEN]"}],"status":"success","toolUseId":"tooluse_iG9AHabGDvQjRc6NWJsZSw","type":"nova_grounding_result"}},{"text":"The
-        latest stable Ruby version is 4.0.6, released on July 13, 2026. This version
-        is the most recent stable release as of now"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/en/downloads/releases/"}}}]}},{"citationsContent":{"citations":[{"location":{"web":{"domain":"endoflife.date","url":"https://endoflife.date/ruby"}}}]}},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/es/downloads/"}}}]}},{"text":".\n\nRuby
-        version 4.0.6 includes various improvements and bug fixes over previous versions.
-        It is the current recommended version for production use and development"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/en/downloads/releases/"}}}]}},{"text":"."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":141,"outputTokens":100,"serverToolUsage":{},"totalTokens":241}}'
-  recorded_at: Mon, 14 Sep 2026 09:47:54 GMT
+      string: '{"metrics":{"latencyMs":2494},"output":{"message":{"content":[{"toolUse":{"input":{"query":"latest
+        stable Ruby version"},"name":"nova_grounding","toolUseId":"tooluse_9BXISXItR_4KMMTyupkmQA","type":"server_tool_use"}},{"toolResult":{"content":[{"text":"[HIDDEN]"}],"status":"success","toolUseId":"tooluse_9BXISXItR_4KMMTyupkmQA","type":"nova_grounding_result"}},{"text":"The
+        latest stable Ruby version is **4.0.6**, released on July 16, 2026. This version
+        is part of the Ruby 4.0 series, which is currently under normal maintenance"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"https://www.ruby-lang.org/en/downloads/releases/"}}}]}},{"citationsContent":{"citations":[{"location":{"web":{"domain":"github.com","url":"https://github.com/ruby/ruby/releases"}}}]}},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"http://www.ruby-lang.org/en/news/"}}}]}},{"text":".\n\nRuby
+        4.0.6 includes security fixes and bug fixes, and it is the recommended version
+        for users who need the latest stable features and improvements. The release
+        notes and changelog for this version are available on the official Ruby website
+        and GitHub repository"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"http://www.ruby-lang.org/en/news/"}}}]}},{"text":".\n\nIf
+        you are using an older version of Ruby, it is highly recommended to upgrade
+        to Ruby 4.0.6 to benefit from the latest security patches and improvements.
+        You can find detailed upgrade instructions and compatibility notes on the
+        Ruby website and in the official documentation"},{"citationsContent":{"citations":[{"location":{"web":{"domain":"ruby-lang.org","url":"http://www.ruby-lang.org/en/news/"}}}]}},{"text":"."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":141,"outputTokens":198,"serverToolUsage":{},"totalTokens":339}}'
+  recorded_at: Wed, 16 Sep 2026 06:49:51 GMT
 recorded_with: VCR 6.4.0

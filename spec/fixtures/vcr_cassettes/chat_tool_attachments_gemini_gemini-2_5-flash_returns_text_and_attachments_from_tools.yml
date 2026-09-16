@@ -33,7 +33,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 10:10:40 GMT
+      - Wed, 16 Sep 2026 06:56:38 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -43,7 +43,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=674
+      - gfet4t7; dur=679
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -61,7 +61,7 @@ http_interactions:
                       "name": "file_fetch",
                       "args": {}
                     },
-                    "thoughtSignature": "CucBARFNMg8bRLlKfyfOZyzeDPWzvN1qhKSMbhyB1I3dSydHwg4whFqjnlOj7dHI4E0KByBcBdJSJBJwourIx7yWdyn/aSG+mWcpzgQuIjk8e5+EDlJwMuFBf3JOXu42X+WZyKYl9z6Ve7keA9yqNI4cjemJeP5wtUhDa8jad7S3AOZXGPXyZwbQAK2/jkCJ6cKF4gtKxATGylJ0+Ry6WNvQluVmDKN5SEKNN15Uuj1drbk16zplnkNX9bJIYcNJ+LU9a2R988F3wbIiMyQFdRmf3opECDTMM0+AvO9ujsHBs4W9uB1056J2"
+                    "thoughtSignature": "CucBARFNMg+XTDddf6LnIkdgKvPSwsoHDMJ7/XqHPNllgHF4u83BW8M0XMhItAgcKC551gUC0s2j8dUp1rRQPDMkgWCbVV+PUatWr9/8vA+VtuPOelaEEpJdJ6vUPFQR9B9UmtlXwB/WTE4vvYw9AcxCcg9hCeVaN9gTEyRYvjxo5SFd8YBIE49LC5Q4RmOiXJLOxDNqia34R8CcBFNxe/8F3bpU55CZCV8z5496ekrB87O5/EztLxiuPbpp3yPnZ/Al/9SH7uCiPHji+v/prO2ihlz0mrxfVoA3sHwzUhPbiIE/QDRSE/WT"
                   }
                 ],
                 "role": "model"
@@ -74,27 +74,27 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 44,
             "candidatesTokenCount": 10,
-            "totalTokenCount": 102,
+            "totalTokenCount": 104,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 44
               }
             ],
-            "thoughtsTokenCount": 48,
+            "thoughtsTokenCount": 50,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "H8inaqvVI-asvdIPupCQmQQ"
+          "responseId": "pj2qavvSE7aIxN8P1IWHuQg"
         }
-  recorded_at: Mon, 14 Sep 2026 10:10:40 GMT
+  recorded_at: Wed, 16 Sep 2026 06:56:38 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Use the file_fetch tool,
-        then tell me exactly what the fetched file says."}]},{"role":"model","parts":[{"functionCall":{"name":"file_fetch","args":{}},"thoughtSignature":"CucBARFNMg8bRLlKfyfOZyzeDPWzvN1qhKSMbhyB1I3dSydHwg4whFqjnlOj7dHI4E0KByBcBdJSJBJwourIx7yWdyn/aSG+mWcpzgQuIjk8e5+EDlJwMuFBf3JOXu42X+WZyKYl9z6Ve7keA9yqNI4cjemJeP5wtUhDa8jad7S3AOZXGPXyZwbQAK2/jkCJ6cKF4gtKxATGylJ0+Ry6WNvQluVmDKN5SEKNN15Uuj1drbk16zplnkNX9bJIYcNJ+LU9a2R988F3wbIiMyQFdRmf3opECDTMM0+AvO9ujsHBs4W9uB1056J2"}]},{"role":"user","parts":[{"functionResponse":{"name":"file_fetch","response":{"name":"file_fetch","content":[{"text":"Fetched
+        then tell me exactly what the fetched file says."}]},{"role":"model","parts":[{"functionCall":{"name":"file_fetch","args":{}},"thoughtSignature":"CucBARFNMg+XTDddf6LnIkdgKvPSwsoHDMJ7/XqHPNllgHF4u83BW8M0XMhItAgcKC551gUC0s2j8dUp1rRQPDMkgWCbVV+PUatWr9/8vA+VtuPOelaEEpJdJ6vUPFQR9B9UmtlXwB/WTE4vvYw9AcxCcg9hCeVaN9gTEyRYvjxo5SFd8YBIE49LC5Q4RmOiXJLOxDNqia34R8CcBFNxe/8F3bpU55CZCV8z5496ekrB87O5/EztLxiuPbpp3yPnZ/Al/9SH7uCiPHji+v/prO2ihlz0mrxfVoA3sHwzUhPbiIE/QDRSE/WT"}]},{"role":"user","parts":[{"functionResponse":{"name":"file_fetch","response":{"name":"file_fetch","content":[{"text":"Fetched
         the file."}]}}},{"text":"<file name=''ruby.txt'' mime_type=''text/plain''>Ruby
         is the best.</file>"}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"file_fetch","description":"Fetches
         the requested file","parametersJsonSchema":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}]}]}'
@@ -123,7 +123,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 14 Sep 2026 10:10:40 GMT
+      - Wed, 16 Sep 2026 06:56:39 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -133,7 +133,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=435
+      - gfet4t7; dur=351
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -169,7 +169,7 @@ http_interactions:
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "IMinavqgFs6NxN8P2oGAiQw"
+          "responseId": "pz2qasKMAdjbxs0Pwei60A4"
         }
-  recorded_at: Mon, 14 Sep 2026 10:10:40 GMT
+  recorded_at: Wed, 16 Sep 2026 06:56:39 GMT
 recorded_with: VCR 6.4.0

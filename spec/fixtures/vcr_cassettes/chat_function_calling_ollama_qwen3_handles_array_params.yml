@@ -26,22 +26,25 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 09:42:55 GMT
+      - Wed, 16 Sep 2026 06:52:33 GMT
       Content-Length:
-      - '1197'
+      - '1397'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-822","object":"chat.completion","created":1789378975,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Okay,
+      string: '{"id":"chatcmpl-946","object":"chat.completion","created":1789541553,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Okay,
         the user wants me to call the array params tool with the tags [\"red\", \"blue\"]
-        and get the combined tags. Let me check the function definition.\n\nThe tool''s
-        function is described as taking an array of strings called tags. The parameters
-        are set up to use the array, so I just need to pass the list. The user specified
-        the tags as [\"red\", \"blue\"], so I should structure the arguments accordingly.
-        \n\nI need to make sure the JSON is correctly formatted with the tags array.
-        The function name is \"array_params\". So the tool call should include the
-        name and the arguments as a JSON object with the tags array. Let me double-check
-        the syntax to avoid any errors. Alright, that should do it.\n","tool_calls":[{"id":"call_244hqrn0","index":0,"type":"function","function":{"name":"array_params","arguments":"{\"tags\":[\"red\",\"blue\"]}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":162,"prompt_tokens_details":{"cached_tokens":2},"completion_tokens":178,"total_tokens":340}}
+        and get the combined tags. Let me check the function definition again. The
+        tool''s function is supposed to take an array of strings called tags. The
+        parameters are defined as an array with items being strings. So I need to
+        structure the arguments correctly.\n\nWait, the function''s parameters are
+        specified as an array of tags. The user provided two tags, red and blue. So
+        the arguments should be a JSON object with a \"tags\" key whose value is the
+        array [\"red\", \"blue\"]. \n\nLet me make sure I''m not missing any other
+        parameters. The function seems to only require the tags array. So the tool
+        call should be straightforward. Just pass the tags as specified. The user
+        wants the combined tags, which probably means the function will return them
+        as a single array. Alright, I''ll format the tool call accordingly.\n","tool_calls":[{"id":"call_lsw20vdu","index":0,"type":"function","function":{"name":"array_params","arguments":"{\"tags\":[\"red\",\"blue\"]}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":162,"prompt_tokens_details":{"cached_tokens":2},"completion_tokens":216,"total_tokens":378}}
 
         '
-  recorded_at: Mon, 14 Sep 2026 09:42:55 GMT
+  recorded_at: Wed, 16 Sep 2026 06:52:33 GMT
 recorded_with: VCR 6.4.0

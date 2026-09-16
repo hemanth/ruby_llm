@@ -26,7 +26,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 09:39:19 GMT
+      - Wed, 16 Sep 2026 06:48:29 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -42,13 +42,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-a0ac1ad7f8dd66b63a067189e0717622-a1f37f3100095be7-00
+      - 00-b0c618ec15de2b5d7e68034f07cd751d-904ab0c10005c191-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 8ecf5dd1-0506-49ea-9b6b-d2492b79a46f
+      - dd693af1-2107-401f-9bdb-6c54b1d97051
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -62,9 +62,9 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '49'
+      - '47'
       X-Ratelimit-Reset-Requests:
-      - '1'
+      - '4'
       X-Ratelimit-Limit-Requests:
       - '50'
       X-Ratelimit-Renewalperiod-Requests:
@@ -84,7 +84,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 8ecf5dd1-0506-49ea-9b6b-d2492b79a46f
+      - dd693af1-2107-401f-9bdb-6c54b1d97051
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -93,25 +93,25 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"0f7d3f82-0eca-4009-a59e-5e3bc9f9f206","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"**Matzuda
-        Yukihiro Matsumoto**, commonly known as **Matz**, created the Ruby programming
-        language. \n\nHe first released it in 1995 in Japan, designing it to make
-        programming more enjoyable and human-friendly, influenced by languages like
-        Perl, Smalltalk, and Lisp. Ruby''s official site and documentation credit
-        him as the creator, and he''s still actively involved in its development."},"finish_reason":"stop"}],"usage":{"prompt_tokens":10,"completion_tokens":77,"total_tokens":87,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":163,"audio_tokens":0,"text_tokens":10,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789378760,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Mon, 14 Sep 2026 09:39:21 GMT
+      string: '{"id":"4788eb7c-48a5-41d6-a8a7-eb10542907ba","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"**Matz
+        (Yukihiro Matsumoto)** is the creator of the Ruby programming language.\n\nRuby
+        was first released in 1995 by Matsumoto, a Japanese programmer often nicknamed
+        \"Matz.\" He designed it to prioritize programmer happiness and simplicity,
+        blending influences from Perl, Smalltalk, Eiffel, Ada, and Lisp. Matsumoto
+        remains actively involved in Ruby''s development as the project leader."},"finish_reason":"stop"}],"usage":{"prompt_tokens":10,"completion_tokens":76,"total_tokens":86,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":161,"audio_tokens":0,"text_tokens":10,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789541309,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Wed, 16 Sep 2026 06:48:30 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
     body:
       encoding: UTF-8
       string: '{"model":"grok-4-1-fast-non-reasoning","messages":[{"role":"user","content":"Who
-        is the creator of the programming language Ruby?"},{"role":"assistant","content":"**Matzuda
-        Yukihiro Matsumoto**, commonly known as **Matz**, created the Ruby programming
-        language. \n\nHe first released it in 1995 in Japan, designing it to make
-        programming more enjoyable and human-friendly, influenced by languages like
-        Perl, Smalltalk, and Lisp. Ruby''s official site and documentation credit
-        him as the creator, and he''s still actively involved in its development."},{"role":"user","content":"What
+        is the creator of the programming language Ruby?"},{"role":"assistant","content":"**Matz
+        (Yukihiro Matsumoto)** is the creator of the Ruby programming language.\n\nRuby
+        was first released in 1995 by Matsumoto, a Japanese programmer often nicknamed
+        \"Matz.\" He designed it to prioritize programmer happiness and simplicity,
+        blending influences from Perl, Smalltalk, Eiffel, Ada, and Lisp. Matsumoto
+        remains actively involved in Ruby''s development as the project leader."},{"role":"user","content":"What
         year did he create Ruby?"}],"stream":false}'
     headers:
       User-Agent:
@@ -132,7 +132,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 09:39:21 GMT
+      - Wed, 16 Sep 2026 06:48:30 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -148,13 +148,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-203c38810fcaba6b60a6eedfb94db394-a1f37f3100095c0b-00
+      - 00-7882c3a251f81e2eaf8f82826f6cd679-03fd39f60048d0ce-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - feaee268-7fbd-46ba-9c99-2f4ad77eaeef
+      - f6042333-5641-4029-b449-2c5ce477c10f
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -168,9 +168,9 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '49'
+      - '47'
       X-Ratelimit-Reset-Requests:
-      - '1'
+      - '3'
       X-Ratelimit-Limit-Requests:
       - '50'
       X-Ratelimit-Renewalperiod-Requests:
@@ -190,7 +190,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - feaee268-7fbd-46ba-9c99-2f4ad77eaeef
+      - f6042333-5641-4029-b449-2c5ce477c10f
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -199,9 +199,10 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"12b906c8-9989-467c-9503-7d0969f91899","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"**1995**.
-        \n\nMatzuda Yukihiro Matsumoto released the first version of Ruby (version
-        0.95) on December 21, 1995. This is confirmed in the official Ruby history
-        on ruby-lang.org and Matsumoto''s own accounts. Ruby 1.0 followed in 1996."},"finish_reason":"stop"}],"usage":{"prompt_tokens":105,"completion_tokens":62,"total_tokens":167,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":178,"audio_tokens":0,"text_tokens":105,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789378761,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Mon, 14 Sep 2026 09:39:22 GMT
+      string: '{"id":"739d6fb8-59be-4908-b07b-e47831e070f3","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"**1995**\n\nYukihiro
+        \"Matz\" Matsumoto released the first version of Ruby (version 0.95) on December
+        21, 1995. The language has since evolved through community contributions,
+        with major stable releases like Ruby 1.0 in 2003 and the current versions
+        in the 3.x series."},"finish_reason":"stop"}],"usage":{"prompt_tokens":104,"completion_tokens":68,"total_tokens":172,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":178,"audio_tokens":0,"text_tokens":104,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789541310,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Wed, 16 Sep 2026 06:48:31 GMT
 recorded_with: VCR 6.4.0

@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 10:10:28 GMT
+      - Wed, 16 Sep 2026 06:56:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -49,7 +49,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '824'
+      - '1945'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -76,15 +76,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "resp_030408562cd2717c016aa7c813281c87d29518c5fdc8cfea07",
+          "id": "resp_09ecb00978d1af97016aaa3d98a24487d2919e7741b1e61771",
           "object": "response",
-          "created_at": 1789380627,
+          "created_at": 1789541784,
           "status": "completed",
           "background": false,
           "billing": {
             "payer": "developer"
           },
-          "completed_at": 1789380627,
+          "completed_at": 1789541786,
           "error": null,
           "frequency_penalty": 0.0,
           "incomplete_details": null,
@@ -95,11 +95,11 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "fc_030408562cd2717c016aa7c813db9487d2ba68d86ed222cb2c",
+              "id": "fc_09ecb00978d1af97016aaa3d99bc4087d2a4986721d6b26bcd",
               "type": "function_call",
               "status": "completed",
               "arguments": "{}",
-              "call_id": "call_f4YZpYZi8YwUsB03K0bYEriW",
+              "call_id": "call_VeFWzf8hvXoqf5S63ZDtU18k",
               "name": "dice_roll"
             }
           ],
@@ -177,14 +177,14 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Mon, 14 Sep 2026 10:10:28 GMT
+  recorded_at: Wed, 16 Sep 2026 06:56:26 GMT
 - request:
     method: post
     uri: https://api.openai.com/v1/responses
     body:
       encoding: UTF-8
       string: '{"model":"gpt-5.6","input":[{"role":"user","content":"Roll a die for
-        me"},{"type":"function_call","call_id":"call_f4YZpYZi8YwUsB03K0bYEriW","name":"dice_roll","arguments":"{}"},{"type":"function_call_output","call_id":"call_f4YZpYZi8YwUsB03K0bYEriW","output":"{\"roll\":6}"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"],"tools":[{"type":"function","name":"dice_roll","description":"Rolls
+        me"},{"type":"function_call","call_id":"call_VeFWzf8hvXoqf5S63ZDtU18k","name":"dice_roll","arguments":"{}"},{"type":"function_call_output","call_id":"call_VeFWzf8hvXoqf5S63ZDtU18k","output":"{\"roll\":4}"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"],"tools":[{"type":"function","name":"dice_roll","description":"Rolls
         a single six-sided die and returns the result","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true},"strict":false}]}'
     headers:
       User-Agent:
@@ -203,7 +203,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 10:10:29 GMT
+      - Wed, 16 Sep 2026 06:56:27 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -227,7 +227,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '1095'
+      - '1249'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -254,15 +254,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "resp_0961c1452c439f3b016aa7c814317487d2aa4987d607c7177d",
+          "id": "resp_0e0e91519a050959016aaa3d9aae1887d29c1f02b8f2569b79",
           "object": "response",
-          "created_at": 1789380628,
+          "created_at": 1789541786,
           "status": "completed",
           "background": false,
           "billing": {
             "payer": "developer"
           },
-          "completed_at": 1789380629,
+          "completed_at": 1789541787,
           "error": null,
           "frequency_penalty": 0.0,
           "incomplete_details": null,
@@ -273,7 +273,7 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "msg_0961c1452c439f3b016aa7c814d2e087d2a655d7007c36ba32",
+              "id": "msg_0e0e91519a050959016aaa3d9b68c887d297aa9bf08bb70fb5",
               "type": "message",
               "status": "completed",
               "content": [
@@ -281,7 +281,7 @@ http_interactions:
                   "type": "output_text",
                   "annotations": [],
                   "logprobs": [],
-                  "text": "\ud83c\udfb2 You rolled a **6**!"
+                  "text": "\ud83c\udfb2 You rolled a **4**."
                 }
               ],
               "phase": "final_answer",
@@ -362,5 +362,5 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Mon, 14 Sep 2026 10:10:29 GMT
+  recorded_at: Wed, 16 Sep 2026 06:56:28 GMT
 recorded_with: VCR 6.4.0

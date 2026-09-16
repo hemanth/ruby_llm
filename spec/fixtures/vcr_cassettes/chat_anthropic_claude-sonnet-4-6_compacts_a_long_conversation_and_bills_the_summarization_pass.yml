@@ -5428,7 +5428,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:50:57 GMT
+      - Wed, 16 Sep 2026 06:52:16 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -5440,25 +5440,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '9961000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-14T09:50:57Z'
+      - '2026-09-16T06:52:16Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-14T09:50:57Z'
+      - '2026-09-16T06:52:16Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-14T09:50:50Z'
+      - '2026-09-16T06:52:03Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '11961000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-14T09:50:57Z'
+      - '2026-09-16T06:52:16Z'
       Server:
       - cloudflare
       Request-Id:
@@ -5470,13 +5470,13 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-82cbd9102d436d717d5e38089793f954-b3d263e31e7f9275-01
+      - 00-3cd4f5a16514bb215d84de8cfd0b7154-6bd56c658380f23c-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=7051
+      - x-originResponse;dur=13471
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -5485,11 +5485,12 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-sonnet-4-6","id":"msg_011Cf38BmDHJ2M9cgY8Zt9j2","type":"message","role":"assistant","content":[{"type":"compaction","content":"The
-        user asked about their notes, which consisted entirely of the repeated sentence
-        \"The quick brown fox jumps over the lazy dog.\" They asked which animal jumps
-        in their notes. I correctly answered: \"The fox jumps.\" The task is complete
-        - there is nothing further to do."},{"type":"text","text":"Based on your notes,
-        **the fox** jumps over the lazy dog."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":159,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"iterations":[{"input_tokens":99195,"output_tokens":75,"cache_read_input_tokens":0,"cache_creation_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"type":"compaction"},{"input_tokens":159,"output_tokens":19,"cache_read_input_tokens":0,"cache_creation_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"type":"message"}],"output_tokens":19,"service_tier":"standard","inference_geo":"<GOOGLE_CLOUD_LOCATION>"},"context_management":{"applied_edits":[]}}'
-  recorded_at: Mon, 14 Sep 2026 09:50:57 GMT
+      string: '{"model":"claude-sonnet-4-6","id":"msg_011Cf6gArQXrJiLhuju3o34f","type":"message","role":"assistant","content":[{"type":"compaction","content":"The
+        user asked me to identify which animal jumps in their notes. The notes consisted
+        entirely of the repeated sentence \"The quick brown fox jumps over the lazy
+        dog.\" I correctly identified that the fox is the animal that jumps. The task
+        is complete - the answer is \"the fox.\" No further action is needed."},{"type":"text","text":"Based
+        on your notes, the animal that jumps is the **fox** (\"the quick brown fox
+        jumps over the lazy dog\")."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":166,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"iterations":[{"input_tokens":99195,"output_tokens":82,"cache_read_input_tokens":0,"cache_creation_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"type":"compaction"},{"input_tokens":166,"output_tokens":30,"cache_read_input_tokens":0,"cache_creation_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"type":"message"}],"output_tokens":30,"service_tier":"standard","inference_geo":"<GOOGLE_CLOUD_LOCATION>"},"context_management":{"applied_edits":[]}}'
+  recorded_at: Wed, 16 Sep 2026 06:52:16 GMT
 recorded_with: VCR 6.4.0

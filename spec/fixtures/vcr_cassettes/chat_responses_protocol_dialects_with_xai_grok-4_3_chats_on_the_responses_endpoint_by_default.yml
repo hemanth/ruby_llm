@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:48:18 GMT
+      - Wed, 16 Sep 2026 06:49:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -52,13 +52,11 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '595.2'
-      X-Metrics-Mean-Itl-Ms:
-      - '6.1'
+      - '321.0'
       X-Metrics-E2e-Ms:
-      - '1456.8'
+      - '1329.9'
       Traceparent:
-      - 00-8daf5afdfb84da3321f855b4d0c8cbca-2bfa76130001de5a-01
+      - 00-822ec3fb7dbe6814ff8976947d24a454-ba7b13730000c6b0-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -71,9 +69,9 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1789379297,"completed_at":1789379298,"id":"2584f3f2-c088-997b-8a6a-b2ed46bc267f","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_2584f3f2-c088-997b-8a6a-b2ed46bc267f","summary":[{"text":"The
-        question is: \"What is 2 + 2? Just the number.\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"UbO3vwZ0qRGEd8X+cbtZglOlv4fef2gZYhgIhAP5kV8SC3UT4oH4pSTQ3tnzecVCQNyzSzHRDOv41pSzkXWPLcE7Dhx1Z1Tz5c1DzewEFrE1RSQtubEX59qPVny4REh9v+GQKXymzgE9HYd3qvtmLfgaL4nA7BFIG6SHghbdSbf2R/wGKAvN/8W+KCI4m742rZkrt06aqHUHWGGwiV1oUK8edQTS/D4XX0jfNCwHOkxZZrgWIonEF7QDNyNA2prceeOD82tW+HlWF8mmdGFXa5aXF2Mfe4o1cV0zJz4u8fdakSLiUCi7aOrHmxq1j1RtX+w7KbGYhl8Gm8DunJQ2r6fxl21zQL2n8YZaNcZvGIXog5NP5C211gMbgkGDKLG7NfdBb3gsUSNvu9a16EOB03DxhXNS1Fdamx3+DoWF6FhTbaOXv1k4ZCu4AFY3Q1Kfguucb/mD0bk47Z8Mfxr5jF/jJMyKSLTsYMiLbSKH0hNyQv128xNvbQ/mF5jGB+kcOpt8DsUZOB9dZeHMzlkxh/slAVgPizYEUgP7XcQ0mtVcxPimsHpcSbYoqoHAjYpBtGwPMAk6H6WJ6tOtBT2DfzR8U5RfJoxc"},{"content":[{"type":"output_text","text":"4","logprobs":[],"annotations":[]}],"id":"msg_2584f3f2-c088-997b-8a6a-b2ed46bc267f","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":204,"input_tokens_details":{"cached_tokens":192},"output_tokens":104,"output_tokens_details":{"reasoning_tokens":103},"total_tokens":308,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":3134000,"context_details":{"input_tokens":204,"output_tokens":104}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Mon, 14 Sep 2026 09:48:18 GMT
+      string: '{"created_at":1789541395,"completed_at":1789541395,"id":"d952aad5-6221-9882-b6d6-ec49f0346197","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_d952aad5-6221-9882-b6d6-ec49f0346197","summary":[{"text":"The
+        question is: \"What is 2 + 2? Just the number.\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"Dj7OuwJ68TiFGhkv+oqqoUqvzzpKP+A0oWWieAAOl7XGETfeqbaxOXt1fyUY56CZ04NRh7AhiPRDYembp+rE2CHvegqUeU6MymTJFIicfojrqM8+h6FYf5ixkHpYCde9jOQbTiFqWLhB6CnYPQtoyT4O5uqqoxajM8q8ILasEshPZCWz4J2+3hQ414PCNZX8LgNP7Kfd+MzqdMmlkQfv7UhLPy8nzus/C3mJmPGiSg4kWuVxnpaPelYnLC5FgBgTnAO1BOUR4BrN1iV9GBXl1RLtThUi55J8O4OAyxrd73V1I5zQ4CTymqzfkpfxAbxQzM1WGZYJsYzOAf5E1+8IU/A7miPWrGw/YcVA1sQuK7F/aYN6ObhqLNyaMRo4WGdKmUT4MS0xb/tOLmtaWF6NqqJL4hzJlwPtwcrNGYlC+rKE9fxKgga0I2juvohur/ztTyu1aV8vbSWCP5+lJdODJjlNp4Ty8mR1miPl0cmXlyQxMHjdFpuK6vPgAgk5sT6DfQ"},{"content":[{"type":"output_text","text":"4","logprobs":[],"annotations":[]}],"id":"msg_d952aad5-6221-9882-b6d6-ec49f0346197","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":204,"input_tokens_details":{"cached_tokens":128},"output_tokens":92,"output_tokens_details":{"reasoning_tokens":87},"total_tokens":296,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":3506000,"context_details":{"input_tokens":204,"output_tokens":93}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Wed, 16 Sep 2026 06:49:55 GMT
 - request:
     method: post
     uri: https://api.x.ai/v1/responses
@@ -81,7 +79,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"grok-4.3","input":[{"role":"user","content":"What is 2 +
         2? Just the number."},{"type":"reasoning","summary":[{"type":"summary_text","text":"The
-        question is: \"What is 2 + 2? Just the number.\"\n"}],"encrypted_content":"UbO3vwZ0qRGEd8X+cbtZglOlv4fef2gZYhgIhAP5kV8SC3UT4oH4pSTQ3tnzecVCQNyzSzHRDOv41pSzkXWPLcE7Dhx1Z1Tz5c1DzewEFrE1RSQtubEX59qPVny4REh9v+GQKXymzgE9HYd3qvtmLfgaL4nA7BFIG6SHghbdSbf2R/wGKAvN/8W+KCI4m742rZkrt06aqHUHWGGwiV1oUK8edQTS/D4XX0jfNCwHOkxZZrgWIonEF7QDNyNA2prceeOD82tW+HlWF8mmdGFXa5aXF2Mfe4o1cV0zJz4u8fdakSLiUCi7aOrHmxq1j1RtX+w7KbGYhl8Gm8DunJQ2r6fxl21zQL2n8YZaNcZvGIXog5NP5C211gMbgkGDKLG7NfdBb3gsUSNvu9a16EOB03DxhXNS1Fdamx3+DoWF6FhTbaOXv1k4ZCu4AFY3Q1Kfguucb/mD0bk47Z8Mfxr5jF/jJMyKSLTsYMiLbSKH0hNyQv128xNvbQ/mF5jGB+kcOpt8DsUZOB9dZeHMzlkxh/slAVgPizYEUgP7XcQ0mtVcxPimsHpcSbYoqoHAjYpBtGwPMAk6H6WJ6tOtBT2DfzR8U5RfJoxc"},{"role":"assistant","content":[{"type":"output_text","text":"4"}]},{"role":"user","content":"Now
+        question is: \"What is 2 + 2? Just the number.\"\n"}],"encrypted_content":"Dj7OuwJ68TiFGhkv+oqqoUqvzzpKP+A0oWWieAAOl7XGETfeqbaxOXt1fyUY56CZ04NRh7AhiPRDYembp+rE2CHvegqUeU6MymTJFIicfojrqM8+h6FYf5ixkHpYCde9jOQbTiFqWLhB6CnYPQtoyT4O5uqqoxajM8q8ILasEshPZCWz4J2+3hQ414PCNZX8LgNP7Kfd+MzqdMmlkQfv7UhLPy8nzus/C3mJmPGiSg4kWuVxnpaPelYnLC5FgBgTnAO1BOUR4BrN1iV9GBXl1RLtThUi55J8O4OAyxrd73V1I5zQ4CTymqzfkpfxAbxQzM1WGZYJsYzOAf5E1+8IU/A7miPWrGw/YcVA1sQuK7F/aYN6ObhqLNyaMRo4WGdKmUT4MS0xb/tOLmtaWF6NqqJL4hzJlwPtwcrNGYlC+rKE9fxKgga0I2juvohur/ztTyu1aV8vbSWCP5+lJdODJjlNp4Ty8mR1miPl0cmXlyQxMHjdFpuK6vPgAgk5sT6DfQ"},{"role":"assistant","content":[{"type":"output_text","text":"4"}]},{"role":"user","content":"Now
         multiply that by 3. Just the number."}],"stream":false,"store":false,"include":["reasoning.encrypted_content"]}'
     headers:
       User-Agent:
@@ -100,7 +98,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:48:19 GMT
+      - Wed, 16 Sep 2026 06:49:57 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -114,11 +112,11 @@ http_interactions:
       X-Ratelimit-Limit-Tokens:
       - '10000000'
       X-Ratelimit-Remaining-Tokens:
-      - '9972648'
+      - '10000000'
       X-Ratelimit-Limit-Requests:
       - '1800'
       X-Ratelimit-Remaining-Requests:
-      - '1797'
+      - '1800'
       Cf-Cache-Status:
       - DYNAMIC
       X-Request-Id:
@@ -128,13 +126,11 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '223.1'
-      X-Metrics-Mean-Itl-Ms:
-      - '8.0'
+      - '215.4'
       X-Metrics-E2e-Ms:
-      - '792.2'
+      - '1168.1'
       Traceparent:
-      - 00-855e4bc0ec4a439f077931ccb4d56ce7-00010fa200024fcb-01
+      - 00-66671a2fac542e9bb37b62cf19efd595-27e7acf400010a75-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -147,7 +143,7 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1789379299,"completed_at":1789379299,"id":"99c97000-accb-9c66-8a59-18f6f5317b1c","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_99c97000-accb-9c66-8a59-18f6f5317b1c","summary":[{"text":"The
-        previous answer was 4 (from 2+2).\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"+WEjyRxrHcB2jtQwZe8al/TZBwbuHjc9Y0YDayeboYyDtz/qu5A3CZoxH4J7/ikCVZ9Mj3se+gbUoH/S4BmAX0DmIJZpH/YV+utoDcyUMWFSE0s1N1sn+bcEBVFgJ/f1RdAs+6UNAtUTRS54TX5usyBDfgaWtCWOi2Hd/W90e7HwXRQT4lZRUEP9YrxQuc2dBafT6GQOOwH+C4z56I2XZ9H/dGoBuI3gAAE4Nb6Ooc/QedQBn2K0coNJabIDKRJ3vHFp"},{"content":[{"type":"output_text","text":"12","logprobs":[],"annotations":[]}],"id":"msg_99c97000-accb-9c66-8a59-18f6f5317b1c","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":330,"input_tokens_details":{"cached_tokens":192},"output_tokens":52,"output_tokens_details":{"reasoning_tokens":51},"total_tokens":382,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":3409000,"context_details":{"input_tokens":330,"output_tokens":52}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Mon, 14 Sep 2026 09:48:19 GMT
+      string: '{"created_at":1789541397,"completed_at":1789541397,"id":"8670de77-61b0-9f48-8b7f-0818d6bb0129","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_8670de77-61b0-9f48-8b7f-0818d6bb0129","summary":[{"text":"The
+        user is following up: \"Now multiply that by 3. Just the number.\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"lGFr5Yjn0NKPYw4IVcQUDF2W0biePvax2ThuMNgBjOO+TUGriBsfOmxjg+N2Y0BmSb1Y/Ie0j7y6bANVQvatBJ8l1MWALQk1T+e3KIRdh+z9Avq2M1OcQln152vT2VANRlqKXFOlVw4m/QO9TTyFvs1RQefgKea/Mq5Swl7sNF4FgrwkHAz4PeN7IhLKlwk7LL+mY5uwcL07W1i8gyUMpLMIM5Z/lD3vqtbhY2FQ2w+vhafcW08gKLZDO6ANxaiuKi22pFOuCo7h0GxqYS7orspQAfTQvYB+2nsPoQlR2KA3VUMArWhuwb+n3cllbmz31kOo3XB3J1DIN7tWI3Khk9HxLxQWhjfFl0yIDvCaGBXXPWTSB1PZ230KC8XQz/hYX20i3ZkWYGrSSyApkGG6JJ25R1cd9QPBgxukm1BlZBzQapWhAJdSbWsx2j8NtaEDb6q+n587Y2nQb8G5cZsb"},{"content":[{"type":"output_text","text":"12","logprobs":[],"annotations":[]}],"id":"msg_8670de77-61b0-9f48-8b7f-0818d6bb0129","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":311,"input_tokens_details":{"cached_tokens":128},"output_tokens":97,"output_tokens_details":{"reasoning_tokens":92},"total_tokens":408,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":4968500,"context_details":{"input_tokens":311,"output_tokens":98}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Wed, 16 Sep 2026 06:49:57 GMT
 recorded_with: VCR 6.4.0

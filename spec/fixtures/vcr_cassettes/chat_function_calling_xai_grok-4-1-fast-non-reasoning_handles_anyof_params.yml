@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 10:00:40 GMT
+      - Wed, 16 Sep 2026 06:55:51 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -41,7 +41,7 @@ http_interactions:
       X-Ratelimit-Limit-Tokens:
       - '10000000'
       X-Ratelimit-Remaining-Tokens:
-      - '10000000'
+      - '9987543'
       X-Ratelimit-Limit-Requests:
       - '1800'
       X-Ratelimit-Remaining-Requests:
@@ -55,13 +55,11 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '454.4'
-      X-Metrics-Mean-Itl-Ms:
-      - '8.3'
+      - '476.8'
       X-Metrics-E2e-Ms:
-      - '2669.5'
+      - '2602.8'
       Traceparent:
-      - 00-549599d7fca914b7468fb7f8f0e688a8-b280232a00003012-01
+      - 00-b6f30ef2a7579b9d72a471e1b40ab4c0-55dc24ed0000c9a2-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -74,11 +72,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1789380039,"completed_at":1789380040,"id":"286386f0-61b5-9c33-a049-a63b0d9189ab","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_286386f0-61b5-9c33-a049-a63b0d9189ab","summary":[{"text":"The
+      string: '{"created_at":1789541751,"completed_at":1789541751,"id":"50075a3f-e8ae-9e9c-a755-a91628497936","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_50075a3f-e8ae-9e9c-a755-a91628497936","summary":[{"text":"The
         task is: \"Call the any-of params tool for task \"Review PR\" with status
-        \"pending\" and report the result.\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"oEeVh+dMX3PkTl1xm/YnAQWKA6msb4ufAEUONoKaerWHol9ENcT6dRyFXlQhSaoXOknmu9HKbmiQFssTPCpVqABxrc5P8OSeV89QHTAJylc+WQYrgpfJ+lcAIe01yI06NGahAqfKyUHm8u/ewjCcKr8TJfZKTnex6xuih50EFRaGW8w+BM+gDObcgnCWFHOLagsegkxHnQ8Z2wyw2M4YKl7cJig6spnW6d1iRtogF9D6YtsXLx3rb3Z1hxLphVjI1VbQVPGzY757uUL9M4iXOuBmjidAsWn2LVPPkUMPVkjG3qqQLaA3CxKC7sbY1IZozpv4oL037viNIOxP10sy+WF8V9WxmGgyUeYzdE3rS5RRSA/lakiUKswRDAcWHguXUF3/uvLhpPoYT2ke+Vq6LJIKIRFaeFZh69Vit2Ceamh6LRntf8WGkkZM3cINt/wk9gmM8H6KIuzU+tjri752fyTF6rUMhs8X4fI0SHSsSxRLVodDfRGyOXsI9W4MCWkF/vva1x7DKW1fFt9kfQXUvwRPB/xs7w5LXWtaXMDYi6IIE5AoIW7TJWYHSTq6Mn5wC7B7B3AE3S6h7jOXBR1dXN3kDFbz7SGI4V7QncRGw3mrPgxgYD+p2EymgwMAZM9fMeHnTNHJeMEORFsaYy/nVj0aE0L8jQZEL8IMmMk+kv2ivTZ1wOqLFZXKwfPyY8aGpeHihmPPCbpMrEH6o1eI9qIWkCmK0HBKqvHgnwke986yKKP0bkGd3vb5AoyaRmMk8Vo/CjmLF/k/EujAgUbDBwO0WNmswqrnzTGguKZA2W9g5J6TfAVe+XCANQGsquh3FZP1eKZcWhXmJqFLaveOYh9j8b7QazWNMJl3njLqlFv6IBtYnq4pEnQbw1jkCk3QU5CEPOcLmXIwcTUP8cjghfMP3OTkf+mfS+r+XOzB+PlH+nO5mMx0UlLwkYoMPDOrwNMAxjK/sbxB6gcnxCGFfRYLcSlIlCuwEscdacj1gqoOvjCVvFDWC9GbSNSwl56DtVOHI579XEOgcByPAexu9hLWQei8cH9MwHua4w3qIlafnB+G4M1jnk9hxFcX1q5nCt4SfNGuN77gl6Dh5Jkt0WBVoADhkkMaAOjpam9YKujdXfHdZR9YYaCMK6eRiLe7iWerOqkgPr9ZFTtYKeEck/Qi4hO0qh3/z2pGV+Kqcf7tS26YwSjshwKaVrHKTxY+hiHDZ9BvRhHLJdQ+FgVsOzzeiWd3CHr30jAvbmpPQcqZ08AWiXpp"},{"arguments":"{\"task\":\"Review
-        PR\",\"status\":\"pending\"}","call_id":"call-e5c6dfd9-9d74-44ee-b934-6f609562670d-0","name":"any_of_params","type":"function_call","id":"fc_286386f0-61b5-9c33-a049-a63b0d9189ab_0","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[{"type":"function","description":"Uses
+        \"pending\" and report the result.\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"d0y1vJKd0PfN/SItS0fSKklF2+KXg/08W77oXJ3lViajX51c623dzYbosYVlqYbaZ2qZUJCpIqpZye+3XMEdwR8ip8SJ67yACe6eu1OXTtxsWrrBkD/bgFDsE3eJw9JV04S8DaSQe0wmslmdxPrmilZlIAGBlJggX4bKpNo8yg6XDgepIgy0jM25mAwBP3rXR5Ag98UanW6QHF5WsqfDqWybLXWoBwFUC2/P7jzxG0GmdPEbOiNdXqU0wSWWW4j+S50vEcwJZHQX797cZifonrGjXfinUaXowuBb4nWPDU5McAP5H/yCdm5AAnIkts83kF7CUbsQFKcPElE4bV+2MammmrAe14+qwNuaCyuLqhX2lEYbtEXduNvx0+2XjEhAbMQoBCLtXwflMucoZH42gYz8bvuIVJpG0g3xjw3S1sHEPPDlzVBgWZOZjkdKyHk4Y+0aSBfYuWLeEz63YydI9c1EXZYdNHNNgPN5LrPrt038Jy9d89Huil4GL3JjE+GxxLT7g7J9UE68AutBSyX1njgiO+O4hoqvqonDj+xyg+OwK7tFcFHhCSpS3eFx7Eec5UDyolev+q2tdCfo6bgBRE/ZfhgBdk2Kii3hls4m5/lFzGy88d2Is1twZlW8cykJvHovrkpKZfJhIfJz1h5T2eNZQ4jcUF/Y3MOx5a1jN+6YpfCa9ubWzQv8TaaHjcUtR8BfkWCuTBv4yZKx4l4FRaoxPbRLWPy7DJqS/P2BsBWYi3PwCrURObPROWMav9+cugarzvDy6UxU1vsgXgwTh7FKvUjidXIdjUfGwiX01uxhhym6uYFRvhgkdjdVtHHZaArXz6oMUjKI+n2Vcr5YaEF+HfQbZ00cXQ2a2HR5aQ1xCFduMLHSSy7Uow2j0fcA2dGPrehmE1WUA6sVPeJgXmvoa9ABMgRFUFibo2Q8u7zJ9ALsMFtf/3vShXgGmkWi0OXMNl0qJ166QnGA5oddsYAFby1QTA5q0phsr4qNfmirP/d+MNQyhVyveNpiv0oxP4BTpKOWkCmHgD31xzUKsHMPkyxEcZpPL6khCiHcUyX8ZQlsxUGRetZw5nFVPB46kXuxNMWfxNex2mW6v6xTUTtUn7PMOWgH7Aa6oHbOWTTVKievv6pAx4Uo4zyFaR88I1XLaAZCMlb5PHwgQsda5gmTXKDe6SHdlvK6DtxjuKEuO5pZVDDQdd7CG/TRv5z2unmhA7K2ifwMeRpCBT1p1A"},{"arguments":"{\"task\":\"Review
+        PR\",\"status\":\"pending\"}","call_id":"call-ee44e720-63bd-4a0b-be73-ea9dffe8b474-0","name":"any_of_params","type":"function_call","id":"fc_50075a3f-e8ae-9e9c-a755-a91628497936_0","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[{"type":"function","description":"Uses
         params DSL any_of support","name":"any_of_params","parameters":{"type":"object","properties":{"task":{"type":"string","description":"Task
-        description"},"status":{"description":"Optional task status","anyOf":[{"type":"string","enum":["pending","done"]},{"type":"null"}]}},"required":["task","status"],"additionalProperties":false},"strict":false}],"top_p":0.95,"usage":{"input_tokens":345,"input_tokens_details":{"cached_tokens":192},"output_tokens":236,"output_tokens_details":{"reasoning_tokens":217},"total_tokens":581,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":8196500,"context_details":{"input_tokens":345,"output_tokens":236}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Mon, 14 Sep 2026 10:00:40 GMT
+        description"},"status":{"description":"Optional task status","anyOf":[{"type":"string","enum":["pending","done"]},{"type":"null"}]}},"required":["task","status"],"additionalProperties":false},"strict":false}],"top_p":0.95,"usage":{"input_tokens":337,"input_tokens_details":{"cached_tokens":192},"output_tokens":219,"output_tokens_details":{"reasoning_tokens":216},"total_tokens":556,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":7671500,"context_details":{"input_tokens":337,"output_tokens":219}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Wed, 16 Sep 2026 06:55:51 GMT
 recorded_with: VCR 6.4.0

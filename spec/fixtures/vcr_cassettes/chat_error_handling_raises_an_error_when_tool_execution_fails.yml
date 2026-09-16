@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 10:25:57 GMT
+      - Wed, 16 Sep 2026 07:02:18 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -48,7 +48,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '1163'
+      - '1918'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -75,15 +75,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "resp_0c6d40963d410659016aa7cbb44fe487d2a0597d265532a816",
+          "id": "resp_0aa22b54de30fd57016aaa3ef7f79487d2a8b22bcba2aa70e9",
           "object": "response",
-          "created_at": 1789381556,
+          "created_at": 1789542136,
           "status": "completed",
           "background": false,
           "billing": {
             "payer": "developer"
           },
-          "completed_at": 1789381557,
+          "completed_at": 1789542137,
           "error": null,
           "frequency_penalty": 0.0,
           "incomplete_details": null,
@@ -94,11 +94,11 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "fc_0c6d40963d410659016aa7cbb5373c87d29a93e5ee6f382a82",
+              "id": "fc_0aa22b54de30fd57016aaa3ef9514c87d2969a89aef3cb4c29",
               "type": "function_call",
               "status": "completed",
               "arguments": "{}",
-              "call_id": "call_l2nA1bTgI4Yo7Y9wta0nOIR2",
+              "call_id": "call_btbJ4rZI1jglaE7FcfMriLm8",
               "name": "broken"
             }
           ],
@@ -176,5 +176,5 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Mon, 14 Sep 2026 10:25:57 GMT
+  recorded_at: Wed, 16 Sep 2026 07:02:18 GMT
 recorded_with: VCR 6.4.0

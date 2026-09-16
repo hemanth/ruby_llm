@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260914T094217Z
+      - 20260916T064854Z
       X-Amz-Content-Sha256:
       - af62f0aa22d1ee9e206e655ec402d6baf3a7468f410418a88a9815c11975716d
       Authorization:
@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:42:19 GMT
+      - Wed, 16 Sep 2026 06:48:56 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -37,11 +37,11 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 279e9492-ba61-49fc-894b-836e0cc02637
+      - b4299ed7-e7a4-468a-b438-07668ba0746e
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":1411},"output":{"message":{"content":[{"text":"{\"name\":\"Bob\",\"age\":30}"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":174,"outputTokens":12,"serverToolUsage":{},"totalTokens":186}}'
-  recorded_at: Mon, 14 Sep 2026 09:42:19 GMT
+      string: '{"metrics":{"latencyMs":1366},"output":{"message":{"content":[{"text":"{\"name\":\"Bob\",\"age\":30}"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":174,"outputTokens":12,"serverToolUsage":{},"totalTokens":186}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:56 GMT
 - request:
     method: post
     uri: https://bedrock-runtime.<AWS_REGION>.amazonaws.com/model/us.anthropic.claude-haiku-4-5-20251001-v1:0/converse
@@ -54,7 +54,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260914T094219Z
+      - 20260916T064856Z
       X-Amz-Content-Sha256:
       - 4192f814dde366ba7862dfc154dbdb0ec0f4807aca4d4fb3ea390a961942545a
       Authorization:
@@ -72,32 +72,31 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:42:22 GMT
+      - Wed, 16 Sep 2026 06:48:59 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1517'
+      - '1418'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - b9296e1d-b300-4754-b361-9fd7b9a5de53
+      - b8b20940-c632-44c9-a338-bce2f8363bc0
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":2331},"output":{"message":{"content":[{"text":"#
+      string: '{"metrics":{"latencyMs":2479},"output":{"message":{"content":[{"text":"#
         Ruby\n\nRuby is a dynamic, open-source programming language known for its
-        simplicity and productivity. Here are some key points:\n\n**Characteristics:**\n-
-        **Syntax**: Clean, readable, and expressive syntax that''s easy to learn\n-
-        **Object-oriented**: Everything is an object\n- **Dynamically typed**: Types
-        are checked at runtime\n- **Interpreted**: Code is executed directly without
-        compilation\n\n**Popular Uses:**\n- Web development (especially with Ruby
-        on Rails framework)\n- Scripting and automation\n- Data analysis\n- DevOps
-        tools\n\n**Advantages:**\n- Developer-friendly with focus on programmer happiness\n-
-        Large community and ecosystem\n- Rapid development and prototyping\n- Extensive
-        libraries (gems)\n\n**Notable Features:**\n- Blocks and iterators\n- Metaprogramming
-        capabilities\n- Strong standard library\n- Excellent for convention over configuration\n\n**Ruby
-        on Rails:**\nThe most famous Ruby framework, which revolutionized web development
-        with its emphasis on convention over configuration and DRY (Don''t Repeat
-        Yourself) principles.\n\nRuby remains popular for startups and rapid application
-        development, though it faces competition from languages like Python and JavaScript."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":33,"outputTokens":258,"serverToolUsage":{},"totalTokens":291}}'
-  recorded_at: Mon, 14 Sep 2026 09:42:22 GMT
+        simplicity and elegance. Here are some key points:\n\n**Key Features:**\n-
+        **Readable syntax** - Ruby code is designed to be easy to read and write,
+        often called \"programmer-friendly\"\n- **Object-oriented** - Everything in
+        Ruby is an object\n- **Dynamic typing** - Variable types are determined at
+        runtime\n- **Flexible** - Allows multiple programming paradigms (OOP, functional,
+        procedural)\n\n**Common Uses:**\n- Web development (especially with Ruby on
+        Rails framework)\n- Scripting and automation\n- Data processing\n- DevOps
+        tools\n\n**Popular Framework:**\n- **Ruby on Rails** - A web application framework
+        that made Ruby widely popular\n\n**Characteristics:**\n- Interpreted language\n-
+        Garbage collection for memory management\n- Strong community and rich ecosystem
+        of libraries (gems)\n- Focuses on developer happiness and productivity\n\n**Example:**\n```ruby\nputs
+        \"Hello, World!\"\n```\n\nRuby is widely used by startups and established
+        companies alike, and remains popular for rapid web application development."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":33,"outputTokens":245,"serverToolUsage":{},"totalTokens":278}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:59 GMT
 recorded_with: VCR 6.4.0

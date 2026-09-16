@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260914T094538Z
+      - 20260916T065306Z
       X-Amz-Content-Sha256:
       - cfa1a61e9831d27f7ba08ada9c46ca2e63d303d5d7ef3081850cf17f1f0c1eef
       Authorization:
@@ -29,11 +29,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:45:39 GMT
+      - Wed, 16 Sep 2026 06:53:08 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '980'
+      - '865'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
@@ -47,8 +47,14 @@ http_interactions:
       Access-Control-Expose-Headers:
       - x-amzn-requestid,x-request-id,date,x-amzn-usage-reservation-quota,x-amzn-usage-reservation-remaining-quota,x-amzn-usage-reservation-spillover
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJsb2dwcm9icyI6bnVsbCwibWVzc2FnZSI6eyJjb250ZW50IjoiQmFzZWQgb24gdGhlIHBocmFzZSBcIlJ1YnkgaXMgYSBwcm9ncmFtbWluZyBsYW5ndWFnZSBkZXNpZ25lZCBmb3IgZGV2ZWxvcGVyIGhhcHBpbmVzcyxcIiBsZXQncyBicmVhayBkb3duIHRoZSBjb250ZW50OlxuXG4tICoqUnVieSoqIGlzIG5hbWVkIGFzIGEgcHJvZ3JhbW1pbmcgbGFuZ3VhZ2UuXG4tIFRoZSBwdXJwb3NlIG9yIHJlYXNvbiBmb3IgUnVieSdzIGRlc2lnbiBvciBjcmVhdGlvbiBpcyBzdGF0ZWQgdG8gYmUgKipcImRldmVsb3BlciBoYXBwaW5lc3MuXCIqKlxuXG5JbiBvdGhlciB3b3JkcywgdGhlIGNsYWltIGlzIHRoYXQgUnVieeKAlHNwZWNpZmljYWxseeKAlHdhcyBjcmVhdGVkIG9yIG9wdGltaXplZCB0byBwcmlvcml0aXplIHRoZSB3ZWxsLWJlaW5nIGFuZCBzYXRpc2ZhY3Rpb24gb2YgdGhlIGRldmVsb3BlcnMgd2hvIHVzZSBpdC4gSGFwcGluZXNzIGluIHRoaXMgY29udGV4dCBsaWtlbHkgcmVmZXJzIHRvIGEgcHJvZHVjdGl2ZSBjb2RpbmcgZXhwZXJpZW5jZSwgd2hpY2ggY291bGQgaW5jbHVkZSBzaW1wbGljaXR5LCBlbGVnYW5jZSwgYW5kIGFuIGVuam95YWJsZSBzeW50YXggbWVhbnQgdG8gcmVkdWNlIGRldmVsb3BlciBlZmZvcnQgYW5kIGZydXN0cmF0aW9uLiIsInJlZnVzYWwiOm51bGwsInJvbGUiOiJhc3Npc3RhbnQifX1dLCJjcmVhdGVkIjoxNzg5Mzc5MTM5LCJpZCI6ImNoYXRjbXBsLTYxNjVhNWNmLWExZmUtNGZmYi1hYzk4LWJkY2JiN2QwYjg3NyIsIm1vZGVsIjoibWlzdHJhbC52b3h0cmFsLW1pbmktM2ItMjUwNyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsInNlcnZpY2VfdGllciI6ImRlZmF1bHQiLCJ1c2FnZSI6eyJjb21wbGV0aW9uX3Rva2VucyI6MTE5LCJwcm9tcHRfdG9rZW5zIjozODQsInRvdGFsX3Rva2VucyI6NTAzfX0=
-  recorded_at: Mon, 14 Sep 2026 09:45:39 GMT
+      encoding: UTF-8
+      string: '{"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"The
+        transcript you shared is brief and concise, stating, \"*Ruby is a programming
+        language designed for developer happiness*.\" Here''s a simple breakdown:\n\n1.
+        **Subject**: Ruby (a programming language).\n2. **Description**: It is specifically
+        designed to provide a (*happy*, productive, simple-to-learn, and easier) experience
+        for developers.\n\nIn essence, the speaker or author is emphasizing that Ruby
+        was created with the goal of making it easy and enjoyable for programmers
+        to engage with and use.","refusal":null,"role":"assistant"}}],"created":1789541587,"id":"chatcmpl-7dd7e4aa-7e4e-4976-9992-e0111c4ae9b6","model":"mistral.voxtral-mini-3b-2507","object":"chat.completion","service_tier":"default","usage":{"completion_tokens":101,"prompt_tokens":384,"total_tokens":485}}'
+  recorded_at: Wed, 16 Sep 2026 06:53:08 GMT
 recorded_with: VCR 6.4.0

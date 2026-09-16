@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260914T094841Z
+      - 20260916T065636Z
       X-Amz-Content-Sha256:
       - c7f83bb84982facc77c2b1b9a530024e0bf26aba67d5915de608a52cb5f88055
       Authorization:
@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:48:43 GMT
+      - Wed, 16 Sep 2026 06:56:38 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -37,9 +37,9 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 83980eca-f921-40f1-a6c5-50a9bcd1672f
+      - a1f562a2-48c6-4b31-bfe1-38d1f787c815
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":1568},"output":{"message":{"content":[{"text":"BLUE-LANTERN-42"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":97,"outputTokens":11,"serverToolUsage":{},"totalTokens":108}}'
-  recorded_at: Mon, 14 Sep 2026 09:48:43 GMT
+      string: '{"metrics":{"latencyMs":1461},"output":{"message":{"content":[{"text":"BLUE-LANTERN-42"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":97,"outputTokens":11,"serverToolUsage":{},"totalTokens":108}}'
+  recorded_at: Wed, 16 Sep 2026 06:56:38 GMT
 recorded_with: VCR 6.4.0

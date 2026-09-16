@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 09:38:59 GMT
+      - Wed, 16 Sep 2026 06:48:22 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -43,13 +43,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-1572334654cbd2c973801abc1013665b-d94b20e400306e5b-00
+      - 00-0472ecb284419478836faf08278145c2-8e4dced8000c4fea-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 8e4c079a-b5d4-4e76-a90a-de61a07ae137
+      - 22daba6f-fa54-4f6d-a0d4-ce219ee620f8
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -85,7 +85,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 8e4c079a-b5d4-4e76-a90a-de61a07ae137
+      - 22daba6f-fa54-4f6d-a0d4-ce219ee620f8
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -94,9 +94,9 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"f9fca7f4-6a66-42d9-b453-efcb8e924059","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        file `ruby.txt` contains the text: \"Ruby is the best.\""},"finish_reason":"stop"}],"usage":{"prompt_tokens":24,"completion_tokens":16,"total_tokens":40,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":161,"audio_tokens":0,"text_tokens":24,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789378739,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Mon, 14 Sep 2026 09:39:00 GMT
+      string: '{"id":"59c24078-bdaa-45eb-bc45-5fcc52e0f618","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        file \"ruby.txt\" contains the text: \"Ruby is the best.\""},"finish_reason":"stop"}],"usage":{"prompt_tokens":24,"completion_tokens":16,"total_tokens":40,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":161,"audio_tokens":0,"text_tokens":24,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789541302,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Wed, 16 Sep 2026 06:48:22 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
@@ -104,7 +104,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"grok-4-1-fast-non-reasoning","messages":[{"role":"user","content":[{"type":"text","text":"What''s
         in this file?"},{"type":"text","text":"<file name=''ruby.txt'' mime_type=''text/plain''>Ruby
-        is the best.</file>"}]},{"role":"assistant","content":"The file `ruby.txt`
+        is the best.</file>"}]},{"role":"assistant","content":"The file \"ruby.txt\"
         contains the text: \"Ruby is the best.\""},{"role":"user","content":[{"type":"text","text":"and
         in this one?"},{"type":"text","text":"<file name=''ruby.xml'' mime_type=''application/xml''><truism>Ruby
         is the best</truism></file>"}]}],"stream":false}'
@@ -127,7 +127,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 14 Sep 2026 09:39:00 GMT
+      - Wed, 16 Sep 2026 06:48:23 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -143,13 +143,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-f19c5e47383d54c506cee79d950ae621-68570368000c5371-00
+      - 00-3fa5a2bd2bacabaad77e425808de00da-904ab0c10005c116-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 67a2d9c5-ee96-4161-8420-01413ffe5b40
+      - 614f4b62-c851-4e27-9a78-08ce91b45f58
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -185,7 +185,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 67a2d9c5-ee96-4161-8420-01413ffe5b40
+      - 614f4b62-c851-4e27-9a78-08ce91b45f58
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -194,7 +194,7 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"9e1828db-2775-4b75-a9a0-463c6fb74686","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        file `ruby.xml` contains the following XML:\n\n```\n<truism>Ruby is the best</truism>\n```"},"finish_reason":"stop"}],"usage":{"prompt_tokens":81,"completion_tokens":25,"total_tokens":106,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":192,"audio_tokens":0,"text_tokens":81,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789378740,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Mon, 14 Sep 2026 09:39:01 GMT
+      string: '{"id":"be69e330-9660-4498-ab3c-eba078c01744","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        file \"ruby.xml\" contains the XML: `<truism>Ruby is the best</truism>`."},"finish_reason":"stop"}],"usage":{"prompt_tokens":81,"completion_tokens":23,"total_tokens":104,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":192,"audio_tokens":0,"text_tokens":81,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789541303,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Wed, 16 Sep 2026 06:48:23 GMT
 recorded_with: VCR 6.4.0

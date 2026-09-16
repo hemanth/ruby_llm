@@ -30,7 +30,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 14 Sep 2026 09:46:29 GMT
+      - Wed, 16 Sep 2026 06:56:13 GMT
       Server:
       - elb
       Vary:
@@ -38,7 +38,7 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Ds-Trace-Id:
-      - e6db1a2c74be8a15b98c20be895f8086
+      - 77feca114c916eef595796794611eefe
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -46,13 +46,13 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 30eb1992e2a9e13067dcbdc60661ebfe.cloudfront.net (CloudFront)
+      - 1.1 5327478b6f979a4905f57306ac90bdda.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TXL50-P6
+      - TXL50-P3
       X-Amz-Cf-Id:
-      - VZm0TTq2rbuONCCmw7dJXFGvTGxxLEsk7Yxf_oIYaDWEV9O1Z2B7Og==
+      - w0SNbL2nqr3MACcccVZCs4610VAn4v5n_-JCDq9zqm4n3K3ePIkr2w==
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"628baa75-1783-47d0-8465-b7d171c8ade7","object":"chat.completion","created":1789379188,"model":"deepseek-flash","choices":[{"index":0,"message":{"role":"assistant","content":"4"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":18,"completion_tokens":1,"total_tokens":19,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":18},"system_fingerprint":"aeb56401ca74e127821c4f9126dcb669"}'
-  recorded_at: Mon, 14 Sep 2026 09:46:30 GMT
+      string: '{"id":"8a61ef03-347c-4404-a030-0b790042c36a","object":"chat.completion","created":1789541773,"model":"deepseek-flash","choices":[{"index":0,"message":{"role":"assistant","content":"4"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":18,"completion_tokens":1,"total_tokens":19,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":18},"system_fingerprint":"aeb56401ca74e127821c4f9126dcb669"}'
+  recorded_at: Wed, 16 Sep 2026 06:56:13 GMT
 recorded_with: VCR 6.4.0

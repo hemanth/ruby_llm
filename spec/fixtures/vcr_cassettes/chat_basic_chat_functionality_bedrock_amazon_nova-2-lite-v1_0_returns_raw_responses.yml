@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260914T093932Z
+      - 20260916T064841Z
       X-Amz-Content-Sha256:
       - 8988abe739c0b56ab17790451e8e6ca36017b8901366ef5dcf9f2b3b61904f0b
       Authorization:
@@ -29,18 +29,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Sep 2026 09:39:34 GMT
+      - Wed, 16 Sep 2026 06:48:42 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1065'
+      - '471'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - f5cad6ed-9930-4e11-8a7d-eaccdded784e
+      - 418222f7-942b-458d-818a-f7368997eafd
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJtZXRyaWNzIjp7ImxhdGVuY3lNcyI6MTEwNH0sIm91dHB1dCI6eyJtZXNzYWdlIjp7ImNvbnRlbnQiOlt7InRleHQiOiJUaGUgY2FwaXRhbCBvZiBGcmFuY2UgaXMgKipQYXJpcyoqLiBcblxuUGFyaXMgaXMgbm90IG9ubHkgdGhlIHBvbGl0aWNhbCBhbmQgYWRtaW5pc3RyYXRpdmUgY2VudGVyIG9mIEZyYW5jZSBidXQgYWxzbyBhIDxHT09HTEVfQ0xPVURfTE9DQVRJT04+IGh1YiBmb3IgYXJ0LCBmYXNoaW9uLCBnYXN0cm9ub215LCBhbmQgY3VsdHVyZS4gSXQgaXMgZmFtb3VzbHkga25vd24gYXMgXCJUaGUgQ2l0eSBvZiBMaWdodFwiICgqTGEgVmlsbGUgTHVtacOocmUqKSBkdWUgdG8gaXRzIGhpc3RvcmljYWwgYXNzb2NpYXRpb24gd2l0aCB0aGUgRW5saWdodGVubWVudCBhbmQgaXRzIGVhcmx5IGFkb3B0aW9uIG9mIHN0cmVldCBsaWdodGluZy4gXG5cblNvbWUga2V5IGxhbmRtYXJrcyBpbiBQYXJpcyBpbmNsdWRlOlxuLSAqKkVpZmZlbCBUb3dlcioqIOKAkyBBbiBpY29uaWMgaXJvbiBsYXR0aWNlIHRvd2VyIG9uIHRoZSBDaGFtcCBkZSBNYXJzLlxuLSAqKkxvdXZyZSBNdXNldW0qKiDigJMgVGhlIHdvcmxk4oCZcyBsYXJnZXN0IGFydCBtdXNldW0gYW5kIGhvbWUgdG8gKlRoZSBNb25hIExpc2EqLlxuLSAqKk5vdHJlLURhbWUgQ2F0aGVkcmFsKiog4oCTIEEgbWFzdGVycGllY2Ugb2YgRnJlbmNoIEdvdGhpYyBhcmNoaXRlY3R1cmUgKHRob3VnaCBjdXJyZW50bHkgdW5kZXJnb2luZyByZXN0b3JhdGlvbiBhZnRlciBhIDIwMTkgZmlyZSkuXG4tICoqQXJjIGRlIFRyaW9tcGhlKiog4oCTIEEgbW9udW1lbnRhbCBhcmNoIGhvbm9yaW5nIEZyZW5jaCBtaWxpdGFyeSB2aWN0b3JpZXMuXG5cblBhcmlzIGhhcyBzZXJ2ZWQgYXMgdGhlIGNhcGl0YWwgc2luY2UgNTA4IENFIGFuZCByZW1haW5zIHRoZSBoZWFydCBvZiBGcmVuY2ggbmF0aW9uYWwgaWRlbnRpdHkuIn1dLCJyb2xlIjoiYXNzaXN0YW50In19LCJzdG9wUmVhc29uIjoiZW5kX3R1cm4iLCJ1c2FnZSI6eyJpbnB1dFRva2VucyI6NTMsIm91dHB1dFRva2VucyI6MTgxLCJzZXJ2ZXJUb29sVXNhZ2UiOnt9LCJ0b3RhbFRva2VucyI6MjM0fX0=
-  recorded_at: Mon, 14 Sep 2026 09:39:34 GMT
+      encoding: UTF-8
+      string: '{"metrics":{"latencyMs":524},"output":{"message":{"content":[{"text":"The
+        capital of France is **Paris**. \n\nParis is not only the political and administrative
+        center of France but also a <GOOGLE_CLOUD_LOCATION> hub for art, fashion,
+        gastronomy, and culture. It is renowned for landmarks such as the Eiffel Tower,
+        Louvre Museum, and Notre-Dame Cathedral."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":53,"outputTokens":58,"serverToolUsage":{},"totalTokens":111}}'
+  recorded_at: Wed, 16 Sep 2026 06:48:42 GMT
 recorded_with: VCR 6.4.0

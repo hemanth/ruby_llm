@@ -32,33 +32,37 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - e1bfa3ca90691234d6d12e4b2096594fe0d5770a
+      - 354232efe73e70f9c8a94659c1842e861ddda7d3
       X-Build-Time:
-      - '2026-09-13T23:26:13-07:00'
+      - '2026-09-15T16:54:40-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '640'
+      - '988'
       Date:
-      - Mon, 14 Sep 2026 09:43:26 GMT
+      - Wed, 16 Sep 2026 06:53:00 GMT
       Server:
       - Google Frontend
       X-Cloud-Trace-Context:
-      - cc9d22ce8100192e1fcffd0b24582081/14907230234828957009
+      - 20dc3185d7661013ada665485c6ae38a/17969630456975542462
       Traceparent:
-      - 00-cc9d22ce8100192e1fcffd0b24582081-cee11eeaabf16551-00
+      - 00-20dc3185d7661013ada665485c6ae38a-f960f3b1851148be-00
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-808","object":"chat.completion","created":1789379006,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
-        need to call the function ''object_params'' with window parameter containing
-        start and end. Use the tool.","tool_calls":[{"id":"call_tgqx8kam","index":0,"type":"function","function":{"name":"object_params","arguments":"{\"window\":{\"end\":\"2025-01-02\",\"start\":\"2025-01-01\"}}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":159,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":74,"total_tokens":233}}
+      string: '{"id":"chatcmpl-806","object":"chat.completion","created":1789541580,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"The
+        user wants to \"Call the object params tool with window start 2025-01-01 and
+        end 2025-01-02 and include the result.\" There''s a function ''object_params''
+        that takes a param object with ''window'' being a Record\u003cstring, any\u003e.
+        So we need to call functions.object_params with window: start and end. Then
+        include the result (i.e., return the function output in the answer). So we
+        should call the function.\n\nWe need to prepare the function call.","tool_calls":[{"id":"call_subfdvvl","index":0,"type":"function","function":{"name":"object_params","arguments":"{\"window\":{\"end\":\"2025-01-02\",\"start\":\"2025-01-01\"}}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":159,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":155,"total_tokens":314}}
 
         '
-  recorded_at: Mon, 14 Sep 2026 09:43:26 GMT
+  recorded_at: Wed, 16 Sep 2026 06:53:00 GMT
 recorded_with: VCR 6.4.0

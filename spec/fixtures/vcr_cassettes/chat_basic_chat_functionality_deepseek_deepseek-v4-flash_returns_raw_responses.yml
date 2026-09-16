@@ -30,7 +30,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 14 Sep 2026 09:40:14 GMT
+      - Wed, 16 Sep 2026 06:49:06 GMT
       Server:
       - elb
       Vary:
@@ -38,7 +38,7 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Ds-Trace-Id:
-      - 053bfd16ef7ad249b7433b6461f91aaa
+      - 5335787a0cf04c6acf2d5a709ffb18ab
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -46,15 +46,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 bfeb5de1b362acd366f42059fc9dbbbc.cloudfront.net (CloudFront)
+      - 1.1 14d5a8a1fbe4228e0d0a0b8054cd53e2.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - TXL50-P2
+      - TXL52-P2
       X-Amz-Cf-Id:
-      - aTGcvuh4jkCT_DLGh_yF-z1-mhWnrpiqG8DaswFI-wq9aK6YndRetA==
+      - "-V9QBFlysNffNt3L7fk35lOJV2KjTquBMt56Fj3J6hgidblpiHbxnQ=="
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"f6a08615-1bd1-4ed9-8132-5a4fa94fd3c8","object":"chat.completion","created":1789378814,"model":"deepseek-flash","choices":[{"index":0,"message":{"role":"assistant","content":"The
+      string: '{"id":"688bd92b-9f23-4b22-8d2c-89971aa147e6","object":"chat.completion","created":1789541346,"model":"deepseek-flash","choices":[{"index":0,"message":{"role":"assistant","content":"The
         capital of France is **Paris**.","reasoning_content":"We need answer simple.
-        Need comply. Capital of France is Paris. final."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":37,"completion_tokens":25,"total_tokens":62,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":16},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":37},"system_fingerprint":"aeb56401ca74e127821c4f9126dcb669"}'
-  recorded_at: Mon, 14 Sep 2026 09:40:15 GMT
+        Need final."},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":37,"completion_tokens":17,"total_tokens":54,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens_details":{"reasoning_tokens":8},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":37},"system_fingerprint":"aeb56401ca74e127821c4f9126dcb669"}'
+  recorded_at: Wed, 16 Sep 2026 06:49:06 GMT
 recorded_with: VCR 6.4.0
