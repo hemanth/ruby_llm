@@ -129,6 +129,14 @@ module RubyLLM
       dup.tap { |message| message.instance_variable_set(:@attachments, wrapped) }
     end
 
+    def without_thinking # :nodoc:
+      dup.tap do |message|
+        message.instance_variable_set(:@thinking, nil)
+        message.instance_variable_set(:@raw_reasoning, nil)
+        message.instance_variable_set(:@tool_calls, tool_calls_without_thought_signatures)
+      end
+    end
+
     # Returns +true+ if the assistant requested one or more tool calls,
     # +false+ otherwise.
     def tool_call?
@@ -273,6 +281,12 @@ module RubyLLM
         [id, ToolCall.new(id: attributes[:id] || id, name: attributes[:name],
                           arguments: attributes[:arguments] || {},
                           thought_signature: attributes[:thought_signature], remote: attributes.fetch(:remote, false))]
+      end
+    end
+
+    def tool_calls_without_thought_signatures
+      tool_calls&.transform_values do |call|
+        call.dup.tap { |copy| copy.thought_signature = nil }
       end
     end
 
