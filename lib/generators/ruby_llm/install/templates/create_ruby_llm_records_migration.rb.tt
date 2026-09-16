@@ -1,4 +1,4 @@
-class CreateRubyLlmRecords < ActiveRecord::Migration<%= migration_version %>
+class <%= create_migration_class_name('ruby_llm_records') %> < ActiveRecord::Migration<%= migration_version %>
   def change
     create_table :ruby_llm_models, id: :<%= reference_type %> do |t|
       t.string :model_id, null: false

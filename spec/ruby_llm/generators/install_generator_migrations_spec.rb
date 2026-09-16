@@ -8,6 +8,25 @@ RSpec.describe RubyLLM::Generators::InstallGenerator, :generator do
 
   after { FileUtils.remove_entry(destination) }
 
+  [nil, 'LLM'].each do |acronym|
+    it "defines loadable migration classes #{acronym ? 'with an LLM acronym' : 'with default inflections'}" do
+      inflections = ActiveSupport::Inflector.inflections.dup
+      inflections.acronym(acronym) if acronym
+      allow(ActiveSupport::Inflector).to receive(:inflections).and_return(inflections)
+
+      generator = described_class.new([], {}, destination_root: destination, shell: Thor::Shell::Basic.new)
+      generator.create_migration_files
+
+      Dir.glob(File.join(destination, 'db/migrate/*.rb')).each do |path|
+        namespace = Module.new
+        namespace.module_eval(File.read(path), path)
+        class_name = File.basename(path, '.rb').sub(/\A\d+_/, '').camelize
+
+        expect(namespace.const_get(class_name, false)).to be < ActiveRecord::Migration
+      end
+    end
+  end
+
   [nil, :uuid, :integer].each do |primary_key_type|
     context "with #{primary_key_type || 'default'} primary keys" do
       before do
