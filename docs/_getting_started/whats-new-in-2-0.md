@@ -342,10 +342,10 @@ The [upgrade guide]({% link _reference/upgrading.md %}) lists the renames and Ra
 
 ## Try 2.0
 
-These features are available in the 2.0 release candidate:
+Install RubyLLM 2.0:
 
 ```sh
-bundle add ruby_llm --version 2.0.0.rc4
+bundle add ruby_llm --version 2.0.0
 ```
 
 Start with [Getting Started]({% link _getting_started/getting-started.md %}), or follow [Upgrade to 2.0]({% link _reference/upgrading.md %}) to update an existing application.

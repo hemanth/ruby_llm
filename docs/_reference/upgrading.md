@@ -20,7 +20,7 @@ After reading this guide, you will know:
 * What each phase preserves and what cleanup removes.
 * How to recover if you need to abandon the upgrade.
 
-This guide covers **1.16 to 2.0.0.rc4**. Coming from an earlier release? Follow the [1.16 upgrade guide](https://rubyllm.com/upgrading/) first.
+This guide covers **1.16 to 2.0.0**. Coming from an earlier release? Follow the [1.16 upgrade guide](https://rubyllm.com/v1/upgrading/) first.
 
 The online-copy workflow below is available starting in `2.0.0.rc3`. With `2.0.0.rc2`, keep AI activity paused through all three phases.
 {: .important }
@@ -43,7 +43,7 @@ The usage ledger records tokens and costs for each provider attempt, including r
 Update the gem in your development branch:
 
 ```bash
-bundle add ruby_llm --version 2.0.0.rc4
+bundle add ruby_llm --version 2.0.0
 ```
 
 Use the [API changes](#api-changes) below to update your calls, then run your tests. If you use Rails persistence, follow the steps below before deploying.
@@ -618,4 +618,4 @@ For routing details and per-chat overrides, see [Choosing the Wire Protocol]({% 
 
 ## Older Upgrade Guides
 
-Use the version selector or the [1.16 upgrade guide](https://rubyllm.com/upgrading/) for older releases. Upgrade one minor version at a time and resolve its deprecation warnings before continuing. See [GitHub releases](https://github.com/crmne/ruby_llm/releases) for the full changelog.
+Use the version selector or the [1.16 upgrade guide](https://rubyllm.com/v1/upgrading/) for older releases. Upgrade one minor version at a time and resolve its deprecation warnings before continuing. See [GitHub releases](https://github.com/crmne/ruby_llm/releases) for the full changelog.

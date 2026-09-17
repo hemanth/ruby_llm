@@ -27,7 +27,7 @@ git -C "$repo" archive "$ONE_X_REF" docs/ | tar -x -C "$onex"
 "$docs/bin/prepare_one_x_docs.rb" "$onex/docs"
 cp "$docs/_includes/version_select.html" "$onex/docs/_includes/"
 mkdir -p "$onex/docs/_data"
-local_versions "$onex/docs/_data/versions.yml" "$stable"
+local_versions "$onex/docs/_data/versions.yml" v1.16.0
 perl -0pi -e 's{(\{% include components/header.html %\}\n)}{$1    {% include version_select.html %}\n}' \
   "$onex/docs/_layouts/default.html"
 ( cd "$onex/docs" && BUNDLE_GEMFILE="$docs/Gemfile" bundle exec jekyll build --baseurl /v1 -d "$site/v1" --quiet )
@@ -41,7 +41,7 @@ echo "==> Building API docs (RDoc) -> /api/"
 # theme loses the sidebar and nav it builds from them.
 rm -rf "$docs/_data_serve"
 cp -a "$docs/_data" "$docs/_data_serve"
-local_versions "$docs/_data_serve/versions.yml" next
+local_versions "$docs/_data_serve/versions.yml" "$stable"
 serve_cfg="$docs/_config_serve.yml"
 printf "data_dir: _data_serve\nkeep_files: ['.git', '.svn', 'v1', 'api']\n" > "$serve_cfg"
 trap 'rm -rf "$docs/_data_serve" "$serve_cfg"' EXIT

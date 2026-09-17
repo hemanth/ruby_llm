@@ -27,13 +27,13 @@ Each example shows one feature. Try the ones your application needs, then follow
 
 ## Installation
 
-Add the RubyLLM 2.0 release candidate with Bundler:
+Add RubyLLM 2.0 with Bundler:
 
 ```sh
-bundle add ruby_llm --version 2.0.0.rc4
+bundle add ruby_llm --version 2.0.0
 ```
 
-These guides cover the 2.0 prerelease. For an existing 1.x application, use the [stable-version docs]({{ '/v1/' | relative_url }}) or follow the [upgrade guide]({% link _reference/upgrading.md %}) before switching versions.
+These guides cover RubyLLM 2.0. For an existing 1.x application, use the [1.x docs]({{ '/v1/' | relative_url }}) or follow the [upgrade guide]({% link _reference/upgrading.md %}) before switching versions.
 {: .important }
 
 ## Minimal Configuration

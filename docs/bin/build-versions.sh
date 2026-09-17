@@ -24,9 +24,9 @@ trap 'rm -rf "$next_src" "$onex_src" "$next_out" "$onex_out"' EXIT
 
 set_current() { ruby "$docs/bin/prepare_versions.rb" "$1" "$2" "$BASE"; }
 
-echo "==> Building current docs (2.0 prerelease) -> /"
+echo "==> Building current docs (2.0) -> /"
 rsync -a --exclude='_site' --exclude='_data_serve' --exclude='vendor' --exclude='.jekyll-cache' --exclude='.bundle' "$docs/" "$next_src/"
-set_current "$next_src/_data/versions.yml" next
+set_current "$next_src/_data/versions.yml" "$stable"
 ( cd "$next_src" && BUNDLE_GEMFILE="$gemfile" bundle exec jekyll build --baseurl "$BASE" -d "$next_out" --quiet )
 
 echo "==> Building API docs (RDoc) -> /api/"
@@ -38,7 +38,7 @@ git -C "$repo_root" archive "$ONE_X_REF" docs/ | tar -x -C "$onex_src"
 cp "$docs/_includes/version_select.html" "$onex_src/docs/_includes/"
 mkdir -p "$onex_src/docs/_data"
 cp "$versions" "$onex_src/docs/_data/versions.yml"
-set_current "$onex_src/docs/_data/versions.yml" "$stable"
+set_current "$onex_src/docs/_data/versions.yml" v1.16.0
 perl -0pi -e 's{(\{% include components/header.html %\}\n)}{$1    {% include version_select.html %}\n}' \
   "$onex_src/docs/_layouts/default.html"
 ( cd "$onex_src/docs" && BUNDLE_GEMFILE="$gemfile" bundle exec jekyll build --baseurl "$BASE/v1" -d "$onex_out" --quiet )
@@ -50,7 +50,7 @@ cp -a "$onex_out/." "$site/v1/"
 ruby "$docs/bin/build_version_redirects.rb" "$site" "$BASE"
 cp "$registry" "$site/models.json"
 
-echo "Done.  / = 2.0 prerelease   /v1/ = 1.x   /next/ = redirects   /models.json = live registry"
+echo "Done.  / = 2.0   /v1/ = 1.x   /next/ = redirects   /models.json = live registry"
 if [[ "${1:-}" == "--serve" ]]; then
   exec python3 -m http.server "$PORT" --directory "$site"
 fi

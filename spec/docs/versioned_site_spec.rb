@@ -88,20 +88,21 @@ RSpec.describe 'Versioned documentation site', type: :task do
   end
 
   describe 'version selector' do
-    it 'labels the root version as prerelease and the 1.x version as stable' do
+    it 'labels the root version as stable and keeps the 1.x version available' do
       versions = YAML.load_file(File.join(root, 'docs/_data/versions.yml'))
 
-      expect(versions['current']).to include('prerelease')
-      expect(versions['items']).to include(include('url' => '/', 'title' => include('prerelease')))
-      expect(versions['items']).to include(include('url' => '/v1/', 'title' => include('stable')))
+      expect(versions['current']).to eq('2.0.0 (stable)')
+      expect(versions['stable']).to eq('v2.0.0')
+      expect(versions['items']).to include(include('id' => 'v2.0.0', 'url' => '/', 'title' => '2.0.0 (stable)'))
+      expect(versions['items']).to include(include('url' => '/v1/', 'title' => '1.16.0'))
     end
 
-    it 'uses site-wide URLs when rendering inside the stable version or a Pages base path' do
+    it 'uses site-wide URLs when rendering inside the 1.x version or a Pages base path' do
       path = write_page('versions.yml', File.read(File.join(root, 'docs/_data/versions.yml')))
       run_script('prepare_versions.rb', path, 'v1.16.0', '/ruby_llm')
       versions = YAML.load_file(path)
 
-      expect(versions['current']).to eq('1.16.0 (stable)')
+      expect(versions['current']).to eq('1.16.0')
       expect(versions['items'].pluck('url')).to eq([
                                                      '/ruby_llm/', '/ruby_llm/v1/',
                                                      'https://github.com/crmne/ruby_llm/releases'

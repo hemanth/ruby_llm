@@ -34,7 +34,7 @@ Build with the models you want. Move between hosted and local providers without 
 
 ## Start with one line. Add files, tools, and agents
 
-These examples use **2.0.0.rc4 (prerelease)**. Follow [Getting Started](https://rubyllm.com/getting-started/) to install it and configure the providers you want to try. For 1.x, use the [stable-version docs](https://rubyllm.com/v1/).
+These examples use **2.0.0**. Follow [Getting Started](https://rubyllm.com/getting-started/) to install it and configure the providers you want to try. For 1.x, use the [1.x docs](https://rubyllm.com/v1/).
 
 ```ruby
 # Just ask
@@ -189,10 +189,10 @@ Agents, workflows, RAG, images, audio, and video. Built in, with usage tracking 
 
 ## Installation
 
-Install the 2.0 release candidate:
+Install RubyLLM 2.0:
 
 ```bash
-bundle add ruby_llm --version 2.0.0.rc4
+bundle add ruby_llm --version 2.0.0
 ```
 
 Configure a provider in your script, or in `config/initializers/ruby_llm.rb` in Rails:
