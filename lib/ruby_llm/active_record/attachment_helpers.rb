@@ -58,18 +58,96 @@ module RubyLLM
       end
 
       def plain_text_content(content_value)
+        return action_text_plain_text(content_value) if action_text_content?(content_value)
         return content_value.to_plain_text if content_value.respond_to?(:to_plain_text)
 
         content_value
       end
 
       def action_text_attachment_sources(content_value)
-        return [] unless content_value.respond_to?(:body)
+        return [] unless action_text_content?(content_value)
 
+        action_text_attachables(content_value).flat_map do |attachable|
+          action_text_attachable_sources(attachable)
+        end.compact
+      end
+
+      def action_text_content?(content_value)
+        content_value.respond_to?(:body) && action_text_body?(content_value.body)
+      end
+
+      def preload_action_text_embeds(messages)
+        return unless defined?(ActionText::Attachment)
+
+        rich_texts = messages.filter_map do |message|
+          rich_text = message.rich_text_content
+          body = rich_text&.body
+          rich_text if action_text_body?(body) && action_text_embeds?(body)
+        end
+        return if rich_texts.empty?
+
+        ::ActiveRecord::Associations::Preloader.new(
+          records: rich_texts,
+          associations: { embeds_attachments: :blob }
+        ).call
+      end
+
+      def action_text_embeds?(body)
+        body.fragment.find_all(ActionText::Attachment.tag_name).any? { |node| action_text_blob_id(node) }
+      end
+
+      def action_text_body?(body)
+        defined?(ActionText::Attachment) && body.respond_to?(:fragment) && body.respond_to?(:attachables) &&
+          body.respond_to?(:sanitize_content_attachment)
+      end
+
+      def action_text_plain_text(content_value)
         body = content_value.body
-        return [] unless body.respond_to?(:attachables)
+        preloaded_blobs = action_text_preloaded_blobs(content_value).index_by { |blob| blob.id.to_s }
+        rendered = body.fragment.replace(ActionText::Attachment.tag_name) do |node|
+          if node.key?('content')
+            sanitized_content = body.sanitize_content_attachment(node.remove_attribute('content').to_s)
+            node['content'] = sanitized_content if sanitized_content.present?
+          end
 
-        body.attachables.flat_map { |attachable| action_text_attachable_sources(attachable) }.compact
+          attachable = action_text_attachable_for_node(node, preloaded_blobs)
+          ActionText::Attachment.from_node(node, attachable).to_plain_text
+        end
+
+        ActionText::Content.new(rendered, canonicalize: false).fragment.to_plain_text
+      end
+
+      def action_text_attachables(content_value)
+        body = content_value.body
+        preloaded_blobs = action_text_preloaded_blobs(content_value).index_by { |blob| blob.id.to_s }
+        body.fragment.find_all(ActionText::Attachment.tag_name).map do |node|
+          action_text_attachable_for_node(node, preloaded_blobs)
+        end
+      end
+
+      def action_text_attachable_for_node(node, preloaded_blobs)
+        preloaded_blobs[action_text_blob_id(node)] || ActionText::Attachable.from_node(node)
+      end
+
+      def action_text_blob_id(node)
+        sgid = node['sgid']
+        gid = SignedGlobalID.parse(sgid, for: ActionText::Attachable::LOCATOR_NAME) if sgid
+        return unless gid && gid.app == GlobalID.app && gid.model_name == ActiveStorage::Blob.name
+
+        gid.model_id.to_s
+      end
+
+      def action_text_preloaded_blobs(content_value)
+        return [] unless content_value.class.respond_to?(:reflect_on_association) &&
+                         content_value.class.reflect_on_association(:embeds_attachments)
+
+        association = content_value.association(:embeds_attachments)
+        return [] unless association.loaded?
+
+        content_value.embeds_attachments.filter_map do |attachment|
+          blob_association = attachment.association(:blob)
+          blob_association.target if blob_association.loaded?
+        end
       end
 
       def action_text_attachable_sources(attachable)
