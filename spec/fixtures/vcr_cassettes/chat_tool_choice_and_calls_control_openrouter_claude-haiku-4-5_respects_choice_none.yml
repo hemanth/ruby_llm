@@ -6,10 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"model":"anthropic/claude-haiku-4.5","messages":[{"role":"user","content":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
-        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
-        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
-        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}],"tool_choice":"none"}'
+        the weather in Berlin? (52.5200, 13.4050)"}],"stream":false,"tool_choice":"none"}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -31,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:01:13 GMT
+      - Thu, 17 Sep 2026 22:41:00 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -41,7 +38,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Generation-Id:
-      - gen-1789542071-s241FCBzno3ugS9ZDutO
+      - gen-1789684859-joX7yYZrv5Rm4nbEt6e2
       Access-Control-Expose-Headers:
       - X-Generation-Id,X-Provider-Name,request-id,cf-ray
       Set-Cookie:
@@ -59,7 +56,16 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: "\n         \n{\"id\":\"gen-1789542071-s241FCBzno3ugS9ZDutO\",\"object\":\"chat.completion\",\"created\":1789542071,\"model\":\"anthropic/claude-haiku-4.5\",\"provider\":\"Amazon
-        Bedrock\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":null,\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":633,\"completion_tokens\":9,\"total_tokens\":642,\"cost\":0.000678,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.000678,\"upstream_inference_prompt_cost\":0.000633,\"upstream_inference_completions_cost\":0.000045},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}"
-  recorded_at: Wed, 16 Sep 2026 07:01:13 GMT
+      string: "\n         \n{\"id\":\"gen-1789684859-joX7yYZrv5Rm4nbEt6e2\",\"object\":\"chat.completion\",\"created\":1789684859,\"model\":\"anthropic/claude-haiku-4.5\",\"provider\":\"Amazon
+        Bedrock\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"I
+        don't have access to real-time weather data or the ability to browse the internet,
+        so I can't tell you the current weather in Berlin right now.\\n\\nTo check
+        the weather in Berlin, you can try:\\n\\n- **Weather websites**: weather.com,
+        weather.gov, or your local weather service\\n- **Search engines**: Google
+        \\\"Berlin weather\\\"\\n- **Weather apps**: Most smartphone weather apps
+        will show current conditions\\n- **Local sources**: DWD (Deutscher Wetterdienst)
+        - Germany's national weather service\\n\\nIf you'd like help with something
+        else about Berlin or interpreting weather data you already have, I'm happy
+        to help!\",\"refusal\":null,\"reasoning\":null}}],\"usage\":{\"prompt_tokens\":26,\"completion_tokens\":143,\"total_tokens\":169,\"cost\":0.000741,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.000741,\"upstream_inference_prompt_cost\":0.000026,\"upstream_inference_completions_cost\":0.000715},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}"
+  recorded_at: Thu, 17 Sep 2026 22:41:01 GMT
 recorded_with: VCR 6.4.0

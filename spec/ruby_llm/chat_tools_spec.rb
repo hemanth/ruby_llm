@@ -63,7 +63,7 @@ RSpec.describe RubyLLM::Chat, :live do
   end
 
   class FileFetchTool < RubyLLM::Tool # rubocop:disable Lint/ConstantDefinitionInBlock,RSpec/LeakyConstantDeclaration
-    description 'Fetches the requested file'
+    description 'Fetches a sample text file named ruby.txt'
 
     def execute
       ['Fetched the file.', [RubyLLM::Attachment.new(File.expand_path('../fixtures/ruby.txt', __dir__))]]
@@ -348,7 +348,7 @@ RSpec.describe RubyLLM::Chat, :live do
                       .with_instructions('You must use tools whenever possible.')
         chunks = []
 
-        response = chat.ask("What's the best language to learn?") do |chunk|
+        response = chat.ask('Call best_language_to_learn and repeat the programming language it returns.') do |chunk|
           chunks << chunk
         end
 
@@ -356,7 +356,9 @@ RSpec.describe RubyLLM::Chat, :live do
         expect(chunks.first).to be_a(RubyLLM::Chunk)
         expect(response.content).to include('Ruby')
 
-        response = chat.ask("Tell me again: what's the best language to learn?") do |chunk|
+        response = chat.ask(
+          'Call best_language_to_learn again and repeat the programming language it returns.'
+        ) do |chunk|
           chunks << chunk
         end
 
@@ -644,7 +646,7 @@ RSpec.describe RubyLLM::Chat, :live do
         chat = RubyLLM.chat(model: model, provider: provider).with_tools(FileFetchTool)
         chat.with_temperature(0) if RubyLLM::Provider.providers[provider]&.local?
 
-        response = chat.ask('Use the file_fetch tool, then tell me exactly what the fetched file says.')
+        response = chat.ask('Call file_fetch to get ruby.txt, then repeat the contents of the attached file.')
 
         tool_message = chat.messages.find(&:tool_result?)
         expect(tool_message).not_to be_nil

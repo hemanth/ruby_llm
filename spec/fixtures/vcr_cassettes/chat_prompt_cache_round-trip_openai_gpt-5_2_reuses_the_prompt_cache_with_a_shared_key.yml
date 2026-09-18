@@ -444,7 +444,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:51:38 GMT
+      - Thu, 17 Sep 2026 22:15:41 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -468,7 +468,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '625'
+      - '523'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -480,11 +480,11 @@ http_interactions:
       X-Ratelimit-Remaining-Requests:
       - '4999'
       X-Ratelimit-Remaining-Tokens:
-      - '1000000'
+      - '999721'
       X-Ratelimit-Reset-Requests:
       - 12ms
       X-Ratelimit-Reset-Tokens:
-      - 0s
+      - 16ms
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Set-Cookie:
@@ -495,15 +495,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "resp_0fb510af9f39b758016aaa3c79f09887d2ae50d044b3252585",
+          "id": "resp_0bf63c58d08da340016aac668cbf2087d286c8c6925524b2ae",
           "object": "response",
-          "created_at": 1789541498,
+          "created_at": 1789683340,
           "status": "completed",
           "background": false,
           "billing": {
             "payer": "developer"
           },
-          "completed_at": 1789541498,
+          "completed_at": 1789683341,
           "error": null,
           "frequency_penalty": 0.0,
           "incomplete_details": null,
@@ -514,7 +514,7 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "msg_0fb510af9f39b758016aaa3c7a74c087d2859e14eea594743c",
+              "id": "msg_0bf63c58d08da340016aac668d2f6087d2844302a8daf32875",
               "type": "message",
               "status": "completed",
               "content": [
@@ -587,7 +587,7 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 16 Sep 2026 06:51:38 GMT
+  recorded_at: Thu, 17 Sep 2026 22:15:41 GMT
 - request:
     method: post
     uri: https://api.openai.com/v1/responses
@@ -1032,7 +1032,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:51:39 GMT
+      - Thu, 17 Sep 2026 22:15:42 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1056,7 +1056,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '594'
+      - '536'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -1068,11 +1068,11 @@ http_interactions:
       X-Ratelimit-Remaining-Requests:
       - '4999'
       X-Ratelimit-Remaining-Tokens:
-      - '1000000'
+      - '999161'
       X-Ratelimit-Reset-Requests:
       - 12ms
       X-Ratelimit-Reset-Tokens:
-      - 0s
+      - 50ms
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Set-Cookie:
@@ -1083,15 +1083,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "resp_0b73e5845ef4c3d1016aaa3c7afd1887d29e97fe7c8e2d4411",
+          "id": "resp_0d0c097e529df165016aac668da73087d298ba182a6c3bbef2",
           "object": "response",
-          "created_at": 1789541499,
+          "created_at": 1789683341,
           "status": "completed",
           "background": false,
           "billing": {
             "payer": "developer"
           },
-          "completed_at": 1789541499,
+          "completed_at": 1789683342,
           "error": null,
           "frequency_penalty": 0.0,
           "incomplete_details": null,
@@ -1102,7 +1102,7 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "msg_0b73e5845ef4c3d1016aaa3c7b6bd887d2bd23b1e263be5d83",
+              "id": "msg_0d0c097e529df165016aac668e16e087d287f9d75343bb81b7",
               "type": "message",
               "status": "completed",
               "content": [
@@ -1175,5 +1175,5 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 16 Sep 2026 06:51:39 GMT
+  recorded_at: Thu, 17 Sep 2026 22:15:42 GMT
 recorded_with: VCR 6.4.0

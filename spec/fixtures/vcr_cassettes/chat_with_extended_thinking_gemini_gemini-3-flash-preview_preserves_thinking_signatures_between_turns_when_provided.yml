@@ -31,7 +31,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:51:14 GMT
+      - Thu, 17 Sep 2026 22:09:06 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -41,7 +41,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1734
+      - gfet4t7; dur=1686
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -55,12 +55,12 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "**A Simple Calculation**\n\nRight, a straightforward one. Someone's posed the question: what's 5 plus 3? Honestly, this is almost too elementary. But, alright, let's keep it clean and precise. 5 + 3, obviously... is 8. No need to overcomplicate things here. Just give them the answer directly and move on.\n\n\n",
+                    "text": "**My Immediate Calculation**\n\nAlright, a straightforward request. The user needs the sum of 5 and 3. My primary function is to perform calculations, and this is a simple one. The necessary addition is 5 + 3. I've processed that: 5 plus 3 equals 8. Therefore, the answer is 8. I'll provide the answer directly; there's no need for any further elaboration in this instance.\n\n\n",
                     "thought": true
                   },
                   {
                     "text": "5 + 3 = 8",
-                    "thoughtSignature": "EsoBCscBARFNMg+s+3bPnOxH/sFKVUy9bn6UJC7umVtXkw34FQ99Sv8otdUwx7CGAmTbyYMb8cfjCOGQc+ndKNrNC2r0EmZDUSo90zekP74NyRpXSxUlExy+aTYSRMowp4Tuo3pDL9NLhpBKiu9F1XOR6YDWCZqaRX9+MxTFK03YNH5e26tCKnpYpZnI7VF4Xh3dEn3o74B2a8q1aqvg3ik47+Zzdu52wEzPuckBMKypERK7RJNmva9WR6ekKKVrhEE7IXWyie4hkPBejw=="
+                    "thoughtSignature": "EsIBCr8BAWkUfROoG3Gk8jTm+lCLWDSyuviHtKALB/RQLLJY2lBGTk2/bf8572qBiAZtNI8/j11XPSmfuqYOR5tCZcFM4HL7SSyQzfgLb2r5CCOqApc1ioVhLQ2muunqkCkwKJckUsDp5N1qiUKXSf/B+SVWF4Nfo6XwQYyoejS8h3kFCw7a4g4LCc2rBjJDj0XzwAjYhyAZtfzYV4UQITbww6UaLW5gyLAAcAUnjprA+frvLPjTbgllnggArsOI8q5ZMeI="
                   }
                 ],
                 "role": "model"
@@ -72,31 +72,31 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 9,
             "candidatesTokenCount": 7,
-            "totalTokenCount": 49,
+            "totalTokenCount": 48,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 9
               }
             ],
-            "thoughtsTokenCount": 33,
+            "thoughtsTokenCount": 32,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-3-flash-preview",
-          "responseId": "YDyqaoqXHLqEvdIPhPrFyQc"
+          "responseId": "AWWsauSQBo7ivdIPn_v7wAw"
         }
-  recorded_at: Wed, 16 Sep 2026 06:51:14 GMT
+  recorded_at: Thu, 17 Sep 2026 22:09:06 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent
     body:
       encoding: UTF-8
-      string: '{"contents":[{"role":"user","parts":[{"text":"What is 5 + 3?"}]},{"role":"model","parts":[{"thought":true,"text":"**A
-        Simple Calculation**\n\nRight, a straightforward one. Someone''s posed the
-        question: what''s 5 plus 3? Honestly, this is almost too elementary. But,
-        alright, let''s keep it clean and precise. 5 + 3, obviously... is 8. No need
-        to overcomplicate things here. Just give them the answer directly and move
-        on.\n\n\n","thoughtSignature":"EsoBCscBARFNMg+s+3bPnOxH/sFKVUy9bn6UJC7umVtXkw34FQ99Sv8otdUwx7CGAmTbyYMb8cfjCOGQc+ndKNrNC2r0EmZDUSo90zekP74NyRpXSxUlExy+aTYSRMowp4Tuo3pDL9NLhpBKiu9F1XOR6YDWCZqaRX9+MxTFK03YNH5e26tCKnpYpZnI7VF4Xh3dEn3o74B2a8q1aqvg3ik47+Zzdu52wEzPuckBMKypERK7RJNmva9WR6ekKKVrhEE7IXWyie4hkPBejw=="},{"text":"5
+      string: '{"contents":[{"role":"user","parts":[{"text":"What is 5 + 3?"}]},{"role":"model","parts":[{"thought":true,"text":"**My
+        Immediate Calculation**\n\nAlright, a straightforward request. The user needs
+        the sum of 5 and 3. My primary function is to perform calculations, and this
+        is a simple one. The necessary addition is 5 + 3. I''ve processed that: 5
+        plus 3 equals 8. Therefore, the answer is 8. I''ll provide the answer directly;
+        there''s no need for any further elaboration in this instance.\n\n\n","thoughtSignature":"EsIBCr8BAWkUfROoG3Gk8jTm+lCLWDSyuviHtKALB/RQLLJY2lBGTk2/bf8572qBiAZtNI8/j11XPSmfuqYOR5tCZcFM4HL7SSyQzfgLb2r5CCOqApc1ioVhLQ2muunqkCkwKJckUsDp5N1qiUKXSf/B+SVWF4Nfo6XwQYyoejS8h3kFCw7a4g4LCc2rBjJDj0XzwAjYhyAZtfzYV4UQITbww6UaLW5gyLAAcAUnjprA+frvLPjTbgllnggArsOI8q5ZMeI="},{"text":"5
         + 3 = 8"}]},{"role":"user","parts":[{"text":"Now multiply that by 2"}]}],"generationConfig":{"thinkingConfig":{"includeThoughts":true,"thinkingLevel":"low"}}}'
     headers:
       User-Agent:
@@ -123,7 +123,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:51:15 GMT
+      - Thu, 17 Sep 2026 22:09:08 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -133,7 +133,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1500
+      - gfet4t7; dur=1768
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -141,6 +141,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIioqRG91YmxpbmcgRG93bioqXG5cbk9rYXksIHNvIEkndmUgZ290IHRoaXMgcmVzdWx0IOKAkyBpdCB3YXMgOCwgaWYgSSByZWNhbGwgY29ycmVjdGx5LiBOb3csIEkgbmVlZCB0byBkb3VibGUgaXQuIE15IGludHVpdGlvbiBpbW1lZGlhdGVseSBzY3JlYW1zIFwibXVsdGlwbHkgYnkgMixcIiB3aGljaCwgb2YgY291cnNlLCBpcyB0aGUgc3RhbmRhcmQgb3BlcmF0aW9uIGZvciBkb3VibGluZyBhbnkgcXVhbnRpdHkuIExldCdzIGRvIHRoZSBtZW50YWwgbWF0aC4uLiA4IG11bHRpcGxpZWQgYnkgMi4gVGhhdCdzIGEgc3RyYWlnaHRmb3J3YXJkIGNhbGN1bGF0aW9uLiBJIGFycml2ZSBhdCB0aGUgYW5zd2VyOiAxNi5cblxuXG4iLAogICAgICAgICAgICAidGhvdWdodCI6IHRydWUKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIjggw5cgMiA9IDE2IiwKICAgICAgICAgICAgInRob3VnaHRTaWduYXR1cmUiOiAiRXM0QkNzc0JBUkZOTWcvL3o1ZS9RNWZjN2dYeGRGSzhYRTU5a09CZWRFb0F6WEFndXlWV0JSNWpnVmFnM2FpanJkdzMrTlZTSVhpSVZqamFvZk1zTE5GbEZwNjd3Zzl2d3JpbWlqU0hQTWRRYStTM3Byb2xnTHVnUzZZMWN1ejNIUWVjUGZ6cXYvMFRiNXVkOXpXdTlYdmpHUW9tQVZNRVB3M2FrdDVqaE81MVN4RFh1Wk1NcVpwcFA3TlpHVDhZVjNiMXBVUXowbjlmbFpBcm9HcFVxRjNGcVNoSGYwQXNCVVQrTTBXZTVsVDhKY0JTTnVWNE1uekEvdjdhN3RHWmZYckwvcmR2ZnAremxPZTFwTWpKMjVZPSIKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJyb2xlIjogIm1vZGVsIgogICAgICB9LAogICAgICAiZmluaXNoUmVhc29uIjogIlNUT1AiLAogICAgICAiaW5kZXgiOiAwCiAgICB9CiAgXSwKICAidXNhZ2VNZXRhZGF0YSI6IHsKICAgICJwcm9tcHRUb2tlbkNvdW50IjogMTA1LAogICAgImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogOCwKICAgICJ0b3RhbFRva2VuQ291bnQiOiAxNDUsCiAgICAicHJvbXB0VG9rZW5zRGV0YWlscyI6IFsKICAgICAgewogICAgICAgICJtb2RhbGl0eSI6ICJURVhUIiwKICAgICAgICAidG9rZW5Db3VudCI6IDEwNQogICAgICB9CiAgICBdLAogICAgInRob3VnaHRzVG9rZW5Db3VudCI6IDMyLAogICAgInNlcnZpY2VUaWVyIjogInN0YW5kYXJkIgogIH0sCiAgIm1vZGVsVmVyc2lvbiI6ICJnZW1pbmktMy1mbGFzaC1wcmV2aWV3IiwKICAicmVzcG9uc2VJZCI6ICJZanlxYXVEekVyMnV2ZElQb3Ytem1RayIKfQo=
-  recorded_at: Wed, 16 Sep 2026 06:51:15 GMT
+        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIioqTXVsdGlwbHlpbmcgdGhlIFByZXZpb3VzIFJlc3VsdCoqXG5cbk9rYXksIHNvIEkgaGF2ZSBhIHByZXZpb3VzIHJlc3VsdCBoZXJlLCB3aGljaCBpcyA4LiBOb3csIG15IG5leHQgc3RlcCBpcyB0byBtdWx0aXBseSB0aGF0IGJ5IDIuIEl0J3MgYSBzdHJhaWdodGZvcndhcmQgb3BlcmF0aW9uOyBub3RoaW5nIGZhbmN5IG5lZWRlZC4gTGV0J3Mgc2VlLi4uIDggbXVsdGlwbGllZCBieSAyLiBSaWdodCwgdGhhdCdzIHNpbXBsZSBlbm91Z2ggLSA4ICogMiBlcXVhbHMgMTYuIERvbmUuIFRoZSByZXN1bHQgaXMgMTYuXG5cblxuIiwKICAgICAgICAgICAgInRob3VnaHQiOiB0cnVlCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAidGV4dCI6ICI4IMOXIDIgPSAxNiIsCiAgICAgICAgICAgICJ0aG91Z2h0U2lnbmF0dXJlIjogIkV2a0JDdllCQVdrVWZSTmE1NkJCQUdPcmNKaDFrdEsrNG5aOHpXZkhwbFQxRlllYk1pWWhZOWxPQVM4UHovdXBPYzNPOHorNTdUOFBKTk0zVWt3MXIvVTNYU1RkZUUrS0VLeGtubHFvWlk1RFAwKzhQbGg3SGVrbENXZ2lKNzdCTVU2d1RyYXkyUzFIdW9IY0l1M0xQUVZodkZhYkJDbExid1R6czRKQkY1bnJZKzZmejUvcndCS3dYQjhNMDZqTW42MmpwWlZJclFyMTlsWUZBMjlHb0ZRbENYeWlOS3N4Tmg4K283bUppWWtCQ0dnOCs1N1BOTFAyN0VucG8yUGV3UXdFYzRDS3UzRmxQbGYxYmRLWnR6OE5MekNqUlVRK0hJT1FpR3FPOEMxNDJUNitTM1JDWGhQZkRQRG81WnNxT1dZZzlzZXBYZVdQT21zNyIKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJyb2xlIjogIm1vZGVsIgogICAgICB9LAogICAgICAiZmluaXNoUmVhc29uIjogIlNUT1AiLAogICAgICAiaW5kZXgiOiAwCiAgICB9CiAgXSwKICAidXNhZ2VNZXRhZGF0YSI6IHsKICAgICJwcm9tcHRUb2tlbkNvdW50IjogMTE4LAogICAgImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogOCwKICAgICJ0b3RhbFRva2VuQ291bnQiOiAxNzgsCiAgICAicHJvbXB0VG9rZW5zRGV0YWlscyI6IFsKICAgICAgewogICAgICAgICJtb2RhbGl0eSI6ICJURVhUIiwKICAgICAgICAidG9rZW5Db3VudCI6IDExOAogICAgICB9CiAgICBdLAogICAgInRob3VnaHRzVG9rZW5Db3VudCI6IDUyLAogICAgInNlcnZpY2VUaWVyIjogInN0YW5kYXJkIgogIH0sCiAgIm1vZGVsVmVyc2lvbiI6ICJnZW1pbmktMy1mbGFzaC1wcmV2aWV3IiwKICAicmVzcG9uc2VJZCI6ICJBbVdzYXA2SE5aYmF4czBQMzdqMWtRMCIKfQo=
+  recorded_at: Thu, 17 Sep 2026 22:09:08 GMT
 recorded_with: VCR 6.4.0

@@ -1,10 +1,10 @@
 {
   "url": "wss://api.x.ai/v1/stt?language=en&diarize=true&encoding=pcm&sample_rate=24000&interim_results=true&channels=1&multichannel=false",
-  "recorded_at": "2026-09-07T20:53:56Z",
+  "recorded_at": "2026-09-17T22:06:11Z",
   "incoming": [
     {
       "type": "transcript.created",
-      "id": "2a792a40-9e6c-43d1-9f81-93b2c4062565"
+      "id": "2316df46-9f7f-43ca-96e5-b81d5ad15261"
     },
     {
       "type": "transcript.partial",
@@ -34,7 +34,7 @@
     },
     {
       "type": "transcript.partial",
-      "text": "Ruby is a programming language designed",
+      "text": "Ruby is a programming language.",
       "words": [
         {
           "text": "Ruby",
@@ -54,16 +54,11 @@
         {
           "text": "programming",
           "start": 1.0,
-          "end": 1.333
+          "end": 1.5
         },
         {
-          "text": "language",
-          "start": 1.333,
-          "end": 1.667
-        },
-        {
-          "text": "designed",
-          "start": 1.667,
+          "text": "language.",
+          "start": 1.5,
           "end": 2.0
         }
       ],
@@ -95,26 +90,26 @@
         {
           "text": "programming",
           "start": 1.0,
-          "end": 1.333
+          "end": 1.5
         },
         {
           "text": "language",
-          "start": 1.333,
-          "end": 1.667
-        },
-        {
-          "text": "designed",
-          "start": 1.667,
+          "start": 1.5,
           "end": 2.0
         },
         {
-          "text": "for",
+          "text": "designed",
           "start": 2.0,
-          "end": 2.5
+          "end": 2.333
+        },
+        {
+          "text": "for",
+          "start": 2.333,
+          "end": 2.667
         },
         {
           "text": "developer.",
-          "start": 2.5,
+          "start": 2.667,
           "end": 3.0
         }
       ],

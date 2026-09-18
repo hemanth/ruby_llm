@@ -28,7 +28,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:49:34 GMT
+      - Thu, 17 Sep 2026 22:17:31 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -44,13 +44,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-6c8ad68cf62d44bd6e8c7b831f2b65d5-76513ef2003e6e17-00
+      - 00-ceefda37fb7ce09c2ac4663f0080570f-1d771e0b0017c683-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 633ebe60-54f2-4694-96d2-29b226b61d61
+      - 78434f76-07c9-456a-854e-ccb4749397f7
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -64,9 +64,9 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '45'
+      - '46'
       X-Ratelimit-Reset-Requests:
-      - '6'
+      - '4'
       X-Ratelimit-Limit-Requests:
       - '50'
       X-Ratelimit-Renewalperiod-Requests:
@@ -86,7 +86,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 633ebe60-54f2-4694-96d2-29b226b61d61
+      - 78434f76-07c9-456a-854e-ccb4749397f7
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -95,8 +95,8 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"d508c4a7-8899-4c72-9d37-739f6a829bac","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"call_45695279","index":0,"type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"call_74719107","index":1,"type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"call_51472803","index":2,"type":"function","function":{"name":"dice_roll","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":219,"completion_tokens":45,"total_tokens":264,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":159,"audio_tokens":0,"text_tokens":219,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789541375,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 16 Sep 2026 06:49:35 GMT
+      string: '{"id":"f3379368-9ab8-4a63-89d2-5f241c97274f","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"call_30623220","index":0,"type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"call_15366749","index":1,"type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"call_98470431","index":2,"type":"function","function":{"name":"dice_roll","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":219,"completion_tokens":45,"total_tokens":264,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":159,"audio_tokens":0,"text_tokens":219,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789683452,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Thu, 17 Sep 2026 22:17:32 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview
@@ -104,7 +104,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"grok-4-1-fast-non-reasoning","messages":[{"role":"system","content":"You
         must call the dice_roll tool exactly 3 times when asked to roll dice 3 times."},{"role":"user","content":"Roll
-        the dice 3 times"},{"role":"assistant","content":"","tool_calls":[{"id":"call_45695279","type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"call_74719107","type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"call_51472803","type":"function","function":{"name":"dice_roll","arguments":"{}"}}]},{"role":"tool","content":"{\"roll\":1}","tool_call_id":"call_45695279"},{"role":"tool","content":"{\"roll\":2}","tool_call_id":"call_74719107"},{"role":"tool","content":"{\"roll\":3}","tool_call_id":"call_51472803"}],"stream":false,"tools":[{"type":"function","function":{"name":"dice_roll","description":"Rolls
+        the dice 3 times"},{"role":"assistant","content":"","tool_calls":[{"id":"call_30623220","type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"call_15366749","type":"function","function":{"name":"dice_roll","arguments":"{}"}},{"id":"call_98470431","type":"function","function":{"name":"dice_roll","arguments":"{}"}}]},{"role":"tool","content":"{\"roll\":1}","tool_call_id":"call_30623220"},{"role":"tool","content":"{\"roll\":2}","tool_call_id":"call_15366749"},{"role":"tool","content":"{\"roll\":3}","tool_call_id":"call_98470431"}],"stream":false,"tools":[{"type":"function","function":{"name":"dice_roll","description":"Rolls
         a single six-sided die and returns the result","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
@@ -125,7 +125,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:49:35 GMT
+      - Thu, 17 Sep 2026 22:17:32 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -141,13 +141,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-a39884c2393a522dfd03f66cebcf0734-2d98edc300168f85-00
+      - 00-8ec1131692b1376404abf318bb9ae510-5dabf101000b6950-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - c1b180a1-2466-4dbc-a991-2486d8c83545
+      - 3026d5ee-4b7f-4954-a403-9b74abaa2516
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -161,9 +161,9 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '45'
+      - '47'
       X-Ratelimit-Reset-Requests:
-      - '6'
+      - '3'
       X-Ratelimit-Limit-Requests:
       - '50'
       X-Ratelimit-Renewalperiod-Requests:
@@ -183,7 +183,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - c1b180a1-2466-4dbc-a991-2486d8c83545
+      - 3026d5ee-4b7f-4954-a403-9b74abaa2516
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -192,7 +192,7 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"b241da99-703d-404b-9fc1-93ebbbd3668f","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        dice rolls are: 1, 2, 3!"},"finish_reason":"stop"}],"usage":{"prompt_tokens":298,"completion_tokens":14,"total_tokens":312,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":387,"audio_tokens":0,"text_tokens":298,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789541376,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 16 Sep 2026 06:49:36 GMT
+      string: '{"id":"e9cf16b5-25ce-4c28-8765-1cec22ad985f","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        three dice rolls are: 1, 2, 3."},"finish_reason":"stop"}],"usage":{"prompt_tokens":298,"completion_tokens":15,"total_tokens":313,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":387,"audio_tokens":0,"text_tokens":298,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789683453,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Thu, 17 Sep 2026 22:17:33 GMT
 recorded_with: VCR 6.4.0

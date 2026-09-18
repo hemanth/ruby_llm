@@ -5,7 +5,7 @@ http_interactions:
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:asyncBatchEmbedContent
     body:
       encoding: UTF-8
-      string: '{"batch":{"displayName":"ruby_llm_baec72db2c40382d","inputConfig":{"requests":{"requests":[{"request":{"model":"models/gemini-embedding-001","content":{"parts":[{"text":"Ruby"}]},"outputDimensionality":64},"metadata":{"custom_id":"0","model":"gemini-embedding-001","array_input":false,"embedding_index":0,"embedding_count":1}}]}}}}'
+      string: '{"batch":{"displayName":"ruby_llm_6bf18295447f2780","inputConfig":{"requests":{"requests":[{"request":{"model":"models/gemini-embedding-001","content":{"parts":[{"text":"Ruby"}]},"outputDimensionality":64},"metadata":{"custom_id":"0","model":"gemini-embedding-001","array_input":false,"embedding_index":0,"embedding_count":1}}]}}}}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -29,7 +29,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:51:57 GMT
+      - Thu, 17 Sep 2026 22:15:10 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -39,7 +39,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=4544
+      - gfet4t7; dur=4224
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -48,25 +48,25 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/evh2gwh32cvfdhtw1itonmgdf5hzlnbvmc3r",
+          "name": "batches/yyn3anyz3fgvnndyurauw5bqhh19v1s7nfpg",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.EmbedContentBatch",
             "model": "models/gemini-embedding-001",
-            "displayName": "ruby_llm_baec72db2c40382d",
-            "createTime": "2026-09-16T06:51:53.728526866Z",
-            "updateTime": "2026-09-16T06:51:53.728526866Z",
+            "displayName": "ruby_llm_6bf18295447f2780",
+            "createTime": "2026-09-17T22:15:07.287598565Z",
+            "updateTime": "2026-09-17T22:15:07.287598565Z",
             "batchStats": {
               "requestCount": "1",
               "pendingRequestCount": "1"
             },
             "state": "BATCH_STATE_PENDING",
-            "name": "batches/evh2gwh32cvfdhtw1itonmgdf5hzlnbvmc3r"
+            "name": "batches/yyn3anyz3fgvnndyurauw5bqhh19v1s7nfpg"
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:51:57 GMT
+  recorded_at: Thu, 17 Sep 2026 22:15:10 GMT
 - request:
     method: get
-    uri: https://generativelanguage.googleapis.com/v1beta/batches/evh2gwh32cvfdhtw1itonmgdf5hzlnbvmc3r
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/yyn3anyz3fgvnndyurauw5bqhh19v1s7nfpg
     body:
       encoding: US-ASCII
       string: ''
@@ -91,7 +91,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:51:58 GMT
+      - Thu, 17 Sep 2026 22:15:11 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -101,7 +101,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=362
+      - gfet4t7; dur=272
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -110,25 +110,25 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/evh2gwh32cvfdhtw1itonmgdf5hzlnbvmc3r",
+          "name": "batches/yyn3anyz3fgvnndyurauw5bqhh19v1s7nfpg",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.EmbedContentBatch",
             "model": "models/gemini-embedding-001",
-            "displayName": "ruby_llm_baec72db2c40382d",
-            "createTime": "2026-09-16T06:51:53.728526866Z",
-            "updateTime": "2026-09-16T06:51:53.728526866Z",
+            "displayName": "ruby_llm_6bf18295447f2780",
+            "createTime": "2026-09-17T22:15:07.287598565Z",
+            "updateTime": "2026-09-17T22:15:07.287598565Z",
             "batchStats": {
               "requestCount": "1",
               "pendingRequestCount": "1"
             },
             "state": "BATCH_STATE_RUNNING",
-            "name": "batches/evh2gwh32cvfdhtw1itonmgdf5hzlnbvmc3r"
+            "name": "batches/yyn3anyz3fgvnndyurauw5bqhh19v1s7nfpg"
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:51:58 GMT
+  recorded_at: Thu, 17 Sep 2026 22:15:11 GMT
 - request:
     method: post
-    uri: https://generativelanguage.googleapis.com/v1beta/batches/evh2gwh32cvfdhtw1itonmgdf5hzlnbvmc3r:cancel
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/yyn3anyz3fgvnndyurauw5bqhh19v1s7nfpg:cancel
     body:
       encoding: UTF-8
       string: "{}"
@@ -155,7 +155,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:51:59 GMT
+      - Thu, 17 Sep 2026 22:15:12 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -165,7 +165,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=1274
+      - gfet4t7; dur=1329
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -173,10 +173,10 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: "{}\n"
-  recorded_at: Wed, 16 Sep 2026 06:51:59 GMT
+  recorded_at: Thu, 17 Sep 2026 22:15:12 GMT
 - request:
     method: get
-    uri: https://generativelanguage.googleapis.com/v1beta/batches/evh2gwh32cvfdhtw1itonmgdf5hzlnbvmc3r
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/yyn3anyz3fgvnndyurauw5bqhh19v1s7nfpg
     body:
       encoding: US-ASCII
       string: ''
@@ -201,7 +201,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:51:59 GMT
+      - Thu, 17 Sep 2026 22:15:12 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -211,7 +211,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=279
+      - gfet4t7; dur=292
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -220,26 +220,26 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/evh2gwh32cvfdhtw1itonmgdf5hzlnbvmc3r",
+          "name": "batches/yyn3anyz3fgvnndyurauw5bqhh19v1s7nfpg",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.EmbedContentBatch",
             "model": "models/gemini-embedding-001",
-            "displayName": "ruby_llm_baec72db2c40382d",
-            "createTime": "2026-09-16T06:51:53.728526866Z",
-            "endTime": "2026-09-16T06:51:58.808157Z",
-            "updateTime": "2026-09-16T06:51:58.808157Z",
+            "displayName": "ruby_llm_6bf18295447f2780",
+            "createTime": "2026-09-17T22:15:07.287598565Z",
+            "endTime": "2026-09-17T22:15:11.801196Z",
+            "updateTime": "2026-09-17T22:15:11.801196Z",
             "batchStats": {
               "requestCount": "1",
               "pendingRequestCount": "1"
             },
             "state": "BATCH_STATE_CANCELLED",
-            "name": "batches/evh2gwh32cvfdhtw1itonmgdf5hzlnbvmc3r"
+            "name": "batches/yyn3anyz3fgvnndyurauw5bqhh19v1s7nfpg"
           },
           "done": true,
           "error": {
             "code": 13,
-            "message": "Batch evh2gwh32cvfdhtw1itonmgdf5hzlnbvmc3r failed without error."
+            "message": "Batch yyn3anyz3fgvnndyurauw5bqhh19v1s7nfpg failed without error."
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:51:59 GMT
+  recorded_at: Thu, 17 Sep 2026 22:15:12 GMT
 recorded_with: VCR 6.4.0

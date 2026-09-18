@@ -34,7 +34,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:59:01 GMT
+      - Thu, 17 Sep 2026 22:26:13 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -44,7 +44,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=646
+      - gfet4t7; dur=660
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -64,7 +64,7 @@ http_interactions:
                         "query": "test data"
                       }
                     },
-                    "thoughtSignature": "CpwCARFNMg8ERJfnFx7wf1LeoKBJKL9dWVzGPcc46rLI6PrWimsMxBQkWtJzi0/EhG4cKkRnmF4PyAyCX7TM88vD/Dnn3/xgNsjMDEDTBieSbCDKpcJQjaPgdzWQFexwuC95vCXGZPmICfXub6eaFzGV3YhuKxcx+QMCWbNciviGgscYMj1RFlAb314Me6aKAjuys+e7Y8jldwIc0Bzaucb29PeEfCYE/utevntICvNroqNvsTGMedtPLqKOP6Id4LltzVlRK2MS77IeU6CJrxf4Jo1vbxXvciK74VnSnE7shDBKxNDDSadJ2E2THUynskPtjhb7gO3cFWjFFkM7shcE1XNk/3tP+ZYYOZccf1Jt7BHpiPEPA3ioJvWOq5c="
+                    "thoughtSignature": "CqkCAWkUfRO9Ix3oMxk0D+trCkSko6OxYm91dkEy6PLi6jI+4n2VfNLVuwXGq0umAmYLyn3gWucSDkPKavJFqGh1XPB0N/9CxHsAiA5M4Rb3lz9JTF8j9MZI1WBr5pnsl9P0xktw5B96QE+6jFZEnIopSBQPmeIXEriFHVB000bPz6+GP0B0HYkU7T5+wpctvMuQuhNeaz/O57yuvtauz6p6SA9vIVp+g/LJtkrB2eWFeu4bj+Oorn649q/yd2KMcFX1hdKlkYo9TvgX/jV/WemWPljhYTI+cBNIbi46fel//xraBv9jLPX2AuGxaw+ojzIG3Nd61buZE71OeXB8CEbTPgHKK01GsJnIAWhp0HgrNCq/lJ+LvkCTy0+qNiAD++kwP1/1vrxMr8uJ"
                   }
                 ],
                 "role": "model"
@@ -77,20 +77,20 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 46,
             "candidatesTokenCount": 16,
-            "totalTokenCount": 123,
+            "totalTokenCount": 126,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 46
               }
             ],
-            "thoughtsTokenCount": 61,
+            "thoughtsTokenCount": 64,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "ND6qaoyLPMOd28oP8rzQQQ"
+          "responseId": "BWmsapjSA56H28oP3IyymA8"
         }
-  recorded_at: Wed, 16 Sep 2026 06:59:01 GMT
+  recorded_at: Thu, 17 Sep 2026 22:26:13 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
@@ -98,7 +98,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"Process this query: test
         data"}]},{"role":"model","parts":[{"functionCall":{"name":"content_returning","args":{"query":"test
-        data"}},"thoughtSignature":"CpwCARFNMg8ERJfnFx7wf1LeoKBJKL9dWVzGPcc46rLI6PrWimsMxBQkWtJzi0/EhG4cKkRnmF4PyAyCX7TM88vD/Dnn3/xgNsjMDEDTBieSbCDKpcJQjaPgdzWQFexwuC95vCXGZPmICfXub6eaFzGV3YhuKxcx+QMCWbNciviGgscYMj1RFlAb314Me6aKAjuys+e7Y8jldwIc0Bzaucb29PeEfCYE/utevntICvNroqNvsTGMedtPLqKOP6Id4LltzVlRK2MS77IeU6CJrxf4Jo1vbxXvciK74VnSnE7shDBKxNDDSadJ2E2THUynskPtjhb7gO3cFWjFFkM7shcE1XNk/3tP+ZYYOZccf1Jt7BHpiPEPA3ioJvWOq5c="}]},{"role":"user","parts":[{"functionResponse":{"name":"content_returning","response":{"name":"content_returning","content":[{"text":"Processed:
+        data"}},"thoughtSignature":"CqkCAWkUfRO9Ix3oMxk0D+trCkSko6OxYm91dkEy6PLi6jI+4n2VfNLVuwXGq0umAmYLyn3gWucSDkPKavJFqGh1XPB0N/9CxHsAiA5M4Rb3lz9JTF8j9MZI1WBr5pnsl9P0xktw5B96QE+6jFZEnIopSBQPmeIXEriFHVB000bPz6+GP0B0HYkU7T5+wpctvMuQuhNeaz/O57yuvtauz6p6SA9vIVp+g/LJtkrB2eWFeu4bj+Oorn649q/yd2KMcFX1hdKlkYo9TvgX/jV/WemWPljhYTI+cBNIbi46fel//xraBv9jLPX2AuGxaw+ojzIG3Nd61buZE71OeXB8CEbTPgHKK01GsJnIAWhp0HgrNCq/lJ+LvkCTy0+qNiAD++kwP1/1vrxMr8uJ"}]},{"role":"user","parts":[{"functionResponse":{"name":"content_returning","response":{"name":"content_returning","content":[{"text":"Processed:
         test data"}]}}}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"content_returning","description":"Returns
         a processed string result","parametersJsonSchema":{"type":"object","properties":{"query":{"type":"string","description":"Query
         to process"}},"required":["query"],"additionalProperties":false,"strict":true}}]}]}'
@@ -127,7 +127,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:59:01 GMT
+      - Thu, 17 Sep 2026 22:26:14 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -137,7 +137,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=381
+      - gfet4t7; dur=387
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -151,7 +151,7 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "The query \"test data\" has been processed."
+                    "text": "I have processed your query: \"test data\"."
                   }
                 ],
                 "role": "model"
@@ -173,7 +173,7 @@ http_interactions:
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "NT6qar3zLNjbxs0Pwei60A4"
+          "responseId": "BWmsaq-GMtmc28oP5J6S4Qw"
         }
-  recorded_at: Wed, 16 Sep 2026 06:59:01 GMT
+  recorded_at: Thu, 17 Sep 2026 22:26:14 GMT
 recorded_with: VCR 6.4.0

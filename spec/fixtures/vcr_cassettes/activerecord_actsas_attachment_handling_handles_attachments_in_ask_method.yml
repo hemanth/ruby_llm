@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:50:05 GMT
+      - Thu, 17 Sep 2026 22:13:27 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -48,7 +48,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '507'
+      - '591'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -75,15 +75,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "resp_0e02ea042b34eb07016aaa3c1c75d087d286b1c2b589002d02",
+          "id": "resp_0a6fc40b891208f2016aac6606914487d2b393c4b07d8991e1",
           "object": "response",
-          "created_at": 1789541404,
+          "created_at": 1789683206,
           "status": "completed",
           "background": false,
           "billing": {
             "payer": "developer"
           },
-          "completed_at": 1789541404,
+          "completed_at": 1789683207,
           "error": null,
           "frequency_penalty": 0.0,
           "incomplete_details": null,
@@ -94,7 +94,7 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "msg_0e02ea042b34eb07016aaa3c1cb9c087d29128aed07cc5a35a",
+              "id": "msg_0a6fc40b891208f2016aac6606f8f887d2860d7032bb4452c6",
               "type": "message",
               "status": "completed",
               "content": [
@@ -102,7 +102,7 @@ http_interactions:
                   "type": "output_text",
                   "annotations": [],
                   "logprobs": [],
-                  "text": "I see an image of a red gemstone or jewel, cut in a faceted shape."
+                  "text": "The image shows a red, faceted, spherical gemstone or crystal."
                 }
               ],
               "role": "assistant"
@@ -157,14 +157,14 @@ http_interactions:
               "cache_write_tokens": 0,
               "cached_tokens": 0
             },
-            "output_tokens": 19,
+            "output_tokens": 15,
             "output_tokens_details": {
               "reasoning_tokens": 0
             },
-            "total_tokens": 72
+            "total_tokens": 68
           },
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 16 Sep 2026 06:50:05 GMT
+  recorded_at: Thu, 17 Sep 2026 22:13:27 GMT
 recorded_with: VCR 6.4.0

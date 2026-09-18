@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:51:52 GMT
+      - Thu, 17 Sep 2026 22:15:47 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -42,7 +42,7 @@ http_interactions:
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Openai-Processing-Ms:
-      - '294'
+      - '980'
       X-Openai-Proxy-Wasm:
       - v0.1
       Cf-Cache-Status:
@@ -63,7 +63,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "modr-1138",
+          "id": "modr-552",
           "model": "omni-moderation-latest",
           "results": [
             {
@@ -95,7 +95,7 @@ http_interactions:
                 "self-harm/instructions": 1.8925148246037342e-6,
                 "self-harm": 0.00046119806894731965,
                 "sexual/minors": 3.120191139396651e-6,
-                "violence": 0.0005096006331304874,
+                "violence": 0.000510430845712912,
                 "violence/graphic": 7.967300986103147e-6
               },
               "category_applied_input_types": {
@@ -148,5 +148,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Wed, 16 Sep 2026 06:51:52 GMT
+  recorded_at: Thu, 17 Sep 2026 22:15:47 GMT
 recorded_with: VCR 6.4.0

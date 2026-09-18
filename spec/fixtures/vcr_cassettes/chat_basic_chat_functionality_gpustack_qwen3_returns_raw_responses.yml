@@ -23,29 +23,42 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Wed, 16 Sep 2026 07:08:14 GMT
       Server:
       - istio-envoy
+      Req-Cost-Time:
+      - '1775'
+      Resp-Start-Time:
+      - '1789682888547'
+      Date:
+      - Thu, 17 Sep 2026 22:08:06 GMT
       Access-Control-Allow-Origin:
       - ''
       Content-Type:
       - application/json; charset=utf-8
-      Req-Cost-Time:
-      - '1840'
       Req-Arrive-Time:
-      - '1789542495148'
+      - '1789682886772'
       X-Envoy-Upstream-Service-Time:
-      - '1833'
-      Resp-Start-Time:
-      - '1789542496989'
+      - '1765'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIGNhcGl0YWwgb2YgRnJhbmNlIGlzICoqUGFyaXMqKi4gSXQgaXMgbm90IG9ubHkgdGhlIHBvbGl0aWNhbCBhbmQgY3VsdHVyYWwgaGVhcnQgb2YgdGhlIGNvdW50cnkgYnV0IGFsc28gb25lIG9mIHRoZSBtb3N0IGljb25pYyBjaXRpZXMgaW4gdGhlIHdvcmxkLCBrbm93biBmb3IgbGFuZG1hcmtzIGxpa2UgdGhlIEVpZmZlbCBUb3dlciwgdGhlIExvdXZyZSBNdXNldW0sIGFuZCB0aGUgU2VpbmUgUml2ZXIuIPCfh6vwn4e34pyoIiwicmVhc29uaW5nX2NvbnRlbnQiOiJPa2F5LCB0aGUgdXNlciBpcyBhc2tpbmcgZm9yIHRoZSBjYXBpdGFsIG9mIEZyYW5jZS4gSSBuZWVkIHRvIG1ha2Ugc3VyZSBJIGdldCB0aGlzIHJpZ2h0LiBMZXQgbWUgdGhpbmsuIEZyYW5jZSBpcyBhIGNvdW50cnkgaW4gRXVyb3BlLCByaWdodD8gVGhlIGNhcGl0YWwgaXMgYSBjaXR5IHRoYXQgc2VydmVzIGFzIHRoZSBzZWF0IG9mIGdvdmVybm1lbnQuIEkgcmVtZW1iZXIgdGhhdCBQYXJpcyBpcyB0aGUgY2FwaXRhbCBvZiBGcmFuY2UuIEJ1dCB3YWl0LCBtYXliZSBJIHNob3VsZCBkb3VibGUtY2hlY2sgdG8gYXZvaWQgYW55IG1pc3Rha2VzLiBTb21ldGltZXMgdGhlcmUgY2FuIGJlIGNvbmZ1c2lvbiB3aXRoIG90aGVyIGNpdGllcywgbGlrZSBMeW9uIG9yIE1hcnNlaWxsZSwgYnV0IHRob3NlIGFyZSBtYWpvciBjaXRpZXMsIG5vdCB0aGUgY2FwaXRhbC4gTGV0IG1lIGNvbmZpcm0uIFllcywgUGFyaXMgaXMgdGhlIGNhcGl0YWwgYW5kIHRoZSBsYXJnZXN0IGNpdHkgaW4gRnJhbmNlLiBJdCdzIGFsc28ga25vd24gZm9yIHRoZSBFaWZmZWwgVG93ZXIsIHRoZSBMb3V2cmUgTXVzZXVtLCBhbmQgb3RoZXIgbGFuZG1hcmtzLiBTbyB0aGUgYW5zd2VyIHNob3VsZCBiZSBQYXJpcy4gSSBzaG91bGQgcHJlc2VudCB0aGF0IGNsZWFybHkgYW5kIG1heWJlIGFkZCBhIGJpdCBtb3JlIGNvbnRleHQgdG8gYmUgaGVscGZ1bC5cbiJ9fV0sImNyZWF0ZWQiOjE3ODk1NDI0OTYsIm1vZGVsIjoicXdlbjMiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJiMTA4MzAtNDY1ZTQ5YjljIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwidXNhZ2UiOnsiY29tcGxldGlvbl90b2tlbnMiOjIxOSwicHJvbXB0X3Rva2VucyI6MTUsInRvdGFsX3Rva2VucyI6MjM0LCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6NH19LCJpZCI6ImNoYXRjbXBsLUNJc1hCVVhUWjZIb29xMEE1YlZBNDdXb1czVnA3RUtFIiwidGltaW5ncyI6eyJjYWNoZV9uIjo0LCJwcm9tcHRfbiI6MTEsInByb21wdF9tcyI6MTUuMDQ4LCJwcm9tcHRfcGVyX3Rva2VuX21zIjoxLjM2OCwicHJvbXB0X3Blcl9zZWNvbmQiOjczMC45OTQxNTIwNDY3ODM2LCJwcmVkaWN0ZWRfbiI6MjE5LCJwcmVkaWN0ZWRfbXMiOjE3OTMuMDM2LCJwcmVkaWN0ZWRfcGVyX3Rva2VuX21zIjo4LjIyNDkzNTc3OTgxNjUxNCwicHJlZGljdGVkX3Blcl9zZWNvbmQiOjEyMS41ODE0OTY0MTE2NzI3fX0=
-  recorded_at: Wed, 16 Sep 2026 07:08:16 GMT
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"role":"assistant","content":"The
+        capital of France is **Paris**. It is the political, economic, and cultural
+        center of the country, home to landmarks such as the Eiffel Tower, the Louvre
+        Museum, and the French National Assembly.","reasoning_content":"Okay, the
+        user is asking for the capital of France. Let me think. I know that France
+        is a country in Europe. The capital is a city where the government is located.
+        I remember that Paris is the capital of France. But wait, is there any other
+        city that might be considered? Like maybe Lyon or Marseille? No, I think Paris
+        is definitely the capital. Let me double-check. Paris is the political, economic,
+        and cultural center of France. The government, including the President''s
+        office, is in Paris. Also, major landmarks like the Eiffel Tower and the Louvre
+        are there. Yeah, I''m pretty confident it''s Paris. I should make sure there''s
+        no confusion with other countries. For example, the capital of Spain is Madrid,
+        and Germany''s is Berlin. So France''s is Paris. No, I don''t think there''s
+        any other city. The answer should be Paris.\n"}}],"created":1789682888,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":236,"prompt_tokens":15,"total_tokens":251,"prompt_tokens_details":{"cached_tokens":4}},"id":"chatcmpl-zGQXOeNjny7JQkdKBUDVuIEWC503We4I","timings":{"cache_n":4,"prompt_n":11,"prompt_ms":13.206,"prompt_per_token_ms":1.2005454545454546,"prompt_per_second":832.9547175526277,"predicted_n":236,"predicted_ms":1738.689,"predicted_per_token_ms":7.398676595744681,"predicted_per_second":135.15930681105132}}'
+  recorded_at: Thu, 17 Sep 2026 22:08:08 GMT
 recorded_with: VCR 6.4.0

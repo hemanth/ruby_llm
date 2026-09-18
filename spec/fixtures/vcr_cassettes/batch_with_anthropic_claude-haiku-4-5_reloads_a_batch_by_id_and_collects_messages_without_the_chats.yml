@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:00:31 GMT
+      - Thu, 17 Sep 2026 22:13:40 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -48,7 +48,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=507
+      - x-originResponse;dur=554
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -57,11 +57,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:00:31 GMT
+      string: '{"id":"msgbatch_01KXhBkiHHieMf2FExqB54C8","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-17T22:13:40.298262+00:00","expires_at":"2026-09-18T22:13:40.298262+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
+  recorded_at: Thu, 17 Sep 2026 22:13:40 GMT
 - request:
     method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3
+    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01KXhBkiHHieMf2FExqB54C8
     body:
       encoding: US-ASCII
       string: ''
@@ -82,65 +82,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:00:32 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Retry-After:
-      - '10'
-      Request-Id:
-      - "<REQUEST_ID>"
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Anthropic-Organization-Id:
-      - "<ANTHROPIC_ORGANIZATION_ID>"
-      Anthropic-Workspace-Id:
-      - wrkspc_01MZW3YzUeytZsFc9LHFxP78
-      Server:
-      - cloudflare
-      Vary:
-      - Accept-Encoding
-      Content-Security-Policy:
-      - default-src 'none'; frame-ancestors 'none'
-      Server-Timing:
-      - x-originResponse;dur=650
-      Cf-Cache-Status:
-      - DYNAMIC
-      X-Robots-Tag:
-      - none
-      Cf-Ray:
-      - "<CF_RAY>"
-    body:
-      encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:00:32 GMT
-- request:
-    method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      X-Api-Key:
-      - "<ANTHROPIC_API_KEY>"
-      Anthropic-Version:
-      - '2023-06-01'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 16 Sep 2026 07:00:47 GMT
+      - Thu, 17 Sep 2026 22:13:40 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -164,7 +106,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=210
+      - x-originResponse;dur=95
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -173,11 +115,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:00:47 GMT
+      string: '{"id":"msgbatch_01KXhBkiHHieMf2FExqB54C8","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-17T22:13:40.298262+00:00","expires_at":"2026-09-18T22:13:40.298262+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
+  recorded_at: Thu, 17 Sep 2026 22:13:40 GMT
 - request:
     method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3
+    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01KXhBkiHHieMf2FExqB54C8
     body:
       encoding: US-ASCII
       string: ''
@@ -198,7 +140,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:01:03 GMT
+      - Thu, 17 Sep 2026 22:13:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -222,7 +164,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=105
+      - x-originResponse;dur=82
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -231,11 +173,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:01:03 GMT
+      string: '{"id":"msgbatch_01KXhBkiHHieMf2FExqB54C8","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-17T22:13:40.298262+00:00","expires_at":"2026-09-18T22:13:40.298262+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
+  recorded_at: Thu, 17 Sep 2026 22:13:55 GMT
 - request:
     method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3
+    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01KXhBkiHHieMf2FExqB54C8
     body:
       encoding: US-ASCII
       string: ''
@@ -256,7 +198,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:01:18 GMT
+      - Thu, 17 Sep 2026 22:14:11 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -280,7 +222,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=135
+      - x-originResponse;dur=82
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -289,11 +231,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:01:18 GMT
+      string: '{"id":"msgbatch_01KXhBkiHHieMf2FExqB54C8","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-17T22:13:40.298262+00:00","expires_at":"2026-09-18T22:13:40.298262+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
+  recorded_at: Thu, 17 Sep 2026 22:14:11 GMT
 - request:
     method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3
+    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01KXhBkiHHieMf2FExqB54C8
     body:
       encoding: US-ASCII
       string: ''
@@ -314,7 +256,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:01:33 GMT
+      - Thu, 17 Sep 2026 22:14:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -338,7 +280,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=89
+      - x-originResponse;dur=108
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -347,11 +289,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:01:33 GMT
+      string: '{"id":"msgbatch_01KXhBkiHHieMf2FExqB54C8","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-17T22:13:40.298262+00:00","expires_at":"2026-09-18T22:13:40.298262+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
+  recorded_at: Thu, 17 Sep 2026 22:14:26 GMT
 - request:
     method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3
+    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01KXhBkiHHieMf2FExqB54C8
     body:
       encoding: US-ASCII
       string: ''
@@ -372,7 +314,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:01:49 GMT
+      - Thu, 17 Sep 2026 22:14:41 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -396,7 +338,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=130
+      - x-originResponse;dur=71
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -405,11 +347,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:01:49 GMT
+      string: '{"id":"msgbatch_01KXhBkiHHieMf2FExqB54C8","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-17T22:13:40.298262+00:00","expires_at":"2026-09-18T22:13:40.298262+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
+  recorded_at: Thu, 17 Sep 2026 22:14:41 GMT
 - request:
     method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3
+    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01KXhBkiHHieMf2FExqB54C8
     body:
       encoding: US-ASCII
       string: ''
@@ -430,123 +372,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:02:04 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Retry-After:
-      - '10'
-      Request-Id:
-      - "<REQUEST_ID>"
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Anthropic-Organization-Id:
-      - "<ANTHROPIC_ORGANIZATION_ID>"
-      Anthropic-Workspace-Id:
-      - wrkspc_01MZW3YzUeytZsFc9LHFxP78
-      Server:
-      - cloudflare
-      Vary:
-      - Accept-Encoding
-      Content-Security-Policy:
-      - default-src 'none'; frame-ancestors 'none'
-      Server-Timing:
-      - x-originResponse;dur=303
-      Cf-Cache-Status:
-      - DYNAMIC
-      X-Robots-Tag:
-      - none
-      Cf-Ray:
-      - "<CF_RAY>"
-    body:
-      encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:02:04 GMT
-- request:
-    method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      X-Api-Key:
-      - "<ANTHROPIC_API_KEY>"
-      Anthropic-Version:
-      - '2023-06-01'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 16 Sep 2026 07:02:19 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Retry-After:
-      - '10'
-      Request-Id:
-      - "<REQUEST_ID>"
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Anthropic-Organization-Id:
-      - "<ANTHROPIC_ORGANIZATION_ID>"
-      Anthropic-Workspace-Id:
-      - wrkspc_01MZW3YzUeytZsFc9LHFxP78
-      Server:
-      - cloudflare
-      Vary:
-      - Accept-Encoding
-      Content-Security-Policy:
-      - default-src 'none'; frame-ancestors 'none'
-      Server-Timing:
-      - x-originResponse;dur=103
-      Cf-Cache-Status:
-      - DYNAMIC
-      X-Robots-Tag:
-      - none
-      Cf-Ray:
-      - "<CF_RAY>"
-    body:
-      encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:02:19 GMT
-- request:
-    method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      X-Api-Key:
-      - "<ANTHROPIC_API_KEY>"
-      Anthropic-Version:
-      - '2023-06-01'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 16 Sep 2026 07:02:35 GMT
+      - Thu, 17 Sep 2026 22:14:56 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -568,7 +394,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=137
+      - x-originResponse;dur=82
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -577,11 +403,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"ended","request_counts":{"processing":0,"succeeded":1,"errored":0,"canceled":0,"expired":0},"ended_at":"2026-09-16T07:02:26.283545+00:00","created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":"https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3/results"}'
-  recorded_at: Wed, 16 Sep 2026 07:02:35 GMT
+      string: '{"id":"msgbatch_01KXhBkiHHieMf2FExqB54C8","type":"message_batch","processing_status":"ended","request_counts":{"processing":0,"succeeded":1,"errored":0,"canceled":0,"expired":0},"ended_at":"2026-09-17T22:14:48.487327+00:00","created_at":"2026-09-17T22:13:40.298262+00:00","expires_at":"2026-09-18T22:13:40.298262+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":"https://api.anthropic.com/v1/messages/batches/msgbatch_01KXhBkiHHieMf2FExqB54C8/results"}'
+  recorded_at: Thu, 17 Sep 2026 22:14:56 GMT
 - request:
     method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3
+    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01KXhBkiHHieMf2FExqB54C8
     body:
       encoding: US-ASCII
       string: ''
@@ -602,7 +428,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:02:35 GMT
+      - Thu, 17 Sep 2026 22:14:57 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -624,7 +450,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=97
+      - x-originResponse;dur=76
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -633,11 +459,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01BPQFicEnZuezBR4R3CKqs3","type":"message_batch","processing_status":"ended","request_counts":{"processing":0,"succeeded":1,"errored":0,"canceled":0,"expired":0},"ended_at":"2026-09-16T07:02:26.283545+00:00","created_at":"2026-09-16T07:00:31.541313+00:00","expires_at":"2026-09-17T07:00:31.541313+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":"https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3/results"}'
-  recorded_at: Wed, 16 Sep 2026 07:02:35 GMT
+      string: '{"id":"msgbatch_01KXhBkiHHieMf2FExqB54C8","type":"message_batch","processing_status":"ended","request_counts":{"processing":0,"succeeded":1,"errored":0,"canceled":0,"expired":0},"ended_at":"2026-09-17T22:14:48.487327+00:00","created_at":"2026-09-17T22:13:40.298262+00:00","expires_at":"2026-09-18T22:13:40.298262+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":"https://api.anthropic.com/v1/messages/batches/msgbatch_01KXhBkiHHieMf2FExqB54C8/results"}'
+  recorded_at: Thu, 17 Sep 2026 22:14:57 GMT
 - request:
     method: get
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01BPQFicEnZuezBR4R3CKqs3/results
+    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01KXhBkiHHieMf2FExqB54C8/results
     body:
       encoding: US-ASCII
       string: ''
@@ -658,7 +484,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:02:35 GMT
+      - Thu, 17 Sep 2026 22:14:57 GMT
       Content-Type:
       - application/x-jsonl
       Transfer-Encoding:
@@ -666,7 +492,7 @@ http_interactions:
       Connection:
       - keep-alive
       Content-Disposition:
-      - attachment; filename*=utf-8''msgbatch_01BPQFicEnZuezBR4R3CKqs3_results.jsonl
+      - attachment; filename*=utf-8''msgbatch_01KXhBkiHHieMf2FExqB54C8_results.jsonl
       Request-Id:
       - "<REQUEST_ID>"
       Strict-Transport-Security:
@@ -682,7 +508,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=269
+      - x-originResponse;dur=188
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -691,8 +517,8 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: UTF-8
-      string: '{"custom_id":"0","result":{"type":"succeeded","message":{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6gvS2JhZBYdqRGorehn","type":"message","role":"assistant","content":[{"type":"text","text":"6"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":20,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":5,"service_tier":"batch","inference_geo":"not_available"}}}}
+      string: '{"custom_id":"0","result":{"type":"succeeded","message":{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9nJB2chqNu2eTqM9ANa","type":"message","role":"assistant","content":[{"type":"text","text":"6"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":20,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":5,"service_tier":"batch","inference_geo":"not_available"}}}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 07:02:35 GMT
+  recorded_at: Thu, 17 Sep 2026 22:14:57 GMT
 recorded_with: VCR 6.4.0

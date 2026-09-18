@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:50:50 GMT
+      - Thu, 17 Sep 2026 22:14:08 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -52,11 +52,11 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '362.4'
+      - '384.8'
       X-Metrics-E2e-Ms:
-      - '2094.8'
+      - '2695.3'
       Traceparent:
-      - 00-188bcd629760ba7ad2e4927e2620f870-c54149870000afd3-01
+      - 00-3e73425bc3ab9bd812f69e0d60656a00-84dcd36f0004a9de-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -69,9 +69,9 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1789541450,"completed_at":1789541450,"id":"990f72c4-db28-931d-96da-3ee7db591da5","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_990f72c4-db28-931d-96da-3ee7db591da5","summary":[{"text":"The
+      string: '{"created_at":1789683248,"completed_at":1789683248,"id":"6c08f70e-96b5-9775-9e04-903231cceaa1","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_6c08f70e-96b5-9775-9e04-903231cceaa1","summary":[{"text":"The
         task is: \"What is the square root of 64? Answer with a JSON object with the
-        key `result`.\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"znjfQtF/SSN3YsTTyeg2UvlgDRsPFaIBAALI9v+PqOq7m3bSl9DOajIHZ0kQ5fulPTcY6oGpHq9aTGw+qzFSTRY8WISrXLaNboPPM97Oi678PjZrrXMKObpEXTEaLg4Qc3V7rAS9dDYatisEbtFrCjKpGibvPi2BULKS1aUjKyYz8+dE6HEtrfBilSRM70i52TjWXjgm08be5cHOaRrsbwARsV83CKb/NWaZWis++/58UzobyLl3LEzyXyJbqzfYQ4PuOvB3r7ogQJdRN9CiHr6olZ1AQwZsUtJeaiNu2FSX2Qqt4+rsyUwgs/WQh3WkE30ek6dg7LUgGvxG6yj4BFLX5xU4nZ8zdYUc0/GiTNluViMbVPBUZJkIjgQvTEwHbsfoC1OItOJYknO4MYTvbDrdZd49sPZz3mF0ixqPPRrMVZ+Ge/jYjWAwA0TaonDYdONhDWjPyPTu04EQ71k6ZbB9pSGRCvgqSUlx8d1iXdl6VBCbhnsZTbExarF6Sc3FZvMzV5iIu8a2rIX5D/eoMk8AF8DswVXtlnUbYnS79BX3JGi4bXyeH9LEfzRcX0C0dJq6F4aL7iwmO3TybowwKZQRDkVRcXGCb9ukVDEHkfHUx0gz1k8QlxL/lBgyjSXEKZQV+XpJHXfnJljH0dlZ6FjiB2cEj6ha0EUGYxHGSVJa8ULDDDAI4nUYdxeLZk3tsVZWo95OvHx86gkj7NuehvC/14GsYyP6BZM5P92lAY0elhzAxhAyAguoYS6QCaqif2zJVbz+gCvnPQ8GfIU8n4s/z7xlAsx4TVBOW3UCXpDt7dRMNQimJAoHQaZIO/PHDWDmZBAK4WTp33PWIYGj7pE3PXbm2NtK4SOhy/9VDxgOIJaNg1tQ2w3upfYA94mBfQNJ8seNMuzV8dJkeXQyWg6jp5L69OTiQHvz1G25OfJ40DmpcAjWx2hALJkwkwH3xCkTuHahgDTnVPBFtMdoI9htbWwZCDxlqSMI//Mio1Ybgp4PBQiuc2rF9FOZiUbvJBQf2i3/GZjgnEuDmfZ0g4pRl0JpbD6eRSEzVg5xBNIIeoe2P3Yx5zd2SuqD8Vx1iQvqNP+xMP/xeDOTt7pY2LXco6y+19uTCD0G4yjYjcC+2eBca481EVjZJBc/sWARVREYuovaw9YjapuLWgC/253/6N3gTUec7eV3YwEWv7X8gPWPV86I"},{"content":[{"type":"output_text","text":"{\n  \"result\":
-        8\n}","logprobs":[],"annotations":[]}],"id":"msg_990f72c4-db28-931d-96da-3ee7db591da5","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"json_object"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":232,"input_tokens_details":{"cached_tokens":192},"output_tokens":223,"output_tokens_details":{"reasoning_tokens":210},"total_tokens":455,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":6459000,"context_details":{"input_tokens":232,"output_tokens":223}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Wed, 16 Sep 2026 06:50:50 GMT
+        key `result`.\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"VQbBZL1i8Dd/mbIAfKeSSH7g9IoIz9WXKOMXPult2+BuXlYcoIB6q5ZPL1Wz5iS7RI+taaVxjXHmSrb8jZaiBwF8qsDGS+BxYo69XoyW4rxxWcHy/mFOBPZRi5iMyT3KF4vc6FL22NCAolaXkq6t5a1LmVZPXoSZllXkOIIGDLRjmuCqW8uXRLml0+UHM5Ljzusl9mCQDRYz6GC1wg3Coq1b4aKMK9zCmWjHOOPGgpInOMKS2eqGRO4SnuBIiLD9DSl57705p4n5mxpuM9qITchdG6Se9yXYDZ0XYRcrz7Q9Tpdpq2pg7vR+CVdGlhbc7h8cpEUAACBWI2kk3r8dltCyKigesn0Gvcsk/j2KGu5jkxrOH7XJliZC48Qg7FhmUG9uhhnRBH5X4maHkWaXFlRv6FFim+975DNbCGUXYoBrTuWmcIeLbfPo11yWUT8fEYYssT+qs0M12sKmSddUDqY0TAF21mWVtp1wvqOA9myNQRm0rB7KwEY4dF9K6iijpjlN7VCwQ/nXbrTSgphLpDBosvBwq1R0Y8tDZ/H1NUJjErn9YAawL0LZRhtZXuxt/8mcU5FfqKrzEgm816MvUQ5KqaisYfZgo83dNsQScKDYezcdFxFWsoD2/FvXoL3lp4RyS3NusHCt0Nhn/0Ex0zSkGmumpYy1I5riMjS6pvnK5to+9Oze2RXpR7R0bfftdWqu81ad9KUhAI7HzqHUYMUQtB0u+dm0arU0rOYqzhk8d4n3JR67gy1uBsvRb7CK2/rufifk+8Qwo/yQU7Q+X7MFQ3yEses08mPcgHn+LqbsGp9lsa58G3MBU6qXncQkb9BKft1y1kyCzcg0FD2KWlAYeAPVh2WGcjLlZqv6vJTzXODHGhx5EImd+mjfta3rsEadMgds6GNN0l2ennhdrLBFpDfjoxk/IbYEq7umLXopcuY1MDKPlX+hYEv7i4MLad6nH4gDMR4VJNsVRN6yc+yLrPCC/LurX7KcFjlDJ/aSzAiWTd8g1E3zjEFDUD8r90kRhDiOeF/6knQRYfQuM990M5Mm+5AXWGNyL+ebJiRqfaoNFVMd+lZmgJ/84Cw3GhyBqHbAyW3V81bJ6IAOP1cPL23OgO/gNy8lbtJNh24DwGPN9tco2IQleqKHnlvqU9tjjMODY3lyUFvxp6YtpphWspDTkkInIdmikDsSb5FRHNQkKUZYHpVWxB9V2l1Zle2PTDjBgdRfXKU7DKIQeFZ9YIW9KykBhWKB9F+AaBAqaKaWZ/Mk3FjUWx0UX/ynsPYiZIuEcYsCsPwb+0cQAdkXNs56LWjsyHFLqb/gqTyIwiS740HRTtDMZmzTqr99SkQuth3E5/obmwWjgxyS"},{"content":[{"type":"output_text","text":"{\n  \"result\":
+        8\n}","logprobs":[],"annotations":[]}],"id":"msg_6c08f70e-96b5-9775-9e04-903231cceaa1","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"json_object"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":232,"input_tokens_details":{"cached_tokens":192},"output_tokens":250,"output_tokens_details":{"reasoning_tokens":241},"total_tokens":482,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":7134000,"context_details":{"input_tokens":232,"output_tokens":257}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Thu, 17 Sep 2026 22:14:08 GMT
 recorded_with: VCR 6.4.0

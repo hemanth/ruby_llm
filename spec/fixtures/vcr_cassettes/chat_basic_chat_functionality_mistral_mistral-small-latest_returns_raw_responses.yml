@@ -24,57 +24,54 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:51 GMT
+      - Thu, 17 Sep 2026 22:08:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a8fa-991f-7617-805a-e1e4fded1059
+      - 01a0b169-f62b-7c98-a667-9978cd897105
       X-Kong-Request-Id:
-      - 01a0a8fa-991f-7617-805a-e1e4fded1059
+      - 01a0b169-f62b-7c98-a667-9978cd897105
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '95162'
+      - '99049'
       X-Ratelimit-Tokens-Query-Cost:
-      - '90'
+      - '31'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '91'
+      - '94'
       X-Envoy-Upstream-Service-Time:
-      - '524'
+      - '264'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '526'
+      - '266'
       X-Kong-Proxy-Latency:
-      - '35'
-      X-Content-Type-Options:
-      - nosniff
+      - '11'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"6c09fce7e51242ed985323f48a4592d1","created":1789541390,"model":"mistral-small-latest","usage":{"prompt_tokens":22,"total_tokens":90,"completion_tokens":68,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
-        capital of France is **Paris**. It is the largest city in France and serves
-        as the country''s political, economic, and cultural center. Paris is famous
-        for landmarks such as the **Eiffel Tower**, the **Louvre Museum**, and **Notre-Dame
-        Cathedral**.\n\nWould you like more details about Paris or France?"}}]}'
-  recorded_at: Wed, 16 Sep 2026 06:49:51 GMT
+      string: '{"id":"8119fbf40d64450dae45cf09bf03ee2c","created":1789682906,"model":"mistral-small-latest","usage":{"prompt_tokens":22,"total_tokens":31,"completion_tokens":9,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+        capital of France is **Paris**."}}]}'
+  recorded_at: Thu, 17 Sep 2026 22:08:26 GMT
 recorded_with: VCR 6.4.0

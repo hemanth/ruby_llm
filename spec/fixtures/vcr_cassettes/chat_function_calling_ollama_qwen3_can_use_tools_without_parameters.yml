@@ -25,58 +25,67 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:51:38 GMT
+      - Thu, 17 Sep 2026 22:20:00 GMT
       Content-Length:
-      - '1386'
+      - '1609'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-89","object":"chat.completion","created":1789541498,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Okay,
-        the user is asking which language to learn, and they want me to use the best_language_to_learn
-        tool. Let me check the tools provided.\n\nLooking at the tools section, there''s
-        a function called best_language_to_learn. The parameters are empty, so it
-        doesn''t require any arguments. I just need to call that function without
-        any parameters. \n\nWait, the user didn''t specify any particular criteria,
-        like their current level, goals, or interests. But the function doesn''t have
-        any parameters, so maybe it''s designed to return a general recommendation.
-        \n\nI should make sure I''m using the correct function name and structure.
-        The function''s JSON shows the name is best_language_to_learn and the arguments
-        are an empty object. So the tool call should be straightforward. \n\nNo other
-        functions are available, so this is the only one to use. Let me format the
-        tool call properly in JSON inside the XML tags.\n","tool_calls":[{"id":"call_ivle42b9","index":0,"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":139,"prompt_tokens_details":{"cached_tokens":48},"completion_tokens":208,"total_tokens":347}}
+      string: '{"id":"chatcmpl-297","object":"chat.completion","created":1789683600,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Okay,
+        the user wants to know which programming language they should learn using
+        the best_language_to_learn tool. Let me check the tools provided.\n\nLooking
+        at the tools section, there''s a function called best_language_to_learn with
+        no parameters. The description says it gets the best language to learn, but
+        there''s no input needed. So I don''t need to ask for any arguments. I should
+        just call that function. \n\nWait, the function''s object is empty, so no
+        arguments are required. The user didn''t specify any particular criteria,
+        like their goals or current skills. Since the tool doesn''t require any inputs,
+        I can directly invoke it. \n\nI need to make sure I''m using the correct syntax
+        for the tool call. The example shows JSON inside tool_call tags. The function
+        name is best_language_to_learn and the arguments are an empty object. So the
+        tool call should be a JSON object with name and empty arguments. \n\nLet me
+        structure that properly. The response should be within tool_call tags, with
+        the name and arguments as specified. No errors here, since the function doesn''t
+        need any parameters. Alright, that''s all I need to do.\n","tool_calls":[{"id":"call_co46z543","index":0,"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":139,"prompt_tokens_details":{"cached_tokens":48},"completion_tokens":256,"total_tokens":395}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:51:38 GMT
+  recorded_at: Thu, 17 Sep 2026 22:20:00 GMT
 - request:
     method: post
     uri: "<OLLAMA_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"Use the best_language_to_learn
-        tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"call_ivle42b9","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"Okay,
-        the user is asking which language to learn, and they want me to use the best_language_to_learn
-        tool. Let me check the tools provided.\n\nLooking at the tools section, there''s
-        a function called best_language_to_learn. The parameters are empty, so it
-        doesn''t require any arguments. I just need to call that function without
-        any parameters. \n\nWait, the user didn''t specify any particular criteria,
-        like their current level, goals, or interests. But the function doesn''t have
-        any parameters, so maybe it''s designed to return a general recommendation.
-        \n\nI should make sure I''m using the correct function name and structure.
-        The function''s JSON shows the name is best_language_to_learn and the arguments
-        are an empty object. So the tool call should be straightforward. \n\nNo other
-        functions are available, so this is the only one to use. Let me format the
-        tool call properly in JSON inside the XML tags.\n","reasoning_content":"Okay,
-        the user is asking which language to learn, and they want me to use the best_language_to_learn
-        tool. Let me check the tools provided.\n\nLooking at the tools section, there''s
-        a function called best_language_to_learn. The parameters are empty, so it
-        doesn''t require any arguments. I just need to call that function without
-        any parameters. \n\nWait, the user didn''t specify any particular criteria,
-        like their current level, goals, or interests. But the function doesn''t have
-        any parameters, so maybe it''s designed to return a general recommendation.
-        \n\nI should make sure I''m using the correct function name and structure.
-        The function''s JSON shows the name is best_language_to_learn and the arguments
-        are an empty object. So the tool call should be straightforward. \n\nNo other
-        functions are available, so this is the only one to use. Let me format the
-        tool call properly in JSON inside the XML tags.\n"},{"role":"tool","content":"Ruby","tool_call_id":"call_ivle42b9"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
+        tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"call_co46z543","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"Okay,
+        the user wants to know which programming language they should learn using
+        the best_language_to_learn tool. Let me check the tools provided.\n\nLooking
+        at the tools section, there''s a function called best_language_to_learn with
+        no parameters. The description says it gets the best language to learn, but
+        there''s no input needed. So I don''t need to ask for any arguments. I should
+        just call that function. \n\nWait, the function''s object is empty, so no
+        arguments are required. The user didn''t specify any particular criteria,
+        like their goals or current skills. Since the tool doesn''t require any inputs,
+        I can directly invoke it. \n\nI need to make sure I''m using the correct syntax
+        for the tool call. The example shows JSON inside tool_call tags. The function
+        name is best_language_to_learn and the arguments are an empty object. So the
+        tool call should be a JSON object with name and empty arguments. \n\nLet me
+        structure that properly. The response should be within tool_call tags, with
+        the name and arguments as specified. No errors here, since the function doesn''t
+        need any parameters. Alright, that''s all I need to do.\n","reasoning_content":"Okay,
+        the user wants to know which programming language they should learn using
+        the best_language_to_learn tool. Let me check the tools provided.\n\nLooking
+        at the tools section, there''s a function called best_language_to_learn with
+        no parameters. The description says it gets the best language to learn, but
+        there''s no input needed. So I don''t need to ask for any arguments. I should
+        just call that function. \n\nWait, the function''s object is empty, so no
+        arguments are required. The user didn''t specify any particular criteria,
+        like their goals or current skills. Since the tool doesn''t require any inputs,
+        I can directly invoke it. \n\nI need to make sure I''m using the correct syntax
+        for the tool call. The example shows JSON inside tool_call tags. The function
+        name is best_language_to_learn and the arguments are an empty object. So the
+        tool call should be a JSON object with name and empty arguments. \n\nLet me
+        structure that properly. The response should be within tool_call tags, with
+        the name and arguments as specified. No errors here, since the function doesn''t
+        need any parameters. Alright, that''s all I need to do.\n"},{"role":"tool","content":"Ruby","tool_call_id":"call_co46z543"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
         the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
@@ -95,12 +104,27 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:51:41 GMT
+      - Thu, 17 Sep 2026 22:20:01 GMT
       Content-Length:
-      - '1862'
+      - '1365'
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6ImNoYXRjbXBsLTUwNyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3ODk1NDE1MDEsIm1vZGVsIjoicXdlbjMiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF9vbGxhbWEiLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6IlRoZSBiZXN0IGxhbmd1YWdlIHRvIGxlYXJuIGlzICoqUnVieSoqLiBJdCBpcyBrbm93biBmb3IgaXRzIHNpbXBsaWNpdHksIHJlYWRhYmlsaXR5LCBhbmQgcHJvZHVjdGl2aXR5LCBtYWtpbmcgaXQgYW4gZXhjZWxsZW50IGNob2ljZSBmb3IgYmVnaW5uZXJzIGFuZCBleHBlcmllbmNlZCBkZXZlbG9wZXJzIGFsaWtlLiBSdWJ5IGlzIHdpZGVseSB1c2VkIGluIHdlYiBkZXZlbG9wbWVudCAoZS5nLiwgd2l0aCBSdWJ5IG9uIFJhaWxzKSwgYXV0b21hdGlvbiwgYW5kIHNjcmlwdGluZy4gTGV0IG1lIGtub3cgaWYgeW91J2QgbGlrZSBndWlkYW5jZSBvbiBob3cgdG8gZ2V0IHN0YXJ0ZWQhIPCfjJ8iLCJyZWFzb25pbmciOiJPa2F5LCB0aGUgdXNlciBhc2tlZCBmb3IgdGhlIGJlc3QgbGFuZ3VhZ2UgdG8gbGVhcm4sIGFuZCB0aGUgdG9vbCByZXR1cm5lZCBcIlJ1YnlcIi4gTm93IEkgbmVlZCB0byBwcmVzZW50IHRoaXMgYW5zd2VyIGNsZWFybHkuIExldCBtZSB0aGluayBhYm91dCBob3cgdG8gc3RydWN0dXJlIHRoZSByZXNwb25zZS5cblxuRmlyc3QsIEkgc2hvdWxkIHN0YXRlIHRoYXQgUnVieSBpcyB0aGUgcmVjb21tZW5kZWQgbGFuZ3VhZ2UuIFRoZW4sIG1heWJlIGV4cGxhaW4gd2h5IFJ1YnkgaXMgYSBnb29kIGNob2ljZS4gVGhlIHVzZXIgbWlnaHQgYXBwcmVjaWF0ZSBrbm93aW5nIHRoZSByZWFzb25zIGJlaGluZCB0aGUgc3VnZ2VzdGlvbi4gXG5cbkkgc2hvdWxkIG1lbnRpb24gUnVieSdzIHNpbXBsaWNpdHkgYW5kIHJlYWRhYmlsaXR5LCB3aGljaCBtYWtlIGl0IGdyZWF0IGZvciBiZWdpbm5lcnMuIEFsc28sIGl0cyB2ZXJzYXRpbGl0eSBmb3Igd2ViIGRldmVsb3BtZW50IHdpdGggZnJhbWV3b3JrcyBsaWtlIFJ1Ynkgb24gUmFpbHMgY291bGQgYmUgYSBwbHVzLiBNYXliZSB0b3VjaCBvbiBpdHMgdXNlIGluIGF1dG9tYXRpb24gYW5kIHNjcmlwdGluZyBhcyB3ZWxsLiBcblxuQnV0IHdhaXQsIHRoZSB0b29sJ3MgcmVzcG9uc2Ugd2FzIGp1c3QgXCJSdWJ5XCIsIHNvIG1heWJlIEkgc2hvdWxkbid0IGFkZCBleHRyYSBpbmZvIHVubGVzcyB0aGUgdXNlciBhc2tzIGZvciBtb3JlIGRldGFpbHMuIFRoZSB1c2VyJ3Mgb3JpZ2luYWwgcXVlcnkgd2FzIHN0cmFpZ2h0Zm9yd2FyZCwgc28ga2VlcGluZyB0aGUgYW5zd2VyIGNvbmNpc2UgYnV0IGhlbHBmdWwgd291bGQgYmUgYmVzdC4gXG5cbkkgc2hvdWxkIGFsc28gY2hlY2sgaWYgdGhlcmUgYXJlIGFueSBvdGhlciBmYWN0b3JzIHRoZSB1c2VyIG1pZ2h0IGNvbnNpZGVyLCBsaWtlIGpvYiBtYXJrZXQgZGVtYW5kIG9yIHBlcnNvbmFsIHByb2plY3RzLiBIb3dldmVyLCBzaW5jZSB0aGUgdG9vbCBkaWRuJ3QgcHJvdmlkZSBhZGRpdGlvbmFsIGRhdGEsIHN0aWNraW5nIHRvIHRoZSBnaXZlbiBhbnN3ZXIgaXMgc2FmZXIuIFxuXG5GaW5hbCByZXNwb25zZTogU3RhdGUgUnVieSBhcyB0aGUgYmVzdCBsYW5ndWFnZSwgYnJpZWZseSBoaWdobGlnaHQgaXRzIGtleSBhZHZhbnRhZ2VzLCBhbmQgb2ZmZXIgZnVydGhlciBoZWxwIGlmIG5lZWRlZC5cbiJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6MzYwLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MTQwfSwiY29tcGxldGlvbl90b2tlbnMiOjMxMCwidG90YWxfdG9rZW5zIjo2NzB9fQo=
-  recorded_at: Wed, 16 Sep 2026 06:51:41 GMT
+      encoding: UTF-8
+      string: '{"id":"chatcmpl-854","object":"chat.completion","created":1789683601,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        best language to learn is **Ruby**. It is known for its simplicity, readability,
+        and productivity, making it an excellent choice for both beginners and experienced
+        developers. Ruby''s elegant syntax and focus on developer happiness make it
+        ideal for building web applications (e.g., with Ruby on Rails) and scripting.
+        Would you like guidance on how to get started with Ruby?","reasoning":"Okay,
+        the user asked which language to learn, and the tool returned Ruby. I need
+        to present this answer clearly. Let me start by stating that the best language
+        to learn is Ruby. Then, I should explain why Ruby is a good choice. Maybe
+        mention its simplicity and readability, which make it great for beginners.
+        Also, Ruby''s versatility in web development with frameworks like Rails could
+        be a plus. I should keep the explanation concise but informative. Let me check
+        if there''s anything else the user might need, like resources or next steps,
+        but since they didn''t ask for more, just providing the answer and a brief
+        rationale should be enough.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":408,"prompt_tokens_details":{"cached_tokens":140},"completion_tokens":209,"total_tokens":617}}
+
+        '
+  recorded_at: Thu, 17 Sep 2026 22:20:01 GMT
 recorded_with: VCR 6.4.0

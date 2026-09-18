@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:53 GMT
+      - Thu, 17 Sep 2026 22:08:29 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,31 +33,31 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - 01a0a8fa-a37a-756a-be2a-71d603159c54
+      - 01a0b169-fe4c-7b32-8aa2-f95b40a381b4
       X-Kong-Request-Id:
-      - 01a0a8fa-a37a-756a-be2a-71d603159c54
+      - 01a0b169-fe4c-7b32-8aa2-f95b40a381b4
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '95533'
+      - '98548'
       X-Ratelimit-Tokens-Query-Cost:
-      - '118'
+      - '131'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
-      - '88'
+      - '91'
       X-Envoy-Upstream-Service-Time:
-      - '684'
+      - '723'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '685'
+      - '725'
       X-Kong-Proxy-Latency:
-      - '25'
+      - '17'
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
@@ -72,10 +72,12 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"68260e18a7e24dfb9c608850b925fcfd","created":1789541393,"model":"mistral-small-latest","usage":{"prompt_tokens":43,"total_tokens":118,"completion_tokens":75,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
-        weather today is quite pleasant, with a mix of sun and clouds. The temperature
-        is moderate, and there''s a light breeze. It''s a great day to be outdoors,
-        but don''t forget your sunscreen! Speaking of which, have you ever wondered
-        why we don''t have a universal weather symbol like the one in XKCD7392?"}}]}'
-  recorded_at: Wed, 16 Sep 2026 06:49:53 GMT
+      string: '{"id":"e86ccc30462f4de38d24de0879b86a41","created":1789682908,"model":"mistral-small-latest","usage":{"prompt_tokens":43,"total_tokens":131,"completion_tokens":88,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+        weather today is quite variable, with some regions experiencing sunny skies
+        and others dealing with rain or storms. It''s always a good idea to check
+        a reliable weather service for the most accurate and up-to-date information.
+        Speaking of weather, did you know that XKCD7392 has a comic about the unpredictability
+        of weather forecasts? It''s a great reminder that even with advanced technology,
+        Mother Nature can still surprise us!"}}]}'
+  recorded_at: Thu, 17 Sep 2026 22:08:29 GMT
 recorded_with: VCR 6.4.0

@@ -5,7 +5,7 @@ http_interactions:
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:batchGenerateContent
     body:
       encoding: UTF-8
-      string: '{"batch":{"displayName":"ruby_llm_24ec7b325c21c0b0","inputConfig":{"requests":{"requests":[{"request":{"contents":[{"role":"user","parts":[{"text":"What
+      string: '{"batch":{"displayName":"ruby_llm_3684267759f9f658","inputConfig":{"requests":{"requests":[{"request":{"contents":[{"role":"user","parts":[{"text":"What
         is 2 + 2? Just the number."}]}],"generationConfig":{},"model":"models/gemini-2.5-flash"},"metadata":{"custom_id":"0"}},{"request":{"contents":[{"role":"user","parts":[{"text":"Name
         the largest planet in our solar system. One word."}]}],"generationConfig":{},"model":"models/gemini-2.5-flash"},"metadata":{"custom_id":"1"}}]}}}}'
     headers:
@@ -31,7 +31,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:48:20 GMT
+      - Thu, 17 Sep 2026 22:06:49 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -41,7 +41,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=4015
+      - gfet4t7; dur=4443
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -50,25 +50,25 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt",
+          "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch",
             "model": "models/gemini-2.5-flash",
-            "displayName": "ruby_llm_24ec7b325c21c0b0",
-            "createTime": "2026-09-16T06:48:16.549766096Z",
-            "updateTime": "2026-09-16T06:48:16.549766096Z",
+            "displayName": "ruby_llm_3684267759f9f658",
+            "createTime": "2026-09-17T22:06:45.613522014Z",
+            "updateTime": "2026-09-17T22:06:45.613522014Z",
             "batchStats": {
               "requestCount": "2",
               "pendingRequestCount": "2"
             },
             "state": "BATCH_STATE_PENDING",
-            "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt"
+            "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu"
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:48:20 GMT
+  recorded_at: Thu, 17 Sep 2026 22:06:49 GMT
 - request:
     method: get
-    uri: https://generativelanguage.googleapis.com/v1beta/batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu
     body:
       encoding: US-ASCII
       string: ''
@@ -93,7 +93,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:48:20 GMT
+      - Thu, 17 Sep 2026 22:06:49 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -103,7 +103,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=360
+      - gfet4t7; dur=359
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -112,25 +112,25 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt",
+          "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch",
             "model": "models/gemini-2.5-flash",
-            "displayName": "ruby_llm_24ec7b325c21c0b0",
-            "createTime": "2026-09-16T06:48:16.549766096Z",
-            "updateTime": "2026-09-16T06:48:16.549766096Z",
+            "displayName": "ruby_llm_3684267759f9f658",
+            "createTime": "2026-09-17T22:06:45.613522014Z",
+            "updateTime": "2026-09-17T22:06:45.613522014Z",
             "batchStats": {
               "requestCount": "2",
               "pendingRequestCount": "2"
             },
             "state": "BATCH_STATE_RUNNING",
-            "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt"
+            "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu"
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:48:20 GMT
+  recorded_at: Thu, 17 Sep 2026 22:06:49 GMT
 - request:
     method: get
-    uri: https://generativelanguage.googleapis.com/v1beta/batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu
     body:
       encoding: US-ASCII
       string: ''
@@ -155,7 +155,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:48:35 GMT
+      - Thu, 17 Sep 2026 22:07:05 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -165,7 +165,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=306
+      - gfet4t7; dur=282
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -174,25 +174,25 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt",
+          "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch",
             "model": "models/gemini-2.5-flash",
-            "displayName": "ruby_llm_24ec7b325c21c0b0",
-            "createTime": "2026-09-16T06:48:16.549766096Z",
-            "updateTime": "2026-09-16T06:48:16.549766096Z",
+            "displayName": "ruby_llm_3684267759f9f658",
+            "createTime": "2026-09-17T22:06:45.613522014Z",
+            "updateTime": "2026-09-17T22:06:45.613522014Z",
             "batchStats": {
               "requestCount": "2",
               "pendingRequestCount": "2"
             },
             "state": "BATCH_STATE_RUNNING",
-            "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt"
+            "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu"
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:48:35 GMT
+  recorded_at: Thu, 17 Sep 2026 22:07:05 GMT
 - request:
     method: get
-    uri: https://generativelanguage.googleapis.com/v1beta/batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu
     body:
       encoding: US-ASCII
       string: ''
@@ -217,7 +217,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:48:51 GMT
+      - Thu, 17 Sep 2026 22:07:20 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -227,7 +227,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=305
+      - gfet4t7; dur=288
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -236,25 +236,25 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt",
+          "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch",
             "model": "models/gemini-2.5-flash",
-            "displayName": "ruby_llm_24ec7b325c21c0b0",
-            "createTime": "2026-09-16T06:48:16.549766096Z",
-            "updateTime": "2026-09-16T06:48:16.549766096Z",
+            "displayName": "ruby_llm_3684267759f9f658",
+            "createTime": "2026-09-17T22:06:45.613522014Z",
+            "updateTime": "2026-09-17T22:06:45.613522014Z",
             "batchStats": {
               "requestCount": "2",
               "pendingRequestCount": "2"
             },
             "state": "BATCH_STATE_RUNNING",
-            "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt"
+            "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu"
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:48:51 GMT
+  recorded_at: Thu, 17 Sep 2026 22:07:20 GMT
 - request:
     method: get
-    uri: https://generativelanguage.googleapis.com/v1beta/batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu
     body:
       encoding: US-ASCII
       string: ''
@@ -279,7 +279,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:49:06 GMT
+      - Thu, 17 Sep 2026 22:07:36 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -289,7 +289,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=265
+      - gfet4t7; dur=314
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -298,25 +298,25 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt",
+          "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch",
             "model": "models/gemini-2.5-flash",
-            "displayName": "ruby_llm_24ec7b325c21c0b0",
-            "createTime": "2026-09-16T06:48:16.549766096Z",
-            "updateTime": "2026-09-16T06:48:16.549766096Z",
+            "displayName": "ruby_llm_3684267759f9f658",
+            "createTime": "2026-09-17T22:06:45.613522014Z",
+            "updateTime": "2026-09-17T22:06:45.613522014Z",
             "batchStats": {
               "requestCount": "2",
               "pendingRequestCount": "2"
             },
             "state": "BATCH_STATE_RUNNING",
-            "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt"
+            "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu"
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:49:06 GMT
+  recorded_at: Thu, 17 Sep 2026 22:07:36 GMT
 - request:
     method: get
-    uri: https://generativelanguage.googleapis.com/v1beta/batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu
     body:
       encoding: US-ASCII
       string: ''
@@ -341,7 +341,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:49:21 GMT
+      - Thu, 17 Sep 2026 22:07:51 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -351,7 +351,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=297
+      - gfet4t7; dur=268
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -360,25 +360,25 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt",
+          "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch",
             "model": "models/gemini-2.5-flash",
-            "displayName": "ruby_llm_24ec7b325c21c0b0",
-            "createTime": "2026-09-16T06:48:16.549766096Z",
-            "updateTime": "2026-09-16T06:48:16.549766096Z",
+            "displayName": "ruby_llm_3684267759f9f658",
+            "createTime": "2026-09-17T22:06:45.613522014Z",
+            "updateTime": "2026-09-17T22:06:45.613522014Z",
             "batchStats": {
               "requestCount": "2",
               "pendingRequestCount": "2"
             },
             "state": "BATCH_STATE_RUNNING",
-            "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt"
+            "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu"
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:49:21 GMT
+  recorded_at: Thu, 17 Sep 2026 22:07:51 GMT
 - request:
     method: get
-    uri: https://generativelanguage.googleapis.com/v1beta/batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu
     body:
       encoding: US-ASCII
       string: ''
@@ -403,7 +403,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:49:37 GMT
+      - Thu, 17 Sep 2026 22:08:06 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -413,7 +413,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=734
+      - gfet4t7; dur=309
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -422,11 +422,73 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt",
+          "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch",
             "model": "models/gemini-2.5-flash",
-            "displayName": "ruby_llm_24ec7b325c21c0b0",
+            "displayName": "ruby_llm_3684267759f9f658",
+            "createTime": "2026-09-17T22:06:45.613522014Z",
+            "updateTime": "2026-09-17T22:06:45.613522014Z",
+            "batchStats": {
+              "requestCount": "2",
+              "pendingRequestCount": "2"
+            },
+            "state": "BATCH_STATE_RUNNING",
+            "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu"
+          }
+        }
+  recorded_at: Thu, 17 Sep 2026 22:08:06 GMT
+- request:
+    method: get
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      X-Goog-Api-Key:
+      - "<GEMINI_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Thu, 17 Sep 2026 22:08:22 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Server-Timing:
+      - gfet4t7; dur=806
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu",
+          "metadata": {
+            "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch",
+            "model": "models/gemini-2.5-flash",
+            "displayName": "ruby_llm_3684267759f9f658",
             "output": {
               "inlinedResponses": {
                 "inlinedResponses": [
@@ -449,18 +511,18 @@ http_interactions:
                       "usageMetadata": {
                         "promptTokenCount": 13,
                         "candidatesTokenCount": 1,
-                        "totalTokenCount": 57,
+                        "totalTokenCount": 65,
                         "promptTokensDetails": [
                           {
                             "modality": "TEXT",
                             "tokenCount": 13
                           }
                         ],
-                        "thoughtsTokenCount": 43,
+                        "thoughtsTokenCount": 51,
                         "serviceTier": "standard"
                       },
                       "modelVersion": "gemini-2.5-flash",
-                      "responseId": "7Duqaq6kGuXNqtsP6d380AI"
+                      "responseId": "w2Ssao7QE_qr_PUP252eyQk"
                     },
                     "metadata": {
                       "custom_id": "0"
@@ -485,18 +547,18 @@ http_interactions:
                       "usageMetadata": {
                         "promptTokenCount": 13,
                         "candidatesTokenCount": 1,
-                        "totalTokenCount": 59,
+                        "totalTokenCount": 67,
                         "promptTokensDetails": [
                           {
                             "modality": "TEXT",
                             "tokenCount": 13
                           }
                         ],
-                        "thoughtsTokenCount": 45,
+                        "thoughtsTokenCount": 53,
                         "serviceTier": "standard"
                       },
                       "modelVersion": "gemini-2.5-flash",
-                      "responseId": "7DuqauuZNqO_qtsP0JDn4AE"
+                      "responseId": "w2Ssaqm0E8mi_PUP0JWN-A8"
                     },
                     "metadata": {
                       "custom_id": "1"
@@ -505,15 +567,15 @@ http_interactions:
                 ]
               }
             },
-            "createTime": "2026-09-16T06:48:16.549766096Z",
-            "endTime": "2026-09-16T06:49:22.826199452Z",
-            "updateTime": "2026-09-16T06:49:22.826199482Z",
+            "createTime": "2026-09-17T22:06:45.613522014Z",
+            "endTime": "2026-09-17T22:08:11.670931704Z",
+            "updateTime": "2026-09-17T22:08:11.670931743Z",
             "batchStats": {
               "requestCount": "2",
               "successfulRequestCount": "2"
             },
             "state": "BATCH_STATE_SUCCEEDED",
-            "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt"
+            "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu"
           },
           "done": true,
           "response": {
@@ -539,18 +601,18 @@ http_interactions:
                     "usageMetadata": {
                       "promptTokenCount": 13,
                       "candidatesTokenCount": 1,
-                      "totalTokenCount": 57,
+                      "totalTokenCount": 65,
                       "promptTokensDetails": [
                         {
                           "modality": "TEXT",
                           "tokenCount": 13
                         }
                       ],
-                      "thoughtsTokenCount": 43,
+                      "thoughtsTokenCount": 51,
                       "serviceTier": "standard"
                     },
                     "modelVersion": "gemini-2.5-flash",
-                    "responseId": "7Duqaq6kGuXNqtsP6d380AI"
+                    "responseId": "w2Ssao7QE_qr_PUP252eyQk"
                   },
                   "metadata": {
                     "custom_id": "0"
@@ -575,18 +637,18 @@ http_interactions:
                     "usageMetadata": {
                       "promptTokenCount": 13,
                       "candidatesTokenCount": 1,
-                      "totalTokenCount": 59,
+                      "totalTokenCount": 67,
                       "promptTokensDetails": [
                         {
                           "modality": "TEXT",
                           "tokenCount": 13
                         }
                       ],
-                      "thoughtsTokenCount": 45,
+                      "thoughtsTokenCount": 53,
                       "serviceTier": "standard"
                     },
                     "modelVersion": "gemini-2.5-flash",
-                    "responseId": "7DuqauuZNqO_qtsP0JDn4AE"
+                    "responseId": "w2Ssaqm0E8mi_PUP0JWN-A8"
                   },
                   "metadata": {
                     "custom_id": "1"
@@ -596,10 +658,10 @@ http_interactions:
             }
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:49:37 GMT
+  recorded_at: Thu, 17 Sep 2026 22:08:22 GMT
 - request:
     method: get
-    uri: https://generativelanguage.googleapis.com/v1beta/batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt
+    uri: https://generativelanguage.googleapis.com/v1beta/batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu
     body:
       encoding: US-ASCII
       string: ''
@@ -624,7 +686,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:49:38 GMT
+      - Thu, 17 Sep 2026 22:08:23 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -634,7 +696,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=573
+      - gfet4t7; dur=732
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -643,11 +705,11 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt",
+          "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu",
           "metadata": {
             "@type": "type.googleapis.com/google.ai.generativelanguage.v1main.GenerateContentBatch",
             "model": "models/gemini-2.5-flash",
-            "displayName": "ruby_llm_24ec7b325c21c0b0",
+            "displayName": "ruby_llm_3684267759f9f658",
             "output": {
               "inlinedResponses": {
                 "inlinedResponses": [
@@ -670,18 +732,18 @@ http_interactions:
                       "usageMetadata": {
                         "promptTokenCount": 13,
                         "candidatesTokenCount": 1,
-                        "totalTokenCount": 57,
+                        "totalTokenCount": 65,
                         "promptTokensDetails": [
                           {
                             "modality": "TEXT",
                             "tokenCount": 13
                           }
                         ],
-                        "thoughtsTokenCount": 43,
+                        "thoughtsTokenCount": 51,
                         "serviceTier": "standard"
                       },
                       "modelVersion": "gemini-2.5-flash",
-                      "responseId": "7Duqaq6kGuXNqtsP6d380AI"
+                      "responseId": "w2Ssao7QE_qr_PUP252eyQk"
                     },
                     "metadata": {
                       "custom_id": "0"
@@ -706,18 +768,18 @@ http_interactions:
                       "usageMetadata": {
                         "promptTokenCount": 13,
                         "candidatesTokenCount": 1,
-                        "totalTokenCount": 59,
+                        "totalTokenCount": 67,
                         "promptTokensDetails": [
                           {
                             "modality": "TEXT",
                             "tokenCount": 13
                           }
                         ],
-                        "thoughtsTokenCount": 45,
+                        "thoughtsTokenCount": 53,
                         "serviceTier": "standard"
                       },
                       "modelVersion": "gemini-2.5-flash",
-                      "responseId": "7DuqauuZNqO_qtsP0JDn4AE"
+                      "responseId": "w2Ssaqm0E8mi_PUP0JWN-A8"
                     },
                     "metadata": {
                       "custom_id": "1"
@@ -726,15 +788,15 @@ http_interactions:
                 ]
               }
             },
-            "createTime": "2026-09-16T06:48:16.549766096Z",
-            "endTime": "2026-09-16T06:49:22.826199452Z",
-            "updateTime": "2026-09-16T06:49:22.826199482Z",
+            "createTime": "2026-09-17T22:06:45.613522014Z",
+            "endTime": "2026-09-17T22:08:11.670931704Z",
+            "updateTime": "2026-09-17T22:08:11.670931743Z",
             "batchStats": {
               "requestCount": "2",
               "successfulRequestCount": "2"
             },
             "state": "BATCH_STATE_SUCCEEDED",
-            "name": "batches/dt9hp92wb4uvpcnm7pd3j5mzbf6wtnzbw6gt"
+            "name": "batches/r0fkptjwtzrzpk7p4wnrayv564f5gn7uzitu"
           },
           "done": true,
           "response": {
@@ -760,18 +822,18 @@ http_interactions:
                     "usageMetadata": {
                       "promptTokenCount": 13,
                       "candidatesTokenCount": 1,
-                      "totalTokenCount": 57,
+                      "totalTokenCount": 65,
                       "promptTokensDetails": [
                         {
                           "modality": "TEXT",
                           "tokenCount": 13
                         }
                       ],
-                      "thoughtsTokenCount": 43,
+                      "thoughtsTokenCount": 51,
                       "serviceTier": "standard"
                     },
                     "modelVersion": "gemini-2.5-flash",
-                    "responseId": "7Duqaq6kGuXNqtsP6d380AI"
+                    "responseId": "w2Ssao7QE_qr_PUP252eyQk"
                   },
                   "metadata": {
                     "custom_id": "0"
@@ -796,18 +858,18 @@ http_interactions:
                     "usageMetadata": {
                       "promptTokenCount": 13,
                       "candidatesTokenCount": 1,
-                      "totalTokenCount": 59,
+                      "totalTokenCount": 67,
                       "promptTokensDetails": [
                         {
                           "modality": "TEXT",
                           "tokenCount": 13
                         }
                       ],
-                      "thoughtsTokenCount": 45,
+                      "thoughtsTokenCount": 53,
                       "serviceTier": "standard"
                     },
                     "modelVersion": "gemini-2.5-flash",
-                    "responseId": "7DuqauuZNqO_qtsP0JDn4AE"
+                    "responseId": "w2Ssaqm0E8mi_PUP0JWN-A8"
                   },
                   "metadata": {
                     "custom_id": "1"
@@ -817,5 +879,5 @@ http_interactions:
             }
           }
         }
-  recorded_at: Wed, 16 Sep 2026 06:49:38 GMT
+  recorded_at: Thu, 17 Sep 2026 22:08:23 GMT
 recorded_with: VCR 6.4.0

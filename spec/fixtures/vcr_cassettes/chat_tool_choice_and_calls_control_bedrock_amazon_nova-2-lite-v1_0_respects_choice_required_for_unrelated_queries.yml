@@ -15,7 +15,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T065953Z
+      - 20260917T222705Z
       X-Amz-Content-Sha256:
       - 7a0a0494af6194b9b31e90fc475f4044988c09b3d24c733f3083b2d154a0c776
       Authorization:
@@ -33,7 +33,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:59:54 GMT
+      - Thu, 17 Sep 2026 22:27:06 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -41,18 +41,18 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 8f9e827b-80d8-48b7-9465-1fb351bde276
+      - b898c4dd-ed57-42e4-81a0-f72317ad2a0c
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":631},"output":{"message":{"content":[{"toolUse":{"input":{"latitude":"52.5200","longitude":"13.4050"},"name":"weather","toolUseId":"tooluse_gevwLgBB3bIbbrAMQKWJK7"}}],"role":"assistant"}},"stopReason":"tool_use","usage":{"inputTokens":995,"outputTokens":42,"serverToolUsage":{},"totalTokens":1037}}'
-  recorded_at: Wed, 16 Sep 2026 06:59:54 GMT
+      string: '{"metrics":{"latencyMs":584},"output":{"message":{"content":[{"toolUse":{"input":{"latitude":"52.5200","longitude":"13.4050"},"name":"weather","toolUseId":"tooluse_5hHBQxEPzCRdQA78M2KP3D"}}],"role":"assistant"}},"stopReason":"tool_use","usage":{"inputTokens":995,"outputTokens":42,"serverToolUsage":{},"totalTokens":1037}}'
+  recorded_at: Thu, 17 Sep 2026 22:27:06 GMT
 - request:
     method: post
     uri: https://bedrock-runtime.<AWS_REGION>.amazonaws.com/model/us.amazon.nova-2-lite-v1:0/converse
     body:
       encoding: UTF-8
       string: '{"messages":[{"role":"user","content":[{"text":"When was the fall of
-        Rome?"}]},{"role":"assistant","content":[{"toolUse":{"toolUseId":"tooluse_gevwLgBB3bIbbrAMQKWJK7","name":"weather","input":{"latitude":"52.5200","longitude":"13.4050"}}}]},{"role":"user","content":[{"toolResult":{"toolUseId":"tooluse_gevwLgBB3bIbbrAMQKWJK7","content":[{"text":"Current
+        Rome?"}]},{"role":"assistant","content":[{"toolUse":{"toolUseId":"tooluse_5hHBQxEPzCRdQA78M2KP3D","name":"weather","input":{"latitude":"52.5200","longitude":"13.4050"}}}]},{"role":"user","content":[{"toolResult":{"toolUseId":"tooluse_5hHBQxEPzCRdQA78M2KP3D","content":[{"text":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}}]}],"system":[{"text":"Your
         location is Berlin, at latitude 52.5200 and longitude 13.4050."}],"inferenceConfig":{"maxTokens":4096},"toolConfig":{"tools":[{"toolSpec":{"name":"weather","description":"Gets
         current weather for a location","inputSchema":{"json":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
@@ -62,9 +62,9 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T065954Z
+      - 20260917T222706Z
       X-Amz-Content-Sha256:
-      - 766fc79f9485f763a6386cb7bf032bd5ae3b828ba175a885cb8e0aab6c2cacab
+      - c7e5020272c236b0d718b343d91a8710c33766e808f8ca288945056ef339a161
       Authorization:
       - AWS4-HMAC-SHA256 Credential=<AWS_ACCESS_KEY_ID>/<DATE>/<AWS_REGION>/bedrock/aws4_request,
         SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=<AWS_SIGV4_SIGNATURE>
@@ -80,18 +80,27 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:59:57 GMT
+      - Thu, 17 Sep 2026 22:27:08 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '2138'
+      - '922'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - ca12c720-865a-4bbe-b872-588145b9c21d
+      - b8ce74bc-ed72-47ef-932e-0f7e8fa94d74
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJtZXRyaWNzIjp7ImxhdGVuY3lNcyI6MjQ5OX0sIm91dHB1dCI6eyJtZXNzYWdlIjp7ImNvbnRlbnQiOlt7InRleHQiOiJUaGUgZmFsbCBvZiBSb21lIGlzIGEgY29tcGxleCBoaXN0b3JpY2FsIGV2ZW50IHRoYXQgb2NjdXJyZWQgb3ZlciBzZXZlcmFsIGNlbnR1cmllcywgcmF0aGVyIHRoYW4gYSBzaW5nbGUgbW9tZW50LiBUaGUgdHJhZGl0aW9uYWwgZGF0ZSBvZnRlbiBjaXRlZCBmb3IgdGhlIGZhbGwgb2YgdGhlIFdlc3Rlcm4gUm9tYW4gRW1waXJlIGlzICoqU2VwdGVtYmVyIDI0LCA0NzYgQ0UqKi4gT24gdGhpcyBkYXRlLCB0aGUgbGFzdCBSb21hbiBlbXBlcm9yIG9mIHRoZSBXZXN0LCAqKlJvbXVsdXMgQXVndXN0dWx1cyoqLCB3YXMgZGVwb3NlZCBieSB0aGUgR2VybWFuaWMgY2hpZWZ0YWluICoqT2RvYWNlcioqLCB3aG8gZGVjbGFyZWQgaGltc2VsZiBLaW5nIG9mIEl0YWx5IGFuZCBzZW50IHRoZSBpbXBlcmlhbCByZWdhbGlhIHRvIHRoZSBFYXN0ZXJuIEVtcGVyb3IsIFplbm8uXG5cbiMjIyBLZXkgUG9pbnRzIEFib3V0IHRoZSBGYWxsIG9mIFJvbWU6XG4xLiAqKkdyYWR1YWwgRGVjbGluZSoqOiBUaGUgZmFsbCBvZiBSb21lIHdhcyBub3QgYSBzdWRkZW4gZXZlbnQgYnV0IGEgbG9uZyBwcm9jZXNzIG1hcmtlZCBieSBwb2xpdGljYWwgaW5zdGFiaWxpdHksIGVjb25vbWljIGRlY2xpbmUsIG1pbGl0YXJ5IGRlZmVhdHMsIGFuZCBpbnZhc2lvbnMuXG4gICBcbjIuICoqRGl2aXNpb24gb2YgdGhlIEVtcGlyZSoqOiBUaGUgUm9tYW4gRW1waXJlIHdhcyBkaXZpZGVkIGludG8gRWFzdGVybiBhbmQgV2VzdGVybiBoYWx2ZXMgaW4gMjg1IENFIGJ5IEVtcGVyb3IgRGlvY2xldGlhbi4gVGhlIFdlc3Rlcm4gRW1waXJlIHdhcyB3ZWFrZXIgYW5kIG1vcmUgdnVsbmVyYWJsZSB0byBpbnZhc2lvbnMuXG5cbjMuICoqRWNvbm9taWMgVHJvdWJsZXMqKjogVGhlIFdlc3Rlcm4gUm9tYW4gRW1waXJlIGZhY2VkIHNldmVyZSBlY29ub21pYyBwcm9ibGVtcywgaW5jbHVkaW5nIGhlYXZ5IHRheGF0aW9uLCBpbmZsYXRpb24sIGFuZCBhIGRlY3JlYXNpbmcgdGF4IGJhc2UgYXMgcGVvcGxlIGZsZWQgY2l0aWVzIGZvciBydXJhbCBhcmVhcy5cblxuNC4gKipNaWxpdGFyeSBJc3N1ZXMqKjogVGhlIFJvbWFuIG1pbGl0YXJ5IGJlY2FtZSBpbmNyZWFzaW5nbHkgcmVsaWFudCBvbiBtZXJjZW5hcmllcyBhbmQgYmFyYmFyaWFuIHRyb29wcywgd2hvIHdlcmUgbm90IGFsd2F5cyBsb3lhbCB0byBSb21lLiBUaGlzIHdlYWtlbmVkIHRoZSBlbXBpcmXigJlzIGRlZmVuc2VzLlxuXG41LiAqKkJhcmJhcmlhbiBJbnZhc2lvbnMqKjogVmFyaW91cyBiYXJiYXJpYW4gZ3JvdXBzLCBpbmNsdWRpbmcgdGhlIFZpc2lnb3RocywgVmFuZGFscywgYW5kIE9zdHJvZ290aHMsIGludmFkZWQgYW5kIHNldHRsZWQgaW4gUm9tYW4gdGVycml0b3JpZXMuIFRoZSBzYWNrIG9mIFJvbWUgYnkgdGhlIFZpc2lnb3RocyBpbiA0MTAgQ0UgYW5kIGJ5IHRoZSBWYW5kYWxzIGluIDQ1NSBDRSB3ZXJlIHNpZ25pZmljYW50IGJsb3dzLlxuXG42LiAqKkxhc3QgRW1wZXJvcioqOiBSb211bHVzIEF1Z3VzdHVsdXMsIGEgdGVlbmFnZXIsIHdhcyB0aGUgbGFzdCBlbXBlcm9yIG9mIHRoZSBXZXN0ZXJuIFJvbWFuIEVtcGlyZS4gSGlzIGRlcG9zaXRpb24gYnkgT2RvYWNlciBpbiA0NzYgQ0UgaXMgdGhlIGV2ZW50IG1vc3QgaGlzdG9yaWFucyB1c2UgdG8gbWFyayB0aGUgZW5kIG9mIHRoZSBXZXN0ZXJuIFJvbWFuIEVtcGlyZS5cblxuV2hpbGUgNDc2IENFIGlzIHRoZSBjb21tb25seSBhY2NlcHRlZCBkYXRlIGZvciB0aGUgZmFsbCBvZiB0aGUgV2VzdGVybiBSb21hbiBFbXBpcmUsIHRoZSBFYXN0ZXJuIFJvbWFuIEVtcGlyZSwgYWxzbyBrbm93biBhcyB0aGUgQnl6YW50aW5lIEVtcGlyZSwgY29udGludWVkIHRvIHRocml2ZSBmb3IgbmVhcmx5IGFub3RoZXIgdGhvdXNhbmQgeWVhcnMsIHVudGlsIHRoZSBmYWxsIG9mIENvbnN0YW50aW5vcGxlIGluIDE0NTMgQ0UuIn1dLCJyb2xlIjoiYXNzaXN0YW50In19LCJzdG9wUmVhc29uIjoiZW5kX3R1cm4iLCJ1c2FnZSI6eyJpbnB1dFRva2VucyI6MTA4Nywib3V0cHV0VG9rZW5zIjo0MDcsInNlcnZlclRvb2xVc2FnZSI6e30sInRvdGFsVG9rZW5zIjoxNDk0fX0=
-  recorded_at: Wed, 16 Sep 2026 06:59:57 GMT
+      encoding: UTF-8
+      string: '{"metrics":{"latencyMs":1400},"output":{"message":{"content":[{"text":"I
+        understand you''re asking about the fall of Rome, but I need to clarify that
+        my current capabilities are limited to providing weather information for locations,
+        as demonstrated by the weather tool I just used for Berlin.\n\nThe fall of
+        Rome is a historical topic that occurred over several centuries. The traditional
+        date often cited for the \"fall of the Western Roman Empire\" is September
+        24, 476 CE, when the last Roman emperor, Romulus Augustulus, was deposed by
+        the Germanic chieftain Odoacer.\n\nIf you''d like current weather information
+        for Berlin or any other location, I''d be happy to help with that using the
+        weather tool I have access to. Would you like me to check the weather conditions
+        for you now?"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":1087,"outputTokens":145,"serverToolUsage":{},"totalTokens":1232}}'
+  recorded_at: Thu, 17 Sep 2026 22:27:08 GMT
 recorded_with: VCR 6.4.0

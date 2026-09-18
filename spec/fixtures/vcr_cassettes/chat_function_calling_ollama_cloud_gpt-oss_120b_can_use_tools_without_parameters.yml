@@ -29,43 +29,43 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '553'
+      - '531'
       Date:
-      - Wed, 16 Sep 2026 06:52:45 GMT
+      - Thu, 17 Sep 2026 22:20:31 GMT
       Server:
       - Google Frontend
       Traceparent:
-      - 00-02fc4387a53b8d7011e14a9178253584-78bc27b4ace676b5-00
+      - 00-441f65fb47c2c4b122187210a92387af-887e6d07aeee5131-00
       X-Cloud-Trace-Context:
-      - 02fc4387a53b8d7011e14a9178253584/8699872237121337013
+      - 441f65fb47c2c4b122187210a92387af/9835418515990794545
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-755","object":"chat.completion","created":1789541565,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
-        need to call tool best_language_to_learn. Then respond with answer.","tool_calls":[{"id":"call_oi54igso","index":0,"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":132,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":39,"total_tokens":171}}
+      string: '{"id":"chatcmpl-901","object":"chat.completion","created":1789683631,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
+        need to call the tool best_language_to_learn.","tool_calls":[{"id":"call_vqx1s4ql","index":0,"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":132,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":35,"total_tokens":167}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:52:45 GMT
+  recorded_at: Thu, 17 Sep 2026 22:20:31 GMT
 - request:
     method: post
     uri: https://ollama.com/v1/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"Use the
-        best_language_to_learn tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"call_oi54igso","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"We
-        need to call tool best_language_to_learn. Then respond with answer.","reasoning_content":"We
-        need to call tool best_language_to_learn. Then respond with answer."},{"role":"tool","content":"Ruby","tool_call_id":"call_oi54igso"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
+        best_language_to_learn tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"call_vqx1s4ql","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"We
+        need to call the tool best_language_to_learn.","reasoning_content":"We need
+        to call the tool best_language_to_learn."},{"role":"tool","content":"Ruby","tool_call_id":"call_vqx1s4ql"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
         the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
@@ -88,23 +88,23 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '641'
+      - '633'
       Date:
-      - Wed, 16 Sep 2026 06:52:46 GMT
+      - Thu, 17 Sep 2026 22:20:31 GMT
       Server:
       - Google Frontend
       X-Cloud-Trace-Context:
-      - 2a73b22da3a68a97fdcb77f7ed63bf24/6300775701013013783
+      - 176ea7c9de249f7d5806aa1af787e904/963042433108838448
       Traceparent:
-      - 00-2a73b22da3a68a97fdcb77f7ed63bf24-5770da1dfc4b2517-00
+      - 00-176ea7c9de249f7d5806aa1af787e904-0d5d69fd91148830-00
       Via:
       - 1.1 google
       Alt-Svc:
@@ -112,6 +112,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6ImNoYXRjbXBsLTI0MSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3ODk1NDE1NjYsIm1vZGVsIjoiZ3B0LW9zczoxMjBiIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfb2xsYW1hIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJCYXNlZCBvbiB0aGUgbGF0ZXN0IGRhdGEsICoqUnVieSoqIGlzIHRoZSBiZXN0IGxhbmd1YWdlIGZvciB5b3UgdG8gbGVhcm4gcmlnaHQgbm93LiBJdCBvZmZlcnMgYSBncmVhdCBiYWxhbmNlIG9mIHJlYWRhYmlsaXR5LCBjb21tdW5pdHkgc3VwcG9ydCwgYW5kIGRlbWFuZOKAlGVzcGVjaWFsbHkgaWYgeW914oCZcmUgaW50ZXJlc3RlZCBpbiB3ZWIgZGV2ZWxvcG1lbnQgd2l0aCBSdWJ5IG9uIFJhaWxzLCByYXBpZCBwcm90b3R5cGluZywgb3IgYnVpbGRpbmcgbWFpbnRhaW5hYmxlLCBjbGVhbiBjb2RlYmFzZXMuIEhhcHB5IGNvZGluZyEifSwiZmluaXNoX3JlYXNvbiI6InN0b3AifV0sInVzYWdlIjp7InByb21wdF90b2tlbnMiOjE4NiwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjE0NH0sImNvbXBsZXRpb25fdG9rZW5zIjo2NywidG90YWxfdG9rZW5zIjoyNTN9fQo=
-  recorded_at: Wed, 16 Sep 2026 06:52:46 GMT
+        eyJpZCI6ImNoYXRjbXBsLTY3MiIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3ODk2ODM2MzEsIm1vZGVsIjoiZ3B0LW9zczoxMjBiIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfb2xsYW1hIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJCYXNlZCBvbiB0aGUgY3VycmVudCB0cmVuZHMgYW5kIG9wcG9ydHVuaXRpZXMsICoqUnVieSoqIGlzIHRoZSBiZXN0IGxhbmd1YWdlIHRvIGxlYXJuIHJpZ2h0IG5vdy4gSXTigJlzIGVzcGVjaWFsbHkgc3Ryb25nIGZvciB3ZWIgZGV2ZWxvcG1lbnQgKHRoYW5rcyB0byBSdWJ5IG9uIFJhaWxzKSwgaGFzIGEgc3VwcG9ydGl2ZSBjb21tdW5pdHksIGFuZCBvZmZlcnMgYSBnZW50bGUgbGVhcm5pbmcgY3VydmUgdGhhdCBoZWxwcyB5b3UgcGljayB1cCBwcm9ncmFtbWluZyBjb25jZXB0cyBxdWlja2x5LiBIYXBweSBjb2RpbmchIn0sImZpbmlzaF9yZWFzb24iOiJzdG9wIn1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjoxODIsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjoxNDR9LCJjb21wbGV0aW9uX3Rva2VucyI6NjEsInRvdGFsX3Rva2VucyI6MjQzfX0K
+  recorded_at: Thu, 17 Sep 2026 22:20:31 GMT
 recorded_with: VCR 6.4.0

@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T064859Z
+      - 20260917T220740Z
       X-Amz-Content-Sha256:
       - 4b4554ace82a8c612ae3e4a05648e9d2b678331d5cefafaa516bee3dca05311f
       Authorization:
@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:01 GMT
+      - Thu, 17 Sep 2026 22:07:42 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -37,9 +37,9 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 357ae0f4-7cb9-4be5-896b-1267a53e9c40
+      - aeb7d301-bba3-443d-a75a-5d24d1586787
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":1506},"output":{"message":{"content":[{"text":"{\"name\":\"Alice\",\"age\":28}"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":181,"outputTokens":12,"serverToolUsage":{},"totalTokens":193}}'
-  recorded_at: Wed, 16 Sep 2026 06:49:01 GMT
+      string: '{"metrics":{"latencyMs":1664},"output":{"message":{"content":[{"text":"{\"name\":\"Alice\",\"age\":28}"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":181,"outputTokens":12,"serverToolUsage":{},"totalTokens":193}}'
+  recorded_at: Thu, 17 Sep 2026 22:07:42 GMT
 recorded_with: VCR 6.4.0

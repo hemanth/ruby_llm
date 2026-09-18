@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:42 GMT
+      - Thu, 17 Sep 2026 22:06:43 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,25 +38,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:48:42Z'
+      - '2026-09-17T22:06:43Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:48:42Z'
+      - '2026-09-17T22:06:43Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:48:41Z'
+      - '2026-09-17T22:06:43Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:48:42Z'
+      - '2026-09-17T22:06:43Z'
       Server:
       - cloudflare
       Request-Id:
@@ -68,23 +68,23 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-b228103ace367d0438bee75288a0ef4f-c367ae73434bdc1f-01
+      - 00-b5ae2dfde7872431699800a8ca58f17c-5ef80f275abf6085-01
       Vary:
       - Accept-Encoding
-      X-Robots-Tag:
-      - none
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Cf-Cache-Status:
       - DYNAMIC
+      X-Robots-Tag:
+      - none
       Cf-Ray:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6fuz7DHovHA55a3XJL1","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"This
-        is a simple arithmetic question. 5 + 3 = 8.","signature":"Eq0CCpoBCBEYAipAsqrYOGEqLx4yVo0+cVjQVdBwzWNDZHokiEsHIT3obviR6hdeBik5aa0p5pZNaIS9uipRp0EYcIN946pMU47CYjIZY2xhdWRlLWhhaWt1LTQtNS0yMDI1MTAwMTgAQgh0aGlua2luZ1okMDEzN2IxNWMtMTZiZi00OTBkLTlmOTAtOGNmZDdlMzI1ZWMwqAHK96jVBhIMvuJ3gQNxTAkyZ6ryGgwooAEhFrryMkwLU4IiMO+JFYqKjBFC5yzCEoGP8xUD5S1e+YuMefSvUQt+BDXqgFbHzTtDy6QI+RjZOrnz3ipArQ7/n0YxitxuvwAYeOj/lmBPtpN4Ah1nTv9SeP7LFsHHnEusBRnVfFvu2qfCkVz5EFYH+Xp3OeMrKVY3hUy6exgB"},{"type":"text","text":"5
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9mjBeAKPLv2znyrnGCd","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"This
+        is a simple arithmetic question. 5 + 3 = 8.","signature":"Eq0CCpoBCBEYAipAsqrYOGEqLx4yVo0+cVjQVdBwzWNDZHokiEsHIT3obviR6hdeBik5aa0p5pZNaIS9uipRp0EYcIN946pMU47CYjIZY2xhdWRlLWhhaWt1LTQtNS0yMDI1MTAwMTgAQgh0aGlua2luZ1okMDEzN2IxNWMtMTZiZi00OTBkLTlmOTAtOGNmZDdlMzI1ZWMwqAHzyLHVBhIMmubsm5gdai7w46imGgw+Ng6w6fxyFAK5gc8iMJ0RlyUgAtycyr+7QBD5zo1maIV8HOxaEvUeWCIkJj8E6wNTvFsbV+P0IbIT/6MmaSpASvvmmDvd/yyYXyPKCAkK1zUcq/J+6WYeFZouDpIGv9EHAtJBsnX5XR2lyyD6p0RR63or/kobJ4dV5MMzqnrXvRgB"},{"type":"text","text":"5
         + 3 = 8"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":45,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":38,"output_tokens_details":{"thinking_tokens":23},"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:48:42 GMT
+  recorded_at: Thu, 17 Sep 2026 22:06:43 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -92,7 +92,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"claude-haiku-4-5-20251001","messages":[{"role":"user","content":[{"type":"text","text":"What
         is 5 + 3?"}]},{"role":"assistant","content":[{"type":"thinking","thinking":"This
-        is a simple arithmetic question. 5 + 3 = 8.","signature":"Eq0CCpoBCBEYAipAsqrYOGEqLx4yVo0+cVjQVdBwzWNDZHokiEsHIT3obviR6hdeBik5aa0p5pZNaIS9uipRp0EYcIN946pMU47CYjIZY2xhdWRlLWhhaWt1LTQtNS0yMDI1MTAwMTgAQgh0aGlua2luZ1okMDEzN2IxNWMtMTZiZi00OTBkLTlmOTAtOGNmZDdlMzI1ZWMwqAHK96jVBhIMvuJ3gQNxTAkyZ6ryGgwooAEhFrryMkwLU4IiMO+JFYqKjBFC5yzCEoGP8xUD5S1e+YuMefSvUQt+BDXqgFbHzTtDy6QI+RjZOrnz3ipArQ7/n0YxitxuvwAYeOj/lmBPtpN4Ah1nTv9SeP7LFsHHnEusBRnVfFvu2qfCkVz5EFYH+Xp3OeMrKVY3hUy6exgB"},{"type":"text","text":"5
+        is a simple arithmetic question. 5 + 3 = 8.","signature":"Eq0CCpoBCBEYAipAsqrYOGEqLx4yVo0+cVjQVdBwzWNDZHokiEsHIT3obviR6hdeBik5aa0p5pZNaIS9uipRp0EYcIN946pMU47CYjIZY2xhdWRlLWhhaWt1LTQtNS0yMDI1MTAwMTgAQgh0aGlua2luZ1okMDEzN2IxNWMtMTZiZi00OTBkLTlmOTAtOGNmZDdlMzI1ZWMwqAHzyLHVBhIMmubsm5gdai7w46imGgw+Ng6w6fxyFAK5gc8iMJ0RlyUgAtycyr+7QBD5zo1maIV8HOxaEvUeWCIkJj8E6wNTvFsbV+P0IbIT/6MmaSpASvvmmDvd/yyYXyPKCAkK1zUcq/J+6WYeFZouDpIGv9EHAtJBsnX5XR2lyyD6p0RR63or/kobJ4dV5MMzqnrXvRgB"},{"type":"text","text":"5
         + 3 = 8"}]},{"role":"user","content":[{"type":"text","text":"Now multiply
         that by 2"}]}],"stream":false,"max_tokens":64000,"thinking":{"type":"enabled","budget_tokens":1024}}'
     headers:
@@ -114,7 +114,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:43 GMT
+      - Thu, 17 Sep 2026 22:06:44 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -126,25 +126,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:48:42Z'
+      - '2026-09-17T22:06:43Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:48:43Z'
+      - '2026-09-17T22:06:44Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:48:42Z'
+      - '2026-09-17T22:06:43Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:48:42Z'
+      - '2026-09-17T22:06:43Z'
       Server:
       - cloudflare
       Request-Id:
@@ -156,13 +156,11 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-b3746bdad586825f47678bca0c210130-410c8e1860e88680-01
+      - 00-b2b967362c9d2fdde5e86cdfd9700773-3569c1c077879bb0-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
-      Server-Timing:
-      - x-originResponse;dur=735
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -172,6 +170,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJtb2RlbCI6ImNsYXVkZS1oYWlrdS00LTUtMjAyNTEwMDEiLCJpZCI6Im1zZ18wMTFDZjZmdjNyU2cxUzd3aFZYQzhiSzUiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGhpbmtpbmciLCJ0aGlua2luZyI6IlRoZSB1c2VyIGlzIGFza2luZyBtZSB0byBtdWx0aXBseSB0aGUgcHJldmlvdXMgcmVzdWx0ICg4KSBieSAyLlxuXG44IMOXIDIgPSAxNiIsInNpZ25hdHVyZSI6IkVza0NDcG9CQ0JFWUFpcEE2YmgzQWF6alNKbE44SWdpUFNKSm1QbmUrMVVJYUxFWm8rR1FyZ1hqcytzTW5nZ3FEVWNMamxFQ2gvY0RUcnNIenpoQUI5WXhCNSswRmcvQlF2M1RyeklaWTJ4aGRXUmxMV2hoYVd0MUxUUXROUzB5TURJMU1UQXdNVGdBUWdoMGFHbHVhMmx1WjFva01ERXpOMkl4TldNdE1UWmlaaTAwT1RCa0xUbG1PVEF0T0dObVpEZGxNekkxWldNd3FBSEw5NmpWQmhJTTVPTUc2VkR6TzN6NHNPYTRHZ3daMjJKd1lLS253bDF4NmZjaU1OcEhEajd4djlVeUpuRnNYRXVrMUl6OEhHS2ZLQ0xXT0VsTk9abGpWN1hQQzlZMlAxdTVEaGtNUk9kQy93Rkl3U3BjOE1TeWcwbFMxVXo3UzNmc0lvZHMyTTc3TitMajhVbkJBVVhVWUgyME5mVmVTdnp6NHErOWpjckRvdmlmTzJHQ2hNUzY2UXFHZTAwV2RrU1YxWlJDd2tUT3lkb21FSW5ZZzJORE0xbTR6NEFBWWl1NUFpdENPN05tUU9NWUFRPT0ifSx7InR5cGUiOiJ0ZXh0IiwidGV4dCI6Ijggw5cgMiA9IDE2In1dLCJjb250YWluZXIiOm51bGwsInN0b3BfcmVhc29uIjoiZW5kX3R1cm4iLCJzdG9wX3NlcXVlbmNlIjpudWxsLCJzdG9wX2RldGFpbHMiOm51bGwsInVzYWdlIjp7ImlucHV0X3Rva2VucyI6NjcsImNhY2hlX2NyZWF0aW9uX2lucHV0X3Rva2VucyI6MCwiY2FjaGVfcmVhZF9pbnB1dF90b2tlbnMiOjAsImNhY2hlX2NyZWF0aW9uIjp7ImVwaGVtZXJhbF81bV9pbnB1dF90b2tlbnMiOjAsImVwaGVtZXJhbF8xaF9pbnB1dF90b2tlbnMiOjB9LCJvdXRwdXRfdG9rZW5zIjo0Nywib3V0cHV0X3Rva2Vuc19kZXRhaWxzIjp7InRoaW5raW5nX3Rva2VucyI6MzN9LCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCIsImluZmVyZW5jZV9nZW8iOiJub3RfYXZhaWxhYmxlIn19
-  recorded_at: Wed, 16 Sep 2026 06:48:43 GMT
+        eyJtb2RlbCI6ImNsYXVkZS1oYWlrdS00LTUtMjAyNTEwMDEiLCJpZCI6Im1zZ18wMTFDZjltakVVWmphR1cxSGpicmRjSlkiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGhpbmtpbmciLCJ0aGlua2luZyI6IlRoZSBwcmV2aW91cyBhbnN3ZXIgd2FzIDguIE5vdyBJIG5lZWQgdG8gbXVsdGlwbHkgdGhhdCBieSAyLlxuXG44IMOXIDIgPSAxNiIsInNpZ25hdHVyZSI6IkVzWUNDcG9CQ0JFWUFpcEFrQ253Zy9iaXVJc2lTWWl3RjFhWlEyanNzT3VZcE1MVmJ0RTdvVG0wZnFod2JvTUdBTG54Z2M4WVFKK2oyVUowWmFsS05xT0UrVGZDckdFNUFkOU5XRElaWTJ4aGRXUmxMV2hoYVd0MUxUUXROUzB5TURJMU1UQXdNVGdBUWdoMGFHbHVhMmx1WjFva01ERXpOMkl4TldNdE1UWmlaaTAwT1RCa0xUbG1PVEF0T0dObVpEZGxNekkxWldNd3FBSDB5TEhWQmhJTXcxcjdhM0IrMWdFTlAxeVNHZ3gwY3VlcmRzVHM0WEJBbXIwaU1GcFZCOTZlcGJRZXd6SEFaRnovWVVkNmdUQlQyQmUzMm1lQU9hM25TUVI2SGJFQjZlUmI3NnlTTm45SHJqS29mU3BaUWhJQVlYMllmSm1MQ3JHbDR1dGorWTJuYjJ0dHdiQld3NWNwUGpHdVJSM3RlM3BZOTQzVnlvczlzUy9xU3k1NXNCNzRhUjlvUUdnU3loQkRNa2xXeXVqUjVZUjZ0VkxlR21uSlpONlJDVEdsZ0pnUVVnaU9KRjhZQVE9PSJ9LHsidHlwZSI6InRleHQiLCJ0ZXh0IjoiOCDDlyAyID0gMTYifV0sImNvbnRhaW5lciI6bnVsbCwic3RvcF9yZWFzb24iOiJlbmRfdHVybiIsInN0b3Bfc2VxdWVuY2UiOm51bGwsInN0b3BfZGV0YWlscyI6bnVsbCwidXNhZ2UiOnsiaW5wdXRfdG9rZW5zIjo2NywiY2FjaGVfY3JlYXRpb25faW5wdXRfdG9rZW5zIjowLCJjYWNoZV9yZWFkX2lucHV0X3Rva2VucyI6MCwiY2FjaGVfY3JlYXRpb24iOnsiZXBoZW1lcmFsXzVtX2lucHV0X3Rva2VucyI6MCwiZXBoZW1lcmFsXzFoX2lucHV0X3Rva2VucyI6MH0sIm91dHB1dF90b2tlbnMiOjQ3LCJvdXRwdXRfdG9rZW5zX2RldGFpbHMiOnsidGhpbmtpbmdfdG9rZW5zIjozM30sInNlcnZpY2VfdGllciI6InN0YW5kYXJkIiwiaW5mZXJlbmNlX2dlbyI6Im5vdF9hdmFpbGFibGUifX0=
+  recorded_at: Thu, 17 Sep 2026 22:06:44 GMT
 recorded_with: VCR 6.4.0

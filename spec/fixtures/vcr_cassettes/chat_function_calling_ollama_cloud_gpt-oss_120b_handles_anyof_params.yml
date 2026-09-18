@@ -31,33 +31,34 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '598'
+      - '652'
       Date:
-      - Wed, 16 Sep 2026 06:52:58 GMT
+      - Thu, 17 Sep 2026 22:20:44 GMT
       Server:
       - Google Frontend
       Traceparent:
-      - 00-4a8931d58c4fd294ec67de4b09a2a1a0-a371684e143ed399-00
+      - 00-83a690cbcf8691d93de78706cfd86908-754654b9f560660a-00
       X-Cloud-Trace-Context:
-      - 4a8931d58c4fd294ec67de4b09a2a1a0/11777309185106957209
+      - 83a690cbcf8691d93de78706cfd86908/8450534908469732874
       Via:
       - 1.1 google
       Alt-Svc:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-689","object":"chat.completion","created":1789541578,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
-        need to call the any_of_params tool with task and status. Use function call.","tool_calls":[{"id":"call_fiawit4h","index":0,"type":"function","function":{"name":"any_of_params","arguments":"{\"task\":\"Review
-        PR\",\"status\":\"pending\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":162,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":55,"total_tokens":217}}
+      string: '{"id":"chatcmpl-838","object":"chat.completion","created":1789683644,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
+        need to call the any_of_params tool in functions namespace with status \"pending\"
+        and task \"Review PR\". Then report the result.","tool_calls":[{"id":"call_kmq2dgmi","index":0,"type":"function","function":{"name":"any_of_params","arguments":"{\"status\":\"pending\",\"task\":\"Review
+        PR\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":162,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":65,"total_tokens":227}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:52:59 GMT
+  recorded_at: Thu, 17 Sep 2026 22:20:44 GMT
 recorded_with: VCR 6.4.0

@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T064840Z
+      - 20260917T220646Z
       X-Amz-Content-Sha256:
       - c1f28bcaee1077b285985eb19952d44ca4723ecf1286b46c8a0fcab38095fd74
       Authorization:
@@ -28,18 +28,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:41 GMT
+      - Thu, 17 Sep 2026 22:06:48 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '436'
+      - '519'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 3511a6b5-7b68-40d1-9801-f6fffe42b42c
+      - 9efd210f-828a-4116-9694-f4f616ddcce0
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJtZXRyaWNzIjp7ImxhdGVuY3lNcyI6NTQ1fSwib3V0cHV0Ijp7Im1lc3NhZ2UiOnsiY29udGVudCI6W3sidGV4dCI6IjIgKyAyIGVxdWFscyAqKjQqKi5cblxuVGhpcyBpcyBhIGJhc2ljIGFyaXRobWV0aWMgb3BlcmF0aW9uIHdoZXJlIHlvdSdyZSBhZGRpbmcgdHdvIG51bWJlcnMgKDIgYW5kIDIpIHRvZ2V0aGVyLCByZXN1bHRpbmcgaW4gdGhlIHN1bSBvZiAqKjQqKi4gXG5cbklmIHlvdSBoYXZlIGFueSBtb3JlIHF1ZXN0aW9uc+KAlHdoZXRoZXIgbWF0aC1yZWxhdGVkIG9yIG90aGVyd2lzZeKAlGZlZWwgZnJlZSB0byBhc2shIn1dLCJyb2xlIjoiYXNzaXN0YW50In19LCJzdG9wUmVhc29uIjoiZW5kX3R1cm4iLCJ1c2FnZSI6eyJpbnB1dFRva2VucyI6NTMsIm91dHB1dFRva2VucyI6NTcsInNlcnZlclRvb2xVc2FnZSI6e30sInRvdGFsVG9rZW5zIjoxMTB9fQ==
-  recorded_at: Wed, 16 Sep 2026 06:48:41 GMT
+      encoding: UTF-8
+      string: '{"metrics":{"latencyMs":1013},"output":{"message":{"content":[{"text":"2
+        + 2 equals **4**.\n\nThis is a basic arithmetic operation where you''re adding
+        two numbers together. When you add 2 and 2, you combine the quantities, resulting
+        in a total of 4. \n\nIf you''re exploring this in a different context (like
+        binary, or as part of a larger math problem), feel free to share more details!"}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":53,"outputTokens":75,"serverToolUsage":{},"totalTokens":128}}'
+  recorded_at: Thu, 17 Sep 2026 22:06:48 GMT
 recorded_with: VCR 6.4.0

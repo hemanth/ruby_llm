@@ -31,44 +31,44 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '568'
+      - '594'
       Date:
-      - Wed, 16 Sep 2026 06:52:42 GMT
+      - Thu, 17 Sep 2026 22:20:28 GMT
       Server:
       - Google Frontend
-      Traceparent:
-      - 00-b1f8425ebc4e23363b7cd7db755af1c2-1990d05147817792-00
       X-Cloud-Trace-Context:
-      - b1f8425ebc4e23363b7cd7db755af1c2/1842201295105128338
+      - dd2c7a54655a54729f1f1cb0e206a98f/8299657789785892103
+      Traceparent:
+      - 00-dd2c7a54655a54729f1f1cb0e206a98f-732e4ec94d7de507-00
       Via:
       - 1.1 google
       Alt-Svc:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-917","object":"chat.completion","created":1789541562,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"User
-        wants weather for Berlin. Use function call.","tool_calls":[{"id":"call_7xukjmjd","index":0,"type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":169,"prompt_tokens_details":{"cached_tokens":144},"completion_tokens":50,"total_tokens":219}}
+      string: '{"id":"chatcmpl-297","object":"chat.completion","created":1789683628,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"The
+        user asks for weather in Berlin with coordinates. Use function weather.","tool_calls":[{"id":"call_z1lw8vhi","index":0,"type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":169,"prompt_tokens_details":{"cached_tokens":112},"completion_tokens":54,"total_tokens":223}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:52:42 GMT
+  recorded_at: Thu, 17 Sep 2026 22:20:28 GMT
 - request:
     method: post
     uri: https://ollama.com/v1/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_7xukjmjd","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"User
-        wants weather for Berlin. Use function call.","reasoning_content":"User wants
-        weather for Berlin. Use function call."},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_7xukjmjd"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_z1lw8vhi","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"The
+        user asks for weather in Berlin with coordinates. Use function weather.","reasoning_content":"The
+        user asks for weather in Berlin with coordinates. Use function weather."},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_z1lw8vhi"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
@@ -93,23 +93,23 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '464'
+      - '459'
       Date:
-      - Wed, 16 Sep 2026 06:52:43 GMT
+      - Thu, 17 Sep 2026 22:20:28 GMT
       Server:
       - Google Frontend
-      X-Cloud-Trace-Context:
-      - a16d31d0a1b3495b05378ab3e3d2ab06/17183097208115072390
       Traceparent:
-      - 00-a16d31d0a1b3495b05378ab3e3d2ab06-ee769fdeeeb48d86-00
+      - 00-175e584100ade759e3913a2ebcea8e91-a1e932dda80b1d6a-00
+      X-Cloud-Trace-Context:
+      - 175e584100ade759e3913a2ebcea8e91/11666912237268442474
       Via:
       - 1.1 google
       Alt-Svc:
@@ -117,21 +117,21 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6ImNoYXRjbXBsLTk4NSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3ODk1NDE1NjMsIm1vZGVsIjoiZ3B0LW9zczoxMjBiIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfb2xsYW1hIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJUaGUgY3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbiAobGF0aXR1ZGXigK81Mi41MjAwLCBsb25naXR1ZGXigK8xMy40MDUwKSBpcyAqKjE14oCvwrBDKiogd2l0aCBhICoqd2luZCBzcGVlZCBvZiBhYm91dCAxMOKAr2ttL2gqKi4ifSwiZmluaXNoX3JlYXNvbiI6InN0b3AifV0sInVzYWdlIjp7InByb21wdF90b2tlbnMiOjI0NywicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjE3Nn0sImNvbXBsZXRpb25fdG9rZW5zIjo0NCwidG90YWxfdG9rZW5zIjoyOTF9fQo=
-  recorded_at: Wed, 16 Sep 2026 06:52:43 GMT
+        eyJpZCI6ImNoYXRjbXBsLTM2NCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3ODk2ODM2MjgsIm1vZGVsIjoiZ3B0LW9zczoxMjBiIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfb2xsYW1hIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJUaGUgY3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbiAoY29vcmRpbmF0ZXPigK81Mi41MjAw4oCvTizigK8xMy40MDUw4oCvRSkgaXMgKioxNeKAr8KwQyoqIHdpdGggYSB3aW5kIHNwZWVkIG9mICoqMTDigK9rbS9oKiouIn0sImZpbmlzaF9yZWFzb24iOiJzdG9wIn1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjoyNTEsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjoxNzZ9LCJjb21wbGV0aW9uX3Rva2VucyI6NDUsInRvdGFsX3Rva2VucyI6Mjk2fX0K
+  recorded_at: Thu, 17 Sep 2026 22:20:28 GMT
 - request:
     method: post
     uri: https://ollama.com/v1/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_7xukjmjd","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"User
-        wants weather for Berlin. Use function call.","reasoning_content":"User wants
-        weather for Berlin. Use function call."},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_7xukjmjd"},{"role":"assistant","content":"The
-        current weather in Berlin (latitude 52.5200, longitude 13.4050) is **15 °C**
-        with a **wind speed of about 10 km/h**."},{"role":"user","content":"What''s
-        the weather in Paris? (48.8575, 2.3514)"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_z1lw8vhi","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"The
+        user asks for weather in Berlin with coordinates. Use function weather.","reasoning_content":"The
+        user asks for weather in Berlin with coordinates. Use function weather."},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_z1lw8vhi"},{"role":"assistant","content":"The
+        current weather in Berlin (coordinates 52.5200 N, 13.4050 E) is **15 °C**
+        with a wind speed of **10 km/h**."},{"role":"user","content":"What''s the
+        weather in Paris? (48.8575, 2.3514)"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
@@ -156,50 +156,50 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '574'
+      - '580'
       Date:
-      - Wed, 16 Sep 2026 06:52:44 GMT
+      - Thu, 17 Sep 2026 22:20:29 GMT
       Server:
       - Google Frontend
       Traceparent:
-      - 00-08efa02c46a97ca193593638f9860426-20759809f39f4d09-00
+      - 00-571085ed4648262c43c49ed76257e8d1-4def49967fa3c20d-00
       X-Cloud-Trace-Context:
-      - '08efa02c46a97ca193593638f9860426/2338942749998271753'
+      - 571085ed4648262c43c49ed76257e8d1/5615788171089658381
       Via:
       - 1.1 google
       Alt-Svc:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-181","object":"chat.completion","created":1789541564,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
-        need to get weather for Paris coordinates. Use tools.","tool_calls":[{"id":"call_0wkkekia","index":0,"type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":299,"prompt_tokens_details":{"cached_tokens":144},"completion_tokens":45,"total_tokens":344}}
+      string: '{"id":"chatcmpl-16","object":"chat.completion","created":1789683629,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
+        need to get the weather for Paris coordinates. Use function.","tool_calls":[{"id":"call_vnbgnk8f","index":0,"type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":300,"prompt_tokens_details":{"cached_tokens":144},"completion_tokens":46,"total_tokens":346}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:52:44 GMT
+  recorded_at: Thu, 17 Sep 2026 22:20:29 GMT
 - request:
     method: post
     uri: https://ollama.com/v1/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"What''s
-        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_7xukjmjd","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"User
-        wants weather for Berlin. Use function call.","reasoning_content":"User wants
-        weather for Berlin. Use function call."},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_7xukjmjd"},{"role":"assistant","content":"The
-        current weather in Berlin (latitude 52.5200, longitude 13.4050) is **15 °C**
-        with a **wind speed of about 10 km/h**."},{"role":"user","content":"What''s
-        the weather in Paris? (48.8575, 2.3514)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_0wkkekia","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}],"reasoning":"We
-        need to get weather for Paris coordinates. Use tools.","reasoning_content":"We
-        need to get weather for Paris coordinates. Use tools."},{"role":"tool","content":"Current
-        weather at 48.8575, 2.3514: 15°C, Wind: 10 km/h","tool_call_id":"call_0wkkekia"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_z1lw8vhi","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"The
+        user asks for weather in Berlin with coordinates. Use function weather.","reasoning_content":"The
+        user asks for weather in Berlin with coordinates. Use function weather."},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_z1lw8vhi"},{"role":"assistant","content":"The
+        current weather in Berlin (coordinates 52.5200 N, 13.4050 E) is **15 °C**
+        with a wind speed of **10 km/h**."},{"role":"user","content":"What''s the
+        weather in Paris? (48.8575, 2.3514)"},{"role":"assistant","content":"","tool_calls":[{"id":"call_vnbgnk8f","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}],"reasoning":"We
+        need to get the weather for Paris coordinates. Use function.","reasoning_content":"We
+        need to get the weather for Paris coordinates. Use function."},{"role":"tool","content":"Current
+        weather at 48.8575, 2.3514: 15°C, Wind: 10 km/h","tool_call_id":"call_vnbgnk8f"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
@@ -224,23 +224,23 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '462'
+      - '457'
       Date:
-      - Wed, 16 Sep 2026 06:52:44 GMT
+      - Thu, 17 Sep 2026 22:20:30 GMT
       Server:
       - Google Frontend
-      Traceparent:
-      - 00-28f7acb3b4d2e1997594818d8b9a8464-3a59a99e34a831a6-00
       X-Cloud-Trace-Context:
-      - 28f7acb3b4d2e1997594818d8b9a8464/4204578224080433574
+      - c588df780c3f1c7546bb0f2d8b05e36f/2442809150329267576
+      Traceparent:
+      - 00-c588df780c3f1c7546bb0f2d8b05e36f-21e699facb732578-00
       Via:
       - 1.1 google
       Alt-Svc:
@@ -248,6 +248,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6ImNoYXRjbXBsLTM4OCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3ODk1NDE1NjQsIm1vZGVsIjoiZ3B0LW9zczoxMjBiIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfb2xsYW1hIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJUaGUgY3VycmVudCB3ZWF0aGVyIGluIFBhcmlzIChsYXRpdHVkZeKArzQ4Ljg1NzUsIGxvbmdpdHVkZeKArzIuMzUxNCkgaXMgKioxNeKAr8KwQyoqIHdpdGggYSAqKndpbmQgc3BlZWQgb2YgYWJvdXQgMTDigK9rbS9oKiouIn0sImZpbmlzaF9yZWFzb24iOiJzdG9wIn1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjozNzksInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjozMjB9LCJjb21wbGV0aW9uX3Rva2VucyI6NDQsInRvdGFsX3Rva2VucyI6NDIzfX0K
-  recorded_at: Wed, 16 Sep 2026 06:52:44 GMT
+        eyJpZCI6ImNoYXRjbXBsLTQ0NCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3ODk2ODM2MzAsIm1vZGVsIjoiZ3B0LW9zczoxMjBiIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfb2xsYW1hIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJUaGUgY3VycmVudCB3ZWF0aGVyIGluIFBhcmlzIChjb29yZGluYXRlc+KArzQ4Ljg1NzXigK9OLOKArzIuMzUxNOKAr0UpIGlzICoqMTXigK/CsEMqKiB3aXRoIGEgd2luZCBzcGVlZCBvZiAqKjEw4oCva20vaCoqLiJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6MzgxLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MzIwfSwiY29tcGxldGlvbl90b2tlbnMiOjQ1LCJ0b3RhbF90b2tlbnMiOjQyNn19Cg==
+  recorded_at: Thu, 17 Sep 2026 22:20:30 GMT
 recorded_with: VCR 6.4.0

@@ -25,22 +25,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Req-Arrive-Time:
-      - '1789542562588'
-      Resp-Start-Time:
-      - '1789542563742'
-      Date:
-      - Wed, 16 Sep 2026 07:09:22 GMT
-      Req-Cost-Time:
-      - '1153'
       X-Envoy-Upstream-Service-Time:
-      - '1149'
-      Server:
-      - istio-envoy
+      - '1060'
+      Date:
+      - Thu, 17 Sep 2026 22:26:13 GMT
       Access-Control-Allow-Origin:
       - ''
       Content-Type:
       - application/json; charset=utf-8
+      Resp-Start-Time:
+      - '1789683975167'
+      Server:
+      - istio-envoy
+      Req-Cost-Time:
+      - '1063'
+      Req-Arrive-Time:
+      - '1789683974104'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -48,38 +48,38 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"choices":[{"finish_reason":"tool_calls","index":0,"message":{"role":"assistant","content":"","reasoning_content":"Okay,
-        the user wants me to process the query \"test data\". Let me check the tools
-        available. There''s a function called content_returning that takes a query
-        parameter. The description says it returns a processed string result. Since
-        the user provided \"test data\" as the query, I need to call this function
-        with that exact string. I should make sure the parameters are correctly formatted
-        in JSON. No other tools are available, so I just need to use this one. Alright,
-        I''ll structure the tool call with the query parameter set to \"test data\".\n","tool_calls":[{"type":"function","function":{"name":"content_returning","arguments":"{\"query\":
-        \"test data\"}"},"id":"fwJ3mZFsV6Nec34H66CUQuzwikMa2mQb"}]}}],"created":1789542563,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":139,"prompt_tokens":171,"total_tokens":310,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-P6Bwtp4q3mtycnSUj0gbI3WaliqJFZVI","timings":{"cache_n":51,"prompt_n":120,"prompt_ms":32.291,"prompt_per_token_ms":0.2690916666666666,"prompt_per_second":3716.205753925243,"predicted_n":139,"predicted_ms":1095.114,"predicted_per_token_ms":7.935608695652174,"predicted_per_second":126.01427796558166}}'
-  recorded_at: Wed, 16 Sep 2026 07:09:23 GMT
+        the user wants me to process the query \"test data\". Let me check the available
+        tools. There''s a function called content_returning that takes a query parameter.
+        The description says it returns a processed string result. Since the user
+        provided \"test data\" as the query, I need to call this function with that
+        exact string. I should make sure the parameters are correctly formatted as
+        JSON within the tool_call tags. No other functions are available, so I just
+        need to pass the query as is. Let me structure the response properly.\n","tool_calls":[{"type":"function","function":{"name":"content_returning","arguments":"{\"query\":
+        \"test data\"}"},"id":"IAIdZOTlvp5WSDB3AgVhs6LJNLFlor2E"}]}}],"created":1789683975,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":135,"prompt_tokens":171,"total_tokens":306,"prompt_tokens_details":{"cached_tokens":170}},"id":"chatcmpl-pOgnrIuAOcGAzUrHTWJKEE59HNolg6lS","timings":{"cache_n":170,"prompt_n":1,"prompt_ms":9.568,"prompt_per_token_ms":9.568,"prompt_per_second":104.51505016722409,"predicted_n":135,"predicted_ms":980.176,"predicted_per_token_ms":7.314746268656717,"predicted_per_second":136.71014185207557}}'
+  recorded_at: Thu, 17 Sep 2026 22:26:15 GMT
 - request:
     method: post
     uri: "<GPUSTACK_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"Process this
-        query: test data"},{"role":"assistant","content":"","tool_calls":[{"id":"fwJ3mZFsV6Nec34H66CUQuzwikMa2mQb","type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
+        query: test data"},{"role":"assistant","content":"","tool_calls":[{"id":"IAIdZOTlvp5WSDB3AgVhs6LJNLFlor2E","type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
         data\"}"}}],"reasoning":"Okay, the user wants me to process the query \"test
-        data\". Let me check the tools available. There''s a function called content_returning
+        data\". Let me check the available tools. There''s a function called content_returning
         that takes a query parameter. The description says it returns a processed
         string result. Since the user provided \"test data\" as the query, I need
         to call this function with that exact string. I should make sure the parameters
-        are correctly formatted in JSON. No other tools are available, so I just need
-        to use this one. Alright, I''ll structure the tool call with the query parameter
-        set to \"test data\".\n","reasoning_content":"Okay, the user wants me to process
-        the query \"test data\". Let me check the tools available. There''s a function
+        are correctly formatted as JSON within the tool_call tags. No other functions
+        are available, so I just need to pass the query as is. Let me structure the
+        response properly.\n","reasoning_content":"Okay, the user wants me to process
+        the query \"test data\". Let me check the available tools. There''s a function
         called content_returning that takes a query parameter. The description says
         it returns a processed string result. Since the user provided \"test data\"
         as the query, I need to call this function with that exact string. I should
-        make sure the parameters are correctly formatted in JSON. No other tools are
-        available, so I just need to use this one. Alright, I''ll structure the tool
-        call with the query parameter set to \"test data\".\n"},{"role":"tool","content":"Processed:
-        test data","tool_call_id":"fwJ3mZFsV6Nec34H66CUQuzwikMa2mQb"}],"stream":false,"tools":[{"type":"function","function":{"name":"content_returning","description":"Returns
+        make sure the parameters are correctly formatted as JSON within the tool_call
+        tags. No other functions are available, so I just need to pass the query as
+        is. Let me structure the response properly.\n"},{"role":"tool","content":"Processed:
+        test data","tool_call_id":"IAIdZOTlvp5WSDB3AgVhs6LJNLFlor2E"}],"stream":false,"tools":[{"type":"function","function":{"name":"content_returning","description":"Returns
         a processed string result","parameters":{"type":"object","properties":{"query":{"type":"string","description":"Query
         to process"}},"required":["query"],"additionalProperties":false,"strict":true}}}]}'
     headers:
@@ -98,30 +98,37 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Req-Arrive-Time:
+      - '1789683975171'
+      Resp-Start-Time:
+      - '1789683976299'
+      Date:
+      - Thu, 17 Sep 2026 22:26:14 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '1125'
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
       - ''
-      Req-Cost-Time:
-      - '278'
-      Resp-Start-Time:
-      - '1789542564038'
-      X-Envoy-Upstream-Service-Time:
-      - '273'
-      Date:
-      - Wed, 16 Sep 2026 07:09:23 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Req-Arrive-Time:
-      - '1789542563759'
+      Req-Cost-Time:
+      - '1128'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"role":"assistant","content":"The
-        processed result for the query \"test data\" is: \"Processed: test data\".
-        Let me know if you need further assistance!"}}],"created":1789542564,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":32,"prompt_tokens":327,"total_tokens":359,"prompt_tokens_details":{"cached_tokens":309}},"id":"chatcmpl-JyqDQC1AnBPCixs6aLfXABh4NQ6l2zL3","timings":{"cache_n":309,"prompt_n":18,"prompt_ms":14.152,"prompt_per_token_ms":0.7862222222222222,"prompt_per_second":1271.9050310910118,"predicted_n":32,"predicted_ms":245.419,"predicted_per_token_ms":7.916741935483872,"predicted_per_second":126.31458852004121}}'
-  recorded_at: Wed, 16 Sep 2026 07:09:24 GMT
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"role":"assistant","content":"```\nProcessed:
+        test data\n```","reasoning_content":"Okay, the user asked to process \"test
+        data\" and I called the content_returning function with that query. The response
+        from the tool was \"Processed: test data\". Now I need to present this result
+        to the user. Since the function''s purpose is to process the query, the response
+        is straightforward. I''ll just relay the processed result back in a clear
+        manner. Let me check if there''s any additional formatting needed, but since
+        the user didn''t specify, a simple statement should suffice.\n\nSo, the final
+        answer is the processed string from the tool, which is \"Processed: test data\".
+        I''ll make sure to put it in a code block as per the instructions.\n"}}],"created":1789683976,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":150,"prompt_tokens":323,"total_tokens":473,"prompt_tokens_details":{"cached_tokens":305}},"id":"chatcmpl-kWgFJC31BnIQpFKhShhAK8xIOfKBOfe2","timings":{"cache_n":305,"prompt_n":18,"prompt_ms":13.95,"prompt_per_token_ms":0.7749999999999999,"prompt_per_second":1290.3225806451612,"predicted_n":150,"predicted_ms":1102.74,"predicted_per_token_ms":7.400939597315436,"predicted_per_second":135.11797885267606}}'
+  recorded_at: Thu, 17 Sep 2026 22:26:16 GMT
 recorded_with: VCR 6.4.0

@@ -35,35 +35,35 @@ http_interactions:
       Etag:
       - W/"6aa8cb95-9c6"
       Expires:
-      - Wed, 16 Sep 2026 06:58:18 GMT
+      - Thu, 17 Sep 2026 22:16:13 GMT
       Cache-Control:
       - max-age=600
       X-Proxy-Cache:
       - MISS
       X-Github-Request-Id:
-      - 3868:32AFB:1F09861:1F3CEE4:6AAA3BB2
+      - 4914:338B02:3C8A1F8:3CDCFDE:6AAC6454
       X-Github-Edge-Region:
       - fra
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 16 Sep 2026 06:50:06 GMT
+      - Thu, 17 Sep 2026 22:08:13 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '76'
+      - '84'
       X-Served-By:
-      - cache-ber1080024-BER
+      - cache-ber1080029-BER
       X-Cache:
       - HIT
       X-Cache-Hits:
       - '1'
       X-Timer:
-      - S1789541406.159428,VS0,VE1
+      - S1789682893.493521,VS0,VE1
       Vary:
       - Accept-Encoding
       X-Fastly-Request-Id:
-      - c06d5c815ac504c250ae7a888c1202b0b7657137
+      - 2efdf73f662374b2df994e5acfcb449e0c95106a
     body:
       encoding: ASCII-8BIT
       string: "Ruby is copyrighted free software by Yukihiro Matsumoto <matz@netlab.jp>.\nYou
@@ -99,7 +99,7 @@ http_interactions:
         \"AS IS\" AND WITHOUT ANY EXPRESS OR\n     IMPLIED WARRANTIES, INCLUDING,
         WITHOUT LIMITATION, THE IMPLIED\n     WARRANTIES OF MERCHANTABILITY AND FITNESS
         FOR A PARTICULAR\n     PURPOSE.\n"
-  recorded_at: Wed, 16 Sep 2026 06:50:06 GMT
+  recorded_at: Thu, 17 Sep 2026 22:08:13 GMT
 - request:
     method: post
     uri: https://api.perplexity.ai/chat/completions
@@ -157,7 +157,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:50:08 GMT
+      - Thu, 17 Sep 2026 22:08:15 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -171,7 +171,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '0'
       X-Ratelimit-Reset:
-      - '1789541409'
+      - '1789682896'
       X-Ratelimit-Used:
       - '1'
       X-Request-Id:
@@ -190,6 +190,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJjaG9pY2VzIjpbeyJkZWx0YSI6eyJjb250ZW50IjoiIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7ImNvbnRlbnQiOiJUaGlzIGZpbGUgaXMgUnVieeKAmXMgbGljZW5zZSBub3RpY2UuIEl0IHNheXMgUnVieSBpcyBmcmVlIHNvZnR3YXJlIGJ5IFl1a2loaXJvIE1hdHN1bW90byBhbmQgY2FuIGJlIHJlZGlzdHJpYnV0ZWQgb3IgbW9kaWZpZWQgdW5kZXIgZWl0aGVyIHRoZSAyLWNsYXVzZSBCU0QgbGljZW5zZSBvciB0aGUgY3VzdG9tIHRlcm1zIGxpc3RlZCBpbiB0aGUgZmlsZS5cblxuS2V5IHBvaW50czpcbi0gWW91IGNhbiBjb3B5IHRoZSBzb3VyY2UgaWYgeW91IGtlZXAgdGhlIGNvcHlyaWdodCBub3RpY2VzIGFuZCBkaXNjbGFpbWVycy5cbi0gWW91IGNhbiBtb2RpZnkgaXQsIGJ1dCB5b3UgbXVzdCBtZWV0IG9uZSBvZiBzZXZlcmFsIGNvbmRpdGlvbnMsIHN1Y2ggYXMgbWFraW5nIGNoYW5nZXMgcHVibGljLCB1c2luZyB0aGVtIG9ubHkgaW50ZXJuYWxseSwgcmVuYW1pbmcgYmluYXJpZXMsIG9yIG1ha2luZyBvdGhlciBhcnJhbmdlbWVudHMgd2l0aCB0aGUgYXV0aG9yLlxuLSBZb3UgY2FuIGRpc3RyaWJ1dGUgYmluYXJpZXMgaWYgeW91IGFsc28gcHJvdmlkZSBzb3VyY2UsIHNvdXJjZSBpbnN0cnVjdGlvbnMsIG9yIG90aGVyIGFsbG93ZWQgYXJyYW5nZW1lbnRzLlxuLSBJdCBhbGxvd3MgaW5jbHVzaW9uIGluIG90aGVyIHNvZnR3YXJlLCBpbmNsdWRpbmcgY29tbWVyY2lhbCBzb2Z0d2FyZSwgd2l0aCBzb21lIGV4Y2VwdGlvbnMgZm9yIGZpbGVzIGNvdmVyZWQgYnkgZGlmZmVyZW50IHRlcm1zLlxuLSBTY3JpcHRzIGFuZCBsaWJyYXJ5IGZpbGVzIGdlbmVyYXRlZCBieSB0aGUgc29mdHdhcmUgYmVsb25nIHRvIHRoZSBwZXJzb24gd2hvIGdlbmVyYXRlZCB0aGVtLlxuLSBUaGUgc29mdHdhcmUgaXMgcHJvdmlkZWQg4oCcYXMgaXPigJ0gd2l0aCBubyB3YXJyYW50aWVzLiIsInJvbGUiOiJhc3Npc3RhbnQifX1dLCJjcmVhdGVkIjoxNzg5NTQxNDA4LCJpZCI6IjFjOWNkMTRkLWI2NjUtNGMyZS1hOTUwLWFmOWUzOGYxMmY1NSIsIm1vZGVsIjoic29uYXIiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJ1c2FnZSI6eyJjb21wbGV0aW9uX3Rva2VucyI6MTczLCJjb3N0Ijp7ImlucHV0X3Rva2Vuc19jb3N0IjowLjAwMDU0LCJvdXRwdXRfdG9rZW5zX2Nvc3QiOjAuMDAwMTcsInJlcXVlc3RfY29zdCI6MC4wMDUsInRvdGFsX2Nvc3QiOjAuMDA1NzF9LCJwcm9tcHRfdG9rZW5zIjo1MzUsInNlYXJjaF9jb250ZXh0X3NpemUiOiJsb3ciLCJ0b3RhbF90b2tlbnMiOjcwOH19Cg==
-  recorded_at: Wed, 16 Sep 2026 06:50:08 GMT
+        eyJjaG9pY2VzIjpbeyJkZWx0YSI6eyJjb250ZW50IjoiIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7ImNvbnRlbnQiOiJUaGlzIGZpbGUgaXMgdGhlIFJ1Ynkgc29mdHdhcmUgbGljZW5zZS4gSXQgc2F5cyBSdWJ5IGlzIGZyZWUgc29mdHdhcmUgYnkgWXVraWhpcm8gTWF0c3Vtb3RvIGFuZCBjYW4gYmUgcmVkaXN0cmlidXRlZCBvciBtb2RpZmllZCB1bmRlciBlaXRoZXIgdGhlIDItY2xhdXNlIEJTRCBMaWNlbnNlIG9yIHRoZSB0ZXJtcyBsaXN0ZWQgaW4gdGhlIGZpbGUuIEl0IGFsc28gbGF5cyBvdXQgcnVsZXMgZm9yIGNvcHlpbmcsIG1vZGlmeWluZywgZGlzdHJpYnV0aW5nIGJpbmFyaWVzLCBjb21iaW5pbmcgdGhlIGNvZGUgd2l0aCBvdGhlciBzb2Z0d2FyZSwgYW5kIGluY2x1ZGVzIGFuIOKAnGFzIGlz4oCdIHdhcnJhbnR5IGRpc2NsYWltZXIuIiwicm9sZSI6ImFzc2lzdGFudCJ9fV0sImNyZWF0ZWQiOjE3ODk2ODI4OTUsImlkIjoiM2EzNzAxMmEtNTRkZi00NzA0LWI0YzgtYmI3ZGM3ZGFlZmEwIiwibW9kZWwiOiJzb25hciIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsInVzYWdlIjp7ImNvbXBsZXRpb25fdG9rZW5zIjo3NCwiY29zdCI6eyJpbnB1dF90b2tlbnNfY29zdCI6MC4wMDA1NCwib3V0cHV0X3Rva2Vuc19jb3N0IjowLjAwMDA3LCJyZXF1ZXN0X2Nvc3QiOjAuMDA1LCJ0b3RhbF9jb3N0IjowLjAwNTYxfSwicHJvbXB0X3Rva2VucyI6NTM1LCJzZWFyY2hfY29udGV4dF9zaXplIjoibG93IiwidG90YWxfdG9rZW5zIjo2MDl9fQo=
+  recorded_at: Thu, 17 Sep 2026 22:08:15 GMT
 recorded_with: VCR 6.4.0

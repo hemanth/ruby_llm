@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:02:36 GMT
+      - Thu, 17 Sep 2026 22:14:58 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -48,7 +48,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=318
+      - x-originResponse;dur=556
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -57,11 +57,11 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01V5BUbZhGoujRbrRf3a7SK5","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:02:36.844395+00:00","expires_at":"2026-09-17T07:02:36.844395+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:02:36 GMT
+      string: '{"id":"msgbatch_01DkoN2fsq6RvqjE7YmnxEAj","type":"message_batch","processing_status":"in_progress","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-17T22:14:58.066202+00:00","expires_at":"2026-09-18T22:14:58.066202+00:00","archived_at":null,"cancel_initiated_at":null,"results_url":null}'
+  recorded_at: Thu, 17 Sep 2026 22:14:58 GMT
 - request:
     method: post
-    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01V5BUbZhGoujRbrRf3a7SK5/cancel
+    uri: https://api.anthropic.com/v1/messages/batches/msgbatch_01DkoN2fsq6RvqjE7YmnxEAj/cancel
     body:
       encoding: UTF-8
       string: "{}"
@@ -84,7 +84,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:02:37 GMT
+      - Thu, 17 Sep 2026 22:14:58 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -106,7 +106,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=136
+      - x-originResponse;dur=126
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -115,6 +115,6 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msgbatch_01V5BUbZhGoujRbrRf3a7SK5","type":"message_batch","processing_status":"canceling","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-16T07:02:36.844395+00:00","expires_at":"2026-09-17T07:02:36.844395+00:00","archived_at":null,"cancel_initiated_at":"2026-09-16T07:02:37.142052+00:00","results_url":null}'
-  recorded_at: Wed, 16 Sep 2026 07:02:37 GMT
+      string: '{"id":"msgbatch_01DkoN2fsq6RvqjE7YmnxEAj","type":"message_batch","processing_status":"canceling","request_counts":{"processing":1,"succeeded":0,"errored":0,"canceled":0,"expired":0},"ended_at":null,"created_at":"2026-09-17T22:14:58.066202+00:00","expires_at":"2026-09-18T22:14:58.066202+00:00","archived_at":null,"cancel_initiated_at":"2026-09-17T22:14:58.333286+00:00","results_url":null}'
+  recorded_at: Thu, 17 Sep 2026 22:14:58 GMT
 recorded_with: VCR 6.4.0

@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:56:26 GMT
+      - Thu, 17 Sep 2026 22:23:50 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -49,7 +49,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '1945'
+      - '1281'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -76,15 +76,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "resp_09ecb00978d1af97016aaa3d98a24487d2919e7741b1e61771",
+          "id": "resp_08208bc9fa34ac73016aac6875195487d28713359e734b0ff4",
           "object": "response",
-          "created_at": 1789541784,
+          "created_at": 1789683829,
           "status": "completed",
           "background": false,
           "billing": {
             "payer": "developer"
           },
-          "completed_at": 1789541786,
+          "completed_at": 1789683830,
           "error": null,
           "frequency_penalty": 0.0,
           "incomplete_details": null,
@@ -95,11 +95,11 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "fc_09ecb00978d1af97016aaa3d99bc4087d2a4986721d6b26bcd",
+              "id": "fc_08208bc9fa34ac73016aac68761bfc87d297859cb9444ef993",
               "type": "function_call",
               "status": "completed",
               "arguments": "{}",
-              "call_id": "call_VeFWzf8hvXoqf5S63ZDtU18k",
+              "call_id": "call_1YwJVcOtwefGeLnxFp55k91n",
               "name": "dice_roll"
             }
           ],
@@ -177,14 +177,14 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 16 Sep 2026 06:56:26 GMT
+  recorded_at: Thu, 17 Sep 2026 22:23:50 GMT
 - request:
     method: post
     uri: https://api.openai.com/v1/responses
     body:
       encoding: UTF-8
       string: '{"model":"gpt-5.6","input":[{"role":"user","content":"Roll a die for
-        me"},{"type":"function_call","call_id":"call_VeFWzf8hvXoqf5S63ZDtU18k","name":"dice_roll","arguments":"{}"},{"type":"function_call_output","call_id":"call_VeFWzf8hvXoqf5S63ZDtU18k","output":"{\"roll\":4}"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"],"tools":[{"type":"function","name":"dice_roll","description":"Rolls
+        me"},{"type":"function_call","call_id":"call_1YwJVcOtwefGeLnxFp55k91n","name":"dice_roll","arguments":"{}"},{"type":"function_call_output","call_id":"call_1YwJVcOtwefGeLnxFp55k91n","output":"{\"roll\":4}"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"],"tools":[{"type":"function","name":"dice_roll","description":"Rolls
         a single six-sided die and returns the result","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true},"strict":false}]}'
     headers:
       User-Agent:
@@ -203,7 +203,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:56:27 GMT
+      - Thu, 17 Sep 2026 22:23:51 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -227,7 +227,7 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '1249'
+      - '1159'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
@@ -254,15 +254,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "resp_0e0e91519a050959016aaa3d9aae1887d29c1f02b8f2569b79",
+          "id": "resp_04014784b1322fe0016aac6876a35087d29dbab11c4785b139",
           "object": "response",
-          "created_at": 1789541786,
+          "created_at": 1789683830,
           "status": "completed",
           "background": false,
           "billing": {
             "payer": "developer"
           },
-          "completed_at": 1789541787,
+          "completed_at": 1789683831,
           "error": null,
           "frequency_penalty": 0.0,
           "incomplete_details": null,
@@ -273,7 +273,7 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "msg_0e0e91519a050959016aaa3d9b68c887d297aa9bf08bb70fb5",
+              "id": "msg_04014784b1322fe0016aac68776c2c87d2af8f873b394f5201",
               "type": "message",
               "status": "completed",
               "content": [
@@ -362,5 +362,5 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 16 Sep 2026 06:56:28 GMT
+  recorded_at: Thu, 17 Sep 2026 22:23:51 GMT
 recorded_with: VCR 6.4.0

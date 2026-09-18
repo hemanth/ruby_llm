@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T065306Z
+      - 20260917T221102Z
       X-Amz-Content-Sha256:
       - cfa1a61e9831d27f7ba08ada9c46ca2e63d303d5d7ef3081850cf17f1f0c1eef
       Authorization:
@@ -29,11 +29,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:53:08 GMT
+      - Thu, 17 Sep 2026 22:11:03 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '865'
+      - '636'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
@@ -49,12 +49,9 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"choices":[{"finish_reason":"stop","index":0,"logprobs":null,"message":{"content":"The
-        transcript you shared is brief and concise, stating, \"*Ruby is a programming
-        language designed for developer happiness*.\" Here''s a simple breakdown:\n\n1.
-        **Subject**: Ruby (a programming language).\n2. **Description**: It is specifically
-        designed to provide a (*happy*, productive, simple-to-learn, and easier) experience
-        for developers.\n\nIn essence, the speaker or author is emphasizing that Ruby
-        was created with the goal of making it easy and enjoyable for programmers
-        to engage with and use.","refusal":null,"role":"assistant"}}],"created":1789541587,"id":"chatcmpl-7dd7e4aa-7e4e-4976-9992-e0111c4ae9b6","model":"mistral.voxtral-mini-3b-2507","object":"chat.completion","service_tier":"default","usage":{"completion_tokens":101,"prompt_tokens":384,"total_tokens":485}}'
-  recorded_at: Wed, 16 Sep 2026 06:53:08 GMT
+        sentence mentions Ruby being described as a \"programming language **designed
+        for developer happiness**.\" Author Yukihiro \"Matz\" Matsumoto created this
+        language in the mid-90s as Ruby was designed to combine \"programmer friendliness\"
+        along with power and flexibility.","refusal":null,"role":"assistant"}}],"created":1789683063,"id":"chatcmpl-8da3790c-b053-46a9-9f63-a2772f2b6976","model":"mistral.voxtral-mini-3b-2507","object":"chat.completion","service_tier":"default","usage":{"completion_tokens":60,"prompt_tokens":384,"total_tokens":444}}'
+  recorded_at: Thu, 17 Sep 2026 22:11:04 GMT
 recorded_with: VCR 6.4.0

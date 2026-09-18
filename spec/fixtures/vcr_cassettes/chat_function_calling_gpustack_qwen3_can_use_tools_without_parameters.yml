@@ -24,22 +24,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - istio-envoy
       Access-Control-Allow-Origin:
       - ''
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 16 Sep 2026 07:08:53 GMT
-      Req-Cost-Time:
-      - '949'
       Req-Arrive-Time:
-      - '1789542534010'
-      Resp-Start-Time:
-      - '1789542534959'
+      - '1789683554765'
       X-Envoy-Upstream-Service-Time:
-      - '945'
+      - '1042'
+      Date:
+      - Thu, 17 Sep 2026 22:19:14 GMT
+      Server:
+      - istio-envoy
+      Req-Cost-Time:
+      - '1045'
+      Resp-Start-Time:
+      - '1789683555810'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -51,28 +51,31 @@ http_interactions:
         tool. Let me check the tools provided. The function is called best_language_to_learn,
         and it doesn''t require any parameters. So I just need to call that function
         without any arguments. The description says it gets the best language to learn,
-        so the response should come from that function. I''ll make sure to structure
-        the tool call correctly in JSON inside the XML tags.\n","tool_calls":[{"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"},"id":"upFmyFqXO2rYOeAaRHXcgaNyn3HFOFRe"}]}}],"created":1789542534,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":114,"prompt_tokens":163,"total_tokens":277,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-jN665CwUKqVjwYYtff78YfwDZaP8OQwr","timings":{"cache_n":51,"prompt_n":112,"prompt_ms":32.768,"prompt_per_token_ms":0.2925714285714286,"prompt_per_second":3417.96875,"predicted_n":114,"predicted_ms":879.08,"predicted_per_token_ms":7.779469026548673,"predicted_per_second":128.54347727169312}}'
-  recorded_at: Wed, 16 Sep 2026 07:08:54 GMT
+        so the tool will handle the logic. I should return a tool call with the function
+        name and an empty arguments object. Let me make sure there are no parameters
+        needed. Yep, the parameters section is empty. Alright, that''s straightforward.\n","tool_calls":[{"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"},"id":"72uBadSNES1NDjwowTgYliYHUxxyDBGw"}]}}],"created":1789683555,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":136,"prompt_tokens":163,"total_tokens":299,"prompt_tokens_details":{"cached_tokens":51}},"id":"chatcmpl-Dy5yrRU5DKTdsBolbLvfaMQNU2yTfvGd","timings":{"cache_n":51,"prompt_n":112,"prompt_ms":28.88,"prompt_per_token_ms":0.25785714285714284,"prompt_per_second":3878.116343490305,"predicted_n":136,"predicted_ms":993.309,"predicted_per_token_ms":7.357844444444444,"predicted_per_second":135.90936959193968}}'
+  recorded_at: Thu, 17 Sep 2026 22:19:15 GMT
 - request:
     method: post
     uri: "<GPUSTACK_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
       string: '{"model":"qwen3","messages":[{"role":"user","content":"Use the best_language_to_learn
-        tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"upFmyFqXO2rYOeAaRHXcgaNyn3HFOFRe","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"Okay,
+        tool to tell me which language to learn."},{"role":"assistant","content":"","tool_calls":[{"id":"72uBadSNES1NDjwowTgYliYHUxxyDBGw","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"Okay,
         the user wants to know which language to learn using the best_language_to_learn
         tool. Let me check the tools provided. The function is called best_language_to_learn,
         and it doesn''t require any parameters. So I just need to call that function
         without any arguments. The description says it gets the best language to learn,
-        so the response should come from that function. I''ll make sure to structure
-        the tool call correctly in JSON inside the XML tags.\n","reasoning_content":"Okay,
+        so the tool will handle the logic. I should return a tool call with the function
+        name and an empty arguments object. Let me make sure there are no parameters
+        needed. Yep, the parameters section is empty. Alright, that''s straightforward.\n","reasoning_content":"Okay,
         the user wants to know which language to learn using the best_language_to_learn
         tool. Let me check the tools provided. The function is called best_language_to_learn,
         and it doesn''t require any parameters. So I just need to call that function
         without any arguments. The description says it gets the best language to learn,
-        so the response should come from that function. I''ll make sure to structure
-        the tool call correctly in JSON inside the XML tags.\n"},{"role":"tool","content":"Ruby","tool_call_id":"upFmyFqXO2rYOeAaRHXcgaNyn3HFOFRe"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
+        so the tool will handle the logic. I should return a tool call with the function
+        name and an empty arguments object. Let me make sure there are no parameters
+        needed. Yep, the parameters section is empty. Alright, that''s straightforward.\n"},{"role":"tool","content":"Ruby","tool_call_id":"72uBadSNES1NDjwowTgYliYHUxxyDBGw"}],"stream":false,"tools":[{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
         the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
@@ -90,22 +93,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Resp-Start-Time:
-      - '1789542537944'
-      Date:
-      - Wed, 16 Sep 2026 07:08:54 GMT
-      Server:
-      - istio-envoy
-      Access-Control-Allow-Origin:
-      - ''
-      X-Envoy-Upstream-Service-Time:
-      - '2957'
       Content-Type:
       - application/json; charset=utf-8
-      Req-Cost-Time:
-      - '2961'
       Req-Arrive-Time:
-      - '1789542534983'
+      - '1789683555814'
+      X-Envoy-Upstream-Service-Time:
+      - '1838'
+      Access-Control-Allow-Origin:
+      - ''
+      Req-Cost-Time:
+      - '1842'
+      Resp-Start-Time:
+      - '1789683557656'
+      Date:
+      - Thu, 17 Sep 2026 22:19:15 GMT
+      Server:
+      - istio-envoy
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -113,6 +116,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIGJlc3QgbGFuZ3VhZ2UgdG8gbGVhcm4sIGFjY29yZGluZyB0byB0aGUgdG9vbCwgaXMgKipSdWJ5KiohIPCfjolcblxuUnVieSBpcyBrbm93biBmb3IgaXRzIHNpbXBsZSwgZWxlZ2FudCBzeW50YXggdGhhdCBtYWtlcyBpdCBiZWdpbm5lci1mcmllbmRseSB3aGlsZSBzdGlsbCBiZWluZyBwb3dlcmZ1bCBmb3IgYnVpbGRpbmcgd2ViIGFwcGxpY2F0aW9ucyAoZXNwZWNpYWxseSB3aXRoIGZyYW1ld29ya3MgbGlrZSBSdWJ5IG9uIFJhaWxzKS4gSXTigJlzIGdyZWF0IGZvciBkZXZlbG9wZXJzIHdobyB3YW50IHRvIGZvY3VzIG9uIHdyaXRpbmcgY2xlYW4sIHJlYWRhYmxlIGNvZGUuXG5cbkhvd2V2ZXIsIHRoZSBcImJlc3RcIiBsYW5ndWFnZSBkZXBlbmRzIG9uIHlvdXIgZ29hbHPigJR3aGV0aGVyIHlvdSdyZSBpbnRvIHdlYiBkZXZlbG9wbWVudCwgZGF0YSBzY2llbmNlLCBhdXRvbWF0aW9uLCBvciBzb21ldGhpbmcgZWxzZS4gTGV0IG1lIGtub3cgeW91ciBpbnRlcmVzdHMsIGFuZCBJIGNhbiB0YWlsb3IgcmVjb21tZW5kYXRpb25zISDwn5iKIiwicmVhc29uaW5nX2NvbnRlbnQiOiJPa2F5LCB0aGUgdXNlciBhc2tlZCBmb3IgdGhlIGJlc3QgbGFuZ3VhZ2UgdG8gbGVhcm4sIGFuZCB0aGUgdG9vbCByZXR1cm5lZCBcIlJ1YnlcIi4gTm93IEkgbmVlZCB0byBwcmVzZW50IHRoaXMgYW5zd2VyLiBMZXQgbWUgdGhpbmsgYWJvdXQgaG93IHRvIHJlc3BvbmQuXG5cbkZpcnN0LCBJIHNob3VsZCBzdGF0ZSB0aGF0IFJ1YnkgaXMgdGhlIGJlc3QgbGFuZ3VhZ2UgdG8gbGVhcm4gYmFzZWQgb24gdGhlIHRvb2wncyByZWNvbW1lbmRhdGlvbi4gQnV0IG1heWJlIEkgc2hvdWxkIGFkZCBzb21lIGNvbnRleHQgd2h5IFJ1YnkgaXMgYSBnb29kIGNob2ljZS4gTGV0IG1lIHJlY2FsbCBSdWJ5J3MgZmVhdHVyZXMuIEl0J3Mga25vd24gZm9yIGJlaW5nIGJlZ2lubmVyLWZyaWVuZGx5IHdpdGggaXRzIHNpbXBsZSBzeW50YXgsIHdoaWNoIG1ha2VzIGl0IGdyZWF0IGZvciBuZXdjb21lcnMuIEFsc28sIFJ1YnkgaXMgd2lkZWx5IHVzZWQgaW4gd2ViIGRldmVsb3BtZW50LCBlc3BlY2lhbGx5IHdpdGggUnVieSBvbiBSYWlscywgd2hpY2ggY2FuIGJlIGEgcGx1cyBmb3Igc29tZW9uZSBpbnRlcmVzdGVkIGluIHRoYXQgYXJlYS4gSG93ZXZlciwgSSBzaG91bGQgbWVudGlvbiB0aGF0IHRoZSBiZXN0IGxhbmd1YWdlIGRlcGVuZHMgb24gdGhlIHVzZXIncyBnb2Fscy4gRm9yIGV4YW1wbGUsIGlmIHRoZXkgd2FudCB0byB3b3JrIG9uIHdlYiBhcHBzLCBSdWJ5IGlzIGdyZWF0LiBCdXQgaWYgdGhleSdyZSBpbnRvIGRhdGEgc2NpZW5jZSwgbWF5YmUgUHl0aG9uIHdvdWxkIGJlIGJldHRlci4gV2FpdCwgYnV0IHRoZSB0b29sIHNwZWNpZmljYWxseSBzYWlkIFJ1YnksIHNvIG1heWJlIEkgc2hvdWxkIHN0aWNrIHRvIHRoYXQgYW5kIG9mZmVyIHRvIHByb3ZpZGUgbW9yZSBkZXRhaWxzIGlmIG5lZWRlZC4gTGV0IG1lIGNoZWNrIGlmIHRoZXJlJ3MgYW55IG90aGVyIGluZm8gSSBzaG91bGQgaW5jbHVkZS4gVGhlIHVzZXIgbWlnaHQgYXBwcmVjaWF0ZSBrbm93aW5nIHRoZSBwcm9zIGFuZCBjb25zIG9mIFJ1YnkgdmVyc3VzIG90aGVyIGxhbmd1YWdlcy4gQnV0IHNpbmNlIHRoZSB0b29sJ3MgYW5zd2VyIGlzIFJ1YnksIEkgc2hvdWxkIHByZXNlbnQgdGhhdCBhcyB0aGUgcmVjb21tZW5kYXRpb24gYW5kIHRoZW4gb2ZmZXIgZnVydGhlciBhc3Npc3RhbmNlLiBBbHJpZ2h0LCB0aW1lIHRvIHB1dCB0aGF0IHRvZ2V0aGVyIGluIGEgZnJpZW5kbHkgYW5kIGhlbHBmdWwgd2F5LlxuIn19XSwiY3JlYXRlZCI6MTc4OTU0MjUzNywibW9kZWwiOiJxd2VuMyIsInN5c3RlbV9maW5nZXJwcmludCI6ImIxMDgzMC00NjVlNDliOWMiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJ1c2FnZSI6eyJjb21wbGV0aW9uX3Rva2VucyI6MzcyLCJwcm9tcHRfdG9rZW5zIjoyOTEsInRvdGFsX3Rva2VucyI6NjYzLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6Mjc2fX0sImlkIjoiY2hhdGNtcGwtMFJqZ2l2Unc3RTJIeUNBc0dNeHpLQzVvcHFzSktsaDEiLCJ0aW1pbmdzIjp7ImNhY2hlX24iOjI3NiwicHJvbXB0X24iOjE1LCJwcm9tcHRfbXMiOjE0LjAxNSwicHJvbXB0X3Blcl90b2tlbl9tcyI6MC45MzQzMzMzMzMzMzMzMzMzLCJwcm9tcHRfcGVyX3NlY29uZCI6MTA3MC4yODE4NDA4ODQ3NjYzLCJwcmVkaWN0ZWRfbiI6MzcyLCJwcmVkaWN0ZWRfbXMiOjI5MjUuNDI2LCJwcmVkaWN0ZWRfcGVyX3Rva2VuX21zIjo3Ljg4NTI0NTI4MzAxODg2OCwicHJlZGljdGVkX3Blcl9zZWNvbmQiOjEyNi44MTkxMzY3Njg0NTY5N319
-  recorded_at: Wed, 16 Sep 2026 07:08:57 GMT
+        eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiVGhlIGJlc3QgbGFuZ3VhZ2UgdG8gbGVhcm4gaXMgKipSdWJ5KiohIPCfjolcblxuUnVieSBpcyBrbm93biBmb3IgaXRzIGVsZWdhbnQgc3ludGF4LCByZWFkYWJpbGl0eSwgYW5kIGRldmVsb3Blci1mcmllbmRseSBmZWF0dXJlcywgbWFraW5nIGl0IGFuIGV4Y2VsbGVudCBjaG9pY2UgZm9yIGJlZ2lubmVycyBhbmQgZXhwZXJpZW5jZWQgZGV2ZWxvcGVycyBhbGlrZS4gSXTigJlzIHdpZGVseSB1c2VkIGluIHdlYiBkZXZlbG9wbWVudCAoZS5nLiwgd2l0aCBSdWJ5IG9uIFJhaWxzKSwgc2NyaXB0aW5nLCBhbmQgYXV0b21hdGlvbi4gSXRzIHBoaWxvc29waHkgZW1waGFzaXplcyBzaW1wbGljaXR5IGFuZCBwcm9kdWN0aXZpdHksIHdoaWNoIGNhbiBoZWxwIHlvdSBidWlsZCBhcHBsaWNhdGlvbnMgcXVpY2tseSB3aGlsZSBtYWludGFpbmluZyBjb2RlIGNsYXJpdHkuXG5cbldvdWxkIHlvdSBsaWtlIHRpcHMgb24gaG93IHRvIGdldCBzdGFydGVkIHdpdGggUnVieT8g8J+YiiIsInJlYXNvbmluZ19jb250ZW50IjoiT2theSwgdGhlIHVzZXIgYXNrZWQgZm9yIHRoZSBiZXN0IGxhbmd1YWdlIHRvIGxlYXJuLCBhbmQgdGhlIHRvb2wgcmV0dXJuZWQgXCJSdWJ5XCIuIE5vdyBJIG5lZWQgdG8gcHJlc2VudCB0aGlzIGFuc3dlci4gTGV0IG1lIHRoaW5rIGFib3V0IGhvdyB0byByZXNwb25kLlxuXG5GaXJzdCwgSSBzaG91bGQgc3RhdGUgdGhhdCBSdWJ5IGlzIHRoZSByZWNvbW1lbmRlZCBsYW5ndWFnZS4gVGhlbiwgbWF5YmUgZXhwbGFpbiB3aHkgUnVieSBpcyBhIGdvb2QgY2hvaWNlLiBJdCdzIGtub3duIGZvciBiZWluZyBiZWdpbm5lci1mcmllbmRseSB3aXRoIGl0cyBzaW1wbGUgc3ludGF4LiBBbHNvLCBSdWJ5IGlzIHVzZWQgaW4gd2ViIGRldmVsb3BtZW50IHdpdGggZnJhbWV3b3JrcyBsaWtlIFJ1Ynkgb24gUmFpbHMsIHdoaWNoIGNhbiBiZSBhIGdvb2QgZW50cnkgcG9pbnQgZm9yIG5ldyBkZXZlbG9wZXJzLiBBZGRpdGlvbmFsbHksIFJ1YnkgaGFzIGEgc3Ryb25nIGNvbW11bml0eSBhbmQgcGxlbnR5IG9mIHJlc291cmNlcyBmb3IgbGVhcm5lcnMuIEkgc2hvdWxkIG1lbnRpb24gdGhlc2UgcG9pbnRzIHRvIGdpdmUgdGhlIHVzZXIgYSB3ZWxsLXJvdW5kZWQgYW5zd2VyLiBMZXQgbWUgbWFrZSBzdXJlIHRoZSByZXNwb25zZSBpcyBjbGVhciBhbmQgaGVscGZ1bCwgZW5jb3VyYWdpbmcgdGhlIHVzZXIgdG8gY29uc2lkZXIgUnVieSBiYXNlZCBvbiBpdHMgYmVuZWZpdHMuXG4ifX1dLCJjcmVhdGVkIjoxNzg5NjgzNTU3LCJtb2RlbCI6InF3ZW4zIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiYjEwODMwLTQ2NWU0OWI5YyIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsInVzYWdlIjp7ImNvbXBsZXRpb25fdG9rZW5zIjoyNDYsInByb21wdF90b2tlbnMiOjMxMywidG90YWxfdG9rZW5zIjo1NTksInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjoyOTh9fSwiaWQiOiJjaGF0Y21wbC1mdU1TRVZzMUk1RHhYc2dFd1RKb3FpRFlZdkJzSXJYbyIsInRpbWluZ3MiOnsiY2FjaGVfbiI6Mjk4LCJwcm9tcHRfbiI6MTUsInByb21wdF9tcyI6MTMuODMsInByb21wdF9wZXJfdG9rZW5fbXMiOjAuOTIyLCJwcm9tcHRfcGVyX3NlY29uZCI6MTA4NC41OTg2OTg0ODE1NjE4LCJwcmVkaWN0ZWRfbiI6MjQ2LCJwcmVkaWN0ZWRfbXMiOjE4MTYuMDU5LCJwcmVkaWN0ZWRfcGVyX3Rva2VuX21zIjo3LjQxMjQ4NTcxNDI4NTcxNCwicHJlZGljdGVkX3Blcl9zZWNvbmQiOjEzNC45MDc1MTEyNjQ3NzcxOH19
+  recorded_at: Thu, 17 Sep 2026 22:19:17 GMT
 recorded_with: VCR 6.4.0

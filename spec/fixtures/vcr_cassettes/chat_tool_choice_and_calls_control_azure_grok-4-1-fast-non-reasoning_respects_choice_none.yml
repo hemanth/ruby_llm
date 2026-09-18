@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:59:35 GMT
+      - Thu, 17 Sep 2026 22:26:49 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -45,13 +45,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-57b9f6b35c02a6fad49e26b2a09ef083-03fd39f60048dbfc-00
+      - 00-3189e7402ec26c2b4b5bdd85f4c0020e-8e4dced800186ccf-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 9f9520c1-3b67-4b2d-9e3f-b08918357f49
+      - d323a9dc-a660-4764-a1f3-23bac9a25a86
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -87,7 +87,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 9f9520c1-3b67-4b2d-9e3f-b08918357f49
+      - d323a9dc-a660-4764-a1f3-23bac9a25a86
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -97,6 +97,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6ImViYmFjMGUxLTAxMjUtNGI2Ni1iMmU4LWZhMGNjMDA3NjNkYSIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJJJ20gYWZyYWlkIEkgZG9uJ3QgaGF2ZSByZWFsLXRpbWUgd2VhdGhlciBkYXRhLCBhcyBteSBrbm93bGVkZ2UgaXMgc3RhdGljIGFuZCBkb2Vzbid0IGluY2x1ZGUgY3VycmVudCBjb25kaXRpb25zLiBGb3IgdGhlIG1vc3QgYWNjdXJhdGUgaW5mbywgY2hlY2sgYSByZWxpYWJsZSB3ZWF0aGVyIHNlcnZpY2UhIEFzIG9mIG15IGxhc3QgdXBkYXRlLCBCZXJsaW4gaW4gSnVseSB0ZW5kcyB0byBiZSBtaWxkIGFuZCBwbGVhc2FudCwgYXJvdW5kIDIwLTI1wrBDICg2OC03N8KwRikgd2l0aCBwb3NzaWJsZSBzaG93ZXJzLiJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6Mjg4LCJjb21wbGV0aW9uX3Rva2VucyI6NjUsInRvdGFsX3Rva2VucyI6MzUzLCJhdWRpb19wcm9tcHRfdG9rZW5zIjowLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6NDEwLCJhdWRpb190b2tlbnMiOjAsInRleHRfdG9rZW5zIjoyODgsImltYWdlX3Rva2VucyI6MH0sImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6MCwiYXVkaW9fdG9rZW5zIjowLCJhY2NlcHRlZF9wcmVkaWN0aW9uX3Rva2VucyI6MCwicmVqZWN0ZWRfcHJlZGljdGlvbl90b2tlbnMiOjB9LCJudW1fc291cmNlc191c2VkIjowfSwiY3JlYXRlZCI6MTc4OTU0MTk3NSwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwicHJvbXB0X2ZpbHRlcl9yZXN1bHRzIjpudWxsfQ==
-  recorded_at: Wed, 16 Sep 2026 06:59:36 GMT
+        eyJpZCI6IjliZWNiOTgzLWNmYmQtNDk0MC1iYTI0LWIzMzgwMTMyZDNjZSIsIm1vZGVsIjoiZ3Jvay00LTEtZmFzdC1ub24tcmVhc29uaW5nIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJJJ20gc29ycnksIGJ1dCBJIGRvbid0IGhhdmUgcmVhbC10aW1lIGFjY2VzcyB0byBjdXJyZW50IHdlYXRoZXIgZGF0YSB3aXRob3V0IHVzaW5nIHRvb2xzLCB3aGljaCB5b3UndmUgYXNrZWQgbWUgdG8gZGlzYWJsZS4gQmFzZWQgb24gZ2VuZXJhbCBrbm93bGVkZ2UsIEJlcmxpbiBpbiBlYXJseSBKdWx5IHR5cGljYWxseSBzZWVzIG1pbGQgc3VtbWVyIHdlYXRoZXIgd2l0aCBoaWdocyBhcm91bmQgMjLigJMyNcKwQyAoNzLigJM3N8KwRiksIHBhcnRseSBjbG91ZHkgc2tpZXMsIGFuZCBhIGNoYW5jZSBvZiBicmllZiBzaG93ZXJzLCBidXQgY29uZGl0aW9ucyBjYW4gdmFyeSB3aWRlbHkuIEZvciBhY2N1cmF0ZSB1cGRhdGVzLCBJJ2Qgbm9ybWFsbHkgY2hlY2sgdmlhIGEgd2VhdGhlciBzZXJ2aWNlLiJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6Mjg4LCJjb21wbGV0aW9uX3Rva2VucyI6ODIsInRvdGFsX3Rva2VucyI6MzcwLCJhdWRpb19wcm9tcHRfdG9rZW5zIjowLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6NDEwLCJhdWRpb190b2tlbnMiOjAsInRleHRfdG9rZW5zIjoyODgsImltYWdlX3Rva2VucyI6MH0sImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6MCwiYXVkaW9fdG9rZW5zIjowLCJhY2NlcHRlZF9wcmVkaWN0aW9uX3Rva2VucyI6MCwicmVqZWN0ZWRfcHJlZGljdGlvbl90b2tlbnMiOjB9LCJudW1fc291cmNlc191c2VkIjowfSwiY3JlYXRlZCI6MTc4OTY4NDAwOSwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwicHJvbXB0X2ZpbHRlcl9yZXN1bHRzIjpudWxsfQ==
+  recorded_at: Thu, 17 Sep 2026 22:26:50 GMT
 recorded_with: VCR 6.4.0

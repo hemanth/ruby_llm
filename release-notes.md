@@ -100,6 +100,8 @@ bundle add ruby_llm --version 2.0.0
 
 ### Improvements from release-candidate testing
 
+- **Disabling tools works on OpenRouter's Chat Completions route.** Disabled function definitions are omitted from the request to avoid empty completions, while the chat keeps its tools for later use.
+
 - **Thinking history survives follow-up turns without crossing providers.** Anthropic and Bedrock retain native thinking blocks, including streamed and persisted messages (#896). Switching providers drops incompatible thinking content from the outgoing request. By @crmne and @kieranklaassen. (#935)
 - **Persisted attachments avoid repeated database queries.** Preload attachment blobs, Action Text content, and embedded rich-text blobs when building requests. By @MatheusRich and @yorzi. (#909, #932, #939)
 - **Copy upgrades support online preparation and backfill on all three database adapters.** Prepared 1.16 processes can continue serving on PostgreSQL, MySQL, and SQLite until the coordinated final switch. Compatibility guards preserve Active Record autosave and load after RubyLLM configuration. By @crmne.
@@ -369,4 +371,3 @@ Thanks also to @adamcooper, @adrianthedev, @afurm, @AlexanderMamrenko, @altxtech
 [e7a15427]: https://github.com/crmne/ruby_llm/commit/e7a1542721e0fb6ddded1c288c5552be14401ded
 [d112146a]: https://github.com/crmne/ruby_llm/commit/d112146a53bd16afd41e08c310c9b11c8a26a3b7
 [9b30f939]: https://github.com/crmne/ruby_llm/commit/9b30f939fe96b461e62ac62314350cf5c54f1394
-

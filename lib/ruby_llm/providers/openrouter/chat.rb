@@ -44,6 +44,10 @@ module RubyLLM
           payload = super
           payload.delete(:reasoning_effort)
           strip_schema_strict(payload)
+          if tool_prefs&.dig(:choice) == :none
+            payload.delete(:tools)
+            payload.delete(:parallel_tool_calls)
+          end
 
           reasoning = build_reasoning(thinking)
           payload[:reasoning] = reasoning if reasoning

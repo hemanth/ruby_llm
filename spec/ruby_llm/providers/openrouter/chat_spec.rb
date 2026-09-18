@@ -188,6 +188,25 @@ RSpec.describe RubyLLM::Providers::OpenRouter::Chat do
       allow(provider).to receive(:format_messages).and_return([{ role: 'user', content: 'Hello' }])
     end
 
+    it 'omits disabled function definitions while preserving the tool choice' do
+      tool = instance_double(RubyLLM::Tool)
+      tools = { weather: tool }
+      allow(provider).to receive(:tool_for).with(tool).and_return(type: 'function', function: { name: 'weather' })
+
+      payload = provider.send(:render_payload, messages, tools: tools, temperature: nil, model: model,
+                                                         tool_prefs: { choice: :none, calls: :one })
+
+      expect(payload).not_to have_key(:tools)
+      expect(payload).not_to have_key(:parallel_tool_calls)
+      expect(payload[:tool_choice]).to eq(:none)
+      expect(tools).to eq(weather: tool)
+
+      enabled = provider.send(:render_payload, messages, tools: tools, temperature: nil, model: model,
+                                                         tool_prefs: { choice: :auto })
+      expect(enabled[:tools]).to eq([{ type: 'function', function: { name: 'weather' } }])
+      expect(enabled[:tool_choice]).to eq(:auto)
+    end
+
     it 'uses canonical wrapped schema payload' do
       schema = {
         name: 'response',

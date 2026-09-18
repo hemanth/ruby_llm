@@ -28,33 +28,34 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '479'
+      - '527'
       Date:
-      - Wed, 16 Sep 2026 06:50:14 GMT
+      - Thu, 17 Sep 2026 22:08:57 GMT
       Server:
       - Google Frontend
-      X-Cloud-Trace-Context:
-      - 181d8176503f2f659f9714f535c3fafb/11010267542364153765
       Traceparent:
-      - 00-181d8176503f2f659f9714f535c3fafb-98cc53feb0a0e7a5-00
+      - 00-a42a04e48983e0da86df00d7a5539cee-56c2d5f446f30ff1-00
+      X-Cloud-Trace-Context:
+      - a42a04e48983e0da86df00d7a5539cee/6251794477882740721
       Via:
       - 1.1 google
       Alt-Svc:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-732","object":"chat.completion","created":1789541414,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
+      string: '{"id":"chatcmpl-917","object":"chat.completion","created":1789682937,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
         capital of France is **Paris**.","reasoning":"The user asks: \"What is the
-        capital of France?\" Straightforward answer: Paris. Provide answer."},"finish_reason":"stop"}],"usage":{"prompt_tokens":74,"prompt_tokens_details":{"cached_tokens":48},"completion_tokens":40,"total_tokens":114}}
+        capital of France?\" Simple question: answer is Paris. Provide concise answer.
+        Possibly add a brief note if needed."},"finish_reason":"stop"}],"usage":{"prompt_tokens":74,"prompt_tokens_details":{"cached_tokens":48},"completion_tokens":50,"total_tokens":124}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:50:14 GMT
+  recorded_at: Thu, 17 Sep 2026 22:08:57 GMT
 recorded_with: VCR 6.4.0

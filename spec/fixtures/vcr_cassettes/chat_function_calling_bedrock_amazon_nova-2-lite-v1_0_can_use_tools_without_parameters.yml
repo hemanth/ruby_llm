@@ -12,7 +12,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T064951Z
+      - 20260917T221746Z
       X-Amz-Content-Sha256:
       - 33f1826a5118c1a033a139b7b2c3347330fbfe9c92d7b7178e56946c3efdb54e
       Authorization:
@@ -30,7 +30,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:52 GMT
+      - Thu, 17 Sep 2026 22:17:46 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -38,26 +38,26 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - c0fe271f-6b6d-4634-bd9c-0182347d5d87
+      - 46b886eb-423a-47c4-9ac9-92768cf22475
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":383},"output":{"message":{"content":[{"toolUse":{"input":{},"name":"best_language_to_learn","toolUseId":"tooluse_OgH9BKLwrcDtACTTQRuon0"}}],"role":"assistant"}},"stopReason":"tool_use","usage":{"inputTokens":934,"outputTokens":18,"serverToolUsage":{},"totalTokens":952}}'
-  recorded_at: Wed, 16 Sep 2026 06:49:52 GMT
+      string: '{"metrics":{"latencyMs":460},"output":{"message":{"content":[{"toolUse":{"input":{},"name":"best_language_to_learn","toolUseId":"tooluse_psysjh796wT4tsZoMabg60"}}],"role":"assistant"}},"stopReason":"tool_use","usage":{"inputTokens":934,"outputTokens":18,"serverToolUsage":{},"totalTokens":952}}'
+  recorded_at: Thu, 17 Sep 2026 22:17:47 GMT
 - request:
     method: post
     uri: https://bedrock-runtime.<AWS_REGION>.amazonaws.com/model/us.amazon.nova-2-lite-v1:0/converse
     body:
       encoding: UTF-8
       string: '{"messages":[{"role":"user","content":[{"text":"Use the best_language_to_learn
-        tool to tell me which language to learn."}]},{"role":"assistant","content":[{"toolUse":{"toolUseId":"tooluse_OgH9BKLwrcDtACTTQRuon0","name":"best_language_to_learn","input":{}}}]},{"role":"user","content":[{"toolResult":{"toolUseId":"tooluse_OgH9BKLwrcDtACTTQRuon0","content":[{"text":"Ruby"}]}}]}],"inferenceConfig":{},"toolConfig":{"tools":[{"toolSpec":{"name":"best_language_to_learn","description":"Gets
+        tool to tell me which language to learn."}]},{"role":"assistant","content":[{"toolUse":{"toolUseId":"tooluse_psysjh796wT4tsZoMabg60","name":"best_language_to_learn","input":{}}}]},{"role":"user","content":[{"toolResult":{"toolUseId":"tooluse_psysjh796wT4tsZoMabg60","content":[{"text":"Ruby"}]}}]}],"inferenceConfig":{},"toolConfig":{"tools":[{"toolSpec":{"name":"best_language_to_learn","description":"Gets
         the best language to learn","inputSchema":{"json":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}}]}}'
     headers:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T064952Z
+      - 20260917T221747Z
       X-Amz-Content-Sha256:
-      - 4366e0830796d095e0171662c389f81db5f50a7a6e71ef495ed305f270e3d484
+      - b5b518d3616ccf204fe7b4eaef56ee03df95c69a9e30f46dd506a246266d491e
       Authorization:
       - AWS4-HMAC-SHA256 Credential=<AWS_ACCESS_KEY_ID>/<DATE>/<AWS_REGION>/bedrock/aws4_request,
         SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=<AWS_SIGV4_SIGNATURE>
@@ -73,26 +73,25 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:53 GMT
+      - Thu, 17 Sep 2026 22:17:48 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '920'
+      - '790'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 931590c8-dafd-416f-917b-031269859276
+      - 655f9ae0-b707-45b1-89c8-6a61491419a4
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":925},"output":{"message":{"content":[{"text":"Based
+      string: '{"metrics":{"latencyMs":913},"output":{"message":{"content":[{"text":"Based
         on the analysis from the best_language_to_learn tool, **Ruby** is the recommended
         language for you to learn.\n\nRuby is a versatile and elegant programming
-        language that emphasizes developer productivity and happiness. It''s known
-        for its clean syntax and robust standard library, making it an excellent choice
-        for both beginners and experienced developers. The language has a strong community
-        and is particularly popular for web development (especially through the Ruby
-        on Rails framework), as well as for scripting, automation, and general-purpose
-        programming.\n\nLearning Ruby will give you a solid foundation in programming
-        concepts while opening doors to many practical applications in the tech industry."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":982,"outputTokens":124,"serverToolUsage":{},"totalTokens":1106}}'
-  recorded_at: Wed, 16 Sep 2026 06:49:53 GMT
+        language that emphasizes developer productivity and fun. It''s known for its
+        clean syntax and is particularly well-suited for:\n\n- **Web development**
+        (via frameworks like Ruby on Rails)\n- **Scripting and automation**\n- **Data
+        processing**\n- **Building web applications quickly**\n\nThe language has
+        a strong, supportive community and is widely used in the tech industry, making
+        it a valuable addition to your skillset."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"inputTokens":982,"outputTokens":115,"serverToolUsage":{},"totalTokens":1097}}'
+  recorded_at: Thu, 17 Sep 2026 22:17:48 GMT
 recorded_with: VCR 6.4.0

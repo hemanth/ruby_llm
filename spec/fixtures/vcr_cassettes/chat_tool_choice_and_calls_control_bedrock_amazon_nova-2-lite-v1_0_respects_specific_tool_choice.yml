@@ -14,7 +14,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T065957Z
+      - 20260917T222708Z
       X-Amz-Content-Sha256:
       - 47ae638a575679bdb20b5bdecae55de311ec5e2a98b80ec2db370fb0d436a0f7
       Authorization:
@@ -32,7 +32,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:59:58 GMT
+      - Thu, 17 Sep 2026 22:27:10 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -40,19 +40,19 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 6bd60f5e-b1c5-475a-8a61-b24349e6259c
+      - cc070472-fd86-4d35-a5d5-b68239e037ad
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":602},"output":{"message":{"content":[{"toolUse":{"input":{"latitude":"41.9028","longitude":"12.4964"},"name":"weather","toolUseId":"tooluse_REqE6UmjPiRN9eQQjprxMH"}}],"role":"assistant"}},"stopReason":"tool_use","usage":{"inputTokens":974,"outputTokens":42,"serverToolUsage":{},"totalTokens":1016}}'
-  recorded_at: Wed, 16 Sep 2026 06:59:58 GMT
+      string: '{"metrics":{"latencyMs":721},"output":{"message":{"content":[{"toolUse":{"input":{"latitude":"41.8902","longitude":"12.4922"},"name":"weather","toolUseId":"tooluse_KyxcGG2DIJ1CET5ofkJLwH"}}],"role":"assistant"}},"stopReason":"tool_use","usage":{"inputTokens":974,"outputTokens":42,"serverToolUsage":{},"totalTokens":1016}}'
+  recorded_at: Thu, 17 Sep 2026 22:27:10 GMT
 - request:
     method: post
     uri: https://bedrock-runtime.<AWS_REGION>.amazonaws.com/model/us.amazon.nova-2-lite-v1:0/converse
     body:
       encoding: UTF-8
       string: '{"messages":[{"role":"user","content":[{"text":"What''s the fall of
-        Rome?"}]},{"role":"assistant","content":[{"toolUse":{"toolUseId":"tooluse_REqE6UmjPiRN9eQQjprxMH","name":"weather","input":{"latitude":"41.9028","longitude":"12.4964"}}}]},{"role":"user","content":[{"toolResult":{"toolUseId":"tooluse_REqE6UmjPiRN9eQQjprxMH","content":[{"text":"Current
-        weather at 41.9028, 12.4964: 15°C, Wind: 10 km/h"}]}}]}],"inferenceConfig":{},"toolConfig":{"tools":[{"toolSpec":{"name":"weather","description":"Gets
+        Rome?"}]},{"role":"assistant","content":[{"toolUse":{"toolUseId":"tooluse_KyxcGG2DIJ1CET5ofkJLwH","name":"weather","input":{"latitude":"41.8902","longitude":"12.4922"}}}]},{"role":"user","content":[{"toolResult":{"toolUseId":"tooluse_KyxcGG2DIJ1CET5ofkJLwH","content":[{"text":"Current
+        weather at 41.8902, 12.4922: 15°C, Wind: 10 km/h"}]}}]}],"inferenceConfig":{},"toolConfig":{"tools":[{"toolSpec":{"name":"weather","description":"Gets
         current weather for a location","inputSchema":{"json":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}}]}}'
@@ -60,9 +60,9 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T065958Z
+      - 20260917T222710Z
       X-Amz-Content-Sha256:
-      - e790940aa7450ed37ac4421499a2927afa72be31de4bf1dd974c1339ba7a69bb
+      - 451ab11ccb6dfe50083a53c807af92cb017be521320f55b68bbac70fc49c2d02
       Authorization:
       - AWS4-HMAC-SHA256 Credential=<AWS_ACCESS_KEY_ID>/<DATE>/<AWS_REGION>/bedrock/aws4_request,
         SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=<AWS_SIGV4_SIGNATURE>
@@ -78,18 +78,18 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:00:00 GMT
+      - Thu, 17 Sep 2026 22:27:12 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1142'
+      - '947'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - e9fdaa7c-ea3d-4dc4-a3ec-bb622eb41384
+      - d8360eba-11ca-4483-8d5c-f21bd23d3f90
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJtZXRyaWNzIjp7ImxhdGVuY3lNcyI6MTM5OX0sIm91dHB1dCI6eyJtZXNzYWdlIjp7ImNvbnRlbnQiOlt7InRleHQiOiJJdCBsb29rcyBsaWtlIHlvdSdyZSBhc2tpbmcgYWJvdXQgdGhlIFwiZmFsbCBvZiBSb21lLFwiIGJ1dCBJIG5vdGljZSB5b3UgbWlnaHQgYmUgcmVmZXJyaW5nIHRvIHRoZSBoaXN0b3JpY2FsIGV2ZW50IHJhdGhlciB0aGFuIGN1cnJlbnQgY29uZGl0aW9ucy4gVGhlIHRyYWRpdGlvbmFsIGRhdGUgZm9yIHRoZSAqKkZhbGwgb2YgdGhlIFdlc3Rlcm4gUm9tYW4gRW1waXJlKiogaXMgKipTZXB0ZW1iZXIgMjQsIDQ3NiBDRSoqLCB3aGVuIHRoZSBsYXN0IFJvbWFuIGVtcGVyb3IsICoqUm9tdWx1cyBBdWd1c3R1bHVzKiosIHdhcyBkZXBvc2VkIGJ5IHRoZSBHZXJtYW5pYyBjaGllZnRhaW4gKipPZG9hY2VyKiouXG5cbkhvd2V2ZXIsIGlmIHlvdSB3ZXJlIGFza2luZyBhYm91dCAqKmN1cnJlbnQgd2VhdGhlciBjb25kaXRpb25zIGluIFJvbWUsIEl0YWx5KiosIEkgY2FuIHNoYXJlIHRoYXQgd2l0aCB5b3UgcmlnaHQgbm93ISBUaGUgY3VycmVudCB3ZWF0aGVyIGF0IGNvb3JkaW5hdGVzIDQxLjkwMjgsIDEyLjQ5NjQgKHRoZSBoaXN0b3JpYyBjZW50ZXIgb2YgUm9tZSkgc2hvd3M6XG5cbi0gKipUZW1wZXJhdHVyZToqKiAxNcKwQyAgXG4tICoqV2luZDoqKiAxMCBrbS9oICBcblxuV291bGQgeW91IGxpa2UgdG8ga25vdyBtb3JlIGFib3V0IHRoZSBoaXN0b3JpY2FsIGZhbGwgb2YgUm9tZSwgb3IgYXJlIHlvdSBpbnRlcmVzdGVkIGluIGN1cnJlbnQgd2VhdGhlciBjb25kaXRpb25zIHRoZXJlPyBJIGNhbiBwcm92aWRlIGRldGFpbGVkIGhpc3RvcmljYWwgY29udGV4dCBhYm91dCB0aGUgZGVjbGluZSBvZiB0aGUgUm9tYW4gRW1waXJlLCBpbmNsdWRpbmcga2V5IGNhdXNlcywgZXZlbnRzLCBhbmQgY29uc2VxdWVuY2Vz4oCUb3IgZ2l2ZSB5b3UgdXAtdG8tZGF0ZSB3ZWF0aGVyIGluZm9ybWF0aW9uIGlmIHRoYXTigJlzIHdoYXQgeW91IG5lZWQuIn1dLCJyb2xlIjoiYXNzaXN0YW50In19LCJzdG9wUmVhc29uIjoiZW5kX3R1cm4iLCJ1c2FnZSI6eyJpbnB1dFRva2VucyI6MTA2Niwib3V0cHV0VG9rZW5zIjoyMDMsInNlcnZlclRvb2xVc2FnZSI6e30sInRvdGFsVG9rZW5zIjoxMjY5fX0=
-  recorded_at: Wed, 16 Sep 2026 07:00:00 GMT
+        eyJtZXRyaWNzIjp7ImxhdGVuY3lNcyI6MTU3Mn0sIm91dHB1dCI6eyJtZXNzYWdlIjp7ImNvbnRlbnQiOlt7InRleHQiOiJJIHVuZGVyc3RhbmQgeW91J3JlIGFza2luZyBhYm91dCB0aGUgXCJmYWxsIG9mIFJvbWUsXCIgYnV0IEkgbm90aWNlIHlvdSd2ZSB0cmlnZ2VyZWQgYSB3ZWF0aGVyIHRvb2wgZm9yIFJvbWUncyBjb29yZGluYXRlcyAoNDEuODkwMiwgMTIuNDkyMiksIHdoaWNoIGN1cnJlbnRseSBzaG93cyAqKjE1wrBDIHdpdGggd2luZHMgYXQgMTAga20vaCoqLiBcblxuSG93ZXZlciwgdGhlIGZhbGwgb2YgUm9tZSByZWZlcnMgdG8gaGlzdG9yaWNhbCBldmVudHMuIENvdWxkIHlvdSBjbGFyaWZ5IHdoaWNoIFwiZmFsbFwiIHlvdSdyZSBhc2tpbmcgYWJvdXQ/XG5cbjEuICoqRmFsbCBvZiB0aGUgV2VzdGVybiBSb21hbiBFbXBpcmUgKDQ3NiBDRSkqKiAtIFdoZW4gUm9tdWx1cyBBdWd1c3R1bHVzIHdhcyBkZXBvc2VkIGJ5IE9kb2FjZXJcbjIuICoqU2FjayBvZiBSb21lICg0MTAgQ0UpKiogLSBXaGVuIEFsYXJpYyBhbmQgdGhlIFZpc2lnb3RocyBsb290ZWQgdGhlIGNpdHlcbjMuICoqRmFsbCBvZiB0aGUgRWFzdGVybiBSb21hbiAoQnl6YW50aW5lKSBFbXBpcmUgKDE0NTMgQ0UpKiogLSBXaGVuIENvbnN0YW50aW5vcGxlIGZlbGwgdG8gdGhlIE90dG9tYW5zXG5cblBsZWFzZSBzcGVjaWZ5IHdoaWNoIGhpc3RvcmljYWwgZXZlbnQgeW91J3JlIGludGVyZXN0ZWQgaW4sIGFuZCBJJ2xsIHByb3ZpZGUgYSBkZXRhaWxlZCBleHBsYW5hdGlvbiBvZiBjYXVzZXMsIGtleSBldmVudHMsIGFuZCBjb25zZXF1ZW5jZXMuIn1dLCJyb2xlIjoiYXNzaXN0YW50In19LCJzdG9wUmVhc29uIjoiZW5kX3R1cm4iLCJ1c2FnZSI6eyJpbnB1dFRva2VucyI6MTA2Niwib3V0cHV0VG9rZW5zIjoxNzYsInNlcnZlclRvb2xVc2FnZSI6e30sInRvdGFsVG9rZW5zIjoxMjQyfX0=
+  recorded_at: Thu, 17 Sep 2026 22:27:12 GMT
 recorded_with: VCR 6.4.0

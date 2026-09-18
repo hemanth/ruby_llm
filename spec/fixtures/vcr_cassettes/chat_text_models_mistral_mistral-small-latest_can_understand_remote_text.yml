@@ -35,35 +35,35 @@ http_interactions:
       Etag:
       - W/"6aa8cb95-9c6"
       Expires:
-      - Wed, 16 Sep 2026 06:58:18 GMT
+      - Thu, 17 Sep 2026 22:16:13 GMT
       Cache-Control:
       - max-age=600
       X-Proxy-Cache:
       - MISS
       X-Github-Request-Id:
-      - 3868:32AFB:1F09861:1F3CEE4:6AAA3BB2
+      - 4914:338B02:3C8A1F8:3CDCFDE:6AAC6454
       X-Github-Edge-Region:
       - fra
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 16 Sep 2026 06:49:06 GMT
+      - Thu, 17 Sep 2026 22:07:13 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '16'
+      - '23'
       X-Served-By:
-      - cache-ber1080045-BER
+      - cache-ber1080021-BER
       X-Cache:
       - HIT
       X-Cache-Hits:
       - '1'
       X-Timer:
-      - S1789541347.942134,VS0,VE1
+      - S1789682833.053731,VS0,VE1
       Vary:
       - Accept-Encoding
       X-Fastly-Request-Id:
-      - f9cf936ecbea841d032da3a8a900715ba2a550f5
+      - abdbb833a06c2afd501fedfd078de48315f11b93
     body:
       encoding: ASCII-8BIT
       string: "Ruby is copyrighted free software by Yukihiro Matsumoto <matz@netlab.jp>.\nYou
@@ -99,7 +99,7 @@ http_interactions:
         \"AS IS\" AND WITHOUT ANY EXPRESS OR\n     IMPLIED WARRANTIES, INCLUDING,
         WITHOUT LIMITATION, THE IMPLIED\n     WARRANTIES OF MERCHANTABILITY AND FITNESS
         FOR A PARTICULAR\n     PURPOSE.\n"
-  recorded_at: Wed, 16 Sep 2026 06:49:06 GMT
+  recorded_at: Thu, 17 Sep 2026 22:07:13 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
@@ -157,80 +157,67 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:10 GMT
+      - Thu, 17 Sep 2026 22:07:15 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a8f9-eeb7-7c94-8141-2a0bfa21b984
+      - 01a0b168-d6cc-708b-ba15-3b2099d00712
       X-Kong-Request-Id:
-      - 01a0a8f9-eeb7-7c94-8141-2a0bfa21b984
+      - 01a0b168-d6cc-708b-ba15-3b2099d00712
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '80746'
+      - '83600'
       X-Ratelimit-Tokens-Query-Cost:
-      - '1045'
+      - '821'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
       - '97'
       X-Envoy-Upstream-Service-Time:
-      - '3084'
+      - '2214'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '3085'
+      - '2215'
       X-Kong-Proxy-Latency:
-      - '16'
-      X-Content-Type-Options:
-      - nosniff
+      - '21'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"818d2e050be14930bd2e1571b53084d2","created":1789541347,"model":"mistral-small-latest","usage":{"prompt_tokens":589,"total_tokens":1045,"completion_tokens":456,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"This
-        file is a **license agreement** for the Ruby programming language, written
-        by Yukihiro Matsumoto (Matz). It outlines the terms under which Ruby can be
-        redistributed and modified. Here''s a summary of its key points:\n\n### **License
-        Type**:\n- **Dual-licensed** under:\n  1. The **2-clause BSD License** (see
-        `BSDL` file).\n  2. The **custom license terms** below.\n\n### **Key Terms**:\n1.
-        **Redistribution**:\n   - You can freely redistribute the source code, provided
-        you keep original copyright notices and disclaimers.\n\n2. **Modifications**:\n   -
-        You can modify Ruby, but you must:\n     - a) Release modifications into the
-        **Public Domain** or make them freely available.\n     - b) Use modified versions
-        **only within your organization**.\n     - c) Rename non-standard binaries
-        and provide original source access.\n     - d) Make alternative distribution
-        arrangements with the author.\n\n3. **Binary Distribution**:\n   - You can
-        distribute Ruby in binary form if you:\n     - a) Provide binaries + instructions
-        on where to get the original source.\n     - b) Include the machine-readable
-        source code.\n     - c) Rename non-standard binaries and provide original
-        source access.\n     - d) Make alternative arrangements with the author.\n\n4.
-        **Inclusion in Other Software**:\n   - You can incorporate parts of Ruby into
-        other software (including commercial), but some files have separate licenses
-        (check `LEGAL` file).\n\n5. **Generated Files**:\n   - Scripts/outputs from
-        Ruby are **not automatically covered** by this license and can be sold commercially.\n\n6.
-        **Disclaimer**:\n   - Ruby is provided **\"AS IS\"** without warranties (e.g.,
-        no guarantee of merchantability or fitness for a purpose).\n\n### **Important
-        Notes**:\n- Some files in Ruby may have **different licensing terms** (see
-        `LEGAL` file).\n- The **2-clause BSD License** (alternative option) is more
-        permissive than this custom license.\n\nThis is a **permissive open-source
-        license**, allowing broad use while requiring attribution and disclaiming
-        liability."}}]}'
-  recorded_at: Wed, 16 Sep 2026 06:49:10 GMT
+      string: '{"id":"a31a2f9a8ad34c87af7aaf03e715c674","created":1789682833,"model":"mistral-small-latest","usage":{"prompt_tokens":589,"total_tokens":821,"completion_tokens":232,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"This
+        file (`license.txt`) contains the copyright and licensing terms for the Ruby
+        programming language, as specified by its creator, Yukihiro Matsumoto (Matz).\n\n###
+        Key Points:\n1. **License Type**: Ruby is distributed under either the **2-clause
+        BSD License** (see the `BSDL` file) or the **custom terms below**.\n2. **Redistribution
+        & Modification**:\n   - You can freely redistribute the source code (with
+        original copyright notices preserved).\n   - Modifications must follow one
+        of four conditions (e.g., releasing them to the public domain, using them
+        internally, or renaming binaries).\n3. **Distribution**:\n   - Binary/object
+        code distribution requires providing the source code or instructions for obtaining
+        it.\n4. **Inclusion in Other Software**:\n   - Parts of Ruby can be incorporated
+        into other software (including commercial), but some files have separate licenses
+        (see `LEGAL`).\n5. **No Warranty**: The software is provided \"as is\" without
+        guarantees.\n\nThis is a permissive open-source license that allows broad
+        use while requiring attribution and disclaiming liability."}}]}'
+  recorded_at: Thu, 17 Sep 2026 22:07:15 GMT
 recorded_with: VCR 6.4.0

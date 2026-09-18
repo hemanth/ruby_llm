@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:50:54 GMT
+      - Thu, 17 Sep 2026 22:19:20 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -43,8 +43,9 @@ http_interactions:
       - '1800'
       X-Ratelimit-Remaining-Requests:
       - '1800'
-      Cf-Cache-Status:
-      - DYNAMIC
+      Content-Security-Policy-Report-Only:
+      - script-src 'unsafe-inline' 'unsafe-eval'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=IR9XyfpDBwbT93BWTmtFxa2EL1D3aqlPPyl4LM01.18-1789683557.3983753-1.0.1.1-A3i567wls00Bo1OjOoVzaixZfPMrFqw3whF9ykfnQtGUgy_2Yapvn9_wRBhRjLHO2Pj2tU7p8W_JV9qPDSKhfx2Ds6eCZFWZO8Gi6p8jTcYlspAsupORJITbT1kS4FEHPkLECfLFr1HTVJc8RgPuDtJm13MNnNoiXLR_wN.Ku_g;
+        report-to cf-csp-endpoint
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Zero-Data-Retention:
@@ -52,24 +53,30 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '504.9'
+      - '562.6'
       X-Metrics-E2e-Ms:
-      - '3005.8'
+      - '2934.5'
       Traceparent:
-      - 00-fd80761f14d530df1368f0a7fe90b60c-07d8c0ac0000caad-01
+      - 00-f666e3907dae11205792e5d492b7d77b-c2fbd9a90004e292-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Expose-Headers:
       - "*"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"group":"cf-csp-endpoint","max_age":86400,"endpoints":[{"url":"https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=IR9XyfpDBwbT93BWTmtFxa2EL1D3aqlPPyl4LM01.18-1789683557.3983753-1.0.1.1-A3i567wls00Bo1OjOoVzaixZfPMrFqw3whF9ykfnQtGUgy_2Yapvn9_wRBhRjLHO2Pj2tU7p8W_JV9qPDSKhfx2Ds6eCZFWZO8Gi6p8jTcYlspAsupORJITbT1kS4FEHPkLECfLFr1HTVJc8RgPuDtJm13MNnNoiXLR_wN.Ku_g"}]}'
+      Reporting-Endpoints:
+      - cf-csp-endpoint="https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=IR9XyfpDBwbT93BWTmtFxa2EL1D3aqlPPyl4LM01.18-1789683557.3983753-1.0.1.1-A3i567wls00Bo1OjOoVzaixZfPMrFqw3whF9ykfnQtGUgy_2Yapvn9_wRBhRjLHO2Pj2tU7p8W_JV9qPDSKhfx2Ds6eCZFWZO8Gi6p8jTcYlspAsupORJITbT1kS4FEHPkLECfLFr1HTVJc8RgPuDtJm13MNnNoiXLR_wN.Ku_g"
       Server:
       - cloudflare
       Cf-Ray:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1789541454,"completed_at":1789541454,"id":"a96485c1-5971-9c48-b713-553f6d5014fd","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_a96485c1-5971-9c48-b713-553f6d5014fd","summary":[{"text":"The
-        user query is: \"Generate a person named Alice who is 28 years old\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"R73+JWf7kDhJejrVM0T3goTK+LUfNkF6jllgcUMfrnLpvEQACZEzQv5rxVODelgE8dkYUTDZD8rkVmivPVVORwAuUKrXqCo8QBODNbnf1Yawq2qI+r/bF6WgcYMoI/PgHcd9n27JkkEz+MJXW3XbKF1mdnVFqo6ysHmP6SIbl2/zBnqeQH5WgmI33ihp39KdlN5zcVcLRg3jtAHdLfejSQECeeJfepx8UoOX/LycvGt7sx5qyfmjrq8ykrLwCpOBnVJk/doPdRfdZCQmYCZPgtMcBa8yjvq/3ZOYvmVht6NQjTUjOxeZO2ElIYFq+0OwaAp68fR7jEksO+e3Kzlh6MuvbeacmdkS6aODqxO39N4mKBSCSqmSkbUtEjXPs83BbIw+qDHnFhQMAet8ZNJQqoQxvOMyLxqzR1NY5e3TaqMu357qcgbaX5puVz2wECg8GoZ7JWK1hfZIsZIN6spSM8NDRGtobMM3fhSPXzH82t0Zto7oPIpePUKao7sDENYfXu+IbmYYpQrxvlKiFF0MAz4CbKMLYC7pZDOrQ0knmhJ7GKbDdNlfvk0IZWgSPvjb3+Iqg7rwBkJjr+kiSHamk/VmU63+aRiw5P5lb8wkvAeN1diu4W5vGUcGzIUfwhuRd5v/XvlMeSO6NFVWlYUQtX1L7mKeNDDeBYhehLa3Gg/VDbvKTJ6zhxITqtQE0M+1T6A3Jd6/iLO4nXBjNIKlqk/dj4ZGHRTMNtLdOySt/B8VvRGezZ18PIJgiybbiM9MDX5s796sA3aQYB/uxg+JUUrK5txfgdGVnp6QJWS3moBEZQvH9C1z8DFAXaBYFHNfarREEdrhNCUrNhNsqSKU6Wz546H+yb1a+1oPj0yqLQsGIzYzkAko4n9i2isnCYA98TmG4HTOp1oje4FCaYewMyNTuVNHWcac0yZR2xd0p2p/J3w3RJmmelDukdGA4c2OW8LVf7tpI0KTcyQWEx+G6sml99np91ei8iQxM0wwrMdkF8e9nRo0OR+DcD2cgs7cmWKaWOdpYyR1BLqJwqDZjDQzl1647PKcXDsRfQlEeTkGwgKhJncldTkDaMR+F9VQaCXWRRpEGS3gGtsEzfvMymT4IIlddAkoILTiE0zl+bhwjNc/5LDB1q57UBSoLqrh1/NE98dGYPmiKx9L1PytjfDlz8SFY0AICgYAx/aG2taZ1URECUtOJGGtEUWOQhuXdI+nKPphajmAYIKZcsyaulkSPcNofeu2f3A//OplreRH17qDh4j6yk25Cz8gsbk5WtrNblZPeUu/ZNtGhY+xkAbBy+bfbF63xQFioeLvbolikSD/bnLzKT6Mpfu/J4VT7Q/KPCKbIdlK4eMAzWg94YKcaaZObJIFKGL1GlzPKlg8hDKRE/NqM09ILbd8y2RteJZuWd+ebHcekOfRUfkYhIo7J6Ap1pJ4F/t23ZyXBEwju6WPOiKeVPaz+p6IL1yrf+2HYWGRitEduU73rKYxWcYbneBNpARdUBMq+6ZBfYH09x6ZregnqXGZqHluoQj1s4L4HEYNO73hddoxhnd5ltyDfq8pOq4A+vr629aXWIlzF6lPBie5tUOyElo92u1Eq7b8u9gIwAxBUidqWGKml0dT394nqmS8m6rGVgh3jdVuvBKZBRUlebZ1Y8/UAfkJpAIIPVI"},{"content":[{"type":"output_text","text":"{\"name\":\"Alice\",\"age\":28}","logprobs":[],"annotations":[]}],"id":"msg_a96485c1-5971-9c48-b713-553f6d5014fd","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"json_schema","schema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"number"}},"required":["name","age"],"additionalProperties":false}}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":254,"input_tokens_details":{"cached_tokens":192},"output_tokens":283,"output_tokens_details":{"reasoning_tokens":270},"total_tokens":537,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":8234000,"context_details":{"input_tokens":254,"output_tokens":284}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Wed, 16 Sep 2026 06:50:54 GMT
+      string: '{"created_at":1789683560,"completed_at":1789683560,"id":"c0dfa515-a736-9a36-a914-91d0694e8c77","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_c0dfa515-a736-9a36-a914-91d0694e8c77","summary":[{"text":"The
+        user query is: \"Generate a person named Alice who is 28 years old\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"+G8n/duRbRm5SuHni8N1sIvf/Xmu2x3rXUSPJ4xIh9DdqJHB/bJkv59pHQ1E57ec1DV7HunYATzf/RxYzj1JVAcaj1hC3KWejoiS6AtwwT9KJ2hW2+J+fdNkSvP/BIlPFj3lspxVud66soy8iT0kQusUmwxbHAYdKHTAg6BzNeAvN+Xw+HLDh7/r1Z+m81Szy+O+eVQ81dgbK6Orq4AjDeCrDQAGBr7otkFU3sbydOX6Qrc2+KYI+blHDeglpvS94KdHm2KHvGdkbUtCZm3iFt/5aLGReZANMugOlVVxD5x7MpSOUqK654lcahdBNedkRJ4TXCG7hwEGL83N6ldTwOo8mP7uUDu8U96sJm0005s8U/mrDMgSy50Uj4R1amoo7HG93AxGAuzwoIGM2BftdzIoUNHvH4pUje6H0YFyU0PjWHrwr9yvUkut6Mp2HPEu5piz3oaYVev/UVVAgRlxP6ppTHSZfj1flfXip0D3lpU/unzh3X0LxCivAP+l5t66CN8xjbTKchSd0Ya16Fvq+e06Gud+1EckFvMurGW1nR37hf/XflB4Xei52YlZxRmwifcoU8R6+2aWb34IDmH0pMU/FY1yGQ/vIK25u70RvzWB2jht+0fdqy2qU+8QbbjavScvwCUzzSIGVCZ9mjJEQyxWipo14sYpEA2FbI9pFdPShPAPmulyma0Hr7fmiLrw4zzm1a2SZxBTkMqyKHztA3DwsQeSyyEi0+Gdqc+c81vOwsW+Uc+PzlELpLkqbENMejqZAgkFCIlk+39qpIf5sI3eYUl2r/jaKCbmCq28P1rLOZOpqsP+NL5HArxpK7XI6O/OwRXn0h4VoOwQuoB1rWlJxDda7kcwAbgqPaD8ECLtgUUPpwXf3whN3m9r6jUjOdncOTXMzQSD8zxCwoZb+db5AisvR81yfOEDbwf2U7hDjwQ396jwA0/+ZyYJ6EfPNFbqNnR3T+GpoTQss5HNXu9As294pIvCAKrUpSIyqFVWimJZiqDO7NLUl5qyaM4WwX/5jAY4c+TtslcWoo9gCSMY16aSXIxMQqtew8qlxUWCjeezizoXO00zuxmbUXmAKqhd5K5Nw/ko4/plZl59+IEHr5A9Yp4b9Zz/+rkV5ccOM7gXi4+V2BvLo9IKd0GISPQQyO0VURKOvtrnFVTq1q9A/aQ070FsEI5ghWLlA7WWLikQk/311XbI1ZRNNVlVZxi29bvXRSXeoH1XxOcn9nUZL90AgzGZQXNQSvKlpBUh37R9lOBt+CfhGTFlcmlJv0yQd9XNkt/nnIdEOnWTqvXRIo/mF+PJOH4umFunhDlyeGtw8fbqlGZd4EqjPteaISIM14a3r2bmJdQ8lkYHoPBY3wMZyrepqDqohmI4wzxgta3jPOcFRH5j2gHjA6k66Y40QqhtgUKfG1/x9DO5fYzElxRL14mP1CwWhswOZiBhqy2DO/vOKfxfS2lA8/JO/BH1hzsrwzelOY+Mhb+iLEjS0g/p+aEZVmo2H8PFNdPViZEzsA4tOzf29HCkSWvzXiJdvGNtvFF0oY8BhfkT6GMGLumqJmMnI2uKgHNbRF3ByR6Rl4Ji6ty6mv1jVKjEobd/83uFZb+qVmBxeqaxU1tlEKGmmuUNv9FWc3XxRBp9pE8ZZDA0eWbow/L94nK6gAoyhtWUZh/GgkC8Cprk2nFmsfmjdJvcrTVYNMTEtrdtYHwA1aQ"},{"content":[{"type":"output_text","text":"{\"name\":\"Alice\",\"age\":28}","logprobs":[],"annotations":[]}],"id":"msg_c0dfa515-a736-9a36-a914-91d0694e8c77","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"low","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"json_schema","schema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"number"}},"required":["name","age"],"additionalProperties":false}}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":254,"input_tokens_details":{"cached_tokens":192},"output_tokens":287,"output_tokens_details":{"reasoning_tokens":278},"total_tokens":541,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":8334000,"context_details":{"input_tokens":254,"output_tokens":295}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Thu, 17 Sep 2026 22:19:20 GMT
 recorded_with: VCR 6.4.0

@@ -20,14 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Pragma:
-      - no-cache
-      Date:
-      - Wed, 16 Sep 2026 07:01:35 GMT
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 17 Sep 2026 22:28:36 GMT
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Vary:
@@ -52,11 +52,11 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/sqlservice.login openid",
+          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/cloud-platform",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Wed, 16 Sep 2026 07:01:35 GMT
+  recorded_at: Thu, 17 Sep 2026 22:28:36 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -91,7 +91,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 07:01:36 GMT
+      - Thu, 17 Sep 2026 22:28:37 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -121,18 +121,18 @@ http_interactions:
                         "latitude": "52.5200"
                       }
                     },
-                    "thoughtSignature": "CvQBAY89a18oOJreBpjJXzIO3SGMese8XvPZxUE7xSLKokZIm8JkIVriOs+2i7oU+IKSFKfaeOfzQaouRdnQs+SbPhnzATldppVA3r+yai6KxiE+s/7arhIbLe6/6vKWfsK0/WXD0N7EVkLhFG6W4nuuTHJ9tB5zpuZees/a6QaLgXXUz6Y5yv2Q2Wf//qb+0ynOCyienLwxZ4crr5ku4Uw3Wrg6CDGOHDcxE3hpDGCXFG5JActqc3Cxpu86z/MyVDwjOsNYHAJRbv43FNGRn8SqEdYiYqqkiYXsdQDJUkunlbzQld5vnxISdcyklrk2FkFHGTb9nQ=="
+                    "thoughtSignature": "CpACAY89a19LD9q2XaiTTP0ivJE/r5EjvqQ8DVleVv7mZVNR4TFzY1ZVqHBIqdBE5nZ3QudX1ezsWW/RSzmEhwMR/b/cSOVi/N2vJ32/Y4wPNyP0qcLQO3c6L/0kgU6deI82oqzy6GS9cfyX0lm/3Ukno3ASWZfeTtbyD6iUrCacLAX4vlFDduGHDNVM7tNPUISZaISpEczS/4zaSGIJWu2iDcxPPuPXx3qv5dOLJKbQNjANV/WtPLN3aA7rDopIZyIf1qjDilqqEagoCvNxeHT7vTuPPNdAm3TaMnSns1k5juIq2Zw7NvswuAX64yQYCJUEcBWfbuer7AsnOnyTcNKivpfU+DH+WFbkYisyNPuoydY="
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.70553083980784692
+              "avgLogprobs": -0.86087299795711747
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 40,
             "candidatesTokenCount": 17,
-            "totalTokenCount": 94,
+            "totalTokenCount": 105,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -146,20 +146,20 @@ http_interactions:
                 "tokenCount": 17
               }
             ],
-            "thoughtsTokenCount": 37
+            "thoughtsTokenCount": 48
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-09-16T07:01:36.039767Z",
-          "responseId": "0D6qate2Avi4hu0P4dz-sAI"
+          "createTime": "2026-09-17T22:28:36.314150Z",
+          "responseId": "lGmsaqaWE_acusEP8pGA2AE"
         }
-  recorded_at: Wed, 16 Sep 2026 07:01:36 GMT
+  recorded_at: Thu, 17 Sep 2026 22:28:37 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
       string: '{"contents":[{"role":"user","parts":[{"text":"When was the fall of
-        Rome?"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"longitude":"13.4050","latitude":"52.5200"}},"thoughtSignature":"CvQBAY89a18oOJreBpjJXzIO3SGMese8XvPZxUE7xSLKokZIm8JkIVriOs+2i7oU+IKSFKfaeOfzQaouRdnQs+SbPhnzATldppVA3r+yai6KxiE+s/7arhIbLe6/6vKWfsK0/WXD0N7EVkLhFG6W4nuuTHJ9tB5zpuZees/a6QaLgXXUz6Y5yv2Q2Wf//qb+0ynOCyienLwxZ4crr5ku4Uw3Wrg6CDGOHDcxE3hpDGCXFG5JActqc3Cxpu86z/MyVDwjOsNYHAJRbv43FNGRn8SqEdYiYqqkiYXsdQDJUkunlbzQld5vnxISdcyklrk2FkFHGTb9nQ=="}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
+        Rome?"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"longitude":"13.4050","latitude":"52.5200"}},"thoughtSignature":"CpACAY89a19LD9q2XaiTTP0ivJE/r5EjvqQ8DVleVv7mZVNR4TFzY1ZVqHBIqdBE5nZ3QudX1ezsWW/RSzmEhwMR/b/cSOVi/N2vJ32/Y4wPNyP0qcLQO3c6L/0kgU6deI82oqzy6GS9cfyX0lm/3Ukno3ASWZfeTtbyD6iUrCacLAX4vlFDduGHDNVM7tNPUISZaISpEczS/4zaSGIJWu2iDcxPPuPXx3qv5dOLJKbQNjANV/WtPLN3aA7rDopIZyIf1qjDilqqEagoCvNxeHT7vTuPPNdAm3TaMnSns1k5juIq2Zw7NvswuAX64yQYCJUEcBWfbuer7AsnOnyTcNKivpfU+DH+WFbkYisyNPuoydY="}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
         weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}}}]}],"generationConfig":{"maxOutputTokens":4096},"systemInstruction":{"parts":[{"text":"Your
         location is Berlin, at latitude 52.5200 and longitude 13.4050."}]},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
         current weather for a location","parametersJsonSchema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
@@ -188,7 +188,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 07:01:37 GMT
+      - Thu, 17 Sep 2026 22:28:37 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -211,35 +211,35 @@ http_interactions:
                 "role": "model",
                 "parts": [
                   {
-                    "text": "I cannot answer historical questions."
+                    "text": "The fall of the Western Roman Empire is traditionally dated to 476 CE, when the last Western Roman Emperor, Romulus Augustulus, was deposed by the Germanic chieftain Odoacer. However, the decline of the Roman Empire was a gradual process that occurred over several centuries.\n"
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.33099005619684857
+              "avgLogprobs": -0.091043570946002822
             }
           ],
           "usageMetadata": {
-            "promptTokenCount": 134,
-            "candidatesTokenCount": 6,
-            "totalTokenCount": 140,
+            "promptTokenCount": 145,
+            "candidatesTokenCount": 58,
+            "totalTokenCount": 203,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 134
+                "tokenCount": 145
               }
             ],
             "candidatesTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 6
+                "tokenCount": 58
               }
             ]
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-09-16T07:01:36.906935Z",
-          "responseId": "0D6qaretN63hkuwPk8CVoAo"
+          "createTime": "2026-09-17T22:28:37.214031Z",
+          "responseId": "lWmsao-IDfLMmNAPxeyOsQw"
         }
-  recorded_at: Wed, 16 Sep 2026 07:01:37 GMT
+  recorded_at: Thu, 17 Sep 2026 22:28:37 GMT
 recorded_with: VCR 6.4.0

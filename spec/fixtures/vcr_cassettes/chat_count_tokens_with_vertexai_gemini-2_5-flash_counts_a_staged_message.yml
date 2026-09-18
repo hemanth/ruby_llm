@@ -20,10 +20,10 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Date:
+      - Thu, 17 Sep 2026 22:28:07 GMT
       Pragma:
       - no-cache
-      Date:
-      - Wed, 16 Sep 2026 06:50:50 GMT
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
       Expires:
@@ -56,7 +56,7 @@ http_interactions:
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Wed, 16 Sep 2026 06:50:50 GMT
+  recorded_at: Thu, 17 Sep 2026 22:28:07 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:countTokens
@@ -87,7 +87,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:50:50 GMT
+      - Thu, 17 Sep 2026 22:28:08 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -113,5 +113,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Wed, 16 Sep 2026 06:50:50 GMT
+  recorded_at: Thu, 17 Sep 2026 22:28:08 GMT
 recorded_with: VCR 6.4.0

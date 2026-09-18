@@ -34,7 +34,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 07:00:24 GMT
+      - Thu, 17 Sep 2026 22:27:32 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -44,7 +44,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=844
+      - gfet4t7; dur=792
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -61,11 +61,11 @@ http_interactions:
                     "functionCall": {
                       "name": "weather",
                       "args": {
-                        "latitude": "52.5200",
-                        "longitude": "13.4050"
+                        "latitude": "41.9028",
+                        "longitude": "12.4964"
                       }
                     },
-                    "thoughtSignature": "CrsCARFNMg/5YGpjR2z9o+W+PN1b9aaaSJZuNMEYe3prSVuI8aY6zCRw2O2VC6XDeUHdIo3UrCP20FdxkmP989x+HJKdgOCYz+L3xH9F6wjwGOKJV6YZ3eO6wgxGg2UN1DKw9r1igpY2rwAnaIMuKJrWNmXBeTrDxZ6N3WCbWWZHFKPosWeigXH+ThV8Fby2TAJ+p5PPnhL31oiO9aDFLDx0nEt0Od+N3Tr5ku981kYvcabcUFwGxqxeP82ukVnF055c1ZB2td7jrk4HSfmORLciY0BB5lgFPmARTGvpnLmV9iYhMWcZL3JwYWAvx/78VfA3mfbmtLNosajp5YTGaWGRUoquMv/YE29uybupo6Rd6rsVCQWnBsZlbuPWhFR2ssBYYnhQzj4v1ABYC9c6ijJWYecNMdYkJhNmaT2g"
+                    "thoughtSignature": "CqcCAWkUfROXXIOoxZurscKFVFEEE5c8JWMSCT57Y5eek8muxurb9Klv8FMenapoL6ZTC/K3cKk+Fph22VwdXS2bCVb+/wi88+idnmA01BpCi+QjFTK0+r77qHphL6om0FM9aTv3NlljlmN5XpN9EilL9lncpwgKE+V84OfxiNgY0rVP/6LOqOXBpRg+y9Ez39PkzmrvAvx+wHKOE//9w7QMZ7nbQvdebJGZPBSdFabb2Jr6KDPvpfaT/yZG9UkTjMWKtT2NSZTkztHN56XZuis5U9lk0Vb4wyGiOOESwxzoTblAsg1AY0yRk8ltr+rXY2I2JKWi9xDyF4/jIcde6KSIF3eSqYx1wfk5Gw1G0gvSTidiVx8V54ehagPPV8wrWzy0jYCY+P7DyA=="
                   }
                 ],
                 "role": "model"
@@ -78,27 +78,27 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 85,
             "candidatesTokenCount": 30,
-            "totalTokenCount": 169,
+            "totalTokenCount": 167,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 85
               }
             ],
-            "thoughtsTokenCount": 54,
+            "thoughtsTokenCount": 52,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "hz6qaqG2MoXyvdIPi6fCwQc"
+          "responseId": "VGmsavKGAp2RvdIPh6HGuAw"
         }
-  recorded_at: Wed, 16 Sep 2026 07:00:24 GMT
+  recorded_at: Thu, 17 Sep 2026 22:27:32 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
-      string: '{"contents":[{"role":"user","parts":[{"text":"What''s the fall of Rome?"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"latitude":"52.5200","longitude":"13.4050"}},"thoughtSignature":"CrsCARFNMg/5YGpjR2z9o+W+PN1b9aaaSJZuNMEYe3prSVuI8aY6zCRw2O2VC6XDeUHdIo3UrCP20FdxkmP989x+HJKdgOCYz+L3xH9F6wjwGOKJV6YZ3eO6wgxGg2UN1DKw9r1igpY2rwAnaIMuKJrWNmXBeTrDxZ6N3WCbWWZHFKPosWeigXH+ThV8Fby2TAJ+p5PPnhL31oiO9aDFLDx0nEt0Od+N3Tr5ku981kYvcabcUFwGxqxeP82ukVnF055c1ZB2td7jrk4HSfmORLciY0BB5lgFPmARTGvpnLmV9iYhMWcZL3JwYWAvx/78VfA3mfbmtLNosajp5YTGaWGRUoquMv/YE29uybupo6Rd6rsVCQWnBsZlbuPWhFR2ssBYYnhQzj4v1ABYC9c6ijJWYecNMdYkJhNmaT2g"}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}}}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
+      string: '{"contents":[{"role":"user","parts":[{"text":"What''s the fall of Rome?"}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"latitude":"41.9028","longitude":"12.4964"}},"thoughtSignature":"CqcCAWkUfROXXIOoxZurscKFVFEEE5c8JWMSCT57Y5eek8muxurb9Klv8FMenapoL6ZTC/K3cKk+Fph22VwdXS2bCVb+/wi88+idnmA01BpCi+QjFTK0+r77qHphL6om0FM9aTv3NlljlmN5XpN9EilL9lncpwgKE+V84OfxiNgY0rVP/6LOqOXBpRg+y9Ez39PkzmrvAvx+wHKOE//9w7QMZ7nbQvdebJGZPBSdFabb2Jr6KDPvpfaT/yZG9UkTjMWKtT2NSZTkztHN56XZuis5U9lk0Vb4wyGiOOESwxzoTblAsg1AY0yRk8ltr+rXY2I2JKWi9xDyF4/jIcde6KSIF3eSqYx1wfk5Gw1G0gvSTidiVx8V54ehagPPV8wrWzy0jYCY+P7DyA=="}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
+        weather at 41.9028, 12.4964: 15°C, Wind: 10 km/h"}]}}}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
         current weather for a location","parametersJsonSchema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}]}]}'
@@ -127,7 +127,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 07:00:25 GMT
+      - Thu, 17 Sep 2026 22:27:33 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -137,7 +137,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=566
+      - gfet4t7; dur=951
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -151,7 +151,7 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "I am sorry, I cannot answer historical questions. I can only provide information about the weather."
+                    "text": "The fall of Rome is a complex historical event with many contributing factors, including economic problems, political instability, overexpansion, and external invasions. The traditional date given for the fall of the Western Roman Empire is 476 CE, when the last Western Roman Emperor, Romulus Augustulus, was deposed by the Germanic chieftain Odoacer. However, the Eastern Roman Empire (also known as the Byzantine Empire) continued to thrive for many centuries after this.\n\nWould you like to know more about a specific aspect of the fall of Rome, such as the economic causes or the role of barbarian invasions?\n"
                   }
                 ],
                 "role": "model"
@@ -162,8 +162,8 @@ http_interactions:
           ],
           "usageMetadata": {
             "promptTokenCount": 172,
-            "candidatesTokenCount": 19,
-            "totalTokenCount": 191,
+            "candidatesTokenCount": 121,
+            "totalTokenCount": 293,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
@@ -173,7 +173,7 @@ http_interactions:
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "iD6qave4LoewkdUPtu__uAk"
+          "responseId": "VGmsau72OLbZvdIP5p_viA8"
         }
-  recorded_at: Wed, 16 Sep 2026 07:00:25 GMT
+  recorded_at: Thu, 17 Sep 2026 22:27:33 GMT
 recorded_with: VCR 6.4.0

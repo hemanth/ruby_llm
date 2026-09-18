@@ -24,19 +24,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:56:11 GMT
+      - Thu, 17 Sep 2026 22:13:44 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a900-66ea-79b9-9799-054580f56712
+      - 01a0b16e-ced1-75ee-a0fc-34f4e7061938
       X-Kong-Request-Id:
-      - 01a0a900-66ea-79b9-9799-054580f56712
+      - 01a0b16e-ced1-75ee-a0fc-34f4e7061938
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
@@ -50,32 +48,34 @@ http_interactions:
       X-Ratelimit-Remaining-Req-Minute:
       - '98'
       X-Envoy-Upstream-Service-Time:
-      - '516'
+      - '456'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '517'
+      - '458'
       X-Kong-Proxy-Latency:
-      - '16'
-      X-Content-Type-Options:
-      - nosniff
+      - '17'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"f7043118a4614b76820082733d12a69b","created":1789541771,"model":"mistral-small-latest","usage":{"prompt_tokens":31,"total_tokens":97,"completion_tokens":66,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":[{"type":"thinking","thinking":[{"type":"text","text":"The
+      string: '{"id":"8fa1fd09c4c84c97a3eb620374755b51","created":1789683224,"model":"mistral-small-latest","usage":{"prompt_tokens":31,"total_tokens":97,"completion_tokens":66,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":[{"type":"thinking","thinking":[{"type":"text","text":"The
         user is asking for the product of 12 multiplied by 12. I know that 12 times
         12 is a basic multiplication fact. Let me calculate it:\n\n12 * 12 = 144\n\nSo,
         the answer is 144."}],"closed":true},{"type":"text","text":"144"}]}}]}'
-  recorded_at: Wed, 16 Sep 2026 06:56:11 GMT
+  recorded_at: Thu, 17 Sep 2026 22:13:44 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
@@ -104,56 +104,55 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:56:12 GMT
+      - Thu, 17 Sep 2026 22:13:45 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a900-6958-7156-9334-a532c4e2730d
+      - 01a0b16e-d0e1-74a5-a761-0aa51694e4f8
       X-Kong-Request-Id:
-      - 01a0a900-6958-7156-9334-a532c4e2730d
+      - 01a0b16e-d0e1-74a5-a761-0aa51694e4f8
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '99633'
+      - '99628'
       X-Ratelimit-Tokens-Query-Cost:
-      - '173'
+      - '178'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
       - '97'
       X-Envoy-Upstream-Service-Time:
-      - '484'
+      - '497'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '486'
+      - '497'
       X-Kong-Proxy-Latency:
-      - '19'
-      X-Content-Type-Options:
-      - nosniff
+      - '11'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"fc40b9dd139743ea802b886d06281965","created":1789541771,"model":"mistral-small-latest","usage":{"prompt_tokens":113,"total_tokens":173,"completion_tokens":60,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":[{"type":"thinking","thinking":[{"type":"text","text":"The
+      string: '{"id":"ab6e4dcfde6546399a7eed16a7181504","created":1789683224,"model":"mistral-small-latest","usage":{"prompt_tokens":113,"total_tokens":178,"completion_tokens":65,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":[{"type":"thinking","thinking":[{"type":"text","text":"The
         user wants me to add 10 to the previous result, which was 144. So, I need
-        to perform the following calculation:\n\n144 + 10 = 154\n\nTherefore, the
-        answer is 154."}],"closed":true},{"type":"text","text":"154"}]}}]}'
-  recorded_at: Wed, 16 Sep 2026 06:56:12 GMT
+        to calculate 144 + 10.\n\n144 + 10 = 154\n\nTherefore, the answer is 154."}],"closed":true},{"type":"text","text":"154"}]}}]}'
+  recorded_at: Thu, 17 Sep 2026 22:13:45 GMT
 recorded_with: VCR 6.4.0

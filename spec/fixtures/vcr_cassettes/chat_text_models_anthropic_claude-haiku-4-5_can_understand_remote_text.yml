@@ -35,13 +35,13 @@ http_interactions:
       Etag:
       - W/"6aa8cb95-9c6"
       Expires:
-      - Wed, 16 Sep 2026 06:58:18 GMT
+      - Thu, 17 Sep 2026 22:16:13 GMT
       Cache-Control:
       - max-age=600
       X-Proxy-Cache:
       - MISS
       X-Github-Request-Id:
-      - 3868:32AFB:1F09861:1F3CEE4:6AAA3BB2
+      - 4914:338B02:3C8A1F8:3CDCFDE:6AAC6454
       X-Github-Edge-Region:
       - fra
       Accept-Ranges:
@@ -49,21 +49,21 @@ http_interactions:
       Age:
       - '0'
       Date:
-      - Wed, 16 Sep 2026 06:48:18 GMT
+      - Thu, 17 Sep 2026 22:06:13 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-ber1080031-BER
+      - cache-ber1080054-BER
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1789541298.266117,VS0,VE134
+      - S1789682774.545539,VS0,VE109
       Vary:
       - Accept-Encoding
       X-Fastly-Request-Id:
-      - 73d28f6a76e40ae473ba6bfce6eb5153829f18dd
+      - 8ec59f44b714e1027fb1423d59121ee7c8e72f52
     body:
       encoding: ASCII-8BIT
       string: "Ruby is copyrighted free software by Yukihiro Matsumoto <matz@netlab.jp>.\nYou
@@ -99,7 +99,7 @@ http_interactions:
         \"AS IS\" AND WITHOUT ANY EXPRESS OR\n     IMPLIED WARRANTIES, INCLUDING,
         WITHOUT LIMITATION, THE IMPLIED\n     WARRANTIES OF MERCHANTABILITY AND FITNESS
         FOR A PARTICULAR\n     PURPOSE.\n"
-  recorded_at: Wed, 16 Sep 2026 06:48:18 GMT
+  recorded_at: Thu, 17 Sep 2026 22:06:13 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -159,7 +159,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:22 GMT
+      - Thu, 17 Sep 2026 22:06:16 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -171,25 +171,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:48:18Z'
+      - '2026-09-17T22:06:14Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:48:21Z'
+      - '2026-09-17T22:06:16Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:48:18Z'
+      - '2026-09-17T22:06:13Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:48:18Z'
+      - '2026-09-17T22:06:14Z'
       Server:
       - cloudflare
       Request-Id:
@@ -201,11 +201,13 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-7e96a7e87c935826accd15117e1ca392-5b57bdd46931416c-01
+      - 00-e374cd78f18c8443b44bd4d4836fad51-e98ecea1aa1125d8-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
+      Server-Timing:
+      - x-originResponse;dur=2915
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -214,21 +216,20 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6ftHfbZVcNfddaMZcZt","type":"message","role":"assistant","content":[{"type":"text","text":"#
-        Ruby License Summary\n\nThis file contains the **license terms for the Ruby
-        programming language**, copyrighted by Yukihiro Matsumoto (the creator of
-        Ruby).\n\n## Key Points:\n\n**License Options:** Ruby can be used under either:\n-
-        The 2-clause BSD License (BSDL), OR\n- The custom terms listed in this document\n\n**Main
-        Permissions:**\n1. **Free distribution** of source code with original copyright
-        notices intact\n2. **Modification allowed** if you:\n   - Release modifications
-        to the public domain, OR\n   - Use them only internally, OR\n   - Distribute
-        non-standard binaries with clear labeling, OR\n   - Make other arrangements
-        with the author\n\n3. **Binary distribution** permitted if you provide access
-        to original source code or clearly label modified versions\n\n4. **Commercial
-        use** of modified software is allowed in other projects\n\n5. **Scripts and
-        outputs** generated using Ruby belong to whoever created them (not automatically
-        covered by Ruby''s copyright)\n\n6. **Disclaimer:** The software is provided
-        \"as-is\" with no warranties\n\nThis is a relatively permissive license that
-        allows commercial use, modification, and redistribution with reasonable conditions."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":588,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":261,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:48:22 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9mh2wDqSFYGVsQgMLJS","type":"message","role":"assistant","content":[{"type":"text","text":"#
+        License File Content\n\nThis is the **Ruby programming language license**
+        file. It outlines the licensing terms for Ruby, created by Yukihiro Matsumoto
+        (matz@netlab.jp).\n\n## Key Points:\n\n**License Options:**\n- 2-clause BSD
+        License (BSDL), OR\n- Custom terms outlined in the file\n\n**Main Permissions:**\n1.
+        **Redistribute** source code freely with original copyright notices intact\n2.
+        **Modify** the software if you either:\n   - Release modifications publicly\n   -
+        Use them only internally\n   - Distribute with non-standard names and instructions\n   -
+        Make other arrangements with the author\n\n3. **Distribute binaries** if you
+        provide source access or instructions to get it\n\n4. **Include in other software**
+        (even commercial), with exceptions noted in the LEGAL file\n\n5. **Scripts/outputs**
+        generated by Ruby aren''t automatically under Ruby''s copyright\n\n**Disclaimer:**\n-
+        Software provided \"AS IS\" with no warranties or guarantees\n\nThis is a
+        relatively permissive open-source license that allows commercial use and modification
+        with minimal restrictions."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":588,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":247,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Thu, 17 Sep 2026 22:06:16 GMT
 recorded_with: VCR 6.4.0

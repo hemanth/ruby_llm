@@ -26,7 +26,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:50:32 GMT
+      - Thu, 17 Sep 2026 22:08:43 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -42,13 +42,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-27047c683649da3da59e0db634c12503-534123b700266a69-00
+      - 00-bda5f40a28aa97ba6bb41d56ffe27423-5674040a0011d9f3-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - cfac5332-3c6c-4880-93f2-86966ae1670d
+      - 7d4c2a75-0547-4477-ad36-5b2e165f4eee
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -84,7 +84,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - cfac5332-3c6c-4880-93f2-86966ae1670d
+      - 7d4c2a75-0547-4477-ad36-5b2e165f4eee
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -93,10 +93,10 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"d5b5c985-f26d-42f7-874a-dcd64f54c103","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"I
+      string: '{"id":"835f4ca8-f477-40db-bea7-ef7b8ef3e8fa","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"I
         see a vibrant, faceted red gemstone, resembling a ruby or diamond, depicted
-        in a 3D rendered style with a large central hole or transparency effect. It''s
-        set against a black background, with glowing white highlights and smooth color
-        gradients giving it a shiny, jewel-like appearance."},"finish_reason":"stop"}],"usage":{"prompt_tokens":265,"completion_tokens":58,"total_tokens":323,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":161,"audio_tokens":0,"text_tokens":9,"image_tokens":256},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789541433,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 16 Sep 2026 06:50:33 GMT
+        in a 3D rendered style with a transparent or hollow center. It''s glowing
+        against a black background, with sharp edges and a glossy highlight on one
+        side, evoking something like a valuable treasure or game icon."},"finish_reason":"stop"}],"usage":{"prompt_tokens":265,"completion_tokens":61,"total_tokens":326,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":162,"audio_tokens":0,"text_tokens":9,"image_tokens":256},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789682923,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Thu, 17 Sep 2026 22:08:44 GMT
 recorded_with: VCR 6.4.0

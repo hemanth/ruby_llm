@@ -33,35 +33,100 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '653'
+      - '616'
       Date:
-      - Wed, 16 Sep 2026 06:52:40 GMT
+      - Thu, 17 Sep 2026 22:20:25 GMT
       Server:
       - Google Frontend
       X-Cloud-Trace-Context:
-      - a83bec6e75084d4610368804f1eb5045/12536723998189865218
+      - 8f0f77a7ee0d619a947dea5b4bfbce2e/10564304433243119066
       Traceparent:
-      - 00-a83bec6e75084d4610368804f1eb5045-adfb640dcf38c902-00
+      - 00-8f0f77a7ee0d619a947dea5b4bfbce2e-929bf2e8f28a5dda-00
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: '{"id":"chatcmpl-303","object":"chat.completion","created":1789683625,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
+        need to fetch weather for Berlin given coordinates, then get best language
+        to learn. Use tools.","tool_calls":[{"id":"call_9crhhude","index":0,"type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":194,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":60,"total_tokens":254}}
+
+        '
+  recorded_at: Thu, 17 Sep 2026 22:20:26 GMT
+- request:
+    method: post
+    uri: https://ollama.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"What''s
+        the weather in Berlin (52.5200, 13.4050) and what''s the best language to
+        learn?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_9crhhude","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"We
+        need to fetch weather for Berlin given coordinates, then get best language
+        to learn. Use tools.","reasoning_content":"We need to fetch weather for Berlin
+        given coordinates, then get best language to learn. Use tools."},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_9crhhude"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}},{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
+        the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Set-Cookie:
+      - "<COOKIE>"
+      X-Build-Commit:
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
+      X-Build-Time:
+      - '2026-09-17T14:37:26-07:00'
+      X-Frame-Options:
+      - DENY
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      Content-Length:
+      - '525'
+      Date:
+      - Thu, 17 Sep 2026 22:20:26 GMT
+      Server:
+      - Google Frontend
+      Traceparent:
+      - 00-740f5d04d788f388d0a043a130fee00c-a275c179b9866c3a-00
+      X-Cloud-Trace-Context:
+      - 740f5d04d788f388d0a043a130fee00c/11706475534967270458
       Via:
       - 1.1 google
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-122","object":"chat.completion","created":1789541560,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"User
-        asks for weather in Berlin with given lat/lon and best language to learn.
-        Use function calls: weather and best_language_to_learn.","tool_calls":[{"id":"call_xa5fvfo1","index":0,"type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":194,"prompt_tokens_details":{"cached_tokens":112},"completion_tokens":69,"total_tokens":263}}
+      string: '{"id":"chatcmpl-919","object":"chat.completion","created":1789683626,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Now
+        call best_language_to_learn function.","tool_calls":[{"id":"call_5a56gugw","index":0,"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":282,"prompt_tokens_details":{"cached_tokens":208},"completion_tokens":32,"total_tokens":314}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:52:40 GMT
+  recorded_at: Thu, 17 Sep 2026 22:20:26 GMT
 - request:
     method: post
     uri: https://ollama.com/v1/chat/completions
@@ -69,12 +134,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"What''s
         the weather in Berlin (52.5200, 13.4050) and what''s the best language to
-        learn?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_xa5fvfo1","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"User
-        asks for weather in Berlin with given lat/lon and best language to learn.
-        Use function calls: weather and best_language_to_learn.","reasoning_content":"User
-        asks for weather in Berlin with given lat/lon and best language to learn.
-        Use function calls: weather and best_language_to_learn."},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_xa5fvfo1"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        learn?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_9crhhude","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"We
+        need to fetch weather for Berlin given coordinates, then get best language
+        to learn. Use tools.","reasoning_content":"We need to fetch weather for Berlin
+        given coordinates, then get best language to learn. Use tools."},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_9crhhude"},{"role":"assistant","content":"","tool_calls":[{"id":"call_5a56gugw","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}],"reasoning":"Now
+        call best_language_to_learn function.","reasoning_content":"Now call best_language_to_learn
+        function."},{"role":"tool","content":"Ruby","tool_call_id":"call_5a56gugw"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
         current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
         (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
         13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}},{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
@@ -100,95 +166,30 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '469'
+      - '806'
       Date:
-      - Wed, 16 Sep 2026 06:52:41 GMT
+      - Thu, 17 Sep 2026 22:20:27 GMT
       Server:
       - Google Frontend
-      X-Cloud-Trace-Context:
-      - 62745136ab0aacdc1f16ee38cbc4f0f5/17859979220709895689
       Traceparent:
-      - 00-62745136ab0aacdc1f16ee38cbc4f0f5-f7db64799a456e09-00
+      - 00-37dc67569d5b2501e6d23bda7792a5d6-c7564b903bb8814a-00
+      X-Cloud-Trace-Context:
+      - 37dc67569d5b2501e6d23bda7792a5d6/14363751144394096970
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000
-    body:
-      encoding: UTF-8
-      string: '{"id":"chatcmpl-933","object":"chat.completion","created":1789541561,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"call_tlr92bvz","index":0,"type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":291,"prompt_tokens_details":{"cached_tokens":224},"completion_tokens":17,"total_tokens":308}}
-
-        '
-  recorded_at: Wed, 16 Sep 2026 06:52:41 GMT
-- request:
-    method: post
-    uri: https://ollama.com/v1/chat/completions
-    body:
-      encoding: UTF-8
-      string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"What''s
-        the weather in Berlin (52.5200, 13.4050) and what''s the best language to
-        learn?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_xa5fvfo1","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"User
-        asks for weather in Berlin with given lat/lon and best language to learn.
-        Use function calls: weather and best_language_to_learn.","reasoning_content":"User
-        asks for weather in Berlin with given lat/lon and best language to learn.
-        Use function calls: weather and best_language_to_learn."},{"role":"tool","content":"Current
-        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_xa5fvfo1"},{"role":"assistant","content":"","tool_calls":[{"id":"call_tlr92bvz","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},{"role":"tool","content":"Ruby","tool_call_id":"call_tlr92bvz"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
-        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
-        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
-        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}},{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
-        the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      Authorization:
-      - Bearer <AUTH_TOKEN>
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Set-Cookie:
-      - "<COOKIE>"
-      X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
-      X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
-      X-Frame-Options:
-      - DENY
-      X-Request-Id:
-      - "<X_REQUEST_ID>"
-      Content-Length:
-      - '667'
-      Date:
-      - Wed, 16 Sep 2026 06:52:42 GMT
-      Server:
-      - Google Frontend
-      X-Cloud-Trace-Context:
-      - fdf5751cb6d9160033928f87482fa01d/16367311255273787249
-      Traceparent:
-      - 00-fdf5751cb6d9160033928f87482fa01d-e3245ede72d8cf71-00
-      Via:
-      - 1.1 google
-      Alt-Svc:
-      - h3=":443"; ma=2592000
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6ImNoYXRjbXBsLTk3Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwiY3JlYXRlZCI6MTc4OTU0MTU2MiwibW9kZWwiOiJncHQtb3NzOjEyMGIiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJmcF9vbGxhbWEiLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6IkhlcmXigJlzIHRoZSBpbmZvcm1hdGlvbiB5b3UgYXNrZWQgZm9yOlxuXG4tICoqQ3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbiAoNTIuNTIwMCzigK8xMy40MDUwKToqKiAxNeKAr8KwQyB3aXRoIGEgd2luZCBzcGVlZCBvZiBhYm91dCAxMOKAr2ttL2guICBcbi0gKipCZXN0IGxhbmd1YWdlIHRvIGxlYXJuOioqIFJ1YnkuICBcblxuSWYgeW914oCZZCBsaWtlIG1vcmUgZGV0YWlsc+KAlHN1Y2ggYXMgYSBsb25nZXLigJF0ZXJtIGZvcmVjYXN0IGZvciBCZXJsaW4gb3IgcmVhc29ucyB3aHkgUnVieSBpcyBhIGdyZWF0IGxhbmd1YWdlIHRvIHBpY2sgdXDigJRqdXN0IGxldCBtZSBrbm93ISJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6MzIzLCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6Mjg4fSwiY29tcGxldGlvbl90b2tlbnMiOjkxLCJ0b3RhbF90b2tlbnMiOjQxNH19Cg==
-  recorded_at: Wed, 16 Sep 2026 06:52:42 GMT
+        eyJpZCI6ImNoYXRjbXBsLTgyNCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3ODk2ODM2MjcsIm1vZGVsIjoiZ3B0LW9zczoxMjBiIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfb2xsYW1hIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiIqKkN1cnJlbnQgV2VhdGhlciBpbiBCZXJsaW4gKDUyLjUyMDDigK9OLOKArzEzLjQwNTDigK9FKSoqICBcbi0gKipUZW1wZXJhdHVyZToqKiAxNeKAr8KwQyAgXG4tICoqV2luZDoqKiAxMOKAr2ttL2ggIFxuXG4qKkJlc3QgTGFuZ3VhZ2UgdG8gTGVhcm4gKGFjY29yZGluZyB0byBvdXIgcmVjb21tZW5kYXRpb24gZW5naW5lKToqKiAgXG4tICoqUnVieSoqICBcblxuUnVieSBpcyBwcmFpc2VkIGZvciBpdHMgZWxlZ2FudCBzeW50YXgsIHN0cm9uZyBjb21tdW5pdHksIGFuZCBpdHMgdXNlIGluIHdlYiBkZXZlbG9wbWVudCAoUmFpbHMpLCBhdXRvbWF0aW9uLCBhbmQgc2NyaXB0aW5nLiBJdOKAmXMgYSBncmVhdCBjaG9pY2UgaWYgeW914oCZcmUgaW50ZXJlc3RlZCBpbiBidWlsZGluZyB3ZWIgYXBwbGljYXRpb25zIHF1aWNrbHkgb3Igd2FudCBhIGxhbmd1YWdlIHRoYXQgZW1waGFzaXplcyBkZXZlbG9wZXIgaGFwcGluZXNzLiJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCJ9XSwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6MzI5LCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6Mjg4fSwiY29tcGxldGlvbl90b2tlbnMiOjExMiwidG90YWxfdG9rZW5zIjo0NDF9fQo=
+  recorded_at: Thu, 17 Sep 2026 22:20:27 GMT
 recorded_with: VCR 6.4.0

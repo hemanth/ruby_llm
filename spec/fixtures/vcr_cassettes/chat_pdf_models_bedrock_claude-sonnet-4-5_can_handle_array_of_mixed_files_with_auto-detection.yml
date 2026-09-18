@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T065405Z
+      - 20260917T221159Z
       X-Amz-Content-Sha256:
       - cd6a3cf3ac52b505f4e1f864bd38e8b91c754cc5e659a3dccc1f9d40447eb21e
       Authorization:
@@ -29,32 +29,35 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:54:13 GMT
+      - Thu, 17 Sep 2026 22:12:09 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1480'
+      - '1698'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 2dc4c151-a9ec-40da-a726-51bd137f13b5
+      - 9125a94b-2f1d-49b2-b248-1f5ff3d1cbc1
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":7491},"output":{"message":{"content":[{"text":"#
-        Image Description\n\nThe image shows the Ruby programming language logo. It
-        depicts a stylized, three-dimensional red gemstone (ruby) with faceted surfaces
-        that create multiple reflective planes. The gem has a rich, deep red color
-        with highlights and shadows that give it a polished, lustrous appearance.
-        The design emphasizes the gem''s cut and clarity, with angular geometric shapes
-        creating a sense of depth and dimension.\n\n---\n\n# PDF Summary\n\n**Title:**
-        Sample PDF\n\n**Content Overview:**\nThis is a simple demonstration PDF file
-        that contains Lorem Ipsum placeholder text. The document begins with a subtitle
-        stating \"This is a simple PDF file. Fun fun fun.\"\n\nThe PDF consists of
-        four paragraphs of standard Lorem Ipsum filler text, which is commonly used
-        in publishing and graphic design to demonstrate the visual form of a document
-        without relying on meaningful content. The text discusses various Latin-derived
-        phrases in a flowing, paragraph format.\n\nThe document appears to be a basic
-        test or sample file, likely used for demonstrating PDF functionality, testing
-        PDF readers, or serving as a placeholder document for development purposes."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":2730,"outputTokens":233,"serverToolUsage":{},"totalTokens":2963}}'
-  recorded_at: Wed, 16 Sep 2026 06:54:13 GMT
+      string: '{"metrics":{"latencyMs":8891},"output":{"message":{"content":[{"text":"#
+        Image Description\n\nThe image shows a stylized ruby gemstone icon. It features
+        a three-dimensional representation of a cut ruby in a rich, deep red color
+        with glossy highlights that give it a polished, reflective appearance. The
+        gem is rendered with facets that create depth and dimension, with lighter
+        red and pink highlights suggesting light reflection on its surfaces. This
+        is the Ruby programming language logo, which uses a gemstone design that reflects
+        the language''s name.\n\n# PDF Summary\n\nThe PDF is titled \"Sample PDF\"
+        and is a test/demonstration document. It begins with the subtitle \"This is
+        a simple PDF file. Fun fun fun.\"\n\nThe document consists primarily of Lorem
+        Ipsum placeholder text - standard dummy text used in publishing and design.
+        The content is organized into four paragraphs of Latin-derived filler text
+        that includes various phrases like:\n\n- \"Lorem ipsum dolor sit amet, consectetuer
+        adipiscing elit...\"\n- Descriptions of various mundane actions and states
+        using pseudo-Latin words\n- References to body parts, emotions, and general
+        activities in Latin-style language\n\nThe PDF serves as a basic sample file,
+        likely used for testing PDF readers, demonstrating file formats, or as a placeholder
+        document. It contains no substantive information, but rather demonstrates
+        the visual layout and text rendering capabilities of the PDF format."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":2730,"outputTokens":279,"serverToolUsage":{},"totalTokens":3009}}'
+  recorded_at: Thu, 17 Sep 2026 22:12:09 GMT
 recorded_with: VCR 6.4.0

@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:56:08 GMT
+      - Thu, 17 Sep 2026 22:13:42 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -52,11 +52,11 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '236.4'
+      - '292.7'
       X-Metrics-E2e-Ms:
-      - '1615.3'
+      - '1888.4'
       Traceparent:
-      - 00-7c24d65423ed41937719abb3600a4bc4-20bb60ce0000c685-01
+      - 00-b14e18e2eaf53e9fa5fda31c16b9d775-c20f8ef80004bbbf-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -69,10 +69,9 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1789541768,"completed_at":1789541768,"id":"64e18f15-060f-94d7-93bc-6ad5f1b04607","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_64e18f15-060f-94d7-93bc-6ad5f1b04607","summary":[{"text":"The
-        question is \"What is 5 + 3?\" This is a simple arithmetic question. 5 plus
-        3 equals 8.\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"IxRMFaFtr+W7/Kjpi61ZuJRLMSSHK2dKozFvntbC9Hq5loNCk7Lwvuym0yrUMK/kAieC6xi65RtRwyrBMRT4qBQ7M+luHtWkojmZpucZtGPng4jabw72LdSIdS1Q5NfbGLEhNoWtTrKySwg9BA/j3Mk5nUXNbgwVbQH7uAnppaL6R594TBxZBLYRjjYs9G9ZSxBL/ZrR5jOFE7pLLiZcCS2WwnX95j2vSzbh9PfkV15ocsXtOrsXFj+D2zxz4GudgrN9u7IXwT6UBnLcumMuoyTcYYZq5o8Bc7z2gr438NkO0I41IuUNbqobnbd4vobJKbXDJrstqRDvGLNxJJGvYzx9RwBeLRVT6OcjDb9ObdD1Zlwd40t/c4kJ0+K2QebNnYC+bIvt9KG/QBQnGx3XD0o2/9MrdNRj3Kw3sSH5AYWSXcP2hxA8Anzzomoymk6uTtC56xyx4PmvriY2L2ubqDQpmOMKlh9XvnkvEAH9m/K7HSqAL4TnURbmXvvYRtOjQlYwqGXxW0zCa6kZB3DQObqfIT7KyRKkJPYwSdI+GObb6QN5fakse6kmUa3vPBrFGoM2kyLjxHvTWj1Mj5UNg4mgj7nAzStiobifz8aPLLG0wu0GY3vhWVlsa1cpXAHPEZZxUzxJVXuXdBiXqpzsvxHgyZP/KsxMmvOlzaW53Y6gWnnI39puE+obWfctRpLqqjMJwbiqT0Yi5OdhYVkdWjzxrdusDH1PH/qqA7waKSGDFBW2cZShA/UftmhUXhdYJomfkzEF1xBkrq96bJ+Vd4mM0lmjM9UPwSSNpyNlPrEWoeCZ0HvBMh1UuRNd6SlaNgcXRsuub0g4XSq4LO4V+sADnXM76ZqGNKDTfrRSssGDQ0g/sArH0C/xjau42W+pMlPy4CPwYhEzlM1TX0IMmJA6+VDCgHb2NN89TcgNLnRvsgDmB7gerMwWaE7z0iNP4wfT0Q"},{"content":[{"type":"output_text","text":"**8**","logprobs":[],"annotations":[]}],"id":"msg_64e18f15-060f-94d7-93bc-6ad5f1b04607","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"medium","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":200,"input_tokens_details":{"cached_tokens":128},"output_tokens":173,"output_tokens_details":{"reasoning_tokens":166},"total_tokens":373,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":5481000,"context_details":{"input_tokens":200,"output_tokens":174}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Wed, 16 Sep 2026 06:56:08 GMT
+      string: '{"created_at":1789683221,"completed_at":1789683221,"id":"681ab870-88ad-9693-a62d-890c178a03b7","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_681ab870-88ad-9693-a62d-890c178a03b7","summary":[{"text":"The
+        question is: \"What is 5 + 3?\"\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"MSAG4hjTvsDik+sMMUr2kGpfllLNN55+TYw2YEnejlvwXSGB8stD2s3FVoLPb1QVURncP9m8D0dqSYDg2COVERitActoQETSmu02QxIM6iHMWiLQjUYH4iBVOHha/iQTo/0r8s5UnFL9wFGa9UoRIpOC2d7erGAfa4vd3WFnksy7U/OadPmWXN47FrkTI39zBOgOq360KWZWF8bq0yKYQwT9GriVZr2AN4OLMZ1u5mgqn5ZYwh3J5LxyHbYNT7XiDL9dXgbhmGxF1OhyjlC3klzwqyW0R7VrZO+MXwGK+LfRr6pvXA6bw1mIhFoT/AxBOVG20u4cmzDxmK65gCgmJp0eTyEJtFN3yPVc3oDWZ4v1N2FwIhldg+KRqDkz7AVNm2+4OXyjP+Aatu814bbV806tWHDX8KK4T0o80aEBa49piNg/7cbyKBbjyVAlqB2bY4nyZRS73nsXEtscUFMmc31/SIShULXXiijLQerlHoa9utY4vJhoYTiUkyHv6j13Ht7TYw7CQOS8wECBGZn5m+A0II9Vx7ijYpHz11vCPTvgpAlpDzXZLSW+oY4FKJPXPze0xTFPy1vvvZ+syxIkQ3RBBFJOUwn+GORnnmlr2UbSjFQWsslWO4sJ8nLW0YRaj3eN0Yh6NpnSXvSemB6I10ckDUvmX4++a0RKIRqx46U0pSOseUVcVaYFIPhnCZUO7JDaew9mYZtGQByt1ZuSrHm2Hcug0a5XHTQwM2f42Tkr/HO6Uf6LlMrMXpyftY68EgvkaIqU8i4hVXKV+SOoXQu/uOWmLeQg0jYxgQiDowDX7Qie1sOOfC4Nuo26s+ykopcr94HmxERZfTgrVEidqzbO4FyWRaTIQOeKdfQBo2Lace0jyvadweMG6FDK8yBM3L6zktw9iJNXoS9tWTdT9IIDltEHkZBXGmTXTHiU4AjMgs+Sj2dshyORbC0XxxFEDW4Qy5y5sT/hv2UeqnX+8+cZUQeIgJ1X4uksXEAQChwLLrEFKgcWZy1Qcek8W4Y8YnuUcDGsvdXEpXoiy6Q2Q8hgMHxV+SOiYkR2jjoyUA"},{"content":[{"type":"output_text","text":"8","logprobs":[],"annotations":[]}],"id":"msg_681ab870-88ad-9693-a62d-890c178a03b7","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"medium","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":200,"input_tokens_details":{"cached_tokens":128},"output_tokens":172,"output_tokens_details":{"reasoning_tokens":171},"total_tokens":372,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":5456000,"context_details":{"input_tokens":200,"output_tokens":180}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Thu, 17 Sep 2026 22:13:42 GMT
 - request:
     method: post
     uri: https://api.x.ai/v1/responses
@@ -80,8 +79,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"grok-4.3","input":[{"role":"user","content":"What is 5 +
         3?"},{"type":"reasoning","summary":[{"type":"summary_text","text":"The question
-        is \"What is 5 + 3?\" This is a simple arithmetic question. 5 plus 3 equals
-        8.\n"}],"encrypted_content":"IxRMFaFtr+W7/Kjpi61ZuJRLMSSHK2dKozFvntbC9Hq5loNCk7Lwvuym0yrUMK/kAieC6xi65RtRwyrBMRT4qBQ7M+luHtWkojmZpucZtGPng4jabw72LdSIdS1Q5NfbGLEhNoWtTrKySwg9BA/j3Mk5nUXNbgwVbQH7uAnppaL6R594TBxZBLYRjjYs9G9ZSxBL/ZrR5jOFE7pLLiZcCS2WwnX95j2vSzbh9PfkV15ocsXtOrsXFj+D2zxz4GudgrN9u7IXwT6UBnLcumMuoyTcYYZq5o8Bc7z2gr438NkO0I41IuUNbqobnbd4vobJKbXDJrstqRDvGLNxJJGvYzx9RwBeLRVT6OcjDb9ObdD1Zlwd40t/c4kJ0+K2QebNnYC+bIvt9KG/QBQnGx3XD0o2/9MrdNRj3Kw3sSH5AYWSXcP2hxA8Anzzomoymk6uTtC56xyx4PmvriY2L2ubqDQpmOMKlh9XvnkvEAH9m/K7HSqAL4TnURbmXvvYRtOjQlYwqGXxW0zCa6kZB3DQObqfIT7KyRKkJPYwSdI+GObb6QN5fakse6kmUa3vPBrFGoM2kyLjxHvTWj1Mj5UNg4mgj7nAzStiobifz8aPLLG0wu0GY3vhWVlsa1cpXAHPEZZxUzxJVXuXdBiXqpzsvxHgyZP/KsxMmvOlzaW53Y6gWnnI39puE+obWfctRpLqqjMJwbiqT0Yi5OdhYVkdWjzxrdusDH1PH/qqA7waKSGDFBW2cZShA/UftmhUXhdYJomfkzEF1xBkrq96bJ+Vd4mM0lmjM9UPwSSNpyNlPrEWoeCZ0HvBMh1UuRNd6SlaNgcXRsuub0g4XSq4LO4V+sADnXM76ZqGNKDTfrRSssGDQ0g/sArH0C/xjau42W+pMlPy4CPwYhEzlM1TX0IMmJA6+VDCgHb2NN89TcgNLnRvsgDmB7gerMwWaE7z0iNP4wfT0Q"},{"role":"assistant","content":[{"type":"output_text","text":"**8**"}]},{"role":"user","content":"Now
+        is: \"What is 5 + 3?\"\n"}],"encrypted_content":"MSAG4hjTvsDik+sMMUr2kGpfllLNN55+TYw2YEnejlvwXSGB8stD2s3FVoLPb1QVURncP9m8D0dqSYDg2COVERitActoQETSmu02QxIM6iHMWiLQjUYH4iBVOHha/iQTo/0r8s5UnFL9wFGa9UoRIpOC2d7erGAfa4vd3WFnksy7U/OadPmWXN47FrkTI39zBOgOq360KWZWF8bq0yKYQwT9GriVZr2AN4OLMZ1u5mgqn5ZYwh3J5LxyHbYNT7XiDL9dXgbhmGxF1OhyjlC3klzwqyW0R7VrZO+MXwGK+LfRr6pvXA6bw1mIhFoT/AxBOVG20u4cmzDxmK65gCgmJp0eTyEJtFN3yPVc3oDWZ4v1N2FwIhldg+KRqDkz7AVNm2+4OXyjP+Aatu814bbV806tWHDX8KK4T0o80aEBa49piNg/7cbyKBbjyVAlqB2bY4nyZRS73nsXEtscUFMmc31/SIShULXXiijLQerlHoa9utY4vJhoYTiUkyHv6j13Ht7TYw7CQOS8wECBGZn5m+A0II9Vx7ijYpHz11vCPTvgpAlpDzXZLSW+oY4FKJPXPze0xTFPy1vvvZ+syxIkQ3RBBFJOUwn+GORnnmlr2UbSjFQWsslWO4sJ8nLW0YRaj3eN0Yh6NpnSXvSemB6I10ckDUvmX4++a0RKIRqx46U0pSOseUVcVaYFIPhnCZUO7JDaew9mYZtGQByt1ZuSrHm2Hcug0a5XHTQwM2f42Tkr/HO6Uf6LlMrMXpyftY68EgvkaIqU8i4hVXKV+SOoXQu/uOWmLeQg0jYxgQiDowDX7Qie1sOOfC4Nuo26s+ykopcr94HmxERZfTgrVEidqzbO4FyWRaTIQOeKdfQBo2Lace0jyvadweMG6FDK8yBM3L6zktw9iJNXoS9tWTdT9IIDltEHkZBXGmTXTHiU4AjMgs+Sj2dshyORbC0XxxFEDW4Qy5y5sT/hv2UeqnX+8+cZUQeIgJ1X4uksXEAQChwLLrEFKgcWZy1Qcek8W4Y8YnuUcDGsvdXEpXoiy6Q2Q8hgMHxV+SOiYkR2jjoyUA"},{"role":"assistant","content":[{"type":"output_text","text":"8"}]},{"role":"user","content":"Now
         multiply that by 2"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"],"reasoning":{"effort":"medium"}}'
     headers:
       User-Agent:
@@ -100,7 +98,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:56:10 GMT
+      - Thu, 17 Sep 2026 22:13:43 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -128,11 +126,11 @@ http_interactions:
       X-Data-Retention:
       - general
       X-Metrics-Ttft-Ms:
-      - '482.5'
+      - '233.8'
       X-Metrics-E2e-Ms:
-      - '1725.3'
+      - '1310.8'
       Traceparent:
-      - 00-41b85eec3d640cc16e78fa262e7fc097-150879090000c653-01
+      - 00-5b6f2d4dd07c04db29d8ca54b4106557-6e52ab910004e178-01
       Vary:
       - origin, access-control-request-method, access-control-request-headers
       Access-Control-Allow-Origin:
@@ -145,7 +143,7 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":1789541770,"completed_at":1789541770,"id":"21d8de3a-90b6-9b3d-8702-006738f5c99d","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_21d8de3a-90b6-9b3d-8702-006738f5c99d","summary":[{"text":"The
-        conversation so far:\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"TRHJMZeUZR8ymMW2NaaWEiqCHe6w7IyF1z6qYcbHzSPQ0sHYCOvgF4b6Nv6Qdr1QaFgjp7ijjYjWNEx1R0d8FEmoyvXE03tquF7mv7dsPxh5y303l5prxqliHYoRxsXgui/2famZe1Tdqfi6HxMeJWiVtkTbHmEjqT1YW5Hz2wmDLgSLdyncwHiWqtDHOxsqdy4hnQRluxdft3b+Iifcwt9rfcqfXtYuAE81BkrjkrRCW5NDeQNzwvZqqM70ERGjM+lPM/3I51K177pARcH9QJAX62zkwYI6azKx3IG3gtpJ9lqaBU2agGNQzPmfBRw2QO+V7RBFyPk9/REHqnOfKYrU0iJ3cv/DW8QWQYu68/gTmm1GNsBdetnZrIwnN4MTQFtUNxTlMBNE/HxRiSe3aJdPudnZP+eIwf9de3lPRGcotmbdZQaSKu4OKSauPB1WpqMlm7Uv8JGqDTB77ey1s3TDlyyZGnzKsDvfM2QLAYUCq3mx4Tb6nHKLrWjyIXDyuFZHI3H6AWtVpd/MrVYSecbEtLZiSDqQUzxWlAY4zm9fX/ddMqX+t3+aQkgFn/64iqE/+hIR1J2W6wnLB+WnWa0FSrGboC/1ON9KqBhGEgJ4b/VsHh5Y95pWToXbpTU0nKnawtYIF9Sl/M/is/ucEugcPA"},{"content":[{"type":"output_text","text":"**16**","logprobs":[],"annotations":[]}],"id":"msg_21d8de3a-90b6-9b3d-8702-006738f5c99d","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"medium","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":383,"input_tokens_details":{"cached_tokens":128},"output_tokens":147,"output_tokens_details":{"reasoning_tokens":140},"total_tokens":530,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":7118500,"context_details":{"input_tokens":383,"output_tokens":148}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
-  recorded_at: Wed, 16 Sep 2026 06:56:10 GMT
+      string: '{"created_at":1789683223,"completed_at":1789683223,"id":"3901a797-a801-9f43-bfc7-916d34b9ce47","max_output_tokens":null,"model":"grok-4.3","object":"response","output":[{"id":"rs_3901a797-a801-9f43-bfc7-916d34b9ce47","summary":[{"text":"The
+        conversation so far:\n","type":"summary_text"}],"type":"reasoning","status":"completed","encrypted_content":"KmHCZ+3uj+eOe+jjMgzYUieas6/H+/vOfpcQilCn9hrRwiZ/Lh7DzZcPdZrrax1uxCT960SkoHmJ1oiHVECOnRD6q5jDcAHx0qxCSx9twu3g194bZt7YZisFvFJb60JFZS4H4lYtRo97BJGRV7EqI2jwzQ41EiSriZebaGqKpqz0AHsh6xuz/kquxJzOotM+tvrR8lpQeLX/Mh1Zf5MhPC6obqrP8yELkGI0FSvQYxz0EJKvtcmQlgXf/1jtLu1A+LUDBuffVsfv3rSX6mu/S0yRn2ekXU+CYVYuyalWQ7387Xo2mgX+BC2u5ceEfW48MtxwrkoK1nDVGYKDcrpHJLdf+ddmleWIlahcnfdqQ+I3h/ybigA9ByVl3HXSC8+Y4dJ9V4OVIRN2FOX79bFwJn8V0Ald3dTkTOUxPUeQ9CfwTJHp+5R7kXtM1wlbc3Rr778z6Us9wskJwrcK3WHEgLQgZ+/wobRFJwXMc6r2AD2ep/v2Op2zEcmO+DltwwbZBf2KPyJCUxcVOKHM7W/NbbwEn3iul6dX0lUJonmp/QHaMH8HiKB+0K0rtfosFUtbBtVtI5AN+o4nJVFY33VjhscGCU+VfN8KU5Z/kHmcWmhoNmyy+oxnyO2ZIaQZ7k/Ag50WC1F3jVvnNwb/EOe6lM/vZg9FM+i9kJHMBCh4bkE"},{"content":[{"type":"output_text","text":"16","logprobs":[],"annotations":[]}],"id":"msg_3901a797-a801-9f43-bfc7-916d34b9ce47","role":"assistant","type":"message","status":"completed"}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":"medium","summary":"detailed"},"temperature":0.7,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":0.95,"usage":{"input_tokens":389,"input_tokens_details":{"cached_tokens":128},"output_tokens":124,"output_tokens_details":{"reasoning_tokens":123},"total_tokens":513,"num_sources_used":0,"num_server_side_tools_used":0,"cost_in_usd_ticks":6618500,"context_details":{"input_tokens":389,"output_tokens":132}},"user":null,"incomplete_details":null,"status":"completed","store":false,"metadata":{"system_fingerprint":"fp_eb3c003fc66c14ed"},"background":false,"service_tier":"default","truncation":"disabled","top_logprobs":0,"presence_penalty":0.0,"frequency_penalty":0.0,"prompt_cache_key":null,"max_tool_calls":null,"safety_identifier":null,"error":null,"instructions":null}'
+  recorded_at: Thu, 17 Sep 2026 22:13:43 GMT
 recorded_with: VCR 6.4.0

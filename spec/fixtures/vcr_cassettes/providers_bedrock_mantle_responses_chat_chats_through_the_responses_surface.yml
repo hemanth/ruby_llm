@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T065100Z
+      - 20260917T221553Z
       X-Amz-Content-Sha256:
       - 0ec0f7ea930f1c52df60039a174fc23067e9d1df302db82f99dfd56849f38b6c
       Authorization:
@@ -29,11 +29,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:51:01 GMT
+      - Thu, 17 Sep 2026 22:15:54 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '967'
+      - '1068'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
@@ -48,7 +48,9 @@ http_interactions:
       - x-amzn-requestid,x-request-id,date,x-amzn-usage-reservation-quota,x-amzn-usage-reservation-remaining-quota,x-amzn-usage-reservation-spillover
     body:
       encoding: UTF-8
-      string: '{"background":false,"created_at":1789541460.0,"error":null,"id":"resp_4qjdr3txl5bs6lzutwt5nranumkwupr2bqxtnkeznejoirnxfyia","incomplete_details":null,"instructions":null,"metadata":{},"model":"openai.gpt-oss-20b","object":"response","output":[{"content":[{"text":"The
-        user says: \"Say OK and nothing else.\" So reply with just \"OK\".","type":"reasoning_text"}],"id":"msg_9acd81633e3d356e","status":"completed","summary":[],"type":"reasoning"},{"content":[{"annotations":[],"text":"OK","type":"output_text"}],"id":"msg_b8524ef685e3f96d","role":"assistant","status":"completed","type":"message"}],"parallel_tool_calls":true,"service_tier":"default","status":"completed","temperature":1.0,"text":{"format":{"type":"text"},"verbosity":"medium"},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":{"input_tokens":73,"input_tokens_details":{"cached_tokens":0},"output_tokens":29,"output_tokens_details":{"reasoning_tokens":19},"total_tokens":102}}'
-  recorded_at: Wed, 16 Sep 2026 06:51:01 GMT
+      string: '{"background":false,"created_at":1789683353.0,"error":null,"id":"resp_bj5objcg2oxp3l3helhofvxivz7hda5n5tyqc2oz3kpedud3d2hq","incomplete_details":null,"instructions":null,"metadata":{},"model":"openai.gpt-oss-20b","object":"response","output":[{"content":[{"text":"User
+        says: \"Say OK and nothing else.\" So I must reply only \"OK\" (case likely
+        okay). The instruction: Say OK and nothing else. So reply with \"OK\".\n\nWe
+        have to obey.","type":"reasoning_text"}],"id":"msg_9c18cb098e7157d6","status":"completed","summary":[],"type":"reasoning"},{"content":[{"annotations":[],"text":"OK","type":"output_text"}],"id":"msg_a3304a258eca35d7","role":"assistant","status":"completed","type":"message"}],"parallel_tool_calls":true,"service_tier":"default","status":"completed","temperature":1.0,"text":{"format":{"type":"text"},"verbosity":"medium"},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":{"input_tokens":73,"input_tokens_details":{"cached_tokens":0},"output_tokens":54,"output_tokens_details":{"reasoning_tokens":44},"total_tokens":127}}'
+  recorded_at: Thu, 17 Sep 2026 22:15:54 GMT
 recorded_with: VCR 6.4.0

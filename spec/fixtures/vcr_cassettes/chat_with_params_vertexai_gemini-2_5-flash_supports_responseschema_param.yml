@@ -23,7 +23,7 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
       Date:
-      - Wed, 16 Sep 2026 06:50:52 GMT
+      - Thu, 17 Sep 2026 22:14:10 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Pragma:
@@ -56,7 +56,7 @@ http_interactions:
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Wed, 16 Sep 2026 06:50:52 GMT
+  recorded_at: Thu, 17 Sep 2026 22:14:10 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -87,7 +87,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:50:53 GMT
+      - Thu, 17 Sep 2026 22:14:11 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -115,13 +115,13 @@ http_interactions:
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -2.76991335550944
+              "avgLogprobs": -2.4393288294474282
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 24,
             "candidatesTokenCount": 6,
-            "totalTokenCount": 93,
+            "totalTokenCount": 101,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -135,11 +135,11 @@ http_interactions:
                 "tokenCount": 6
               }
             ],
-            "thoughtsTokenCount": 63
+            "thoughtsTokenCount": 71
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-09-16T06:50:52.437454Z",
-          "responseId": "TDyqas7ZGtDp-eQPicb16A0"
+          "createTime": "2026-09-17T22:14:10.330971Z",
+          "responseId": "MmasatuZFI-Gz_IPxfbCoQI"
         }
-  recorded_at: Wed, 16 Sep 2026 06:50:53 GMT
+  recorded_at: Thu, 17 Sep 2026 22:14:11 GMT
 recorded_with: VCR 6.4.0

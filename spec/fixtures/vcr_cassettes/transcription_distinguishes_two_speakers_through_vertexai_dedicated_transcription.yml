@@ -25,7 +25,7 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
       Date:
-      - Wed, 16 Sep 2026 06:51:45 GMT
+      - Thu, 17 Sep 2026 22:15:32 GMT
       Pragma:
       - no-cache
       Content-Type:
@@ -52,11 +52,11 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/sqlservice.login",
+          "scope": "https://www.googleapis.com/auth/sqlservice.login https://www.googleapis.com/auth/cloud-platform openid https://www.googleapis.com/auth/userinfo.email",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Wed, 16 Sep 2026 06:51:45 GMT
+  recorded_at: Thu, 17 Sep 2026 22:15:32 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-3.5-transcribe-preview:generateContent
@@ -86,7 +86,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:51:46 GMT
+      - Thu, 17 Sep 2026 22:15:34 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -253,12 +253,12 @@ http_interactions:
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
-                "modality": "AUDIO",
-                "tokenCount": 217
-              },
-              {
                 "modality": "TEXT",
                 "tokenCount": 9
+              },
+              {
+                "modality": "AUDIO",
+                "tokenCount": 217
               }
             ],
             "candidatesTokensDetails": [
@@ -269,8 +269,8 @@ http_interactions:
             ]
           },
           "modelVersion": "gemini-3.5-transcribe-preview",
-          "createTime": "2026-09-16T06:51:45.714646Z",
-          "responseId": "gTyqapbPK8SNmNAPpMC2gQg"
+          "createTime": "2026-09-17T22:15:33.292410Z",
+          "responseId": "hWasarrsEd-OmLAP76SduAs"
         }
-  recorded_at: Wed, 16 Sep 2026 06:51:46 GMT
+  recorded_at: Thu, 17 Sep 2026 22:15:34 GMT
 recorded_with: VCR 6.4.0

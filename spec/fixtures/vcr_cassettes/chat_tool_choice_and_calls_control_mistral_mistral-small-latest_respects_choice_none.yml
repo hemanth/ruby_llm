@@ -27,58 +27,59 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 07:00:26 GMT
+      - Thu, 17 Sep 2026 22:27:35 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a904-480b-762e-a8e5-6bc9fd8088b5
+      - 01a0b17b-7b68-7ff5-ad48-918648d83361
       X-Kong-Request-Id:
-      - 01a0a904-480b-762e-a8e5-6bc9fd8088b5
+      - 01a0b17b-7b68-7ff5-ad48-918648d83361
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '99749'
+      - '99770'
       X-Ratelimit-Tokens-Query-Cost:
-      - '153'
+      - '163'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
       - '99'
       X-Envoy-Upstream-Service-Time:
-      - '798'
+      - '773'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '798'
+      - '774'
       X-Kong-Proxy-Latency:
-      - '10'
-      X-Content-Type-Options:
-      - nosniff
+      - '15'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"c4587a41375a453ea60d140c05ce2f69","created":1789542025,"model":"mistral-small-latest","usage":{"prompt_tokens":40,"total_tokens":153,"completion_tokens":113,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"I
-        can''t access real-time weather data, but you can check the current weather
-        in Berlin (coordinates: 52.5200, 13.4050) using reliable weather services
+      string: '{"id":"c7e9c77fc5bc478796121e650964b698","created":1789684054,"model":"mistral-small-latest","usage":{"prompt_tokens":40,"total_tokens":163,"completion_tokens":123,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"I
+        can''t fetch real-time weather data, but you can check the current weather
+        in Berlin (coordinates: 52.5200, 13.4050) using a reliable weather service
         like:\n\n- [Weather.com](https://weather.com)\n- [AccuWeather](https://www.accuweather.com)\n-
-        [OpenWeatherMap](https://openweathermap.org)\n- [Weather Underground](https://www.wunderground.com)\n\nWould
-        you like me to help you interpret the forecast once you check?"}}]}'
-  recorded_at: Wed, 16 Sep 2026 07:00:26 GMT
+        [OpenWeatherMap](https://openweathermap.org)\n- [Google Weather](https://www.google.com/search?q=weather+Berlin)\n\nFor
+        the most accurate and up-to-date information, I recommend checking one of
+        these sources directly."}}]}'
+  recorded_at: Thu, 17 Sep 2026 22:27:35 GMT
 recorded_with: VCR 6.4.0

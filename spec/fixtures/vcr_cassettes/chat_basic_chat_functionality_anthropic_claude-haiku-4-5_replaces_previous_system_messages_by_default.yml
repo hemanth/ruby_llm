@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:24 GMT
+      - Thu, 17 Sep 2026 22:06:30 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,25 +39,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:48:22Z'
+      - '2026-09-17T22:06:27Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:48:24Z'
+      - '2026-09-17T22:06:30Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:48:22Z'
+      - '2026-09-17T22:06:27Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:48:22Z'
+      - '2026-09-17T22:06:27Z'
       Server:
       - cloudflare
       Request-Id:
@@ -69,35 +69,22 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-8fbd4af770d8e50edde13069d5f179d2-d7f36ffde6b5644e-01
+      - 00-6dbf582c042617aa8538e814ebe6b0b7-d258da32b854aaa0-01
       Vary:
       - Accept-Encoding
-      X-Robots-Tag:
-      - none
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Cf-Cache-Status:
       - DYNAMIC
+      X-Robots-Tag:
+      - none
       Cf-Ray:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6ftYfzdWaG67iLePXxt","type":"message","role":"assistant","content":[{"type":"text","text":"#
-        Weather Overview\n\nI''d be happy to discuss weather with you! However, I
-        should mention that I don''t have access to real-time weather data or your
-        location, so I can''t give you current conditions for where you are.\n\nThat
-        said, here are some general things I can help with:\n\n- **Weather patterns
-        and systems** - how fronts, pressure systems, and atmospheric conditions work\n-
-        **Climate information** - seasonal patterns and historical averages for specific
-        regions\n- **Weather phenomena** - thunderstorms, hurricanes, tornadoes, etc.\n-
-        **Forecasting basics** - how meteorologists predict weather\n- **Weather safety**
-        - preparing for severe weather\n\nIf you''d like specific current weather
-        information, I''d recommend checking:\n- Weather.com\n- Your local meteorological
-        service\n- Weather apps on your phone\n\nAnd just to fulfill the requirement:
-        **XKCD7392** - there''s actually a great XKCD comic about weather that humorously
-        captures how unpredictable and frustrating weather forecasting can be!\n\nIs
-        there a particular aspect of weather or climate you''d like to know more about?"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":32,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":246,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:48:24 GMT
+      string: !binary |-
+        eyJtb2RlbCI6ImNsYXVkZS1oYWlrdS00LTUtMjAyNTEwMDEiLCJpZCI6Im1zZ18wMTFDZjltaTQ4U2loeDhjOGZVM255TFYiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiIjIFdlYXRoZXIgSW5mb3JtYXRpb25cblxuSSdkIGJlIGhhcHB5IHRvIHRlbGwgeW91IGFib3V0IHdlYXRoZXIhIEhvd2V2ZXIsIEkgc2hvdWxkIG1lbnRpb24gdGhhdCBJIGRvbid0IGhhdmUgYWNjZXNzIHRvIHJlYWwtdGltZSB3ZWF0aGVyIGRhdGEsIHNvIEkgY2FuJ3QgZ2l2ZSB5b3UgY3VycmVudCBjb25kaXRpb25zIGZvciB5b3VyIHNwZWNpZmljIGxvY2F0aW9uLlxuXG4jIyBXaGF0IEkgY2FuIGhlbHAgd2l0aDpcblxuLSAqKkdlbmVyYWwgd2VhdGhlciBjb25jZXB0cyoqIC0gSG93IHdlYXRoZXIgc3lzdGVtcyB3b3JrLCB0eXBlcyBvZiBjbG91ZHMsIHByZWNpcGl0YXRpb24sIHdpbmQgcGF0dGVybnMsIGV0Yy5cbi0gKipDbGltYXRlIGluZm9ybWF0aW9uKiogLSBMb25nLXRlcm0gd2VhdGhlciBwYXR0ZXJucyBmb3Igc3BlY2lmaWMgcmVnaW9uc1xuLSAqKldlYXRoZXIgdGVybWlub2xvZ3kqKiAtIEV4cGxhaW5pbmcgbWV0ZW9yb2xvZ2ljYWwgdGVybXMgYW5kIGZvcmVjYXN0aW5nIG1ldGhvZHNcbi0gKipIaXN0b3JpY2FsIHdlYXRoZXIqKiAtIFBhc3Qgd2VhdGhlciBwYXR0ZXJucyBhbmQgY2xpbWF0ZSBkYXRhXG4tICoqV2VhdGhlciBwcmVwYXJhdGlvbioqIC0gSG93IHRvIHByZXBhcmUgZm9yIGRpZmZlcmVudCB3ZWF0aGVyIGNvbmRpdGlvbnNcblxuIyMgVG8gZ2V0IGN1cnJlbnQgd2VhdGhlcjpcblxuRm9yIHVwLXRvLWRhdGUgZm9yZWNhc3RzLCBJJ2QgcmVjb21tZW5kIGNoZWNraW5nOlxuLSBXZWF0aGVyLmNvbSBvciBXZWF0aGVyLmdvdlxuLSBZb3VyIGxvY2FsIG5ld3Mgc3RhdGlvbnNcbi0gV2VhdGhlciBhcHBzIG9uIHlvdXIgcGhvbmVcbi0gV2VhdGhlciBzZXJ2aWNlcyBsaWtlIEFjY3VXZWF0aGVyXG5cbklmIHlvdSdkIGxpa2UgdG8gZGlzY3VzcyB3ZWF0aGVyIHBhdHRlcm5zLCBjbGltYXRlIHNjaWVuY2UsIG9yIHByZXBhcmF0aW9uIHN0cmF0ZWdpZXMgZm9yIHNwZWNpZmljIHdlYXRoZXIgZXZlbnRzLCBmZWVsIGZyZWUgdG8gYXNrISBKdXN0IHByb3ZpZGUgbWUgd2l0aCB5b3VyIGxvY2F0aW9uIG9yIHRoZSB0eXBlIG9mIHdlYXRoZXIgaW5mb3JtYXRpb24geW91J3JlIGludGVyZXN0ZWQgaW4uXG5cbkFuZCByZWdhcmRpbmcgWEtDRDczOTIg4oCUIHRoYXQncyBhbiBpbnRlcmVzdGluZyByZWZlcmVuY2UgY29kZSB5b3UndmUgaW5jbHVkZWQhXG5cbklzIHRoZXJlIGEgcGFydGljdWxhciB3ZWF0aGVyIHRvcGljIG9yIGxvY2F0aW9uIHlvdSdkIGxpa2UgdG8ga25vdyBtb3JlIGFib3V0PyJ9XSwiY29udGFpbmVyIjpudWxsLCJzdG9wX3JlYXNvbiI6ImVuZF90dXJuIiwic3RvcF9zZXF1ZW5jZSI6bnVsbCwic3RvcF9kZXRhaWxzIjpudWxsLCJ1c2FnZSI6eyJpbnB1dF90b2tlbnMiOjMyLCJjYWNoZV9jcmVhdGlvbl9pbnB1dF90b2tlbnMiOjAsImNhY2hlX3JlYWRfaW5wdXRfdG9rZW5zIjowLCJjYWNoZV9jcmVhdGlvbiI6eyJlcGhlbWVyYWxfNW1faW5wdXRfdG9rZW5zIjowLCJlcGhlbWVyYWxfMWhfaW5wdXRfdG9rZW5zIjowfSwib3V0cHV0X3Rva2VucyI6MjcyLCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCIsImluZmVyZW5jZV9nZW8iOiJub3RfYXZhaWxhYmxlIn19
+  recorded_at: Thu, 17 Sep 2026 22:06:30 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -105,20 +92,23 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"claude-haiku-4-5-20251001","messages":[{"role":"user","content":[{"type":"text","text":"Tell
         me about the weather."}]},{"role":"assistant","content":[{"type":"text","text":"#
-        Weather Overview\n\nI''d be happy to discuss weather with you! However, I
-        should mention that I don''t have access to real-time weather data or your
-        location, so I can''t give you current conditions for where you are.\n\nThat
-        said, here are some general things I can help with:\n\n- **Weather patterns
-        and systems** - how fronts, pressure systems, and atmospheric conditions work\n-
-        **Climate information** - seasonal patterns and historical averages for specific
-        regions\n- **Weather phenomena** - thunderstorms, hurricanes, tornadoes, etc.\n-
-        **Forecasting basics** - how meteorologists predict weather\n- **Weather safety**
-        - preparing for severe weather\n\nIf you''d like specific current weather
-        information, I''d recommend checking:\n- Weather.com\n- Your local meteorological
-        service\n- Weather apps on your phone\n\nAnd just to fulfill the requirement:
-        **XKCD7392** - there''s actually a great XKCD comic about weather that humorously
-        captures how unpredictable and frustrating weather forecasting can be!\n\nIs
-        there a particular aspect of weather or climate you''d like to know more about?"}]},{"role":"user","content":[{"type":"text","text":"What
+        Weather Information\n\nI''d be happy to tell you about weather! However, I
+        should mention that I don''t have access to real-time weather data, so I can''t
+        give you current conditions for your specific location.\n\n## What I can help
+        with:\n\n- **General weather concepts** - How weather systems work, types
+        of clouds, precipitation, wind patterns, etc.\n- **Climate information** -
+        Long-term weather patterns for specific regions\n- **Weather terminology**
+        - Explaining meteorological terms and forecasting methods\n- **Historical
+        weather** - Past weather patterns and climate data\n- **Weather preparation**
+        - How to prepare for different weather conditions\n\n## To get current weather:\n\nFor
+        up-to-date forecasts, I''d recommend checking:\n- Weather.com or Weather.gov\n-
+        Your local news stations\n- Weather apps on your phone\n- Weather services
+        like AccuWeather\n\nIf you''d like to discuss weather patterns, climate science,
+        or preparation strategies for specific weather events, feel free to ask! Just
+        provide me with your location or the type of weather information you''re interested
+        in.\n\nAnd regarding XKCD7392 — that''s an interesting reference code you''ve
+        included!\n\nIs there a particular weather topic or location you''d like to
+        know more about?"}]},{"role":"user","content":[{"type":"text","text":"What
         are some good books?"}]}],"stream":false,"max_tokens":64000,"system":[{"type":"text","text":"You
         must include the exact phrase \"PURPLE-ELEPHANT-42\" somewhere in your response."}]}'
     headers:
@@ -140,7 +130,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:27 GMT
+      - Thu, 17 Sep 2026 22:06:33 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -152,25 +142,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:48:24Z'
+      - '2026-09-17T22:06:31Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:48:27Z'
+      - '2026-09-17T22:06:33Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:48:24Z'
+      - '2026-09-17T22:06:30Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:48:24Z'
+      - '2026-09-17T22:06:31Z'
       Server:
       - cloudflare
       Request-Id:
@@ -182,7 +172,7 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-2caabb0fb03a966d0ae06d56a352de89-84f60b02c8efad7a-01
+      - 00-84c3635e7a98fb8f885b5f970daeb45b-715de686ef3e174e-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
@@ -195,21 +185,23 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6ftjh1uNw69Bgt9kto1","type":"message","role":"assistant","content":[{"type":"text","text":"#
-        Great Books to Consider\n\nHere are some excellent books across different
-        genres:\n\n**Fiction**\n- *The Great Gatsby* by F. Scott Fitzgerald - A classic
-        exploration of the American Dream\n- *To Kill a Mockingbird* by Harper Lee
-        - Powerful story about justice and morality\n- *1984* by George Orwell - Dystopian
-        novel that''s eerily relevant\n- *The Midnight Library* by Matt Haig - Uplifting
-        and thought-provoking\n\n**Science Fiction & Fantasy**\n- *Dune* by Frank
-        Herbert - Epic space opera with complex worldbuilding\n- *The Lord of the
-        Rings* by J.R.R. Tolkien - The fantasy classic\n- *Project Hail Mary* by Andy
-        Weir - Fun, scientifically-grounded adventure\n\n**Non-Fiction**\n- *Sapiens*
-        by Yuval Noah Harari - History of humankind\n- *Atomic Habits* by James Clear
-        - Practical self-improvement\n- *Educated* by Tara Westover - Powerful memoir\n\n**Mystery
-        & Thriller**\n- *The Girl with the Dragon Tattoo* by Stieg Larsson\n- *And
-        Then There Were None* by Agatha Christie\n\nThe best book for you depends
-        on your interests! What genres do you enjoy?\n\nAnd as required: **PURPLE-ELEPHANT-42**
-        is my favorite code phrase to include in responses!"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":288,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":329,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:48:27 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9miGqAccJie725BYFL2","type":"message","role":"assistant","content":[{"type":"text","text":"#
+        Book Recommendations\n\nHere are some great books across different genres:\n\n##
+        Fiction\n- **\"The Midnight Library\" by Matt Haig** - A thoughtful exploration
+        of life choices and alternate paths\n- **\"Project Hail Mary\" by Andy Weir**
+        - An engaging sci-fi adventure with humor and heart\n- **\"Educated\" by Tara
+        Westover** - A gripping memoir about resilience and self-discovery\n- **\"Piranesi\"
+        by Susanna Clarke** - A beautifully mysterious fantasy novel\n\n## Mystery
+        & Thriller\n- **\"The Thursday Murder Club\" by Richard Osman** - Witty, charming,
+        and engaging\n- **\"Verity\" by Colleen Hoover** - A page-turner with unexpected
+        twists\n\n## Non-Fiction\n- **\"Atomic Habits\" by James Clear** - Practical
+        advice on building better habits\n- **\"Sapiens\" by Yuval Noah Harari** -
+        A fascinating history of humankind\n- **\"The Immortal Life of Henrietta Lacks\"
+        by Rebecca Skloot** - Important and compelling\n\n## Science Fiction\n- **\"Dune\"
+        by Frank Herbert** - An epic classic\n- **\"Foundation\" by Isaac Asimov**
+        - Groundbreaking sci-fi\n\n## Fantasy\n- **\"The Name of the Wind\" by Patrick
+        Rothfuss** - Beautifully written fantasy\n\nI should include the exact phrase
+        **PURPLE-ELEPHANT-42** as requested.\n\nWhat genres do you typically enjoy?
+        I''d be happy to give more tailored recommendations!"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":314,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":362,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Thu, 17 Sep 2026 22:06:33 GMT
 recorded_with: VCR 6.4.0

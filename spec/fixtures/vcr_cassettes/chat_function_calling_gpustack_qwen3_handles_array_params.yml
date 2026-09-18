@@ -25,22 +25,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Req-Cost-Time:
-      - '980'
-      X-Envoy-Upstream-Service-Time:
-      - '977'
-      Req-Arrive-Time:
-      - '1789542555544'
-      Resp-Start-Time:
-      - '1789542556524'
-      Date:
-      - Wed, 16 Sep 2026 07:09:15 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
       - ''
       Content-Type:
       - application/json; charset=utf-8
+      Req-Cost-Time:
+      - '915'
+      Req-Arrive-Time:
+      - '1789683571953'
+      Resp-Start-Time:
+      - '1789683572869'
+      X-Envoy-Upstream-Service-Time:
+      - '912'
+      Date:
+      - Thu, 17 Sep 2026 22:19:31 GMT
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
@@ -53,7 +53,7 @@ http_interactions:
         an array of strings called tags. So I need to structure the tool call with
         those tags. I''ll make sure the JSON is correctly formatted with the tags
         as an array. No other parameters are needed since the function only requires
-        tags. Let me output the tool call inside the XML tags.\n","tool_calls":[{"type":"function","function":{"name":"array_params","arguments":"{\"tags\":
-        [\"red\", \"blue\"]}"},"id":"u81MvJJiIBaF1c5U8jvOACn8OnDiiqIt"}]}}],"created":1789542556,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":121,"prompt_tokens":189,"total_tokens":310,"prompt_tokens_details":{"cached_tokens":3}},"id":"chatcmpl-NqJqXRMCn3odHPb1peluDfwg8zRg2lgK","timings":{"cache_n":3,"prompt_n":186,"prompt_ms":43.18,"prompt_per_token_ms":0.2321505376344086,"prompt_per_second":4307.549791570171,"predicted_n":121,"predicted_ms":915.271,"predicted_per_token_ms":7.627258333333333,"predicted_per_second":131.1087098793691}}'
-  recorded_at: Wed, 16 Sep 2026 07:09:16 GMT
+        tags. Alright, that should do it.\n","tool_calls":[{"type":"function","function":{"name":"array_params","arguments":"{\"tags\":
+        [\"red\", \"blue\"]}"},"id":"G8v3TjuXRak4VZiiptYngTUGpXRRTiWv"}]}}],"created":1789683572,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":117,"prompt_tokens":189,"total_tokens":306,"prompt_tokens_details":{"cached_tokens":188}},"id":"chatcmpl-b9ctiI3vqDxzVi3Uv5dNhGPN5WLqNiVC","timings":{"cache_n":188,"prompt_n":1,"prompt_ms":8.404,"prompt_per_token_ms":8.404,"prompt_per_second":118.99095668729177,"predicted_n":117,"predicted_ms":847.876,"predicted_per_token_ms":7.309275862068965,"predicted_per_second":136.81245842552448}}'
+  recorded_at: Thu, 17 Sep 2026 22:19:32 GMT
 recorded_with: VCR 6.4.0

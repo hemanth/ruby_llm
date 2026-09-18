@@ -24,56 +24,56 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:51:00 GMT
+      - Thu, 17 Sep 2026 22:09:18 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a8fb-a575-7924-9b5d-b9237e697cdf
+      - 01a0b16a-bd51-7a95-8768-2b5ae79b8e75
       X-Kong-Request-Id:
-      - 01a0a8fb-a575-7924-9b5d-b9237e697cdf
+      - 01a0b16a-bd51-7a95-8768-2b5ae79b8e75
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '1500000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '1499913'
+      - '1499920'
       X-Ratelimit-Tokens-Query-Cost:
-      - '87'
+      - '80'
       X-Ratelimit-Limit-Req-Minute:
       - '120'
       X-Ratelimit-Remaining-Req-Minute:
       - '119'
       X-Envoy-Upstream-Service-Time:
-      - '690'
+      - '625'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '691'
+      - '627'
       X-Kong-Proxy-Latency:
-      - '13'
-      X-Content-Type-Options:
-      - nosniff
+      - '8'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"86d1ec4c481e404ab5c398eb98d83289","created":1789541459,"model":"ministral-14b-latest","usage":{"prompt_tokens":41,"total_tokens":87,"completion_tokens":46,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+      string: '{"id":"23072d034ba04bdf8d904fdaebb48708","created":1789682957,"model":"ministral-14b-latest","usage":{"prompt_tokens":41,"total_tokens":80,"completion_tokens":39,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
         image displays a red, faceted gemstone. It appears to be a stylized representation
-        of a ruby or a similar precious stone. The gemstone has a shiny, reflective
-        surface with multiple facets that catch the light."}}]}'
-  recorded_at: Wed, 16 Sep 2026 06:51:00 GMT
+        of a ruby. The gemstone has a shiny, reflective surface, indicating it is
+        polished."}}]}'
+  recorded_at: Thu, 17 Sep 2026 22:09:18 GMT
 recorded_with: VCR 6.4.0

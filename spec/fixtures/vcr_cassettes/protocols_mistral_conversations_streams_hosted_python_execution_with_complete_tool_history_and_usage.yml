@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:32 GMT
+      - Thu, 17 Sep 2026 22:06:29 GMT
       Content-Type:
       - text/event-stream; charset=utf-8
       Transfer-Encoding:
@@ -32,27 +32,27 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - 01a0a8f9-656c-7849-87bc-528e895118b1
+      - 01a0b168-2ac3-70a2-9b56-cf8074218d12
       X-Kong-Request-Id:
-      - 01a0a8f9-656c-7849-87bc-528e895118b1
+      - 01a0b168-2ac3-70a2-9b56-cf8074218d12
       X-Envoy-Upstream-Service-Time:
-      - '582'
+      - '559'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '584'
+      - '561'
       X-Kong-Proxy-Latency:
-      - '12'
-      Set-Cookie:
-      - "<COOKIE>"
-      X-Content-Type-Options:
-      - nosniff
+      - '17'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
@@ -61,68 +61,71 @@ http_interactions:
       encoding: UTF-8
       string: |+
         event: conversation.response.started
-        data: {"type":"conversation.response.started","created_at":"2026-09-16T06:48:32.441430Z","conversation_id":"conv_01a0a8f9658772a7920df7baef5d19a6"}
+        data: {"type":"conversation.response.started","created_at":"2026-09-17T22:06:29.630902Z","conversation_id":"conv_01a0b1682ae876b4a41cfd6e073be587"}
 
         event: tool.execution.started
-        data: {"type":"tool.execution.started","created_at":"2026-09-16T06:48:32.443904Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","model":"mistral-small-latest","name":"code_interpreter","arguments":"","function":"code_interpreter"}
+        data: {"type":"tool.execution.started","created_at":"2026-09-17T22:06:29.634885Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","model":"mistral-small-latest","name":"code_interpreter","arguments":"","function":"code_interpreter"}
 
         event: tool.execution.delta
-        data: {"type":"tool.execution.delta","created_at":"2026-09-16T06:48:32.454772Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","name":"code_interpreter","arguments":"{\"code","function":"code_interpreter"}
+        data: {"type":"tool.execution.delta","created_at":"2026-09-17T22:06:29.645336Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","name":"code_interpreter","arguments":"{\"code","function":"code_interpreter"}
 
         event: tool.execution.delta
-        data: {"type":"tool.execution.delta","created_at":"2026-09-16T06:48:32.470075Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","name":"code_interpreter","arguments":"\": \"# Let","function":"code_interpreter"}
+        data: {"type":"tool.execution.delta","created_at":"2026-09-17T22:06:29.659781Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","name":"code_interpreter","arguments":"\": \"# Multip","function":"code_interpreter"}
 
         event: tool.execution.delta
-        data: {"type":"tool.execution.delta","created_at":"2026-09-16T06:48:32.485436Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","name":"code_interpreter","arguments":"'s multiply ","function":"code_interpreter"}
+        data: {"type":"tool.execution.delta","created_at":"2026-09-17T22:06:29.675293Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","name":"code_interpreter","arguments":"lying 37","function":"code_interpreter"}
 
         event: tool.execution.delta
-        data: {"type":"tool.execution.delta","created_at":"2026-09-16T06:48:32.502329Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","name":"code_interpreter","arguments":"37 by ","function":"code_interpreter"}
+        data: {"type":"tool.execution.delta","created_at":"2026-09-17T22:06:29.689994Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","name":"code_interpreter","arguments":" by 19","function":"code_interpreter"}
 
         event: tool.execution.delta
-        data: {"type":"tool.execution.delta","created_at":"2026-09-16T06:48:32.516949Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","name":"code_interpreter","arguments":"19 using Python","function":"code_interpreter"}
+        data: {"type":"tool.execution.delta","created_at":"2026-09-17T22:06:29.704944Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","name":"code_interpreter","arguments":" using","function":"code_interpreter"}
 
         event: tool.execution.delta
-        data: {"type":"tool.execution.delta","created_at":"2026-09-16T06:48:32.534489Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","name":"code_interpreter","arguments":".\\nresult =","function":"code_interpreter"}
+        data: {"type":"tool.execution.delta","created_at":"2026-09-17T22:06:29.720897Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","name":"code_interpreter","arguments":" Python\\nresult =","function":"code_interpreter"}
 
         event: tool.execution.delta
-        data: {"type":"tool.execution.delta","created_at":"2026-09-16T06:48:32.550654Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","name":"code_interpreter","arguments":" 37 *","function":"code_interpreter"}
+        data: {"type":"tool.execution.delta","created_at":"2026-09-17T22:06:29.736320Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","name":"code_interpreter","arguments":" 37 *","function":"code_interpreter"}
 
         event: tool.execution.delta
-        data: {"type":"tool.execution.delta","created_at":"2026-09-16T06:48:32.567009Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","name":"code_interpreter","arguments":" 19\\n","function":"code_interpreter"}
+        data: {"type":"tool.execution.delta","created_at":"2026-09-17T22:06:29.751362Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","name":"code_interpreter","arguments":" 19\\n","function":"code_interpreter"}
 
         event: tool.execution.delta
-        data: {"type":"tool.execution.delta","created_at":"2026-09-16T06:48:32.589006Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","name":"code_interpreter","arguments":"result\"}","function":"code_interpreter"}
+        data: {"type":"tool.execution.delta","created_at":"2026-09-17T22:06:29.771968Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","name":"code_interpreter","arguments":"result\"}","function":"code_interpreter"}
 
         event: tool.execution.done
-        data: {"type":"tool.execution.done","created_at":"2026-09-16T06:48:33.975591Z","output_index":0,"id":"tool_exec_01a0a8f967bb732d923901d5e6dc0a81","name":"code_interpreter","function":"code_interpreter","info":{"result":[{"type":"text","text":"703\n"}],"code":"# Let's multiply 37 by 19 using Python.\nresult = 37 * 19\nresult","code_output":"703\n"}}
+        data: {"type":"tool.execution.done","created_at":"2026-09-17T22:06:34.019237Z","output_index":0,"id":"tool_exec_01a0b1682d027764bcd26e5868948147","name":"code_interpreter","function":"code_interpreter","info":{"result":[{"type":"text","text":"703\n"}],"code":"# Multiplying 37 by 19 using Python\nresult = 37 * 19\nresult","code_output":"703\n"}}
 
         event: message.output.delta
-        data: {"type":"message.output.delta","created_at":"2026-09-16T06:48:34.161455Z","output_index":1,"id":"msg_01a0a8f96e71773bb0139b8a28378c3c","content_index":0,"model":"mistral-small-latest","role":"assistant","content":"The"}
+        data: {"type":"message.output.delta","created_at":"2026-09-17T22:06:34.202233Z","output_index":1,"id":"msg_01a0b1683eda73e09a6dce6207e0a155","content_index":0,"model":"mistral-small-latest","role":"assistant","content":"The"}
 
         event: message.output.delta
-        data: {"type":"message.output.delta","created_at":"2026-09-16T06:48:34.174314Z","output_index":1,"id":"msg_01a0a8f96e71773bb0139b8a28378c3c","content_index":0,"model":"mistral-small-latest","role":"assistant","content":" result of multiplying "}
+        data: {"type":"message.output.delta","created_at":"2026-09-17T22:06:34.215386Z","output_index":1,"id":"msg_01a0b1683eda73e09a6dce6207e0a155","content_index":0,"model":"mistral-small-latest","role":"assistant","content":" result"}
 
         event: message.output.delta
-        data: {"type":"message.output.delta","created_at":"2026-09-16T06:48:34.189312Z","output_index":1,"id":"msg_01a0a8f96e71773bb0139b8a28378c3c","content_index":0,"model":"mistral-small-latest","role":"assistant","content":"37 by "}
+        data: {"type":"message.output.delta","created_at":"2026-09-17T22:06:34.230555Z","output_index":1,"id":"msg_01a0b1683eda73e09a6dce6207e0a155","content_index":0,"model":"mistral-small-latest","role":"assistant","content":" of multiplying 3"}
 
         event: message.output.delta
-        data: {"type":"message.output.delta","created_at":"2026-09-16T06:48:34.204421Z","output_index":1,"id":"msg_01a0a8f96e71773bb0139b8a28378c3c","content_index":0,"model":"mistral-small-latest","role":"assistant","content":"19 is **"}
+        data: {"type":"message.output.delta","created_at":"2026-09-17T22:06:34.251372Z","output_index":1,"id":"msg_01a0b1683eda73e09a6dce6207e0a155","content_index":0,"model":"mistral-small-latest","role":"assistant","content":"7 by 1"}
 
         event: message.output.delta
-        data: {"type":"message.output.delta","created_at":"2026-09-16T06:48:34.219052Z","output_index":1,"id":"msg_01a0a8f96e71773bb0139b8a28378c3c","content_index":0,"model":"mistral-small-latest","role":"assistant","content":"703**."}
+        data: {"type":"message.output.delta","created_at":"2026-09-17T22:06:34.265635Z","output_index":1,"id":"msg_01a0b1683eda73e09a6dce6207e0a155","content_index":0,"model":"mistral-small-latest","role":"assistant","content":"9 is **7"}
+
+        event: message.output.delta
+        data: {"type":"message.output.delta","created_at":"2026-09-17T22:06:34.283666Z","output_index":1,"id":"msg_01a0b1683eda73e09a6dce6207e0a155","content_index":0,"model":"mistral-small-latest","role":"assistant","content":"03**."}
 
         event: conversation.response.done
-        data: {"type":"conversation.response.done","created_at":"2026-09-16T06:48:34.243018Z","usage":{"prompt_tokens":234,"completion_tokens":54,"total_tokens":294,"connector_tokens":6,"connectors":{"code_interpreter":1}}}
+        data: {"type":"conversation.response.done","created_at":"2026-09-17T22:06:34.289784Z","usage":{"prompt_tokens":234,"completion_tokens":53,"total_tokens":293,"connector_tokens":6,"connectors":{"code_interpreter":1}}}
 
-  recorded_at: Wed, 16 Sep 2026 06:48:34 GMT
+  recorded_at: Thu, 17 Sep 2026 22:06:34 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/conversations
     body:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","inputs":[{"type":"message.input","role":"user","content":"Use
-        Python to multiply 37 by 19."},{"type":"function.call","tool_call_id":"28cfdfda8","name":"code_interpreter","arguments":"{\"code\":
-        \"# Let''s multiply 37 by 19 using Python.\\nresult = 37 * 19\\nresult\"}"},{"type":"function.result","tool_call_id":"28cfdfda8","result":"[{\"type\":\"text\",\"text\":\"703\\n\"}]"},{"type":"message.output","content":[{"type":"text","text":"The
+        Python to multiply 37 by 19."},{"type":"function.call","tool_call_id":"5ee61c490","name":"code_interpreter","arguments":"{\"code\":
+        \"# Multiplying 37 by 19 using Python\\nresult = 37 * 19\\nresult\"}"},{"type":"function.result","tool_call_id":"5ee61c490","result":"[{\"type\":\"text\",\"text\":\"703\\n\"}]"},{"type":"message.output","content":[{"type":"text","text":"The
         result of multiplying 37 by 19 is **703**."}],"model":"mistral-small-latest","role":"assistant"},{"type":"message.input","role":"user","content":"What
         was the result?"}],"instructions":"","completion_args":{},"tools":[{"type":"code_interpreter"}],"store":false,"stream":false}'
     headers:
@@ -142,47 +145,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:34 GMT
+      - Thu, 17 Sep 2026 22:06:35 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a8f9-6f20-7583-a367-25dd39418971
+      - 01a0b168-3f8b-745e-ad6b-76b149e4cc42
       X-Kong-Request-Id:
-      - 01a0a8f9-6f20-7583-a367-25dd39418971
+      - 01a0b168-3f8b-745e-ad6b-76b149e4cc42
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '80764'
+      - '81887'
       X-Envoy-Upstream-Service-Time:
-      - '623'
+      - '672'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '624'
+      - '674'
       X-Kong-Proxy-Latency:
-      - '28'
-      X-Content-Type-Options:
-      - nosniff
+      - '14'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"object":"conversation.response","conversation_id":"conv_01a0a8f96f4e711697076996521b89ed","outputs":[{"object":"entry","type":"message.output","created_at":"2026-09-16T06:48:34.875083Z","completed_at":"2026-09-16T06:48:34.936838Z","model":"mistral-small-latest","id":"msg_01a0a8f9713a741882545dddd169a9e0","role":"assistant","content":"The
-        result of multiplying 37 by 19 is **703**."}],"usage":{"prompt_tokens":311,"completion_tokens":18,"total_tokens":329},"guardrails":null}'
-  recorded_at: Wed, 16 Sep 2026 06:48:34 GMT
+      string: '{"object":"conversation.response","conversation_id":"conv_01a0b1683fb87088ade49ca99f15fc01","outputs":[{"object":"entry","type":"message.output","created_at":"2026-09-17T22:06:34.970026Z","completed_at":"2026-09-17T22:06:35.030072Z","model":"mistral-small-latest","id":"msg_01a0b16841d977adb69dde87348598f2","role":"assistant","content":"The
+        result of multiplying 37 by 19 is **703**."}],"usage":{"prompt_tokens":310,"completion_tokens":18,"total_tokens":328},"guardrails":null}'
+  recorded_at: Thu, 17 Sep 2026 22:06:35 GMT
 recorded_with: VCR 6.4.0
 ...

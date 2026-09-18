@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:18 GMT
+      - Thu, 17 Sep 2026 22:06:23 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,25 +38,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:48:17Z'
+      - '2026-09-17T22:06:23Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:48:18Z'
+      - '2026-09-17T22:06:23Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:48:17Z'
+      - '2026-09-17T22:06:22Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:48:17Z'
+      - '2026-09-17T22:06:23Z'
       Server:
       - cloudflare
       Request-Id:
@@ -68,13 +68,13 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-fbb736df058060e810597e19819e9fc2-1eb9e20db81a8692-01
+      - 00-2f5cdf9297b9ebd5c1f6578df9627b69-9e17202641f5d49d-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Server-Timing:
-      - x-originResponse;dur=780
+      - x-originResponse;dur=736
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -83,11 +83,10 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6ftCYHBe48fcrmZccve","type":"message","role":"assistant","content":[{"type":"text","text":"Yukihiro
-        Matsumoto, commonly known as \"Matz,\" created the programming language Ruby.
-        He designed and first released Ruby in 1995 in Japan. Matsumoto continues
-        to be involved with Ruby''s development and community."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":17,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":55,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:48:18 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9mhhXCoRAL2a5nbYzes","type":"message","role":"assistant","content":[{"type":"text","text":"Yukihiro
+        Matsumoto, often known by his nickname \"Matz,\" is the creator of the Ruby
+        programming language. He designed and first released Ruby in 1995 in Japan."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":17,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":45,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Thu, 17 Sep 2026 22:06:23 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -95,9 +94,8 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"claude-haiku-4-5-20251001","messages":[{"role":"user","content":[{"type":"text","text":"Who
         is the creator of the programming language Ruby?"}]},{"role":"assistant","content":[{"type":"text","text":"Yukihiro
-        Matsumoto, commonly known as \"Matz,\" created the programming language Ruby.
-        He designed and first released Ruby in 1995 in Japan. Matsumoto continues
-        to be involved with Ruby''s development and community."}]},{"role":"user","content":[{"type":"text","text":"What
+        Matsumoto, often known by his nickname \"Matz,\" is the creator of the Ruby
+        programming language. He designed and first released Ruby in 1995 in Japan."}]},{"role":"user","content":[{"type":"text","text":"What
         year did he create Ruby?"}]}],"stream":false,"max_tokens":64000}'
     headers:
       User-Agent:
@@ -118,7 +116,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:18 GMT
+      - Thu, 17 Sep 2026 22:06:24 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -130,25 +128,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:48:18Z'
+      - '2026-09-17T22:06:24Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:48:18Z'
+      - '2026-09-17T22:06:24Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:48:18Z'
+      - '2026-09-17T22:06:23Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:48:18Z'
+      - '2026-09-17T22:06:24Z'
       Server:
       - cloudflare
       Request-Id:
@@ -160,13 +158,11 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-77574d974f160b401aafdac23082f70c-045c755104cf0fcf-01
+      - 00-ccba1116434b5253e73f2176d4189c1a-bde4f947726f62ce-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
-      Server-Timing:
-      - x-originResponse;dur=402
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -175,7 +171,7 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6ftGSgCV6432nxZ6rA5","type":"message","role":"assistant","content":[{"type":"text","text":"Yukihiro
-        Matsumoto created Ruby in 1995."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":82,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":18,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:48:18 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9mhmaHBB1XD59aqoHGU","type":"message","role":"assistant","content":[{"type":"text","text":"Yukihiro
+        Matsumoto created Ruby in 1995."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":72,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":18,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Thu, 17 Sep 2026 22:06:24 GMT
 recorded_with: VCR 6.4.0

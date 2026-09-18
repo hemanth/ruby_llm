@@ -26,25 +26,23 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:59:02 GMT
+      - Thu, 17 Sep 2026 22:26:16 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a903-039c-752e-a0f0-baa56fbf9ccd
+      - 01a0b17a-48bb-75cb-996e-47b33ba18a1a
       X-Kong-Request-Id:
-      - 01a0a903-039c-752e-a0f0-baa56fbf9ccd
+      - 01a0b17a-48bb-75cb-996e-47b33ba18a1a
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '99888'
+      - '99527'
       X-Ratelimit-Tokens-Query-Cost:
       - '112'
       X-Ratelimit-Limit-Req-Minute:
@@ -52,38 +50,40 @@ http_interactions:
       X-Ratelimit-Remaining-Req-Minute:
       - '99'
       X-Envoy-Upstream-Service-Time:
-      - '241'
+      - '246'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '242'
+      - '247'
       X-Kong-Proxy-Latency:
-      - '19'
-      X-Content-Type-Options:
-      - nosniff
+      - '188'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"90dc7e9983c4431c930935c9dbddd349","created":1789541942,"model":"mistral-small-latest","usage":{"prompt_tokens":99,"total_tokens":112,"completion_tokens":13,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"tool_calls","message":{"role":"assistant","tool_calls":[{"id":"eCluXIT9l","type":"function","function":{"name":"content_returning","arguments":"{\"query\":
+      string: '{"id":"e9ec75e4205a4a369477db42dff13d81","created":1789683976,"model":"mistral-small-latest","usage":{"prompt_tokens":99,"total_tokens":112,"completion_tokens":13,"prompt_tokens_details":{"cached_tokens":0},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"tool_calls","message":{"role":"assistant","tool_calls":[{"id":"js9OT4QZj","type":"function","function":{"name":"content_returning","arguments":"{\"query\":
         \"test data\"}"},"index":0}],"content":""}}]}'
-  recorded_at: Wed, 16 Sep 2026 06:59:02 GMT
+  recorded_at: Thu, 17 Sep 2026 22:26:16 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/chat/completions
     body:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","messages":[{"role":"user","content":"Process
-        this query: test data"},{"role":"assistant","content":"","tool_calls":[{"id":"eCluXIT9l","type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
-        data\"}"}}]},{"role":"tool","content":"Processed: test data","tool_call_id":"eCluXIT9l"}],"stream":false,"tools":[{"type":"function","function":{"name":"content_returning","description":"Returns
+        this query: test data"},{"role":"assistant","content":"","tool_calls":[{"id":"js9OT4QZj","type":"function","function":{"name":"content_returning","arguments":"{\"query\":\"test
+        data\"}"}}]},{"role":"tool","content":"Processed: test data","tool_call_id":"js9OT4QZj"}],"stream":false,"tools":[{"type":"function","function":{"name":"content_returning","description":"Returns
         a processed string result","parameters":{"type":"object","properties":{"query":{"type":"string","description":"Query
         to process"}},"required":["query"],"additionalProperties":false,"strict":true}}}]}'
     headers:
@@ -103,54 +103,54 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:59:02 GMT
+      - Thu, 17 Sep 2026 22:26:17 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a903-04fb-7595-97f2-10cc90889835
+      - 01a0b17a-4ac5-7f8a-a74d-28de9ce3b649
       X-Kong-Request-Id:
-      - 01a0a903-04fb-7595-97f2-10cc90889835
+      - 01a0b17a-4ac5-7f8a-a74d-28de9ce3b649
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '99832'
+      - '99482'
       X-Ratelimit-Tokens-Query-Cost:
-      - '56'
+      - '48'
       X-Ratelimit-Limit-Req-Minute:
       - '100'
       X-Ratelimit-Remaining-Req-Minute:
       - '98'
       X-Envoy-Upstream-Service-Time:
-      - '322'
+      - '284'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '324'
+      - '285'
       X-Kong-Proxy-Latency:
       - '14'
-      X-Content-Type-Options:
-      - nosniff
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"83f2532a7e334fac9b60fb8a445f82e9","created":1789541942,"model":"mistral-small-latest","usage":{"prompt_tokens":119,"total_tokens":136,"completion_tokens":17,"prompt_tokens_details":{"cached_tokens":80},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
-        processed result for your query \"test data\" is: **test data**."}}]}'
-  recorded_at: Wed, 16 Sep 2026 06:59:02 GMT
+      string: '{"id":"beaabe0ab3f54104848ad43da60277e3","created":1789683976,"model":"mistral-small-latest","usage":{"prompt_tokens":119,"total_tokens":128,"completion_tokens":9,"prompt_tokens_details":{"cached_tokens":80},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"Processed
+        result: **test data**"}}]}'
+  recorded_at: Thu, 17 Sep 2026 22:26:17 GMT
 recorded_with: VCR 6.4.0

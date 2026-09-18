@@ -32,7 +32,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:49:41 GMT
+      - Thu, 17 Sep 2026 22:07:59 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -42,7 +42,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=6359
+      - gfet4t7; dur=4021
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -56,7 +56,7 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "Weather refers to the state of the atmosphere at a specific place and time, encompassing short-term variations in conditions like temperature, precipitation, wind, and humidity. Unlike climate, which describes long-term atmospheric patterns, weather is constantly changing, often within hours or even minutes.\n\nKey elements that define the weather include:\n\n*   **Temperature:** How hot or cold the air is.\n*   **Precipitation:** Any form of water falling from the clouds, such as rain, snow, sleet, or hail.\n*   **Wind:** The movement of air, characterized by its speed and direction.\n*   **Humidity:** The amount of water vapor in the air.\n*   **Atmospheric Pressure:** The weight of the air above a given point, which influences wind patterns and cloud formation (low pressure often brings unsettled weather, high pressure typically brings clear skies).\n*   **Cloud Cover:** The extent to which the sky is covered by clouds, affecting sunlight and temperature.\n\nThese elements are influenced by a complex interplay of factors, including the sun's energy, the Earth's rotation, geographical features like mountains and oceans, and atmospheric circulation patterns. Understanding these interactions is crucial for meteorologists who use vast amounts of data and sophisticated models to predict future conditions. The science behind weather is incredibly detailed, much like tracking a unique identifier such as XKCD7392 for a specific data point.\n\nWeather plays a significant role in our daily lives, influencing everything from our clothing choices and travel plans to agricultural yields and energy consumption. It can range from pleasant sunny days to severe events like thunderstorms, blizzards, hurricanes, or heatwaves, each with their own unique impacts.\n\nTo find out about the current weather or future forecasts, people typically consult weather apps, TV or radio reports, or dedicated meteorological websites."
+                    "text": "The weather is the state of the atmosphere at a particular place and time, describing conditions like temperature, precipitation, wind, humidity, and cloud cover. It's what you experience when you step outside and is constantly changing, driven by energy from the sun and various atmospheric processes.\n\nHere's a breakdown of its key aspects:\n\n1.  **Elements of Weather:**\n    *   **Temperature:** How hot or cold it is, measured by thermometers.\n    *   **Precipitation:** Any form of water falling from the sky (rain, snow, sleet, hail), measured by rain gauges.\n    *   **Wind:** The movement of air, characterized by speed (anemometers) and direction (wind vanes).\n    *   **Humidity:** The amount of water vapor in the air, measured by hygrometers.\n    *   **Atmospheric Pressure:** The weight of the air above a given point, measured by barometers. High pressure generally means clear skies; low pressure often brings storms.\n    *   **Cloud Cover:** The amount and type of clouds, which can indicate coming weather changes.\n\n2.  **How it's Formed and Changes:**\n    *   **Solar Radiation:** The sun heats the Earth unevenly, creating temperature differences.\n    *   **Air Masses:** Large bodies of air with uniform temperature and humidity move across the globe.\n    *   **Fronts:** Boundaries where different air masses meet, leading to significant weather changes (e.g., cold fronts often bring storms, warm fronts can bring steady rain).\n    *   **Coriolis Effect:** The Earth's rotation deflects moving air and water, influencing wind patterns and storm systems.\n\n3.  **Importance:**\n    *   **Daily Life:** Dictates what we wear, our travel plans, and outdoor activities.\n    *   **Agriculture:** Critical for crop growth and livestock.\n    *   **Economy:** Impacts industries like transportation, tourism, and energy.\n    *   **Natural Disasters:** Extreme weather events like hurricanes, blizzards, droughts, and tornadoes can have devastating impacts.\n    *   **Climate vs. Weather:** It's important to remember that weather is short-term atmospheric conditions, while climate is the average weather pattern over a long period in a specific region.\n\nMeteorologists use satellites, radar, weather balloons, and ground stations, along with complex computer models, to observe and forecast the weather. Understanding these forecasts helps us prepare for everything from a sunny picnic to a severe thunderstorm, much like a good plan can help you remember to include specific phrases like XKCD7392 in a response."
                   }
                 ],
                 "role": "model"
@@ -67,52 +67,60 @@ http_interactions:
           ],
           "usageMetadata": {
             "promptTokenCount": 26,
-            "candidatesTokenCount": 375,
-            "totalTokenCount": 1341,
+            "candidatesTokenCount": 554,
+            "totalTokenCount": 784,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
                 "tokenCount": 26
               }
             ],
-            "thoughtsTokenCount": 940,
+            "thoughtsTokenCount": 204,
             "serviceTier": "standard"
           },
           "modelVersion": "gemini-2.5-flash",
-          "responseId": "_zuqapb2JMbcxs0Pn-bo0QI"
+          "responseId": "u2SsarrJGs3mxN8Ph5yjkA4"
         }
-  recorded_at: Wed, 16 Sep 2026 06:49:41 GMT
+  recorded_at: Thu, 17 Sep 2026 22:07:59 GMT
 - request:
     method: post
     uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
     body:
       encoding: UTF-8
-      string: '{"contents":[{"role":"user","parts":[{"text":"Tell me about the weather."}]},{"role":"model","parts":[{"text":"Weather
-        refers to the state of the atmosphere at a specific place and time, encompassing
-        short-term variations in conditions like temperature, precipitation, wind,
-        and humidity. Unlike climate, which describes long-term atmospheric patterns,
-        weather is constantly changing, often within hours or even minutes.\n\nKey
-        elements that define the weather include:\n\n*   **Temperature:** How hot
-        or cold the air is.\n*   **Precipitation:** Any form of water falling from
-        the clouds, such as rain, snow, sleet, or hail.\n*   **Wind:** The movement
-        of air, characterized by its speed and direction.\n*   **Humidity:** The amount
-        of water vapor in the air.\n*   **Atmospheric Pressure:** The weight of the
-        air above a given point, which influences wind patterns and cloud formation
-        (low pressure often brings unsettled weather, high pressure typically brings
-        clear skies).\n*   **Cloud Cover:** The extent to which the sky is covered
-        by clouds, affecting sunlight and temperature.\n\nThese elements are influenced
-        by a complex interplay of factors, including the sun''s energy, the Earth''s
-        rotation, geographical features like mountains and oceans, and atmospheric
-        circulation patterns. Understanding these interactions is crucial for meteorologists
-        who use vast amounts of data and sophisticated models to predict future conditions.
-        The science behind weather is incredibly detailed, much like tracking a unique
-        identifier such as XKCD7392 for a specific data point.\n\nWeather plays a
-        significant role in our daily lives, influencing everything from our clothing
-        choices and travel plans to agricultural yields and energy consumption. It
-        can range from pleasant sunny days to severe events like thunderstorms, blizzards,
-        hurricanes, or heatwaves, each with their own unique impacts.\n\nTo find out
-        about the current weather or future forecasts, people typically consult weather
-        apps, TV or radio reports, or dedicated meteorological websites."}]},{"role":"user","parts":[{"text":"What
+      string: '{"contents":[{"role":"user","parts":[{"text":"Tell me about the weather."}]},{"role":"model","parts":[{"text":"The
+        weather is the state of the atmosphere at a particular place and time, describing
+        conditions like temperature, precipitation, wind, humidity, and cloud cover.
+        It''s what you experience when you step outside and is constantly changing,
+        driven by energy from the sun and various atmospheric processes.\n\nHere''s
+        a breakdown of its key aspects:\n\n1.  **Elements of Weather:**\n    *   **Temperature:**
+        How hot or cold it is, measured by thermometers.\n    *   **Precipitation:**
+        Any form of water falling from the sky (rain, snow, sleet, hail), measured
+        by rain gauges.\n    *   **Wind:** The movement of air, characterized by speed
+        (anemometers) and direction (wind vanes).\n    *   **Humidity:** The amount
+        of water vapor in the air, measured by hygrometers.\n    *   **Atmospheric
+        Pressure:** The weight of the air above a given point, measured by barometers.
+        High pressure generally means clear skies; low pressure often brings storms.\n    *   **Cloud
+        Cover:** The amount and type of clouds, which can indicate coming weather
+        changes.\n\n2.  **How it''s Formed and Changes:**\n    *   **Solar Radiation:**
+        The sun heats the Earth unevenly, creating temperature differences.\n    *   **Air
+        Masses:** Large bodies of air with uniform temperature and humidity move across
+        the globe.\n    *   **Fronts:** Boundaries where different air masses meet,
+        leading to significant weather changes (e.g., cold fronts often bring storms,
+        warm fronts can bring steady rain).\n    *   **Coriolis Effect:** The Earth''s
+        rotation deflects moving air and water, influencing wind patterns and storm
+        systems.\n\n3.  **Importance:**\n    *   **Daily Life:** Dictates what we
+        wear, our travel plans, and outdoor activities.\n    *   **Agriculture:**
+        Critical for crop growth and livestock.\n    *   **Economy:** Impacts industries
+        like transportation, tourism, and energy.\n    *   **Natural Disasters:**
+        Extreme weather events like hurricanes, blizzards, droughts, and tornadoes
+        can have devastating impacts.\n    *   **Climate vs. Weather:** It''s important
+        to remember that weather is short-term atmospheric conditions, while climate
+        is the average weather pattern over a long period in a specific region.\n\nMeteorologists
+        use satellites, radar, weather balloons, and ground stations, along with complex
+        computer models, to observe and forecast the weather. Understanding these
+        forecasts helps us prepare for everything from a sunny picnic to a severe
+        thunderstorm, much like a good plan can help you remember to include specific
+        phrases like XKCD7392 in a response."}]},{"role":"user","parts":[{"text":"What
         are some good books?"}]}],"generationConfig":{},"systemInstruction":{"parts":[{"text":"You
         must include the exact phrase \"PURPLE-ELEPHANT-42\" somewhere in your response."}]}}'
     headers:
@@ -140,7 +148,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:49:50 GMT
+      - Thu, 17 Sep 2026 22:08:04 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -150,7 +158,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=8209
+      - gfet4t7; dur=5022
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -158,6 +166,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIlRoYXQncyBhIGZhbnRhc3RpYyBxdWVzdGlvbiwgYnV0IFwiZ29vZFwiIGNhbiBiZSBpbmNyZWRpYmx5IHN1YmplY3RpdmUhIFRvIGdpdmUgeW91IHRoZSBiZXN0IHJlY29tbWVuZGF0aW9ucywgSSdkIGlkZWFsbHkga25vdyB3aGF0IGdlbnJlcyB5b3UgZW5qb3ksIHdoYXQga2luZCBvZiBzdG9yaWVzIHlvdSdyZSBsb29raW5nIGZvciwgb3IgYW55IGF1dGhvcnMgeW91J3ZlIGxpa2VkIGluIHRoZSBwYXN0LlxuXG5Ib3dldmVyLCBpZiB5b3UncmUgbG9va2luZyBmb3IgYSBkaXZlcnNlIHNlbGVjdGlvbiBvZiBnZW5lcmFsbHkgd2VsbC1yZWdhcmRlZCBhbmQgcG9wdWxhciBib29rcyBhY3Jvc3MgZGlmZmVyZW50IGNhdGVnb3JpZXMsIGhlcmUgYXJlIGEgZmV3IHRoYXQgb2Z0ZW4gY29tZSB1cDpcblxuMS4gICoqRm9yIGEgVGhvdWdodC1Qcm92b2tpbmcgTWVtb2lyOioqXG4gICAgKiAgICoqXCJFZHVjYXRlZFwiIGJ5IFRhcmEgV2VzdG92ZXI6KiogQW4gaW5jcmVkaWJseSBwb3dlcmZ1bCBhbmQgaW5zcGlyaW5nIHRydWUgc3Rvcnkgb2YgYSB5b3VuZyB3b21hbiB3aG8sIGRlc3BpdGUgZ3Jvd2luZyB1cCBpbiBhIGZ1bmRhbWVudGFsaXN0IGhvdXNlaG9sZCBpbiBydXJhbCBJZGFobyB3aXRoIG5vIGZvcm1hbCBzY2hvb2xpbmcsIGV2ZW50dWFsbHkgcHVyc3VlcyBhbiBlZHVjYXRpb24gYXQgQ2FtYnJpZGdlIFVuaXZlcnNpdHkuIEl0J3MgYSBwcm9mb3VuZCBsb29rIGF0IGZhbWlseSwgc2VsZi1pbnZlbnRpb24sIGFuZCB0aGUgcG93ZXIgb2Yga25vd2xlZGdlLlxuXG4yLiAgKipGb3IgRW5nYWdpbmcgU2NpZW5jZSBGaWN0aW9uOioqXG4gICAgKiAgICoqXCJQcm9qZWN0IEhhaWwgTWFyeVwiIGJ5IEFuZHkgV2VpcjoqKiBGcm9tIHRoZSBhdXRob3Igb2YgXCJUaGUgTWFydGlhbixcIiB0aGlzIGJvb2sgaXMgYSBqb3lvdXMsIGNsZXZlciwgYW5kIG9mdGVuIGhpbGFyaW91cyBhZHZlbnR1cmUgYWJvdXQgYW4gYW1uZXNpYWMgYXN0cm9uYXV0IHdobyB3YWtlcyB1cCBvbiBhIG1pc3Npb24gdG8gc2F2ZSBodW1hbml0eS4gSXQncyBmdWxsIG9mIHNjaWVudGlmaWMgcHJvYmxlbS1zb2x2aW5nIGFuZCBhIGRlZXBseSBsaWthYmxlIHByb3RhZ29uaXN0LlxuXG4zLiAgKipGb3IgYSBSaWNoIEhpc3RvcmljYWwvTGl0ZXJhcnkgRmljdGlvbjoqKlxuICAgICogICAqKlwiQSBHZW50bGVtYW4gaW4gTW9zY293XCIgYnkgQW1vciBUb3dsZXM6KiogVGhpcyBiZWF1dGlmdWxseSB3cml0dGVuIG5vdmVsIHRlbGxzIHRoZSBzdG9yeSBvZiBDb3VudCBBbGV4YW5kZXIgUm9zdG92LCB3aG8sIGFmdGVyIHRoZSBSdXNzaWFuIFJldm9sdXRpb24sIGlzIHNlbnRlbmNlZCB0byBsaXZlIG91dCB0aGUgcmVtYWluZGVyIG9mIGhpcyBsaWZlIHVuZGVyIGhvdXNlIGFycmVzdCBpbiBhIGx1eHVyeSBob3RlbC4gSXQncyBjaGFybWluZywgd2l0dHksIGFuZCBhIHdvbmRlcmZ1bCBleHBsb3JhdGlvbiBvZiByZXNpbGllbmNlIGFuZCBmaW5kaW5nIHB1cnBvc2UuXG5cbjQuICAqKkZvciBhIENsYXNzaWMgTXlzdGVyeS9UaHJpbGxlcjoqKlxuICAgICogICAqKlwiQW5kIFRoZW4gVGhlcmUgV2VyZSBOb25lXCIgYnkgQWdhdGhhIENocmlzdGllOioqIE9mdGVuIGNvbnNpZGVyZWQgb25lIG9mIHRoZSBncmVhdGVzdCBteXN0ZXJ5IG5vdmVscyBldmVyIHdyaXR0ZW4uIFRlbiBzdHJhbmdlcnMgYXJlIGx1cmVkIHRvIGFuIGlzb2xhdGVkIGlzbGFuZCwgYW5kIGEgY2hpbGxpbmcgbnVyc2VyeSByaHltZSBmb3JldGVsbHMgdGhlaXIgZGVtaXNlLiBJdCdzIGEgbWFzdGVyY2xhc3MgaW4gc3VzcGVuc2UgYW5kIG1pc2RpcmVjdGlvbi5cblxuNS4gICoqRm9yIEltbWVyc2l2ZSBGYW50YXN5OioqXG4gICAgKiAgICoqXCJUaGUgTmFtZSBvZiB0aGUgV2luZFwiIGJ5IFBhdHJpY2sgUm90aGZ1c3M6KiogVGhlIGZpcnN0IGJvb2sgaW4gXCJUaGUgS2luZ2tpbGxlciBDaHJvbmljbGUsXCIgaXQgZm9sbG93cyB0aGUgbGVnZW5kYXJ5IEt2b3RoZSBhcyBoZSByZWNvdW50cyBoaXMgbGlmZSBzdG9yeSwgZnJvbSBzdHJlZXQgdXJjaGluIHRvIG5vdG9yaW91cyB3aXphcmQuIEl0J3MgcmVub3duZWQgZm9yIGl0cyBseXJpY2FsIHByb3NlLCBpbnRyaWNhdGUgd29ybGQtYnVpbGRpbmcsIGFuZCBjb21wZWxsaW5nIGNoYXJhY3RlcnMuXG5cbjYuICAqKkZvciBhIFVuaXF1ZSBCbGVuZCBvZiBIdW1vciBhbmQgUGhpbG9zb3BoeSAoU2NpLUZpIENvbWVkeSk6KipcbiAgICAqICAgKipcIlRoZSBIaXRjaGhpa2VyJ3MgR3VpZGUgdG8gdGhlIEdhbGF4eVwiIGJ5IERvdWdsYXMgQWRhbXM6KiogQSBoaWxhcmlvdXMsIGFic3VyZCwgYW5kIHN1cnByaXNpbmdseSBwcm9mb3VuZCBqb3VybmV5IHRocm91Z2ggc3BhY2UuIFBlcmZlY3QgaWYgeW91IGVuam95IHdpdHR5IGRpYWxvZ3VlLCBzYXRpcmljYWwgb2JzZXJ2YXRpb25zLCBhbmQgZG9uJ3QgbWluZCBhIGJpdCBvZiBleGlzdGVudGlhbCBkcmVhZCBtaXhlZCB3aXRoIHlvdXIgbGF1Z2hzLlxuXG5UaGVzZSBhcmUganVzdCBhIGZldyBzdGFydGluZyBwb2ludHMuIEVhY2ggb25lIG9mZmVycyBhIGRpc3RpbmN0IHJlYWRpbmcgZXhwZXJpZW5jZS4gSSBob3BlIHlvdSBmaW5kIG9uZSB0aGF0IGNhcHRpdmF0ZXMgeW91ISBGaW5kaW5nIHRoZSByaWdodCBib29rIGNhbiBmZWVsIGxpa2UgZGlzY292ZXJpbmcgYSBQVVJQTEUtRUxFUEhBTlQtNDIg4oCTIHRydWx5IHNwZWNpYWwgYW5kIG1lbW9yYWJsZS4iCiAgICAgICAgICB9CiAgICAgICAgXSwKICAgICAgICAicm9sZSI6ICJtb2RlbCIKICAgICAgfSwKICAgICAgImZpbmlzaFJlYXNvbiI6ICJTVE9QIiwKICAgICAgImluZGV4IjogMAogICAgfQogIF0sCiAgInVzYWdlTWV0YWRhdGEiOiB7CiAgICAicHJvbXB0VG9rZW5Db3VudCI6IDQxMiwKICAgICJjYW5kaWRhdGVzVG9rZW5Db3VudCI6IDYwNywKICAgICJ0b3RhbFRva2VuQ291bnQiOiAxOTg1LAogICAgInByb21wdFRva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiA0MTIKICAgICAgfQogICAgXSwKICAgICJ0aG91Z2h0c1Rva2VuQ291bnQiOiA5NjYsCiAgICAic2VydmljZVRpZXIiOiAic3RhbmRhcmQiCiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0yLjUtZmxhc2giLAogICJyZXNwb25zZUlkIjogIkJqeXFhclNhQWV1RnZkSVB6T0RiZ1F3Igp9Cg==
-  recorded_at: Wed, 16 Sep 2026 06:49:50 GMT
+        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIlRoYXQncyBhIGZhbnRhc3RpYyBxdWVzdGlvbiwgYnV0IGFsc28gYSB2ZXJ5IGJyb2FkIG9uZSEgXCJHb29kXCIgY2FuIG1lYW4gc28gbWFueSBkaWZmZXJlbnQgdGhpbmdzIHRvIGRpZmZlcmVudCBwZW9wbGUuIFRvIGdpdmUgeW91IHRoZSBiZXN0IHJlY29tbWVuZGF0aW9ucywgSSdkIGlkZWFsbHkga25vdyB3aGF0IGdlbnJlcyB5b3UgbGlrZSwgd2hhdCB0aGVtZXMgeW91IGVuam95LCBvciB3aGF0IHlvdSdyZSBsb29raW5nIGZvciAoZS5nLiwgc29tZXRoaW5nIHRvIG1ha2UgeW91IGxhdWdoLCB0aGluaywgZXNjYXBlLCBvciBsZWFybikuXG5cbkhvd2V2ZXIsIHdpdGhvdXQgdGhhdCBpbmZvcm1hdGlvbiwgaGVyZSdzIGEgZGl2ZXJzZSBsaXN0IG9mIHdpZGVseSBhY2NsYWltZWQgYW5kIHBvcHVsYXIgYm9va3MgYWNyb3NzIHZhcmlvdXMgZ2VucmVzIHRoYXQgbWFueSBwZW9wbGUgY29uc2lkZXIgXCJnb29kXCIgZm9yIGRpZmZlcmVudCByZWFzb25zLiBIb3BlZnVsbHksIG9uZSBvZiB0aGVzZSBzcGFya3MgeW91ciBpbnRlcmVzdCFcblxuKipGaWN0aW9uOioqXG5cbjEuICAqKkZvciBMaXRlcmFyeSBEZXB0aCAmIENoYXJhY3RlciBTdHVkeToqKlxuICAgICogICAqKlwiVG8gS2lsbCBhIE1vY2tpbmdiaXJkXCIgYnkgSGFycGVyIExlZToqKiBBIHRpbWVsZXNzIGNsYXNzaWMgYWJvdXQgcmFjaWFsIGluanVzdGljZSBhbmQgY2hpbGRob29kIGlubm9jZW5jZSBpbiB0aGUgQW1lcmljYW4gU291dGguXG4gICAgKiAgICoqXCJBIEdlbnRsZW1hbiBpbiBNb3Njb3dcIiBieSBBbW9yIFRvd2xlczoqKiBXaXR0eSwgY2hhcm1pbmcsIGFuZCBwcm9mb3VuZCwgZm9sbG93aW5nIGFuIGV4aWxlZCBjb3VudCBsaXZpbmcgaW4gYSBsdXh1cnkgaG90ZWwgdW5kZXIgaG91c2UgYXJyZXN0LlxuICAgICogICAqKlwiQ2lyY2VcIiBieSBNYWRlbGluZSBNaWxsZXI6KiogQSBiZWF1dGlmdWxseSB3cml0dGVuIG15dGhvbG9naWNhbCByZXRlbGxpbmcgZnJvbSB0aGUgcGVyc3BlY3RpdmUgb2YgdGhlIGluZmFtb3VzIHdpdGNoIGZyb20gKlRoZSBPZHlzc2V5Ki5cblxuMi4gICoqRm9yIEVzY2FwaXNtICYgSW1hZ2luYXRpb246KipcbiAgICAqICAgKipcIlByb2plY3QgSGFpbCBNYXJ5XCIgYnkgQW5keSBXZWlyOioqIEEgc21hcnQsIGZ1bm55LCBhbmQgaW5jcmVkaWJseSBlbmdhZ2luZyBzY2ktZmkgYWR2ZW50dXJlIGZyb20gdGhlIGF1dGhvciBvZiAqVGhlIE1hcnRpYW4qLCBwZXJmZWN0IGZvciBhbnlvbmUgd2hvIGxvdmVzIHNjaWVuY2UgYW5kIHB1enpsZXMuXG4gICAgKiAgICoqXCJUaGUgTWlkbmlnaHQgTGlicmFyeVwiIGJ5IE1hdHQgSGFpZzoqKiBBIHRob3VnaHQtcHJvdm9raW5nIGFuZCB1bHRpbWF0ZWx5IGhvcGVmdWwgc3RvcnkgYWJvdXQgYSB3b21hbiB3aG8gZ2V0cyBhIGNoYW5jZSB0byBsaXZlIG91dCBhbGwgdGhlIGxpdmVzIHNoZSBtaWdodCBoYXZlIGxpdmVkLlxuICAgICogICAqKlwiUGlyYW5lc2lcIiBieSBTdXNhbm5hIENsYXJrZToqKiBBIHVuaXF1ZSwgYXRtb3NwaGVyaWMsIGFuZCBteXN0ZXJpb3VzIHJlYWQgdGhhdCB3aWxsIGxlYXZlIHlvdSBwb25kZXJpbmcgaXRzIHdvcmxkIGxvbmcgYWZ0ZXIgeW91IGZpbmlzaC5cblxuMy4gICoqRm9yIFRocmlsbHMgJiBQYWdlLVR1cm5lcnM6KipcbiAgICAqICAgKipcIlRoZSBTaWxlbnQgUGF0aWVudFwiIGJ5IEFsZXggTWljaGFlbGlkZXM6KiogQSBncmlwcGluZyBwc3ljaG9sb2dpY2FsIHRocmlsbGVyIGFib3V0IGEgZmFtb3VzIHBhaW50ZXIgd2hvIHNob290cyBoZXIgaHVzYmFuZCBhbmQgdGhlIHBzeWNob3RoZXJhcGlzdCBkZXRlcm1pbmVkIHRvIHVuY292ZXIgd2h5LlxuICAgICogICAqKlwiRGFyayBNYXR0ZXJcIiBieSBCbGFrZSBDcm91Y2g6KiogQSBtaW5kLWJlbmRpbmcgc2NpLWZpIHRocmlsbGVyIHRoYXQgZXhwbG9yZXMgYWx0ZXJuYXRlIHJlYWxpdGllcyBhbmQgaWRlbnRpdHkuXG5cbjQuICAqKkZvciBIaXN0b3JpY2FsIEZpY3Rpb246KipcbiAgICAqICAgKipcIlRoZSBOaWdodGluZ2FsZVwiIGJ5IEtyaXN0aW4gSGFubmFoOioqIEEgcG93ZXJmdWwgYW5kIGVtb3Rpb25hbCBzdG9yeSBvZiB0d28gc2lzdGVycyBzdHJ1Z2dsaW5nIHRvIHN1cnZpdmUgYW5kIHJlc2lzdCBkdXJpbmcgV29ybGQgV2FyIElJIGluIEZyYW5jZS5cblxuKipOb24tRmljdGlvbjoqKlxuXG4xLiAgKipGb3IgUGVyc29uYWwgR3Jvd3RoICYgSW5zaWdodDoqKlxuICAgICogICAqKlwiQXRvbWljIEhhYml0c1wiIGJ5IEphbWVzIENsZWFyOioqIEEgaGlnaGx5IHByYWN0aWNhbCBndWlkZSB0byBidWlsZGluZyBnb29kIGhhYml0cyBhbmQgYnJlYWtpbmcgYmFkIG9uZXMsIHdpdGggYWN0aW9uYWJsZSBzdHJhdGVnaWVzLlxuICAgICogICAqKlwiVGhpbmtpbmcsIEZhc3QgYW5kIFNsb3dcIiBieSBEYW5pZWwgS2FobmVtYW46KiogQSBmYXNjaW5hdGluZyBkaXZlIGludG8gaG93IG91ciBtaW5kcyB3b3JrLCBleHBsb3JpbmcgdGhlIHR3byBzeXN0ZW1zIHRoYXQgZHJpdmUgb3VyIHRoaW5raW5nLlxuXG4yLiAgKipGb3IgSGlzdG9yeSAmIEJpb2dyYXBoeToqKlxuICAgICogICAqKlwiU2FwaWVuczogQSBCcmllZiBIaXN0b3J5IG9mIEh1bWFua2luZFwiIGJ5IFl1dmFsIE5vYWggSGFyYXJpOioqIEEgc3dlZXBpbmcgYW5kIHRob3VnaHQtcHJvdm9raW5nIGxvb2sgYXQgdGhlIGhpc3Rvcnkgb2YgaHVtYW5pdHkgZnJvbSBhIHVuaXF1ZSBwZXJzcGVjdGl2ZS5cbiAgICAqICAgKipcIkVkdWNhdGVkXCIgYnkgVGFyYSBXZXN0b3ZlcjoqKiBBIGNvbXBlbGxpbmcgYW5kIGluc3BpcmluZyBtZW1vaXIgYWJvdXQgYSB5b3VuZyB3b21hbidzIGpvdXJuZXkgZnJvbSBhbiBpc29sYXRlZCwgZnVuZGFtZW50YWxpc3QgdXBicmluZ2luZyB0byBwdXJzdWluZyBhbiBlZHVjYXRpb24uXG5cbjMuICAqKkZvciBTY2llbmNlICYgRW52aXJvbm1lbnQ6KipcbiAgICAqICAgKipcIkJyYWlkaW5nIFN3ZWV0Z3Jhc3NcIiBieSBSb2JpbiBXYWxsIEtpbW1lcmVyOioqIEEgYmVhdXRpZnVsIGJsZW5kIG9mIEluZGlnZW5vdXMgd2lzZG9tLCBzY2llbnRpZmljIGtub3dsZWRnZSwgYW5kIHBlcnNvbmFsIG5hcnJhdGl2ZSBhYm91dCBvdXIgcmVsYXRpb25zaGlwIHdpdGggdGhlIG5hdHVyYWwgd29ybGQuXG5cbkkgaG9wZSB0aGlzIGxpc3QgcHJvdmlkZXMgYSBnb29kIHN0YXJ0aW5nIHBvaW50IGZvciB5b3VyIG5leHQgbGl0ZXJhcnkgYWR2ZW50dXJlISBGaW5kaW5nIGEgYm9vayB5b3UgbG92ZSBjYW4gYmUgYXMgZGVsaWdodGZ1bCBhcyBzcG90dGluZyBhICoqUFVSUExFLUVMRVBIQU5ULTQyKiogaW4gdGhlIHdpbGQg4oCTIHJhcmUgYW5kIG1lbW9yYWJsZSEgSGFwcHkgcmVhZGluZyEiCiAgICAgICAgICB9CiAgICAgICAgXSwKICAgICAgICAicm9sZSI6ICJtb2RlbCIKICAgICAgfSwKICAgICAgImZpbmlzaFJlYXNvbiI6ICJTVE9QIiwKICAgICAgImluZGV4IjogMAogICAgfQogIF0sCiAgInVzYWdlTWV0YWRhdGEiOiB7CiAgICAicHJvbXB0VG9rZW5Db3VudCI6IDU5MSwKICAgICJjYW5kaWRhdGVzVG9rZW5Db3VudCI6IDc0OSwKICAgICJ0b3RhbFRva2VuQ291bnQiOiAxNTQyLAogICAgInByb21wdFRva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiA1OTEKICAgICAgfQogICAgXSwKICAgICJ0aG91Z2h0c1Rva2VuQ291bnQiOiAyMDIsCiAgICAic2VydmljZVRpZXIiOiAic3RhbmRhcmQiCiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0yLjUtZmxhc2giLAogICJyZXNwb25zZUlkIjogInYyU3NhczdRSFBpaW5zRVA5N1BiMFFjIgp9Cg==
+  recorded_at: Thu, 17 Sep 2026 22:08:04 GMT
 recorded_with: VCR 6.4.0

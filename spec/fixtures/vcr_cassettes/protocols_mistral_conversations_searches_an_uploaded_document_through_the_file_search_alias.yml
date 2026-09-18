@@ -23,7 +23,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:57:22 GMT
+      - Thu, 17 Sep 2026 22:06:35 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -31,19 +31,19 @@ http_interactions:
       Connection:
       - keep-alive
       Mistral-Correlation-Id:
-      - 01a0a901-7b9b-767d-b6fa-44f43cb54939
+      - 01a0b168-4295-7555-abde-8f265d10f20a
       X-Kong-Request-Id:
-      - 01a0a901-7b9b-767d-b6fa-44f43cb54939
+      - 01a0b168-4295-7555-abde-8f265d10f20a
       Server:
       - cloudflare
       X-Envoy-Upstream-Service-Time:
-      - '158'
+      - '122'
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '166'
+      - '125'
       X-Kong-Proxy-Latency:
-      - '16'
+      - '18'
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
@@ -58,25 +58,25 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
-      string: '{"id":"01a0a901-7bc6-75e1-95e8-32511a6fd120","name":"RubyLLM file search
-        integration test","created_at":"2026-09-16T06:57:21.870628Z","updated_at":"2026-09-16T06:57:21.870628Z","owner_id":"e29e092b-ee79-424d-b47f-aa24b319cd0e","owner_type":"Workspace","total_size":0,"nb_documents":0,"chunk_size":null,"emoji":null,"description":null,"generated_description":null,"explicit_user_members_count":null,"explicit_workspace_members_count":null,"org_sharing_role":null,"workspace_sharing_role":null,"sharing_scope":"private","meta":null,"type":"document","visibility":"all"}'
-  recorded_at: Wed, 16 Sep 2026 06:57:22 GMT
+      string: '{"id":"01a0b168-42c4-769f-921e-b4038b2844fc","name":"RubyLLM file search
+        integration test","created_at":"2026-09-17T22:06:35.211496Z","updated_at":"2026-09-17T22:06:35.211496Z","owner_id":"e29e092b-ee79-424d-b47f-aa24b319cd0e","owner_type":"Workspace","total_size":0,"nb_documents":0,"chunk_size":null,"emoji":null,"description":null,"generated_description":null,"explicit_user_members_count":null,"explicit_workspace_members_count":null,"org_sharing_role":null,"workspace_sharing_role":null,"sharing_scope":"private","meta":null,"type":"document","visibility":"all"}'
+  recorded_at: Thu, 17 Sep 2026 22:06:35 GMT
 - request:
     method: post
-    uri: https://api.mistral.ai/v1/libraries/01a0a901-7bc6-75e1-95e8-32511a6fd120/documents
+    uri: https://api.mistral.ai/v1/libraries/01a0b168-42c4-769f-921e-b4038b2844fc/documents
     body:
       encoding: UTF-8
-      string: "-------------RubyMultipartPost-7fcc47c8a13e489700e6acbb8747eec8\r\nContent-Disposition:
+      string: "-------------RubyMultipartPost-15d8c4ff2ea86e41de0dd47cf9de9a2a\r\nContent-Disposition:
         form-data; name=\"file\"; filename=\"facts.txt\"\r\nContent-Length: 75\r\nContent-Type:
         text/plain\r\nContent-Transfer-Encoding: binary\r\n\r\nThe fictional test
-        project is codenamed saffron and has seven paper robots.\r\n-------------RubyMultipartPost-7fcc47c8a13e489700e6acbb8747eec8--\r\n"
+        project is codenamed saffron and has seven paper robots.\r\n-------------RubyMultipartPost-15d8c4ff2ea86e41de0dd47cf9de9a2a--\r\n"
     headers:
       User-Agent:
       - Faraday v2.14.3
       Authorization:
       - Bearer <AUTH_TOKEN>
       Content-Type:
-      - multipart/form-data; boundary=-----------RubyMultipartPost-7fcc47c8a13e489700e6acbb8747eec8
+      - multipart/form-data; boundary=-----------RubyMultipartPost-15d8c4ff2ea86e41de0dd47cf9de9a2a
       Content-Length:
       - '359'
       Accept-Encoding:
@@ -89,19 +89,17 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:57:22 GMT
+      - Thu, 17 Sep 2026 22:06:35 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '611'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a901-7cb3-78b8-a1ac-3f0b3a0b35f7
+      - 01a0b168-437b-7624-ab91-8946a570812d
       X-Kong-Request-Id:
-      - 01a0a901-7cb3-78b8-a1ac-3f0b3a0b35f7
+      - 01a0b168-437b-7624-ab91-8946a570812d
       Server:
       - cloudflare
       X-Ratelimit-Limit-Document-Minute:
@@ -111,32 +109,34 @@ http_interactions:
       X-Ratelimit-Limit-Document-Day:
       - '5000'
       X-Ratelimit-Remaining-Document-Day:
-      - '4998'
+      - '4999'
       X-Envoy-Upstream-Service-Time:
-      - '426'
+      - '285'
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '429'
+      - '289'
       X-Kong-Proxy-Latency:
-      - '12'
-      X-Content-Type-Options:
-      - nosniff
+      - '21'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
-      string: '{"id":"b05311e6-60c9-4743-b744-8c03da543381","library_id":"01a0a901-7bc6-75e1-95e8-32511a6fd120","hash":"fd8ebd2e00a9fd38610ff8694d47e4f1","mime_type":"text/plain","extension":"txt","size":75,"name":"facts.txt","summary":null,"created_at":"2026-09-16T06:57:22.233929Z","last_processed_at":null,"number_of_pages":null,"process_status":"in_progress","uploaded_by_id":"e29e092b-ee79-424d-b47f-aa24b319cd0e","uploaded_by_type":"Workspace","tokens_processing_main_content":null,"tokens_processing_summary":null,"url":null,"attributes":null,"expires_at":null,"processing_status":"Running","tokens_processing_total":0}'
-  recorded_at: Wed, 16 Sep 2026 06:57:22 GMT
+      string: '{"id":"3f14aad2-3a58-45f2-9135-f811d34d976b","library_id":"01a0b168-42c4-769f-921e-b4038b2844fc","hash":"fd8ebd2e00a9fd38610ff8694d47e4f1","mime_type":"text/plain","extension":"txt","size":75,"name":"facts.txt","summary":null,"created_at":"2026-09-17T22:06:35.539445Z","last_processed_at":null,"number_of_pages":null,"process_status":"in_progress","uploaded_by_id":"e29e092b-ee79-424d-b47f-aa24b319cd0e","uploaded_by_type":"Workspace","tokens_processing_main_content":null,"tokens_processing_summary":null,"url":null,"attributes":null,"expires_at":null,"processing_status":"Running","tokens_processing_total":0}'
+  recorded_at: Thu, 17 Sep 2026 22:06:35 GMT
 - request:
     method: get
-    uri: https://api.mistral.ai/v1/libraries/01a0a901-7bc6-75e1-95e8-32511a6fd120/documents/b05311e6-60c9-4743-b744-8c03da543381/status
+    uri: https://api.mistral.ai/v1/libraries/01a0b168-42c4-769f-921e-b4038b2844fc/documents/3f14aad2-3a58-45f2-9135-f811d34d976b/status
     body:
       encoding: US-ASCII
       string: ''
@@ -155,77 +155,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:57:22 GMT
+      - Thu, 17 Sep 2026 22:06:35 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a901-7ecd-7299-a357-9039be83d660
+      - 01a0b168-450e-74bf-8ada-95e185dbef56
       X-Kong-Request-Id:
-      - 01a0a901-7ecd-7299-a357-9039be83d660
-      Server:
-      - cloudflare
-      X-Envoy-Upstream-Service-Time:
-      - '36'
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Kong-Upstream-Latency:
-      - '40'
-      X-Kong-Proxy-Latency:
-      - '62'
-      X-Content-Type-Options:
-      - nosniff
-      Cf-Cache-Status:
-      - DYNAMIC
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
-      Cf-Ray:
-      - "<CF_RAY>"
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"document_id":"b05311e6-60c9-4743-b744-8c03da543381","process_status":"in_progress","processing_status":"Running"}'
-  recorded_at: Wed, 16 Sep 2026 06:57:22 GMT
-- request:
-    method: get
-    uri: https://api.mistral.ai/v1/libraries/01a0a901-7bc6-75e1-95e8-32511a6fd120/documents/b05311e6-60c9-4743-b744-8c03da543381/status
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      Authorization:
-      - Bearer <AUTH_TOKEN>
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 16 Sep 2026 06:57:23 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
-      Mistral-Correlation-Id:
-      - 01a0a901-8187-71bc-85b9-2582bf339fa7
-      X-Kong-Request-Id:
-      - 01a0a901-8187-71bc-85b9-2582bf339fa7
+      - 01a0b168-450e-74bf-8ada-95e185dbef56
       Server:
       - cloudflare
       X-Envoy-Upstream-Service-Time:
@@ -233,26 +173,28 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '34'
+      - '37'
       X-Kong-Proxy-Latency:
-      - '13'
-      X-Content-Type-Options:
-      - nosniff
+      - '15'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"document_id":"b05311e6-60c9-4743-b744-8c03da543381","process_status":"in_progress","processing_status":"Running"}'
-  recorded_at: Wed, 16 Sep 2026 06:57:23 GMT
+      string: '{"document_id":"3f14aad2-3a58-45f2-9135-f811d34d976b","process_status":"in_progress","processing_status":"Running"}'
+  recorded_at: Thu, 17 Sep 2026 22:06:35 GMT
 - request:
     method: get
-    uri: https://api.mistral.ai/v1/libraries/01a0a901-7bc6-75e1-95e8-32511a6fd120/documents/b05311e6-60c9-4743-b744-8c03da543381/status
+    uri: https://api.mistral.ai/v1/libraries/01a0b168-42c4-769f-921e-b4038b2844fc/documents/3f14aad2-3a58-45f2-9135-f811d34d976b/status
     body:
       encoding: US-ASCII
       string: ''
@@ -271,19 +213,133 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:57:24 GMT
+      - Thu, 17 Sep 2026 22:06:36 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Mistral-Correlation-Id:
+      - 01a0b168-4786-73ca-9822-313d83657799
+      X-Kong-Request-Id:
+      - 01a0b168-4786-73ca-9822-313d83657799
+      Server:
+      - cloudflare
+      X-Envoy-Upstream-Service-Time:
+      - '25'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Kong-Upstream-Latency:
+      - '28'
+      X-Kong-Proxy-Latency:
+      - '14'
+      Cf-Cache-Status:
+      - DYNAMIC
       Set-Cookie:
       - "<COOKIE>"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Cf-Ray:
+      - "<CF_RAY>"
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"document_id":"3f14aad2-3a58-45f2-9135-f811d34d976b","process_status":"in_progress","processing_status":"Running"}'
+  recorded_at: Thu, 17 Sep 2026 22:06:36 GMT
+- request:
+    method: get
+    uri: https://api.mistral.ai/v1/libraries/01a0b168-42c4-769f-921e-b4038b2844fc/documents/3f14aad2-3a58-45f2-9135-f811d34d976b/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 17 Sep 2026 22:06:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Mistral-Correlation-Id:
-      - 01a0a901-8401-70d3-9910-4c20959519c3
+      - 01a0b168-4a04-7fc4-a7ed-d3e9383344b6
       X-Kong-Request-Id:
-      - 01a0a901-8401-70d3-9910-4c20959519c3
+      - 01a0b168-4a04-7fc4-a7ed-d3e9383344b6
+      Server:
+      - cloudflare
+      X-Envoy-Upstream-Service-Time:
+      - '20'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Kong-Upstream-Latency:
+      - '24'
+      X-Kong-Proxy-Latency:
+      - '13'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Cf-Ray:
+      - "<CF_RAY>"
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"document_id":"3f14aad2-3a58-45f2-9135-f811d34d976b","process_status":"in_progress","processing_status":"Running"}'
+  recorded_at: Thu, 17 Sep 2026 22:06:37 GMT
+- request:
+    method: get
+    uri: https://api.mistral.ai/v1/libraries/01a0b168-42c4-769f-921e-b4038b2844fc/documents/3f14aad2-3a58-45f2-9135-f811d34d976b/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 17 Sep 2026 22:06:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Mistral-Correlation-Id:
+      - 01a0b168-4c78-7053-a736-22e1a18faad5
+      X-Kong-Request-Id:
+      - 01a0b168-4c78-7053-a736-22e1a18faad5
       Server:
       - cloudflare
       X-Envoy-Upstream-Service-Time:
@@ -291,23 +347,25 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '29'
+      - '26'
       X-Kong-Proxy-Latency:
-      - '13'
-      X-Content-Type-Options:
-      - nosniff
+      - '14'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"document_id":"b05311e6-60c9-4743-b744-8c03da543381","process_status":"done","processing_status":"Completed"}'
-  recorded_at: Wed, 16 Sep 2026 06:57:24 GMT
+      string: '{"document_id":"3f14aad2-3a58-45f2-9135-f811d34d976b","process_status":"done","processing_status":"Completed"}'
+  recorded_at: Thu, 17 Sep 2026 22:06:37 GMT
 - request:
     method: post
     uri: https://api.mistral.ai/v1/conversations
@@ -315,7 +373,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"mistral-small-latest","inputs":[{"type":"message.input","role":"user","content":"Search
         facts.txt in the library. What is the fictional project codename and how many
-        paper robots does it have?"}],"instructions":"","completion_args":{},"tools":[{"type":"document_library","library_ids":["01a0a901-7bc6-75e1-95e8-32511a6fd120"]}],"store":false,"stream":false}'
+        paper robots does it have?"}],"instructions":"","completion_args":{},"tools":[{"type":"document_library","library_ids":["01a0b168-42c4-769f-921e-b4038b2844fc"]}],"store":false,"stream":false}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -333,31 +391,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:57:27 GMT
+      - Thu, 17 Sep 2026 22:06:42 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a901-84a2-7733-9c87-3876c136a3e1
+      - 01a0b168-4cfb-7daa-a766-abf1261ab1f8
       X-Kong-Request-Id:
-      - 01a0a901-84a2-7733-9c87-3876c136a3e1
+      - 01a0b168-4cfb-7daa-a766-abf1261ab1f8
       X-Ratelimit-Limit-Tokens-Minute:
       - '100000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '98263'
-      X-Ratelimit-Limit-Document-Library-Mcp-Minute:
-      - '30'
-      X-Ratelimit-Remaining-Document-Library-Mcp-Minute:
-      - '29'
-      X-Ratelimit-Limit-Document-Library-Mcp-Day:
-      - '30000'
-      X-Ratelimit-Remaining-Document-Library-Mcp-Day:
-      - '29997'
+      - '80283'
       X-Ratelimit-Limit-Document-Library-Minute:
       - '30'
       X-Ratelimit-Remaining-Document-Library-Minute:
@@ -365,60 +413,63 @@ http_interactions:
       X-Ratelimit-Limit-Document-Library-Day:
       - '30000'
       X-Ratelimit-Remaining-Document-Library-Day:
+      - '29999'
+      X-Ratelimit-Limit-Document-Library-Mcp-Minute:
+      - '30'
+      X-Ratelimit-Remaining-Document-Library-Mcp-Minute:
+      - '28'
+      X-Ratelimit-Limit-Document-Library-Mcp-Day:
+      - '30000'
+      X-Ratelimit-Remaining-Document-Library-Mcp-Day:
       - '29998'
       X-Ratelimit-Limit-Open-Library-Result-Minute:
       - '30'
       X-Ratelimit-Remaining-Open-Library-Result-Minute:
-      - '28'
+      - '27'
       X-Ratelimit-Limit-Open-Library-Result-Day:
       - '30000'
       X-Ratelimit-Remaining-Open-Library-Result-Day:
-      - '29996'
+      - '29997'
       X-Envoy-Upstream-Service-Time:
-      - '3584'
+      - '4706'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '3587'
+      - '4708'
       X-Kong-Proxy-Latency:
-      - '19'
-      X-Content-Type-Options:
-      - nosniff
+      - '15'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"object":"conversation.response","conversation_id":"conv_01a0a90184e47317bd70c2463be1a306","outputs":[{"object":"entry","type":"tool.execution","created_at":"2026-09-16T06:57:24.834189Z","completed_at":"2026-09-16T06:57:25.586797Z","model":"mistral-small-latest","id":"tool_exec_01a0a901876277e2a0a3ca4fcfa639c0","name":"library_list_documents","arguments":"{\"document_name_contains\":
-        \"facts.txt\", \"page_size\": 1}","function":"library_list_documents","info":{"result":"Error
-        executing tool library_list_documents: Output validation error: ''result''
-        is a required property"}},{"object":"entry","type":"tool.execution","created_at":"2026-09-16T06:57:25.802996Z","completed_at":"2026-09-16T06:57:26.484585Z","model":"mistral-small-latest","id":"tool_exec_01a0a9018b2a74a6b2b82401be2346c9","name":"document_library","arguments":"{\"query\":
-        \"fictional project codename paper robots\", \"libraries_ids\": []}","function":"library_search","info":{"result":"{\"VfljDqDN\":
-        {\"url\": \"b05311e6-60c9-4743-b744-8c03da543381\", \"title\": \"facts.txt\",
-        \"description\": \"The fictional test project, codenamed &#x27;Saffron,&#x27;
-        involves seven paper robots as part of its design or testing phase.\", \"snippets\":
-        [\"The fictional test project is codenamed saffron and has seven paper robots.\",
-        \"The fictional test project, codenamed &#x27;Saffron,&#x27; involves seven
-        paper robots as part of its design or testing phase.\", \"facts.txt\"], \"date\":
-        null, \"rank\": 0, \"source\": \"library_search\", \"metadata\": {\"relevant_pages\":
-        [0], \"relevant_snippet_positions_in_text\": \"0\", \"library_id\": \"01a0a901-7bc6-75e1-95e8-32511a6fd120\",
-        \"library_name\": \"RubyLLM file search integration test\"}, \"can_open\":
-        true}}"}},{"object":"entry","type":"tool.execution","created_at":"2026-09-16T06:57:26.684651Z","completed_at":"2026-09-16T06:57:27.439748Z","model":"mistral-small-latest","id":"tool_exec_01a0a9018e9c76a7a937f543a7e645c4","name":"open_library_result","arguments":"{\"document_id\":
-        \"b05311e6-60c9-4743-b744-8c03da543381\", \"relevant_snippet_positions_in_text\":
-        \"0\"}","function":"open_library_result","info":{"result":[{"type":"text","text":"{\"url\":\"b05311e6-60c9-4743-b744-8c03da543381\",\"source\":\"library_search\",\"content\":\"The
-        fictional test project is codenamed saffron and has seven paper robots.\",\"can_open\":false,\"title\":\"facts.txt\",\"description\":null,\"date\":null,\"metadata\":{}}"}]}},{"object":"entry","type":"message.output","created_at":"2026-09-16T06:57:27.617556Z","completed_at":"2026-09-16T06:57:27.699750Z","model":"mistral-small-latest","id":"msg_01a0a901924172ba897c641c96f6c68f","role":"assistant","content":"The
-        fictional project codename is **Saffron**, and it has **7 paper robots**."}],"usage":{"prompt_tokens":820,"completion_tokens":131,"total_tokens":1321,"connector_tokens":370,"connectors":{"document_library_mcp":1,"document_library":1,"open_library_result":1}},"guardrails":null}'
-  recorded_at: Wed, 16 Sep 2026 06:57:27 GMT
+      string: '{"object":"conversation.response","conversation_id":"conv_01a0b1684d2d72b7a2f287cd5b566c98","outputs":[{"object":"entry","type":"tool.execution","created_at":"2026-09-17T22:06:38.418359Z","completed_at":"2026-09-17T22:06:39.507199Z","model":"mistral-small-latest","id":"tool_exec_01a0b1684f527251b7d30f407158cba8","name":"document_library","arguments":"{\"query\":
+        \"fictional project codename paper robots\", \"document_ids\": [\"f6f5b5b0-8b1a-4b3a-8b1a-4b3a8b1a4b3a\"]}","function":"library_search","info":{"result":"{}"}},{"object":"entry","type":"tool.execution","created_at":"2026-09-17T22:06:39.753762Z","completed_at":"2026-09-17T22:06:40.359095Z","model":"mistral-small-latest","id":"tool_exec_01a0b16854897634bb2f7777313ce63e","name":"library_list_documents","arguments":"{\"document_name_contains\":
+        \"facts.txt\", \"page_size\": 1}","function":"library_list_documents","info":{"result":[{"type":"text","text":"{\"pagination\":{\"total_items\":1,\"total_pages\":1,\"current_page\":0,\"page_size\":1,\"has_more\":false},\"data\":[{\"id\":\"3f14aad2-3a58-45f2-9135-f811d34d976b\",\"library_id\":\"01a0b168-42c4-769f-921e-b4038b2844fc\",\"hash\":\"fd8ebd2e00a9fd38610ff8694d47e4f1\",\"mime_type\":\"text/plain\",\"extension\":\"txt\",\"size\":75,\"name\":\"facts.txt\",\"summary\":\"The
+        fictional project ''Saffron'' is codenamed as such and features seven intricate
+        paper robots as part of its conceptual or design elements.\",\"created_at\":\"2026-09-17T22:06:35.539445Z\",\"last_processed_at\":\"2026-09-17T22:06:37.112441Z\",\"number_of_pages\":null,\"process_status\":\"done\",\"uploaded_by_id\":\"e29e092b-ee79-424d-b47f-aa24b319cd0e\",\"uploaded_by_type\":\"Workspace\",\"tokens_processing_main_content\":21,\"tokens_processing_summary\":107,\"url\":null,\"attributes\":null,\"expires_at\":null,\"processing_status\":\"Completed\",\"tokens_processing_total\":128}]}"}]}},{"object":"entry","type":"tool.execution","created_at":"2026-09-17T22:06:40.598198Z","completed_at":"2026-09-17T22:06:41.269813Z","model":"mistral-small-latest","id":"tool_exec_01a0b16857d671bea3ca386f0ebb5cc7","name":"library_fetch","arguments":"{\"document_id\":
+        \"3f14aad2-3a58-45f2-9135-f811d34d976b\"}","function":"library_fetch","info":{"result":[{"type":"file_url","file_url":"https://mistralaifilesapiprodswe.blob.core.windows.net/document-library/development/9b218a04-c778-4b07-860f-f5798b1f4475/01a0b168-42c4-769f-921e-b4038b2844fc/3f14aad2-3a58-45f2-9135-f811d34d976b/raw.txt?se=2026-09-17T22%3A36%3A41Z&sp=r&sv=2026-02-06&sr=b&skoid=29aa7cdf-e8a2-4414-a9fe-1a60de1a41bd&sktid=4fbc1168-2984-4d17-af19-ac5138c2378e&skt=2026-09-17T22%3A06%3A41Z&ske=2026-09-17T23%3A06%3A41Z&sks=b&skv=2026-02-06&sig=FILTERED_SIGNATURE","file_name":"facts.txt","file_type":"txt","summary":"The
+        fictional project ''Saffron'' is codenamed as such and features seven intricate
+        paper robots as part of its conceptual or design elements."}]}},{"object":"entry","type":"tool.execution","created_at":"2026-09-17T22:06:41.494522Z","completed_at":"2026-09-17T22:06:42.173782Z","model":"mistral-small-latest","id":"tool_exec_01a0b1685b5672759dbce854d910a2c1","name":"open_library_result","arguments":"{\"document_id\":
+        \"3f14aad2-3a58-45f2-9135-f811d34d976b\", \"relevant_snippet_positions_in_text\":
+        \"1\"}","function":"open_library_result","info":{"result":[{"type":"text","text":"{\"url\":\"3f14aad2-3a58-45f2-9135-f811d34d976b\",\"source\":\"library_search\",\"content\":\"The
+        fictional test project is codenamed saffron and has seven paper robots.\",\"can_open\":false,\"title\":\"facts.txt\",\"description\":null,\"date\":null,\"metadata\":{}}"}]}},{"object":"entry","type":"message.output","created_at":"2026-09-17T22:06:42.417528Z","completed_at":"2026-09-17T22:06:42.516464Z","model":"mistral-small-latest","id":"msg_01a0b1685ef174a2ac406f58dfc11196","role":"assistant","content":"The
+        fictional project codename is **Saffron**, and it has **7 paper robots**."}],"usage":{"prompt_tokens":820,"completion_tokens":212,"total_tokens":1504,"connector_tokens":472,"connectors":{"document_library":1,"document_library_mcp":2,"open_library_result":1}},"guardrails":null}'
+  recorded_at: Thu, 17 Sep 2026 22:06:42 GMT
 - request:
     method: delete
-    uri: https://api.mistral.ai/v1/libraries/01a0a901-7bc6-75e1-95e8-32511a6fd120
+    uri: https://api.mistral.ai/v1/libraries/01a0b168-42c4-769f-921e-b4038b2844fc
     body:
       encoding: US-ASCII
       string: ''
@@ -437,45 +488,45 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:57:28 GMT
+      - Thu, 17 Sep 2026 22:06:43 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a901-9317-7502-8c85-2cf212f9bff2
+      - 01a0b168-5fc7-713a-b61b-61333415a7cc
       X-Kong-Request-Id:
-      - 01a0a901-9317-7502-8c85-2cf212f9bff2
+      - 01a0b168-5fc7-713a-b61b-61333415a7cc
       Server:
       - cloudflare
       X-Envoy-Upstream-Service-Time:
-      - '192'
+      - '345'
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '195'
+      - '349'
       X-Kong-Proxy-Latency:
-      - '15'
-      X-Content-Type-Options:
-      - nosniff
+      - '14'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"01a0a901-7bc6-75e1-95e8-32511a6fd120","name":"RubyLLM file search
-        integration test","created_at":"2026-09-16T06:57:21.870628Z","updated_at":"2026-09-16T06:57:27.898440Z","owner_id":"e29e092b-ee79-424d-b47f-aa24b319cd0e","owner_type":"Workspace","total_size":75,"nb_documents":1,"chunk_size":null,"emoji":null,"description":null,"generated_description":"The
-        personal digital library now includes the ''Saffron'' project, featuring seven
-        paper robots designed for testing phases, alongside existing collections of
-        technical and creative works.","explicit_user_members_count":null,"explicit_workspace_members_count":null,"org_sharing_role":null,"workspace_sharing_role":null,"sharing_scope":"private","meta":null,"type":"document","visibility":"all"}'
-  recorded_at: Wed, 16 Sep 2026 06:57:28 GMT
+      string: '{"id":"01a0b168-42c4-769f-921e-b4038b2844fc","name":"RubyLLM file search
+        integration test","created_at":"2026-09-17T22:06:35.211496Z","updated_at":"2026-09-17T22:06:42.694479Z","owner_id":"e29e092b-ee79-424d-b47f-aa24b319cd0e","owner_type":"Workspace","total_size":75,"nb_documents":1,"chunk_size":null,"emoji":null,"description":null,"generated_description":"The
+        personal digital library features the fictional ''Saffron'' project, characterized
+        by seven intricate paper robots as key conceptual and design elements, blending
+        artistry with technical innovation.","explicit_user_members_count":null,"explicit_workspace_members_count":null,"org_sharing_role":null,"workspace_sharing_role":null,"sharing_scope":"private","meta":null,"type":"document","visibility":"all"}'
+  recorded_at: Thu, 17 Sep 2026 22:06:43 GMT
 recorded_with: VCR 6.4.0

@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:49:37 GMT
+      - Thu, 17 Sep 2026 22:17:34 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
@@ -45,13 +45,13 @@ http_interactions:
       X-Ms-Rai-Invoked:
       - 'true'
       Traceparent:
-      - 00-da8bd57ed4133fe2cb6e0c529a7dc120-302967e7003b16ce-00
+      - 00-495b1311952453d81cb1f589e342c8ab-897d91c60014dee3-00
       X-Request-Id:
       - "<X_REQUEST_ID>"
       X-Xai-Model-Address:
       - http://localhost:9988
       X-Ms-Client-Request-Id:
-      - 16a9bc78-584e-417b-b9b8-e32093ffda8a
+      - 78ee68a9-a806-40ac-98dc-5120dcde9159
       Azureml-Model-Session:
       - d20260810234415-1ce5aa48
       X-Ms-Inference-Retry-History:
@@ -65,9 +65,9 @@ http_interactions:
       X-Ratelimit-Key:
       - grok-4-1-fast-non-reasoning
       X-Ratelimit-Remaining-Requests:
-      - '44'
+      - '46'
       X-Ratelimit-Reset-Requests:
-      - '6'
+      - '4'
       X-Ratelimit-Limit-Requests:
       - '50'
       X-Ratelimit-Renewalperiod-Requests:
@@ -87,7 +87,7 @@ http_interactions:
       Azureai-Fe-Offer-Type:
       - paygo
       Apim-Request-Id:
-      - 16a9bc78-584e-417b-b9b8-e32093ffda8a
+      - 78ee68a9-a806-40ac-98dc-5120dcde9159
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -96,7 +96,7 @@ http_interactions:
       - West Europe
     body:
       encoding: UTF-8
-      string: '{"id":"06e4d003-e8e5-4c64-a0c8-770cd5c90416","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"call_31157473","index":0,"type":"function","function":{"name":"any_of_params","arguments":"{\"task\":\"Review
-        PR\",\"status\":\"pending\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":249,"completion_tokens":37,"total_tokens":286,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":314,"audio_tokens":0,"text_tokens":249,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789541378,"object":"chat.completion","prompt_filter_results":null}'
-  recorded_at: Wed, 16 Sep 2026 06:49:38 GMT
+      string: '{"id":"fe6e089f-4937-4dff-b45e-f94f9216705d","model":"grok-4-1-fast-non-reasoning","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"call_72582114","index":0,"type":"function","function":{"name":"any_of_params","arguments":"{\"task\":\"Review
+        PR\",\"status\":\"pending\"}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":249,"completion_tokens":37,"total_tokens":286,"audio_prompt_tokens":0,"prompt_tokens_details":{"cached_tokens":314,"audio_tokens":0,"text_tokens":249,"image_tokens":0},"completion_tokens_details":{"reasoning_tokens":0,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"created":1789683455,"object":"chat.completion","prompt_filter_results":null}'
+  recorded_at: Thu, 17 Sep 2026 22:17:35 GMT
 recorded_with: VCR 6.4.0

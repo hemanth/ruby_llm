@@ -42,23 +42,23 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - 5ad1f9a2e628f1542a8f94744acdf963
+      - 57c839b17113775b9063c09d35fd61ed
       Date:
-      - Wed, 16 Sep 2026 06:49:02 GMT
+      - Thu, 17 Sep 2026 22:07:44 GMT
       X-Envoy-Upstream-Service-Time:
-      - '337'
+      - '408'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"3d86f042-f08c-4770-84d8-85637e62abe9","message":{"role":"assistant","content":[{"type":"text","text":"{\"name\":\"Bob\",\"age\":30}"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":5,"output_tokens":10},"tokens":{"input_tokens":607,"output_tokens":13},"cached_tokens":496}}'
-  recorded_at: Wed, 16 Sep 2026 06:49:02 GMT
+      string: '{"id":"6e5a724d-b179-4ef1-a63a-117b58536054","message":{"role":"assistant","content":[{"type":"text","text":"{\"name\":\"Bob\",\"age\":30}"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":5,"output_tokens":10},"tokens":{"input_tokens":607,"output_tokens":13},"cached_tokens":480}}'
+  recorded_at: Thu, 17 Sep 2026 22:07:44 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
@@ -94,7 +94,7 @@ http_interactions:
       Num-Chars:
       - '2808'
       Num-Tokens:
-      - '438'
+      - '433'
       Pragma:
       - no-cache
       Vary:
@@ -102,11 +102,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - 62b12ef8b040b80748d221b840e17e72
+      - f462fb878cb6e1ba24280c4a75505c4b
       Date:
-      - Wed, 16 Sep 2026 06:49:08 GMT
+      - Thu, 17 Sep 2026 22:07:50 GMT
       X-Envoy-Upstream-Service-Time:
-      - '6188'
+      - '6445'
       Server:
       - envoy
       Via:
@@ -117,7 +117,32 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6IjQyNDY3NTEzLTg5M2UtNGE0MS04YWM1LTMyZjM1NjZhY2YzZiIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOlt7InR5cGUiOiJ0ZXh0IiwidGV4dCI6IlJ1YnkgaXMgYSBkeW5hbWljLCBvcGVuLXNvdXJjZSBwcm9ncmFtbWluZyBsYW5ndWFnZSB0aGF0IGZvY3VzZXMgb24gc2ltcGxpY2l0eSBhbmQgcHJvZHVjdGl2aXR5LiBJdCB3YXMgY3JlYXRlZCBieSBZdWtpaGlybyBcIk1hdHpcIiBNYXRzdW1vdG8gaW4gdGhlIG1pZC0xOTkwcyBpbiBKYXBhbi4gSGVyZSBhcmUgc29tZSBrZXkgZmVhdHVyZXMgYW5kIGNoYXJhY3RlcmlzdGljcyBvZiBSdWJ5OlxuXG4xLiAqKlBoaWxvc29waHkqKjogUnVieSBpcyBkZXNpZ25lZCB0byBiZSBodW1hbi1mcmllbmRseSwgZW1waGFzaXppbmcgcmVhZGFiaWxpdHkgYW5kIGV4cHJlc3NpdmVuZXNzLiBNYXR6IG9mdGVuIHNheXMsICpcIlJ1YnkgaXMgZGVzaWduZWQgdG8gbWFrZSBwcm9ncmFtbWVycyBoYXBweS5cIipcblxuMi4gKipTeW50YXgqKjogUnVieSBoYXMgYSBjbGVhbiBhbmQgaW50dWl0aXZlIHN5bnRheCwgbWFraW5nIGl0IGVhc3kgdG8gd3JpdGUgYW5kIHVuZGVyc3RhbmQuIEl0IHN1cHBvcnRzIG11bHRpcGxlIHByb2dyYW1taW5nIHBhcmFkaWdtcywgaW5jbHVkaW5nIG9iamVjdC1vcmllbnRlZCwgZnVuY3Rpb25hbCwgYW5kIGltcGVyYXRpdmUgc3R5bGVzLlxuXG4zLiAqKkV2ZXJ5dGhpbmcgaXMgYW4gT2JqZWN0Kio6IEluIFJ1YnksIGV2ZXJ5dGhpbmcgaXMgYW4gb2JqZWN0LCBpbmNsdWRpbmcgcHJpbWl0aXZlIGRhdGEgdHlwZXMgbGlrZSBpbnRlZ2VycyBhbmQgZmxvYXRzLiBFdmVuIGNsYXNzZXMgYW5kIG1vZHVsZXMgYXJlIG9iamVjdHMuXG5cbjQuICoqRHluYW1pYyBUeXBpbmcqKjogUnVieSBpcyBkeW5hbWljYWxseSB0eXBlZCwgbWVhbmluZyB5b3UgZG9u4oCZdCBuZWVkIHRvIGRlY2xhcmUgdGhlIHR5cGUgb2YgYSB2YXJpYWJsZSBleHBsaWNpdGx5LiBUaGUgdHlwZSBpcyBkZXRlcm1pbmVkIGF0IHJ1bnRpbWUuXG5cbjUuICoqRmxleGliaWxpdHkqKjogUnVieSBhbGxvd3MgZGV2ZWxvcGVycyB0byBtb2RpZnkgY29yZSBjbGFzc2VzIGFuZCBhZGQgbWV0aG9kcyB0byBleGlzdGluZyBjbGFzc2VzLCBwcm92aWRpbmcgZ3JlYXQgZmxleGliaWxpdHkgYW5kIHBvd2VyLlxuXG42LiAqKkdlbXMqKjogUnVieSBoYXMgYSByb2J1c3QgcGFja2FnZSBtYW5hZ2VyIGNhbGxlZCAqKlJ1YnlHZW1zKiosIHdoaWNoIGFsbG93cyBkZXZlbG9wZXJzIHRvIGVhc2lseSBpbnN0YWxsLCB1cGRhdGUsIGFuZCBtYW5hZ2UgbGlicmFyaWVzIChjYWxsZWQgXCJnZW1zXCIpLlxuXG43LiAqKlJhaWxzIEZyYW1ld29yayoqOiBSdWJ5IGlzIGZhbW91c2x5IGFzc29jaWF0ZWQgd2l0aCB0aGUgKipSdWJ5IG9uIFJhaWxzKiogd2ViIGZyYW1ld29yaywgd2hpY2ggcmV2b2x1dGlvbml6ZWQgd2ViIGRldmVsb3BtZW50IGJ5IGVtcGhhc2l6aW5nIGNvbnZlbnRpb24gb3ZlciBjb25maWd1cmF0aW9uIGFuZCByYXBpZCBkZXZlbG9wbWVudC5cblxuOC4gKipDb21tdW5pdHkqKjogUnVieSBoYXMgYSB2aWJyYW50IGFuZCBzdXBwb3J0aXZlIGNvbW11bml0eSwgd2l0aCBudW1lcm91cyByZXNvdXJjZXMsIHR1dG9yaWFscywgYW5kIGNvbmZlcmVuY2VzIChsaWtlIFJ1YnlDb25mKSBhdmFpbGFibGUgZm9yIGRldmVsb3BlcnMuXG5cbjkuICoqQ3Jvc3MtUGxhdGZvcm0qKjogUnVieSBpcyBjcm9zcy1wbGF0Zm9ybSBhbmQgcnVucyBvbiBXaW5kb3dzLCBtYWNPUywgTGludXgsIGFuZCBvdGhlciBvcGVyYXRpbmcgc3lzdGVtcy5cblxuMTAuICoqVXNlIENhc2VzKio6IFJ1YnkgaXMgd2lkZWx5IHVzZWQgZm9yIHdlYiBkZXZlbG9wbWVudCwgc2NyaXB0aW5nLCBhdXRvbWF0aW9uLCBhbmQgYnVpbGRpbmcgY29tbWFuZC1saW5lIHRvb2xzLiBJdOKAmXMgYWxzbyBwb3B1bGFyIGZvciBwcm90b3R5cGluZyBhbmQgYnVpbGRpbmcgTVZQcyAoTWluaW11bSBWaWFibGUgUHJvZHVjdHMpLlxuXG5SdWJ5J3MgcGhpbG9zb3BoeSBhbmQgZGVzaWduIG1ha2UgaXQgYSBmYXZvcml0ZSBhbW9uZyBkZXZlbG9wZXJzIHdobyB2YWx1ZSBwcm9kdWN0aXZpdHksIGVsZWdhbmNlLCBhbmQgZnVuIGluIHByb2dyYW1taW5nLiJ9XX0sImZpbmlzaF9yZWFzb24iOiJDT01QTEVURSIsInVzYWdlIjp7ImJpbGxlZF91bml0cyI6eyJpbnB1dF90b2tlbnMiOjIxLCJvdXRwdXRfdG9rZW5zIjo0MTd9LCJ0b2tlbnMiOnsiaW5wdXRfdG9rZW5zIjo1MjQsIm91dHB1dF90b2tlbnMiOjQyMH0sImNhY2hlZF90b2tlbnMiOjQ0OH19
-  recorded_at: Wed, 16 Sep 2026 06:49:08 GMT
+      string: '{"id":"7b706772-ba1f-409a-9d1b-547b2b221b64","message":{"role":"assistant","content":[{"type":"text","text":"Ruby
+        is a dynamic, open-source programming language that focuses on simplicity
+        and productivity. It was created by Yukihiro \"Matz\" Matsumoto in the mid-1990s
+        in Japan. Here are some key features and characteristics of Ruby:\n\n1. **Philosophy**:
+        Ruby is designed to be human-friendly, emphasizing readability and expressiveness.
+        Matz often says, *\"Ruby is designed to make programmers happy.\"*\n\n2. **Syntax**:
+        Ruby has a clean and intuitive syntax, inspired by languages like Perl, Smalltalk,
+        Eiffel, Ada, and Lisp. It allows for flexible and concise code.\n\n3. **Dynamic
+        Typing**: Ruby is dynamically typed, meaning you don''t need to declare variable
+        types explicitly. This makes development faster and more flexible.\n\n4. **Object-Oriented**:
+        Everything in Ruby is an object, including primitive data types like integers
+        and booleans. It supports classes, inheritance, and mixins.\n\n5. **Mixins**:
+        Ruby uses modules for mixins, allowing you to include additional functionality
+        into classes without using traditional inheritance.\n\n6. **Blocks, Procs,
+        and Lambdas**: Ruby has powerful features for handling blocks of code, which
+        are essential for writing concise and reusable code.\n\n7. **Ruby on Rails**:
+        Ruby gained widespread popularity due to the Ruby on Rails web framework,
+        which simplifies web development by following the convention over configuration
+        philosophy.\n\n8. **Community and Ecosystem**: Ruby has a vibrant community
+        and a rich ecosystem of libraries (gems) available via RubyGems, making it
+        easy to add functionality to your projects.\n\n9. **Cross-Platform**: Ruby
+        runs on multiple platforms, including Windows, macOS, and Linux.\n\n10. **Metaprogramming**:
+        Ruby supports metaprogramming, allowing developers to write code that writes
+        code, enabling powerful abstractions and dynamic behavior.\n\nRuby is widely
+        used for web development, scripting, automation, and building command-line
+        tools. Its focus on developer happiness and productivity makes it a favorite
+        among programmers."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":21,"output_tokens":412},"tokens":{"input_tokens":524,"output_tokens":415},"cached_tokens":448}}'
+  recorded_at: Thu, 17 Sep 2026 22:07:50 GMT
 recorded_with: VCR 6.4.0

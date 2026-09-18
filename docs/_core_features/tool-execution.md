@@ -54,6 +54,14 @@ chat.with_tools(Weather, Calculator).with_tool_options(choice: Weather)
 
 After a required or specific tool executes, RubyLLM clears that choice so the model can answer without calling it again.
 
+Disabling tool calls keeps the tools registered on the chat. Set `choice: :auto` to make them available again:
+
+```ruby
+chat.with_tool_options(choice: :none)
+chat.ask "Explain what you can answer without calling a tool."
+chat.with_tool_options(choice: :auto)
+```
+
 ### Calls Per Response
 
 Use `calls` to control how many tool calls the model may return in a single assistant response.

@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:04 GMT
+      - Thu, 17 Sep 2026 22:16:58 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,25 +39,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:49:04Z'
+      - '2026-09-17T22:16:58Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:49:04Z'
+      - '2026-09-17T22:16:58Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:49:03Z'
+      - '2026-09-17T22:16:57Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:49:04Z'
+      - '2026-09-17T22:16:58Z'
       Server:
       - cloudflare
       Request-Id:
@@ -69,13 +69,11 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-b4b659c6904ef1d2be2439951a51ee3a-e2540c9610bb4a83-01
+      - 00-40348e51e711efc4d1750915c4c02ed1-fe078198b435ec28-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
-      Server-Timing:
-      - x-originResponse;dur=651
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -84,15 +82,15 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6fwctZvjgc7f2upMWPg","type":"message","role":"assistant","content":[{"type":"tool_use","id":"toolu_01X2U17YXGswn2yw3evVDaW5","name":"best_language_to_learn","input":{},"caller":{"type":"direct"}}],"container":null,"stop_reason":"tool_use","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":581,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":41,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:49:04 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9nWVqnb8bvxFDgbuojW","type":"message","role":"assistant","content":[{"type":"tool_use","id":"toolu_01BgsjoA94R6A4xMuxvDfW2N","name":"best_language_to_learn","input":{},"caller":{"type":"direct"}}],"container":null,"stop_reason":"tool_use","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":581,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":41,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Thu, 17 Sep 2026 22:16:58 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
     body:
       encoding: UTF-8
       string: '{"model":"claude-haiku-4-5-20251001","messages":[{"role":"user","content":[{"type":"text","text":"Use
-        the best_language_to_learn tool to tell me which language to learn."}]},{"role":"assistant","content":[{"type":"tool_use","id":"toolu_01X2U17YXGswn2yw3evVDaW5","name":"best_language_to_learn","input":{}}]},{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu_01X2U17YXGswn2yw3evVDaW5","content":[{"type":"text","text":"Ruby"}]}]}],"stream":false,"max_tokens":64000,"tools":[{"name":"best_language_to_learn","description":"Gets
+        the best_language_to_learn tool to tell me which language to learn."}]},{"role":"assistant","content":[{"type":"tool_use","id":"toolu_01BgsjoA94R6A4xMuxvDfW2N","name":"best_language_to_learn","input":{}}]},{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu_01BgsjoA94R6A4xMuxvDfW2N","content":[{"type":"text","text":"Ruby"}]}]}],"stream":false,"max_tokens":64000,"tools":[{"name":"best_language_to_learn","description":"Gets
         the best language to learn","input_schema":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}]}'
     headers:
       User-Agent:
@@ -113,7 +111,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:06 GMT
+      - Thu, 17 Sep 2026 22:17:00 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -125,25 +123,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:49:04Z'
+      - '2026-09-17T22:16:58Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:49:06Z'
+      - '2026-09-17T22:17:00Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:49:04Z'
+      - '2026-09-17T22:16:58Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:49:04Z'
+      - '2026-09-17T22:16:58Z'
       Server:
       - cloudflare
       Request-Id:
@@ -155,13 +153,11 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-77fce2299c5d79de19abb7cdd3d15f36-89582dbc12783280-01
+      - 00-3f2f98be3cbf3b1d08aa7531a741163a-ae608dbdfcfda781-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
-      Server-Timing:
-      - x-originResponse;dur=1982
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -170,15 +166,15 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6fwgSPNyG7yx2f84zpo","type":"message","role":"assistant","content":[{"type":"text","text":"According
-        to the tool, **Ruby** is the best language to learn!\n\nRuby is a popular,
-        elegant programming language known for its clean and readable syntax. It''s
-        particularly well-suited for:\n\n- **Web development** (especially with the
-        Ruby on Rails framework)\n- **Scripting and automation**\n- **Rapid application
-        development**\n- **Beginner-friendly learning** due to its intuitive design\n\nIf
-        you''re interested in getting started with Ruby, I''d recommend exploring
-        resources like the official Ruby documentation, tutorials on sites like Codecademy
-        or freeCodeCamp, or books like \"Why''s (Poignant) Guide to Ruby\" for a fun
-        introduction!"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":635,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":149,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:49:06 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9nWYrd3CkornJ1jygB8","type":"message","role":"assistant","content":[{"type":"text","text":"Based
+        on the best_language_to_learn tool, the recommended language for you to learn
+        is **Ruby**!\n\nRuby is a great choice! It''s a popular, versatile programming
+        language known for:\n- **Beginner-friendly syntax** - Clean and readable code
+        that''s easy to learn\n- **Web development** - Widely used with Ruby on Rails
+        framework\n- **Productivity** - Write less code to accomplish more\n- **Community
+        support** - Active community with plenty of learning resources\n- **Flexibility**
+        - Useful for scripting, automation, and more\n\nIf you''d like to get started
+        with Ruby, I''d recommend checking out resources like Ruby''s official website,
+        Codecademy, or TutorialsPoint to begin your learning journey!"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":635,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":165,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Thu, 17 Sep 2026 22:17:00 GMT
 recorded_with: VCR 6.4.0

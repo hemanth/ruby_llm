@@ -15,7 +15,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T064923Z
+      - 20260917T221128Z
       X-Amz-Content-Sha256:
       - 22614e7063da74342d608158f9c221f1c0069f4083edb9504bdcac3a38eee1d8
       Authorization:
@@ -33,19 +33,19 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:24 GMT
+      - Thu, 17 Sep 2026 22:11:29 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '623'
+      - '598'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 91f4a236-4938-42fe-9ab6-230ceefc4a52
+      - 51c1175f-733f-4735-8299-8abef6812a91
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":704},"output":{"message":{"content":[{"citationsContent":{"citations":[{"location":{"documentChar":{"documentIndex":0,"end":73,"start":0}},"sourceContent":[{"text":"The
-        Ruby programming language was created by Yukihiro Matsumoto in 1993. "}],"title":"facts"}],"content":[{"text":"The
-        Ruby programming language was created by Yukihiro Matsumoto in 1993."}]}}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":672,"outputTokens":39,"serverToolUsage":{},"totalTokens":711}}'
-  recorded_at: Wed, 16 Sep 2026 06:49:24 GMT
+      string: '{"metrics":{"latencyMs":623},"output":{"message":{"content":[{"citationsContent":{"citations":[{"location":{"documentChar":{"documentIndex":0,"end":73,"start":0}},"sourceContent":[{"text":"The
+        Ruby programming language was created by Yukihiro Matsumoto in 1993. "}],"title":"facts"}],"content":[{"text":"Ruby
+        was created by Yukihiro Matsumoto in 1993."}]}}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":672,"outputTokens":36,"serverToolUsage":{},"totalTokens":708}}'
+  recorded_at: Thu, 17 Sep 2026 22:11:29 GMT
 recorded_with: VCR 6.4.0

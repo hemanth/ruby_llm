@@ -37,7 +37,7 @@ http_interactions:
       Num-Chars:
       - '6902'
       Num-Tokens:
-      - '101'
+      - '99'
       Pragma:
       - no-cache
       Vary:
@@ -45,23 +45,23 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - ac2822bd9e7e1cdf083f5d5c602e9502
+      - cf2d75b397366c4a9252e6e7e9f0d972
       Date:
-      - Wed, 16 Sep 2026 06:50:29 GMT
+      - Thu, 17 Sep 2026 22:18:24 GMT
       X-Envoy-Upstream-Service-Time:
-      - '733'
+      - '741'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      - h3=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"d5bc8182-04f9-4a25-94c9-d3a3a70853db","message":{"role":"assistant","tool_plan":"I
-        will call the array_params tool with the tags \"red\" and \"blue\" and relay
-        the combined tags to the user.","tool_calls":[{"id":"array_params_7k69ys66pfmx","type":"function","function":{"name":"array_params","arguments":"{\"tags\":[\"red\",\"blue\"]}"}}]},"finish_reason":"TOOL_CALL","usage":{"billed_units":{"input_tokens":64,"output_tokens":37},"tokens":{"input_tokens":1470,"output_tokens":69},"cached_tokens":992}}'
-  recorded_at: Wed, 16 Sep 2026 06:50:29 GMT
+      string: '{"id":"faef6713-5c73-4e36-b94c-08e256d378e3","message":{"role":"assistant","tool_plan":"I
+        will call the array_params tool with the tags [\"red\",\"blue\"] and relay
+        the combined tags to the user.","tool_calls":[{"id":"array_params_xccgqefrcwc0","type":"function","function":{"name":"array_params","arguments":"{\"tags\":[\"red\",\"blue\"]}"}}]},"finish_reason":"TOOL_CALL","usage":{"billed_units":{"input_tokens":64,"output_tokens":35},"tokens":{"input_tokens":1470,"output_tokens":67},"cached_tokens":992}}'
+  recorded_at: Thu, 17 Sep 2026 22:18:25 GMT
 recorded_with: VCR 6.4.0

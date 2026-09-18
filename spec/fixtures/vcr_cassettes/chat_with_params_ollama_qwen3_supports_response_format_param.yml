@@ -24,25 +24,23 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:50:46 GMT
+      - Thu, 17 Sep 2026 22:14:03 GMT
       Content-Length:
-      - '1233'
+      - '1051'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-823","object":"chat.completion","created":1789541446,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"{\n  \"result\":
-        8\n}","reasoning":"Okay, the user is asking for the square root of 64. Let
-        me think. The square root of a number is a value that, when multiplied by
-        itself, gives the original number. So, for 64, I need to find a number that
-        when squared equals 64.\n\nHmm, 8 times 8 is 64. Wait, is there another number?
-        Like negative numbers? Because (-8) squared is also 64. But usually, when
-        people ask for the square root, they might be referring to the principal (positive)
-        root. So the main answer would be 8. But I should check if the question expects
-        both positive and negative roots. However, the problem says to answer with
-        a JSON object under the key ''result'', which suggests a single value. So
-        probably 8 is the expected answer here. Let me confirm. Yes, in most mathematical
-        contexts, the square root symbol refers to the principal root, which is positive.
-        Therefore, the result should be 8.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":31,"prompt_tokens_details":{"cached_tokens":1},"completion_tokens":223,"total_tokens":254}}
+      string: '{"id":"chatcmpl-243","object":"chat.completion","created":1789683243,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"{\"result\":
+        8}","reasoning":"Okay, the user is asking for the square root of 64. Let me
+        think. Square root of a number is a value that, when multiplied by itself,
+        gives the original number. So, what number multiplied by itself equals 64?\n\nWell,
+        8 times 8 is 64. So the square root of 64 should be 8. But wait, isn''t there
+        also a negative root? Because (-8) times (-8) is also 64. However, when people
+        ask for the square root, they usually refer to the principal (positive) root.
+        So the answer is 8.\n\nThe user wants the answer in a JSON object with the
+        key \"result\". So I need to structure it as {\"result\": 8}. Let me double-check
+        to make sure I didn''t make a mistake. Yep, 8 squared is 64. Alright, that''s
+        correct.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":31,"prompt_tokens_details":{"cached_tokens":5},"completion_tokens":199,"total_tokens":230}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:50:46 GMT
+  recorded_at: Thu, 17 Sep 2026 22:14:03 GMT
 recorded_with: VCR 6.4.0

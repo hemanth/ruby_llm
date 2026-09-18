@@ -23,13 +23,16 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:50:24 GMT
+      - Thu, 17 Sep 2026 22:08:45 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '76'
       Connection:
       - keep-alive
+      Set-Cookie:
+      - "<COOKIE>"
+      - "<COOKIE>"
       Server:
       - cloudflare
       X-Ratelimit-Limit:
@@ -37,18 +40,15 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '0'
       X-Ratelimit-Reset:
-      - '1789541425'
+      - '1789682926'
       X-Ratelimit-Used:
       - '1'
       X-Request-Id:
       - "<X_REQUEST_ID>"
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - "<COOKIE>"
-      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
@@ -58,5 +58,5 @@ http_interactions:
       string: '{"error":{"message":"invalid request","type":"invalid_request","code":400}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:50:24 GMT
+  recorded_at: Thu, 17 Sep 2026 22:08:45 GMT
 recorded_with: VCR 6.4.0

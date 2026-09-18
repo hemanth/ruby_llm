@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:45 GMT
+      - Thu, 17 Sep 2026 22:07:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,25 +38,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:48:45Z'
+      - '2026-09-17T22:07:26Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:48:45Z'
+      - '2026-09-17T22:07:26Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:48:44Z'
+      - '2026-09-17T22:07:24Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:48:45Z'
+      - '2026-09-17T22:07:26Z'
       Server:
       - cloudflare
       Request-Id:
@@ -68,21 +68,23 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-cb77b82354dade2d7739c3aa07c055b0-952a90937c7b5c78-01
+      - 00-13815ba9fc625d2016e0f08dd596471a-ffe6cbddd5da0c65-01
       Vary:
       - Accept-Encoding
-      X-Robots-Tag:
-      - none
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
+      Server-Timing:
+      - x-originResponse;dur=1988
       Cf-Cache-Status:
       - DYNAMIC
+      X-Robots-Tag:
+      - none
       Cf-Ray:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6fvBovqDM6snYYdEBUG","type":"message","role":"assistant","content":[{"type":"text","text":"{\"name\":\"Bob\",\"age\":30}"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":174,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":12,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:48:45 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9mnFQhnU5UTKF9hJTWV","type":"message","role":"assistant","content":[{"type":"text","text":"{\"name\":\"Bob\",\"age\":30}"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":174,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":12,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Thu, 17 Sep 2026 22:07:26 GMT
 - request:
     method: post
     uri: https://api.anthropic.com/v1/messages
@@ -110,7 +112,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:48:48 GMT
+      - Thu, 17 Sep 2026 22:07:29 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -122,25 +124,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:48:45Z'
+      - '2026-09-17T22:07:27Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:48:48Z'
+      - '2026-09-17T22:07:29Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:48:45Z'
+      - '2026-09-17T22:07:26Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:48:45Z'
+      - '2026-09-17T22:07:27Z'
       Server:
       - cloudflare
       Request-Id:
@@ -152,35 +154,33 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-ce3bc19b9bfd81854be2ce3f9dc79b46-43def6d28df6f3f0-01
+      - 00-9a55c068eb35b19e793ddaef80f9500a-b92bb4093b946309-01
       Vary:
       - Accept-Encoding
-      X-Robots-Tag:
-      - none
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
       Cf-Cache-Status:
       - DYNAMIC
+      X-Robots-Tag:
+      - none
       Cf-Ray:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6fvHE7hfw8mcySFB4rd","type":"message","role":"assistant","content":[{"type":"text","text":"Ruby
-        is a dynamic, open-source programming language known for its simplicity and
-        readability. Here are some key points about it:\n\n**Characteristics:**\n-
-        **Easy to learn** - Clean, intuitive syntax that emphasizes readability\n-
-        **Dynamically typed** - Types are checked at runtime\n- **Object-oriented**
-        - Everything is an object\n- **Interpreted** - Code runs without compilation\n\n**Common
-        Uses:**\n- Web development (especially with Ruby on Rails framework)\n- Scripting
-        and automation\n- Data processing\n- DevOps and system administration\n\n**Key
-        Features:**\n- Flexible and expressive syntax\n- Strong community and ecosystem\n-
-        Built-in testing frameworks\n- Excellent standard library\n- Interactive console
-        (IRB) for testing code\n\n**Ruby on Rails:**\n- Popular web framework that
-        makes web development faster\n- Follows \"Convention over Configuration\"
-        philosophy\n- Used by many startups and established companies\n\n**Popularity:**\n-
-        Widely used in startup environments\n- Strong community support\n- Though
-        it''s less dominant in enterprise than some languages, it remains popular
-        for rapid development\n\nIs there a specific aspect of Ruby you''d like to
-        know more about?"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":33,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":258,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:48:48 GMT
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9mnR2u8pgHT5UeDH7Qs","type":"message","role":"assistant","content":[{"type":"text","text":"#
+        Ruby\n\nRuby is a dynamic, open-source programming language known for its
+        simplicity and elegance. Here are some key points:\n\n**Key Characteristics:**\n-
+        **Syntax**: Clean, readable syntax that emphasizes developer happiness\n-
+        **Interpreted**: Code is executed directly without compilation\n- **Object-Oriented**:
+        Everything is an object in Ruby\n- **Dynamic Typing**: Variable types are
+        determined at runtime\n\n**Popular Uses:**\n- Web development (especially
+        with Ruby on Rails framework)\n- Scripting and automation\n- Data processing\n-
+        DevOps tools\n\n**Notable Features:**\n- Blocks and iterators (`.each`, `.map`,
+        etc.)\n- Metaprogramming capabilities\n- Extensive standard library\n- Strong
+        community and gem ecosystem\n\n**Ruby on Rails:**\n- One of the most popular
+        web frameworks\n- Follows \"Convention over Configuration\" principle\n- Great
+        for rapid application development\n\n**Current Status:**\n- Still actively
+        maintained and updated\n- Large, passionate community\n- Used by many companies
+        and startups\n\nWould you like to know more about any specific aspect of Ruby?"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":33,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":240,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Thu, 17 Sep 2026 22:07:29 GMT
 recorded_with: VCR 6.4.0

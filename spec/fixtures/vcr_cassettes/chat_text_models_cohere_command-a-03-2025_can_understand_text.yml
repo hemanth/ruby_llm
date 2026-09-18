@@ -35,7 +35,7 @@ http_interactions:
       Num-Chars:
       - '2668'
       Num-Tokens:
-      - '83'
+      - '85'
       Pragma:
       - no-cache
       Vary:
@@ -43,26 +43,26 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - 551b0d8d04f7675ea941c5f3fe11794b
+      - 2a2ce31497972e875717ac1ed09166ec
       Date:
-      - Wed, 16 Sep 2026 06:48:37 GMT
+      - Thu, 17 Sep 2026 22:06:32 GMT
       X-Envoy-Upstream-Service-Time:
-      - '811'
+      - '1241'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      - h3=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"391cbecf-16ac-4636-bd98-bf6644cc82ff","message":{"role":"assistant","content":[{"type":"text","text":"The
-        file `ruby.txt` contains the following text:\n\n**Ruby is the best.**\n\nIt''s
-        a plain text file (as indicated by the `text/plain` MIME type) with a simple
-        statement expressing enthusiasm for the Ruby programming language."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":30,"output_tokens":53},"tokens":{"input_tokens":525,"output_tokens":56},"cached_tokens":448}}'
-  recorded_at: Wed, 16 Sep 2026 06:48:37 GMT
+      string: '{"id":"85956a44-f97a-4638-839a-23559ff76b3c","message":{"role":"assistant","content":[{"type":"text","text":"The
+        file `ruby.txt` contains the following text:\n\n**\"Ruby is the best.\"**\n\nIt''s
+        a plain text file (as indicated by the `text/plain` MIME type) with a single
+        sentence expressing enthusiasm for the Ruby programming language."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":30,"output_tokens":55},"tokens":{"input_tokens":525,"output_tokens":58},"cached_tokens":448}}'
+  recorded_at: Thu, 17 Sep 2026 22:06:32 GMT
 - request:
     method: post
     uri: https://api.cohere.com/v2/chat
@@ -71,9 +71,9 @@ http_interactions:
       string: '{"model":"command-a-03-2025","messages":[{"role":"user","content":[{"type":"text","text":"What''s
         in this file?"},{"type":"text","text":"<file name=''ruby.txt'' mime_type=''text/plain''>Ruby
         is the best.</file>"}]},{"role":"assistant","content":[{"type":"text","text":"The
-        file `ruby.txt` contains the following text:\n\n**Ruby is the best.**\n\nIt''s
-        a plain text file (as indicated by the `text/plain` MIME type) with a simple
-        statement expressing enthusiasm for the Ruby programming language."}]},{"role":"user","content":[{"type":"text","text":"and
+        file `ruby.txt` contains the following text:\n\n**\"Ruby is the best.\"**\n\nIt''s
+        a plain text file (as indicated by the `text/plain` MIME type) with a single
+        sentence expressing enthusiasm for the Ruby programming language."}]},{"role":"user","content":[{"type":"text","text":"and
         in this one?"},{"type":"text","text":"<file name=''ruby.xml'' mime_type=''application/xml''><truism>Ruby
         is the best</truism></file>"}]}],"stream":false}'
     headers:
@@ -101,9 +101,9 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Num-Chars:
-      - '3149'
+      - '3150'
       Num-Tokens:
-      - '212'
+      - '221'
       Pragma:
       - no-cache
       Vary:
@@ -111,11 +111,11 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - e69f5b74962f42020512c8b1f5fb4ff8
+      - b6c4149e9cc5d432c03826aa6d52d492
       Date:
-      - Wed, 16 Sep 2026 06:48:38 GMT
+      - Thu, 17 Sep 2026 22:06:33 GMT
       X-Envoy-Upstream-Service-Time:
-      - '1186'
+      - '1558'
       Server:
       - envoy
       Via:
@@ -126,12 +126,12 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"413ecc54-3d41-49c5-ab05-b8fc12dafea3","message":{"role":"assistant","content":[{"type":"text","text":"The
+      string: '{"id":"45128aa7-50de-47c5-84ea-843c0da5b379","message":{"role":"assistant","content":[{"type":"text","text":"The
         file `ruby.xml` is an XML file (as indicated by the `application/xml` MIME
         type) and contains the following structured data:\n\n```xml\n\u003ctruism\u003eRuby
-        is the best\u003c/truism\u003e\n```\n\nHere, the text \"Ruby is the best\"
-        is enclosed within a custom XML tag `\u003ctruism\u003e`. This structure allows
-        the statement to be treated as a specific type of content or element within
-        an XML document."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":118,"output_tokens":94},"tokens":{"input_tokens":621,"output_tokens":97},"cached_tokens":448}}'
-  recorded_at: Wed, 16 Sep 2026 06:48:38 GMT
+        is the best\u003c/truism\u003e\n```\n\nHere, the text **\"Ruby is the best\"**
+        is enclosed within a `\u003ctruism\u003e` tag, which suggests that the statement
+        is being treated as a truism (a statement that is generally considered to
+        be true or self-evident)."}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":120,"output_tokens":101},"tokens":{"input_tokens":623,"output_tokens":104},"cached_tokens":448}}'
+  recorded_at: Thu, 17 Sep 2026 22:06:33 GMT
 recorded_with: VCR 6.4.0

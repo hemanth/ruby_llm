@@ -42,21 +42,21 @@ http_interactions:
       X-Accel-Expires:
       - '0'
       X-Debug-Trace-Id:
-      - a69b3d7c26db5ff38a99d78e931a2dfc
+      - 1ca76618515f2bf92061bfcc0287651d
       Date:
-      - Wed, 16 Sep 2026 06:49:09 GMT
+      - Thu, 17 Sep 2026 22:07:51 GMT
       X-Envoy-Upstream-Service-Time:
-      - '412'
+      - '431'
       Server:
       - envoy
       Via:
       - 1.1 google
       Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      - h3=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"dc425635-42fe-417b-bf82-c3a5d7bdfb05","message":{"role":"assistant","content":[{"type":"text","text":"{\"name\":\"Alice\",\"age\":28}"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":12,"output_tokens":10},"tokens":{"input_tokens":614,"output_tokens":13},"cached_tokens":480}}'
-  recorded_at: Wed, 16 Sep 2026 06:49:09 GMT
+      string: '{"id":"a1110e47-ea6a-497c-bfc2-468a1aa62747","message":{"role":"assistant","content":[{"type":"text","text":"{\"name\":\"Alice\",\"age\":28}"}]},"finish_reason":"COMPLETE","usage":{"billed_units":{"input_tokens":12,"output_tokens":10},"tokens":{"input_tokens":614,"output_tokens":13},"cached_tokens":480}}'
+  recorded_at: Thu, 17 Sep 2026 22:07:51 GMT
 recorded_with: VCR 6.4.0

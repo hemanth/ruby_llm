@@ -24,27 +24,25 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:53:15 GMT
+      - Thu, 17 Sep 2026 22:11:09 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - "<COOKIE>"
       Mistral-Correlation-Id:
-      - 01a0a8fd-b22d-77f5-be7d-f1fc718c3cb0
+      - 01a0b16c-7013-7046-b814-96bc81ad5d19
       X-Kong-Request-Id:
-      - 01a0a8fd-b22d-77f5-be7d-f1fc718c3cb0
+      - 01a0b16c-7013-7046-b814-96bc81ad5d19
       X-Max-Retry-Attempts-Reached:
       - 'false'
       X-Ratelimit-Limit-Tokens-Minute:
       - '200000'
       X-Ratelimit-Remaining-Tokens-Minute:
-      - '199802'
+      - '199899'
       X-Ratelimit-Tokens-Query-Cost:
-      - '198'
+      - '101'
       X-Ratelimit-Limit-Audio-Seconds-Minute:
       - '2000'
       X-Ratelimit-Remaining-Audio-Seconds-Minute:
@@ -56,41 +54,36 @@ http_interactions:
       X-Ratelimit-Remaining-Req-Minute:
       - '359'
       X-Envoy-Upstream-Service-Time:
-      - '1580'
+      - '968'
       Server:
       - cloudflare
       Access-Control-Allow-Origin:
       - "*"
       X-Kong-Upstream-Latency:
-      - '1585'
+      - '990'
       X-Kong-Proxy-Latency:
-      - '20'
-      X-Content-Type-Options:
-      - nosniff
+      - '14'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Cf-Ray:
       - "<CF_RAY>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"ea11aa1f40cd4180a1d16324bf4442f2","created":1789541593,"model":"voxtral-small-latest","usage":{"prompt_audio_seconds":3,"prompt_tokens":9,"total_tokens":573,"completion_tokens":189,"prompt_tokens_details":{"cached_tokens":0,"audio_tokens":375},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
+      string: '{"id":"d955e4b9673b45a2bdf35d8568953c29","created":1789683069,"model":"voxtral-small-latest","usage":{"prompt_audio_seconds":3,"prompt_tokens":9,"total_tokens":476,"completion_tokens":92,"prompt_tokens_details":{"cached_tokens":0,"audio_tokens":375},"service_tier":"standard"},"object":"chat.completion","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","tool_calls":null,"content":"The
         statement \"Ruby is a programming language designed for developer happiness\"
-        is expressing that Ruby, a high-level programming language, is created with
-        the goal of making developers'' lives easier and more enjoyable. This is often
-        achieved through features like:\n\n1. **Simplicity and Readability**: Ruby''s
-        syntax is designed to be easy to read and write, which can make coding more
-        intuitive and less error-prone.\n2. **Productivity**: Ruby aims to increase
-        developer productivity by providing powerful features and tools that simplify
-        common tasks.\n3. **Community and Culture**: The Ruby community is known for
-        being supportive and collaborative, which can contribute to a positive development
-        experience.\n4. **Convention over Configuration**: Ruby follows the principle
-        of convention over configuration, which means it provides sensible defaults
-        and reduces the need for boilerplate code.\n\nOverall, the statement suggests
-        that Ruby is designed to make the process of writing and maintaining code
-        more pleasant and efficient for developers."}}]}'
-  recorded_at: Wed, 16 Sep 2026 06:53:15 GMT
+        is expressing that Ruby, a programming language, is created with the goal
+        of making developers happy and satisfied while using it. This could mean that
+        Ruby is designed to be easy to learn, use, and enjoy, with features that make
+        programming more pleasant and productive. The phrase \"designed for developer
+        happiness\" is a way to highlight the user-friendly and enjoyable aspects
+        of the Ruby programming language."}}]}'
+  recorded_at: Thu, 17 Sep 2026 22:11:09 GMT
 recorded_with: VCR 6.4.0

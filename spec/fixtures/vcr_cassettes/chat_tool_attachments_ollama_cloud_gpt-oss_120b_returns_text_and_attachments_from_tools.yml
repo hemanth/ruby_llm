@@ -5,9 +5,9 @@ http_interactions:
     uri: https://ollama.com/v1/chat/completions
     body:
       encoding: UTF-8
-      string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"Use the
-        file_fetch tool, then tell me exactly what the fetched file says."}],"stream":false,"tools":[{"type":"function","function":{"name":"file_fetch","description":"Fetches
-        the requested file","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
+      string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"Call
+        file_fetch to get ruby.txt, then repeat the contents of the attached file."}],"stream":false,"tools":[{"type":"function","function":{"name":"file_fetch","description":"Fetches
+        a sample text file named ruby.txt","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -29,117 +29,98 @@ http_interactions:
       Set-Cookie:
       - "<COOKIE>"
       X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
       X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
+      - '2026-09-17T14:37:26-07:00'
       X-Frame-Options:
       - DENY
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Content-Length:
-      - '1045'
+      - '565'
       Date:
-      - Wed, 16 Sep 2026 06:56:47 GMT
+      - Thu, 17 Sep 2026 22:29:52 GMT
       Server:
       - Google Frontend
       X-Cloud-Trace-Context:
-      - e8867eca39a9e3a431088651763a3981/270413128478270630
+      - c6eec527c9101882aa3fbb0d5be7217d/5136659782105176456
       Traceparent:
-      - 00-e8867eca39a9e3a431088651763a3981-03c0b34ec18ca4a6-00
-      Via:
-      - 1.1 google
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-    body:
-      encoding: UTF-8
-      string: '{"id":"chatcmpl-28","object":"chat.completion","created":1789541807,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"We
-        need to call file_fetch. But we need a file path? The user didn''t specify
-        what file. Maybe they expect to fetch a default file? We need to ask? But
-        instruction: \"Use the file_fetch tool, then tell me exactly what the fetched
-        file says.\" Likely they want us to fetch a specific file provided in the
-        environment. Maybe they need to fetch e.g. \"input.txt\"? Not sure. Perhaps
-        there''s a hidden file. We''ll try to call file_fetch with no arguments? The
-        tool signature: type file_fetch = () =\u003e any; No parameters. So maybe
-        it fetches a predefined file. Let''s invoke it.","tool_calls":[{"id":"call_7vdohxfw","index":0,"type":"function","function":{"name":"file_fetch","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":128,"prompt_tokens_details":{"cached_tokens":64},"completion_tokens":149,"total_tokens":277}}
-
-        '
-  recorded_at: Wed, 16 Sep 2026 06:56:47 GMT
-- request:
-    method: post
-    uri: https://ollama.com/v1/chat/completions
-    body:
-      encoding: UTF-8
-      string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"Use the
-        file_fetch tool, then tell me exactly what the fetched file says."},{"role":"assistant","content":"","tool_calls":[{"id":"call_7vdohxfw","type":"function","function":{"name":"file_fetch","arguments":"{}"}}],"reasoning":"We
-        need to call file_fetch. But we need a file path? The user didn''t specify
-        what file. Maybe they expect to fetch a default file? We need to ask? But
-        instruction: \"Use the file_fetch tool, then tell me exactly what the fetched
-        file says.\" Likely they want us to fetch a specific file provided in the
-        environment. Maybe they need to fetch e.g. \"input.txt\"? Not sure. Perhaps
-        there''s a hidden file. We''ll try to call file_fetch with no arguments? The
-        tool signature: type file_fetch = () => any; No parameters. So maybe it fetches
-        a predefined file. Let''s invoke it.","reasoning_content":"We need to call
-        file_fetch. But we need a file path? The user didn''t specify what file. Maybe
-        they expect to fetch a default file? We need to ask? But instruction: \"Use
-        the file_fetch tool, then tell me exactly what the fetched file says.\" Likely
-        they want us to fetch a specific file provided in the environment. Maybe they
-        need to fetch e.g. \"input.txt\"? Not sure. Perhaps there''s a hidden file.
-        We''ll try to call file_fetch with no arguments? The tool signature: type
-        file_fetch = () => any; No parameters. So maybe it fetches a predefined file.
-        Let''s invoke it."},{"role":"tool","content":"Fetched the file.","tool_call_id":"call_7vdohxfw"},{"role":"user","content":[{"type":"text","text":"Attachments
-        from tool call call_7vdohxfw:"},{"type":"text","text":"<file name=''ruby.txt''
-        mime_type=''text/plain''>Ruby is the best.</file>"}]}],"stream":false,"tools":[{"type":"function","function":{"name":"file_fetch","description":"Fetches
-        the requested file","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
-    headers:
-      User-Agent:
-      - Faraday v2.14.3
-      Authorization:
-      - Bearer <AUTH_TOKEN>
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Set-Cookie:
-      - "<COOKIE>"
-      X-Build-Commit:
-      - 354232efe73e70f9c8a94659c1842e861ddda7d3
-      X-Build-Time:
-      - '2026-09-15T16:54:40-07:00'
-      X-Frame-Options:
-      - DENY
-      X-Request-Id:
-      - "<X_REQUEST_ID>"
-      Content-Length:
-      - '618'
-      Date:
-      - Wed, 16 Sep 2026 06:56:47 GMT
-      Server:
-      - Google Frontend
-      X-Cloud-Trace-Context:
-      - f6aa2dd04748bc2b4e37a263b49f2dc4/7265206086262474840
-      Traceparent:
-      - 00-f6aa2dd04748bc2b4e37a263b49f2dc4-64d3327157ae4858-00
+      - 00-c6eec527c9101882aa3fbb0d5be7217d-474914db4c6a1988-00
       Via:
       - 1.1 google
       Alt-Svc:
       - h3=":443"; ma=2592000
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-182","object":"chat.completion","created":1789541807,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"Ruby
-        is the best.","reasoning":"The user wants me to \"Use the file_fetch tool,
-        then tell me exactly what the fetched file says.\" The fetched file is ''ruby.txt''
-        containing text: \"Ruby is the best.\"\n\nI should respond with exactly what
-        the file says. Provide the content verbatim."},"finish_reason":"stop"}],"usage":{"prompt_tokens":193,"prompt_tokens_details":{"cached_tokens":112},"completion_tokens":70,"total_tokens":263}}
+      string: '{"id":"chatcmpl-449","object":"chat.completion","created":1789684192,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"The
+        user wants to fetch ruby.txt and repeat its contents. We need to call the
+        file_fetch tool.","tool_calls":[{"id":"call_cjfxai2o","index":0,"type":"function","function":{"name":"file_fetch","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":133,"prompt_tokens_details":{"cached_tokens":96},"completion_tokens":41,"total_tokens":174}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:56:48 GMT
+  recorded_at: Thu, 17 Sep 2026 22:29:52 GMT
+- request:
+    method: post
+    uri: https://ollama.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-oss:120b","messages":[{"role":"user","content":"Call
+        file_fetch to get ruby.txt, then repeat the contents of the attached file."},{"role":"assistant","content":"","tool_calls":[{"id":"call_cjfxai2o","type":"function","function":{"name":"file_fetch","arguments":"{}"}}],"reasoning":"The
+        user wants to fetch ruby.txt and repeat its contents. We need to call the
+        file_fetch tool.","reasoning_content":"The user wants to fetch ruby.txt and
+        repeat its contents. We need to call the file_fetch tool."},{"role":"tool","content":"Fetched
+        the file.","tool_call_id":"call_cjfxai2o"},{"role":"user","content":[{"type":"text","text":"Attachments
+        from tool call call_cjfxai2o:"},{"type":"text","text":"<file name=''ruby.txt''
+        mime_type=''text/plain''>Ruby is the best.</file>"}]}],"stream":false,"tools":[{"type":"function","function":{"name":"file_fetch","description":"Fetches
+        a sample text file named ruby.txt","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Set-Cookie:
+      - "<COOKIE>"
+      X-Build-Commit:
+      - 06e177d7ef1d1dfcdc87907f62fdef4363abe1ab
+      X-Build-Time:
+      - '2026-09-17T14:37:26-07:00'
+      X-Frame-Options:
+      - DENY
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      Content-Length:
+      - '540'
+      Date:
+      - Thu, 17 Sep 2026 22:29:52 GMT
+      Server:
+      - Google Frontend
+      X-Cloud-Trace-Context:
+      - 0e8201bbca9df8b6d35ce20ebff4d82a/13739879829841770002
+      Traceparent:
+      - 00-0e8201bbca9df8b6d35ce20ebff4d82a-beaddbe88245f612-00
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: '{"id":"chatcmpl-621","object":"chat.completion","created":1789684192,"model":"gpt-oss:120b","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"Ruby
+        is the best.","reasoning":"The user wants to repeat the contents of the attached
+        file. The file ruby.txt contains \"Ruby is the best.\" So we should repeat
+        that content. Probably just output the text."},"finish_reason":"stop"}],"usage":{"prompt_tokens":198,"prompt_tokens_details":{"cached_tokens":112},"completion_tokens":51,"total_tokens":249}}
+
+        '
+  recorded_at: Thu, 17 Sep 2026 22:29:52 GMT
 recorded_with: VCR 6.4.0

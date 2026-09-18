@@ -20,14 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
       Date:
-      - Wed, 16 Sep 2026 06:50:15 GMT
+      - Thu, 17 Sep 2026 22:08:46 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Pragma:
       - no-cache
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Vary:
@@ -56,7 +56,7 @@ http_interactions:
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Wed, 16 Sep 2026 06:50:15 GMT
+  recorded_at: Thu, 17 Sep 2026 22:08:46 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-3-flash-preview:generateContent
@@ -87,7 +87,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:50:18 GMT
+      - Thu, 17 Sep 2026 22:08:48 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -111,7 +111,7 @@ http_interactions:
                 "parts": [
                   {
                     "text": "{\"name\":\"John\",\"age\":30}",
-                    "thoughtSignature": "AY89a182YmQvkkHq6kat6x2Bq0KBFu0tVCdnHycRC8HPb7iGXAgH2W1hxjKd4b5Cb4j1eeTHts+8ATNu1l34r/Eb0l5NQaXc2gH64vVMveGN0Yqq95cGLs7CD0EUacKO86HQOTsRNatZwacSpXj0rRF/IgKA/GJSmiWh0270vRlSuOhkx+yKESb9y1JVO2gRVc4sxn4882JXdyFegiNZxhSTfax42mf0Ebbnj8fF/zEU3+iHumQZDIv7huWdyiFDQhVsDqNNzRJa7ByMcymqgAj9iOjesyKJ4xhbjBtl7bNfWSJC1JR2fPA16vPmyLIto1L7Rxb/Gze/4XmE/O5QiSLPhLwQTPmPcqtJNY4CULLBjoZiIxRdui3lF1ejrPU59GXotBhcdguRIJnABx0/WLNJCWeUtQqSnvETlex/5G6/eDzZ4dYY8Z4+77peFvukUZopA+edi5CVpZR0/EyYowPnyix3smn1X4rFUVhIS7NOHITJjfGa944FLjZl/620/2anjVLpR6cyiBvpTyIyApvyn1vmWIDyRfADaf7rcL3q5ewp4zsQeL6qSak5kzMqPi4r19FV+Eg459LOFfF7v85dMDGFDxv96PQES7TnIKhidrBhFiFj4aSmgjRMZwCcFpgrurxhrRduB3LyjP/wOddV2bZGZ27sX8hSiM/vMrxU2anPbaUfbLBv2u8dzpMQSsoAFReXVhiTpq2WOV8W/QM++QMeAsHDRAF5vEvXBatTnvHa9E5MZcRZINeobQPBPIx77Ks/dOSXgKublKO4fUsrl4FDlT/5ayfZAebT2jpXhqEblK+Zi0ZC/570c/Q+5Ec+TJHI4tdoMLE8G+HuGgDUw9mcmjAgmCzJB+pD7FuWs2vDaRShqmGoVNHTWOkA9k8hBGj+eXvFcxev0I9VXAcJhGdU9lrAsk2pZwsRd+kk5zgPjf1Ou4G+kds8UEHD48bNNNrmyg8h4FUKCsEyI99tZTS0GlPg0mZukbJq8ljthniKizMEYEger19R+S4ETs59OsX881NF46j4Ee0CBxFOvzhAIAK3ttboocptVHU/8aNzav9AD8cnYbiL9BeAJb1YTn5IxEWCCfiJ97zq5mY4ZacJTp2hLjcqFZRW7FqjNv9wGsfIMkiqJ/JOabgzJ5FVfthhcLY8EVcGB25hTIc0SQ3GFuSc65aYQfk+9PAyUVqM229G84vA94rpcAROoTly4v7l"
+                    "thoughtSignature": "AY89a19SzHSMkKErrW47oHqt7gFas4arpZ2s4pNf6140kg17BItNnWcFEyob0TnvnyHd84ykFlHCS7oMNcRB6pivTB6EYdwuXmM7ZAhfWP7K+BhK6pZ8hBoX4EijAqtFDpvyEvYOuinDSObwsNWIF9KHYMaurkyQi+FhypmlpQLY6Awff3kkmxGZGWOVCYDr8cX5eOS++Bt1NDoEre1ZL8/RceX+9YSM24e+HprswesBlqBOF1kcWAUD2VE+mkFLyPjhUmr08ewgNYPPuLL1fsoUQVqEfS6DPIX6v9Ae95VFqcXAdFq9P9WJPoSWYa8F09V1MTY2FImroHDIbGPzdimTbhyZadiAAbGKukL2PATtTsn1GO8YVEC/citgg0eFWhx2miBZrwyKRgp0Zgjqe0AZKyZx4NVhafwtOqxu/Isbwk+PCBegvM7bSApWVeUs+tes5yyHYWXo+DLEk0pnSihqSBCu7ICDT0XNBzIuBIV1EzrM6T4iAXfqVbuGbL+pDgmfxwTBRh4O3AcsiFzXiNIobfBotKF4CN2pnzKP43J7oNAHqwirXCH7hzgwTk4jHZw5Yfal4Q6E6yh2FejUNj21RwcwnjzTd1Z0wqzHB9SZEfMNYVKzBqR+onj8vQmn/imPHrWezX8LUsoHADVSex8Slkp5WssaGysLE+jvB90rBPQ3bmEI8tfX34oEsMzWGN8f7CneA85rJbVDxTpJHcE8rMuuBG03dRaQP7ltPTSUZVgCDSjtSxuoXsMiA/iUmFustobDwX+8YDo+q5g4vPwUZwIuuLJYPRX6KX9eJHDuXiO7O62IzYD383cIgstY5C+44Jeq+RdzVqX+HXaT9LT0TTnWk5lusidOHEeqRMq59QzO9s8gN15E70yLiL/HNntMy0FqiUOGxOWucM+UWZJCFG/58YArwOqHy5NoYjD4WpZX/xrDrfVNtN64Y2UMzXr2T82VqJgTJcfk4s4k3mZr8L2nnS3gJZU09iz275Y5IIUtONPg6RIqBHpR"
                   }
                 ]
               },
@@ -121,7 +121,7 @@ http_interactions:
           "usageMetadata": {
             "promptTokenCount": 77,
             "candidatesTokenCount": 10,
-            "totalTokenCount": 348,
+            "totalTokenCount": 296,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -135,11 +135,11 @@ http_interactions:
                 "tokenCount": 10
               }
             ],
-            "thoughtsTokenCount": 261
+            "thoughtsTokenCount": 209
           },
           "modelVersion": "gemini-3-flash-preview",
-          "createTime": "2026-09-16T06:50:15.802459Z",
-          "responseId": "Jzyqapv9MObkkuwP447NuQ4"
+          "createTime": "2026-09-17T22:08:46.380491Z",
+          "responseId": "7mSsasucF-KrmPUPmPCR8Qk"
         }
-  recorded_at: Wed, 16 Sep 2026 06:50:18 GMT
+  recorded_at: Thu, 17 Sep 2026 22:08:48 GMT
 recorded_with: VCR 6.4.0

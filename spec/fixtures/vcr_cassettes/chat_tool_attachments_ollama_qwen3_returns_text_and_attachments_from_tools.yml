@@ -5,9 +5,9 @@ http_interactions:
     uri: "<OLLAMA_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
-      string: '{"model":"qwen3","messages":[{"role":"user","content":"Use the file_fetch
-        tool, then tell me exactly what the fetched file says."}],"stream":false,"temperature":0,"tools":[{"type":"function","function":{"name":"file_fetch","description":"Fetches
-        the requested file","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
+      string: '{"model":"qwen3","messages":[{"role":"user","content":"Call file_fetch
+        to get ruby.txt, then repeat the contents of the attached file."}],"stream":false,"temperature":0,"tools":[{"type":"function","function":{"name":"file_fetch","description":"Fetches
+        a sample text file named ruby.txt","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -25,134 +25,53 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:56:44 GMT
-      Transfer-Encoding:
-      - chunked
+      - Thu, 17 Sep 2026 22:29:49 GMT
+      Content-Length:
+      - '1164'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-367","object":"chat.completion","created":1789541804,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Okay,
-        the user wants me to use the file_fetch tool and then report exactly what
-        the fetched file says. Let me start by understanding the tools available.
-        The provided tool is file_fetch, which is supposed to fetch a requested file.
-        However, looking at the function definition, the parameters section is empty.
-        That''s a bit confusing. The function might not require any arguments, or
-        maybe there''s a mistake in the tool description.\n\nWait, the user hasn''t
-        specified which file to fetch. The function might need a filename or some
-        identifier to retrieve the correct file. But according to the given tool definition,
-        the arguments are an empty object. That suggests that either the tool doesn''t
-        require any parameters, or there''s an error in how the tool is defined. \n\nSince
-        the user hasn''t provided a specific file name, maybe I should assume that
-        the tool can fetch a default file, or perhaps there''s a missing parameter.
-        But given the information I have, I need to proceed with what''s provided.
-        If the function doesn''t require arguments, then I can call it without any
-        parameters. However, in practice, that might not work if the tool expects
-        a filename. \n\nAlternatively, maybe the tool''s parameters are not properly
-        defined here. The user might have intended to include a filename parameter
-        but forgot. But based on the given data, I have to work with the function
-        as described. So, I''ll proceed to call the file_fetch function with no arguments,
-        as the parameters are an empty object. Then, once the file is fetched, I''ll
-        need to relay its contents back to the user. \n\nWait, but the user''s instruction
-        is to first use the file_fetch tool and then tell them exactly what the file
-        says. So, the first step is to invoke the tool, which will presumably return
-        the file''s content. Then, I can present that content as the answer. However,
-        since I can''t actually fetch files in a real-world scenario without knowing
-        the file path or name, maybe this is a test case where the tool is supposed
-        to be called regardless. \n\nIn this case, I should generate the tool call
-        as specified, even if the parameters are missing. So, the correct approach
-        is to call the file_fetch function with the arguments as an empty object,
-        then once the response is received, provide the content to the user. Since
-        the user hasn''t specified a particular file, maybe the tool is designed to
-        fetch a specific file by default, or the example is simplified. \n\nTherefore,
-        I''ll proceed to make the tool call without any arguments, then once the file
-        is fetched, I''ll inform the user of its contents. The exact content isn''t
-        provided here, so the response would depend on the tool''s actual implementation.
-        But according to the problem setup, I need to first make the tool call.\n","tool_calls":[{"id":"call_uomenzmj","index":0,"type":"function","function":{"name":"file_fetch","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":137,"prompt_tokens_details":{"cached_tokens":48},"completion_tokens":587,"total_tokens":724}}
+      string: '{"id":"chatcmpl-300","object":"chat.completion","created":1789684189,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning":"Okay,
+        the user wants me to call the file_fetch function to get ruby.txt and then
+        repeat the contents of that file. Let me start by checking the tools provided.
+        The tool listed is file_fetch, which is supposed to fetch a sample text file
+        named ruby.txt. The parameters for file_fetch don''t seem to require any arguments,
+        as the arguments section is empty. So, I just need to invoke file_fetch without
+        any parameters. Once I get the file, I should read its contents and output
+        them back to the user. Let me make sure I''m using the correct function name
+        and that there are no typos. Alright, the function is called file_fetch, and
+        the file name is ruby.txt. I''ll structure the tool call accordingly.\n","tool_calls":[{"id":"call_ued6pu7l","index":0,"type":"function","function":{"name":"file_fetch","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":142,"prompt_tokens_details":{"cached_tokens":122},"completion_tokens":170,"total_tokens":312}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:56:44 GMT
+  recorded_at: Thu, 17 Sep 2026 22:29:49 GMT
 - request:
     method: post
     uri: "<OLLAMA_API_BASE>/chat/completions"
     body:
       encoding: UTF-8
-      string: '{"model":"qwen3","messages":[{"role":"user","content":"Use the file_fetch
-        tool, then tell me exactly what the fetched file says."},{"role":"assistant","content":"","tool_calls":[{"id":"call_uomenzmj","type":"function","function":{"name":"file_fetch","arguments":"{}"}}],"reasoning":"Okay,
-        the user wants me to use the file_fetch tool and then report exactly what
-        the fetched file says. Let me start by understanding the tools available.
-        The provided tool is file_fetch, which is supposed to fetch a requested file.
-        However, looking at the function definition, the parameters section is empty.
-        That''s a bit confusing. The function might not require any arguments, or
-        maybe there''s a mistake in the tool description.\n\nWait, the user hasn''t
-        specified which file to fetch. The function might need a filename or some
-        identifier to retrieve the correct file. But according to the given tool definition,
-        the arguments are an empty object. That suggests that either the tool doesn''t
-        require any parameters, or there''s an error in how the tool is defined. \n\nSince
-        the user hasn''t provided a specific file name, maybe I should assume that
-        the tool can fetch a default file, or perhaps there''s a missing parameter.
-        But given the information I have, I need to proceed with what''s provided.
-        If the function doesn''t require arguments, then I can call it without any
-        parameters. However, in practice, that might not work if the tool expects
-        a filename. \n\nAlternatively, maybe the tool''s parameters are not properly
-        defined here. The user might have intended to include a filename parameter
-        but forgot. But based on the given data, I have to work with the function
-        as described. So, I''ll proceed to call the file_fetch function with no arguments,
-        as the parameters are an empty object. Then, once the file is fetched, I''ll
-        need to relay its contents back to the user. \n\nWait, but the user''s instruction
-        is to first use the file_fetch tool and then tell them exactly what the file
-        says. So, the first step is to invoke the tool, which will presumably return
-        the file''s content. Then, I can present that content as the answer. However,
-        since I can''t actually fetch files in a real-world scenario without knowing
-        the file path or name, maybe this is a test case where the tool is supposed
-        to be called regardless. \n\nIn this case, I should generate the tool call
-        as specified, even if the parameters are missing. So, the correct approach
-        is to call the file_fetch function with the arguments as an empty object,
-        then once the response is received, provide the content to the user. Since
-        the user hasn''t specified a particular file, maybe the tool is designed to
-        fetch a specific file by default, or the example is simplified. \n\nTherefore,
-        I''ll proceed to make the tool call without any arguments, then once the file
-        is fetched, I''ll inform the user of its contents. The exact content isn''t
-        provided here, so the response would depend on the tool''s actual implementation.
-        But according to the problem setup, I need to first make the tool call.\n","reasoning_content":"Okay,
-        the user wants me to use the file_fetch tool and then report exactly what
-        the fetched file says. Let me start by understanding the tools available.
-        The provided tool is file_fetch, which is supposed to fetch a requested file.
-        However, looking at the function definition, the parameters section is empty.
-        That''s a bit confusing. The function might not require any arguments, or
-        maybe there''s a mistake in the tool description.\n\nWait, the user hasn''t
-        specified which file to fetch. The function might need a filename or some
-        identifier to retrieve the correct file. But according to the given tool definition,
-        the arguments are an empty object. That suggests that either the tool doesn''t
-        require any parameters, or there''s an error in how the tool is defined. \n\nSince
-        the user hasn''t provided a specific file name, maybe I should assume that
-        the tool can fetch a default file, or perhaps there''s a missing parameter.
-        But given the information I have, I need to proceed with what''s provided.
-        If the function doesn''t require arguments, then I can call it without any
-        parameters. However, in practice, that might not work if the tool expects
-        a filename. \n\nAlternatively, maybe the tool''s parameters are not properly
-        defined here. The user might have intended to include a filename parameter
-        but forgot. But based on the given data, I have to work with the function
-        as described. So, I''ll proceed to call the file_fetch function with no arguments,
-        as the parameters are an empty object. Then, once the file is fetched, I''ll
-        need to relay its contents back to the user. \n\nWait, but the user''s instruction
-        is to first use the file_fetch tool and then tell them exactly what the file
-        says. So, the first step is to invoke the tool, which will presumably return
-        the file''s content. Then, I can present that content as the answer. However,
-        since I can''t actually fetch files in a real-world scenario without knowing
-        the file path or name, maybe this is a test case where the tool is supposed
-        to be called regardless. \n\nIn this case, I should generate the tool call
-        as specified, even if the parameters are missing. So, the correct approach
-        is to call the file_fetch function with the arguments as an empty object,
-        then once the response is received, provide the content to the user. Since
-        the user hasn''t specified a particular file, maybe the tool is designed to
-        fetch a specific file by default, or the example is simplified. \n\nTherefore,
-        I''ll proceed to make the tool call without any arguments, then once the file
-        is fetched, I''ll inform the user of its contents. The exact content isn''t
-        provided here, so the response would depend on the tool''s actual implementation.
-        But according to the problem setup, I need to first make the tool call.\n"},{"role":"tool","content":"Fetched
-        the file.","tool_call_id":"call_uomenzmj"},{"role":"user","content":[{"type":"text","text":"Attachments
-        from tool call call_uomenzmj:"},{"type":"text","text":"<file name=''ruby.txt''
+      string: '{"model":"qwen3","messages":[{"role":"user","content":"Call file_fetch
+        to get ruby.txt, then repeat the contents of the attached file."},{"role":"assistant","content":"","tool_calls":[{"id":"call_ued6pu7l","type":"function","function":{"name":"file_fetch","arguments":"{}"}}],"reasoning":"Okay,
+        the user wants me to call the file_fetch function to get ruby.txt and then
+        repeat the contents of that file. Let me start by checking the tools provided.
+        The tool listed is file_fetch, which is supposed to fetch a sample text file
+        named ruby.txt. The parameters for file_fetch don''t seem to require any arguments,
+        as the arguments section is empty. So, I just need to invoke file_fetch without
+        any parameters. Once I get the file, I should read its contents and output
+        them back to the user. Let me make sure I''m using the correct function name
+        and that there are no typos. Alright, the function is called file_fetch, and
+        the file name is ruby.txt. I''ll structure the tool call accordingly.\n","reasoning_content":"Okay,
+        the user wants me to call the file_fetch function to get ruby.txt and then
+        repeat the contents of that file. Let me start by checking the tools provided.
+        The tool listed is file_fetch, which is supposed to fetch a sample text file
+        named ruby.txt. The parameters for file_fetch don''t seem to require any arguments,
+        as the arguments section is empty. So, I just need to invoke file_fetch without
+        any parameters. Once I get the file, I should read its contents and output
+        them back to the user. Let me make sure I''m using the correct function name
+        and that there are no typos. Alright, the function is called file_fetch, and
+        the file name is ruby.txt. I''ll structure the tool call accordingly.\n"},{"role":"tool","content":"Fetched
+        the file.","tool_call_id":"call_ued6pu7l"},{"role":"user","content":[{"type":"text","text":"Attachments
+        from tool call call_ued6pu7l:"},{"type":"text","text":"<file name=''ruby.txt''
         mime_type=''text/plain''>Ruby is the best.</file>"}]}],"stream":false,"temperature":0,"tools":[{"type":"function","function":{"name":"file_fetch","description":"Fetches
-        the requested file","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
+        a sample text file named ruby.txt","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
     headers:
       User-Agent:
       - Faraday v2.14.3
@@ -170,20 +89,30 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:56:45 GMT
+      - Thu, 17 Sep 2026 22:29:51 GMT
       Content-Length:
-      - '841'
+      - '1646'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-684","object":"chat.completion","created":1789541805,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
-        fetched file says: \"Ruby is the best.\"","reasoning":"Okay, the user asked
-        me to use the file_fetch tool and then tell them exactly what the fetched
-        file says. I called the file_fetch function, and the response was a file named
-        ruby.txt with the content \"Ruby is the best.\" Now I need to present that
-        content to the user. Let me make sure I just output the file''s contents directly.
-        The user probably wants a straightforward answer without any extra explanation.
-        So I''ll just state the content as it is.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":205,"prompt_tokens_details":{"cached_tokens":130},"completion_tokens":111,"total_tokens":316}}
+      string: '{"id":"chatcmpl-121","object":"chat.completion","created":1789684191,"model":"qwen3","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"The
+        contents of ruby.txt are: Ruby is the best.","reasoning":"Okay, the user asked
+        me to call the file_fetch function to get ruby.txt and then repeat the contents
+        of the attached file. Let me start by checking if I have the correct function
+        available. The tools provided include a file_fetch function that fetches a
+        sample text file named ruby.txt. \n\nFirst, I need to make sure I call the
+        file_fetch function correctly. The function doesn''t require any arguments,
+        so the tool call should be straightforward. I''ll generate the tool call with
+        empty arguments as specified.\n\nOnce the file is fetched, the response indicates
+        that the file was successfully retrieved. The attachment provided is a file
+        named ruby.txt with the content \"Ruby is the best.\" The MIME type is text/plain,
+        which means it''s a plain text file. \n\nNow, I need to repeat the contents
+        of the file. The user wants the contents to be repeated, so I should read
+        the content from the file and output it. Since the file content is \"Ruby
+        is the best.\", I''ll simply echo that back to the user. \n\nI should make
+        sure there are no errors in the process. The function call was successful,
+        and the file content is correctly retrieved. There''s no need for additional
+        steps here. The final response should just be the content of the file as specified.\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":212,"prompt_tokens_details":{"cached_tokens":135},"completion_tokens":275,"total_tokens":487}}
 
         '
-  recorded_at: Wed, 16 Sep 2026 06:56:45 GMT
+  recorded_at: Thu, 17 Sep 2026 22:29:51 GMT
 recorded_with: VCR 6.4.0

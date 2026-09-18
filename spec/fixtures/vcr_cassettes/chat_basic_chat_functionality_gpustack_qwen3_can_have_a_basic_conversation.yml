@@ -23,62 +23,46 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Req-Cost-Time:
+      - '2352'
+      Resp-Start-Time:
+      - '1789682886760'
+      X-Envoy-Upstream-Service-Time:
+      - '2349'
+      Date:
+      - Thu, 17 Sep 2026 22:08:04 GMT
       Server:
       - istio-envoy
       Access-Control-Allow-Origin:
       - ''
       Content-Type:
       - application/json; charset=utf-8
-      Req-Cost-Time:
-      - '5240'
       Req-Arrive-Time:
-      - '1789542489885'
-      Resp-Start-Time:
-      - '1789542495125'
-      X-Envoy-Upstream-Service-Time:
-      - '5234'
-      Date:
-      - Wed, 16 Sep 2026 07:08:09 GMT
+      - '1789682884407'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"role":"assistant","content":"The
-        answer to $2 + 2$ is **4**. \n\nIn standard arithmetic, adding 2 and 2 results
-        in 4. This is a basic operation in the decimal number system and applies universally
-        unless specified otherwise (e.g., in different number bases or contexts).
-        Since no additional context is provided, the straightforward answer is **4**.
-        \n\n$\\boxed{4}$","reasoning_content":"Okay, let me think about this. The
-        question is asking what 2 + 2 is. Hmm, basic arithmetic, right? But wait,
-        maybe there''s a trick here? Sometimes people ask simple questions to see
-        if you''re paying attention or to test if you''re actually thinking. Let me
-        make sure I''m not missing anything.\n\nSo, 2 + 2. In standard arithmetic,
-        that''s straightforward. 2 plus 2 equals 4. But maybe the question is trying
-        to get me to consider different number systems or contexts? Like, in binary,
-        2 + 2 would be 100, which is 4 in decimal. Or maybe in some modular arithmetic,
-        like modulo 5, 2 + 2 would still be 4. Wait, but the question doesn''t specify
-        any particular context. So I should assume it''s in the usual base 10, standard
-        integer addition.\n\nAlternatively, could there be a play on words? Like \"2
-        + 2\" as in a phrase or a riddle? For example, \"2 + 2\" might be a reference
-        to something else, like a song, a movie, or a book. But I don''t recall any
-        famous references where \"2 + 2\" is a code or a pun. Maybe it''s a test of
-        whether I can recognize a simple question and not overcomplicate it.\n\nAnother
-        angle: maybe the user is checking if I''m a bot or if I can actually perform
-        basic math. If I answer 4, that''s the expected answer. But if I overthink
-        it, maybe they want to see if I can explain the reasoning. However, since
-        the user just asked \"What''s 2 + 2?\" without any additional context, the
-        answer should be straightforward.\n\nWait, could there be any alternative
-        interpretations? For instance, in some contexts, like in programming, 2 +
-        2 would be 4 in most languages. Unless there''s some custom operator or something,
-        which is highly unlikely. Or maybe in a different language, the words for
-        numbers are different, but the question is in English. So, \"2 + 2\" in English
-        is 2 plus 2, which is 4.\n\nIs there any chance the question is a trick question?
-        Like, \"What''s 2 + 2?\" and the answer is 4, but the user wants to see if
-        I can explain why. But the user hasn''t specified any particular need for
-        explanation, just the answer. So, the most appropriate response is 4.\n\nI
-        think I''ve covered all possibilities. The answer is 4. No need to complicate
-        it further.\n"}}],"created":1789542495,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":625,"prompt_tokens":16,"total_tokens":641,"prompt_tokens_details":{"cached_tokens":5}},"id":"chatcmpl-N3nMjEqLqM3oF3Dc6PJQiCH2HNmlZL8V","timings":{"cache_n":5,"prompt_n":11,"prompt_ms":15.549,"prompt_per_token_ms":1.4135454545454544,"prompt_per_second":707.440992989903,"predicted_n":625,"predicted_ms":5208.537,"predicted_per_token_ms":8.347014423076924,"predicted_per_second":119.80331521116197}}'
-  recorded_at: Wed, 16 Sep 2026 07:08:15 GMT
+      string: '{"choices":[{"finish_reason":"stop","index":0,"message":{"role":"assistant","content":"2
+        + 2 equals 4. \n\nIn basic arithmetic, adding 2 and 2 combines their quantities,
+        resulting in a total of 4. This is a fundamental concept in mathematics, often
+        introduced early in education. If you meant a different context (e.g., binary,
+        modular arithmetic, etc.), please clarify!","reasoning_content":"Okay, let''s
+        see. The user asked, \"What''s 2 + 2?\" Hmm, that seems straightforward. But
+        maybe they want a detailed explanation? Let me think. Well, 2 + 2 is a basic
+        arithmetic problem. I know that in elementary math, addition is one of the
+        first operations taught. So, 2 plus 2 equals 4. But wait, maybe they''re testing
+        if I can recognize the question or if there''s a trick here. Let me double-check.
+        In standard arithmetic, 2 + 2 is indeed 4. There''s no hidden meaning or alternative
+        interpretation unless specified. Maybe they''re just confirming my knowledge.
+        I should make sure to explain the process as well. So, adding two numbers:
+        2 and 2. When you add them together, you combine the quantities. So, two groups
+        of two items each would total four items. That''s the basic concept. I don''t
+        think there''s any other way to interpret this unless it''s in a different
+        context, like binary or something else. But the question doesn''t specify,
+        so it''s safe to assume it''s in base 10. Yeah, I think that''s all. The answer
+        is 4.\n"}}],"created":1789682886,"model":"qwen3","system_fingerprint":"b10830-465e49b9c","object":"chat.completion","usage":{"completion_tokens":320,"prompt_tokens":16,"total_tokens":336,"prompt_tokens_details":{"cached_tokens":5}},"id":"chatcmpl-Pzh9X6GSkWu3zsQDLA0RmwAC83ytA7uf","timings":{"cache_n":5,"prompt_n":11,"prompt_ms":18.841,"prompt_per_token_ms":1.712818181818182,"prompt_per_second":583.8331298763335,"predicted_n":320,"predicted_ms":2323.985,"predicted_per_token_ms":7.2852194357366775,"predicted_per_second":137.26422502726996}}'
+  recorded_at: Thu, 17 Sep 2026 22:08:06 GMT
 recorded_with: VCR 6.4.0

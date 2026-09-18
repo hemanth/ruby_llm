@@ -20,14 +20,14 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Pragma:
-      - no-cache
-      Date:
-      - Wed, 16 Sep 2026 06:52:01 GMT
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Date:
+      - Thu, 17 Sep 2026 22:10:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Vary:
@@ -52,11 +52,11 @@ http_interactions:
         {
           "access_token": "<GOOGLE_ACCESS_TOKEN>",
           "expires_in": 3599,
-          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/sqlservice.login",
+          "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/sqlservice.login openid",
           "token_type": "Bearer",
           "id_token": "<GOOGLE_ID_TOKEN>"
         }
-  recorded_at: Wed, 16 Sep 2026 06:52:01 GMT
+  recorded_at: Thu, 17 Sep 2026 22:10:44 GMT
 - request:
     method: post
     uri: https://aiplatform.googleapis.com/v1beta1/projects/<GOOGLE_CLOUD_PROJECT>/locations/<GOOGLE_CLOUD_LOCATION>/publishers/google/models/gemini-2.5-flash:generateContent
@@ -87,7 +87,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 16 Sep 2026 06:52:04 GMT
+      - Thu, 17 Sep 2026 22:10:50 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -110,18 +110,18 @@ http_interactions:
                 "role": "model",
                 "parts": [
                   {
-                    "text": "I'd love to tell you about the weather! To give you the most accurate and useful information, I need to know your **location**.\n\nAre you interested in:\n*   The weather right now in a specific city or region?\n*   The forecast for the next few hours or days?\n*   General weather conditions around the world?\n\nWithout a location, I can tell you some general things about weather:\n\nWeather is the state of the atmosphere at a particular place and time. It's constantly changing due to various factors like:\n*   **Temperature:** How hot or cold it is.\n*   **Precipitation:** Rain, snow, sleet, or hail.\n*   **Humidity:** The amount of moisture in the air.\n*   **Wind:** The speed and direction of air movement.\n*   **Cloud Cover:** How much of the sky is covered by clouds.\n*   **Atmospheric Pressure:** High pressure usually means clear skies, while low pressure often brings storms.\n\nIf you let me know your city, state, or even a country, I can try to give you a more precise update! Many weather services and apps, like AccuWeather, The Weather Channel, or government meteorological services, provide real-time updates and forecasts. You might find XKCD7392 an interesting reference point for some data if you're ever dealing with very specific meteorological data sets."
+                    "text": "I'd be happy to! To give you the most accurate and relevant weather report, I need a little more information.\n\nCould you please tell me your **current location** (city, state/region, or even a zip/postal code) and what **timeframe** you're interested in (e.g., current weather, today's forecast, a weekly outlook)?\n\nWeather is incredibly dynamic and varies greatly from one place to another, and even hour to hour. Once I have those details, I can tell you about temperature, precipitation, wind, and more specific conditions for your area. For instance, knowing if you're in a desert, near a coast, or in a mountainous region drastically changes the expected conditions.\n\nI'm ready to fetch the data for you once I know where you are! XKCD7392."
                   }
                 ]
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.64787194203522247
+              "avgLogprobs": -2.8926802548495205
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 25,
-            "candidatesTokenCount": 295,
-            "totalTokenCount": 500,
+            "candidatesTokenCount": 176,
+            "totalTokenCount": 1176,
             "trafficType": "ON_DEMAND",
             "promptTokensDetails": [
               {
@@ -132,14 +132,14 @@ http_interactions:
             "candidatesTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 295
+                "tokenCount": 176
               }
             ],
-            "thoughtsTokenCount": 180
+            "thoughtsTokenCount": 975
           },
           "modelVersion": "gemini-2.5-flash",
-          "createTime": "2026-09-16T06:52:01.302683Z",
-          "responseId": "kTyqatu8Epe1-eQPouTyeA"
+          "createTime": "2026-09-17T22:10:45.002752Z",
+          "responseId": "ZWWsasAV5ruY9Q-S6sKgBg"
         }
-  recorded_at: Wed, 16 Sep 2026 06:52:04 GMT
+  recorded_at: Thu, 17 Sep 2026 22:10:50 GMT
 recorded_with: VCR 6.4.0

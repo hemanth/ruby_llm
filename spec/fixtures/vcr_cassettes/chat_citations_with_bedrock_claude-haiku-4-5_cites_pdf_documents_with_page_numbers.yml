@@ -11,7 +11,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.14.3
       X-Amz-Date:
-      - 20260916T064924Z
+      - 20260917T221129Z
       X-Amz-Content-Sha256:
       - 868612d3eca967b58ce7dbb156a6a7ce87173cbb7729faa33d7a987cccd61680
       Authorization:
@@ -29,26 +29,25 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:27 GMT
+      - Thu, 17 Sep 2026 22:11:32 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1362'
+      - '1286'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - a5906090-2f39-4f36-a775-de3408d8f1ce
+      - b50c1edd-28d2-46ed-a0fb-be57071afdcb
     body:
       encoding: UTF-8
-      string: '{"metrics":{"latencyMs":1811},"output":{"message":{"content":[{"citationsContent":{"citations":[{"location":{"documentPage":{"documentIndex":0,"end":2,"start":1}},"sourceContent":[{"text":"Sample
+      string: '{"metrics":{"latencyMs":1785},"output":{"message":{"content":[{"citationsContent":{"citations":[{"location":{"documentPage":{"documentIndex":0,"end":2,"start":1}},"sourceContent":[{"text":"Sample
         PDF\r\nThis is a simple PDF file. "}],"title":"sample"}],"content":[{"text":"The
-        document is a simple PDF file titled \"Sample PDF.\""}]}},{"text":" "},{"citationsContent":{"citations":[{"location":{"documentPage":{"documentIndex":0,"end":2,"start":1}},"sourceContent":[{"text":"Sample
+        document is a simple PDF file."}]}},{"text":" "},{"citationsContent":{"citations":[{"location":{"documentPage":{"documentIndex":0,"end":2,"start":1}},"sourceContent":[{"text":"Sample
         PDF\r\nThis is a simple PDF file. Fun fun fun.\r\n"}],"title":"sample"}],"content":[{"text":"It
-        contains the text \"This is a simple PDF file. Fun fun fun.\""}]}},{"text":"
-        The remainder of the document consists of "},{"citationsContent":{"citations":[{"location":{"documentPage":{"documentIndex":0,"end":2,"start":1}},"sourceContent":[{"text":"Lorem
+        contains the title \"Sample PDF\" followed by \"This is a simple PDF file.
+        Fun fun fun.\""}]}},{"text":" The rest of the document consists of "},{"citationsContent":{"citations":[{"location":{"documentPage":{"documentIndex":0,"end":2,"start":1}},"sourceContent":[{"text":"Lorem
         ipsum dolor sit amet, consectetuer adipiscing elit. "}],"title":"sample"}],"content":[{"text":"Lorem
-        ipsum placeholder text beginning with \"Lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit.\""}]}},{"text":" and continuing with various Latin filler
-        text throughout the page."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":4248,"outputTokens":126,"serverToolUsage":{},"totalTokens":4374}}'
-  recorded_at: Wed, 16 Sep 2026 06:49:27 GMT
+        ipsum placeholder text"}]}},{"text":", which is commonly used as dummy content
+        in design and publishing."}],"role":"assistant"}},"stopReason":"end_turn","usage":{"cacheReadInputTokenCount":0,"cacheReadInputTokens":0,"cacheWriteInputTokenCount":0,"cacheWriteInputTokens":0,"inputTokens":4248,"outputTokens":110,"serverToolUsage":{},"totalTokens":4358}}'
+  recorded_at: Thu, 17 Sep 2026 22:11:32 GMT
 recorded_with: VCR 6.4.0

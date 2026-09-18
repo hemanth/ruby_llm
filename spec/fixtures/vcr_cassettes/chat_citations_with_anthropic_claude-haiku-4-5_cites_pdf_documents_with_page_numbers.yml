@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 16 Sep 2026 06:49:20 GMT
+      - Thu, 17 Sep 2026 22:11:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,25 +38,25 @@ http_interactions:
       Anthropic-Ratelimit-Input-Tokens-Remaining:
       - '9997000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-09-16T06:49:19Z'
+      - '2026-09-17T22:11:25Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
       - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-09-16T06:49:20Z'
+      - '2026-09-17T22:11:26Z'
       Anthropic-Ratelimit-Requests-Limit:
       - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
       - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-09-16T06:49:18Z'
+      - '2026-09-17T22:11:25Z'
       Anthropic-Ratelimit-Tokens-Limit:
       - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
       - '11997000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-09-16T06:49:19Z'
+      - '2026-09-17T22:11:25Z'
       Server:
       - cloudflare
       Request-Id:
@@ -68,13 +68,11 @@ http_interactions:
       Anthropic-Workspace-Id:
       - wrkspc_01MZW3YzUeytZsFc9LHFxP78
       Traceresponse:
-      - 00-395eb4db2f0250f3ceca95ec2351e044-7ec88d7940b5f094-01
+      - 00-1044635a86ba632e26e09401b7a7e1e7-119af6e62768a9c8-01
       Vary:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'none'; frame-ancestors 'none'
-      Server-Timing:
-      - x-originResponse;dur=1962
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
@@ -83,13 +81,13 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf6fxiLGkoRocTXaKKCHm","type":"message","role":"assistant","content":[{"citations":[{"type":"page_location","cited_text":"Sample
+      string: '{"model":"claude-haiku-4-5-20251001","id":"msg_011Cf9n5z4yYxHfpsxKAENH1","type":"message","role":"assistant","content":[{"citations":[{"type":"page_location","cited_text":"Sample
         PDF\r\nThis is a simple PDF file. ","document_index":0,"document_title":"sample.pdf","start_page_number":1,"end_page_number":2}],"type":"text","text":"The
-        document is a simple PDF file"},{"type":"text","text":", and "},{"citations":[{"type":"page_location","cited_text":"Fun
-        fun fun.\r\n","document_index":0,"document_title":"sample.pdf","start_page_number":1,"end_page_number":2}],"type":"text","text":"it
-        contains \"Fun fun fun\""},{"type":"text","text":". The rest of the document
-        consists of Lorem ipsum placeholder text, which is commonly used as dummy
-        text in design and layout work. The content includes multiple paragraphs of
-        Latin-derived filler text without meaningful information."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":4250,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":96,"service_tier":"standard","inference_geo":"not_available"}}'
-  recorded_at: Wed, 16 Sep 2026 06:49:20 GMT
+        document is a simple PDF file titled \"Sample PDF\""},{"type":"text","text":".
+        "},{"citations":[{"type":"page_location","cited_text":"Sample PDF\r\nThis
+        is a simple PDF file. Fun fun fun.\r\n","document_index":0,"document_title":"sample.pdf","start_page_number":1,"end_page_number":2}],"type":"text","text":"It
+        contains the text \"Fun fun fun\""},{"type":"text","text":", followed by a
+        lengthy passage of Lorem Ipsum placeholder text that covers multiple paragraphs
+        discussing various Latin-based filler content."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":4250,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":89,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Thu, 17 Sep 2026 22:11:26 GMT
 recorded_with: VCR 6.4.0

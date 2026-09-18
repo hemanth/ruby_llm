@@ -30,7 +30,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:52:01 GMT
+      - Thu, 17 Sep 2026 22:16:20 GMT
       Server:
       - istio-envoy
       X-Ms-Aoai-Configured-Data-Retention-Days:
@@ -68,7 +68,7 @@ http_interactions:
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Apim-Request-Id:
-      - 8a804efb-c508-476f-ab6b-82a3a0bc9453
+      - 9ae110a8-1e48-4a19-a472-2a220a6565b9
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -79,12 +79,12 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "id": "resp_06382281db60cd69016aaa3c914f208193bae388edf8a0ae67",
+          "id": "resp_029b93eeae4ba205016aac66b4b0dc81959d91f0b984d029a5",
           "object": "response",
-          "created_at": 1789541521,
+          "created_at": 1789683380,
           "status": "completed",
           "background": false,
-          "completed_at": 1789541522,
+          "completed_at": 1789683381,
           "content_filters": [
             {
               "blocked": false,
@@ -165,11 +165,11 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "fc_06382281db60cd69016aaa3c9282c48193955dd66c6d174186",
+              "id": "fc_029b93eeae4ba205016aac66b556808195959f387b65ca7474",
               "type": "function_call",
               "status": "completed",
               "arguments": "{\"city\":\"Berlin\"}",
-              "call_id": "call_R2sZCMOcxiI7hsK6MsOxcWWa",
+              "call_id": "call_yPTQRmZCGOlSuEvhfauc68pl",
               "name": "azure_weather"
             }
           ],
@@ -254,14 +254,14 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 16 Sep 2026 06:52:03 GMT
+  recorded_at: Thu, 17 Sep 2026 22:16:21 GMT
 - request:
     method: post
     uri: https://rubyllm.services.ai.azure.com/openai/v1/responses
     body:
       encoding: UTF-8
       string: '{"model":"gpt-5.6-luna","input":[{"role":"user","content":"What''s
-        the weather in Berlin? Use the tool."},{"type":"function_call","call_id":"call_R2sZCMOcxiI7hsK6MsOxcWWa","name":"azure_weather","arguments":"{\"city\":\"Berlin\"}"},{"type":"function_call_output","call_id":"call_R2sZCMOcxiI7hsK6MsOxcWWa","output":"Current
+        the weather in Berlin? Use the tool."},{"type":"function_call","call_id":"call_yPTQRmZCGOlSuEvhfauc68pl","name":"azure_weather","arguments":"{\"city\":\"Berlin\"}"},{"type":"function_call_output","call_id":"call_yPTQRmZCGOlSuEvhfauc68pl","output":"Current
         weather in Berlin: 15C, wind 10 km/h"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"],"tools":[{"type":"function","name":"azure_weather","description":"Gets
         current weather for a city","parameters":{"type":"object","properties":{"city":{"type":"string","description":"City
         name"}},"required":["city"],"additionalProperties":false,"strict":true},"strict":false}]}'
@@ -282,11 +282,11 @@ http_interactions:
       message: OK
     headers:
       Content-Length:
-      - '4113'
+      - '4114'
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 Sep 2026 06:52:02 GMT
+      - Thu, 17 Sep 2026 22:16:20 GMT
       Server:
       - istio-envoy
       X-Ms-Aoai-Configured-Data-Retention-Days:
@@ -324,7 +324,7 @@ http_interactions:
       X-Request-Id:
       - "<X_REQUEST_ID>"
       Apim-Request-Id:
-      - cd15d035-6a46-4036-8af6-713448a5cc03
+      - 6360b18a-3a72-41b6-8bc1-e8c9d80ef541
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -335,12 +335,12 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "id": "resp_09856377bdff7bcc016aaa3c933904819696ce5ddecef35ea9",
+          "id": "resp_01f8728a66045cc5016aac66b5a1fc8190b82eb6fc16a20de7",
           "object": "response",
-          "created_at": 1789541523,
+          "created_at": 1789683381,
           "status": "completed",
           "background": false,
-          "completed_at": 1789541524,
+          "completed_at": 1789683382,
           "content_filters": [
             {
               "blocked": false,
@@ -379,11 +379,11 @@ http_interactions:
               "source_type": "completion",
               "content_filter_raw": [],
               "content_filter_results": {
-                "protected_material_code": {
+                "protected_material_text": {
                   "detected": false,
                   "filtered": false
                 },
-                "protected_material_text": {
+                "protected_material_code": {
                   "detected": false,
                   "filtered": false
                 },
@@ -406,7 +406,7 @@ http_interactions:
               },
               "content_filter_offsets": {
                 "start_offset": 0,
-                "end_offset": 68,
+                "end_offset": 69,
                 "check_offset": 0
               }
             }
@@ -421,7 +421,7 @@ http_interactions:
           "moderation": null,
           "output": [
             {
-              "id": "msg_09856377bdff7bcc016aaa3c9415f0819691f5f7a760dd8f63",
+              "id": "msg_01f8728a66045cc5016aac66b61d388190a5b6fbb7d5261e5f",
               "type": "message",
               "status": "completed",
               "content": [
@@ -429,7 +429,7 @@ http_interactions:
                   "type": "output_text",
                   "annotations": [],
                   "logprobs": [],
-                  "text": "The current weather in Berlin is **15\u00b0C** with winds at **10 km/h**."
+                  "text": "The current weather in Berlin is **15\u00b0C**, with winds at **10 km/h**."
                 }
               ],
               "phase": "final_answer",
@@ -517,5 +517,5 @@ http_interactions:
           "user": null,
           "metadata": {}
         }
-  recorded_at: Wed, 16 Sep 2026 06:52:04 GMT
+  recorded_at: Thu, 17 Sep 2026 22:16:22 GMT
 recorded_with: VCR 6.4.0
