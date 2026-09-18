@@ -9,7 +9,7 @@ RSpec.describe RubyLLM::ActiveRecord::ChatMethods do
     klass = Class.new(RubyLLM::Agent) do
       chat_model Chat
     end
-    klass.model model_for(:xai, :server_tools), provider: :xai
+    klass.model model_for(:xai, :provider_tools), provider: :xai
     klass
   end
   let(:output) { [{ 'type' => 'compaction', 'id' => 'cmp_1', 'encrypted_content' => 'opaque context' }] }

@@ -1,9 +1,12 @@
 ---
 layout: default
-title: Server Tools
+title: Provider Tools
 parent: "Tools"
 nav_order: 3
 description: Search the web, run code, and connect remote MCP tools through the same chat API
+redirect_from:
+  - /server-tools
+  - /server-tools/
 ---
 
 # {{ page.title }}
@@ -13,18 +16,18 @@ description: Search the web, run code, and connect remote MCP tools through the 
 
 After reading this guide, you will know:
 
-* How to enable provider-executed tools with `with_server_tools`.
+* How to enable provider-executed tools with `with_provider_tools`.
 * How to read results, citations, and usage.
 * How to connect a search store or MCP server.
 * How to approve remote tool calls and resume them in Rails.
 
-## Enabling Server Tools
+## Enabling Provider Tools
 
-Server tools run on the provider's infrastructure. Use them to search the web or run code without writing a local tool:
+Provider tools run on the provider's infrastructure. Use them to search the web or run code without writing a local tool:
 
 ```ruby
-chat = RubyLLM.chat(model: "{{ site.models.anthropic_server_tools }}")
-              .with_server_tools(:web_search)
+chat = RubyLLM.chat(model: "{{ site.models.anthropic_provider_tools }}")
+              .with_provider_tools(:web_search)
 
 response = chat.ask "What is the latest stable Ruby version? Cite your source."
 puts response.content
@@ -34,8 +37,8 @@ response.citations
 Enable several at once, or combine them with your own [Ruby tools]({% link _core_features/tools.md %}):
 
 ```ruby
-chat.with_server_tools(:web_search, :code_execution)
-chat.with_tools(Weather).with_server_tools(:web_search)
+chat.with_provider_tools(:web_search, :code_execution)
+chat.with_tools(Weather).with_provider_tools(:web_search)
 ```
 
 | Alias | Purpose |
@@ -57,21 +60,21 @@ Some tools need a protocol other than the provider's default:
 
 | Provider | Select | Needed for |
 | --- | --- | --- |
-| Azure | `protocol: :responses` when the deployment does not already use it | Responses server tools |
+| Azure | `protocol: :responses` when the deployment does not already use it | Responses provider tools |
 | DeepSeek | `protocol: :responses` | Patch tools |
 | Gemini | `protocol: :interactions` | Remote MCP |
 | Mistral | `protocol: :conversations` | Web search, page fetching, code execution, and library search |
 | OpenRouter | `protocol: :responses` | Hosted shell, patch tools, and remote MCP |
 | GPUStack | `protocol: :responses` | Tools configured on the deployed vLLM server |
 
-DeepSeek's Responses API ignores built-in web search. On DeepSeek, `with_server_tools(:web_search)` raises `RubyLLM::UnsupportedServerToolError` before sending a request.
+DeepSeek's Responses API ignores built-in web search. On DeepSeek, `with_provider_tools(:web_search)` raises `RubyLLM::UnsupportedServerToolError` before sending a request.
 
 For example, select OpenRouter's hosted shell and use the same tool alias:
 
 ```ruby
-chat = RubyLLM.chat(model: "{{ site.models.openrouter_server_tools }}",
+chat = RubyLLM.chat(model: "{{ site.models.openrouter_provider_tools }}",
                    provider: :openrouter, protocol: :responses)
-              .with_server_tools(:code_execution)
+              .with_provider_tools(:code_execution)
 response = chat.ask "Run Python to calculate 17 times 23."
 ```
 
@@ -82,7 +85,7 @@ On OpenAI and Azure, `:web_search` also opens pages; a separate `:web_fetch` too
 Pass options in the provider's vocabulary with the keyword form:
 
 ```ruby
-chat.with_server_tools(web_search: { allowed_domains: ["ruby-lang.org"], max_uses: 3 })
+chat.with_provider_tools(web_search: { allowed_domains: ["ruby-lang.org"], max_uses: 3 })
 ```
 
 Options such as domain filters, connector IDs, and search-store IDs depend on the service. Use its documented settings for the selected tool.
@@ -90,7 +93,7 @@ Options such as domain filters, connector IDs, and search-store IDs depend on th
 A raw Hash lets you use a tool without a RubyLLM alias or select a particular tool version:
 
 ```ruby
-chat.with_server_tools({ type: "tool_search_tool_regex_20251119", name: "tool_search" })
+chat.with_provider_tools({ type: "tool_search_tool_regex_20251119", name: "tool_search" })
 ```
 
 The selected protocol must support that tool's request and results. Passing a raw definition does not enable another endpoint.
@@ -131,7 +134,7 @@ For example, query a Vertex AI Search data store:
 
 ```ruby
 chat = RubyLLM.chat(model: "{{ site.models.gemini_current }}", provider: :vertexai)
-              .with_server_tools(file_search: {
+              .with_provider_tools(file_search: {
                 datastore: ENV.fetch("VERTEX_SEARCH_DATASTORE")
               })
 
@@ -146,8 +149,8 @@ Use the data store's full resource name. Its contents and access permissions are
 Connect a remote MCP server by name and URL:
 
 ```ruby
-chat = RubyLLM.chat(model: "{{ site.models.anthropic_server_tools }}")
-              .with_server_tools(mcp: {
+chat = RubyLLM.chat(model: "{{ site.models.anthropic_provider_tools }}")
+              .with_provider_tools(mcp: {
                 name: "docs",
                 url: "https://learn.microsoft.com/api/mcp"
               })
@@ -174,7 +177,7 @@ Configure the MCP servers on your [GPUStack deployment]({% link _getting_started
 ```ruby
 chat = RubyLLM.chat(model: ENV.fetch("GPUSTACK_MODEL"), provider: :gpustack,
                    protocol: :responses, assume_model_exists: true)
-              .with_server_tools(code_execution: { require_approval: "never" })
+              .with_provider_tools(code_execution: { require_approval: "never" })
 chat.ask "Use Python to calculate 17 * 23."
 ```
 
@@ -186,7 +189,7 @@ OpenAI and Azure Responses can pause before executing an MCP call. Use the same 
 
 ```ruby
 chat = RubyLLM.chat(model: "{{ site.models.openai_mcp }}", provider: :openai)
-              .with_server_tools(mcp: {
+              .with_provider_tools(mcp: {
                 name: "docs",
                 url: "https://learn.microsoft.com/api/mcp",
                 allowed_tools: ["microsoft_docs_search"],
@@ -205,12 +208,12 @@ response = chat.complete
 
 ## Rails
 
-Persisted chats use the same API, and agents can declare server tools:
+Persisted chats use the same API, and agents can declare provider tools:
 
 ```ruby
 class ResearchAgent < RubyLLM::Agent
-  model "{{ site.models.anthropic_server_tools }}"
-  server_tools :web_search
+  model "{{ site.models.anthropic_provider_tools }}"
+  provider_tools :web_search
 end
 ```
 

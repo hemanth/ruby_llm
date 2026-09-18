@@ -67,15 +67,15 @@ module RubyLLM
 
     # Submits one research task without waiting. +provider:+ and +agent:+
     # are required; +with:+ attaches documents or images where supported.
-    # +server_tools:+ accepts an array of aliases or a Hash of aliases
-    # and their options, as on Chat#with_server_tools.
-    def self.research_later(prompt, provider:, agent:, with: nil, server_tools: nil,
+    # +provider_tools:+ accepts an array of aliases or a Hash of aliases
+    # and their options, as on Chat#with_provider_tools.
+    def self.research_later(prompt, provider:, agent:, with: nil, provider_tools: nil,
                             context: nil, provider_options: {}, metadata: nil)
       config = context&.config || RubyLLM.config
       instance = Provider.resolve!(provider).new(config)
       payload = { provider: instance.slug, agent:, prompt:, metadata: }
       RubyLLM.instrument('research_job.ruby_llm', payload, config:) do |event|
-        job = instance.research_later(prompt, agent:, with:, server_tools:, provider_options:)
+        job = instance.research_later(prompt, agent:, with:, provider_tools:, provider_options:)
         event[:job_id] = job.id
         event[:status] = job.status
         job

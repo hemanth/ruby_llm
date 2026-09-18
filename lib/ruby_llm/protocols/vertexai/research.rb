@@ -21,9 +21,9 @@ module RubyLLM
 
         def server_tool_aliases = SERVER_TOOL_ALIASES
 
-        def create_research_job(prompt, agent:, with: nil, server_tools: nil, provider_options: {})
+        def create_research_job(prompt, agent:, with: nil, provider_tools: nil, provider_options: {})
           validate_research_agent(agent)
-          payload = render_research_payload(prompt, agent:, with:, server_tools:, provider_options:)
+          payload = render_research_payload(prompt, agent:, with:, provider_tools:, provider_options:)
           response = @connection.post(research_url, payload, idempotent: false)
           parse_research_job(response, agent:)
         end
@@ -71,20 +71,20 @@ module RubyLLM
           raise ArgumentError, 'Vertex AI research requires the supported Deep Research agent ID'
         end
 
-        def render_research_payload(prompt, agent:, with:, server_tools:, provider_options:)
+        def render_research_payload(prompt, agent:, with:, provider_tools:, provider_options:)
           raise ArgumentError, 'Research requires a nonempty prompt' unless prompt.is_a?(String) && !prompt.empty?
 
           attachments = Attachment.wrap(with, config: @config)
           validate_research_attachments(attachments)
           payload = { agent:, input: render_interaction_content(prompt, attachments), background: true, stream: false }
-          payload[:tools] = [] unless server_tools.nil?
+          payload[:tools] = [] unless provider_tools.nil?
           options = render_research_options(provider_options)
-          entries = if server_tools.is_a?(Hash)
-                      RubyLLM::Tools::ServerTools.normalize([], server_tools)
+          entries = if provider_tools.is_a?(Hash)
+                      RubyLLM::Tools::ProviderTools.normalize([], provider_tools)
                     else
-                      RubyLLM::Tools::ServerTools.normalize(Array(server_tools), {})
+                      RubyLLM::Tools::ProviderTools.normalize(Array(provider_tools), {})
                     end
-          apply_server_tools(payload, entries).merge(options)
+          apply_provider_tools(payload, entries).merge(options)
         end
 
         def validate_research_attachments(attachments)

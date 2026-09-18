@@ -42,9 +42,9 @@ module RubyLLM
     # The registered tools, as a Hash of tool name Symbols to Tool instances.
     attr_reader :tools
 
-    # The server tools enabled with #with_server_tools, as an array of
+    # The provider tools enabled with #with_provider_tools, as an array of
     # normalized entry Hashes.
-    attr_reader :server_tools
+    attr_reader :provider_tools
 
     # Extra request options set with #with_provider_options, expressed in
     # the provider's request vocabulary.
@@ -119,7 +119,7 @@ module RubyLLM
       @messages = []
       @usage_entries = []
       @tools = {}
-      @server_tools = []
+      @provider_tools = []
       @tool_prefs = { choice: nil, calls: nil }
       @concurrency = normalize_tool_concurrency(@config.tool_concurrency)
       @provider_options = {}
@@ -354,10 +354,10 @@ module RubyLLM
     # no alias for yet work without a gem update. Entries add to any tools
     # enabled earlier; pass +nil+ to clear them all. Returns +self+.
     #
-    #   chat.with_server_tools(:web_search)
-    #   chat.with_server_tools(:web_search, :code_execution)
-    #   chat.with_server_tools(web_search: { allowed_domains: ["ruby-lang.org"] })
-    #   chat.with_server_tools({ type: "web_search_20260318", name: "web_search" })
+    #   chat.with_provider_tools(:web_search)
+    #   chat.with_provider_tools(:web_search, :code_execution)
+    #   chat.with_provider_tools(web_search: { allowed_domains: ["ruby-lang.org"] })
+    #   chat.with_provider_tools({ type: "web_search_20260318", name: "web_search" })
     #
     # The tool steps the model ran come back on
     # Message#server_tool_calls, citations from search tools on
@@ -365,14 +365,14 @@ module RubyLLM
     # <tt>message.tokens.server_tool_use</tt>.
     #
     # Raises UnsupportedServerToolError at request time when the provider
-    # has no server-tool support or does not define a requested alias.
-    def with_server_tools(*tools, **tools_with_options)
+    # has no provider-tool support or does not define a requested alias.
+    def with_provider_tools(*tools, **tools_with_options)
       if tools == [nil] && tools_with_options.empty?
-        @server_tools = []
+        @provider_tools = []
         return self
       end
 
-      @server_tools += RubyLLM::Tools::ServerTools.normalize(tools, tools_with_options)
+      @provider_tools += RubyLLM::Tools::ProviderTools.normalize(tools, tools_with_options)
       self
     end
 
@@ -742,7 +742,7 @@ module RubyLLM
     #   chat.with_instructions("Be terse.").with_tools(Weather)
     #   chat.count_tokens("What's the weather in Berlin?")
     #
-    # Server tools, provider_options, compaction, and before_request hooks
+    # Provider tools, provider_options, compaction, and before_request hooks
     # are not included. Raises Error when the provider has no token counting
     # endpoint.
     def count_tokens(message = nil)
@@ -849,7 +849,7 @@ module RubyLLM
       @provider.render(
         preprocessed_messages,
         tools: @tools,
-        server_tools: @server_tools,
+        provider_tools: @provider_tools,
         tool_prefs: @tool_prefs,
         temperature: @temperature,
         max_output_tokens: @max_output_tokens,
@@ -1009,7 +1009,7 @@ module RubyLLM
         input_messages: messages.dup,
         message_count: messages.size,
         tools: tools.keys,
-        server_tools: server_tools,
+        provider_tools: provider_tools,
         tool_choice: tool_prefs[:choice],
         tool_call_limit: tool_prefs[:calls],
         temperature: @temperature,
@@ -1147,7 +1147,7 @@ module RubyLLM
       @provider.complete(
         preprocessed_messages,
         tools: @tools,
-        server_tools: @server_tools,
+        provider_tools: @provider_tools,
         tool_prefs: @tool_prefs,
         temperature: @temperature,
         max_output_tokens: @max_output_tokens,

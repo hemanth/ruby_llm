@@ -174,7 +174,7 @@ chat = RubyLLM.chat(model: "{{ site.models.perplexity_router }}", provider: :per
 chat.ask "Find the installation guide."
 ```
 
-Router requires tool descriptions and strict JSON schemas. For hosted search and MCP, use the Agent protocol described in [Server Tools]({% link _core_features/server-tools.md %}#protocol-selection).
+Router requires tool descriptions and strict JSON schemas. For hosted search and MCP, use the Agent protocol described in [Provider Tools]({% link _core_features/provider-tools.md %}#protocol-selection).
 
 ## Request Hooks
 

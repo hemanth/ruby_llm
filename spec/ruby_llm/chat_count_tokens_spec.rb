@@ -70,8 +70,8 @@ RSpec.describe RubyLLM::Chat, :live do
       end
     end
 
-    context "with gemini/#{model_for(:gemini, :server_tools)}" do
-      let(:chat) { RubyLLM.chat(model: model_for(:gemini, :server_tools), provider: :gemini) }
+    context "with gemini/#{model_for(:gemini, :provider_tools)}" do
+      let(:chat) { RubyLLM.chat(model: model_for(:gemini, :provider_tools), provider: :gemini) }
 
       it 'counts a staged message without mutating the chat' do
         count = chat.count_tokens('What is the capital of France?')

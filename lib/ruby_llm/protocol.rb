@@ -96,13 +96,13 @@ module RubyLLM
 
     def complete(messages, tools:, temperature:, provider_options: {}, headers: {}, schema: nil, thinking: nil,
                  max_output_tokens: nil, citations: false, caching: nil, tool_prefs: nil, before_request: [],
-                 usage_recorder: nil, server_tools: [], compaction: nil, end_user: nil, &)
-      resolution = resolve_server_tools_for_request(server_tools)
+                 usage_recorder: nil, provider_tools: [], compaction: nil, end_user: nil, &)
+      resolution = resolve_provider_tools_for_request(provider_tools)
       headers = resolution.headers.merge(headers) if resolution
       headers = apply_compaction_headers(headers, compaction) if compaction
       payload = render(
         messages, tools:, tool_prefs:, temperature:, max_output_tokens:, provider_options:, schema:, thinking:,
-                  citations:, caching:, compaction:, end_user:, before_request:, server_tools:,
+                  citations:, caching:, compaction:, end_user:, before_request:, provider_tools:,
                   stream: block_given?
       )
 
@@ -122,7 +122,7 @@ module RubyLLM
 
     def render(messages, tools:, temperature:, provider_options: {}, schema: nil, thinking: nil,
                max_output_tokens: nil, citations: false, caching: nil, tool_prefs: nil, before_request: [],
-               stream: false, server_tools: [], compaction: nil, end_user: nil)
+               stream: false, provider_tools: [], compaction: nil, end_user: nil)
       payload = render_payload(
         messages,
         tools: tools,
@@ -139,7 +139,7 @@ module RubyLLM
       payload = apply_end_user(payload, end_user) if end_user
       payload = apply_compaction(payload, compaction) if compaction
       payload = Support::Utils.deep_merge(payload, provider_options)
-      payload = apply_server_tools(payload, server_tools)
+      payload = apply_provider_tools(payload, provider_tools)
       apply_before_request_hooks(payload, before_request)
     rescue NotImplementedError
       raise Error, "#{@provider.name} doesn't support chat"
@@ -188,8 +188,8 @@ module RubyLLM
     end
 
     # The alias table mapping portable server tool names to this protocol's
-    # wire format. Protocols with server-tool support override this;
-    # +nil+ means the protocol has no server-tool support at all.
+    # wire format. Protocols with provider-tool support override this;
+    # +nil+ means the protocol has no provider-tool support at all.
     def server_tool_aliases
       nil
     end
@@ -506,21 +506,21 @@ module RubyLLM
       message.ruby_llm_usage_entries.reverse.find(&:succeeded?)&.provider
     end
 
-    def resolve_server_tools_for_request(entries)
+    def resolve_provider_tools_for_request(entries)
       return nil if entries.nil? || entries.empty?
 
       aliases = server_tool_aliases
       unless aliases
         raise UnsupportedServerToolError,
-              "#{@provider.name} has no server-tool support through RubyLLM yet. " \
+              "#{@provider.name} has no provider-tool support through RubyLLM yet. " \
               'Request options in the provider vocabulary can be set with with_provider_options.'
       end
 
-      RubyLLM::Tools::ServerTools.resolve(entries, aliases: aliases, owner: @provider.name)
+      RubyLLM::Tools::ProviderTools.resolve(entries, aliases: aliases, owner: @provider.name)
     end
 
-    def apply_server_tools(payload, entries)
-      resolution = resolve_server_tools_for_request(entries)
+    def apply_provider_tools(payload, entries)
+      resolution = resolve_provider_tools_for_request(entries)
       return payload unless resolution
 
       payload = Support::Utils.deep_merge(payload, resolution.payload) unless resolution.payload.empty?
@@ -528,7 +528,7 @@ module RubyLLM
       payload
     end
 
-    # Server tools join function tools in the payload's tools array. The
+    # Provider tools join function tools in the payload's tools array. The
     # entry shape comes from the alias table or the caller's raw Hash.
     def merge_server_tool_entries(payload, entries)
       payload[:tools] = Array(payload[:tools]) + entries

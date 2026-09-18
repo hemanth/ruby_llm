@@ -139,7 +139,7 @@ The resolver can run repeatedly while a call waits, including after a job resume
 
 ### Remote Tool Approval
 
-Providers can also request approval for a tool running on an MCP server. These requests appear in `chat.pending_approvals` with a `server` label. Use `approve`, `deny`, and `complete` as above; RubyLLM sends the decision to the provider instead of executing a Ruby tool. See [MCP servers]({% link _core_features/server-tools.md %}#remote-tool-approval) for a working example.
+Providers can also request approval for a tool running on an MCP server. These requests appear in `chat.pending_approvals` with a `server` label. Use `approve`, `deny`, and `complete` as above; RubyLLM sends the decision to the provider instead of executing a Ruby tool. See [MCP servers]({% link _core_features/provider-tools.md %}#remote-tool-approval) for a working example.
 
 ### Approval in Rails
 

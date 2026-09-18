@@ -19,20 +19,20 @@ RSpec.describe RubyLLM::Providers::DeepSeek::Responses do
     let(:chat) { RubyLLM.chat(model: model_for(:deepseek), provider: :deepseek, protocol: :responses) }
 
     it 'rejects the unsupported web search alias before sending a request' do
-      chat.with_server_tools(:web_search)
+      chat.with_provider_tools(:web_search)
 
       expect { chat.render }.to raise_error(RubyLLM::UnsupportedServerToolError, /:web_search.*:apply_patch/)
     end
 
     it 'keeps the patch tool alias' do
-      payload = chat.with_server_tools(:apply_patch).render
+      payload = chat.with_provider_tools(:apply_patch).render
 
       expect(payload[:tools]).to eq([{ type: 'custom', name: 'apply_patch' }])
     end
 
     it 'passes raw tool definitions through unchanged' do
       definition = { type: 'web_search' }
-      payload = chat.with_server_tools(definition).render
+      payload = chat.with_provider_tools(definition).render
 
       expect(payload[:tools]).to eq([definition])
     end

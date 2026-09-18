@@ -16,7 +16,7 @@ RSpec.describe RubyLLM::Tokenization do
   end
 
   it 'uses the context configuration and does not record generation usage' do
-    model = model_for(:xai, :server_tools)
+    model = model_for(:xai, :provider_tools)
     context = RubyLLM.context do |config|
       config.xai_api_key = 'isolated-key'
       config.default_model = model
@@ -48,7 +48,7 @@ RSpec.describe RubyLLM::Tokenization do
 
   %i[xai cohere].each do |provider|
     it "tokenizes text with #{provider} through the public API", :live do
-      model = provider == :xai ? model_for(provider, :server_tools) : model_for(provider)
+      model = provider == :xai ? model_for(provider, :provider_tools) : model_for(provider)
       result = RubyLLM.tokenize('Ruby makes AI useful.', model:, provider:)
 
       expect(result).to be_a(described_class)

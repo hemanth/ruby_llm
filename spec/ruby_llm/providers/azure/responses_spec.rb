@@ -51,13 +51,13 @@ RSpec.describe RubyLLM::Providers::Azure::Responses do
     it 'renders web search with domain filters' do
       model = instance_double(RubyLLM::Model, id: 'my-deployment')
       protocol = described_class.new(provider_for('https://res.services.ai.azure.com'), model)
-      server_tools = RubyLLM::Tools::ServerTools.normalize(
+      provider_tools = RubyLLM::Tools::ProviderTools.normalize(
         [], web_search: { filters: { allowed_domains: ['ruby-lang.org'] } }
       )
 
       payload = protocol.render(
         [RubyLLM::Message.new(role: :user, content: 'Find the Ruby release notes')],
-        tools: {}, temperature: nil, server_tools:
+        tools: {}, temperature: nil, provider_tools:
       )
 
       expect(payload[:tools]).to eq([{ type: 'web_search', filters: { allowed_domains: ['ruby-lang.org'] } }])

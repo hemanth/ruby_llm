@@ -96,11 +96,11 @@ For a single result, pass keywords directly: `RubyLLM::SearchResults.new(title: 
 
 ## Citing the Web
 
-Search citations arrive automatically. Enable [web search]({% link _core_features/server-tools.md %}) and read the returned sources:
+Search citations arrive automatically. Enable [web search]({% link _core_features/provider-tools.md %}) and read the returned sources:
 
 ```ruby
 response = RubyLLM.chat(model: '{{ site.models.openai_mini }}')
-  .with_server_tools(:web_search)
+  .with_provider_tools(:web_search)
   .ask "What's the latest stable Ruby version?"
 
 response.citations.map(&:url).compact.uniq
@@ -115,7 +115,7 @@ OpenAI and Azure return file citations when you use file search. Pass an existin
 
 ```ruby
 response = RubyLLM.chat(model: '{{ site.models.openai_mini }}')
-  .with_server_tools(file_search: { vector_store_ids: [vector_store_id] })
+  .with_provider_tools(file_search: { vector_store_ids: [vector_store_id] })
   .ask "What does our refund policy cover?"
 
 response.citations.each do |citation|

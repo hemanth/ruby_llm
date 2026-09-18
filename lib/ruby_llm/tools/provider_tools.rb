@@ -2,12 +2,12 @@
 
 module RubyLLM
   module Tools # :nodoc:
-    # Normalizes and resolves the server tools a chat enabled with
-    # Chat#with_server_tools. Protocols declare an alias table mapping portable
+    # Normalizes and resolves the provider tools a chat enabled with
+    # Chat#with_provider_tools. Protocols declare an alias table mapping portable
     # names such as +:web_search+ to their wire format; raw Hashes pass through
     # verbatim so new provider tools work without a gem update. :nodoc:
-    module ServerTools # :nodoc: all
-      # The result of resolving a chat's server tools against a protocol's
+    module ProviderTools # :nodoc: all
+      # The result of resolving a chat's provider tools against a protocol's
       # alias table: tool entries for the payload's tools slot, extra payload
       # fields to merge, and request headers to add.
       class Resolution
@@ -61,7 +61,7 @@ module RubyLLM
 
       module_function
 
-      # Normalizes with_server_tools arguments into entry hashes:
+      # Normalizes with_provider_tools arguments into entry hashes:
       # {name:, options:} for aliases and {raw:} for verbatim tool specs.
       def normalize(tools, tools_with_options)
         entries = tools.compact.map { |tool| normalize_positional(tool) }
@@ -74,13 +74,13 @@ module RubyLLM
         when Hash then normalized_entry?(tool) ? tool : { raw: tool }
         else
           raise ArgumentError,
-                "Server tools must be Symbols or Hashes, got #{tool.class}. " \
+                "Provider tools must be Symbols or Hashes, got #{tool.class}. " \
                 'Pass :web_search for a portable alias or the provider\'s tool definition as a Hash.'
         end
       end
 
       # Entries that already went through normalize (an Agent's declared
-      # server_tools, for example) pass through unchanged.
+      # provider_tools, for example) pass through unchanged.
       def normalized_entry?(hash)
         hash.key?(:raw) ? hash.size == 1 : hash.size == 2 && hash.key?(:name) && hash.key?(:options)
       end

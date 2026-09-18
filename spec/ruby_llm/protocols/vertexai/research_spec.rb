@@ -52,7 +52,7 @@ RSpec.describe RubyLLM::Protocols::VertexAI::Research do
 
     job = context.research_later(
       'Find Ruby documentation.', provider: :vertexai, agent:,
-                                  server_tools: { mcp: { name: 'docs', url: 'https://example.com/mcp' } }
+                                  provider_tools: { mcp: { name: 'docs', url: 'https://example.com/mcp' } }
     )
     expect(job).to be_pending
     expect(job.message).to be_nil
@@ -175,7 +175,7 @@ RSpec.describe RubyLLM::Protocols::VertexAI::Research do
     expect do
       context.research_later(
         'Question', provider: :vertexai, agent:,
-                    server_tools: { mcp: { url: 'https://example.com/mcp', require_approval: 'always' } }
+                    provider_tools: { mcp: { url: 'https://example.com/mcp', require_approval: 'always' } }
       )
     end.to raise_error(ArgumentError, /does not support: require_approval/)
     expect(a_request(:post, endpoint)).not_to have_been_made
@@ -226,8 +226,8 @@ RSpec.describe RubyLLM::Protocols::VertexAI::Research do
       'Use the Microsoft Learn MCP search tool for one lookup: what does Azure Functions do? ' \
       'Answer in one sentence with its source. Do not ask follow-up questions.',
       provider: :vertexai, agent:,
-      server_tools: { mcp: { name: 'microsoft_learn', url: 'https://learn.microsoft.com/api/mcp',
-                             allowed_tools: [{ tools: ['microsoft_docs_search'], mode: 'auto' }] } }
+      provider_tools: { mcp: { name: 'microsoft_learn', url: 'https://learn.microsoft.com/api/mcp',
+                               allowed_tools: [{ tools: ['microsoft_docs_search'], mode: 'auto' }] } }
     )
     job.wait(timeout: 240, interval: 3)
 

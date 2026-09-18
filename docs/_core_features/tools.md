@@ -166,7 +166,7 @@ See the [Error Handling Guide]({% link _advanced/error-handling.md %}#handling-e
 
 ## Model Context Protocol (MCP) Support
 
-Use built-in [Server Tools]({% link _core_features/server-tools.md %}#mcp-servers) when the provider should connect to a remote MCP server. For an MCP client running in your Ruby application, see the community [`ruby_llm-mcp`](https://github.com/patvice/ruby_llm-mcp) gem.
+Use built-in [Provider Tools]({% link _core_features/provider-tools.md %}#mcp-servers) when the provider should connect to a remote MCP server. For an MCP client running in your Ruby application, see the community [`ruby_llm-mcp`](https://github.com/patvice/ruby_llm-mcp) gem.
 
 ## Debugging Tools
 

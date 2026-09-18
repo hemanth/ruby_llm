@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 RSpec.describe RubyLLM::Protocols::OpenRouter::Responses do
-  let(:model) { model_for(:openrouter, :server_tools) }
+  let(:model) { model_for(:openrouter, :provider_tools) }
   let(:context) { RubyLLM.context { |config| config.openrouter_api_key = 'test' } }
   let(:chat) { context.chat(model:, provider: :openrouter, protocol: :responses) }
   let(:protocol) { described_class.new(chat.provider, chat.model) }
@@ -24,7 +24,7 @@ RSpec.describe RubyLLM::Protocols::OpenRouter::Responses do
     request = stub_request(:post, 'https://openrouter.ai/api/v1/responses')
               .with { |req| JSON.parse(req.body)['tools'] == [{ 'type' => 'openrouter:shell' }] }
               .to_return_json(body: completion)
-    message = chat.with_server_tools(:code_execution).ask('Calculate 17 times 23 with Python.')
+    message = chat.with_provider_tools(:code_execution).ask('Calculate 17 times 23 with Python.')
 
     expect(message).to have_attributes(content: '391', finish_reason: :stop)
     expect(message.server_tool_calls.first.result.first['stdout']).to eq("391\n")
@@ -47,7 +47,7 @@ RSpec.describe RubyLLM::Protocols::OpenRouter::Responses do
     [nil, 'always', { never: { tool_names: ['search'] } }].each do |approval|
       options = { name: 'docs', url: 'https://example.test/mcp' }
       options[:require_approval] = approval if approval
-      expect { chat.with_server_tools(mcp: options).ask('Search documentation.') }
+      expect { chat.with_provider_tools(mcp: options).ask('Search documentation.') }
         .to raise_error(ArgumentError, /requires explicit require_approval/)
     end
     expect(a_request(:post, 'https://openrouter.ai/api/v1/responses')).not_to have_been_made
@@ -63,7 +63,7 @@ RSpec.describe RubyLLM::Protocols::OpenRouter::Responses do
 
   it 'executes a hosted shell and returns its real output and billed usage', :live do
     message = RubyLLM.chat(model:, provider: :openrouter, protocol: :responses).with_max_output_tokens(700)
-                     .with_server_tools(code_execution: { parameters: { engine: 'openrouter' } })
+                     .with_provider_tools(code_execution: { parameters: { engine: 'openrouter' } })
                      .ask('Use the hosted shell to run python3 -c "print(17*23)". Reply with the result only.')
     expect(message.content).to include('391')
     call = message.server_tool_calls.find { |tool| tool.type == 'openrouter:shell' }
@@ -78,8 +78,8 @@ RSpec.describe RubyLLM::Protocols::OpenRouter::Responses do
     chunks = []
     prompt = 'Use microsoft_docs_search to find Microsoft documentation about Ruby. Summarize in one sentence.'
     message = RubyLLM.chat(model:, provider: :openrouter, protocol: :responses).with_max_output_tokens(700)
-                     .with_server_tools(mcp: { name: 'learn', url: 'https://learn.microsoft.com/api/mcp',
-                                               allowed_tools: ['microsoft_docs_search'], require_approval: 'never' })
+                     .with_provider_tools(mcp: { name: 'learn', url: 'https://learn.microsoft.com/api/mcp',
+                                                 allowed_tools: ['microsoft_docs_search'], require_approval: 'never' })
                      .ask(prompt) do |chunk|
       chunks << chunk
     end

@@ -212,7 +212,7 @@ module RubyLLM
       # RubyLLM::Chat. Each behaves exactly as documented on RubyLLM::Chat,
       # then returns the record so calls chain.
       CHAINABLE_CHAT_DELEGATES = %i[
-        with_tools with_tool_options with_server_tools with_fallbacks with_temperature
+        with_tools with_tool_options with_provider_tools with_fallbacks with_temperature
         with_max_output_tokens with_thinking with_citations with_caching
         with_end_user with_compaction
         with_provider_options with_headers with_schema
@@ -233,10 +233,10 @@ module RubyLLM
       # Applies Chat#with_tool_options and returns this record.
 
       ##
-      # :method: with_server_tools
-      # :call-seq: with_server_tools(*tools, **tools_with_options)
+      # :method: with_provider_tools
+      # :call-seq: with_provider_tools(*tools, **tools_with_options)
       #
-      # Applies Chat#with_server_tools and returns this record.
+      # Applies Chat#with_provider_tools and returns this record.
 
       ##
       # :method: with_fallbacks
@@ -407,10 +407,10 @@ module RubyLLM
       # Delegates to Chat#schema. See that method for arguments and return values.
 
       ##
-      # :method: server_tools
-      # :call-seq: server_tools
+      # :method: provider_tools
+      # :call-seq: provider_tools
       #
-      # Delegates to Chat#server_tools. See that method for arguments and return values.
+      # Delegates to Chat#provider_tools. See that method for arguments and return values.
 
       ##
       # :method: temperature
@@ -449,7 +449,7 @@ module RubyLLM
 
       PASSTHROUGH_CHAT_DELEGATES = %i[
         caching citations compaction concurrency end_user fallbacks headers max_output_tokens provider_options
-        schema server_tools temperature thinking tool_options tools
+        schema provider_tools temperature thinking tool_options tools
         add_completion count_tokens each render
       ].freeze
 

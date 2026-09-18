@@ -64,7 +64,7 @@ module RubyLLM
 
     # The provider-executed tool steps in this response, as an array of
     # ServerToolCall objects. Empty unless the chat enabled tools with
-    # Chat#with_server_tools and the model used one.
+    # Chat#with_provider_tools and the model used one.
     attr_reader :server_tool_calls
 
     # The provider-shaped content blocks of this assistant message, kept

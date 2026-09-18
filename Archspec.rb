@@ -80,6 +80,7 @@ component(:unowned_runtime_helpers,
             lib/ruby_llm/model_schema.rb
             lib/ruby_llm/provider_generator_cli.rb
             lib/ruby_llm/provider_scaffold.rb
+            lib/ruby_llm/provider_tools.rb
             lib/ruby_llm/server_tools.rb
             lib/ruby_llm/stream_accumulator.rb
             lib/ruby_llm/streaming.rb
@@ -95,7 +96,7 @@ component(:unowned_runtime_helpers,
             RubyLLM::Connection RubyLLM::WebsocketConnection
             RubyLLM::ErrorMiddleware RubyLLM::UsageMiddleware
             RubyLLM::Deprecator RubyLLM::Inspectable RubyLLM::Instrumentation RubyLLM::Utils
-            RubyLLM::MimeType RubyLLM::ServerTools RubyLLM::Usage
+            RubyLLM::MimeType RubyLLM::ProviderTools RubyLLM::Usage
             RubyLLM::ProviderGeneratorCLI RubyLLM::ProviderScaffold
           ])
   .must_be_empty(because: 'implementation helpers and subordinate results belong in focused directories')

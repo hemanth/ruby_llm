@@ -83,7 +83,7 @@ module RubyLLM
     end
   end
 
-  # Raised when Chat#with_server_tools is used with a provider RubyLLM has
+  # Raised when Chat#with_provider_tools is used with a provider RubyLLM has
   # no server-tool support for, or with an alias the provider's protocol
   # does not define.
   class UnsupportedServerToolError < Error; end

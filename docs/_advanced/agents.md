@@ -80,7 +80,7 @@ For example, `model` maps to `RubyLLM.chat(model:, provider:, ...)`, `tools` map
 * `model`, and its `provider:` and `protocol:` options (see [Chat Basics]({% link _core_features/chat.md %}) and [Request Control]({% link _core_features/chat-request-control.md %}#choosing-the-wire-protocol))
 * `tools` (see [Tools]({% link _core_features/tools.md %}))
 * `tool_options` (see [Controlling Tool Execution]({% link _core_features/tool-execution.md %}))
-* `server_tools` (see [Server Tools]({% link _core_features/server-tools.md %}))
+* `provider_tools` (see [Provider Tools]({% link _core_features/provider-tools.md %}))
 * `instructions` (see [Chat Basics]({% link _core_features/chat.md %}))
 * `temperature` (see [Chat Basics]({% link _core_features/chat.md %}))
 * `max_output_tokens` (see [Request Control]({% link _core_features/chat-request-control.md %}))
@@ -336,13 +336,13 @@ models own their message association.
 
 Delegated methods include:
 
-* `model`, `provider`, `messages`, `tools`, `server_tools`, `provider_options`, `headers`, `schema`
+* `model`, `provider`, `messages`, `tools`, `provider_tools`, `provider_options`, `headers`, `schema`
 * `concurrency`, `caching`, `compaction`, `end_user`, `fallbacks`
 * `tokens`, `cost`, `count_tokens`, `render`
 * `ask`, `say`, `complete`, `complete?`, `ask_later`, `generate`, `run_tools`, `step`
 * `cancel`, `cancelled?`, `approve`, `deny`, `awaiting_approval?`, `pending_approvals`
 * `add_message`, `each`
-* `cache_until_here`, `with_tools`, `with_server_tools`, `with_tool_options`
+* `cache_until_here`, `with_tools`, `with_provider_tools`, `with_tool_options`
 * `with_model`, `with_instructions`, `with_temperature`, `with_max_output_tokens`, `with_thinking`, `with_citations`, `with_end_user`, `with_compaction`, `with_context`
 * `with_caching`, `with_provider_options`, `with_headers`, `with_schema`, `with_fallbacks`
 * `before_request`, `before_message`, `after_message`, `before_tool_call`, `after_tool_result`, `before_fallback`, `after_fallback`

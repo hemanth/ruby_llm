@@ -39,7 +39,8 @@ RSpec.describe RubyLLM::Protocols::Responses::Approvals do
 
   it 'maps portable MCP names while retaining provider options' do
     chat = RubyLLM.chat(model: model_for(:openai), provider: :openai, protocol: :responses)
-                  .with_server_tools(mcp: { name: 'docs', url: 'https://example.test/mcp', require_approval: 'always' })
+                  .with_provider_tools(mcp: { name: 'docs', url: 'https://example.test/mcp',
+                                              require_approval: 'always' })
 
     expect(chat.render[:tools]).to include(type: 'mcp', server_label: 'docs',
                                            server_url: 'https://example.test/mcp', require_approval: 'always')

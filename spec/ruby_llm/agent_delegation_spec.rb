@@ -7,7 +7,7 @@ RSpec.describe RubyLLM::Agent do
 
   it 'delegates Chat state and cache boundaries to the underlying chat' do
     chat = RubyLLM.chat(model: model_for(:openai, :temperature))
-                  .with_server_tools(:web_search)
+                  .with_provider_tools(:web_search)
                   .with_tool_options(concurrency: :fibers)
                   .with_end_user('customer-42')
                   .with_fallbacks(model_for(:openai, :alternate_chat))
@@ -15,7 +15,7 @@ RSpec.describe RubyLLM::Agent do
     agent = Class.new(described_class).new(chat:)
 
     expect(agent.provider).to be(chat.provider)
-    expect(agent.server_tools).to eq(chat.server_tools)
+    expect(agent.provider_tools).to eq(chat.provider_tools)
     expect(agent.concurrency).to eq(:fibers)
     expect(agent.end_user).to eq('customer-42')
     expect(agent.fallbacks).to eq(chat.fallbacks)

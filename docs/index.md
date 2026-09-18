@@ -287,12 +287,12 @@ chat.ask "Review this diff", with: "large_diff.patch"
 
 ```ruby
 response = RubyLLM.chat
-  .with_server_tools(:web_search)
+  .with_provider_tools(:web_search)
   .ask "What's the latest stable Ruby? Cite sources."
 
 response.citations
 ```
-{: .home-code-card data-title="Search the web with citations" data-href="{% link _core_features/server-tools.md %}" data-doc-title="Server Tools" }
+{: .home-code-card data-title="Search the web with citations" data-href="{% link _core_features/provider-tools.md %}" data-doc-title="Provider Tools" }
 
 ```ruby
 documents = ["Ruby is expressive", "Python uses indentation"]

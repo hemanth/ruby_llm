@@ -66,7 +66,7 @@ chat.ask_later "Summarize the contract.", with: "contract.pdf"
 chat.count_tokens
 ```
 
-Server tools, `provider_options`, compaction, and changes from `before_request` hooks are not forwarded to counting endpoints. Counts for chats using those settings can differ from the request you eventually send.
+Provider tools, `provider_options`, compaction, and changes from `before_request` hooks are not forwarded to counting endpoints. Counts for chats using those settings can differ from the request you eventually send.
 
 Tokenization and chat token counting use different provider endpoints. Check [Provider API Coverage]({% link _reference/provider-coverage.md %}) for availability. Unsupported operations raise `RubyLLM::Error`.
 

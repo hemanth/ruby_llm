@@ -3,11 +3,11 @@
 require 'spec_helper'
 
 RSpec.describe RubyLLM::Chat, :live do
-  describe '#with_server_tools' do
+  describe '#with_provider_tools' do
     it 'normalizes symbols, keywords, and raw hashes' do
-      chat = RubyLLM.chat.with_server_tools(:web_search, { type: 'custom_tool' }, code_execution: { max_uses: 1 })
+      chat = RubyLLM.chat.with_provider_tools(:web_search, { type: 'custom_tool' }, code_execution: { max_uses: 1 })
 
-      expect(chat.server_tools).to eq(
+      expect(chat.provider_tools).to eq(
         [
           { name: :web_search, options: {} },
           { raw: { type: 'custom_tool' } },
@@ -17,24 +17,24 @@ RSpec.describe RubyLLM::Chat, :live do
     end
 
     it 'accumulates across calls and clears with nil' do
-      chat = RubyLLM.chat.with_server_tools(:web_search).with_server_tools(:code_execution)
+      chat = RubyLLM.chat.with_provider_tools(:web_search).with_provider_tools(:code_execution)
 
-      expect(chat.server_tools.length).to eq(2)
+      expect(chat.provider_tools.length).to eq(2)
 
-      chat.with_server_tools(nil)
+      chat.with_provider_tools(nil)
 
-      expect(chat.server_tools).to be_empty
+      expect(chat.provider_tools).to be_empty
     end
 
     it 'rejects entries that are neither symbols nor hashes' do
-      expect { RubyLLM.chat.with_server_tools(42) }.to raise_error(ArgumentError, /Symbols or Hashes/)
+      expect { RubyLLM.chat.with_provider_tools(42) }.to raise_error(ArgumentError, /Symbols or Hashes/)
     end
   end
 
   describe 'request rendering' do
     it 'renders Anthropic aliases into versioned tool entries' do
       payload = RubyLLM.chat(model: model_for(:anthropic), provider: :anthropic)
-                       .with_server_tools(:web_search, web_fetch: { max_uses: 2 })
+                       .with_provider_tools(:web_search, web_fetch: { max_uses: 2 })
                        .render
 
       expect(payload[:tools]).to include(
@@ -48,7 +48,7 @@ RSpec.describe RubyLLM::Chat, :live do
     it 'passes raw tool hashes through verbatim' do
       raw_tool = { type: 'web_search_20250305', name: 'web_search', max_uses: 1 }
       payload = RubyLLM.chat(model: model_for(:anthropic), provider: :anthropic)
-                       .with_server_tools(raw_tool)
+                       .with_provider_tools(raw_tool)
                        .render
 
       expect(payload[:tools]).to include(raw_tool)
@@ -63,7 +63,7 @@ RSpec.describe RubyLLM::Chat, :live do
       end
       payload = RubyLLM.chat(model: model_for(:anthropic), provider: :anthropic)
                        .with_tools(weather)
-                       .with_server_tools(:web_search)
+                       .with_provider_tools(:web_search)
                        .render
 
       expect(payload[:tools].length).to eq(2)
@@ -71,7 +71,7 @@ RSpec.describe RubyLLM::Chat, :live do
 
     it 'expands the Anthropic MCP alias into servers, toolset, and beta header' do
       payload = RubyLLM.chat(model: model_for(:anthropic), provider: :anthropic)
-                       .with_server_tools(mcp: { url: 'https://mcp.example.com', name: 'example' })
+                       .with_provider_tools(mcp: { url: 'https://mcp.example.com', name: 'example' })
                        .render
 
       expect(payload[:mcp_servers]).to eq([{ type: 'url', name: 'example', url: 'https://mcp.example.com' }])
@@ -80,7 +80,7 @@ RSpec.describe RubyLLM::Chat, :live do
 
     it 'renders the Bedrock web_search alias as the Nova grounding system tool' do
       payload = RubyLLM.chat(model: model_for(:bedrock), provider: :bedrock)
-                       .with_server_tools(:web_search)
+                       .with_provider_tools(:web_search)
                        .render
 
       expect(payload.dig(:toolConfig, :tools)).to include({ systemTool: { name: 'nova_grounding' } })
@@ -95,7 +95,7 @@ RSpec.describe RubyLLM::Chat, :live do
       end
       payload = RubyLLM.chat(model: model_for(:bedrock), provider: :bedrock)
                        .with_tools(weather)
-                       .with_server_tools(:web_search)
+                       .with_provider_tools(:web_search)
                        .render
 
       expect(payload.dig(:toolConfig, :tools).length).to eq(2)
@@ -103,7 +103,7 @@ RSpec.describe RubyLLM::Chat, :live do
 
     it 'renders OpenAI Responses aliases' do
       payload = RubyLLM.chat(model: model_for(:openai, :reasoning_effort), provider: :openai)
-                       .with_server_tools(:web_search, :code_execution)
+                       .with_provider_tools(:web_search, :code_execution)
                        .render
 
       expect(payload[:tools]).to include({ type: 'web_search' })
@@ -111,8 +111,8 @@ RSpec.describe RubyLLM::Chat, :live do
     end
 
     it 'renders Gemini aliases with options nested inside the tool key' do
-      payload = RubyLLM.chat(model: model_for(:gemini, :server_tools), provider: :gemini)
-                       .with_server_tools(:web_search, file_search: { file_search_store_names: ['store'] })
+      payload = RubyLLM.chat(model: model_for(:gemini, :provider_tools), provider: :gemini)
+                       .with_provider_tools(:web_search, file_search: { file_search_store_names: ['store'] })
                        .render
 
       expect(payload[:tools]).to include({ google_search: {} })
@@ -120,9 +120,9 @@ RSpec.describe RubyLLM::Chat, :live do
     end
 
     it 'renders xAI Responses aliases with passthrough options' do
-      payload = RubyLLM.chat(model: model_for(:xai, :server_tools), provider: :xai)
-                       .with_server_tools(:x_search, :code_execution,
-                                          web_search: { filters: { allowed_domains: ['ruby-lang.org'] } })
+      payload = RubyLLM.chat(model: model_for(:xai, :provider_tools), provider: :xai)
+                       .with_provider_tools(:x_search, :code_execution,
+                                            web_search: { filters: { allowed_domains: ['ruby-lang.org'] } })
                        .render
 
       expect(payload[:input]).to be_an(Array)
@@ -132,8 +132,8 @@ RSpec.describe RubyLLM::Chat, :live do
     end
 
     it 'renders the xAI MCP alias with server options' do
-      payload = RubyLLM.chat(model: model_for(:xai, :server_tools), provider: :xai)
-                       .with_server_tools(mcp: { server_url: 'https://mcp.example.com/mcp', server_label: 'example' })
+      payload = RubyLLM.chat(model: model_for(:xai, :provider_tools), provider: :xai)
+                       .with_provider_tools(mcp: { server_url: 'https://mcp.example.com/mcp', server_label: 'example' })
                        .render
 
       expect(payload[:tools]).to include(
@@ -143,7 +143,7 @@ RSpec.describe RubyLLM::Chat, :live do
 
     it 'renders Azure Responses aliases' do
       payload = RubyLLM.chat(model: model_for(:azure, :thinking), provider: :azure, protocol: :responses)
-                       .with_server_tools(:web_search, :code_execution)
+                       .with_provider_tools(:web_search, :code_execution)
                        .render
 
       expect(payload[:input]).to be_an(Array)
@@ -152,21 +152,21 @@ RSpec.describe RubyLLM::Chat, :live do
     end
 
     it 'renders OpenRouter aliases as openrouter-prefixed tools' do
-      payload = RubyLLM.chat(model: model_for(:openrouter, :server_tools), provider: :openrouter)
-                       .with_server_tools(:web_search)
+      payload = RubyLLM.chat(model: model_for(:openrouter, :provider_tools), provider: :openrouter)
+                       .with_provider_tools(:web_search)
                        .render
 
       expect(payload[:tools]).to include({ type: 'openrouter:web_search' })
     end
 
     it 'raises for unknown aliases and lists the known ones' do
-      chat = RubyLLM.chat(model: model_for(:anthropic), provider: :anthropic).with_server_tools(:teleport)
+      chat = RubyLLM.chat(model: model_for(:anthropic), provider: :anthropic).with_provider_tools(:teleport)
 
       expect { chat.render }.to raise_error(RubyLLM::UnsupportedServerToolError, /:web_search/)
     end
 
     it 'raises for providers without server-tool support' do
-      chat = RubyLLM.chat(model: model_for(:deepseek), provider: :deepseek).with_server_tools(:web_search)
+      chat = RubyLLM.chat(model: model_for(:deepseek), provider: :deepseek).with_provider_tools(:web_search)
 
       expect { chat.render }.to raise_error(RubyLLM::UnsupportedServerToolError, /with_provider_options/)
     end
@@ -201,7 +201,7 @@ RSpec.describe RubyLLM::Chat, :live do
 
   describe 'web search' do
     context "with anthropic/#{model_for(:anthropic)}" do
-      let(:chat) { RubyLLM.chat(model: model_for(:anthropic), provider: :anthropic).with_server_tools(:web_search) }
+      let(:chat) { RubyLLM.chat(model: model_for(:anthropic), provider: :anthropic).with_provider_tools(:web_search) }
 
       it 'searches, cites, and reports tool usage' do
         response = chat.ask('Search the web: what is the latest stable Ruby version? Cite your source.')
@@ -236,7 +236,7 @@ RSpec.describe RubyLLM::Chat, :live do
 
     context "with openai/#{model_for(:openai, :reasoning_effort)}" do
       let(:chat) do
-        RubyLLM.chat(model: model_for(:openai, :reasoning_effort), provider: :openai).with_server_tools(:web_search)
+        RubyLLM.chat(model: model_for(:openai, :reasoning_effort), provider: :openai).with_provider_tools(:web_search)
       end
 
       it 'searches and records the tool call items' do
@@ -250,9 +250,9 @@ RSpec.describe RubyLLM::Chat, :live do
       end
     end
 
-    context "with gemini/#{model_for(:gemini, :server_tools)}" do
+    context "with gemini/#{model_for(:gemini, :provider_tools)}" do
       let(:chat) do
-        RubyLLM.chat(model: model_for(:gemini, :server_tools), provider: :gemini).with_server_tools(:web_search)
+        RubyLLM.chat(model: model_for(:gemini, :provider_tools), provider: :gemini).with_provider_tools(:web_search)
       end
 
       it 'grounds the answer and exposes the queries it ran' do
@@ -263,9 +263,10 @@ RSpec.describe RubyLLM::Chat, :live do
       end
     end
 
-    context "with openrouter/#{model_for(:openrouter, :server_tools)}" do
+    context "with openrouter/#{model_for(:openrouter, :provider_tools)}" do
       let(:chat) do
-        RubyLLM.chat(model: model_for(:openrouter, :server_tools), provider: :openrouter).with_server_tools(:web_search)
+        RubyLLM.chat(model: model_for(:openrouter, :provider_tools),
+                     provider: :openrouter).with_provider_tools(:web_search)
       end
 
       it 'searches transparently, returning citations and usage counters' do
@@ -276,8 +277,10 @@ RSpec.describe RubyLLM::Chat, :live do
       end
     end
 
-    context "with xai/#{model_for(:xai, :server_tools)}" do
-      let(:chat) { RubyLLM.chat(model: model_for(:xai, :server_tools), provider: :xai).with_server_tools(:web_search) }
+    context "with xai/#{model_for(:xai, :provider_tools)}" do
+      let(:chat) do
+        RubyLLM.chat(model: model_for(:xai, :provider_tools), provider: :xai).with_provider_tools(:web_search)
+      end
 
       it 'searches, cites, and counts the sources it used' do
         response = chat.ask('Search the web: what is the latest stable Ruby version? Cite your source.')
@@ -298,7 +301,7 @@ RSpec.describe RubyLLM::Chat, :live do
 
     context "with bedrock/#{model_for(:bedrock)}" do
       let(:chat) do
-        RubyLLM.chat(model: model_for(:bedrock), provider: :bedrock).with_server_tools(:web_search)
+        RubyLLM.chat(model: model_for(:bedrock), provider: :bedrock).with_provider_tools(:web_search)
       end
 
       it 'grounds the answer with web citations' do
@@ -326,9 +329,9 @@ RSpec.describe RubyLLM::Chat, :live do
   end
 
   describe 'responses protocol dialects' do
-    context "with xai/#{model_for(:xai, :server_tools)}" do
+    context "with xai/#{model_for(:xai, :provider_tools)}" do
       it 'chats on the Responses endpoint by default' do
-        chat = RubyLLM.chat(model: model_for(:xai, :server_tools), provider: :xai)
+        chat = RubyLLM.chat(model: model_for(:xai, :provider_tools), provider: :xai)
         response = chat.ask('What is 2 + 2? Just the number.')
 
         expect(response.raw.env.url.path).to end_with('/responses')
@@ -408,7 +411,9 @@ RSpec.describe RubyLLM::Chat, :live do
 
   describe 'code execution' do
     context "with anthropic/#{model_for(:anthropic)}" do
-      let(:chat) { RubyLLM.chat(model: model_for(:anthropic), provider: :anthropic).with_server_tools(:code_execution) }
+      let(:chat) do
+        RubyLLM.chat(model: model_for(:anthropic), provider: :anthropic).with_provider_tools(:code_execution)
+      end
 
       it 'runs code server-side and returns the result blocks' do
         response = chat.ask('Use code execution to compute 123456789 * 987654321 and report the exact product.')
@@ -418,9 +423,9 @@ RSpec.describe RubyLLM::Chat, :live do
       end
     end
 
-    context "with gemini/#{model_for(:gemini, :server_tools)}" do
+    context "with gemini/#{model_for(:gemini, :provider_tools)}" do
       let(:chat) do
-        RubyLLM.chat(model: model_for(:gemini, :server_tools), provider: :gemini).with_server_tools(:code_execution)
+        RubyLLM.chat(model: model_for(:gemini, :provider_tools), provider: :gemini).with_provider_tools(:code_execution)
       end
 
       it 'runs code server-side and replays the turn' do

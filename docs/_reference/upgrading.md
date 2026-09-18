@@ -25,6 +25,8 @@ This guide covers **1.16 to 2.0.0**. Coming from an earlier release? Follow the 
 The online-copy workflow below is available starting in `2.0.0.rc3`. With `2.0.0.rc2`, keep AI activity paused through all three phases.
 {: .important }
 
+If you used a 2.0 release candidate, rename `with_server_tools` to `with_provider_tools` and the `server_tools` reader and Agent macro to `provider_tools`. Hosted research also uses `provider_tools:`. The arguments and behavior stay the same; the old names are removed.
+
 For a tour of the new features with examples, see [What's New in 2.0]({% link _getting_started/whats-new-in-2-0.md %}).
 
 The upgrade has two parts: update your Ruby code and, if you use Rails persistence, migrate your stored records. Plain Ruby applications can skip the database steps.

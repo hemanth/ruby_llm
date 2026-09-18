@@ -118,7 +118,7 @@ Mistral accepts a chat model for image generation:
 
 ```ruby
 RubyLLM.paint("A red panda drawing a Ruby logo",
-              model: "{{ site.models.mistral_server_tools }}")
+              model: "{{ site.models.mistral_provider_tools }}")
 ```
 
 ElevenLabs does not list image models through its model-listing endpoint. Pass a documented image model with `assume_model_exists: true`:

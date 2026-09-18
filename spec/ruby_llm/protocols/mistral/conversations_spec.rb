@@ -35,8 +35,8 @@ RSpec.describe RubyLLM::Protocols::Mistral::Conversations do
   end
 
   it 'deduplicates the shared web search and fetch tool while rendering every supported alias' do
-    payload = chat.with_server_tools(:web_search, :web_fetch, :code_execution, :image_generation,
-                                     file_search: { library_ids: ['library_test'] }, mcp: { connector_id: 'docs' })
+    payload = chat.with_provider_tools(:web_search, :web_fetch, :code_execution, :image_generation,
+                                       file_search: { library_ids: ['library_test'] }, mcp: { connector_id: 'docs' })
                   .ask_later('Hello').render
     expect(payload[:tools].map do |tool|
       tool['type']
@@ -44,7 +44,7 @@ RSpec.describe RubyLLM::Protocols::Mistral::Conversations do
   end
 
   it 'rejects hosted confirmations before sending a request' do
-    chat.with_server_tools(**confirmation_tool).ask_later('Find Ruby documentation')
+    chat.with_provider_tools(**confirmation_tool).ask_later('Find Ruby documentation')
     expect { chat.render }.to raise_error(ArgumentError, /require provider conversation storage/)
   end
 

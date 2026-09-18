@@ -252,7 +252,7 @@ Configure `gpustack_api_base` and `gpustack_api_key` for your GPUStack installat
 
 For [tokenization]({% link _core_features/tokenization.md %}#tokenizing-text) or [video generation]({% link _core_features/video-generation.md %}), enable the model proxy and set `gpustack_api_base` to its `/model/proxy/ROUTE_ID/v1` URL, including any installation path prefix. The route ID identifies the deployment; pass its model name separately as `model:`. These operations require a vLLM tokenizer or vLLM-Omni video model respectively. The standard `/v1` gateway does not expose them.
 
-For [server tools]({% link _core_features/server-tools.md %}), configure MCP servers on the vLLM deployment. Web search and web fetch use the `web_search_preview` label; code execution uses `code_interpreter`. The backend controls which tools are available and permitted.
+For [provider tools]({% link _core_features/provider-tools.md %}), configure MCP servers on the vLLM deployment. Web search and web fetch use the `web_search_preview` label; code execution uses `code_interpreter`. The backend controls which tools are available and permitted.
 
 ## Media Generation
 

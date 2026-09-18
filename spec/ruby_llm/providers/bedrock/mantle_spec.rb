@@ -153,7 +153,7 @@ RSpec.describe RubyLLM::Providers::Bedrock::Mantle do
     it 'renders ARN-backed MCP connectors and replays their completed results' do
       connector = 'arn:aws:lambda:us-west-2:123456789012:function:read_docs'
       chat = RubyLLM.chat(model: 'openai.gpt-oss-20b', provider: :bedrock)
-                    .with_server_tools(mcp: { name: 'docs', connector_id: connector, require_approval: 'never' })
+                    .with_provider_tools(mcp: { name: 'docs', connector_id: connector, require_approval: 'never' })
       output = [
         { 'type' => 'mcp_list_tools', 'id' => 'list_1', 'server_label' => 'docs', 'tools' => [] },
         { 'type' => 'mcp_call', 'id' => 'call_1', 'server_label' => 'docs', 'name' => 'read_docs',

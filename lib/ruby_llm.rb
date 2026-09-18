@@ -75,7 +75,7 @@ loader.setup
 #
 # Subclass Tool and implement +execute+ to give the model an application
 # action. Tool.requires_approval pauses execution for a human decision;
-# Chat#approve and Chat#deny record it. Chat#with_server_tools enables
+# Chat#approve and Chat#deny record it. Chat#with_provider_tools enables
 # provider-executed tools such as web search, code execution, and remote MCP.
 # Their calls appear as ServerToolCall values, with Citation values for sources.
 #

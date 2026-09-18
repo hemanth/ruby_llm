@@ -10,10 +10,10 @@ RSpec.describe RubyLLM::Chat, :live do
       context provider.to_s do
         let(:chat) do
           RubyLLM.chat(model: model_for(provider, :mcp), provider:, protocol: model_info.fetch(:protocol))
-                 .with_server_tools(mcp: {
-                                      name: 'docs', url: 'https://learn.microsoft.com/api/mcp',
-                                      allowed_tools: ['microsoft_docs_search'], require_approval: 'always'
-                                    })
+                 .with_provider_tools(mcp: {
+                                        name: 'docs', url: 'https://learn.microsoft.com/api/mcp',
+                                        allowed_tools: ['microsoft_docs_search'], require_approval: 'always'
+                                      })
                  .with_instructions(
                    'Use microsoft_docs_search exactly once when asked for documentation. Do not retry a denied call.'
                  )
@@ -80,7 +80,7 @@ RSpec.describe RubyLLM::Chat, :live do
         end
         options[:allowed_tools] = ['microsoft_docs_search'] if provider == :xai
         chat = RubyLLM.chat(model: model_for(provider), provider:)
-                      .with_server_tools(mcp: options)
+                      .with_provider_tools(mcp: options)
                       .with_instructions(
                         'Call microsoft_docs_search once to answer the first question. ' \
                         'For later questions use only those results.'

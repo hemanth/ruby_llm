@@ -167,7 +167,7 @@ Agents, workflows, RAG, images, audio, and video. Built in, with usage tracking 
 * **Tools:** Let AI call your Ruby methods
 * **Tool approval:** Park a run until a human approves with `requires_approval`
 * **The agentic loop:** Drive it yourself with `ask_later`, `step`, and `complete?`
-* **Server tools:** Web search, code execution, and MCP connectors with `with_server_tools`
+* **Provider tools:** Web search, code execution, and MCP connectors with `with_provider_tools`
 * **Agents:** Reusable assistants with `RubyLLM::Agent`
 * **Prompt templates:** ERB prompts in `app/prompts`, rendered with `RubyLLM.render_prompt`
 * **Workflows:** Correlate multi-agent runs in your telemetry with `RubyLLM.workflow`

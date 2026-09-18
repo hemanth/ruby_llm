@@ -191,22 +191,22 @@ puts ranked.results.first.document
 
 [Moderation]({% link _core_features/moderation.md %}) also supports configured Bedrock guardrails. Text checks use the existing `RubyLLM.moderate` API and report the guardrail's assessment and usage without requiring a generation model.
 
-## Server Tools
+## Provider Tools
 
-Models can use tools hosted by the provider, including web search, code execution, and remote MCP servers. Enable them on a chat with `with_server_tools`, or declare them on an agent:
+Models can use tools hosted by the provider, including web search, code execution, and remote MCP servers. Enable them on a chat with `with_provider_tools`, or declare them on an agent:
 
 ```ruby
 class ResearchAgent < RubyLLM::Agent
-  model "{{ site.models.anthropic_server_tools }}"
+  model "{{ site.models.anthropic_provider_tools }}"
   instructions "Research the question and cite your sources."
-  server_tools :web_search
+  provider_tools :web_search
 end
 
 response = ResearchAgent.new.ask "What changed in the latest Ruby release?"
 response.citations.each { |citation| puts citation.url }
 ```
 
-Combine server tools with tools that run your Ruby code. Both work with streaming and follow-up questions. See [Server Tools]({% link _core_features/server-tools.md %}).
+Combine provider tools with tools that run your Ruby code. Both work with streaming and follow-up questions. See [Provider Tools]({% link _core_features/provider-tools.md %}).
 
 ## Hosted Research
 

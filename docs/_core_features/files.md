@@ -151,9 +151,9 @@ Datasets are separate from chat attachments and expire after 30 days. For [chat 
 A conversation can return generated files as attachments:
 
 ```ruby
-response = RubyLLM.chat(model: "{{ site.models.mistral_server_tools }}",
+response = RubyLLM.chat(model: "{{ site.models.mistral_provider_tools }}",
                         provider: :mistral, protocol: :conversations)
-                 .with_server_tools(:code_execution)
+                 .with_provider_tools(:code_execution)
                  .ask("Create a CSV of the first ten squares as a downloadable file.")
 
 file = response.attachments.first.source

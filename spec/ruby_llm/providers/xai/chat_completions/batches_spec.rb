@@ -8,7 +8,7 @@ RSpec.describe RubyLLM::Providers::XAI::ChatCompletions::Batches do
   describe '#xai_batch_request' do
     it 'preserves Responses input, tools, and schema when submitting a batch' do
       payload = {
-        model: model_for(:xai, :server_tools), input: [{ role: 'user', content: 'Hi' }], stream: false,
+        model: model_for(:xai, :provider_tools), input: [{ role: 'user', content: 'Hi' }], stream: false,
         tools: [{ type: 'web_search' }], text: { format: { type: 'json_schema', schema: { type: 'object' } } }
       }
 

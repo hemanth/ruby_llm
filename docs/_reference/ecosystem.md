@@ -37,7 +37,7 @@ See [Structured Output]({% link _core_features/structured-output.md %}) and [Too
 
 [RubyLLM::MCP](https://github.com/patvice/ruby_llm-mcp) connect to MCP servers from Ruby and use their tools, resources, and prompts in conversations.
 
-For provider-executed MCP tools, also see the built-in [Server Tools]({% link _core_features/server-tools.md %}#mcp-servers).
+For provider-executed MCP tools, also see the built-in [Provider Tools]({% link _core_features/provider-tools.md %}#mcp-servers).
 
 ## RubyLLM::Skills
 

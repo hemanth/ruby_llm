@@ -314,7 +314,7 @@ TEST_MODELS = {
     { provider: :xai, model: 'grok-tts' }
   ],
   search: [{ provider: :openai, model: 'gpt-5-search-api' }],
-  server_tools: [
+  provider_tools: [
     { provider: :gemini, model: 'gemini-3.5-flash' },
     { provider: :openrouter, model: 'openai/gpt-5.2' },
     { provider: :xai, model: 'grok-4.3' }

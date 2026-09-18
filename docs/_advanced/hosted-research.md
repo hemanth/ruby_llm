@@ -24,7 +24,7 @@ report = RubyLLM.research(
   "Find the official documentation for deploying an Azure Function.",
   provider: :vertexai,
   agent: "{{ site.hosted_agents.vertexai_research }}",
-  server_tools: {
+  provider_tools: {
     mcp: { name: "microsoft_learn", url: "https://learn.microsoft.com/api/mcp" }
   }
 )
@@ -98,7 +98,7 @@ Reports can omit intermediate tool calls, thinking summaries, and citation URLs.
 
 ## Configure Remote Tools
 
-Without `server_tools:`, the agent uses its default search and URL tools. Pass a tool list to select `:mcp` or `:web_search` explicitly.
+Without `provider_tools:`, the agent uses its default search and URL tools. Pass a tool list to select `:mcp` or `:web_search` explicitly.
 
 The provider's `allowed_tools` filter uses structured entries:
 
@@ -112,7 +112,7 @@ tools = {
 }
 ```
 
-Pass this Hash as `server_tools: tools`. Allowed remote tools run without approval pauses; approval options raise an error. Use [chat tools]({% link _core_features/server-tools.md %}) for interactive approvals or local Ruby tools.
+Pass this Hash as `provider_tools: tools`. Allowed remote tools run without approval pauses; approval options raise an error. Use [chat tools]({% link _core_features/provider-tools.md %}) for interactive approvals or local Ruby tools.
 
 ## Cancel and Recover
 

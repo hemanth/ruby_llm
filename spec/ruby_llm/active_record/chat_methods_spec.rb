@@ -437,7 +437,7 @@ RSpec.describe RubyLLM::ActiveRecord::ChatMethods do
 
     it 'forwards Chat configuration values' do
       chat = Chat.create!(model: model_id)
-                 .with_server_tools(:web_search)
+                 .with_provider_tools(:web_search)
                  .with_tool_options(concurrency: :fibers)
                  .with_caching(ttl: '1h')
                  .with_compaction(at: 50_000)
@@ -447,7 +447,7 @@ RSpec.describe RubyLLM::ActiveRecord::ChatMethods do
                  .with_headers('X-Trace' => 'abc')
                  .with_provider_options(reasoning_effort: 'low')
 
-      expect(chat.server_tools).to eq(chat.to_llm.server_tools)
+      expect(chat.provider_tools).to eq(chat.to_llm.provider_tools)
       expect(chat.concurrency).to eq(:fibers)
       expect(chat.caching).to eq(ttl: '1h')
       expect(chat.compaction).to eq(at: 50_000)

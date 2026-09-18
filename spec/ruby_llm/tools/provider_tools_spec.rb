@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe RubyLLM::Tools::ServerTools do
+RSpec.describe RubyLLM::Tools::ProviderTools do
   it 'passes raw tool hashes with mixed key types through unchanged' do
     raw_tool = { 'type' => 'custom', name: 'mixed_keys' }
 

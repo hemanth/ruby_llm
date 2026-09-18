@@ -13,7 +13,7 @@ RSpec.describe RubyLLM::ActiveRecord::ChatMethods do
   let(:agent) do
     agent_class = Class.new(RubyLLM::Agent) do
       chat_model Chat
-      server_tools mcp: { name: 'docs', url: 'https://example.test/mcp', require_approval: 'always' }
+      provider_tools mcp: { name: 'docs', url: 'https://example.test/mcp', require_approval: 'always' }
     end
     agent_class.model model_for(:openai), provider: :openai, protocol: :responses
     agent_class

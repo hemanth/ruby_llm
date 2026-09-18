@@ -5,9 +5,9 @@ module RubyLLM
   # response: a web search the model ran, a code execution, or the results
   # block a provider returned for one. They appear on
   # Message#server_tool_calls when a chat enables tools with
-  # Chat#with_server_tools.
+  # Chat#with_provider_tools.
   #
-  #   response = chat.with_server_tools(:web_search).ask "What changed in Ruby 3.5?"
+  #   response = chat.with_provider_tools(:web_search).ask "What changed in Ruby 3.5?"
   #   response.server_tool_calls.map(&:type) # => ["server_tool_use", "web_search_tool_result"]
   #
   # RubyLLM does not model each tool's result schema. #raw always holds the

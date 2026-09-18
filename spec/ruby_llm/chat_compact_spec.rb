@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 RSpec.describe RubyLLM::Chat do
-  let(:model) { model_for(:xai, :server_tools) }
+  let(:model) { model_for(:xai, :provider_tools) }
   let(:context) { RubyLLM.context { |config| config.xai_api_key = 'test' } }
   let(:chat) { context.chat(model:, provider: :xai) }
   let(:output) { [{ 'type' => 'compaction', 'id' => 'cmp_1', 'encrypted_content' => 'opaque context' }] }
@@ -119,7 +119,7 @@ RSpec.describe RubyLLM::Chat do
 
   %i[xai openai azure].each do |provider|
     it "compacts and continues a conversation with #{provider}", :live do
-      model = provider == :xai ? model_for(provider, :server_tools) : model_for(provider)
+      model = provider == :xai ? model_for(provider, :provider_tools) : model_for(provider)
       chat = RubyLLM.chat(model:, provider:, protocol: :responses).with_instructions('Answer in one short sentence.')
       chat.ask_later('The project codename is Thimble. We write it in Ruby.')
       chat.add_message(role: :assistant, content: 'I will remember the Thimble project and Ruby.')

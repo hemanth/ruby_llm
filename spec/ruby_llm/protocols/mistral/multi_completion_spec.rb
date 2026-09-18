@@ -52,7 +52,7 @@ RSpec.describe RubyLLM::Protocols::Mistral::MultiCompletion do
   end
 
   it 'renders only the hosted tools supported by Chat Completions without an invented request flag' do
-    payload = chat.with_server_tools(:image_generation, mcp: { connector_id: 'docs' }).ask_later('Draw').render
+    payload = chat.with_provider_tools(:image_generation, mcp: { connector_id: 'docs' }).ask_later('Draw').render
     expect(payload[:tools]).to eq([{ type: 'image_generation' }, { type: 'connector', connector_id: 'docs' }])
     expect(payload).not_to have_key(:multi_completion)
   end
@@ -81,7 +81,7 @@ RSpec.describe RubyLLM::Protocols::Mistral::MultiCompletion do
 
   it 'streams and downloads a hosted image through the default chat API', :live do
     chunks = []
-    chat.with_server_tools(:image_generation)
+    chat.with_provider_tools(:image_generation)
         .with_instructions('Generate the requested image once. Answer follow-up questions from the previous result.')
     response = chat.ask('Generate one image of a small blue square on a white background.') { |chunk| chunks << chunk }
     expect(chunks.filter_map(&:content).join).to eq(response.content)

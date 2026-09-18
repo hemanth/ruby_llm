@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe RubyLLM::Providers::XAI::ChatCompletions::Batches, :live do
   it 'collects completed structured Responses and Chat Completions results in submission order' do
-    model = model_for(:xai, :server_tools)
+    model = model_for(:xai, :provider_tools)
     schema = { type: 'object', properties: { language: { type: 'string' } }, required: ['language'],
                additionalProperties: false }
     structured = RubyLLM.chat(model:, provider: :xai).with_schema(schema).with_max_output_tokens(256)

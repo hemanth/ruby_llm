@@ -36,7 +36,7 @@ RSpec.describe RubyLLM::Protocols::Interactions do
   it 'keeps generateContent as the default and renders the opt-in protocol through Chat' do
     expect(RubyLLM::Providers::Gemini.default_protocol).to eq(:gemini)
     payload = chat.with_instructions('Be concise').with_tools(tool).with_tool_options(choice: :required)
-                  .with_server_tools(mcp: { name: 'docs', url: 'https://example.com/mcp' })
+                  .with_provider_tools(mcp: { name: 'docs', url: 'https://example.com/mcp' })
                   .with_max_output_tokens(50).ask_later('Multiply').render
     expect(payload).to include(store: false, system_instruction: 'Be concise',
                                input: [{ type: 'user_input', content: [{ type: 'text', text: 'Multiply' }] }])
@@ -212,7 +212,7 @@ RSpec.describe RubyLLM::Protocols::Interactions do
   it 'uses Vertex AI Search retrieval for its named file-search alias' do
     vertex = RubyLLM.chat(model: model_for(:vertexai), provider: :vertexai)
     allow(vertex.provider).to receive(:headers).and_return({})
-    payload = vertex.with_server_tools(file_search: { datastore: 'projects/test/locations/global/dataStores/docs' })
+    payload = vertex.with_provider_tools(file_search: { datastore: 'projects/test/locations/global/dataStores/docs' })
                     .ask_later('Find the manual').render
     expect(payload[:tools]).to eq([{ retrieval: {
                                     vertexAiSearch: { datastore: 'projects/test/locations/global/dataStores/docs' }
@@ -220,7 +220,7 @@ RSpec.describe RubyLLM::Protocols::Interactions do
   end
 
   it 'executes a remote MCP tool and replays its signed results through stateless chat', :live do
-    chat.with_server_tools(mcp: { name: 'microsoft_learn', url: 'https://learn.microsoft.com/api/mcp' })
+    chat.with_provider_tools(mcp: { name: 'microsoft_learn', url: 'https://learn.microsoft.com/api/mcp' })
     message = chat.ask('Use the Microsoft Learn MCP search tool to find the Azure Functions overview. Reply briefly.')
     expect(message.server_tool_calls).to include(have_attributes(type: 'mcp_server_tool_call'))
     expect(message.server_tool_calls).to include(have_attributes(type: 'mcp_server_tool_result'))
@@ -232,7 +232,7 @@ RSpec.describe RubyLLM::Protocols::Interactions do
 
   it 'streams remote MCP results and preserves the complete signed history', :live do
     chunks = []
-    chat.with_server_tools(mcp: { name: 'microsoft_learn', url: 'https://learn.microsoft.com/api/mcp' })
+    chat.with_provider_tools(mcp: { name: 'microsoft_learn', url: 'https://learn.microsoft.com/api/mcp' })
     prompt = 'Use the Microsoft Learn MCP search tool to find the Azure Functions overview. Reply briefly.'
     message = chat.ask(prompt) do |chunk|
       chunks << chunk

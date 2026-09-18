@@ -44,7 +44,7 @@ module RubyLLM
     DUPED_INHERITED_CONFIG = {
       :@chat_kwargs => {},
       :@tools => [],
-      :@server_tools => [],
+      :@provider_tools => [],
       :@tool_options => {},
       :@caching => nil,
       :@compaction => nil,
@@ -66,7 +66,7 @@ module RubyLLM
 
     # Chat methods that return the wrapped chat so calls can be chained there.
     CHAINABLE_CHAT_DELEGATES = %i[
-      with_instructions with_tools with_server_tools with_tool_options with_model
+      with_instructions with_tools with_provider_tools with_tool_options with_model
       with_temperature with_max_output_tokens with_thinking with_citations
       with_end_user with_compaction with_caching with_context with_provider_options
       with_headers with_schema with_fallbacks
@@ -77,7 +77,7 @@ module RubyLLM
 
     # Chat values and operations whose return values pass through unchanged.
     PASSTHROUGH_CHAT_DELEGATES = %i[
-      model provider messages tools server_tools tool_options provider_options headers schema concurrency
+      model provider messages tools provider_tools tool_options provider_options headers schema concurrency
       caching citations compaction context end_user fallbacks thinking temperature max_output_tokens
       each complete? cancelled? awaiting_approval? pending_approvals
       add_message add_completion tokens cost render
@@ -150,17 +150,17 @@ module RubyLLM
       end
 
       # Enables provider-executed tools for chats this agent builds, applied
-      # via Chat#with_server_tools. Accepts the same aliases, options, and
+      # via Chat#with_provider_tools. Accepts the same aliases, options, and
       # raw Hashes; a block defers evaluation until the chat is built.
       # Called with no arguments, returns the declared entries.
       #
-      #   server_tools :web_search
-      #   server_tools web_search: { allowed_domains: ["ruby-lang.org"] }
+      #   provider_tools :web_search
+      #   provider_tools web_search: { allowed_domains: ["ruby-lang.org"] }
       #
-      def server_tools(*tools, **tools_with_options, &block)
-        return @server_tools || [] if tools.empty? && tools_with_options.empty? && !block_given?
+      def provider_tools(*tools, **tools_with_options, &block)
+        return @provider_tools || [] if tools.empty? && tools_with_options.empty? && !block_given?
 
-        @server_tools = block_given? ? block : RubyLLM::Tools::ServerTools.normalize(tools, tools_with_options)
+        @provider_tools = block_given? ? block : RubyLLM::Tools::ProviderTools.normalize(tools, tools_with_options)
       end
 
       # Adds system instructions for chats this agent builds. Accepts a string,
@@ -667,8 +667,8 @@ module RubyLLM
         options = evaluate(tool_options, runtime)
         chat.with_tool_options(**options) if options && !options.empty?
 
-        server_tools_to_apply = Array(evaluate(server_tools, runtime)).compact
-        chat.with_server_tools(*server_tools_to_apply) if server_tools_to_apply.any?
+        provider_tools_to_apply = Array(evaluate(provider_tools, runtime)).compact
+        chat.with_provider_tools(*provider_tools_to_apply) if provider_tools_to_apply.any?
       end
 
       def apply_passthrough_options(chat)
@@ -873,10 +873,10 @@ module RubyLLM
     # Delegates to Chat#with_tools. See that method for arguments and return values.
 
     ##
-    # :method: with_server_tools
-    # :call-seq: with_server_tools(*tools, **tools_with_options)
+    # :method: with_provider_tools
+    # :call-seq: with_provider_tools(*tools, **tools_with_options)
     #
-    # Delegates to Chat#with_server_tools. See that method for arguments and return values.
+    # Delegates to Chat#with_provider_tools. See that method for arguments and return values.
 
     ##
     # :method: with_tool_options
@@ -1053,10 +1053,10 @@ module RubyLLM
     # Delegates to Chat#tools. See that method for arguments and return values.
 
     ##
-    # :method: server_tools
-    # :call-seq: server_tools
+    # :method: provider_tools
+    # :call-seq: provider_tools
     #
-    # Delegates to Chat#server_tools. See that method for arguments and return values.
+    # Delegates to Chat#provider_tools. See that method for arguments and return values.
 
     ##
     # :method: tool_options

@@ -30,7 +30,7 @@ RSpec.describe RubyLLM::Protocols::GPUStack::Responses do
                                           'require_approval' => 'never' }]
     end.to_return_json(body: completion)
 
-    result = chat.with_server_tools(mcp: tool).ask('Calculate 2+2.')
+    result = chat.with_provider_tools(mcp: tool).ask('Calculate 2+2.')
 
     expect(result.server_tool_calls.first).to have_attributes(name: 'python', result: '4', id: 'mcp_1')
     expect(result.tokens).to have_attributes(input: 16, cache_read: 4, output: 5)
@@ -79,7 +79,7 @@ RSpec.describe RubyLLM::Protocols::GPUStack::Responses do
                                                'allowed_tools' => ['search'], 'require_approval' => 'never' }
     end.to_return_json(body: completion)
 
-    chat.with_server_tools(mcp: { name: 'web_search_preview', allowed_tools: ['search'], require_approval: 'never' })
+    chat.with_provider_tools(mcp: { name: 'web_search_preview', allowed_tools: ['search'], require_approval: 'never' })
         .ask('Search for Ruby.')
     expect(request).to have_been_requested.once
   end
@@ -95,7 +95,7 @@ RSpec.describe RubyLLM::Protocols::GPUStack::Responses do
         JSON.parse(req.body)['tools'] == [{ 'type' => 'mcp', 'require_approval' => 'never', **settings }]
       end.to_return_json(body: completion)
 
-      response = chat.with_server_tools(nil).with_server_tools(**{ name => { require_approval: 'never' } })
+      response = chat.with_provider_tools(nil).with_provider_tools(**{ name => { require_approval: 'never' } })
                      .ask('Use the enabled tool.')
 
       expect(response.server_tool_calls.first.result).to eq('4')
@@ -109,7 +109,7 @@ RSpec.describe RubyLLM::Protocols::GPUStack::Responses do
                                           'allowed_tools' => %w[search open], 'require_approval' => 'never' }]
     end.to_return_json(body: completion)
 
-    chat.with_server_tools(web_search: { require_approval: 'never' }, web_fetch: { require_approval: 'never' })
+    chat.with_provider_tools(web_search: { require_approval: 'never' }, web_fetch: { require_approval: 'never' })
         .ask('Search for the Ruby documentation and read the result.')
 
     expect(request).to have_been_requested.once
@@ -120,7 +120,7 @@ RSpec.describe RubyLLM::Protocols::GPUStack::Responses do
       [{}, { require_approval: 'always' }, { require_approval: 'never', allowed_tools: ['*'] },
        { require_approval: 'never', url: 'https://example.test/mcp' },
        { require_approval: 'never', name: 'container' }].each do |options|
-        expect { chat.with_server_tools(nil).with_server_tools(**{ name => options }).ask('Use the tool.') }
+        expect { chat.with_provider_tools(nil).with_provider_tools(**{ name => options }).ask('Use the tool.') }
           .to raise_error(ArgumentError, /GPUStack/)
       end
     end
@@ -133,7 +133,8 @@ RSpec.describe RubyLLM::Protocols::GPUStack::Responses do
     settings.each do |options|
       mcp = { name: 'web_search_preview', require_approval: 'never' }.merge(options)
       expect do
-        chat.with_server_tools(nil).with_server_tools(web_search: { require_approval: 'never' }, mcp:).ask('Search.')
+        chat.with_provider_tools(nil).with_provider_tools(web_search: { require_approval: 'never' },
+                                                          mcp:).ask('Search.')
       end.to raise_error(ArgumentError, /one entry with explicit tool names/)
     end
     expect(a_request(:post, /gpu.example.test/)).not_to have_been_made
@@ -144,14 +145,14 @@ RSpec.describe RubyLLM::Protocols::GPUStack::Responses do
                tool.merge(url: 'https://example.test/mcp'), tool.merge(connector_id: 'connector'),
                tool.merge(allowed_tools: { read_only: true }), tool.merge(name: 'unknown')]
     invalid.each do |options|
-      expect { chat.with_server_tools(nil).with_server_tools(mcp: options).ask('Calculate.') }
+      expect { chat.with_provider_tools(nil).with_provider_tools(mcp: options).ask('Calculate.') }
         .to raise_error(ArgumentError, /GPUStack|vLLM/)
     end
     expect(a_request(:post, /gpu.example.test/)).not_to have_been_made
   end
 
   it 'requires explicit execution consent and keeps ordinary chat on Chat Completions' do
-    expect { chat.with_server_tools(:web_search).ask('Search.') }
+    expect { chat.with_provider_tools(:web_search).ask('Search.') }
       .to raise_error(ArgumentError, /explicit require_approval/)
     expect(chat.provider.resolve_protocol(nil, chat.model)).to eq(RubyLLM::Providers::GPUStack::ChatCompletions)
     context.config.gpustack_protocol = :responses
