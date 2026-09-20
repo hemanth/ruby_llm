@@ -5,6 +5,24 @@ require 'rails_helper'
 RSpec.describe RubyLLM::Agent do
   include_context 'with configured RubyLLM'
 
+  it 'uses block-configured credentials when creating and finding a chat' do
+    RubyLLM.config.openai_api_key = nil
+    agent = Class.new(described_class) do
+      chat_model Chat
+      model model_for(:openai, :temperature), provider: :openai
+    end
+    agent.context do |config|
+      config.openai_api_key = 'agent-key'
+      config.openai_api_base = 'https://example.com/v1'
+    end
+
+    chat = agent.create!
+
+    expect(chat.to_llm.provider.config.openai_api_key).to eq('agent-key')
+    expect(agent.find(chat.id).to_llm.provider.config.openai_api_base).to eq('https://example.com/v1')
+    expect(RubyLLM.config.openai_api_key).to be_nil
+  end
+
   def write_prompt(agent_name, content)
     prompt_dir = Rails.root.join('app/prompts', agent_name)
     FileUtils.mkdir_p(prompt_dir)

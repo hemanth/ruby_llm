@@ -363,12 +363,19 @@ module RubyLLM
       private :fallback_options
 
       # Sets a Context whose configuration chats this agent builds should
-      # use, applied via Chat#with_context. Called with no argument, returns
-      # the configured context.
-      def context(value = nil)
-        return @context if value.nil?
+      # use, applied via Chat#with_context. A block configures a new isolated
+      # Context when the agent class is defined. Called with no argument or
+      # block, returns the configured context.
+      #
+      #   context SharedContext
+      #   context { |config| config.request_timeout = 180 }
+      #
+      def context(value = nil, &block)
+        raise ArgumentError, 'Pass a context or a block, not both' if value && block
 
-        @context = value
+        return @context if value.nil? && !block
+
+        @context = block ? RubyLLM.context(&block) : value
       end
 
       # Sets the ActiveRecord chat class this agent creates and finds,

@@ -129,6 +129,29 @@ RSpec.describe RubyLLM::Agent do
       expect(agent.context).to eq(context)
       expect(agent.chat.provider.config.request_timeout).to eq(42)
     end
+
+    it 'builds an isolated context from a configuration block' do
+      RubyLLM.config.openai_api_key = nil
+      agent = Class.new(described_class) do
+        model model_for(:openai, :temperature), provider: :openai
+        self.context do |config|
+          config.openai_api_key = 'agent-key'
+          config.openai_api_base = 'https://example.com/v1'
+        end
+      end
+
+      expect(agent.chat.provider.config.openai_api_key).to eq('agent-key')
+      expect(agent.context.config.openai_api_base).to eq('https://example.com/v1')
+      expect(RubyLLM.config.openai_api_key).to be_nil
+      expect(Class.new(agent).context).to equal(agent.context)
+    end
+
+    it 'rejects a context object combined with a configuration block' do
+      agent = Class.new(described_class)
+
+      expect { agent.context(RubyLLM.context) { |config| config.request_timeout = 42 } }
+        .to raise_error(ArgumentError, 'Pass a context or a block, not both')
+    end
   end
 
   describe 'deferred configuration blocks' do

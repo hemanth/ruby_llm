@@ -93,7 +93,7 @@ For example, `model` maps to `RubyLLM.chat(model:, provider:, ...)`, `tools` map
 * `headers` (see [Chat Basics]({% link _core_features/chat.md %}))
 * `schema` (see [Chat Basics]({% link _core_features/chat.md %}))
 * `fallbacks` (see [Model Fallbacks]({% link _advanced/error-handling.md %}#model-fallbacks))
-* `context` (see [Configuration]({% link _getting_started/configuration.md %}))
+* `context` (see [Configuration Contexts](#configuration-contexts))
 * `chat_model` (Rails-backed mode)
 * `inputs` (declared runtime inputs)
 
@@ -175,6 +175,48 @@ end
 ```
 
 This works for both `WorkAssistant.chat` and Rails-backed agents configured with `chat_model`.
+
+## Configuration Contexts
+
+Use a configuration context to give an agent its own credentials, endpoint, or
+connection settings without changing global configuration.
+
+You can define a context elsewhere in your application and pass it to the agent:
+
+```ruby
+# config/initializers/ai_context.rb
+SupportAIContext = RubyLLM.context do |config|
+  config.openai_api_key = ENV.fetch('SUPPORT_OPENAI_API_KEY')
+  config.request_timeout = 180
+end
+
+# app/agents/support_agent.rb
+class SupportAgent < RubyLLM::Agent
+  model "{{ site.models.default_chat }}", provider: :openai
+  context SupportAIContext
+end
+```
+
+Or configure the context directly with a block:
+
+```ruby
+class SupportAgent < RubyLLM::Agent
+  model "{{ site.models.default_chat }}", provider: :openai
+
+  context do |config|
+    config.openai_api_key = ENV.fetch('SUPPORT_OPENAI_API_KEY')
+    config.request_timeout = 180
+  end
+end
+```
+
+The block runs when the agent class is defined and receives a copy of the global
+configuration. Pass either a context object or a block. Both forms work with
+`SupportAgent.chat` and Rails-backed agents configured with `chat_model`.
+Call `SupportAgent.context` to read the configured context.
+
+See [Contexts: Isolated Configurations]({% link _getting_started/configuration-connection.md %}#contexts-isolated-configurations)
+for more configuration examples.
 
 ## Runtime Context and Inputs
 
