@@ -11,13 +11,13 @@ RSpec.describe RubyLLM::Generators::ChatUIGenerator, :generator, type: :generato
   let(:rails_root) { Rails.root }
   let(:template_path) { File.expand_path('../../fixtures/templates', __dir__) }
 
-  def run_rails_generate(*args)
+  def run_rails_generate(*args, chdir: app_path)
     env = {
       'BUNDLE_GEMFILE' => ENV['BUNDLE_GEMFILE'] || Bundler.default_gemfile.to_s,
       'BUNDLE_IGNORE_CONFIG' => '1',
       'OPENAI_API_KEY' => ENV.fetch('OPENAI_API_KEY', 'test')
     }
-    GeneratorTestHelpers.run_command(env, ['bundle', 'exec', 'rails', 'generate', *args], chdir: app_path)
+    GeneratorTestHelpers.run_command(env, ['bundle', 'exec', 'rails', 'generate', *args], chdir:)
   end
 
   def expect_messages_helper_content(path)
@@ -378,24 +378,22 @@ RSpec.describe RubyLLM::Generators::ChatUIGenerator, :generator, type: :generato
 
       if description == 'with namespaced model names'
         it 'honors mappings that follow UI options' do
-          within_test_app(app_path) do
-            FileUtils.mkdir_p('app/models/billing')
-            File.write('app/models/billing/message.rb', <<~RUBY)
-              module Billing
-                class Message < ApplicationRecord
-                end
-              end
-            RUBY
+          Dir.mktmpdir do |destination|
+            FileUtils.cp_r("#{app_path}/.", destination)
+            within_test_app(destination) do
+              FileUtils.rm('app/controllers/llm/chats_controller.rb')
 
-            output, status = run_rails_generate(
-              'ruby_llm:chat_ui', '--force', '--ui', 'scaffold',
-              'chat:Billing::Chat', 'message:Billing::Message'
-            )
-            expect(status.success?).to be(true), output
+              output, status = run_rails_generate(
+                'ruby_llm:chat_ui', '--force', '--ui', 'scaffold',
+                'chat:Llm::Chat', 'message:Llm::Message', chdir: destination
+              )
+              expect(status.success?).to be(true), output
 
-            controller = File.read('app/controllers/billing/chats_controller.rb')
-            expect(controller).to include('class Billing::ChatsController')
-            expect(controller).to include('Billing::Chat.find')
+              controller = File.read('app/controllers/llm/chats_controller.rb')
+              expect(controller).to include('class Llm::ChatsController')
+              expect(controller).to include('Llm::Chat.find')
+              expect_chat_script_to_succeed('Rails.application.eager_load!')
+            end
           end
         end
       end
