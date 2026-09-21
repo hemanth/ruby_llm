@@ -1,56 +1,82 @@
 #!/usr/bin/env bash
-# Build the deployed two-version site: 2.0 at $BASE/, 1.x at $BASE/v1/.
+# Build stable release docs at /, main at /next/, and the latest 1.x at /v1/.
 # Run directly. --serve to preview on :4000.
 set -euo pipefail
 
-# Drop the parent bundle's env so the docs Gemfile resolves on its own.
 unset RUBYOPT RUBYLIB BUNDLE_GEMFILE BUNDLE_BIN_PATH BUNDLE_BIN BUNDLE_APP_CONFIG
 
-ONE_X_REF="${ONE_X_REF:-ec673f21}"   # last clean 1.x docs commit
-BASE="${BASE:-}"                     # Pages base path (empty for a custom domain at root)
+BASE="${BASE:-}"
+BASE="${BASE%/}"
 PORT="${PORT:-4000}"
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 docs="$repo_root/docs"
 site="${SITE:-$docs/_site}"
 gemfile="$docs/Gemfile"
-versions="$docs/_data/versions.yml"
 registry="${MODEL_REGISTRY_FILE:-$repo_root/lib/ruby_llm/models.json}"
-stable="$(ruby -ryaml -e 'puts YAML.load_file(ARGV[0])["stable"]' "$versions")"
+releases="$(ruby "$docs/bin/release_tags.rb" "$repo_root")"
+read -r stable_ref onex_ref <<< "$releases"
 
-next_src="$(mktemp -d)"; onex_src="$(mktemp -d)"
-next_out="$(mktemp -d)"; onex_out="$(mktemp -d)"
-trap 'rm -rf "$next_src" "$onex_src" "$next_out" "$onex_out"' EXIT
+workspace="$(mktemp -d)"
+trap 'rm -rf "$workspace"' EXIT
 
-set_current() { ruby "$docs/bin/prepare_versions.rb" "$1" "$2" "$BASE"; }
+archive_release() {
+  local ref="$1" source="$2"
+  mkdir -p "$source"
+  git -C "$repo_root" archive "$ref" docs/ lib/ | tar -x -C "$source"
+  if git -C "$repo_root" cat-file -e "$ref:.rdoc_options" 2>/dev/null; then
+    git -C "$repo_root" show "$ref:.rdoc_options" > "$source/.rdoc_options"
+  else
+    cp "$repo_root/.rdoc_options" "$source/.rdoc_options"
+  fi
+}
 
-echo "==> Building current docs (2.0) -> /"
-rsync -a --exclude='_site' --exclude='_data_serve' --exclude='vendor' --exclude='.jekyll-cache' --exclude='.bundle' "$docs/" "$next_src/"
-set_current "$next_src/_data/versions.yml" "$stable"
-( cd "$next_src" && BUNDLE_GEMFILE="$gemfile" bundle exec jekyll build --baseurl "$BASE" -d "$next_out" --quiet )
+prepare_version() {
+  local source="$1" channel="$2"
+  mkdir -p "$source/_data" "$source/_includes" "$source/_plugins"
+  cp "$docs/_data/versions.yml" "$source/_data/versions.yml"
+  cp "$docs/_includes/version_select.html" "$source/_includes/"
+  cp "$docs/_plugins/versioned_docs.rb" "$source/_plugins/"
+  ruby "$docs/bin/prepare_versions.rb" "$source/_data/versions.yml" "$channel" "$BASE" "$stable_ref" "$onex_ref"
+}
 
-echo "==> Building API docs (RDoc) -> /api/"
-SITE_BASE_URL="https://rubyllm.com${BASE}" "$docs/bin/build-api.sh" "$next_out/api"
+build_version() {
+  local source="$1" output="$2" prefix="$3" api_source="$4"
+  ( cd "$source" && BUNDLE_GEMFILE="$gemfile" bundle exec jekyll build --baseurl "$prefix" -d "$output" --quiet )
+  SITE_BASE_URL="https://rubyllm.com${prefix}" "$docs/bin/build-api.sh" "$output/api" "$api_source"
+}
 
-echo "==> Building 1.x docs (frozen @ $ONE_X_REF) -> /v1/"
-git -C "$repo_root" archive "$ONE_X_REF" docs/ | tar -x -C "$onex_src"
-"$docs/bin/prepare_one_x_docs.rb" "$onex_src/docs"
-cp "$docs/_includes/version_select.html" "$onex_src/docs/_includes/"
-mkdir -p "$onex_src/docs/_data"
-cp "$versions" "$onex_src/docs/_data/versions.yml"
-set_current "$onex_src/docs/_data/versions.yml" v1.16.0
+echo "==> Building stable docs ($stable_ref) -> /"
+archive_release "$stable_ref" "$workspace/stable"
+prepare_version "$workspace/stable/docs" stable
+build_version "$workspace/stable/docs" "$workspace/stable-out" "$BASE" "$workspace/stable"
+
+echo "==> Building next docs (main) -> /next/"
+mkdir -p "$workspace/next"
+rsync -a --exclude='_site' --exclude='_data_serve' --exclude='_config_serve.yml' --exclude='vendor' --exclude='.jekyll-cache' --exclude='.bundle' "$docs/" "$workspace/next/"
+prepare_version "$workspace/next" next
+build_version "$workspace/next" "$workspace/next-out" "$BASE/next" "$repo_root"
+
+echo "==> Building 1.x docs ($onex_ref) -> /v1/"
+archive_release "$onex_ref" "$workspace/v1"
+"$docs/bin/prepare_one_x_docs.rb" "$workspace/v1/docs"
+prepare_version "$workspace/v1/docs" v1
 perl -0pi -e 's{(\{% include components/header.html %\}\n)}{$1    {% include version_select.html %}\n}' \
-  "$onex_src/docs/_layouts/default.html"
-( cd "$onex_src/docs" && BUNDLE_GEMFILE="$gemfile" bundle exec jekyll build --baseurl "$BASE/v1" -d "$onex_out" --quiet )
+  "$workspace/v1/docs/_layouts/default.html"
+build_version "$workspace/v1/docs" "$workspace/v1-out" "$BASE/v1" "$workspace/v1"
 
 echo "==> Assembling -> $site"
-rm -rf "$site"; mkdir -p "$site/v1"
-cp -a "$next_out/." "$site/"
-cp -a "$onex_out/." "$site/v1/"
+rm -rf "$site"
+mkdir -p "$site/next" "$site/v1"
+cp -a "$workspace/stable-out/." "$site/"
+cp -a "$workspace/next-out/." "$site/next/"
+cp -a "$workspace/v1-out/." "$site/v1/"
 ruby "$docs/bin/build_version_redirects.rb" "$site" "$BASE"
 cp "$registry" "$site/models.json"
+rm -rf "$workspace"
+trap - EXIT
 
-echo "Done.  / = 2.0   /v1/ = 1.x   /next/ = redirects   /models.json = live registry"
+echo "Done.  / = $stable_ref   /next/ = main   /v1/ = $onex_ref   /models.json = live registry"
 if [[ "${1:-}" == "--serve" ]]; then
   exec python3 -m http.server "$PORT" --directory "$site"
 fi

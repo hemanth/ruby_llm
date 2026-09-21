@@ -8,7 +8,7 @@ output_dir = ARGV.fetch(0) do
   abort 'usage: export-api-markdown.rb <output-dir>'
 end
 
-repo = File.expand_path('../..', __dir__)
+repo = File.expand_path(ARGV.fetch(1, File.expand_path('../..', __dir__)))
 output_dir = File.expand_path(output_dir, repo)
 rdoc = Gem.bin_path('rdoc', 'rdoc')
 ri = Gem.bin_path('rdoc', 'ri')

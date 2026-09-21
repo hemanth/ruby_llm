@@ -28,7 +28,7 @@ end
 # rubocop:disable-next Metrics/BlockLength
 output_dir.glob('**/*.html').sort.each do |path|
   relative_path = path.relative_path_from(output_dir).to_s
-  html = path.read
+  html = path.read.gsub('href="https://rubyllm.com/', %(href="#{site_root}/))
   redirect = html.match?(/<meta[^>]+http-equiv="refresh"/i)
   target = html[/<meta[^>]+http-equiv="refresh"[^>]+url=([^";]+)[^>]*>/i, 1]
   canonical = if index_pages.include?(relative_path)

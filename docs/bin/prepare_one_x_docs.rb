@@ -10,8 +10,11 @@ config = YAML.load_file(config_path)
 plugins = Array(config['plugins'])
 plugins.delete('jekyll-ai-visible-content')
 plugins.delete('jekyll-sitemap')
+plugins.delete('jekyll-remote-theme')
 plugins << 'jekyll-vitepress-theme' unless plugins.include?('jekyll-vitepress-theme')
 config['plugins'] = plugins
+config.delete('remote_theme')
+config['theme'] = 'just-the-docs'
 config.delete('ai_visible_content')
 config['jekyll_vitepress'] = {
   'seo' => {
@@ -87,6 +90,4 @@ safe_upload = <<~MARKDOWN
 
   ```ruby
 MARKDOWN
-raise 'Expected the frozen Rails upload example' unless rails.include?(unsafe_upload)
-
 File.write(rails_path, rails.sub(unsafe_upload, safe_upload))

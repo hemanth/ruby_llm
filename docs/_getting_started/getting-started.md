@@ -27,13 +27,22 @@ Each example shows one feature. Try the ones your application needs, then follow
 
 ## Installation
 
+{% if site.docs_unreleased %}
+These guides cover unreleased changes on `main`. Install from GitHub to use them:
+
+```sh
+bundle add ruby_llm --git https://github.com/crmne/ruby_llm --branch main
+```
+{% else %}
 Add RubyLLM 2.0 with Bundler:
 
 ```sh
 bundle add ruby_llm --version 2.0.0
 ```
+{% endif %}
 
-These guides cover RubyLLM 2.0. For an existing 1.x application, use the [1.x docs]({{ '/v1/' | relative_url }}) or follow the [upgrade guide]({% link _reference/upgrading.md %}) before switching versions.
+{% assign legacy_docs = site.data.versions.items | where: 'id', 'v1' | first %}
+For an existing 1.x application, use the [1.x docs]({{ legacy_docs.url }}) or follow the [upgrade guide]({% link _reference/upgrading.md %}) before switching versions.
 {: .important }
 
 ## Minimal Configuration

@@ -73,6 +73,30 @@ Specs tagged `:live` talk to provider APIs through VCR cassettes; everything els
 
 Always check cassettes for leaked API keys before committing.
 
+## Documentation
+
+The site builds three versions from the same repository:
+
+| URL | Source |
+| --- | --- |
+| `/` | Latest stable release tag |
+| `/next/` | `main`, including unreleased changes |
+| `/v1/` | Latest stable 1.x release tag |
+
+Each version has its own guides, API reference, search, and Markdown
+exports. The version selector uses the release tags selected during the
+build. Prerelease tags do not replace the stable documentation.
+`/models.json` remains the live model registry shared by clients.
+
+Run `docs/bin/serve.sh` to preview all three versions. Changes to guides
+rebuild under `/next/`; restart the preview to regenerate API references.
+Run `docs/bin/build-versions.sh` for the complete deployment build. Both
+commands require the release tags in your local checkout.
+
+Pushing documentation or library changes to `main` updates `/next/`.
+Publishing a release also rebuilds the site, promoting its tagged docs
+to `/` while `main` continues at `/next/`.
+
 ## Publishing a release
 
 Pushing to `main` runs CI. Publishing a GitHub release starts the release

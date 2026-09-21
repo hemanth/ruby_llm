@@ -1,6 +1,8 @@
 name: Deploy docs
 
 on:
+  release:
+    types: [published]
   schedule:
     - cron: '17 */6 * * *'
   push:
@@ -43,7 +45,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          fetch-depth: 0 # build-versions.sh needs full history to reach the frozen 1.x docs commit
+          ref: main
+          fetch-depth: 0 # Build release tags alongside main, including on release events.
 
       - name: Setup Ruby for models guide generation (root Gemfile)
         uses: ruby/setup-ruby@v1
@@ -71,6 +74,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
           VERTEXAI_SERVICE_ACCOUNT_KEY: ${{ secrets.VERTEXAI_SERVICE_ACCOUNT_KEY }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           REFRESH_MODEL_REGISTRY: ${{ github.event_name == 'schedule' || inputs.refresh_model_registry || inputs.allow_model_registry_drop }}
@@ -96,6 +100,11 @@ jobs:
               "#{error["data_pointer"]}: #{error["error"]}"
             end
             abort(errors.join("\n")) unless errors.empty?
+            providers = data.map { |model| model.fetch("provider") }.uniq
+            additions = JSON.parse(File.read("lib/ruby_llm/models.json")).reject do |model|
+              providers.include?(model.fetch("provider"))
+            end
+            File.write(ARGV.fetch(0), JSON.pretty_generate(data + additions) + "\n") unless additions.empty?
           ' "$registry"; then
             cp lib/ruby_llm/models.json "$registry"
           fi
@@ -189,7 +198,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Build versioned docs (2.0 at /, 1.x at /v1/)
+      - name: Build stable, next, and 1.x documentation
         if: steps.registry.outputs.deploy == 'true'
         run: docs/bin/build-versions.sh
         env:

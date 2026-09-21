@@ -27,13 +27,6 @@ def redirect_page(path, target)
   HTML
 end
 
-Dir.glob('**/*.html', base: site).each do |relative|
-  next if relative.start_with?('v1/', 'next/') || relative == '404.html'
-
-  route = relative.delete_suffix('index.html')
-  redirect_page(File.join(site, 'next', relative), "#{base}/#{route}")
-end
-
 Dir.glob('**/*.html', base: File.join(site, 'v1')).each do |relative|
   next if File.exist?(File.join(site, relative)) || relative == '404.html'
 
@@ -41,13 +34,7 @@ Dir.glob('**/*.html', base: File.join(site, 'v1')).each do |relative|
   redirect_page(File.join(site, relative), "#{base}/v1/#{route}")
 end
 
-Dir.glob('{llms*.txt,**/*.md}', base: site).each do |relative|
-  next if relative.start_with?('v1/', 'next/')
-
-  target = File.join(site, 'next', relative)
-  FileUtils.mkdir_p(File.dirname(target))
-  FileUtils.cp(File.join(site, relative), target)
-end
-
 robots = File.join(site, 'robots.txt')
-File.open(robots, 'a') { |file| file.puts "\nSitemap: https://rubyllm.com#{base}/v1/sitemap.xml" }
+File.open(robots, 'a') do |file|
+  %w[next v1].each { |version| file.puts "\nSitemap: https://rubyllm.com#{base}/#{version}/sitemap.xml" }
+end

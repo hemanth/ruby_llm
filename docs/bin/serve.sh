@@ -1,53 +1,37 @@
 #!/usr/bin/env bash
-# Serve the 2.0 docs live at / (with reload) and the frozen 1.x docs at /v1/.
-# Run directly — not via bundle exec/rake (that leaks the gem bundle and breaks the Jekyll build).
+# Preview all versions and rebuild /next/ when the working tree changes.
+# Run directly, not via bundle exec/rake.
 #   docs/bin/serve.sh   |   PORT=4002 docs/bin/serve.sh
 set -euo pipefail
 
-# Drop the parent bundle's env so the docs Gemfile resolves on its own.
 unset RUBYOPT RUBYLIB BUNDLE_GEMFILE BUNDLE_BIN_PATH BUNDLE_BIN BUNDLE_APP_CONFIG
 
-ONE_X_REF="${ONE_X_REF:-ec673f21}"   # last clean 1.x docs commit
 PORT="${PORT:-4000}"
-
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 docs="$repo/docs"
-site="$docs/_site"
-versions="$docs/_data/versions.yml"
-stable="$(ruby -ryaml -e 'puts YAML.load_file(ARGV[0])["stable"]' "$versions")"
+site="${SITE:-$docs/_site}"
 
-local_versions() {
-  cp "$versions" "$1"
-  ruby "$docs/bin/prepare_versions.rb" "$1" "$2" ""
-}
+BASE="" "$docs/bin/build-versions.sh"
+releases="$(ruby "$docs/bin/release_tags.rb" "$repo")"
+read -r stable_ref onex_ref <<< "$releases"
 
-echo "==> Building frozen 1.x docs (@ $ONE_X_REF) -> /v1/"
-onex="$(mktemp -d)"
-git -C "$repo" archive "$ONE_X_REF" docs/ | tar -x -C "$onex"
-"$docs/bin/prepare_one_x_docs.rb" "$onex/docs"
-cp "$docs/_includes/version_select.html" "$onex/docs/_includes/"
-mkdir -p "$onex/docs/_data"
-local_versions "$onex/docs/_data/versions.yml" v1.16.0
-perl -0pi -e 's{(\{% include components/header.html %\}\n)}{$1    {% include version_select.html %}\n}' \
-  "$onex/docs/_layouts/default.html"
-( cd "$onex/docs" && BUNDLE_GEMFILE="$docs/Gemfile" bundle exec jekyll build --baseurl /v1 -d "$site/v1" --quiet )
-rm -rf "$onex"
-
-echo "==> Building API docs (RDoc) -> /api/"
-"$docs/bin/build-api.sh" "$site/api"
-
-# Serve live from a temp data dir so the committed versions.yml stays untouched.
-# It shadows _data wholesale, so every other data file has to come along or the
-# theme loses the sidebar and nav it builds from them.
 rm -rf "$docs/_data_serve"
 cp -a "$docs/_data" "$docs/_data_serve"
-local_versions "$docs/_data_serve/versions.yml" "$stable"
+ruby "$docs/bin/prepare_versions.rb" "$docs/_data_serve/versions.yml" next "" "$stable_ref" "$onex_ref"
 serve_cfg="$docs/_config_serve.yml"
-printf "data_dir: _data_serve\nkeep_files: ['.git', '.svn', 'v1', 'api']\n" > "$serve_cfg"
-trap 'rm -rf "$docs/_data_serve" "$serve_cfg"' EXIT
+printf "data_dir: _data_serve\nkeep_files: ['api']\n" > "$serve_cfg"
+watcher=""
+cleanup() {
+  if [[ -n "$watcher" ]]; then kill "$watcher" 2>/dev/null || true; fi
+  rm -rf "$docs/_data_serve" "$serve_cfg"
+}
+trap cleanup EXIT
 trap 'exit 130' INT
 trap 'exit 143' TERM
 
-echo "==> Serving http://localhost:$PORT/  (2.0 dev, live)   +   /v1/ (1.x)   — Ctrl-C to stop"
 cd "$docs"
-BUNDLE_GEMFILE="$docs/Gemfile" bundle exec jekyll serve --livereload --port "$PORT" --config _config.yml,_config_serve.yml
+BUNDLE_GEMFILE="$docs/Gemfile" bundle exec jekyll build --watch --baseurl /next \
+  --destination "$site/next" --config _config.yml,_config_serve.yml &
+watcher=$!
+echo "==> Serving http://localhost:$PORT/ (stable), /next/ (working tree), and /v1/"
+python3 -m http.server "$PORT" --directory "$site"

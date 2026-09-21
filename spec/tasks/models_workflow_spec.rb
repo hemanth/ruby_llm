@@ -101,4 +101,16 @@ RSpec.describe 'Published model registry workflow', type: :task do
     expect(status).not_to be_success
     expect(File).not_to exist(File.join(tmpdir, 'outputs'))
   end
+
+  it 'includes newly supported providers from the bundled registry without replacing published metadata' do
+    additions = RubyLLM.models.by_provider(:typesafe).all
+    bundled = models.map { |model| RubyLLM::Model.new(**model.to_h, name: 'Bundled name') }
+    RubyLLM::Models.new(bundled + additions).save_to_json(File.join(tmpdir, 'lib/ruby_llm/models.json'))
+    stdout, stderr, status = run_workflow(event: 'push', refresh: false)
+
+    expect(status).to be_success, "#{stdout}\n#{stderr}"
+    published = RubyLLM::Models::Registry.read(File.join(tmpdir, 'ruby-llm-models.json'))
+    expect(published.map(&:id)).to eq((models + additions).map(&:id))
+    expect(published.first.name).to eq(models.first.name)
+  end
 end
