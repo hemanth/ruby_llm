@@ -31,6 +31,12 @@ component :domain, in: %w[
   lib/ruby_llm/embedding.rb
   lib/ruby_llm/embedding_request.rb
   lib/ruby_llm/image.rb
+  lib/ruby_llm/judge.rb
+  lib/ruby_llm/judge/**/*.rb
+  lib/ruby_llm/judgment.rb
+  lib/ruby_llm/probability.rb
+  lib/ruby_llm/choice.rb
+  lib/ruby_llm/score.rb
   lib/ruby_llm/fallback.rb
   lib/ruby_llm/downloaded_file.rb
   lib/ruby_llm/message.rb
@@ -287,7 +293,7 @@ agent.method_names.matching(/\A(?:with_storage|storage)\z/)
 # method, and never carries a table of provider values (finish reasons, error
 # phrases, strict-mode rules): protocols normalize on the way in and out.
 PROVIDER_VOCABULARY = /openai|anthropic|gemini|bedrock|converse|cohere|mistral|vertex|azure|ollama|xai|deepseek|
-                       perplexity|openrouter|gpustack|elevenlabs|deepgram|responses|chat_completions/xi
+                       perplexity|openrouter|gpustack|elevenlabs|deepgram|typesafe|system_one|noul|responses|chat_completions/xi
 domain.method_names.matching(PROVIDER_VOCABULARY)
       .forbidden(because: 'provider and protocol vocabulary belongs in providers and protocols')
 rails_integration.method_names.matching(PROVIDER_VOCABULARY)

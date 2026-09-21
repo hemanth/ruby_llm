@@ -2,7 +2,7 @@
 layout: models
 title: Models
 llms: false
-description: Browse 1672 AI models across 15 remote providers, with capabilities, context limits, and pricing.
+description: Browse 1674 AI models across 16 remote providers, with capabilities, context limits, and pricing.
 canonical_url: https://rubyllm.com/available-models/
 redirect_from:
   - /guides/available-models
@@ -12,8 +12,8 @@ redirect_from:
   <header class="catalog-header">
     <div>
       <h1>Models</h1>
-      <p class="catalog-description"><strong>1,672 models</strong> across <strong>15 providers</strong>. Find the capabilities you need and compare what they cost.</p>
-      <p class="catalog-updated">Updated <time datetime="2026-09-16">2026-09-16</time></p>
+      <p class="catalog-description"><strong>1,674 models</strong> across <strong>16 providers</strong>. Find the capabilities you need and compare what they cost.</p>
+      <p class="catalog-updated">Updated <time datetime="2026-09-21">2026-09-21</time></p>
     </div>
     <div class="catalog-usage">
       <div class="catalog-command">
@@ -39,7 +39,7 @@ redirect_from:
 
   <div class="catalog-results-header">
     <h2 data-catalog-heading>All providers</h2>
-    <p data-catalog-count role="status">1,672 models</p>
+    <p data-catalog-count role="status">1,674 models</p>
   </div>
   <p class="catalog-pricing-note">Prices are USD per million text tokens at standard rates. Cache rates appear below input prices when listed. A dash means the value is not listed.</p>
 
@@ -15748,6 +15748,26 @@ redirect_from:
           <td class="catalog-numeric">—</td>
           <td class="catalog-numeric">$2<small>Cache read $0.3</small></td>
           <td class="catalog-numeric">$6</td>
+        </tr>
+        <tr data-model="&#123;&quot;id&quot;:&quot;jev-latest&quot;,&quot;name&quot;:&quot;jev-latest&quot;,&quot;provider&quot;:&quot;TypeSafe&quot;,&quot;capabilities&quot;:[&quot;Judgment&quot;],&quot;modalities&quot;:[&quot;Text input&quot;,&quot;Judgment output&quot;],&quot;context&quot;:null,&quot;output&quot;:null,&quot;input_price&quot;:null,&quot;output_price&quot;:null&#125;">
+          <th scope="row"><span class="catalog-model-name">jev-latest</span><code>jev-latest</code></th>
+          <td>TypeSafe</td>
+          <td class="catalog-modalities"><span><b>In</b> text</span><span><b>Out</b> judgment</span></td>
+          <td><div class="catalog-capabilities"><span>Judgment</span></div></td>
+          <td class="catalog-numeric">—</td>
+          <td class="catalog-numeric">—</td>
+          <td class="catalog-numeric">—</td>
+          <td class="catalog-numeric">—</td>
+        </tr>
+        <tr data-model="&#123;&quot;id&quot;:&quot;jev-preview&quot;,&quot;name&quot;:&quot;jev-preview&quot;,&quot;provider&quot;:&quot;TypeSafe&quot;,&quot;capabilities&quot;:[&quot;Judgment&quot;],&quot;modalities&quot;:[&quot;Text input&quot;,&quot;Judgment output&quot;],&quot;context&quot;:null,&quot;output&quot;:null,&quot;input_price&quot;:null,&quot;output_price&quot;:null&#125;">
+          <th scope="row"><span class="catalog-model-name">jev-preview</span><code>jev-preview</code></th>
+          <td>TypeSafe</td>
+          <td class="catalog-modalities"><span><b>In</b> text</span><span><b>Out</b> judgment</span></td>
+          <td><div class="catalog-capabilities"><span>Judgment</span></div></td>
+          <td class="catalog-numeric">—</td>
+          <td class="catalog-numeric">—</td>
+          <td class="catalog-numeric">—</td>
+          <td class="catalog-numeric">—</td>
         </tr>
         <tr data-model="&#123;&quot;id&quot;:&quot;claude-fable-5&quot;,&quot;name&quot;:&quot;Claude Fable 5&quot;,&quot;provider&quot;:&quot;VertexAI&quot;,&quot;capabilities&quot;:[&quot;Tools&quot;,&quot;Thinking&quot;,&quot;Vision&quot;,&quot;Streaming&quot;],&quot;modalities&quot;:[&quot;Text input&quot;,&quot;Image input&quot;,&quot;PDF input&quot;,&quot;Text output&quot;],&quot;context&quot;:1000000,&quot;output&quot;:128000,&quot;input_price&quot;:10,&quot;output_price&quot;:50&#125;">
           <th scope="row"><span class="catalog-model-name">Claude Fable 5</span><code>claude-fable-5</code></th>

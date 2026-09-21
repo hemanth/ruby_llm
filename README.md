@@ -26,7 +26,7 @@ Battle tested at [<picture><source media="(prefers-color-scheme: dark)" srcset="
 
 ---
 
-## 17 providers. One Ruby API.
+## 18 providers. One Ruby API.
 
 Build with the models you want. Move between hosted and local providers without rewriting your application, or connect an OpenAI-compatible endpoint.
 
@@ -185,7 +185,7 @@ Agents, workflows, RAG, images, audio, and video. Built in, with usage tracking 
 * **Batches:** Provider-side batch processing with provider-specific discounts via `RubyLLM.batch`
 * **Compaction:** Let providers condense long conversations with `with_compaction`
 * **Token counting:** Count a request before you send it with `count_tokens`
-* **Providers:** OpenAI, Azure, xAI, Anthropic, Gemini, VertexAI, Bedrock, Cohere, DeepSeek, Mistral, Ollama, Ollama Cloud, OpenRouter, Perplexity, GPUStack, ElevenLabs, Deepgram, and any OpenAI-compatible API
+* **Providers:** OpenAI, Azure, xAI, Anthropic, Gemini, VertexAI, Bedrock, Cohere, DeepSeek, Mistral, Ollama, Ollama Cloud, OpenRouter, Perplexity, GPUStack, ElevenLabs, Deepgram, TypeSafe, and any OpenAI-compatible API
 
 ## Installation
 

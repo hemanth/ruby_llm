@@ -2,7 +2,7 @@
 layout: coverage
 title: Provider API Coverage
 nav_order: 6
-description: Check RubyLLM's current API support across seventeen providers, with implementation notes, sources, and remaining gaps.
+description: Check RubyLLM's provider API audit, with implementation notes, sources, and remaining gaps.
 provider_coverage: true
 llms: false
 ---
@@ -14,6 +14,7 @@ llms: false
   <h1>{{ page.title }}</h1>
   <p>{{ page.description }}</p>
   <p class="coverage-audit-date">Source audit: {{ coverage.audited_on }} · {{ coverage.providers.size }} providers · {{ coverage.summary.feature_count }} shared feature rows</p>
+  <p>This dated audit covers seventeen providers. For TypeSafe's probabilities, choices, and scores, see <a href="{% link _core_features/judgments.md %}">Judgments</a>.</p>
   <p><a href="{% link _getting_started/whats-new-in-2-0.md %}">What's New in 2.0</a> · <a href="#coverage-method">How to read this audit</a> · <a href="{{ '/provider-coverage.json' | relative_url }}" download>Download the audit data</a> · <a href="{{ '/assets/images/provider-coverage.svg' | relative_url }}" download>Download the chart</a></p>
 </header>
 

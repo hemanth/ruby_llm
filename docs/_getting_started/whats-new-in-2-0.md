@@ -35,11 +35,34 @@ The [Provider API Coverage]({% link _reference/provider-coverage.md %}) page sho
 
 ## Providers and Protocols
 
-Cohere, Deepgram, ElevenLabs, and Ollama Cloud join the built-in providers, bringing the total to seventeen.
+Cohere, Deepgram, ElevenLabs, Ollama Cloud, and TypeSafe join the built-in providers, bringing the total to eighteen.
 
 Providers and protocols are now separate. A provider supplies authentication, endpoints, model catalogs, and service-specific behavior. A protocol handles request formats, response parsing, and streaming. RubyLLM selects the protocol for the model and operation, so your application keeps the same API across providers.
 
 A new provider can reuse an existing protocol. The [provider gem generator]({% link _reference/custom-providers.md %}#generate-the-starting-point) creates the package, configuration, and tests to get started.
+
+## Typed Judgments
+
+Define questions about your application data and read probabilities, choices, and scores:
+
+```ruby
+class TicketTriage < RubyLLM::Judge
+  model "{{ site.models.judgment }}"
+  probability :urgent, "Does this need attention today?"
+
+  choice :department, "Which team should handle this?" do
+    billing "Payments and refunds"
+    technical "Bugs and integrations"
+    other "Everything else"
+  end
+end
+
+judgment = TicketTriage.judge("Please refund the duplicate charge today.")
+judgment[:urgent].probability
+judgment[:department].choice
+```
+
+Judges accept structured input, reusable definitions, and runtime procs. Choice and score answers include full distributions and confidence so your application can choose how to act. See [Judgments]({% link _core_features/judgments.md %}).
 
 ## Human Approval for Tools
 

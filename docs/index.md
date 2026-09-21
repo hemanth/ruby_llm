@@ -2,7 +2,7 @@
 layout: home
 title: RubyLLM
 nav_order: 1
-description: 'Build AI features in Ruby and Rails with chats, tools, agents, structured output, images, audio, and video across 17 providers.'
+description: 'Build AI features in Ruby and Rails with chats, tools, agents, structured output, images, audio, and video across 18 providers.'
 permalink: /
 redirect_from:
   - /guides/
@@ -52,7 +52,7 @@ bundle add ruby_llm --version 2.0.0
 
 <section class="home-section home-band home-models-section">
   <div class="home-section-inner">
-    <h2 class="home-heading">17 providers. One Ruby API.</h2>
+    <h2 class="home-heading">18 providers. One Ruby API.</h2>
     <p class="home-lead">
       Build with the models you want. Move between hosted and local providers without rewriting your application, or connect an OpenAI-compatible endpoint.
     </p>

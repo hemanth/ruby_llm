@@ -93,6 +93,12 @@ module RubyLLM
       Moderation.moderate(*args, **kwargs, context: self, &)
     end
 
+    # Judges text or structured data using this context's configuration.
+    # Accepts the same arguments as RubyLLM.judge.
+    def judge(*args, **kwargs, &)
+      Judge.judge(*args, **kwargs, context: self, &)
+    end
+
     # Runs hosted research using this context's configuration.
     # Accepts the same arguments as RubyLLM.research.
     def research(*args, **kwargs)

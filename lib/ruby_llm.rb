@@ -33,6 +33,7 @@ loader.inflector.inflect(
   'pdf' => 'PDF',
   'perplexity' => 'Perplexity',
   'ruby_llm' => 'RubyLLM',
+  'typesafe' => 'TypeSafe',
   'vertexai' => 'VertexAI',
   'xai' => 'XAI'
 )
@@ -131,6 +132,21 @@ loader.setup
 # research task and returns its report as a Message; RubyLLM.research_later
 # returns a ResearchJob for polling and cancellation. Hosted agent identities
 # are selected separately from model IDs.
+#
+# == Typed judgments
+#
+# Judge defines reusable probability, choice, and score questions. Its +judge+
+# method evaluates supplied text or structured data and returns a Judgment:
+#
+#   class Urgency < RubyLLM::Judge
+#     model "jev-latest"
+#     probability :urgent, "Does this need attention today?"
+#   end
+#   Urgency.judge("Please help today.")[:urgent].probability
+#
+# RubyLLM.judge accepts question definitions as a Hash. Probability, Choice,
+# and Score answers retain uncertainty; Judgment reports the model, tokens,
+# and cost. Questions share the supplied input and do not retain chat history.
 #
 # == Batches, usage, and configuration
 #
@@ -286,6 +302,16 @@ module RubyLLM
     #
     def moderate(...)
       Moderation.moderate(...)
+    end
+
+    # Judges text or structured data against typed questions and returns a
+    # Judgment. Accepts the same arguments as Judge.judge. Subclass Judge to
+    # define reusable questions with probability, choice, and score.
+    #
+    #   RubyLLM.judge("Please help today", model: "jev-latest",
+    #     questions: { urgent: { type: :probability, instructions: "Is this urgent?" } })
+    def judge(...)
+      Judge.judge(...)
     end
 
     # Runs a hosted research task and returns its report as a Message.
@@ -487,6 +513,7 @@ RubyLLM::Provider.register :ollama_cloud, RubyLLM::Providers::OllamaCloud
 RubyLLM::Provider.register :openai, RubyLLM::Providers::OpenAI
 RubyLLM::Provider.register :openrouter, RubyLLM::Providers::OpenRouter
 RubyLLM::Provider.register :perplexity, RubyLLM::Providers::Perplexity
+RubyLLM::Provider.register :typesafe, RubyLLM::Providers::TypeSafe
 RubyLLM::Provider.register :vertexai, RubyLLM::Providers::VertexAI
 RubyLLM::Provider.register :xai, RubyLLM::Providers::XAI
 

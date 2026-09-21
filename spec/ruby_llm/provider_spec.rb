@@ -92,6 +92,12 @@ RSpec.describe RubyLLM::Provider do
         custom: 'https://perplexity-proxy.example.com',
         default: 'https://api.perplexity.ai'
       },
+      typesafe: {
+        provider: RubyLLM::Providers::TypeSafe,
+        key: :typesafe_api_base,
+        custom: 'https://typesafe-proxy.example.com',
+        default: 'https://api.typesafe.ai'
+      },
       vertexai: {
         provider: RubyLLM::Providers::VertexAI,
         key: :vertexai_api_base,
@@ -145,6 +151,8 @@ RSpec.describe RubyLLM::Provider do
         config.openrouter_api_key = 'openrouter-key'
       when :perplexity
         config.perplexity_api_key = 'perplexity-key'
+      when :typesafe
+        config.typesafe_api_key = 'typesafe-key'
       when :vertexai
         config.vertexai_project_id = 'vertex-project'
         config.vertexai_location = 'us-east1'

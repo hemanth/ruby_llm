@@ -97,6 +97,10 @@ RubyLLM.configure do |config|
   config.perplexity_api_key = ENV['PERPLEXITY_API_KEY']
   config.perplexity_api_base = ENV['PERPLEXITY_API_BASE'] # optional custom Perplexity endpoint
 
+  # TypeSafe
+  config.typesafe_api_key = ENV['TYPESAFE_API_KEY']
+  config.typesafe_api_base = ENV['TYPESAFE_API_BASE'] # optional custom endpoint
+
   # Vertex AI
   config.vertexai_project_id = ENV['GOOGLE_CLOUD_PROJECT']
   config.vertexai_location = ENV['GOOGLE_CLOUD_LOCATION']
@@ -114,6 +118,18 @@ end
 
 > Attempting to use an unconfigured provider will raise `RubyLLM::ConfigurationError`. Only configure what you need.
 {: .note }
+
+## TypeSafe
+
+Set `typesafe_api_key` to use TypeSafe's Jev models with [Judgments]({% link _core_features/judgments.md %}):
+
+```ruby
+RubyLLM.configure do |config|
+  config.typesafe_api_key = ENV.fetch("TYPESAFE_API_KEY")
+end
+```
+
+Jev answers probability, choice, and score questions about text or structured data. Use `RubyLLM::Judge` or `RubyLLM.judge`; it does not generate chat messages.
 
 ## Ollama Cloud
 

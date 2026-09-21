@@ -77,6 +77,7 @@ module RubyLLM
     abstract :render_transcription_payload, :transcription_url, :parse_transcription_response
     abstract :render_ocr_payload, :ocr_url, :parse_ocr_response
     abstract :render_rerank_payload, :rerank_url, :parse_rerank_response
+    abstract :render_judgment_payload, :judgment_url, :parse_judgment_response
     abstract :render_count_tokens_payload, :count_tokens_url, :parse_count_tokens_response
     abstract :render_tokenization_payload, :tokenization_url, :parse_tokenization_response
     abstract :render_compaction_payload, :compaction_url, :parse_compaction_response
@@ -443,6 +444,16 @@ module RubyLLM
       parse_cache_response(response.body)
     rescue NotImplementedError
       raise Error, "#{@provider.name} doesn't support explicit content caching"
+    end
+
+    def judge(input, questions:, model:, provider_options: {}) # :nodoc:
+      track_usage(:judgment) do
+        payload = render_judgment_payload(input, questions:, model:, provider_options:)
+        response = @connection.post judgment_url, payload, usage: @usage_tracker
+        parse_judgment_response(response, questions:)
+      end
+    rescue NotImplementedError
+      raise Error, "#{@provider.name} doesn't support judgments"
     end
 
     def find_cache(name)

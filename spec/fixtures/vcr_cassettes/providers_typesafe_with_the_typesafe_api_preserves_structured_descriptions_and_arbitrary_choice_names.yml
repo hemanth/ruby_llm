@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.typesafe.ai/v1/systemone
+    body:
+      encoding: UTF-8
+      string: '{"model":"jev-latest","state":["Please refund the duplicate charge
+        today."],"questions":{"urgent":{"type":"noul","instructions":{"question":"Is
+        action needed today?"},"criteria":{"true":{"deadline":"today"},"false":["No
+        deadline","Later"]}},"department":{"type":"choice","instructions":["Which
+        team?","Pick the most relevant team"],"criteria":{"Billing & payments":{"handles":["Charges","Refunds"]},"Other":null}},"frustration":{"type":"score","instructions":"How
+        frustrated is the customer?","criteria":[{"description":"Calm and polite"},["Frustrated","Still
+        civil"],"Angry or hostile"]}}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 21 Sep 2026 16:06:36 GMT
+      Server:
+      - istio-envoy
+      Content-Length:
+      - '462'
+      Content-Type:
+      - application/json
+      X-Typesafe-Request-Id:
+      - req_01a0c4b8214c7dfdbf9170041ea80323
+      X-Envoy-Upstream-Service-Time:
+      - '108'
+    body:
+      encoding: UTF-8
+      string: '{"model":"jev-1.13.0","answers":{"urgent":{"type":"noul","noul":0.94},"department":{"type":"choice","choice":"Billing
+        & payments","confidence":1.0,"probabilities":{"Other":0.0,"Billing & payments":1.0}},"frustration":{"type":"score","score":0.27,"confidence":0.6,"legend":{"0":{"description":"Calm
+        and polite"},"1":["Frustrated","Still civil"],"2":"Angry or hostile"},"probabilities":{"0":0.74,"1":0.26,"2":0.0}}},"usage":{"input_tokens":439,"output_tokens":67}}'
+  recorded_at: Mon, 21 Sep 2026 16:06:36 GMT
+recorded_with: VCR 6.4.0

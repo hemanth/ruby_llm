@@ -68,6 +68,8 @@ Use `paint` for [images]({% link _core_features/image-generation.md %}), `animat
 
 For search, `embed` creates [vectors]({% link _core_features/embeddings.md %}) and `rerank` orders [candidate documents by relevance]({% link _core_features/rerank.md %}). Use `moderate` to check [content flags and categories]({% link _core_features/moderation.md %}).
 
+Use `judge` to ask typed questions about application data and receive [probabilities, choices, and scores]({% link _core_features/judgments.md %}). Define reusable questions in a `RubyLLM::Judge` class.
+
 Each result has readers for its output, such as `transcription.text`, `document.markdown`, or `embedding.vectors`. Generated images, video, and speech have a `save` method.
 
 An individual operation may involve several requests. `animate` submits a job and waits for the video; `animate_later` returns a `VideoJob` immediately. Transcription can stream. You use the same operation API while RubyLLM handles that lifecycle.

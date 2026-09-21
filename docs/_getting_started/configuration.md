@@ -128,6 +128,10 @@ RubyLLM.configure do |config|
   config.deepgram_api_key = String
   config.deepgram_api_base = String
 
+  # TypeSafe
+  config.typesafe_api_key = String
+  config.typesafe_api_base = String
+
   # DeepSeek
   config.deepseek_api_key = String
   config.deepseek_api_base = String

@@ -51,6 +51,7 @@ def configure_from_env
     config.openai_api_key = ENV.fetch('OPENAI_API_KEY', nil)
     config.openrouter_api_key = ENV.fetch('OPENROUTER_API_KEY', nil)
     config.perplexity_api_key = ENV.fetch('PERPLEXITY_API_KEY', nil)
+    config.typesafe_api_key = ENV.fetch('TYPESAFE_API_KEY', nil)
     config.vertexai_location = ENV.fetch('GOOGLE_CLOUD_LOCATION', nil)
     config.vertexai_project_id = ENV.fetch('GOOGLE_CLOUD_PROJECT', nil)
     config.vertexai_service_account_key = ENV.fetch('VERTEXAI_SERVICE_ACCOUNT_KEY', nil)
