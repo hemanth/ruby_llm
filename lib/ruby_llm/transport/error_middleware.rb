@@ -26,16 +26,25 @@ module RubyLLM
       private
 
       # The retry middleware only reads the standard Retry-After header, so
-      # provider-specific rate-limit headers are normalized into it here,
-      # where the provider is known.
+      # other retry hints are normalized into seconds here.
       def apply_retry_delay(response)
         status = response.respond_to?(:status) ? response.status : response[:status]
-        return unless status == 429
+        return unless status && status >= 400
 
         headers = response[:response_headers]
-        if @provider && !headers['Retry-After'] && (delay = @provider.retry_delay(response))
-          headers['Retry-After'] = delay.to_s
-        end
+        return unless headers && !headers['Retry-After']
+
+        delay = millisecond_retry_delay(headers) || provider_retry_delay(response, status)
+        headers['Retry-After'] = delay.to_s if delay
+      end
+
+      def provider_retry_delay(response, status)
+        @provider&.retry_delay(response) if status == 429
+      end
+
+      def millisecond_retry_delay(headers)
+        value = Float(headers['retry-after-ms'], exception: false)
+        value / 1000 if value&.finite? && value >= 0
       end
 
       def streaming_error_response(response)

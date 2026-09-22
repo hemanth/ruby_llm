@@ -78,6 +78,15 @@ RSpec.describe RubyLLM::Transport::Connection do
     end
 
     let(:provider) { RubyLLM::Providers::OpenAI.new(config) }
+    let(:retry_delays) { [] }
+
+    before do
+      allow(Faraday::Retry::Middleware).to receive(:new).and_wrap_original do |constructor, *args|
+        constructor.call(*args).tap do |middleware|
+          allow(middleware).to receive(:sleep) { |delay| retry_delays << delay }
+        end
+      end
+    end
 
     it 'retries after the provider supplies a delay' do
       stub = stub_request(:post, 'https://api.openai.com/v1/chat/completions')
@@ -118,6 +127,30 @@ RSpec.describe RubyLLM::Transport::Connection do
 
       expect(response.status).to eq(200)
       expect(stub).to have_been_requested.twice
+    end
+
+    [429, 500, 503, 529].each do |status|
+      it "honors millisecond retry delays for HTTP #{status}" do
+        stub = stub_request(:post, 'https://api.openai.com/v1/chat/completions')
+               .to_return(
+                 { status:, headers: { 'retry-after-ms' => '1500' },
+                   body: '{"error":{"message":"Try again later"}}' },
+                 { status: 200, headers: { 'Content-Type' => 'application/json' }, body: '{}' }
+               )
+        expect(provider.connection.post('chat/completions', {}).status).to eq(200)
+        expect(retry_delays).to eq([1.5])
+        expect(stub).to have_been_requested.twice
+      end
+    end
+
+    it 'does not retry before an excessive millisecond delay has elapsed' do
+      config.retry_max_interval = 5
+      stub = stub_request(:post, 'https://api.openai.com/v1/chat/completions')
+             .to_return(status: 529, headers: { 'retry-after-ms' => '6000' },
+                        body: '{"error":{"message":"Overloaded"}}')
+
+      expect { provider.connection.post('chat/completions', {}) }.to raise_error(RubyLLM::OverloadedError)
+      expect(stub).to have_been_requested.once
     end
   end
 

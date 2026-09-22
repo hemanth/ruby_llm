@@ -91,10 +91,38 @@ RSpec.describe RubyLLM::Transport::ErrorMiddleware do
 
     it 'keeps a Retry-After already sent by the provider' do
       provider = instance_double(RubyLLM::Provider, parse_error: 'Rate limit exceeded', retry_delay: 120.0)
-      env = rate_limited_env('Retry-After' => 'Wed, 21 Oct 2099 07:28:00 GMT')
+      env = rate_limited_env('Retry-After' => 'Wed, 21 Oct 2099 07:28:00 GMT', 'retry-after-ms' => '1500')
 
       expect { middleware_for(provider, env).call(Faraday::Env.new) }.to raise_error(RubyLLM::RateLimitError)
       expect(env[:response_headers]['Retry-After']).to eq('Wed, 21 Oct 2099 07:28:00 GMT')
+    end
+
+    [429, 500, 503, 529].each do |status|
+      it "normalizes millisecond retry delays for HTTP #{status} without a provider" do
+        env = rate_limited_env('retry-after-ms' => '1500.5')
+        env.status = status
+
+        expect { middleware_for(nil, env).call(Faraday::Env.new) }.to raise_error(RubyLLM::Error)
+        expect(env[:response_headers]['Retry-After']).to eq('1.5005')
+      end
+    end
+
+    it 'preserves a zero millisecond delay ahead of provider reset hints' do
+      provider = instance_double(RubyLLM::Provider, parse_error: 'Rate limit exceeded', retry_delay: 120.0)
+      env = rate_limited_env('retry-after-ms' => '0')
+
+      expect { middleware_for(provider, env).call(Faraday::Env.new) }.to raise_error(RubyLLM::RateLimitError)
+      expect(env[:response_headers]['Retry-After']).to eq('0.0')
+    end
+
+    %w[invalid -1000 NaN Infinity 1e999].each do |value|
+      it "falls back to provider timing when retry-after-ms is #{value}" do
+        provider = instance_double(RubyLLM::Provider, parse_error: 'Rate limit exceeded', retry_delay: 12.5)
+        env = rate_limited_env('retry-after-ms' => value)
+
+        expect { middleware_for(provider, env).call(Faraday::Env.new) }.to raise_error(RubyLLM::RateLimitError)
+        expect(env[:response_headers]['Retry-After']).to eq('12.5')
+      end
     end
 
     it 'leaves responses without provider timing information alone' do
