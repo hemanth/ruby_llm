@@ -280,8 +280,10 @@ batch = RubyLLM.batch(chats)
 {: .home-code-card data-title="Cut costs with batches" data-href="{% link _advanced/batches.md %}" data-doc-title="Batches" }
 
 ```ruby
-chat = RubyLLM.chat.with_caching
-chat.with_instructions "You are a careful code reviewer."
+chat = RubyLLM.chat(model: "{{ site.models.anthropic_current }}")
+  .with_caching
+chat.with_instructions(File.read("review.md"))
+  .cache_until_here
 chat.ask "Review this diff", with: "large_diff.patch"
 ```
 {: .home-code-card data-title="Cache repeated prompts" data-href="{% link _core_features/prompt-caching.md %}" data-doc-title="Prompt Caching" }
@@ -304,12 +306,13 @@ ranked = RubyLLM.rerank("Ruby language", documents, model: "{{ site.models.reran
 
 ```ruby
 class Urgency < RubyLLM::Judge
-  probability :urgent, "Does this need attention today?"
+  model "jev-latest"
+  probability :urgent, "Does this need action today?"
 end
 
-Urgency.judge("Please refund my duplicate charge today.").urgent.probability
+Urgency.judge("My account is locked!").urgent.probability
 ```
-{: .home-code-card data-title="Ask for probabilities, choices, and scores" data-href="{% link _core_features/judgments.md %}" data-doc-title="Judgments" }
+{: #judgment-models .home-code-card data-title="Ask for probabilities, choices, and scores" data-href="{% link _core_features/judgments.md %}" data-doc-title="Judgments" }
 
 ```ruby
 response = chat.ask "Explain embeddings"
@@ -341,6 +344,13 @@ RubyLLM.moderate("Some user-generated content").flagged?
 ```
 {: .home-code-card data-title="Moderate user content" data-href="{% link _core_features/moderation.md %}" data-doc-title="Moderation" }
 
+```ruby
+RubyLLM.chat(model: "{{ site.models.openai_current }}")
+  .with_fallbacks("{{ site.models.anthropic_current }}")
+  .ask("Explain Ruby blocks")
+```
+{: .home-code-card data-title="Fall back to another model" data-href="{% link _advanced/error-handling.md %}#model-fallbacks" data-doc-title="Model Fallbacks" }
+
   </div>
 
   <div class="home-code-cta">
@@ -349,7 +359,7 @@ RubyLLM.moderate("Some user-generated content").flagged?
       give them <a href="{% link _advanced/memory.md %}">memory</a>,
       and <a href="{% link _advanced/durable-agents.md %}">resume their work across jobs and deploys</a>.
       Use <a href="{% link _getting_started/configuration-connection.md %}#contexts-isolated-configurations">separate configurations for each tenant</a>
-      and <a href="{% link _advanced/error-handling.md %}">retries and fallbacks</a> when requests fail.
+      and <a href="{% link _advanced/error-handling.md %}#automatic-retries">retries</a> when requests fail.
       Follow requests with <a href="{% link _advanced/instrumentation.md %}">instrumentation</a>,
       or explore community gems for <a href="{% link _reference/ecosystem.md %}#rubyllmmcp">MCP</a>
       and <a href="{% link _reference/ecosystem.md %}#rubyllmmonitoring">monitoring dashboards</a>.
