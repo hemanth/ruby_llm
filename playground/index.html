@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RubyLLM Codelab — Build AI Features the Ruby Way</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <meta name="description" content="Interactive browser-based playground for RubyLLM, the Ruby-native AI framework. Run Ruby and Rails directly in your browser." />
+  <meta property="og:title" content="RubyLLM Codelab — Interactive AI Playground" />
+  <meta property="og:description" content="Master chats, streaming, tools, agents, multimodal, and Rails persistence with 33 hands-on lessons." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Lora (Editorial Serif), Inter (UI), JetBrains Mono (Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing-active">
+
+  <!-- Landing Page (matches rubyllm.com homepage styling) -->
+  <div class="landing" id="landing">
+    <div class="landing-nav">
+      <div class="brand-group">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="assets/logotype_dark.svg">
+          <img src="assets/logotype.svg" alt="RubyLLM" class="brand-logo-img">
+        </picture>
+        <span class="brand-badge">Playground</span>
+      </div>
+      <button class="theme-toggle-btn" id="landing-theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">🌙</button>
+    </div>
+
+    <div class="landing-container">
+      <div class="landing-badge">
+        <span class="badge-dot"></span>
+        Interactive Codelab
+      </div>
+
+      <h1 class="landing-title">
+        Build AI features <span class="home-hero-highlight">the Ruby way</span>
+      </h1>
+
+      <p class="landing-subtitle">
+        RubyLLM is the <em>Ruby-native AI framework</em>. Work with models, tools, and agents through one consistent API, in plain Ruby or Rails. Write and run real Ruby directly in your browser.
+      </p>
+
+      <div class="landing-install-card">
+        <span>$</span> <code>bundle add ruby_llm</code>
+      </div>
+
+      <div class="landing-preview-card">
+        <div class="preview-header">
+          <div class="file-tab">
+            <span class="file-tab-dot"></span>
+            <span>quickstart.rb</span>
+          </div>
+        </div>
+        <pre><code id="landing-hero-code" class="language-ruby"># The Ruby-native AI framework
+chat = RubyLLM.chat(model: "claude-sonnet-5")
+chat.with_instructions("You are a Rails expert.")
+
+response = chat.ask("Hello from RubyLLM!") do |chunk|
+  print chunk.content
+end
+
+puts "Tokens: #{chat.tokens.total} | Cost: #{chat.cost}"</code></pre>
+      </div>
+
+      <div class="landing-cta-row">
+        <button class="landing-cta" id="start-codelab">
+          Start interactive codelab &rarr;
+        </button>
+        <div class="landing-meta-pills">
+          <span class="landing-meta-pill">33 hands-on lessons</span>
+          <span class="landing-meta-pill">Ruby 3.3 WASM</span>
+          <span class="landing-meta-pill">Active Record Persistence</span>
+          <span class="landing-meta-pill">Zero Setup</span>
+        </div>
+      </div>
+
+      <!-- Categorized Feature Grid -->
+      <div class="features-section-header">
+        <h2>Curriculum &amp; Feature Map</h2>
+        <p>Explore the complete capabilities of RubyLLM 2.0 step-by-step</p>
+      </div>
+
+      <div class="landing-features-grid">
+        <!-- 1. Core Chat -->
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <h3 class="feature-card-title">1. Core Chat</h3>
+            <span class="feature-card-count">6 lessons</span>
+          </div>
+          <p class="lesson-desc">Conversational AI, real-time token streaming, multi-turn transcripts, instructions, and reasoning models.</p>
+          <div class="feature-card-pills">
+            <span class="pill" data-lesson="first-chat">First Chat</span>
+            <span class="pill" data-lesson="streaming">Streaming Blocks</span>
+            <span class="pill" data-lesson="multi-turn">Conversation History</span>
+            <span class="pill" data-lesson="system-instructions">Instructions &amp; Temp</span>
+            <span class="pill" data-lesson="thinking">Extended Thinking</span>
+            <span class="pill" data-lesson="model-selection">Model Switching</span>
+          </div>
+        </div>
+
+        <!-- 2. Tools & HITL Loop -->
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <h3 class="feature-card-title">2. Tools &amp; HITL Loop</h3>
+            <span class="feature-card-count">5 lessons</span>
+          </div>
+          <p class="lesson-desc">Custom Ruby tools, autonomous agentic loops, human-in-the-loop approvals, and provider tools.</p>
+          <div class="feature-card-pills">
+            <span class="pill" data-lesson="custom-tools">Custom Tools</span>
+            <span class="pill" data-lesson="agentic-loop">Autonomous Loop</span>
+            <span class="pill" data-lesson="tool-approvals">HITL Approvals</span>
+            <span class="pill" data-lesson="manual-stepping">Manual Stepping</span>
+            <span class="pill" data-lesson="provider-tools">Provider Web Search</span>
+          </div>
+        </div>
+
+        <!-- 3. Agents & Schemas -->
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <h3 class="feature-card-title">3. Agents &amp; Schemas</h3>
+            <span class="feature-card-count">5 lessons</span>
+          </div>
+          <p class="lesson-desc">Reusable agents with DSL macros, runtime overrides, structured JSON schemas, and prompt caching.</p>
+          <div class="feature-card-pills">
+            <span class="pill" data-lesson="reusable-agent">RubyLLM::Agent</span>
+            <span class="pill" data-lesson="agent-configuration">Agent Overrides</span>
+            <span class="pill" data-lesson="structured-output">Structured Output</span>
+            <span class="pill" data-lesson="fallbacks">Model Fallbacks</span>
+            <span class="pill" data-lesson="prompt-caching">Prompt Caching</span>
+          </div>
+        </div>
+
+        <!-- 4. Multimodal -->
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <h3 class="feature-card-title">4. Multimodal Operations</h3>
+            <span class="feature-card-count">5 lessons</span>
+          </div>
+          <p class="lesson-desc">Analyze images, generate art with paint, video with animate, and voice synthesis with speak.</p>
+          <div class="feature-card-pills">
+            <span class="pill" data-lesson="vision">Vision (Images)</span>
+            <span class="pill" data-lesson="paint">Paint (Image Gen)</span>
+            <span class="pill" data-lesson="animate">Animate (Video)</span>
+            <span class="pill" data-lesson="speak">Speak (TTS)</span>
+            <span class="pill" data-lesson="transcribe">Transcribe (STT)</span>
+          </div>
+        </div>
+
+        <!-- 5. Search & Operations -->
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <h3 class="feature-card-title">5. Search &amp; Operations</h3>
+            <span class="feature-card-count">5 lessons</span>
+          </div>
+          <p class="lesson-desc">Document OCR markdown extraction, dense vector embeddings, semantic reranking, and cost ledger.</p>
+          <div class="feature-card-pills">
+            <span class="pill" data-lesson="ocr">Document OCR</span>
+            <span class="pill" data-lesson="embeddings">Embeddings</span>
+            <span class="pill" data-lesson="rerank">Semantic Rerank</span>
+            <span class="pill" data-lesson="moderation">Moderation</span>
+            <span class="pill" data-lesson="token-cost">Usage &amp; Costs</span>
+          </div>
+        </div>
+
+        <!-- 6. Rails on the Web -->
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <h3 class="feature-card-title">6. Rails on the Web</h3>
+            <span class="feature-card-count">5 lessons</span>
+          </div>
+          <p class="lesson-desc">Seamless Active Record persistence with acts_as_chat and acts_as_message directly in browser memory.</p>
+          <div class="feature-card-pills">
+            <span class="pill" data-lesson="rails-chat">acts_as_chat</span>
+            <span class="pill" data-lesson="rails-messages">acts_as_message</span>
+            <span class="pill" data-lesson="rails-queries">Active Record Queries</span>
+            <span class="pill" data-lesson="rails-ledger">Persisted Ledger</span>
+            <span class="pill" data-lesson="capstone">Full-Stack Workflow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle Lessons Menu" title="Browse Lessons">
+        <span class="sidebar-toggle-icon" aria-hidden="true">&#9776;</span>
+        <span class="sidebar-toggle-label">Lessons</span>
+      </button>
+
+      <div class="brand-group" id="brand-group" title="Back to Overview">
+        <img src="assets/logo.svg" alt="Ruby" class="brand-logo-icon" />
+        <span class="brand-badge">Playground</span>
+      </div>
+
+      <span class="engine-badge" id="engine-badge" title="Ruby Runtime Engine">
+        <span class="engine-indicator loading" id="engine-dot"></span>
+        <span id="engine-status">Ruby 3.3 WASM (Booting)</span>
+      </span>
+    </div>
+
+    <div class="topbar-actions">
+      <div class="progress-wrap">
+        <span id="progress-label">0/33 complete</span>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        <span class="progress-pct" id="progress-pct">0%</span>
+      </div>
+      <button class="theme-toggle-btn" id="theme-toggle" title="Toggle Light/Dark Mode" aria-label="Toggle Theme">🌙</button>
+    </div>
+
+    <!-- Mobile slim progress line directly below topbar -->
+    <div class="topbar-mobile-progress" aria-hidden="true">
+      <div class="topbar-mobile-progress-fill" id="topbar-mobile-fill"></div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- Main IDE Layout -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-mobile-header">
+        <span class="sidebar-mobile-title">Curriculum (33 Lessons)</span>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close Lessons Menu">&times;</button>
+      </div>
+      <div class="search-wrap">
+        <input type="text" class="search-input" id="search-input" placeholder="Search lessons…" />
+      </div>
+      <div class="sidebar-lessons" id="sidebar-lessons"></div>
+    </nav>
+
+    <!-- Main Content Workbench -->
+    <main class="content" id="main">
+      <div class="lesson-num" id="lesson-num">Lesson 1 of 33 &middot; Core Chat</div>
+      <h2 class="lesson-title" id="lesson-title">Your First Chat</h2>
+      <div class="lesson-desc" id="lesson-desc"></div>
+
+      <!-- Exercise Panel -->
+      <div class="exercise" id="exercise-wrap">
+        <div class="exercise-header">
+          <div class="exercise-badge">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1 1 0 110 2 1 1 0 010-2zM6.75 7h2.5v5h-2.5V7z"/></svg>
+            <span>Hands-on Exercise</span>
+          </div>
+          <button class="hint-toggle" id="hint-toggle" type="button" aria-expanded="false">
+            <span class="hint-toggle-icon">💡</span>
+            <span class="hint-toggle-text">Show hint</span>
+          </button>
+        </div>
+        <div class="exercise-body" id="exercise-text"></div>
+        <div class="hint-text" id="hint-text"></div>
+      </div>
+
+      <!-- Editor Panel -->
+      <div class="editor-wrap">
+        <div class="editor-header">
+          <div class="file-tab">
+            <span class="file-tab-dot"></span>
+            <span>main.rb</span>
+          </div>
+          <span id="editor-status">CRuby 3.3</span>
+        </div>
+        <div id="editor-container"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="btn-row">
+        <button class="btn btn-run" id="btn-run" disabled>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9-5.5-9-5.5z"/></svg>
+          Run Code
+        </button>
+        <button class="btn btn-reset" id="btn-reset">Reset</button>
+        <button class="btn btn-solution" id="btn-solution">Show solution</button>
+      </div>
+
+      <!-- Output Terminal -->
+      <div class="output-wrap">
+        <div class="output-header">
+          <span>IRB Output Terminal</span>
+          <span id="output-status">Ready</span>
+        </div>
+        <div id="output"><span class="output-empty">Click "Run Code" or press Shift+Enter to execute</span></div>
+      </div>
+
+      <!-- Bottom Step Navigation -->
+      <div class="nav-bottom">
+        <button class="nav-btn" id="btn-prev" disabled>&larr; Previous</button>
+        <button class="nav-btn primary" id="btn-next">Next &rarr;</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Congratulations Modal -->
+  <div class="congrats-overlay hidden" id="congrats-overlay">
+    <div class="congrats-inner">
+      <h1 class="congrats-title">Congratulations!</h1>
+      <p class="congrats-sub">You have mastered all 33 lessons of the RubyLLM Codelab.</p>
+      <div class="congrats-stats">
+        <div class="congrats-stat">
+          <span class="congrats-stat-num">33</span>
+          <span class="congrats-stat-label">Lessons</span>
+        </div>
+        <div class="congrats-stat">
+          <span class="congrats-stat-num">18</span>
+          <span class="congrats-stat-label">Providers</span>
+        </div>
+        <div class="congrats-stat">
+          <span class="congrats-stat-num">~120</span>
+          <span class="congrats-stat-label">Minutes</span>
+        </div>
+      </div>
+      <p style="color: var(--home-muted); margin-bottom: 24px;">You are ready to build production-grade autonomous AI agents and Rails applications with RubyLLM.</p>
+      <div class="congrats-actions">
+        <a href="https://github.com/crmne/ruby_llm" target="_blank" class="congrats-btn primary">Star on GitHub</a>
+        <button class="congrats-btn" id="congrats-restart">Start Over</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monaco Editor AMD Loader -->
+  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs/loader.js"></script>
+
+  <!-- Application Module -->
+  <script type="module" src="app.js?v=8"></script>
+</body>
+</html>
