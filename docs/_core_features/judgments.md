@@ -16,6 +16,7 @@ After reading this guide, you will know:
 * How to supply text or structured data.
 * How to read probabilities, choices, scores, and confidence.
 * How to use blocks, hashes, and runtime inputs.
+* How to connect to hosted models or a compatible local server.
 * How to track token usage and cost.
 
 ## Asking a Question
@@ -24,15 +25,14 @@ Use a judgment when your application needs to check a condition, select an optio
 
 ```ruby
 class Urgency < RubyLLM::Judge
-  model "{{ site.models.judgment }}"
   probability :urgent, "Does this need attention today?"
 end
 
 judgment = Urgency.judge("Please refund the duplicate charge today.")
-judgment[:urgent].probability # => 0.96
+judgment.urgent.probability # => 0.96
 ```
 
-Configure your [TypeSafe API key]({% link _getting_started/configuration-providers.md %}#typesafe) before making a request. Judgments require a model; they do not use the default chat model.
+Configure your [TypeSafe API key]({% link _getting_started/configuration-providers.md %}#typesafe) or a [Jev-compatible local endpoint]({% link _getting_started/configuration-providers.md %}#jev-compatible-apis) before making a request. Judges use `config.default_judgment_model`, not the default chat model.
 
 Each call judges the input you supply. It does not retain conversation history. Put a conversation in the input when you want the questions to consider it.
 
@@ -42,8 +42,6 @@ Write each declaration as a name, a question, and its possible answers. All ques
 
 ```ruby
 class TicketTriage < RubyLLM::Judge
-  model "{{ site.models.judgment }}"
-
   probability :urgent, "Does this need attention today?"
 
   choice :department, "Which team should handle this?" do
@@ -143,7 +141,6 @@ Use procs and declared inputs when instructions or options depend on application
 
 ```ruby
 class TeamRouter < RubyLLM::Judge
-  model "{{ site.models.judgment }}"
   inputs :teams
 
   choice :team, "Which team should handle this?",
@@ -164,16 +161,16 @@ You may omit the question argument when the answer descriptions carry its full m
 `Judgment` holds immutable `Probability`, `Choice`, and `Score` answers:
 
 ```ruby
-judgment[:urgent].probability
+judgment.urgent.probability
 
-judgment[:department].choice
-judgment[:department].probabilities
-judgment[:department].confidence
+judgment.department.choice
+judgment.department.probabilities
+judgment.department.confidence
 
-judgment[:frustration].score
-judgment[:frustration].levels
-judgment[:frustration].probabilities
-judgment[:frustration].confidence
+judgment.frustration.score
+judgment.frustration.levels
+judgment.frustration.probabilities
+judgment.frustration.confidence
 ```
 
 Score distributions use zero-based Integer keys. `levels` preserves the ordered descriptions, including structured values. `confidence` describes the concentration of a choice or score distribution; it is not a guarantee that the judgment is correct. Probability answers do not have a separate confidence value.
@@ -181,19 +178,21 @@ Score distributions use zero-based Integer keys. `levels` preserves the ordered 
 Choose thresholds in your application and check them against representative data:
 
 ```ruby
-if judgment[:urgent].probability >= 0.8
+if judgment.urgent.probability >= 0.8
   ticket.update!(priority: :high)
 end
 ```
 
-Read answers with String or Symbol names. `judgment[:missing]` returns `nil`; `judgment.fetch(:missing)` raises `KeyError`. `judgment.answers` preserves declared names, and `judgment.each` yields each name and answer. Use `to_h` to serialize the result.
+Read named answers as methods, such as `judgment.urgent.probability`. Unknown answer methods raise `NoMethodError`. For dynamic names or names that collide with existing methods, use brackets: `judgment[question_name]` or `judgment[:model]`. Brackets accept String or Symbol names.
+
+`judgment[:missing]` returns `nil`; `judgment.fetch(:missing)` raises `KeyError`. `judgment.answers` preserves declared names, and `judgment.each` yields each name and answer. Use `to_h` to serialize the result.
 
 ## Questions from Data
 
 Use `RubyLLM.judge` when the question definitions already exist as data:
 
 ```ruby
-RubyLLM.judge("Please help today.", model: "{{ site.models.judgment }}", questions: {
+RubyLLM.judge("Please help today.", questions: {
   urgent: { type: :probability, instructions: "Does this need attention today?" },
   department: {
     type: :choice,
@@ -204,6 +203,20 @@ RubyLLM.judge("Please help today.", model: "{{ site.models.judgment }}", questio
 ```
 
 Each definition has a `type` and optional `instructions`. Supply `criteria` for probability descriptions, `options` for choices, and `levels` for scores. A questions Hash can be built with ordinary Ruby loops or supplied by a proc. The `judge` block always supplies input.
+
+## Choosing a Model
+
+Set the default once for your application:
+
+```ruby
+RubyLLM.configure do |config|
+  config.default_judgment_model = "{{ site.models.judgment }}"
+end
+```
+
+The built-in default is `{{ site.models.judgment }}`. A Judge class can override it with a `model` declaration, and a call can override either setting with `model:`. Pass `model: nil` to use the configured default again.
+
+When you pass an isolated `context:`, its default replaces the global default. The class and per-call overrides still take precedence. See [Default Models]({% link _getting_started/configuration.md %}#default-models).
 
 ## Configuration and Usage
 

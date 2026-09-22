@@ -112,6 +112,15 @@ RubyLLM.moderate("Some user-generated content").flagged?
 ```
 
 ```ruby
+# Ask a typed question about your data
+class Urgency < RubyLLM::Judge
+  probability :urgent, "Does this need attention today?"
+end
+
+Urgency.judge("Please refund my duplicate charge today.").urgent.probability
+```
+
+```ruby
 # Let AI use your code
 class Weather < RubyLLM::Tool
   description "Get current weather"
@@ -164,6 +173,7 @@ Agents, workflows, RAG, images, audio, and video. Built in, with usage tracking 
 * **Embeddings:** Generate embeddings with `RubyLLM.embed`
 * **Reranking:** Order retrieval candidates by relevance with `RubyLLM.rerank`
 * **Moderation:** Content flags, categories, and scores with `RubyLLM.moderate`
+* **Judgments:** Probabilities, choices, and scores with `RubyLLM::Judge` and `RubyLLM.judge`
 * **Tools:** Let AI call your Ruby methods
 * **Tool approval:** Park a run until a human approves with `requires_approval`
 * **The agentic loop:** Drive it yourself with `ask_later`, `step`, and `complete?`

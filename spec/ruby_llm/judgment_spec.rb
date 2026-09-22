@@ -31,6 +31,34 @@ RSpec.describe RubyLLM::Judgment do
     expect(result.cost.total).to be_nil
   end
 
+  it 'exposes named answers as readers for String and Symbol question names' do
+    expect(result.urgent).to equal(probability)
+    expect(result.department).to equal(choice)
+    expect(result.urgent.probability).to eq(0.9)
+    expect(result).to respond_to(:urgent, :department)
+    expect(result.method(:urgent).call).to equal(probability)
+  end
+
+  it 'does not hide unknown methods or accept arguments, blocks, or assignment' do
+    expect(result).not_to respond_to(:missing, :urgent=)
+    expect { result.missing }.to raise_error(NoMethodError)
+    expect { result.urgent(1) }.to raise_error(NoMethodError)
+    expect { result.urgent(value: 1) }.to raise_error(NoMethodError)
+    expect { result.urgent { 1 } }.to raise_error(NoMethodError)
+    expect { result.urgent = 1 }.to raise_error(NoMethodError)
+  end
+
+  it 'keeps existing methods when a question name collides with them' do
+    result = described_class.new(answers: { model: probability, tokens: probability, 'Billing & payments' => choice },
+                                 model: model_for(:typesafe, :judgment))
+
+    expect(result.model).to eq(model_for(:typesafe, :judgment))
+    expect(result.tokens).to be_a(RubyLLM::Tokens)
+    expect(result[:model]).to equal(probability)
+    expect(result[:tokens]).to equal(probability)
+    expect(result['Billing & payments']).to equal(choice)
+  end
+
   it 'keeps answers immutable and does not invent confidence for a yes/no probability' do
     expect(probability).to be_frozen
     expect(probability).not_to respond_to(:confidence)

@@ -200,12 +200,79 @@ RSpec.describe RubyLLM::Judge do
     expect(requests).to be_empty
   end
 
-  it 'requires a model, questions, and non-nil input' do
+  it 'requires questions and non-nil input' do
     expect { described_class.judge('Help') }.to raise_error(ArgumentError, /at least one question/)
     expect { judge_class.judge(nil) }.to raise_error(ArgumentError, /Judgment input/)
-    expect do
-      described_class.judge('Help', questions: { urgent: { type: :probability } })
-    end.to raise_error(ArgumentError, /requires a model/)
+  end
+
+  context 'with a default judgment model' do
+    let(:judge_class) do
+      Class.new(described_class) { probability :urgent, 'Does this need attention today?' }
+    end
+
+    it 'uses the configured model without a model declaration' do
+      RubyLLM.config.default_judgment_model = model_id
+
+      result = judge_class.judge('Please help today.')
+
+      expect(requests.first['model']).to eq(model_id)
+      expect(result.urgent.probability).to eq(0.9)
+      expect(judge_class.model).to eq({})
+    end
+
+    it 'resolves the global default at each call, including inherited judges' do
+      child = Class.new(judge_class).new
+      RubyLLM.config.default_judgment_model = model_id
+      child.judge('First')
+      RubyLLM.config.default_judgment_model = 'jev-preview'
+      child.judge('Second')
+
+      expect(requests.map { |request| request['model'] }).to eq([model_id, 'jev-preview'])
+    end
+
+    it 'uses the default for one-off questions' do
+      RubyLLM.config.default_judgment_model = model_id
+      result = RubyLLM.judge('Help', questions: { urgent: { type: :probability, instructions: 'Is this urgent?' } })
+
+      expect(requests.first['model']).to eq(model_id)
+      expect(result.urgent.probability).to eq(0.9)
+    end
+
+    it 'uses an isolated context default for classes and one-off questions' do
+      RubyLLM.config.default_judgment_model = model_id
+      context = RubyLLM.context { |config| config.default_judgment_model = 'jev-preview' }
+
+      judge_class.judge('Help', context:)
+      context.judge('Help', questions: { urgent: { type: :probability, instructions: 'Is this urgent?' } })
+
+      expect(requests.map { |request| request['model'] }).to eq(%w[jev-preview jev-preview])
+      expect(RubyLLM.config.default_judgment_model).to eq(model_id)
+    end
+
+    it 'prefers a class model over the default and a call model over both' do
+      RubyLLM.config.default_judgment_model = 'jev-preview'
+      judge_class.model(model_id)
+      judge_class.judge('First')
+      judge_class.judge('Second', model: 'jev-preview')
+
+      expect(requests.map { |request| request['model'] }).to eq([model_id, 'jev-preview'])
+    end
+
+    it 'uses the default when a call explicitly resets the model to nil' do
+      RubyLLM.config.default_judgment_model = 'jev-preview'
+      judge_class.model(model_id)
+      judge_class.judge('Help', model: nil)
+
+      expect(requests.first['model']).to eq('jev-preview')
+    end
+
+    it 'requires a model when the default is unset' do
+      RubyLLM.config.default_judgment_model = nil
+
+      expect { judge_class.judge('Help') }.to raise_error(ArgumentError, /model/)
+      expect(requests).to be_empty
+      expect(judge_class.judge('Help', model: model_id)).to be_a(RubyLLM::Judgment)
+    end
   end
 
   it 'rejects unsupported providers through the provider contract' do
@@ -247,11 +314,11 @@ RSpec.describe RubyLLM::Judge do
       expect(requests.first.dig('questions', 'department', 'criteria')).to eq(
         'billing' => { 'handles' => %w[Charges Refunds], 'excludes' => 'Account access' }, 'other' => nil
       )
-      expect(result[:department]).to be_a(RubyLLM::Choice)
+      expect(result.department).to be_a(RubyLLM::Choice)
       expect(result[:department].choice).to eq(:billing)
       expect(result[:department].probabilities).to eq(billing: 0.9, other: 0.1)
       expect(result[:department].confidence).to eq(0.8)
-      expect(result[:frustration]).to be_a(RubyLLM::Score)
+      expect(result.frustration).to be_a(RubyLLM::Score)
       expect(result[:frustration].score).to eq(0.25)
       expect(result[:frustration].levels).to eq([{ 'description' => 'Calm' }, %w[Angry Hostile]])
       expect(result[:frustration].probabilities).to eq(0 => 0.75, 1 => 0.25)

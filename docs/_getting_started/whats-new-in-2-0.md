@@ -25,13 +25,13 @@ The examples assume you have [configured the providers you use]({% link _getting
 
 ## Provider API Coverage
 
-1.16 already supported chat, tools, agents, structured output, thinking, embeddings, images, transcription, and moderation. 2.0 adds video, speech, OCR, reranking, files, batches, and a shared API for provider-hosted tools. It also extends the existing APIs with more controls and richer results.
+1.16 already supported chat, tools, agents, structured output, thinking, embeddings, images, transcription, and moderation. 2.0 adds judgments, video, speech, OCR, reranking, files, batches, and a shared API for provider-hosted tools. It also extends the existing APIs with more controls and richer results.
 
 Red cells show built-in support added in 2.0. Gray cells were already supported in 1.16. Outlined cells with a × mark missing integrations; use “Missing in 2.0” to find them. Select a cell for its sources and implementation notes.
 
 {% include provider_coverage_matrix.html compact=true %}
 
-The [Provider API Coverage]({% link _reference/provider-coverage.md %}) page shows current support, with source references and remaining gaps. The comparison above uses today's documented provider features for both versions, so it includes features providers introduced after 1.16.
+The [Provider API Coverage]({% link _reference/provider-coverage.md %}) page records support at the audit date, with source references and remaining gaps. The comparison above uses the provider features documented at that date for both versions, so it includes features providers introduced after 1.16. It predates TypeSafe support; see [Typed Judgments](#typed-judgments) below.
 
 ## Providers and Protocols
 
@@ -47,7 +47,6 @@ Define questions about your application data and read probabilities, choices, an
 
 ```ruby
 class TicketTriage < RubyLLM::Judge
-  model "{{ site.models.judgment }}"
   probability :urgent, "Does this need attention today?"
 
   choice :department, "Which team should handle this?" do
@@ -58,11 +57,13 @@ class TicketTriage < RubyLLM::Judge
 end
 
 judgment = TicketTriage.judge("Please refund the duplicate charge today.")
-judgment[:urgent].probability
-judgment[:department].choice
+judgment.urgent.probability
+judgment.department.choice
 ```
 
-Judges accept structured input, reusable definitions, and runtime procs. Choice and score answers include full distributions and confidence so your application can choose how to act. See [Judgments]({% link _core_features/judgments.md %}).
+Judges use `config.default_judgment_model` unless you override the model. They accept structured input, reusable definitions, and runtime procs. Choice and score answers include full distributions and confidence so your application can choose how to act. See [Judgments]({% link _core_features/judgments.md %}).
+
+Use TypeSafe's hosted Jev models or a [Jev-compatible local server]({% link _getting_started/configuration-providers.md %}#jev-compatible-apis) through the same judgment API.
 
 ## Human Approval for Tools
 

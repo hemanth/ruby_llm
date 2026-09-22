@@ -83,6 +83,13 @@ module RubyLLM
     option :default_moderation_model, 'omni-moderation-latest'
 
     ##
+    # :attr_accessor: default_judgment_model
+    #
+    # The model id used by RubyLLM.judge and Judge when no model is given.
+    # Default: <tt>'jev-latest'</tt>.
+    option :default_judgment_model, 'jev-latest'
+
+    ##
     # :attr_accessor: default_image_model
     #
     # The model id used by RubyLLM.paint when no model is given.

@@ -4,7 +4,6 @@ module RubyLLM
   # Defines reusable probability, choice, and score questions over application data.
   #
   #   class TicketTriage < RubyLLM::Judge
-  #     model "jev-latest"
   #     probability :urgent, "Does this need attention today?"
   #     choice :department, "Which team should handle this?" do
   #       billing "Payments and refunds"
@@ -12,7 +11,10 @@ module RubyLLM
   #     end
   #   end
   #
-  #   TicketTriage.judge("Please refund my duplicate charge today.")[:urgent].probability
+  #   TicketTriage.judge("Please refund my duplicate charge today.").urgent.probability
+  #
+  # Uses Configuration#default_judgment_model unless a model is declared or
+  # supplied for the call. An isolated context supplies its own default.
   #
   # Blocks and procs resolve once per judgment, with declared inputs available
   # as methods. Hashes and arrays preserve structured instructions and criteria.
@@ -28,6 +30,7 @@ module RubyLLM
 
       # Sets the model and provider used by this judge. A block or proc resolves
       # the model using runtime inputs. With no arguments, returns the settings.
+      # Without a declaration, uses Configuration#default_judgment_model.
       def model(value = nil, **options, &block)
         return @model_options || {} if value.nil? && options.empty? && !block
 
@@ -136,7 +139,7 @@ module RubyLLM
     # question name, with +type:+, +instructions:+, and +criteria:+ (probability),
     # +options:+ (choice), or +levels:+ (score). The block supplies input only.
     #
-    #   RubyLLM.judge("Please help today", model: "jev-latest",
+    #   RubyLLM.judge("Please help today",
     #     questions: { urgent: { type: :probability, instructions: "Is this urgent?" } })
     def judge(input = nil, questions: {}, context: nil, metadata: nil, **options, &block)
       raise ArgumentError, 'Pass judgment input or a block, not both' if !input.nil? && block

@@ -4,9 +4,12 @@ module RubyLLM
   # The typed answers to a set of questions, with model identity and accounting.
   # Obtain one through RubyLLM.judge or Judge.judge.
   #
-  #   judgment[:urgent].probability
-  #   judgment[:department].choice
-  #   judgment[:frustration].score
+  #   judgment.urgent.probability
+  #   judgment.department.choice
+  #   judgment.frustration.score
+  #
+  # Named answers are available as readers. Use #[] or #fetch for dynamic
+  # names or names that conflict with existing methods, such as #model.
   class Judgment
     include Enumerable
     include Support::Inspectable
@@ -68,10 +71,11 @@ module RubyLLM
 
     def self.judge(input, questions:, model: nil, provider: nil, context: nil, # :nodoc:
                    assume_model_exists: false, provider_options: {}, metadata: nil)
-      raise ArgumentError, 'A judgment requires a model' if model.nil?
-
       config = context&.config || RubyLLM.config
-      model, provider_instance = Models.resolve(model, provider:, assume_model_exists:, config:, operation: :judge)
+      raise ArgumentError, 'A judgment requires a model' unless model || config.default_judgment_model
+
+      model, provider_instance = Models.resolve(model, provider:, assume_model_exists:, config:, operation: :judge,
+                                                       default_model: config.default_judgment_model)
       empty_tokens = Tokens.new
       payload = {
         provider: provider_instance.slug,
@@ -92,6 +96,18 @@ module RubyLLM
         event[:cost] = result.cost
         result
       end
+    end
+
+    private
+
+    def method_missing(name, *args, &block)
+      return super unless args.empty? && !block && @answer_keys&.key?(name.to_s)
+
+      self[name]
+    end
+
+    def respond_to_missing?(name, include_private = nil)
+      @answer_keys&.key?(name.to_s) || super
     end
   end
 end

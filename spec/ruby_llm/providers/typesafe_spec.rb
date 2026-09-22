@@ -28,6 +28,33 @@ RSpec.describe RubyLLM::Providers::TypeSafe do
     expect(RubyLLM.models.chat_models.map(&:id)).not_to include(model_id)
   end
 
+  it 'judges an unlisted local model without changing the hosted configuration' do
+    context = RubyLLM.context do |config|
+      config.typesafe_api_base = 'http://localhost:8001'
+      config.typesafe_api_key = 'local'
+      config.default_judgment_model = 'english'
+    end
+    stub = stub_request(:post, 'http://localhost:8001/v1/systemone')
+           .with(headers: { 'Authorization' => 'Bearer local' }, body: {
+                   model: 'english', state: 'Please help today.',
+                   questions: { urgent: { type: 'noul', instructions: 'Does this need attention today?' } }
+                 })
+           .to_return(status: 200, body: {
+             model: 'english', answers: { urgent: { type: 'noul', noul: 0.9 } },
+             usage: { input_tokens: 40, output_tokens: 0 }
+           }.to_json, headers: { 'Content-Type' => 'application/json' })
+
+    result = context.judge('Please help today.', provider: :typesafe, assume_model_exists: true, questions:)
+
+    expect(result.urgent.probability).to eq(0.9)
+    expect(result.model).to eq('english')
+    expect(result.tokens.input).to eq(40)
+    expect(result.tokens.output).to eq(0)
+    expect(result.cost.total).to be_nil
+    expect(described_class.new(RubyLLM.config).api_base).to eq('https://api.typesafe.ai')
+    expect(stub).to have_been_requested.once
+  end
+
   it 'retries overloads, resolving dynamic input once and accounting for both attempts' do
     calls = 0
     instrumenter = CaptureInstrumenter.new

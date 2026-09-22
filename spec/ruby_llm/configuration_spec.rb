@@ -17,6 +17,7 @@ RSpec.describe RubyLLM::Configuration do
       expect(config.tool_concurrency).to be(false)
       expect(config.deprecation_behavior).to eq(:warn)
       expect(config.faraday_adapter).to eq(:net_http)
+      expect(config.default_judgment_model).to eq('jev-latest')
     end
 
     it 'exposes a discoverable options API' do
@@ -25,6 +26,7 @@ RSpec.describe RubyLLM::Configuration do
         :tool_concurrency,
         :default_model,
         :default_speech_model,
+        :default_judgment_model,
         :model_registry_file,
         :openai_api_key,
         :openrouter_api_base

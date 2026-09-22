@@ -63,6 +63,7 @@ RubyLLM.configure do |config|
   config.default_transcription_model = '{{ site.models.default_transcription }}' # For RubyLLM.transcribe
   config.default_ocr_model = '{{ site.models.default_ocr }}'              # For RubyLLM.ocr
   config.default_moderation_model = '{{ site.models.default_moderation }}' # For RubyLLM.moderate
+  config.default_judgment_model = '{{ site.models.judgment }}'            # For RubyLLM.judge and RubyLLM::Judge
 end
 ```
 
@@ -75,6 +76,7 @@ Defaults if not configured:
 - Moderation: `omni-moderation-latest`
 - Transcription: `gpt-transcribe`
 - OCR: `mistral-ocr-latest`
+- Judgments: `{{ site.models.judgment }}`
 
 `rerank` requires `model:` on each call; it has no default model setting.
 
@@ -200,6 +202,7 @@ RubyLLM.configure do |config|
   config.default_moderation_model = String
   config.default_transcription_model = String
   config.default_ocr_model = String
+  config.default_judgment_model = String
 
   # Model Registry
   config.model_registry_file = String  # Writable registry cache; defaults to the OS user cache directory

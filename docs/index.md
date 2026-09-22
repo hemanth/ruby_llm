@@ -84,6 +84,7 @@ chat.ask "Hello!"
       <a href="https://openai.com" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/openai.svg' | relative_url }}" alt="OpenAI" class="logo-mark logo-mono"><img src="{{ '/assets/images/providers/openai-text.svg' | relative_url }}" alt="" class="logo-text"></a>
       <a href="https://openrouter.ai" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/openrouter.svg' | relative_url }}" alt="OpenRouter" class="logo-mark logo-mono"><img src="{{ '/assets/images/providers/openrouter-text.svg' | relative_url }}" alt="" class="logo-text"></a>
       <a href="https://perplexity.ai" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/perplexity-color.svg' | relative_url }}" alt="Perplexity" class="logo-mark"><img src="{{ '/assets/images/providers/perplexity-text.svg' | relative_url }}" alt="" class="logo-text"></a>
+      <a href="https://typesafe.ai" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/typesafe.svg' | relative_url }}" alt="" class="logo-mark logo-mono"><span class="logo-wordmark">TypeSafe AI</span></a>
       <a href="https://cloud.google.com/vertex-ai" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/vertexai-color.svg' | relative_url }}" alt="Vertex AI" class="logo-mark"><img src="{{ '/assets/images/providers/vertexai-text.svg' | relative_url }}" alt="" class="logo-text"></a>
       <a href="https://x.ai" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/xai.svg' | relative_url }}" alt="xAI" class="logo-mark logo-mono"><img src="{{ '/assets/images/providers/xai-text.svg' | relative_url }}" alt="" class="logo-text"></a>
     </div>
@@ -300,6 +301,15 @@ embeddings = RubyLLM.embed(documents)
 ranked = RubyLLM.rerank("Ruby language", documents, model: "{{ site.models.rerank_cohere }}")
 ```
 {: .home-code-card data-title="Embed and rank your documents" data-href="{% link _advanced/rag.md %}" data-doc-title="RAG" }
+
+```ruby
+class Urgency < RubyLLM::Judge
+  probability :urgent, "Does this need attention today?"
+end
+
+Urgency.judge("Please refund my duplicate charge today.").urgent.probability
+```
+{: .home-code-card data-title="Ask for probabilities, choices, and scores" data-href="{% link _core_features/judgments.md %}" data-doc-title="Judgments" }
 
 ```ruby
 response = chat.ask "Explain embeddings"

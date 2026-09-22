@@ -3,7 +3,7 @@ layout: default
 title: Provider Setup and Custom Endpoints
 parent: Configuration
 nav_order: 1
-description: Per-provider API keys, organization headers, Bedrock and Vertex AI authentication, and OpenAI-compatible custom endpoints.
+description: Configure provider credentials and connect to hosted or local APIs through compatible endpoints.
 ---
 
 # {{ page.title }}
@@ -16,7 +16,7 @@ After reading this guide, you will know:
 * How to configure API keys for every supported provider.
 * How to set OpenAI organization and project headers.
 * How to authenticate with Bedrock credential providers and Vertex AI service accounts.
-* How to connect to OpenAI-compatible and custom endpoints.
+* How to connect to OpenAI-compatible and Jev-compatible endpoints.
 
 ## API Keys
 
@@ -130,6 +130,8 @@ end
 ```
 
 Jev answers probability, choice, and score questions about text or structured data. Use `RubyLLM::Judge` or `RubyLLM.judge`; it does not generate chat messages.
+
+For a local server that implements the same API, see [Jev-Compatible APIs](#jev-compatible-apis).
 
 ## Ollama Cloud
 
@@ -312,6 +314,35 @@ RubyLLM.configure do |config|
   config.openai_api_key = "dummy-key"  # If required by your server
 end
 ```
+
+### Jev-Compatible APIs
+
+Connect to a local judgment server through an isolated context. The server must implement the System One API used by TypeSafe:
+
+```ruby
+local = RubyLLM.context do |config|
+  config.typesafe_api_base = "http://localhost:8001"
+  config.typesafe_api_key = ENV.fetch("LOCAL_JUDGMENT_API_KEY", "local")
+  config.default_judgment_model = ENV.fetch("LOCAL_JUDGMENT_MODEL")
+end
+
+judgment = local.judge(
+  "Please refund the duplicate charge today.",
+  provider: :typesafe,
+  assume_model_exists: true,
+  questions: {
+    urgent: { type: :probability, instructions: "Does this need attention today?" }
+  }
+)
+
+judgment.urgent.probability
+```
+
+Use the server's root URL without `/v1`; RubyLLM appends `/v1/systemone`. Set `LOCAL_JUDGMENT_MODEL` to a model ID the server accepts. `assume_model_exists: true` allows IDs outside the bundled registry. The placeholder key is only for servers with authentication disabled; otherwise set the server's actual key.
+
+The context leaves hosted TypeSafe credentials unchanged. It returns the same [typed answers]({% link _core_features/judgments.md %}#reading-answers) and uses the shared retries and usage tracking. Unknown pricing remains `nil`.
+
+API compatibility does not imply the same predictions or input limits as Jev. Follow the server's installation instructions and model limits. Supply explicit question instructions for servers that require them, even when your answer descriptions already express the question.
 
 ### Gemini API Versions
 
