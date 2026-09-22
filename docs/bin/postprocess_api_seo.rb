@@ -6,7 +6,7 @@ require 'pathname'
 
 output_dir = Pathname(ARGV.fetch(0)).expand_path
 site_root = ARGV.fetch(1).sub(%r{/+\z}, '')
-image_url = "#{site_root}/assets/images/logotype.jpg"
+image_url = "#{site_root}/assets/images/social-card.jpg"
 default_robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'
 api_urls = []
 index_pages = %w[index.html RubyLLM.html]
@@ -67,7 +67,7 @@ output_dir.glob('**/*.html').sort.each do |path|
         {
           '@type' => 'ImageObject', '@id' => "#{image_url}#primaryimage",
           'url' => image_url, 'contentUrl' => image_url,
-          'caption' => 'RubyLLM', 'width' => 579, 'height' => 200
+          'caption' => 'RubyLLM', 'width' => 1200, 'height' => 630
         },
         {
           '@type' => 'WebPage', '@id' => webpage_id, 'url' => canonical,
