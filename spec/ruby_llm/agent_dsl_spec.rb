@@ -152,6 +152,57 @@ RSpec.describe RubyLLM::Agent do
       expect { agent.context(RubyLLM.context) { |config| config.request_timeout = 42 } }
         .to raise_error(ArgumentError, 'Pass a context or a block, not both')
     end
+
+    it 'rejects context Procs that require arguments' do
+      agent = Class.new(described_class)
+      error = 'context Proc must accept zero arguments'
+
+      expect { agent.context(->(config) { config }) }.to raise_error(ArgumentError, error)
+      expect { agent.context(proc { |config| config }) }.to raise_error(ArgumentError, error)
+      expect(agent.context).to be_nil
+    end
+
+    it 'accepts zero-argument context Procs' do
+      context = RubyLLM.context
+      deferred = -> { context }
+      agent = Class.new(described_class)
+
+      agent.context(deferred)
+
+      expect(agent.context).to equal(deferred)
+      expect(agent.send(:resolved_context, inputs: {})).to equal(context)
+    end
+
+    it 'does not build runtime context for static or missing contexts' do
+      bare = Class.new(described_class)
+      configured = Class.new(described_class)
+      context = RubyLLM.context
+
+      configured.context(context)
+      allow(bare).to receive(:runtime_context)
+      allow(configured).to receive(:runtime_context)
+
+      expect(bare.send(:resolved_context, inputs: {})).to be_nil
+      expect(configured.send(:resolved_context, inputs: {})).to equal(context)
+      expect(bare).not_to have_received(:runtime_context)
+      expect(configured).not_to have_received(:runtime_context)
+    end
+
+    it 'does not rebind a chat already built with the resolved context' do
+      context = RubyLLM.context { |config| config.request_timeout = 42 }
+      agent = Class.new(described_class) do
+        model model_for(:openai, :temperature), provider: :openai
+      end
+      agent.context(context)
+      chat = context.chat(model: model_for(:openai, :temperature), provider: :openai)
+      allow(context).to receive(:chat).and_return(chat)
+
+      allow(chat).to receive(:with_context)
+
+      agent.chat
+
+      expect(chat).not_to have_received(:with_context)
+    end
   end
 
   describe 'deferred configuration blocks' do
@@ -217,6 +268,45 @@ RSpec.describe RubyLLM::Agent do
       end
 
       expect(agent.chat(tenant: 'acme').end_user).to eq('tenant-acme')
+    end
+
+    it 'resolves a context block from agent inputs before building the chat' do
+      agent = Class.new(described_class) do
+        model 'gpt-4.1-nano', provider: :openai
+        inputs :timeout
+
+        send(:context) { RubyLLM.context { |config| config.request_timeout = timeout } }
+      end
+
+      chat = agent.chat(timeout: 42)
+
+      expect(chat.provider.config.request_timeout).to eq(42)
+    end
+
+    it 'resolves a context block for agent instances' do
+      agent = Class.new(described_class) do
+        model 'gpt-4.1-nano', provider: :openai
+        inputs :timeout
+
+        send(:context) { RubyLLM.context { |config| config.request_timeout = timeout } }
+      end
+
+      expect(agent.new(timeout: 42).chat.provider.config.request_timeout).to eq(42)
+    end
+
+    it 'evaluates a context block once when building an agent chat' do
+      evaluations = 0
+      agent = Class.new(described_class) do
+        model 'gpt-4.1-nano', provider: :openai
+        send(:context) do
+          evaluations += 1
+          RubyLLM.context
+        end
+      end
+
+      agent.chat
+
+      expect(evaluations).to eq(1)
     end
 
     it 'leaves the chat alone when a block returns nothing' do
