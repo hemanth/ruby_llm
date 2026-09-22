@@ -18,6 +18,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const PORT = parseInt(process.env.PORT || '4000', 10);
+const HOST = process.env.HOST || '127.0.0.1';
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -262,15 +263,23 @@ const server = http.createServer(async (req, res) => {
   const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   const pathname = parsedUrl.pathname;
 
-  // Security & CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  // Security & CORS headers (restricted to loopback origins by default)
+  const origin = req.headers.origin;
+  const isLoopbackOrigin = origin && /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/.test(origin);
+  if (isLoopbackOrigin || process.env.ALLOW_ALL_ORIGINS === 'true') {
+    res.setHeader('Access-Control-Allow-Origin', origin || '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  }
   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
   res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
 
   if (req.method === 'OPTIONS') {
-    res.writeHead(204);
+    if (isLoopbackOrigin || process.env.ALLOW_ALL_ORIGINS === 'true') {
+      res.writeHead(204);
+    } else {
+      res.writeHead(403);
+    }
     res.end();
     return;
   }
@@ -377,7 +386,8 @@ const server = http.createServer(async (req, res) => {
   // Static File Serving
   let filePath = path.join(__dirname, pathname === '/' ? 'index.html' : pathname);
   const safePath = path.normalize(filePath);
-  if (!safePath.startsWith(__dirname)) {
+  const relPath = path.relative(__dirname, safePath);
+  if (relPath.startsWith('..') || path.isAbsolute(relPath)) {
     res.writeHead(403, { 'Content-Type': 'text/plain' });
     res.end('403 Forbidden\n');
     return;
@@ -406,7 +416,7 @@ const server = http.createServer(async (req, res) => {
   });
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, HOST, () => {
   const envConfig = getEnvConfig();
   const activeProviders = [];
   if (isValidKey(envConfig.ANTHROPIC_API_KEY)) activeProviders.push('anthropic');
@@ -416,7 +426,7 @@ server.listen(PORT, () => {
 
   console.log(`\n======================================================`);
   console.log(`  RubyLLM Interactive Playground & Proxy`);
-  console.log(`  Cockpit UI ready at: http://localhost:${PORT}`);
+  console.log(`  Cockpit UI ready at: http://${HOST}:${PORT}`);
   if (activeProviders.length > 0) {
     console.log(`  ⚡ Live LLM Proxy Active: ${activeProviders.join(', ')}`);
   } else {

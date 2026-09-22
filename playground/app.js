@@ -279,8 +279,9 @@ function appendOutput(text, type = "stdout") {
     span.textContent = text;
     outputEl.appendChild(span);
   } else {
-    // Format special tags with styled badges
-    const formatted = text
+    // Format special tags with styled badges after escaping user/model text
+    const escaped = escapeHtml(text);
+    const formatted = escaped
       .replace(/\[USER\]/g, '<span class="output-tag output-tag-chat">USER</span>')
       .replace(/\[TOOL\]/g, '<span class="output-tag output-tag-tool">TOOL</span>')
       .replace(/\[HITL\]/g, '<span class="output-tag output-tag-tool">HITL</span>')
@@ -616,6 +617,10 @@ function updateProgress() {
   });
 
   if (done === total && congratsOverlay) {
+    const congratsTotal = $("congrats-total-lessons");
+    if (congratsTotal) congratsTotal.textContent = `${total}`;
+    const congratsStat = $("congrats-stat-lessons");
+    if (congratsStat) congratsStat.textContent = `${total}`;
     congratsOverlay.classList.remove("hidden");
   }
 }
@@ -1009,6 +1014,15 @@ function setupEvents() {
 
 async function main() {
   applyTheme(currentTheme);
+
+  // Sync actual lesson count dynamically
+  const metaPillLessons = document.querySelector(".landing-meta-pill-lessons");
+  if (metaPillLessons) metaPillLessons.textContent = `${lessons.length} hands-on lessons`;
+  const congratsTotal = $("congrats-total-lessons");
+  if (congratsTotal) congratsTotal.textContent = `${lessons.length}`;
+  const congratsStat = $("congrats-stat-lessons");
+  if (congratsStat) congratsStat.textContent = `${lessons.length}`;
+
   buildSidebar();
   updateProgress();
   setupSearch();
