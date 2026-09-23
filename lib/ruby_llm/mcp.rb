@@ -30,12 +30,13 @@ module RubyLLM
     include Support::Inspectable
 
     INPUT_ROUNDS = 10
+    INLINE_SETTINGS = %i[url command bearer_token directory timeout prefix].freeze
 
     SETTINGS = %i[
       @url @command @directory @env @headers @bearer_token @timeout @input_names
-      @only @except @tool_declarations @approvals @callbacks @oauth
+      @only @except @prefix @tool_declarations @approvals @callbacks @oauth
     ].freeze
-    private_constant :SETTINGS, :INPUT_ROUNDS
+    private_constant :SETTINGS, :INPUT_ROUNDS, :INLINE_SETTINGS
 
     class << self
       attr_writer :default_name # :nodoc:
@@ -184,6 +185,18 @@ module RubyLLM
         @except = names.flatten.map(&:to_s)
       end
 
+      # Prefixes the names of the server's tools, so tools from servers that
+      # share names, such as two servers with a +search+ tool, can join one
+      # chat. Tools renamed with ::tool keep the name you gave them.
+      #
+      #   prefix :github   # search_issues becomes github_search_issues
+      #
+      def prefix(value = nil)
+        return @prefix if value.nil?
+
+        @prefix = value.to_s
+      end
+
       # Shapes a server tool, or adds one of your own.
       #
       # Given a server tool's name, +as:+ renames it, +description:+
@@ -270,16 +283,15 @@ module RubyLLM
       end
 
       # Builds an anonymous MCP class from keywords, as RubyLLM.mcp does.
-      def define(url: nil, command: nil, name: nil, bearer_token: nil, headers: {}, env: {}, directory: nil, # :nodoc:
-                 timeout: nil)
+      def define(name: nil, headers: {}, env: {}, oauth: nil, **settings) # :nodoc:
+        unknown = settings.keys - INLINE_SETTINGS
+        raise ArgumentError, "Unknown MCP settings: #{unknown.join(', ')}" if unknown.any?
+
         Class.new(self) do
-          url(url) if url
-          command(*command) if command
+          settings.each { |setting, value| public_send(setting, value) unless value.nil? }
           headers.each { |header_name, value| header(header_name, value) }
           env(**env)
-          directory(directory) if directory
-          bearer_token(bearer_token) if bearer_token
-          timeout(timeout) if timeout
+          oauth(**(oauth == true ? {} : oauth)) if oauth
           self.default_name = name if name
         end
       end
@@ -518,17 +530,23 @@ module RubyLLM
     end
 
     def send_request(method, params)
+      headers = method == 'tools/call' ? mirrored_headers(params) : {}
       callbacks = self.class.callbacks(:after_progress)
-      return client.request(method, params) if callbacks.empty?
+      return client.request(method, params, headers:) if callbacks.empty?
 
       token = SecureRandom.uuid
-      client.request(method, params.merge(_meta: { progressToken: token })) do |notification|
+      client.request(method, params.merge(_meta: { progressToken: token }), headers:) do |notification|
         next unless notification['method'] == 'notifications/progress'
         next unless notification.dig('params', 'progressToken') == token
 
         progress = Progress.new(notification['params'])
         callbacks.each { |callback| apply(callback, progress) }
       end
+    end
+
+    def mirrored_headers(params)
+      definition = server_tools.find { |tool| tool['name'] == params[:name] }
+      definition ? ParamHeaders.for(definition, params[:arguments]) : {}
     end
 
     def shape(definition)
@@ -538,7 +556,7 @@ module RubyLLM
 
       options = self.class.tool_declarations.select { |declaration| declaration.is_a?(Array) && declaration[0] == name }
                     .map(&:last).reduce({}, :merge)
-      Tool.new(self, definition, **options)
+      Tool.new(self, definition, prefix: self.class.prefix, **options)
     end
 
     def added_tools
@@ -565,7 +583,7 @@ module RubyLLM
     end
 
     def server_tools
-      @server_tools ||= client.list('tools/list', 'tools')
+      @server_tools ||= client.list('tools/list', 'tools').select { |definition| ParamHeaders.valid?(definition) }
     end
 
     def server_info
@@ -607,9 +625,9 @@ module RubyLLM
                                                     client_secret: resolve(settings[:client_secret]))
     end
 
-    def unauthorized(headers)
+    def unauthorized(headers, status)
       @challenge = OAuth.challenge(headers['www-authenticate'] || headers['WWW-Authenticate'])
-      self.class.oauth_settings && oauth.authorized? && oauth.refresh
+      status == 401 && self.class.oauth_settings && oauth.authorized? && oauth.refresh
     end
 
     def challenge

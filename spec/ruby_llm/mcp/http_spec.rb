@@ -44,6 +44,16 @@ RSpec.describe RubyLLM::MCP::HTTP do
     ).to have_been_made
   end
 
+  it 'sends mirrored tool arguments as Mcp-Param headers' do
+    stub_method('server/discover', result: discover_result)
+    stub_method('tools/call', result: { content: [] })
+
+    client.request('tools/call', { name: 'query', arguments: {} }, headers: { 'Region' => ' us-west1' })
+
+    encoded = "=?base64?#{Base64.strict_encode64(' us-west1')}?="
+    expect(a_request(:post, url).with(headers: { 'Mcp-Param-Region' => encoded })).to have_been_made
+  end
+
   it 'encodes header values that are not plain ASCII' do
     stub_method('server/discover', result: discover_result)
     stub_method('resources/read', result: { contents: [] })
@@ -123,6 +133,13 @@ RSpec.describe RubyLLM::MCP::HTTP do
       expect(a_request(:post, url).with { |request| request.body.include?('notifications/cancelled') })
         .to have_been_made
     end
+  end
+
+  it 'uses a result the server sends with an error status' do
+    stub_method('server/discover', result: discover_result)
+    stub_method('tools/list', status: 403, result: { tools: [{ name: 'search' }] })
+
+    expect(client.request('tools/list')).to eq('tools' => [{ 'name' => 'search' }])
   end
 
   it 'raises UnauthorizedError when the server wants credentials' do
