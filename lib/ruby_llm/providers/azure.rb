@@ -17,8 +17,8 @@ module RubyLLM
         @config.azure_api_base
       end
 
-      # Deployments named after gpt-5.4+ models need the Responses API for
-      # tool use, so they route there automatically. Deployment names often
+      # Deployments named after gpt-5.4+ and gpt-6+ models need the Responses
+      # API for tool use, so they route there automatically. Deployment names often
       # differ from model ids, so the routing stays conservative; an explicit
       # protocol: or the azure_protocol configuration option overrides it.
       def protocol_for(model, operation: nil, **)
@@ -28,7 +28,7 @@ module RubyLLM
           return protocols[:cohere]
         end
 
-        model.id.match?(/gpt-5\.[4-9]|gpt-5\d/) ? protocols[:responses] : super
+        model.id.match?(/gpt-5\.[4-9]|gpt-5\d|gpt-[6-9]/) ? protocols[:responses] : super
       end
 
       def headers

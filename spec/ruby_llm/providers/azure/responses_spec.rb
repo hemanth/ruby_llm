@@ -99,8 +99,8 @@ RSpec.describe RubyLLM::Providers::Azure::Responses do
       expect(provider.send(:resolve_protocol, nil, model)).to eq(provider.protocols[:chat_completions])
     end
 
-    it 'routes gpt-5.4+ deployment names to Responses' do
-      %w[gpt-5.4 gpt-5.6-terra gpt-56].each do |id|
+    it 'routes gpt-5.4+ and gpt-6+ deployment names to Responses' do
+      %w[gpt-5.4 gpt-5.6-terra gpt-56 gpt-6-sol gpt-6-luna].each do |id|
         model = instance_double(RubyLLM::Model, id: id)
 
         expect(provider.send(:resolve_protocol, nil, model)).to eq(described_class)
