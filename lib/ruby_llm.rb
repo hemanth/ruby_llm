@@ -25,7 +25,10 @@ loader.inflector.inflect(
   'deepseek' => 'DeepSeek',
   'elevenlabs' => 'ElevenLabs',
   'gpustack' => 'GPUStack',
+  'http' => 'HTTP',
   'llm' => 'LLM',
+  'mcp' => 'MCP',
+  'oauth' => 'OAuth',
   'mistral' => 'Mistral',
   'ocr' => 'OCR',
   'openai' => 'OpenAI',
@@ -79,6 +82,9 @@ loader.setup
 # Chat#approve and Chat#deny record it. Chat#with_provider_tools enables
 # provider-executed tools such as web search, code execution, and remote MCP.
 # Their calls appear as ServerToolCall values, with Citation values for sources.
+# MCP is a Model Context Protocol client: describe a server to connect to
+# in an MCP class, and Chat#with_mcp gives the model its tools. RubyLLM.mcp
+# connects to one inline.
 #
 # Agent defines a reusable configuration with model, instructions, tools,
 # schema, and runtime inputs. Chat#ask_later, Chat#generate, Chat#run_tools,
@@ -235,6 +241,19 @@ module RubyLLM
     #
     def chat(...)
       Chat.new(...)
+    end
+
+    # Connects to a Model Context Protocol server without writing an MCP
+    # class. Pass +url:+ for a Streamable HTTP server or +command:+ for a
+    # local server that speaks over stdio. Also accepts +name:+,
+    # +bearer_token:+, +headers:+, +env:+, +directory:+, and +timeout:+.
+    #
+    #   docs = RubyLLM.mcp(url: "https://learn.microsoft.com/api/mcp")
+    #   files = RubyLLM.mcp(command: ["npx", "-y", "@modelcontextprotocol/server-filesystem", "."])
+    #
+    # Returns an MCP.
+    def mcp(...)
+      MCP.define(...).new
     end
 
     # Counts the tokens +text+ would consume as a single user message,
