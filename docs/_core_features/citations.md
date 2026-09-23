@@ -196,7 +196,7 @@ response = chat_record.ask "Who created Ruby?", with: "facts.txt"
 chat_record.messages.last.citations # => [RubyLLM::Citation, ...]
 ```
 
-Apps upgrading from 1.16 get the column from `bin/rails generate ruby_llm:upgrade`. See [Upgrading]({% link _reference/upgrading.md %}).
+Apps upgrading from 1.16 get the column from the [2.0 upgrade](https://github.com/crmne/ruby_llm/blob/v2.0.0/docs/_reference/upgrading.md).
 
 ## Next Steps
 
