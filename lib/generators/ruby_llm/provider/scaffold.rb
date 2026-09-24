@@ -11,6 +11,9 @@ module RubyLLM
       # Generates first-party providers and standalone provider gems.
       class Scaffold # :nodoc: all
         SUPPORTED_MODES = %w[core gem].freeze
+        HASH_ENTRY_LINE = /^\s+'[^']+' => '[^']+',?$/
+        ENV_LINE = /^#?\s*[A-Z][A-Z0-9_]*=/
+        SPEC_CONFIG_LINE = /^ {6}config\.[a-z0-9_]+ = /
         SUPPORTED_DIALECTS = %w[chat_completions responses anthropic gemini converse ollama].freeze
         TEMPLATE_ROOT = File.expand_path('templates', __dir__)
 
@@ -157,7 +160,7 @@ module RubyLLM
           path = file_path('lib/ruby_llm.rb')
           return unless File.exist?(path)
 
-          insert_sorted_line(path, "  '#{slug}' => '#{class_name}',", /^\s+'[^']+' => '[^']+',?$/)
+          insert_sorted_entry(path, "  '#{slug}' => '#{class_name}'")
           insert_sorted_line(
             path,
             "RubyLLM::Provider.register :#{slug}, RubyLLM::Providers::#{class_name}",
@@ -169,8 +172,8 @@ module RubyLLM
           path = file_path('.env.example')
           return unless File.exist?(path)
 
-          append_unique_line(path, "#{api_key_env}=$(op read \"op://RubyLLM/#{class_name}/credential\")")
-          append_unique_line(path, "#{api_base_env}=#{api_base}")
+          insert_sorted_line(path, "#{api_key_env}=$(op read \"op://RubyLLM/#{class_name}/credential\")", ENV_LINE)
+          insert_sorted_line(path, "#{api_base_env}=#{api_base}", ENV_LINE)
         end
 
         def update_core_spec_configuration
@@ -178,9 +181,9 @@ module RubyLLM
           return unless File.exist?(path)
 
           insert_sorted_line(path, "      config.#{api_base_config} = ENV.fetch('#{api_base_env}', '#{api_base}')",
-                             /^\s+config\.[a-z0-9_]+_api_base =/)
+                             SPEC_CONFIG_LINE)
           insert_sorted_line(path, "      config.#{api_key_config} = ENV.fetch('#{api_key_env}', 'test')",
-                             /^\s+config\.[a-z0-9_]+_api_key =/)
+                             SPEC_CONFIG_LINE)
         end
 
         def update_core_vcr_configuration
@@ -196,7 +199,7 @@ module RubyLLM
           path = file_path('lib/ruby_llm/models.rb')
           return unless File.exist?(path)
 
-          insert_before_first(path, "      '#{models_dev_provider}' => '#{slug}',", /^    \}\.freeze$/)
+          insert_sorted_entry(path, "      '#{models_dev_provider}' => '#{slug}'")
         end
 
         def write_template(template, relative_path, executable: false)
@@ -218,36 +221,43 @@ module RubyLLM
           record(existed ? :updated : :written, relative_path)
         end
 
-        def append_unique_line(path, line)
-          content = File.exist?(path) ? File.read(path) : ''
-          return record(:skipped, relative_path(path)) if content.include?(line)
-
-          FileUtils.mkdir_p(File.dirname(path))
-          File.write(path, "#{content.chomp}\n#{line}\n")
-          record(:updated, relative_path(path))
-        end
-
         def insert_sorted_line(path, line, matcher)
           content = File.read(path)
           return record(:skipped, relative_path(path)) if content.include?(line)
 
           lines = content.lines
-          indexes = lines.each_index.select { |index| lines[index].match?(matcher) }
-          insert_at = indexes.find { |index| line < lines[index].chomp } || indexes.last&.+(1) || lines.length
-          lines.insert(insert_at, "#{line}\n")
+          lines.insert(sorted_line_index(lines, line, matcher), "#{line}\n")
           File.write(path, lines.join)
           record(:updated, relative_path(path))
         end
 
-        def insert_before_first(path, line, matcher)
+        # Lands after the last smaller line, above any comment that describes the next one.
+        def sorted_line_index(lines, line, matcher)
+          indexes = lines.each_index.select { |index| lines[index].match?(matcher) }
+          index = indexes.find { |candidate| line < lines[candidate].chomp } || indexes.last&.+(1) || lines.length
+          index -= 1 while index.positive? && lines[index - 1].strip.start_with?('#')
+          index
+        end
+
+        # Inserts a `'key' => 'value'` entry into the first multiline hash literal of
+        # such entries, keeping it sorted and every entry but the last comma-terminated.
+        def insert_sorted_entry(path, entry)
           content = File.read(path)
-          return record(:skipped, relative_path(path)) if content.include?(line)
+          return record(:skipped, relative_path(path)) if content.match?(/^#{Regexp.escape(entry)},?$/)
 
           lines = content.lines
-          insert_at = lines.index { |candidate| candidate.match?(matcher) } || lines.length
-          lines.insert(insert_at, "#{line}\n")
+          block = hash_entry_block(lines)
+          insert_at = block.find { |index| entry < lines[index].chomp.delete_suffix(',') } || (block.last + 1)
+          lines.insert(insert_at, "#{entry}\n")
+          hash_entry_block(lines)[0...-1].each { |index| lines[index] = "#{lines[index].chomp.delete_suffix(',')},\n" }
           File.write(path, lines.join)
           record(:updated, relative_path(path))
+        end
+
+        def hash_entry_block(lines)
+          first = lines.index { |line| line.match?(HASH_ENTRY_LINE) }
+          last = (first...lines.length).take_while { |index| lines[index].match?(HASH_ENTRY_LINE) }.last
+          (first..last).to_a
         end
 
         def record(action, path)
