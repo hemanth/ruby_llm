@@ -26,7 +26,7 @@ Battle tested at [<picture><source media="(prefers-color-scheme: dark)" srcset="
 
 ---
 
-## 18 providers. One Ruby API.
+## 19 providers. One Ruby API.
 
 Build with the models you want. Move between hosted and local providers without rewriting your application, or connect an OpenAI-compatible endpoint.
 

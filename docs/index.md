@@ -2,7 +2,7 @@
 layout: home
 title: RubyLLM
 nav_order: 1
-description: 'Build AI features in Ruby and Rails with chats, tools, agents, structured output, images, audio, and video across 18 providers.'
+description: 'Build AI features in Ruby and Rails with chats, tools, agents, structured output, images, audio, and video across 19 providers.'
 permalink: /
 redirect_from:
   - /guides/
@@ -52,7 +52,7 @@ hero:
 
 <section class="home-section home-band home-models-section">
   <div class="home-section-inner">
-    <h2 class="home-heading">18 providers. One Ruby API.</h2>
+    <h2 class="home-heading">19 providers. One Ruby API.</h2>
     <p class="home-lead">
       Build with the models you want. Move between hosted and local providers without rewriting your application, or connect an OpenAI-compatible endpoint.
     </p>
@@ -78,6 +78,7 @@ chat.ask "Hello!"
       <a href="https://elevenlabs.io" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/elevenlabs-text.svg' | relative_url }}" alt="ElevenLabs" class="logo-wide"></a>
       <a href="https://ai.google.dev" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/gemini-color.svg' | relative_url }}" alt="Gemini" class="logo-mark"><img src="{{ '/assets/images/providers/gemini-text.svg' | relative_url }}" alt="" class="logo-text"></a>
       <a href="https://gpustack.ai" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/gpustack-logo.png' | relative_url }}" alt="GPUStack" class="logo-wide"></a>
+      <a href="https://www.hetzner.com/" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/hetzner-color.svg' | relative_url }}" alt="" class="logo-mark"><span class="logo-wordmark">Hetzner</span></a>
       <a href="https://mistral.ai" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/mistral-color.svg' | relative_url }}" alt="Mistral AI" class="logo-mark"><img src="{{ '/assets/images/providers/mistral-text.svg' | relative_url }}" alt="" class="logo-text"></a>
       <a href="https://ollama.com" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/ollama.svg' | relative_url }}" alt="" class="logo-mark logo-mono"><span class="logo-wordmark">Ollama</span></a>
       <a href="https://ollama.com/cloud" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/ollama.svg' | relative_url }}" alt="" class="logo-mark logo-mono"><span class="logo-wordmark">Ollama Cloud</span></a>
