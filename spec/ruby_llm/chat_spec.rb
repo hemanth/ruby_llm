@@ -55,7 +55,9 @@ RSpec.describe RubyLLM::Chat, :live do
       end
 
       it "#{provider}/#{model} replaces previous system messages by default" do
-        skip 'xAI may retain prior instruction artifacts from conversation history' if provider == :xai
+        if %i[xai hetzner].include?(provider)
+          skip 'The model may repeat prior instruction artifacts from conversation history'
+        end
 
         chat = basic_chat(model: model, provider: provider)
 

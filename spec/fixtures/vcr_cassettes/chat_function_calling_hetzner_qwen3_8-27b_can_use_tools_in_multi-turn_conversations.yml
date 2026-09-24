@@ -1,0 +1,227 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://inference.hetzner.com/api/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"Qwen3.8-27B","messages":[{"role":"user","content":"What''s
+        the weather in Berlin? (52.5200, 13.4050)"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 24 Sep 2026 18:43:09 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1066'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      X-Went-Into-Resp-Headers:
+      - 'true'
+      Server:
+      - HeRay
+    body:
+      encoding: UTF-8
+      string: '{"model":"Qwen3.8-27B","usage":{"prompt_tokens":389,"completion_tokens":94,"total_tokens":483,"completion_tokens_details":{"reasoning_tokens":42},"prompt_tokens_details":{"cached_tokens":0,"created_cache_tokens":0,"multimodal_tokens":null}},"choices":[{"message":{"role":"assistant","refusal":null,"annotations":null,"audio":null,"function_call":null,"tool_calls":[{"id":"chatcmpl-tool-a937734b6dc301f3","type":"function","function":{"name":"weather","arguments":"{\"latitude\":
+        \"52.5200\", \"longitude\": \"13.4050\"}"}}],"reasoning":"The user is asking
+        for the weather in Berlin, providing the coordinates (52.5200, 13.4050). I
+        should use the weather function with these coordinates.\n"},"index":0,"logprobs":null,"finish_reason":"tool_calls","stop_reason":null,"token_ids":null,"routed_experts":null}],"id":"chatcmpl-5cc9405f-7ed1-4c87-a244-8ecba68b87d2","object":"chat.completion","created":1790275281,"system_fingerprint":null,"prompt_logprobs":null,"prompt_token_ids":null,"prompt_text":null,"kv_transfer_params":null,"ec_transfer_params":null,"metrics":null}'
+  recorded_at: Thu, 24 Sep 2026 18:43:09 GMT
+- request:
+    method: post
+    uri: https://inference.hetzner.com/api/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"Qwen3.8-27B","messages":[{"role":"user","content":"What''s
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"chatcmpl-tool-a937734b6dc301f3","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"The
+        user is asking for the weather in Berlin, providing the coordinates (52.5200,
+        13.4050). I should use the weather function with these coordinates.\n","reasoning_content":"The
+        user is asking for the weather in Berlin, providing the coordinates (52.5200,
+        13.4050). I should use the weather function with these coordinates.\n"},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"chatcmpl-tool-a937734b6dc301f3"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 24 Sep 2026 18:46:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '966'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      X-Went-Into-Resp-Headers:
+      - 'true'
+      Server:
+      - HeRay
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtb2RlbCI6IlF3ZW4zLjgtMjdCIiwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6NTMxLCJjb21wbGV0aW9uX3Rva2VucyI6NjAsInRvdGFsX3Rva2VucyI6NTkxLCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjM2fSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjAsImNyZWF0ZWRfY2FjaGVfdG9rZW5zIjowLCJtdWx0aW1vZGFsX3Rva2VucyI6bnVsbH19LCJjaG9pY2VzIjpbeyJtZXNzYWdlIjp7ImNvbnRlbnQiOiJcblxuQ3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbjogKioxNcKwQyoqIHdpdGggYSB3aW5kIHNwZWVkIG9mICoqMTAga20vaCoqLiIsInJvbGUiOiJhc3Npc3RhbnQiLCJyZWZ1c2FsIjpudWxsLCJhbm5vdGF0aW9ucyI6bnVsbCwiYXVkaW8iOm51bGwsImZ1bmN0aW9uX2NhbGwiOm51bGwsInJlYXNvbmluZyI6IlRoZSB1c2VyIGlzIGFza2luZyBmb3IgdGhlIHdlYXRoZXIgaW4gQmVybGluLiBUaGUgZnVuY3Rpb24gcmV0dXJuZWQgdGhlIGZvbGxvd2luZzogMTXCsEMsIHdpbmQgc3BlZWQgMTAga20vaC4gTGV0J3MgcHJvdmlkZSB0aGlzIGluZm9ybWF0aW9uLlxuIn0sImluZGV4IjowLCJsb2dwcm9icyI6bnVsbCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJzdG9wX3JlYXNvbiI6bnVsbCwidG9rZW5faWRzIjpudWxsLCJyb3V0ZWRfZXhwZXJ0cyI6bnVsbH1dLCJpZCI6ImNoYXRjbXBsLWQzZDkxMWRlLWVlZmMtNGFhZS1iYzRjLWZhYTBmMzBmYTkwOCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3OTAyNzUzODksInN5c3RlbV9maW5nZXJwcmludCI6bnVsbCwicHJvbXB0X2xvZ3Byb2JzIjpudWxsLCJwcm9tcHRfdG9rZW5faWRzIjpudWxsLCJwcm9tcHRfdGV4dCI6bnVsbCwia3ZfdHJhbnNmZXJfcGFyYW1zIjpudWxsLCJlY190cmFuc2Zlcl9wYXJhbXMiOm51bGwsIm1ldHJpY3MiOm51bGx9
+  recorded_at: Thu, 24 Sep 2026 18:46:28 GMT
+- request:
+    method: post
+    uri: https://inference.hetzner.com/api/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"Qwen3.8-27B","messages":[{"role":"user","content":"What''s
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"chatcmpl-tool-a937734b6dc301f3","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"The
+        user is asking for the weather in Berlin, providing the coordinates (52.5200,
+        13.4050). I should use the weather function with these coordinates.\n","reasoning_content":"The
+        user is asking for the weather in Berlin, providing the coordinates (52.5200,
+        13.4050). I should use the weather function with these coordinates.\n"},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"chatcmpl-tool-a937734b6dc301f3"},{"role":"assistant","content":"\n\nCurrent
+        weather in Berlin: **15°C** with a wind speed of **10 km/h**.","reasoning":"The
+        user is asking for the weather in Berlin. The function returned the following:
+        15°C, wind speed 10 km/h. Let''s provide this information.\n","reasoning_content":"The
+        user is asking for the weather in Berlin. The function returned the following:
+        15°C, wind speed 10 km/h. Let''s provide this information.\n"},{"role":"user","content":"What''s
+        the weather in Paris? (48.8575, 2.3514)"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 24 Sep 2026 18:46:56 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1031'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      X-Went-Into-Resp-Headers:
+      - 'true'
+      Server:
+      - HeRay
+    body:
+      encoding: UTF-8
+      string: '{"model":"Qwen3.8-27B","usage":{"prompt_tokens":626,"completion_tokens":88,"total_tokens":714,"completion_tokens_details":{"reasoning_tokens":37},"prompt_tokens_details":{"cached_tokens":0,"created_cache_tokens":0,"multimodal_tokens":null}},"choices":[{"message":{"role":"assistant","refusal":null,"annotations":null,"audio":null,"function_call":null,"tool_calls":[{"id":"chatcmpl-tool-bbb893b29c4163c3","type":"function","function":{"name":"weather","arguments":"{\"latitude\":
+        \"48.8575\", \"longitude\": \"2.3514\"}"}}],"reasoning":"The user is asking
+        for the weather in Paris with coordinates (48.8575, 2.3514). I need to use
+        the weather function.\n"},"index":0,"logprobs":null,"finish_reason":"tool_calls","stop_reason":null,"token_ids":null,"routed_experts":null}],"id":"chatcmpl-6240e4dd-4532-44b1-b003-684a0b8f15bd","object":"chat.completion","created":1790275588,"system_fingerprint":null,"prompt_logprobs":null,"prompt_token_ids":null,"prompt_text":null,"kv_transfer_params":null,"ec_transfer_params":null,"metrics":null}'
+  recorded_at: Thu, 24 Sep 2026 18:46:56 GMT
+- request:
+    method: post
+    uri: https://inference.hetzner.com/api/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"Qwen3.8-27B","messages":[{"role":"user","content":"What''s
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"chatcmpl-tool-a937734b6dc301f3","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"The
+        user is asking for the weather in Berlin, providing the coordinates (52.5200,
+        13.4050). I should use the weather function with these coordinates.\n","reasoning_content":"The
+        user is asking for the weather in Berlin, providing the coordinates (52.5200,
+        13.4050). I should use the weather function with these coordinates.\n"},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"chatcmpl-tool-a937734b6dc301f3"},{"role":"assistant","content":"\n\nCurrent
+        weather in Berlin: **15°C** with a wind speed of **10 km/h**.","reasoning":"The
+        user is asking for the weather in Berlin. The function returned the following:
+        15°C, wind speed 10 km/h. Let''s provide this information.\n","reasoning_content":"The
+        user is asking for the weather in Berlin. The function returned the following:
+        15°C, wind speed 10 km/h. Let''s provide this information.\n"},{"role":"user","content":"What''s
+        the weather in Paris? (48.8575, 2.3514)"},{"role":"assistant","content":"","tool_calls":[{"id":"chatcmpl-tool-bbb893b29c4163c3","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"48.8575\",\"longitude\":\"2.3514\"}"}}],"reasoning":"The
+        user is asking for the weather in Paris with coordinates (48.8575, 2.3514).
+        I need to use the weather function.\n","reasoning_content":"The user is asking
+        for the weather in Paris with coordinates (48.8575, 2.3514). I need to use
+        the weather function.\n"},{"role":"tool","content":"Current weather at 48.8575,
+        2.3514: 15°C, Wind: 10 km/h","tool_call_id":"chatcmpl-tool-bbb893b29c4163c3"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 24 Sep 2026 18:47:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '895'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      X-Went-Into-Resp-Headers:
+      - 'true'
+      Server:
+      - HeRay
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtb2RlbCI6IlF3ZW4zLjgtMjdCIiwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6NzYxLCJjb21wbGV0aW9uX3Rva2VucyI6MzksInRvdGFsX3Rva2VucyI6ODAwLCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjE1fSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjAsImNyZWF0ZWRfY2FjaGVfdG9rZW5zIjowLCJtdWx0aW1vZGFsX3Rva2VucyI6bnVsbH19LCJjaG9pY2VzIjpbeyJtZXNzYWdlIjp7ImNvbnRlbnQiOiJcblxuQ3VycmVudCB3ZWF0aGVyIGluIFBhcmlzOiAqKjE1wrBDKiogd2l0aCBhIHdpbmQgc3BlZWQgb2YgKioxMCBrbS9oKiouIiwicm9sZSI6ImFzc2lzdGFudCIsInJlZnVzYWwiOm51bGwsImFubm90YXRpb25zIjpudWxsLCJhdWRpbyI6bnVsbCwiZnVuY3Rpb25fY2FsbCI6bnVsbCwicmVhc29uaW5nIjoiVGhlIGZ1bmN0aW9uIHJldHVybmVkIHRoZSB3ZWF0aGVyIGZvciBQYXJpcy4gTGV0IG1lIHByZXNlbnQgaXQgY2xlYXJseS5cbiJ9LCJpbmRleCI6MCwibG9ncHJvYnMiOm51bGwsImZpbmlzaF9yZWFzb24iOiJzdG9wIiwic3RvcF9yZWFzb24iOm51bGwsInRva2VuX2lkcyI6bnVsbCwicm91dGVkX2V4cGVydHMiOm51bGx9XSwiaWQiOiJjaGF0Y21wbC0zOTY1NTFiMC1mZjgxLTRmMzAtYWQ3Zi05NDU4Yjg5NTkxMDYiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJjcmVhdGVkIjoxNzkwMjc1NjE2LCJzeXN0ZW1fZmluZ2VycHJpbnQiOm51bGwsInByb21wdF9sb2dwcm9icyI6bnVsbCwicHJvbXB0X3Rva2VuX2lkcyI6bnVsbCwicHJvbXB0X3RleHQiOm51bGwsImt2X3RyYW5zZmVyX3BhcmFtcyI6bnVsbCwiZWNfdHJhbnNmZXJfcGFyYW1zIjpudWxsLCJtZXRyaWNzIjpudWxsfQ==
+  recorded_at: Thu, 24 Sep 2026 18:47:00 GMT
+recorded_with: VCR 6.4.0

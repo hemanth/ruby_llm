@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://inference.hetzner.com/api/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"Qwen3.8-27B","messages":[{"role":"user","content":"What''s
+        the weather in Berlin? (52.5200, 13.4050)"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 24 Sep 2026 18:35:08 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1100'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      X-Went-Into-Resp-Headers:
+      - 'true'
+      Server:
+      - HeRay
+    body:
+      encoding: UTF-8
+      string: '{"model":"Qwen3.8-27B","usage":{"prompt_tokens":389,"completion_tokens":101,"total_tokens":490,"completion_tokens_details":{"reasoning_tokens":49},"prompt_tokens_details":{"cached_tokens":0,"created_cache_tokens":0,"multimodal_tokens":null}},"choices":[{"message":{"role":"assistant","refusal":null,"annotations":null,"audio":null,"function_call":null,"tool_calls":[{"id":"chatcmpl-tool-b6a652891cf24b59","type":"function","function":{"name":"weather","arguments":"{\"latitude\":
+        \"52.5200\", \"longitude\": \"13.4050\"}"}}],"reasoning":"The user is asking
+        for the weather in Berlin at coordinates 52.5200, 13.4050. Since these are
+        independent of each other, I should use the weather tool with the specified
+        coordinates.\n"},"index":0,"logprobs":null,"finish_reason":"tool_calls","stop_reason":null,"token_ids":null,"routed_experts":null}],"id":"chatcmpl-0b1be6e1-75cb-470d-9fe4-dbe06637ceea","object":"chat.completion","created":1790274775,"system_fingerprint":null,"prompt_logprobs":null,"prompt_token_ids":null,"prompt_text":null,"kv_transfer_params":null,"ec_transfer_params":null,"metrics":null}'
+  recorded_at: Thu, 24 Sep 2026 18:35:08 GMT
+- request:
+    method: post
+    uri: https://inference.hetzner.com/api/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"Qwen3.8-27B","messages":[{"role":"user","content":"What''s
+        the weather in Berlin? (52.5200, 13.4050)"},{"role":"assistant","content":"","tool_calls":[{"id":"chatcmpl-tool-b6a652891cf24b59","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"The
+        user is asking for the weather in Berlin at coordinates 52.5200, 13.4050.
+        Since these are independent of each other, I should use the weather tool with
+        the specified coordinates.\n","reasoning_content":"The user is asking for
+        the weather in Berlin at coordinates 52.5200, 13.4050. Since these are independent
+        of each other, I should use the weather tool with the specified coordinates.\n"},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"chatcmpl-tool-b6a652891cf24b59"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 24 Sep 2026 18:36:45 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '933'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      X-Went-Into-Resp-Headers:
+      - 'true'
+      Server:
+      - HeRay
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtb2RlbCI6IlF3ZW4zLjgtMjdCIiwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6NTM4LCJjb21wbGV0aW9uX3Rva2VucyI6NTQsInRvdGFsX3Rva2VucyI6NTkyLCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjMxfSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjAsImNyZWF0ZWRfY2FjaGVfdG9rZW5zIjowLCJtdWx0aW1vZGFsX3Rva2VucyI6bnVsbH19LCJjaG9pY2VzIjpbeyJtZXNzYWdlIjp7ImNvbnRlbnQiOiJcblxuVGhlIGN1cnJlbnQgd2VhdGhlciBpbiBCZXJsaW4gaXMgKioxNcKwQyoqIHdpdGggd2luZCBhdCAqKjEwIGttL2gqKi4iLCJyb2xlIjoiYXNzaXN0YW50IiwicmVmdXNhbCI6bnVsbCwiYW5ub3RhdGlvbnMiOm51bGwsImF1ZGlvIjpudWxsLCJmdW5jdGlvbl9jYWxsIjpudWxsLCJyZWFzb25pbmciOiJUaGUgd2VhdGhlciB0b29sIHJldHVybmVkIEJlcmxpbidzIGN1cnJlbnQgd2VhdGhlcjogMTXCsEMsIHdpbmQgc3BlZWQgMTAga20vaC4gTGV0J3Mgc2hhcmUgdGhpcyB3aXRoIHRoZSB1c2VyLlxuIn0sImluZGV4IjowLCJsb2dwcm9icyI6bnVsbCwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJzdG9wX3JlYXNvbiI6bnVsbCwidG9rZW5faWRzIjpudWxsLCJyb3V0ZWRfZXhwZXJ0cyI6bnVsbH1dLCJpZCI6ImNoYXRjbXBsLTkxNjYwYTc5LWExYmItNGQzYS1hY2QzLWEyYWRmMmIzOGNkYiIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3OTAyNzQ5MDksInN5c3RlbV9maW5nZXJwcmludCI6bnVsbCwicHJvbXB0X2xvZ3Byb2JzIjpudWxsLCJwcm9tcHRfdG9rZW5faWRzIjpudWxsLCJwcm9tcHRfdGV4dCI6bnVsbCwia3ZfdHJhbnNmZXJfcGFyYW1zIjpudWxsLCJlY190cmFuc2Zlcl9wYXJhbXMiOm51bGwsIm1ldHJpY3MiOm51bGx9
+  recorded_at: Thu, 24 Sep 2026 18:36:45 GMT
+recorded_with: VCR 6.4.0
