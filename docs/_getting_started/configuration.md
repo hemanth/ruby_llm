@@ -150,6 +150,10 @@ RubyLLM.configure do |config|
   config.gpustack_api_base = String
   config.gpustack_api_key = String
 
+  # Hetzner
+  config.hetzner_api_key = String
+  config.hetzner_api_base = String
+
   # Mistral
   config.mistral_api_key = String
   config.mistral_api_base = String

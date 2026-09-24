@@ -71,6 +71,10 @@ RubyLLM.configure do |config|
   config.gpustack_api_base = ENV['GPUSTACK_API_BASE']
   config.gpustack_api_key = ENV['GPUSTACK_API_KEY']
 
+  # Hetzner
+  config.hetzner_api_key = ENV['HETZNER_API_KEY'] # Token from the Hetzner Console
+  config.hetzner_api_base = ENV['HETZNER_API_BASE'] # Optional, defaults to https://inference.hetzner.com/api/v1
+
   # Mistral
   config.mistral_api_key = ENV['MISTRAL_API_KEY']
   config.mistral_api_base = ENV['MISTRAL_API_BASE'] # optional custom Mistral endpoint
@@ -167,6 +171,27 @@ RubyLLM.models.by_provider(:ollama_cloud).map(&:id)
 ```
 
 Ollama Cloud does not support [structured output]({% link _core_features/structured-output.md %}); use local Ollama or another provider when you need a schema.
+
+## Hetzner
+
+Hetzner Inference serves open-weight models from Hetzner's data centers. Create an API token in the Hetzner Console and set `hetzner_api_key`:
+
+```ruby
+RubyLLM.configure do |config|
+  config.hetzner_api_key = ENV['HETZNER_API_KEY']
+end
+
+RubyLLM.chat(model: 'Qwen3.8-27B', provider: :hetzner).ask('Hello from Hetzner')
+```
+
+The service is experimental and changes its model selection often. RubyLLM accepts any model ID you give `:hetzner` without a registry entry, and `refresh` pulls the live catalog:
+
+```ruby
+RubyLLM.models.refresh
+RubyLLM.models.by_provider(:hetzner).map(&:id)
+```
+
+Hetzner models accept text and images. Other attachments raise `RubyLLM::UnsupportedAttachmentError` before the request is sent.
 
 ## Bedrock Credential Providers
 

@@ -57,6 +57,12 @@ RSpec.describe RubyLLM::Provider do
         key: :gpustack_api_base,
         custom: 'https://gpustack.example.com/v1'
       },
+      hetzner: {
+        provider: RubyLLM::Providers::Hetzner,
+        key: :hetzner_api_base,
+        custom: 'https://hetzner-proxy.example.com/api/v1',
+        default: 'https://inference.hetzner.com/api/v1'
+      },
       mistral: {
         provider: RubyLLM::Providers::Mistral,
         key: :mistral_api_base,
@@ -138,6 +144,8 @@ RSpec.describe RubyLLM::Provider do
       when :gpustack
         config.gpustack_api_base = 'https://gpustack.example.com/v1'
         config.gpustack_api_key = 'gpustack-key'
+      when :hetzner
+        config.hetzner_api_key = 'hetzner-key'
       when :mistral
         config.mistral_api_key = 'mistral-key'
       when :ollama

@@ -25,6 +25,7 @@ module RubyLLM
       'amazon-bedrock' => 'bedrock',
       'cohere' => 'cohere',
       'deepseek' => 'deepseek',
+      'hetzner' => 'hetzner',
       'mistral' => 'mistral',
       'ollama-cloud' => 'ollama_cloud',
       'openrouter' => 'openrouter',
@@ -37,7 +38,7 @@ module RubyLLM
     # First-party providers outrank the aggregators that resell their models.
     PROVIDER_PREFERENCE = %w[
       openai anthropic gemini deepseek mistral cohere typesafe perplexity xai
-      vertexai bedrock openrouter azure ollama_cloud ollama gpustack
+      vertexai bedrock openrouter azure hetzner ollama_cloud ollama gpustack
     ].freeze # :nodoc:
     INSTANCE_DELEGATES = (Enumerable.instance_methods(false) + %i[
       all

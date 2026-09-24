@@ -25,6 +25,7 @@ loader.inflector.inflect(
   'deepseek' => 'DeepSeek',
   'elevenlabs' => 'ElevenLabs',
   'gpustack' => 'GPUStack',
+  'hetzner' => 'Hetzner',
   'http' => 'HTTP',
   'llm' => 'LLM',
   'mcp' => 'MCP',
@@ -529,6 +530,7 @@ RubyLLM::Provider.register :deepseek, RubyLLM::Providers::DeepSeek
 RubyLLM::Provider.register :elevenlabs, RubyLLM::Providers::ElevenLabs
 RubyLLM::Provider.register :gemini, RubyLLM::Providers::Gemini
 RubyLLM::Provider.register :gpustack, RubyLLM::Providers::GPUStack
+RubyLLM::Provider.register :hetzner, RubyLLM::Providers::Hetzner
 RubyLLM::Provider.register :mistral, RubyLLM::Providers::Mistral
 RubyLLM::Provider.register :ollama, RubyLLM::Providers::Ollama
 RubyLLM::Provider.register :ollama_cloud, RubyLLM::Providers::OllamaCloud

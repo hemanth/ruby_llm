@@ -6,7 +6,7 @@ LOCAL_PROVIDER_SLUGS = %i[ollama gpustack].freeze
 # Providers with no recorded cassettes yet. Their rows join the live matrix
 # only when a key is present to record against, so the suite stays green
 # without one.
-UNRECORDED_PROVIDER_KEYS = {}.freeze
+UNRECORDED_PROVIDER_KEYS = { hetzner: 'HETZNER_API_KEY' }.freeze
 
 def filter_local_providers(models)
   models = models.reject { |model| LOCAL_PROVIDER_SLUGS.include?(model[:provider]) } if SKIP_LOCAL_PROVIDER_TESTS
@@ -50,6 +50,7 @@ chat_models = [
   { provider: :deepseek, model: 'deepseek-v4-flash' },
   { provider: :gemini, model: 'gemini-2.5-flash' },
   { provider: :gpustack, model: 'qwen3', backend: :llama_cpp },
+  { provider: :hetzner, model: 'Qwen3.8-27B' },
   { provider: :mistral, model: 'mistral-small-latest' },
   { provider: :ollama, model: 'qwen3' },
   { provider: :ollama_cloud, model: 'gpt-oss:120b' },
@@ -133,6 +134,7 @@ vision_models = [
   { provider: :bedrock, model: 'claude-sonnet-4-5' },
   { provider: :cohere, model: 'command-a-plus-05-2026' },
   { provider: :gemini, model: 'gemini-2.5-flash' },
+  { provider: :hetzner, model: 'Qwen3.8-27B' },
   { provider: :mistral, model: 'pixtral-12b' },
   { provider: :ollama, model: 'gemma4' },
   { provider: :openai, model: 'gpt-5-nano' },

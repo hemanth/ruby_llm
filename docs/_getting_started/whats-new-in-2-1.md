@@ -14,6 +14,7 @@ After reading this guide, you will know:
 
 * How to connect your chats and agents to MCP servers.
 * How to ask typed judgments with TypeSafe's Jev models.
+* How to chat with open-weight models on Hetzner.
 * How to build an agent's configuration from its inputs.
 * How to keep RubyLLM's tables on a secondary database.
 * How upgrades work from 2.1 on.
@@ -73,6 +74,16 @@ judgment.department.choice
 Judges use `config.default_judgment_model` unless you override the model. They accept structured input, reusable definitions, and runtime procs. Choice and score answers include full distributions and confidence so your application can choose how to act. See [Judgments]({% link _core_features/judgments.md %}).
 
 TypeSafe joins the built-in providers, bringing the total to eighteen. Use its hosted Jev models or a [Jev-compatible local server]({% link _getting_started/configuration-providers.md %}#jev-compatible-apis) through the same judgment API.
+
+## Hetzner
+
+Hetzner joins the built-in providers, bringing the total to nineteen. Its experimental Inference API serves open-weight models from Hetzner's data centers:
+
+```ruby
+RubyLLM.chat(model: "Qwen3.8-27B", provider: :hetzner).ask("Hello from Hetzner")
+```
+
+Set `hetzner_api_key` to a token from the Hetzner Console. See [Provider Setup]({% link _getting_started/configuration-providers.md %}#hetzner).
 
 ## Agent Configuration
 

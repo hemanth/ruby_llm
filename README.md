@@ -195,7 +195,7 @@ Agents, workflows, RAG, images, audio, and video. Built in, with usage tracking 
 * **Batches:** Provider-side batch processing with provider-specific discounts via `RubyLLM.batch`
 * **Compaction:** Let providers condense long conversations with `with_compaction`
 * **Token counting:** Count a request before you send it with `count_tokens`
-* **Providers:** OpenAI, Azure, xAI, Anthropic, Gemini, VertexAI, Bedrock, Cohere, DeepSeek, Mistral, Ollama, Ollama Cloud, OpenRouter, Perplexity, GPUStack, ElevenLabs, Deepgram, TypeSafe, and any OpenAI-compatible API
+* **Providers:** OpenAI, Azure, xAI, Anthropic, Gemini, VertexAI, Bedrock, Cohere, DeepSeek, Hetzner, Mistral, Ollama, Ollama Cloud, OpenRouter, Perplexity, GPUStack, ElevenLabs, Deepgram, TypeSafe, and any OpenAI-compatible API
 
 ## Installation
 
