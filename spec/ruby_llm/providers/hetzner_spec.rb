@@ -94,12 +94,16 @@ RSpec.describe RubyLLM::Providers::Hetzner do
   describe 'attachments' do
     let(:protocol) { described_class::Chat }
 
-    it 'sends images as image_url parts' do
+    it 'sends remote images inline, because Hetzner cannot fetch URLs' do
+      png = File.binread(File.expand_path('../../fixtures/ruby.png', __dir__))
+      stub_request(:get, 'https://example.com/ruby.png')
+        .to_return(body: png, headers: { 'Content-Type' => 'image/png' })
       image = RubyLLM::Attachment.new('https://example.com/ruby.png')
 
       content = protocol.format_content('What is this?', [image])
 
-      expect(content.last).to eq(type: 'image_url', image_url: { url: 'https://example.com/ruby.png' })
+      data_url = "data:image/png;base64,#{Base64.strict_encode64(png)}"
+      expect(content.last).to eq(type: 'image_url', image_url: { url: data_url })
     end
 
     it 'rejects documents and audio, which the models do not accept' do
