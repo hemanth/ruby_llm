@@ -313,14 +313,19 @@ module RubyLLM
     end
 
     # Creates an MCP. Keywords are the values of the declared ::inputs.
+    # Pass a Context as +context:+ to connect with its configuration: its
+    # +faraday_adapter+, +http_proxy+, and +request_timeout+ apply to the
+    # server's requests and to its OAuth requests.
     #
     #   Linear.new(user: current_user)
+    #   Linear.new(user: current_user, context: RubyLLM.context { |config| config.http_proxy = proxy })
     #
     # Raises ArgumentError for keywords that are not declared inputs.
-    def initialize(**inputs)
+    def initialize(context: nil, **inputs)
       unknown = inputs.keys - self.class.inputs
       raise ArgumentError, "Unknown MCP inputs: #{unknown.join(', ')}" if unknown.any?
 
+      @context = context
       @inputs = inputs
     end
 
@@ -599,11 +604,11 @@ module RubyLLM
       settings = self.class
       if settings.url
         HTTP.new(resolve(settings.url), headers: -> { request_headers }, timeout: settings.timeout,
-                                        unauthorized: method(:unauthorized))
+                                        unauthorized: method(:unauthorized), config:)
       elsif settings.command
         Stdio.new(settings.command.map { |part| resolve(part) },
                   env: settings.env.transform_values { |value| resolve(value) },
-                  directory: resolve(settings.directory), timeout: settings.timeout)
+                  directory: resolve(settings.directory), timeout: settings.timeout, config:)
       else
         raise ConfigurationError, "#{settings.name || 'MCP'} needs a url or a command"
       end
@@ -622,7 +627,11 @@ module RubyLLM
 
       @oauth ||= OAuth.new(resolve(self.class.url), owner:, scopes: settings[:scopes],
                                                     client_id: resolve(settings[:client_id]),
-                                                    client_secret: resolve(settings[:client_secret]))
+                                                    client_secret: resolve(settings[:client_secret]), config:)
+    end
+
+    def config
+      @context&.config || RubyLLM.config
     end
 
     def unauthorized(headers, status)

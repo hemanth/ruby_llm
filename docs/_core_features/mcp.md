@@ -475,6 +475,15 @@ Some defaults protect applications that connect to servers they do not control:
 * Redirects are never followed.
 * Request logs never include headers, so tokens stay out of your logs.
 
+RubyLLM does not check where a hostname resolves. When your users add servers, connect through a [context]({% link _getting_started/configuration-connection.md %}#contexts-isolated-configurations) whose `faraday_adapter` decides which addresses the app may reach. The context's connection settings carry every request to the server and every OAuth request its authorization makes, while chats keep the global ones:
+
+```ruby
+mcp_context = RubyLLM.context { |config| config.faraday_adapter = PublicAddressesOnly }
+
+mcp_context.mcp(url: server.endpoint, prefix: "mcp_#{server.id}", oauth: { owner: server })
+Linear.new(user: current_user, context: mcp_context)
+```
+
 Requests use the configured `request_timeout`. Set `timeout` on a server to change it:
 
 ```ruby

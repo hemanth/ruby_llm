@@ -85,6 +85,24 @@ RSpec.describe RubyLLM::MCP::OAuth do
     expect(exchange).to have_been_made
   end
 
+  it 'sends the server and OAuth requests through the connection of its context' do
+    requests = []
+    adapter = Class.new(Faraday::Adapter::NetHttp) do
+      define_method(:call) do |env|
+        requests << "#{env.method.upcase} #{env.url}"
+        super(env)
+      end
+    end
+    linear = linear_class.new(user: 'ada', context: RubyLLM.context { |config| config.faraday_adapter = adapter })
+
+    linear.authorize(callback(linear.authorization_url(redirect_uri:)))
+    linear.tools
+
+    expect(requests).to include('GET https://auth.example.com/.well-known/oauth-authorization-server',
+                                'POST https://auth.example.com/register', 'POST https://auth.example.com/token',
+                                "POST #{server_url}")
+  end
+
   it 'keeps credentials per owner' do
     linear.authorize(callback(linear.authorization_url(redirect_uri:)))
 
