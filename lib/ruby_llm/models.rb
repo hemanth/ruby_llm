@@ -20,6 +20,7 @@ module RubyLLM
     MODELS_DEV_PROVIDER_MAP = { # :nodoc:
       'openai' => 'openai',
       'anthropic' => 'anthropic',
+      'azure' => 'azure',
       'google' => 'gemini',
       'google-vertex' => 'vertexai',
       'amazon-bedrock' => 'bedrock',
