@@ -15,7 +15,7 @@ module RubyLLM
           parts << format_text(content) if content
 
           attachments.each do |attachment|
-            parts << format_content_attachment(attachment)
+            parts << with_media_resolution(format_content_attachment(attachment), attachment)
           end
 
           parts
@@ -41,6 +41,13 @@ module RubyLLM
               data: attachment.encoded
             }
           }
+        end
+
+        def with_media_resolution(part, attachment)
+          return part unless attachment.resolution && %i[image video pdf].include?(attachment.type)
+
+          level = attachment.resolution == :ultra_high && attachment.type != :image ? :high : attachment.resolution
+          part.merge(media_resolution: { level: "MEDIA_RESOLUTION_#{level.upcase}" })
         end
 
         def format_file_data(attachment)

@@ -256,4 +256,21 @@ RSpec.describe RubyLLM::Attachment do
       expect(attachment.provider_file_id).to eq('file_1')
     end
   end
+
+  it 'accepts a media resolution' do
+    attachment = described_class.new(StringIO.new('png'), filename: 'page.png', resolution: :ultra_high)
+
+    expect(attachment.resolution).to eq(:ultra_high)
+  end
+
+  it 'shows the media resolution in inspect' do
+    attachment = described_class.new(StringIO.new('png'), filename: 'page.png', resolution: :low)
+
+    expect(attachment.inspect).to include('resolution: :low')
+  end
+
+  it 'rejects unknown media resolutions' do
+    expect { described_class.new(StringIO.new('png'), filename: 'page.png', resolution: 'high') }
+      .to raise_error(ArgumentError, /resolution must be one of/)
+  end
 end

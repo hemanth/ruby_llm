@@ -41,7 +41,7 @@ module RubyLLM
           when :image
             raise UnsupportedAttachmentError, attachment.mime_type unless image_attachments
 
-            format_image(attachment)
+            with_image_detail(format_image(attachment), attachment)
           when :audio
             raise UnsupportedAttachmentError, attachment.mime_type unless audio_attachments
 
@@ -62,6 +62,13 @@ module RubyLLM
               url: image.url_or_data_uri
             }
           }
+        end
+
+        def with_image_detail(part, image)
+          return part unless image.resolution
+
+          part[:image_url][:detail] = image.resolution == :low ? 'low' : 'high'
+          part
         end
 
         def format_document(document)
