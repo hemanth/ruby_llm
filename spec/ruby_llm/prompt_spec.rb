@@ -41,6 +41,12 @@ RSpec.describe RubyLLM::Prompt do
     it 'raises PromptNotFoundError for missing prompts' do
       expect { described_class.render('nonexistent') }.to raise_error(RubyLLM::PromptNotFoundError)
     end
+
+    it 'resolves constants from the top level, not from RubyLLM' do
+      stub_const('Chat', Class.new { def self.label = 'application chat' })
+      create_prompt('chat', '<%= Chat.label %>')
+      expect(described_class.render('chat')).to eq('application chat')
+    end
   end
 
   describe '#render' do
@@ -54,6 +60,101 @@ RSpec.describe RubyLLM::Prompt do
       prompt = described_class.new('greeting')
       expect(prompt.name).to eq('greeting')
       expect(prompt.path).to eq(prompt_dir.join('greeting.txt.erb'))
+    end
+  end
+
+  describe 'partials' do
+    it 'renders a partial from the current prompt directory' do
+      create_prompt('work_assistant/_tone', 'Be kind to <%= name %>.')
+      create_prompt('work_assistant/instructions', "Hello.\n<%= render 'tone', name: name %>")
+      expect(described_class.render('work_assistant/instructions', name: 'Ada')).to eq("Hello.\nBe kind to Ada.")
+    end
+
+    it 'does not fall back to the prompt root for a bare name' do
+      create_prompt('_tone', 'Root tone.')
+      create_prompt('work_assistant/instructions', '<%= render "tone" %>')
+      expect { described_class.render('work_assistant/instructions') }
+        .to raise_error(RubyLLM::PromptNotFoundError, %r{work_assistant/_tone\.txt\.erb})
+    end
+
+    it 'resolves a bare name from the prompt root for a top-level prompt' do
+      create_prompt('_tone', 'Root tone.')
+      create_prompt('instructions', '<%= render "tone" %>')
+      expect(described_class.render('instructions')).to eq('Root tone.')
+    end
+
+    it 'resolves a path name from the prompt roots, not the current prompt directory' do
+      create_prompt('shared/_safety', 'Root safety.')
+      create_prompt('work_assistant/shared/_safety', 'Nested safety.')
+      create_prompt('work_assistant/instructions', '<%= render "shared/safety" %>')
+      expect(described_class.render('work_assistant/instructions')).to eq('Root safety.')
+    end
+
+    it 'renders a partial with the hash form' do
+      create_prompt('work_assistant/_tone', 'Be kind to <%= name %>.')
+      create_prompt('work_assistant/instructions', '<%= render partial: "tone", locals: { name: name } %>')
+      expect(described_class.render('work_assistant/instructions', name: 'Ada')).to eq('Be kind to Ada.')
+    end
+
+    it 'renders a partial with the hash form and no locals' do
+      create_prompt('shared/_safety', 'Stay safe.')
+      create_prompt('instructions', '<%= render partial: "shared/safety" %>')
+      expect(described_class.render('instructions')).to eq('Stay safe.')
+    end
+
+    it 'exposes local_assigns in a partial' do
+      create_prompt('_tone', '<%= local_assigns.fetch(:name, "friend") %>')
+      create_prompt('instructions', '<%= render "tone" %> <%= render "tone", name: "Ada" %>')
+      expect(described_class.render('instructions')).to eq('friend Ada')
+    end
+
+    it 'exposes local_assigns in a prompt' do
+      create_prompt('instructions', '<%= local_assigns[:name] || "friend" %>')
+      expect(described_class.render('instructions')).to eq('friend')
+      expect(described_class.render('instructions', name: 'Ada')).to eq('Ada')
+    end
+
+    it 'keeps a local with an invalid variable name in local_assigns only' do
+      create_prompt('instructions', '<%= local_assigns["x-y"] %><%= local_assigns[:Name] %>')
+      expect(described_class.render('instructions', 'x-y' => 1, Name: 2)).to eq('12')
+    end
+
+    it 'treats nil locals in the hash form as no locals' do
+      create_prompt('_tone', 'Stay calm.')
+      create_prompt('instructions', '<%= render partial: "tone", locals: nil %>')
+      expect(described_class.render('instructions')).to eq('Stay calm.')
+    end
+
+    it 'renders nested partials' do
+      create_prompt('_inner', 'inner')
+      create_prompt('_outer', 'outer <%= render "inner" %>')
+      create_prompt('instructions', '<%= render "outer" %>')
+      expect(described_class.render('instructions')).to eq('outer inner')
+    end
+
+    it 'resolves a bare name next to the partial that renders it' do
+      create_prompt('shared/_inner', 'inner')
+      create_prompt('shared/_outer', 'outer <%= render "inner" %>')
+      create_prompt('instructions', '<%= render "shared/outer" %>')
+      expect(described_class.render('instructions')).to eq('outer inner')
+    end
+
+    it 'does not leak locals into a partial' do
+      create_prompt('_tone', '<%= name %>')
+      create_prompt('instructions', '<%= render "tone" %>')
+      expect { described_class.render('instructions', name: 'Ada') }.to raise_error(NameError, /name/)
+    end
+
+    it 'raises PromptNotFoundError for a missing partial' do
+      create_prompt('work_assistant/instructions', '<%= render "tone" %>')
+      expect { described_class.render('work_assistant/instructions') }
+        .to raise_error(RubyLLM::PromptNotFoundError, %r{work_assistant/_tone\.txt\.erb})
+    end
+
+    it 'reports the root path for a missing path partial' do
+      create_prompt('work_assistant/instructions', '<%= render "shared/safety" %>')
+      expect { described_class.render('work_assistant/instructions') }
+        .to raise_error(RubyLLM::PromptNotFoundError, %r{prompts/shared/_safety\.txt\.erb})
     end
   end
 
@@ -97,6 +198,12 @@ RSpec.describe RubyLLM::Prompt do
       create_engine_prompt('engine_agent/instructions', 'Engine default.')
       prompt = described_class.new('engine_agent/instructions')
       expect(prompt.path).to eq(engine_dir.join('engine_agent/instructions.txt.erb'))
+    end
+
+    it 'renders a partial shipped by an engine' do
+      create_engine_prompt('engine_agent/_tone', 'Engine tone.')
+      create_engine_prompt('engine_agent/instructions', '<%= render "tone" %>')
+      expect(described_class.render('engine_agent/instructions')).to eq('Engine tone.')
     end
 
     it 'falls back to the application path when no root has the file' do
