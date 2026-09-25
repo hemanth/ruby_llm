@@ -783,6 +783,20 @@ module RubyLLM
     end
 
     def find_with_provider(model_id, provider, config = nil)
+      deployed_id = Provider.resolve(provider)&.deployed_model_id(model_id, config || RubyLLM.config)
+      return find_registered(model_id, provider, config) unless deployed_id
+
+      Model.new(find_deployed_model(model_id, deployed_id, provider, config).to_h.merge(id: model_id))
+    end
+
+    def find_deployed_model(deployment, model_id, provider, config)
+      find_registered(model_id, provider, config)
+    rescue ModelNotFoundError
+      raise ConfigurationError, "Deployment #{deployment.inspect} points to unknown model #{model_id.inspect} " \
+                                "for provider: #{provider.inspect}. #{refresh_registry_guidance}"
+    end
+
+    def find_registered(model_id, provider, config)
       resolved_id = Aliases.resolve(model_id, provider)
       resolved_id = resolve_provider_registry_id(resolved_id, provider, config)
       all_including_unlisted.find { |m| m.id == resolved_id && m.provider == provider.to_s } ||
