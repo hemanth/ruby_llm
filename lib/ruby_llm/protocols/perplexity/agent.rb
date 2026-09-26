@@ -20,7 +20,8 @@ module RubyLLM
           @provider.agent_url
         end
 
-        def render_payload(messages, model:, **)
+        def render_payload(messages, model:, max_output_tokens: nil, **)
+          max_output_tokens ||= default_max_output_tokens(model)
           payload = super
           preset = preset_for(model.id)
           return payload unless preset
@@ -34,6 +35,10 @@ module RubyLLM
         end
 
         private
+
+        def default_max_output_tokens(model)
+          model.max_output_tokens || Anthropic::DEFAULT_MAX_OUTPUT_TOKENS if model.id.start_with?('anthropic/')
+        end
 
         def preset_for(model_id)
           return model_id if PRESETS.include?(model_id)
