@@ -25,7 +25,11 @@ loader.inflector.inflect(
   'deepseek' => 'DeepSeek',
   'elevenlabs' => 'ElevenLabs',
   'gpustack' => 'GPUStack',
+  'hetzner' => 'Hetzner',
+  'http' => 'HTTP',
   'llm' => 'LLM',
+  'mcp' => 'MCP',
+  'oauth' => 'OAuth',
   'mistral' => 'Mistral',
   'ocr' => 'OCR',
   'openai' => 'OpenAI',
@@ -76,9 +80,14 @@ loader.setup
 #
 # Subclass Tool and implement +execute+ to give the model an application
 # action. Tool.requires_approval pauses execution for a human decision;
-# Chat#approve and Chat#deny record it. Chat#with_provider_tools enables
-# provider-executed tools such as web search, code execution, and remote MCP.
+# Chat#approve and Chat#deny record it. Tool#progress reports what a
+# running tool is doing to Chat#after_tool_progress as a Progress.
+# Chat#with_provider_tools enables provider-executed tools such as web
+# search, code execution, and remote MCP.
 # Their calls appear as ServerToolCall values, with Citation values for sources.
+# MCP is a Model Context Protocol client: describe a server to connect to
+# in an MCP class, and Chat#with_mcp gives the model its tools. RubyLLM.mcp
+# connects to one inline.
 #
 # Agent defines a reusable configuration with model, instructions, tools,
 # schema, and runtime inputs. Chat#ask_later, Chat#generate, Chat#run_tools,
@@ -235,6 +244,23 @@ module RubyLLM
     #
     def chat(...)
       Chat.new(...)
+    end
+
+    # Connects to a Model Context Protocol server without writing an MCP
+    # class. Pass +url:+ for a Streamable HTTP server, +command:+ for a
+    # local server that speaks over stdio, or +transport:+ and +name:+ for
+    # a server reached any other way, as MCP.transport describes. Also
+    # accepts +name:+, +bearer_token:+, +headers:+, +env:+, +directory:+,
+    # +timeout:+, +prefix:+, and +oauth:+, which takes +true+ or the
+    # options of MCP.oauth.
+    #
+    #   docs = RubyLLM.mcp(url: "https://learn.microsoft.com/api/mcp")
+    #   files = RubyLLM.mcp(command: ["npx", "-y", "@modelcontextprotocol/server-filesystem", "."])
+    #   RubyLLM.mcp(url: server.endpoint, prefix: "mcp_#{server.id}", oauth: { owner: server })
+    #
+    # Returns an MCP.
+    def mcp(...)
+      MCP.define(...).new
     end
 
     # Counts the tokens +text+ would consume as a single user message,
@@ -507,6 +533,7 @@ RubyLLM::Provider.register :deepseek, RubyLLM::Providers::DeepSeek
 RubyLLM::Provider.register :elevenlabs, RubyLLM::Providers::ElevenLabs
 RubyLLM::Provider.register :gemini, RubyLLM::Providers::Gemini
 RubyLLM::Provider.register :gpustack, RubyLLM::Providers::GPUStack
+RubyLLM::Provider.register :hetzner, RubyLLM::Providers::Hetzner
 RubyLLM::Provider.register :mistral, RubyLLM::Providers::Mistral
 RubyLLM::Provider.register :ollama, RubyLLM::Providers::Ollama
 RubyLLM::Provider.register :ollama_cloud, RubyLLM::Providers::OllamaCloud

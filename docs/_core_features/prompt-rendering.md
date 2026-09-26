@@ -16,6 +16,7 @@ After reading this guide, you will know:
 * How to store prompt templates in `app/prompts`.
 * How to render templates with `RubyLLM.render_prompt`.
 * How locals, nested paths, and `.txt.erb` filenames work.
+* How to share pieces of a prompt with partials.
 * How rendered prompts fit into chats and agents.
 * Which errors to expect when a prompt file is missing.
 
@@ -136,6 +137,51 @@ Because the application root is searched first, a host app overrides any engine 
 ```text
 app/prompts/my_engine/chat_agent/instructions.txt.erb
 ```
+
+## Partials
+
+Partials let you break a prompt into smaller files and reuse them across prompts. A partial is a prompt file whose name starts with an underscore. Create `app/prompts/work_assistant/_tone.txt.erb`:
+
+```erb
+Be warm and direct with <%= display_name %>.
+```
+
+Insert it with `render` from `app/prompts/work_assistant/instructions.txt.erb`:
+
+```erb
+<%= render "tone", display_name: display_name %>
+<%= render "shared/safety" %>
+```
+
+`render "tone"` looks next to the current prompt only:
+
+```text
+app/prompts/work_assistant/_tone.txt.erb
+```
+
+From a top-level prompt such as `app/prompts/instructions.txt.erb`, the same call finds `app/prompts/_tone.txt.erb`.
+
+`render "shared/safety"` looks in the prompt roots:
+
+```text
+app/prompts/shared/_safety.txt.erb
+```
+
+You can also pass the partial and its locals as a hash, the way Action View does:
+
+```erb
+<%= render partial: "tone", locals: { display_name: display_name } %>
+```
+
+Partials receive only the locals you pass. Nothing leaks from the outer template. Read an optional local through `local_assigns`, which works in prompts and partials alike:
+
+```erb
+Be warm and direct<% if local_assigns[:display_name] %> with <%= display_name %><% end %>.
+```
+
+A local whose name is not a valid Ruby variable name is available only through `local_assigns`.
+
+If RubyLLM cannot find the partial file, it raises `RubyLLM::PromptNotFoundError`.
 
 ## Missing Prompts
 

@@ -118,7 +118,7 @@ response.tokens.thinking
 
 `tokens.thinking` reports reasoning work separately. `tokens.output` is already the billable output bucket, so do not add `tokens.thinking` to it when calculating costs. When a model has distinct reasoning-token pricing, the cost is exposed separately as `response.cost.thinking`.
 
-Apps upgrading from 1.16 get the thinking columns from `bin/rails generate ruby_llm:upgrade`. See [Upgrading]({% link _reference/upgrading.md %}).
+Apps upgrading from 1.16 get the thinking columns from the [2.0 upgrade](https://github.com/crmne/ruby_llm/blob/v2.0.0/docs/_reference/upgrading.md).
 
 The generated schema also preserves the complete thinking blocks when you reload a conversation. Upgrading cannot recover blocks that an older version already discarded.
 
@@ -128,7 +128,7 @@ The generated schema also preserves the complete thinking blocks when you reload
 - Bedrock thinking params are model-dependent. Claude models on Bedrock only take a token budget, so RubyLLM converts `effort` into the budget level the model advertises. Pass `budget` to set the exact number of tokens.
 - Gemini 2.5 uses a token budget; Gemini 3 uses effort levels.
 - OpenAI reasoning models accept `effort`, return an encrypted signature, and only return thinking text when you pass `display: :summarized`, which asks the Responses API for a reasoning summary.
-- Perplexity sonar reasoning models fold their reasoning into the answer text and return no separate thinking.
+- Perplexity's Agent API folds reasoning into the answer text and returns no separate thinking.
 - Mistral sends `effort` as `reasoning_effort` for every model. Its reasoning models take `high` and `none`, and models without reasoning reject the parameter. Mistral has no thinking budget, so `budget` has no effect.
 - DeepSeek accepts a wider range of effort levels than most providers and has no thinking budget. Its error lists the levels a model takes.
 - Cohere reasoning models think by default. `with_thinking(budget:)` caps the thinking tokens, and `with_thinking(effort: :none)` turns the default off. Models without reasoning reject the request. Cohere returns thinking text but no signature, and reports no separate thinking token count.

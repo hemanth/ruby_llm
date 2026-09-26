@@ -28,7 +28,8 @@ module RubyLLM
     # The provider-neutral options #with_compaction accepts.
     COMPACTION_OPTIONS = %i[at instructions pause_after].freeze
     THINKING_OPTIONS = %i[effort budget display].freeze
-    private_constant :THINKING_OPTIONS
+    PAUSED = Object.new.freeze
+    private_constant :THINKING_OPTIONS, :PAUSED
 
     # The Model the chat sends requests to.
     attr_reader :model
@@ -39,8 +40,9 @@ module RubyLLM
     # The Message objects exchanged so far, including system instructions.
     attr_reader :messages
 
-    # The registered tools, as a Hash of tool name Symbols to Tool instances.
-    attr_reader :tools
+    # The MCP servers connected with #with_mcp, readable by name:
+    # <tt>chat.mcp.linear</tt>.
+    attr_reader :mcp
 
     # The provider tools enabled with #with_provider_tools, as an array of
     # normalized entry Hashes.
@@ -119,6 +121,7 @@ module RubyLLM
       @messages = []
       @usage_entries = []
       @tools = {}
+      @mcp = MCP::Collection.new
       @provider_tools = []
       @tool_prefs = { choice: nil, calls: nil }
       @concurrency = normalize_tool_concurrency(@config.tool_concurrency)
@@ -137,12 +140,16 @@ module RubyLLM
       @cancellation_checker = nil
       @tool_call_decisions = {}
       @approval_checker = nil
+      @tool_call_inputs = {}
+      @input_checker = nil
+      @input_recorder = nil
     end
 
     # Adds +message+ as a user message and runs the conversation loop,
     # executing tools until the model answers or a call needs approval.
     # Returns the latest assistant Message; check #awaiting_approval? before
-    # treating it as a final answer. Attach files with +with:+.
+    # treating it as a final answer. Attach files with +with:+. An
+    # MCP::Prompt adds its messages instead.
     # A given block receives streamed Chunk objects as they arrive.
     #
     # String attachments read local paths or fetch URLs. Only pass trusted,
@@ -153,6 +160,7 @@ module RubyLLM
     #   chat.ask "What's in this image?", with: "ruby_conf.jpg"
     #   chat.ask "Analyze these files", with: ["diagram.png", "report.pdf"]
     #   chat.ask("Tell me a story") { |chunk| print chunk.content }
+    #   chat.ask github.prompt(:code_review, code: diff)
     #
     def ask(message = nil, with: nil, &)
       ask_later(message, with: with)
@@ -174,7 +182,11 @@ module RubyLLM
     # decisions for calls that require approval.
     def ask_later(message = nil, with: nil)
       raise_if_pending_tool_calls!
-      add_message role: :user, content: message, attachments: with
+      if message.is_a?(MCP::Prompt)
+        message.messages.each { |prompt_message| add_message(prompt_message) }
+      else
+        add_message role: :user, content: message, attachments: with
+      end
       self
     end
 
@@ -223,15 +235,17 @@ module RubyLLM
       messages.last if messages.length > before
     end
 
-    # Runs the conversation loop until #complete? or #awaiting_approval?
-    # is +true+. Returns the last conversation Message, or +nil+ for an
-    # empty chat. Used after #ask_later; #ask calls #complete for you.
+    # Runs the conversation loop until #complete?, #awaiting_approval?, or
+    # #awaiting_input? is +true+. Returns the last conversation Message, or
+    # +nil+ for an empty chat. Used after #ask_later; #ask calls #complete
+    # for you.
     #
     # When a pending tool call requires approval and no decision has been
-    # recorded, the loop pauses. Record #approve or #deny decisions, then
-    # call #complete again to continue.
+    # recorded, or waits on input for an MCP server, the loop pauses.
+    # Record #approve, #deny, #answer, or #decline decisions, then call
+    # #complete again to continue.
     def complete(&)
-      step(&) until complete? || awaiting_approval?
+      step(&) until complete? || waiting?
       last_non_system_message || messages.last
     end
 
@@ -268,7 +282,8 @@ module RubyLLM
 
     # Returns whether the conversation can make no progress without an
     # approval decision: every remaining pending tool call requires
-    # approval and has none recorded. While +true+, #complete returns
+    # approval and has none recorded, or waits on input. While +true+,
+    # #complete returns
     # without executing them; record decisions with #approve or #deny,
     # then call #complete again. Tool calls that need no approval still
     # execute before the loop pauses.
@@ -276,11 +291,7 @@ module RubyLLM
     # Consults each pending tool's approval resolver when one is declared,
     # so resolvers must be idempotent reads.
     def awaiting_approval?
-      response = pending_tool_response
-      return false unless response
-
-      pending = pending_tool_calls(response)
-      pending.any? && pending.all? { |_, tool_call| approval_pending?(tool_call) }
+      waiting? && pending_approvals.any?
     end
 
     # Returns the tool calls from the latest response that require approval
@@ -295,6 +306,45 @@ module RubyLLM
       return [] unless response
 
       pending_tool_calls(response).values.select { |tool_call| approval_pending?(tool_call) }
+    end
+
+    # Returns whether the conversation can make no progress until the user
+    # answers an MCP server: every remaining pending tool call waits on
+    # input or an approval decision, and at least one waits on input.
+    def awaiting_input?
+      waiting? && pending_inputs.any?
+    end
+
+    # Returns the unanswered requests for input that paused MCP tool calls,
+    # as MCP::InputRequest objects. Settle each with #answer or #decline,
+    # then call #complete to resume the calls.
+    #
+    #   chat.pending_inputs.each { |request| puts request.message }
+    #   chat.answer(chat.pending_inputs.first, environment: "staging")
+    #
+    def pending_inputs
+      response = pending_tool_response
+      return [] unless response
+
+      pending_tool_calls(response).values.flat_map do |tool_call|
+        Array(tool_call_input(tool_call)&.fetch('requests'))
+          .map { |data| MCP::InputRequest.from_h(data, tool_call:) }
+          .reject(&:answered?)
+      end
+    end
+
+    # Answers +request+, an MCP::InputRequest from #pending_inputs, with
+    # +values+ for a form, or none to accept a URL request. The next
+    # #complete resumes the call once its requests are settled. Returns
+    # +self+.
+    def answer(request, **values)
+      settle_input(request) { |pending| pending.answer(**values) }
+    end
+
+    # Declines +request+, an MCP::InputRequest from #pending_inputs.
+    # Returns +self+.
+    def decline(request)
+      settle_input(request, &:decline)
     end
 
     # Cancels the current in-flight chat operation. The next cancellation
@@ -343,6 +393,36 @@ module RubyLLM
       tools.flatten.compact.each do |tool|
         tool_instance = tool.is_a?(Class) ? tool.new : tool
         @tools[tool_instance.name.to_sym] = tool_instance
+      end
+      self
+    end
+
+    # Returns the tools the model can call, as a Hash of tool name Symbols
+    # to Tool instances: those registered with #with_tools and those of the
+    # MCP servers connected with #with_mcp.
+    #
+    # Raises ArgumentError when two tools share a name.
+    def tools
+      mcp.flat_map(&:tools).each_with_object(@tools.dup) do |tool, tools|
+        name = tool.name.to_sym
+        raise ArgumentError, "Two tools are named #{name}. Rename one with `tool :#{name}, as:`" if tools.key?(name)
+
+        tools[name] = tool
+      end
+    end
+
+    # Connects MCP servers, each an MCP instance or class, and gives the
+    # model their tools. The servers are contacted when the chat first
+    # needs their tools. Pass +nil+ to disconnect them all. Returns +self+.
+    #
+    #   chat.with_mcp(Linear.new(user: current_user), Files)
+    #   chat.mcp.linear
+    #
+    def with_mcp(*servers)
+      if servers == [nil]
+        @mcp = MCP::Collection.new
+      else
+        servers.flatten.compact.each { |server| @mcp << (server.is_a?(Class) ? server.new : server) }
       end
       self
     end
@@ -686,6 +766,23 @@ module RubyLLM
       add_callback(:after_tool_result, &)
     end
 
+    # Registers a callback that receives the ToolCall and a Progress each
+    # time a running local tool reports what it is doing, with
+    # Tool#progress or, for MCP tools, through the server's progress
+    # notifications. Returns +self+.
+    #
+    #   chat.after_tool_progress do |tool_call, progress|
+    #     puts "#{tool_call.name}: #{progress.message}"
+    #   end
+    #
+    # The callback runs in the thread or fiber that reports, before the
+    # tool's result. On Ruby 3.2 and later, that includes threads and
+    # fibers the tool starts. With concurrent tool execution, callbacks for
+    # different tool calls can run at the same time.
+    def after_tool_progress(&)
+      add_callback(:after_tool_progress, &)
+    end
+
     # Registers a callback that receives the Fallback attempt after the
     # current model fails and before the fallback model is tried. Returns
     # +self+.
@@ -751,7 +848,7 @@ module RubyLLM
       @provider.count_tokens(
         preprocessed_messages(request_messages),
         model: @model,
-        tools: @tools,
+        tools: tools,
         tool_prefs: @tool_prefs,
         thinking: resolved_thinking,
         schema: @schema,
@@ -802,7 +899,7 @@ module RubyLLM
     end
 
     # Hooks installed by the Rails integration.
-    attr_writer :cancellation_checker, :usage_recorder, :approval_checker # :nodoc:
+    attr_writer :cancellation_checker, :usage_recorder, :approval_checker, :input_checker, :input_recorder # :nodoc:
 
     # Appends a message to the conversation and returns it as a Message.
     # Accepts a Message, an attribute Hash, or a record responding to
@@ -848,7 +945,7 @@ module RubyLLM
     def render
       @provider.render(
         preprocessed_messages,
-        tools: @tools,
+        tools: tools,
         provider_tools: @provider_tools,
         tool_prefs: @tool_prefs,
         temperature: @temperature,
@@ -877,7 +974,7 @@ module RubyLLM
       raise PendingToolCallsError,
             "The last response has unanswered tool calls (#{names.join(', ')}). " \
             'Run complete, recording approve or deny decisions for calls that ' \
-            'require approval, before asking again.'
+            'require approval and answering pending inputs, before asking again.'
     end
 
     private
@@ -1146,7 +1243,7 @@ module RubyLLM
 
       @provider.complete(
         preprocessed_messages,
-        tools: @tools,
+        tools: tools,
         provider_tools: @provider_tools,
         tool_prefs: @tool_prefs,
         temperature: @temperature,
@@ -1249,20 +1346,18 @@ module RubyLLM
     def partition_pending_tool_calls(pending)
       executable = {}
       denied = {}
-      pending.each do |id, tool_call|
-        tool = tools[tool_call.name.to_sym]
-        if tool&.requires_approval?
-          decision = tool_call_approval(tool, tool_call)
-          next if decision.nil?
-
-          (decision ? executable : denied)[id] = tool_call
-        elsif @tool_call_decisions[tool_call.id] == false
-          denied[id] = tool_call
-        else
-          executable[id] = tool_call
-        end
+      pending.reject { |_, tool_call| input_pending?(tool_call) }.each do |id, tool_call|
+        decision = execution_decision(tool_call)
+        (decision ? executable : denied)[id] = tool_call unless decision.nil?
       end
       [executable, denied]
+    end
+
+    def execution_decision(tool_call)
+      tool = tools[tool_call.name.to_sym]
+      return tool_call_approval(tool, tool_call) if tool&.requires_approval?
+
+      @tool_call_decisions[tool_call.id] != false
     end
 
     def deny_tool_calls(tool_calls)
@@ -1298,14 +1393,18 @@ module RubyLLM
     def handle_sequential_tool_calls(tool_calls)
       tool_calls.each_value do |tool_call|
         raise_if_cancelled!
-        run_callbacks(:before_message)
         result = execute_tool_with_callbacks(tool_call)
+        next if result.equal?(PAUSED)
+
+        run_callbacks(:before_message)
         add_tool_result_message(tool_call, result)
       end
     end
 
     def handle_concurrent_tool_calls(tool_calls)
       execute_tools_concurrently(tool_calls) do |tool_call, result|
+        next if result.equal?(PAUSED)
+
         raise_if_cancelled!
         run_callbacks(:before_message)
         add_tool_result_message(tool_call, result)
@@ -1322,6 +1421,8 @@ module RubyLLM
       raise_if_cancelled!
       run_callbacks(:before_tool_call, tool_call)
       result = execute_tool tool_call
+      return result if result.equal?(PAUSED)
+
       raise_if_cancelled!
       run_callbacks(:after_tool_result, result)
       result
@@ -1358,12 +1459,64 @@ module RubyLLM
       }
 
       RubyLLM.instrument('tool_call.ruby_llm', payload, config: @config) do |event|
-        result = tool.call(**args, tool_call: tool_call)
+        result = Support::Cancellation.watch(-> { raise_if_cancelled! }) do
+          Support::ProgressReporter.listen(progress_listener(tool_call)) { invoke_tool(tool, tool_call, args) }
+        end
         event[:result] = result
         event[:result_content] = result
         event[:result_class] = result.class.name
         result
       end
+    end
+
+    def progress_listener(tool_call)
+      return if @callbacks.fetch(:after_tool_progress, []).empty?
+
+      ->(progress) { run_callbacks(:after_tool_progress, tool_call, progress) }
+    end
+
+    def invoke_tool(tool, tool_call, arguments)
+      input = tool_call_input(tool_call)
+      result = input ? tool.resume(input, arguments) : tool.call(**arguments, tool_call:)
+      record_tool_call_input(tool_call, nil) if input
+      result
+    rescue MCP::InputRequiredError => e
+      record_tool_call_input(tool_call, e.to_h)
+      PAUSED
+    end
+
+    def waiting?
+      response = pending_tool_response
+      return false unless response
+
+      pending = pending_tool_calls(response).values
+      pending.any? && pending.all? { |tool_call| approval_pending?(tool_call) || input_pending?(tool_call) }
+    end
+
+    def input_pending?(tool_call)
+      Array(tool_call_input(tool_call)&.fetch('requests')).any? { |request| request['response'].nil? }
+    end
+
+    def tool_call_input(tool_call)
+      @input_checker ? @input_checker.call(tool_call) : @tool_call_inputs[tool_call.id]
+    end
+
+    def record_tool_call_input(tool_call, input)
+      @tool_call_inputs[tool_call.id] = input
+      @input_recorder&.call(tool_call, input)
+    end
+
+    def settle_input(request)
+      input = tool_call_input(request.tool_call) or raise ArgumentError, 'Unknown input request'
+      requests = input['requests'].map do |data|
+        next data unless data['key'] == request.key
+
+        pending = MCP::InputRequest.from_h(data)
+        yield pending
+        pending.to_h
+      end
+      record_tool_call_input(request.tool_call, input.merge('requests' => requests))
+      self
     end
 
     def apply_tool_choice(choice)

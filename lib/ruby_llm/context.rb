@@ -153,5 +153,12 @@ module RubyLLM
     def cache(*args, **kwargs, &)
       CachedContent.create(*args, **kwargs, context: self, &)
     end
+
+    # Connects to an MCP server using this context's configuration, so its
+    # connection settings apply to the server's requests and to its OAuth
+    # requests. Accepts the same arguments as RubyLLM.mcp.
+    def mcp(...)
+      MCP.define(...).new(context: self)
+    end
   end
 end

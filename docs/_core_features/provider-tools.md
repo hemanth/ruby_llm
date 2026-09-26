@@ -2,7 +2,7 @@
 layout: default
 title: Provider Tools
 parent: "Tools"
-nav_order: 3
+nav_order: 4
 description: Search the web, run code, and connect remote MCP tools through the same chat API
 redirect_from:
   - /server-tools
@@ -217,4 +217,4 @@ class ResearchAgent < RubyLLM::Agent
 end
 ```
 
-Tool history and approval decisions survive `Agent.find` and worker restarts. Run the [upgrade generator]({% link _reference/upgrading.md %}) for an existing app so its message and tool-call tables have the required columns.
+Tool history and approval decisions survive `Agent.find` and worker restarts. Apps upgrading from 1.16 get the required message and tool-call columns from the [2.0 upgrade](https://github.com/crmne/ruby_llm/blob/v2.0.0/docs/_reference/upgrading.md).

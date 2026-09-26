@@ -2,7 +2,7 @@
 layout: home
 title: RubyLLM
 nav_order: 1
-description: 'Build AI features in Ruby and Rails with chats, tools, agents, structured output, images, audio, and video across 18 providers.'
+description: 'Build AI features in Ruby and Rails with chats, tools, agents, structured output, images, audio, and video across 19 providers.'
 permalink: /
 redirect_from:
   - /guides/
@@ -52,7 +52,7 @@ hero:
 
 <section class="home-section home-band home-models-section">
   <div class="home-section-inner">
-    <h2 class="home-heading">18 providers. One Ruby API.</h2>
+    <h2 class="home-heading">19 providers. One Ruby API.</h2>
     <p class="home-lead">
       Build with the models you want. Move between hosted and local providers without rewriting your application, or connect an OpenAI-compatible endpoint.
     </p>
@@ -78,6 +78,7 @@ chat.ask "Hello!"
       <a href="https://elevenlabs.io" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/elevenlabs-text.svg' | relative_url }}" alt="ElevenLabs" class="logo-wide"></a>
       <a href="https://ai.google.dev" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/gemini-color.svg' | relative_url }}" alt="Gemini" class="logo-mark"><img src="{{ '/assets/images/providers/gemini-text.svg' | relative_url }}" alt="" class="logo-text"></a>
       <a href="https://gpustack.ai" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/gpustack-logo.png' | relative_url }}" alt="GPUStack" class="logo-wide"></a>
+      <a href="https://www.hetzner.com/" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/hetzner-color.svg' | relative_url }}" alt="" class="logo-mark"><span class="logo-wordmark">Hetzner</span></a>
       <a href="https://mistral.ai" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/mistral-color.svg' | relative_url }}" alt="Mistral AI" class="logo-mark"><img src="{{ '/assets/images/providers/mistral-text.svg' | relative_url }}" alt="" class="logo-text"></a>
       <a href="https://ollama.com" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/ollama.svg' | relative_url }}" alt="" class="logo-mark logo-mono"><span class="logo-wordmark">Ollama</span></a>
       <a href="https://ollama.com/cloud" target="_blank" rel="noreferrer" class="provider-logo"><img src="{{ '/assets/images/providers/ollama.svg' | relative_url }}" alt="" class="logo-mark logo-mono"><span class="logo-wordmark">Ollama Cloud</span></a>
@@ -194,6 +195,30 @@ class Weather < RubyLLM::Tool
 end
 
 chat.with_tools(Weather).ask "What's the weather in Berlin?"
+```
+{: .home-code-card }
+
+</div>
+    </div>
+
+    <div class="home-step">
+      <div class="home-step-text">
+        <h3 class="home-step-title">Connect to MCP servers</h3>
+        <p class="home-step-desc">Describe a Model Context Protocol server in a Ruby class. Its tools become the model's tools, and you choose which ones it sees.</p>
+        <a class="home-step-link" href="{% link _core_features/mcp.md %}">MCP client guide</a>
+      </div>
+      <div class="home-step-code home-code-grid home-code-grid--bare" markdown="1">
+
+```ruby
+class Linear < RubyLLM::MCP
+  url "https://mcp.linear.app/mcp"
+  inputs :user
+  bearer_token { user.linear_token }
+  only :list_issues, :get_issue
+end
+
+chat.with_mcp(Linear.new(user: current_user))
+    .ask "What's blocking the release?"
 ```
 {: .home-code-card }
 
@@ -361,8 +386,7 @@ RubyLLM.chat(model: "{{ site.models.openai_current }}")
       Use <a href="{% link _getting_started/configuration-connection.md %}#contexts-isolated-configurations">separate configurations for each tenant</a>
       and <a href="{% link _advanced/error-handling.md %}#automatic-retries">retries</a> when requests fail.
       Follow requests with <a href="{% link _advanced/instrumentation.md %}">instrumentation</a>,
-      or explore community gems for <a href="{% link _reference/ecosystem.md %}#rubyllmmcp">MCP</a>
-      and <a href="{% link _reference/ecosystem.md %}#rubyllmmonitoring">monitoring dashboards</a>.
+      or explore community gems for <a href="{% link _reference/ecosystem.md %}#rubyllmmonitoring">monitoring dashboards</a>.
     </p>
     <div class="home-code-cta-actions">
       <a class="home-button home-button--solid home-button--guides" href="{% link _getting_started/getting-started.md %}">Build your first feature</a>

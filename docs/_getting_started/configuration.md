@@ -107,6 +107,7 @@ RubyLLM.configure do |config|
   config.azure_api_base = String
   config.azure_api_key = String
   config.azure_ai_auth_token = String
+  config.azure_deployments = Hash # deployment name => model id
 
   # Bedrock
   config.bedrock_api_key = String
@@ -149,6 +150,10 @@ RubyLLM.configure do |config|
   # GPUStack
   config.gpustack_api_base = String
   config.gpustack_api_key = String
+
+  # Hetzner
+  config.hetzner_api_key = String
+  config.hetzner_api_base = String
 
   # Mistral
   config.mistral_api_key = String

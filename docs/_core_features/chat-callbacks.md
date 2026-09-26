@@ -16,7 +16,7 @@ After reading this guide, you will know:
 * Which lifecycle events you can register handlers for.
 * Why callbacks are additive and what replaced the 1.x `on_*` handlers.
 * How chat callbacks differ from retry- and cancellation-safe usage instrumentation.
-* How to observe tool calls and tool results as they happen.
+* How to observe tool calls, their progress, and tool results as they happen.
 * How to observe model fallback attempts.
 * When callbacks fire for streaming versus non-streaming requests.
 
@@ -48,6 +48,16 @@ chat.after_tool_result do |result|
 end
 ```
 
+A slow tool can report what it is doing before its result arrives:
+
+```ruby
+chat.after_tool_progress do |call, progress|
+  puts "#{call.name}: #{progress.message}"
+end
+```
+
+See [Reporting Progress]({% link _core_features/tool-execution.md %}#reporting-progress).
+
 ## Fallback Events
 
 ```ruby
@@ -66,7 +76,7 @@ end
 
 `after_message` observes transcript changes. A cancelled request may produce no message, so use `usage.ruby_llm` for accounting across provider attempts, including retries and cancellations. See [Cost and Usage Tracking]({% link _core_features/cost-and-usage-tracking.md %}) and [Instrumentation]({% link _advanced/instrumentation.md %}).
 
-The 1.x `on_*` handlers were replaced in 2.0. See [Upgrading]({% link _reference/upgrading.md %}#chat-callbacks) for the name changes.
+The 1.x `on_*` handlers were replaced in 2.0. See the [2.0 upgrade guide](https://github.com/crmne/ruby_llm/blob/v2.0.0/docs/_reference/upgrading.md#chat-callbacks) for the name changes.
 
 ## Next Steps
 

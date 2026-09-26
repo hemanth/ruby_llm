@@ -146,6 +146,18 @@ RSpec.describe RubyLLM::ActiveRecord::ChatMethods do
       expect(chat.model_id).to eq('made-up-deployment')
     end
 
+    it 'stores a declared Azure deployment with the metadata of the model it deploys' do
+      RubyLLM.config.azure_deployments = { 'gpt-4o-global' => 'gpt-4o' }
+      chat = Chat.create!(model: model_id)
+
+      chat.with_model('gpt-4o-global', provider: :azure)
+
+      expect(chat.model_id).to eq('gpt-4o-global')
+      expect(chat.model.metadata).to eq(RubyLLM.models.find('gpt-4o', provider: :azure).metadata.deep_stringify_keys)
+    ensure
+      RubyLLM.config.azure_deployments = nil
+    end
+
     it 'reuses a model row another process inserted after the lookup missed' do
       relation = RubyLLM::ActiveRecord::Model.all
       allow(RubyLLM::ActiveRecord::Model).to receive(:all).and_return(relation)
@@ -458,6 +470,28 @@ RSpec.describe RubyLLM::ActiveRecord::ChatMethods do
       expect(chat.provider_options).to eq(reasoning_effort: 'low')
     end
 
+    it 'passes tool progress to after_tool_progress' do
+      stub_const('ProgressTool', Class.new(RubyLLM::Tool) do
+        def execute
+          progress 'Working', value: 1, total: 2
+          'done'
+        end
+      end)
+      chat = Chat.create!(model: model_id).with_tools(ProgressTool)
+      call = tool_call(name: 'progress')
+      allow(chat.to_llm.provider).to receive(:complete).and_return(
+        RubyLLM::Message.new(role: :assistant, content: '', tool_calls: { call.id => call }),
+        RubyLLM::Message.new(role: :assistant, content: 'Finished')
+      )
+      reports = []
+
+      expect(chat.after_tool_progress { |call, progress| reports << [call.id, progress.message, progress.fraction] })
+        .to eq(chat)
+      chat.ask('Use the tool')
+
+      expect(reports).to eq([[call.id, 'Working', 0.5]])
+    end
+
     it 'persists completions added out of band' do
       chat = Chat.create!(model: model_id)
       response = RubyLLM::Message.new(role: :assistant, content: 'Batch response')
@@ -476,8 +510,8 @@ RSpec.describe RubyLLM::ActiveRecord::ChatMethods do
 
     it 'classifies every method defined on Chat' do
       integration_methods = %i[
-        approval_checker= cancellation_checker= fallback_errors raise_if_pending_tool_calls!
-        tool_prefs usage_entries usage_entries= usage_recorder=
+        approval_checker= cancellation_checker= fallback_errors input_checker= input_recorder=
+        raise_if_pending_tool_calls! tool_prefs usage_entries usage_entries= usage_recorder=
       ]
 
       missing_methods = RubyLLM::Chat.public_instance_methods(false) - Chat.public_instance_methods

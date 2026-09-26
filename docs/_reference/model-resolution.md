@@ -78,7 +78,7 @@ Provider preference puts first-party providers ahead of the aggregators that res
 | --- | --- |
 | First-party | `openai`, `anthropic`, `gemini`, `deepseek`, `mistral`, `cohere`, `perplexity`, `xai` |
 | Cloud platforms | `vertexai`, `bedrock` |
-| Aggregators and local | `openrouter`, `azure`, `ollama_cloud`, `ollama`, `gpustack` |
+| Aggregators and local | `openrouter`, `azure`, `hetzner`, `ollama_cloud`, `ollama`, `gpustack` |
 
 Preference decides the winner when several providers carry the model. Anthropic, Vertex AI, Bedrock, and OpenRouter all serve `claude-haiku-4-5`, and Anthropic outranks the rest, so the bare name resolves to Anthropic:
 
@@ -161,7 +161,7 @@ chat.model.metadata      # => { warning: "Assuming model exists, capabilities ma
 
 You are responsible for using only the features the model actually supports. The same flag works on `RubyLLM.embed`, `RubyLLM.paint`, and `with_model`.
 
-> Local providers like Ollama and GPUStack assume models exist automatically. You can pull and run any model name without registering it first, and you don't need to pass the flag. Ollama Cloud does the same, because its catalog changes faster than the registry. So does Azure, because you name your own deployments.
+> Local providers like Ollama and GPUStack assume models exist automatically. You can pull and run any model name without registering it first, and you don't need to pass the flag. Ollama Cloud and Hetzner do the same, because their catalogs change faster than the registry. So does Azure, because you name your own deployments.
 {: .note }
 
 ## When Resolution Fails

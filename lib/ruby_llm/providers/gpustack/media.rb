@@ -3,8 +3,7 @@
 module RubyLLM
   module Providers
     class GPUStack
-      # Handles formatting of media content for GPUStack. Images ride inline
-      # as base64 data URLs so the cluster never has to fetch remote sources.
+      # Formats media content for GPUStack chat completions.
       module Media
         module_function
 
@@ -38,7 +37,7 @@ module RubyLLM
         def format_video(video)
           {
             type: 'video_url',
-            video_url: { url: video.url? ? video.source.to_s : video.for_llm }
+            video_url: { url: video.for_llm }
           }
         end
       end

@@ -55,6 +55,62 @@ RSpec.describe RubyLLM::Protocols::Gemini::Media do
         }
       )
     end
+
+    it 'sends high resolution when ultra high is requested for a PDF' do
+      attachment = RubyLLM::Attachment.new(StringIO.new('pdf bytes'), filename: 'page.pdf', resolution: :ultra_high)
+
+      parts = described_class.format_content('Read this page', [attachment])
+
+      expect(parts.second[:media_resolution]).to eq(level: 'MEDIA_RESOLUTION_HIGH')
+    end
+
+    it 'sets media_resolution on provider-managed files' do
+      file = RubyLLM::UploadedFile.new(id: 'files/abc', filename: 'video.mp4', mime_type: 'video/mp4')
+      attachment = RubyLLM::Attachment.new(file, resolution: :low)
+
+      parts = described_class.format_content('Watch this', [attachment])
+
+      expect(parts.second[:media_resolution]).to eq(level: 'MEDIA_RESOLUTION_LOW')
+    end
+
+    it 'sends ultra high resolution on images' do
+      image = RubyLLM::Attachment.new(File.expand_path('../../../fixtures/ruby.png', __dir__), resolution: :ultra_high)
+
+      parts = described_class.format_content('Read this', [image])
+
+      expect(parts.second[:media_resolution]).to eq(level: 'MEDIA_RESOLUTION_ULTRA_HIGH')
+    end
+
+    it 'sends high resolution when ultra high is requested for a video' do
+      file = RubyLLM::UploadedFile.new(id: 'files/abc', filename: 'video.mp4', mime_type: 'video/mp4')
+      attachment = RubyLLM::Attachment.new(file, resolution: :ultra_high)
+
+      parts = described_class.format_content('Watch this', [attachment])
+
+      expect(parts.second[:media_resolution]).to eq(level: 'MEDIA_RESOLUTION_HIGH')
+    end
+
+    it 'omits media_resolution on audio' do
+      attachment = RubyLLM::Attachment.new(File.expand_path('../../../fixtures/ruby.wav', __dir__), resolution: :low)
+
+      parts = described_class.format_content('Listen', [attachment])
+
+      expect(parts.second).not_to have_key(:media_resolution)
+    end
+
+    it 'omits media_resolution from standalone parts such as tool results' do
+      attachment = RubyLLM::Attachment.new(StringIO.new('pdf bytes'), filename: 'page.pdf', resolution: :high)
+
+      expect(described_class.format_content_attachment(attachment)).not_to have_key(:media_resolution)
+    end
+
+    it 'omits media_resolution when no resolution is set' do
+      attachment = RubyLLM::Attachment.new(StringIO.new('pdf bytes'), filename: 'page.pdf')
+
+      parts = described_class.format_content('Read this page', [attachment])
+
+      expect(parts.second).not_to have_key(:media_resolution)
+    end
   end
 
   describe '#build_response_content' do

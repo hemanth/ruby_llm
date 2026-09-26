@@ -47,12 +47,13 @@ RSpec/LeakyLocalVariable:
   Enabled: false
 RSpec/Output:
   Exclude:
-    - spec/fixtures/upgrade_compatibility/**/*.rb
+    - spec/fixtures/mcp/**/*.rb
 RSpec/SpecFilePathFormat:
   CustomTransform:
     DeepSeek: deepseek
     ElevenLabs: elevenlabs
     GPUStack: gpustack
+    OAuth: oauth
     OpenAI: openai
     OpenRouter: openrouter
     TypeSafe: typesafe

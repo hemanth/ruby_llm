@@ -171,6 +171,29 @@ RSpec.describe RubyLLM::Generators::Provider::Scaffold do
       expect(models).to include("'acme-cloud' => 'acme_cloud',")
     end
 
+    it 'keeps core wiring valid and sorted' do
+      create_core_fixture
+      FileUtils.cp(File.expand_path('../../../../.env.example', __dir__), File.join(dir, '.env.example'))
+
+      %w[Hetzner Zeta].each do |name|
+        described_class.new(name, mode: :core, destination: dir, api_base: "https://#{name.downcase}.example/v1",
+                                  models_dev_provider: name.downcase).generate
+      end
+
+      %w[lib/ruby_llm.rb lib/ruby_llm/models.rb spec/support/rubyllm_configuration.rb].each do |path|
+        _output, status = Open3.capture2e(RbConfig.ruby, '-c', File.join(dir, path))
+        expect(status.success?).to be(true), "#{path} does not parse"
+      end
+
+      env = File.readlines(File.join(dir, '.env.example'), chomp: true).grep(/\A[A-Z]/)
+      expect(env).to eq(env.sort)
+
+      configuration = File.read(File.join(dir, 'spec/support/rubyllm_configuration.rb'))
+      expect(configuration).to match(
+        /config\.gpustack_api_key = .*\n\s+config\.hetzner_api_base = .*\n\s+config\.hetzner_api_key = .*\n\s+# Disable/
+      )
+    end
+
     it 'resolves a shipped provider model without an explicit provider' do
       described_class.new('MiniMax', mode: :gem, destination: dir).generate
       models = [RubyLLM::Model.new(id: 'MiniMax-M3', name: 'MiniMax M3', provider: 'mini_max')]

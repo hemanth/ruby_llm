@@ -34,6 +34,7 @@ RubyLLM.configure do |config|
   config.azure_api_base = ENV['AZURE_API_BASE'] # Azure OpenAI or Foundry resource endpoint
   config.azure_api_key = ENV['AZURE_API_KEY'] # use this or
   config.azure_ai_auth_token = ENV['AZURE_AI_AUTH_TOKEN'] # this
+  # config.azure_deployments = { 'gpt-4o-global' => 'gpt-4o' } # optional deployment names
 
   # Bedrock
   config.bedrock_api_key = ENV['AWS_ACCESS_KEY_ID']
@@ -70,6 +71,10 @@ RubyLLM.configure do |config|
   # GPUStack
   config.gpustack_api_base = ENV['GPUSTACK_API_BASE']
   config.gpustack_api_key = ENV['GPUSTACK_API_KEY']
+
+  # Hetzner
+  config.hetzner_api_key = ENV['HETZNER_API_KEY'] # Token from the Hetzner Console
+  config.hetzner_api_base = ENV['HETZNER_API_BASE'] # Optional, defaults to https://inference.hetzner.com/api/v1
 
   # Mistral
   config.mistral_api_key = ENV['MISTRAL_API_KEY']
@@ -168,6 +173,27 @@ RubyLLM.models.by_provider(:ollama_cloud).map(&:id)
 
 Ollama Cloud does not support [structured output]({% link _core_features/structured-output.md %}); use local Ollama or another provider when you need a schema.
 
+## Hetzner
+
+Hetzner Inference serves open-weight models from Hetzner's data centers. Create an API token in the Hetzner Console and set `hetzner_api_key`:
+
+```ruby
+RubyLLM.configure do |config|
+  config.hetzner_api_key = ENV['HETZNER_API_KEY']
+end
+
+RubyLLM.chat(model: 'Qwen3.8-27B', provider: :hetzner).ask('Hello from Hetzner')
+```
+
+The service is experimental and changes its model selection often. RubyLLM accepts any model ID you give `:hetzner` without a registry entry, and `refresh` pulls the live catalog:
+
+```ruby
+RubyLLM.models.refresh
+RubyLLM.models.by_provider(:hetzner).map(&:id)
+```
+
+Hetzner models accept text and images. Other attachments raise `RubyLLM::UnsupportedAttachmentError` before the request is sent.
+
 ## Bedrock Credential Providers
 
 For IAM roles, assume-role flows, and rotating credentials, configure an AWS SDK credential provider instead of static keys:
@@ -219,6 +245,20 @@ These headers are optional and only needed for organization-specific billing or 
 Pass your Azure deployment name as `model:`. It can differ from the underlying model's name. Listing a model in the catalog does not mean your resource has a deployment for it.
 
 Set `azure_api_base` to your resource URL, deployment URL, or `/openai/v1` base. Use a deployment that supports the operation you call.
+
+When a deployment name differs from the model it deploys, declare it so RubyLLM uses that model's registry entry for pricing, limits, and capabilities:
+
+```ruby
+RubyLLM.configure do |config|
+  config.azure_api_base = "https://acme.openai.azure.com"
+  config.azure_deployments = { "gpt-4o-global" => "gpt-4o" }
+end
+
+chat = RubyLLM.chat(model: "gpt-4o-global", provider: :azure)
+chat.model.id # => "gpt-4o-global", the name sent to Azure
+```
+
+The chat keeps the deployment name for requests and takes everything else from the `gpt-4o` entry. In Rails, a model row created for the deployment takes that entry's metadata; a row that already existed keeps what it has. Names you don't declare are sent as given, and a declared model the registry doesn't know raises `RubyLLM::ConfigurationError`.
 
 For a custom Cohere embedding deployment name or a dedicated serverless endpoint, select the protocol in a context:
 

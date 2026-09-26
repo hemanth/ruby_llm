@@ -72,6 +72,7 @@ overcommit --install   # required: installs the git hooks that gate every commit
 | `overcommit --run` | Everything the pre-commit hook runs: RuboCop, Flay, archspec, RSpec. |
 | `bundle exec rubocop` | Lint (auto-corrects on commit). |
 | `bundle exec archspec check` | Architecture rules from `Archspec.rb`. |
+| `bundle exec rake conformance` | The official MCP client conformance suite against `RubyLLM::MCP` (needs Node). |
 | `bundle exec appraisal rails-8.0 rspec` | Rails version matrix (7.1 through 8.1, see `Appraisals`). |
 | `docs/bin/serve.sh` | Docs preview at localhost:4002. |
 
@@ -109,12 +110,11 @@ When you find provider vocabulary in the wrong layer, move it and add the rule t
 ## Rails integration rules
 
 - A persisted chat behaves like a plain chat. Whatever `Chat` can do, `acts_as_chat` records do through the same names, and `Agent.find` gives back the record with the agent's tools, instructions, and options applied.
-- RubyLLM owns `ruby_llm_models`, `ruby_llm_tool_calls`, `ruby_llm_usages`, and `ruby_llm_batches`. Applications own chats and messages. Schema changes go through the install generator for new apps and the upgrade generator for existing ones; both templates must move together.
+- RubyLLM owns `ruby_llm_models`, `ruby_llm_tool_calls`, `ruby_llm_usages`, `ruby_llm_batches`, and `ruby_llm_mcp_credentials`. Applications own chats and messages. Schema changes go through the install generator for new apps and the upgrade generator for apps on the last release; both must move together in the same change. The upgrade generator carries only the changes since the last release. Replace it each release instead of accumulating upgrade templates, and point apps on older releases to the upgrade guide in that release's documentation.
 - Persisted usage entries require both a provider and a model ID, with presence validation and `NOT NULL` constraints. Never invent a model to satisfy a migration. Existing rows without a model must be corrected from their original requests before upgrading. A standalone model-free operation may report usage without persisting it into a chat's ledger.
 - Persistence must survive other processes: cancellation, approvals, and the loop verbs read and write the database, and anything polled inside a job runs outside the query cache.
 - Generators write what a Rails scaffold would: omakase style, conventional paths, no starter prose, no TODO comments beyond the one place the developer has to type. An empty prompt file means no instructions.
 - Rails specs run against the dummy app in `spec/dummy`. Generator specs are tagged `:generator` and excluded from the pre-commit run because they are slow.
-- Upgrade compatibility is opt-in with `--mode copy`; rename remains the default. Preserve whole conversations changed by 2.0, require explicit version switches with affected activity paused, and retain required model references. Test rollback and resume against the actual 1.16 gem. Do not promise compatibility for writes that bypass the generated Active Record guards.
 
 ## Testing
 
@@ -146,3 +146,62 @@ When you find provider vocabulary in the wrong layer, move it and add the rule t
 - Front-matter `title` and `description` feed llms.txt and the social-card images. Keep descriptions to one compelling sentence and never use `&`, `<`, or `>` in them.
 - Cross-link with `{% link _collection/page.md %}`, never hard-coded URLs. Use the `site.models.*` ids from `docs/_config.yml` in examples so model names stay current.
 - A public API change is not done until its docs page changes in the same commit, and `docs/_reference/upgrading.md` records anything that breaks.
+
+<!-- github-automation: release-notes -->
+## Releases
+
+This section is maintained account-wide by
+[crmne/github-automation](https://github.com/crmne/github-automation) and is
+replaced when that policy changes. Do not edit it here. If it does not fit this
+repository, say so in a review or issue, and put repository-specific release
+steps in a separate section, which takes precedence.
+
+Never use em dashes in new or edited user-facing writing, including release
+titles, release notes, and agent responses. Use commas, colons, parentheses,
+or full stops. Existing text does not need to change just to follow this.
+
+The rest of this section applies only when this repository publishes GitHub
+releases. If it has none, skip it, and do not add tags, release workflows, or
+release-notes files just to follow it.
+
+Do not cut a release for every fix. Work accumulates on the default branch
+until there is something substantial to announce: a feature, or a batch of
+fixes worth a changelog entry. The exception is a regression in something just
+released, which goes out as soon as it is fixed.
+
+Before writing release notes, read the previous two stable releases and match
+their style. If there are fewer, read the most recent releases that exist,
+including prereleases, and follow their format.
+
+- Start with a short plain-language summary, followed by a download line when
+  the project ships binaries.
+- Include screenshots or short videos of the main user-visible changes.
+  Capture only synthetic demo content, never real user data. Host the media
+  where earlier releases do, such as release assets or files beside the notes.
+- Use `New` and `Fixed` sections as applicable, and `Known limitations` when
+  there are any. Lead each item with a bold user-facing result and credit who
+  did what with issue or pull request numbers ("By @x; thanks @y"),
+  acknowledging reporters separately from implementers.
+- Include a `Thanks` section listing contributors and reporters, and end with
+  `**Full changelog**:` and a link comparing the previous tag.
+- Write about what changed for the user, not the commit history. Describe
+  known limitations honestly.
+
+Every release description is these hand-written notes, never a list generated
+by GitHub, a changelog tool, or commit subjects. Commit the notes before
+tagging, in the repository's existing release-notes location, or as
+`packaging/release-notes/vX.Y.Z.md` when it has none. Any publishing path that
+uses the committed file works, for example `softprops/action-gh-release` with
+`body_path` and `generate_release_notes: false`, `gh release create
+--notes-file`, GoReleaser's `--release-notes`, or `gh release edit
+--notes-file` when another step creates the release.
+
+If the release path still generates its notes, switching it to the committed
+file is part of preparing the next release. Make a missing notes file stop the
+release before any tag or release is created.
+
+A release is not finished until every image, video, and download link in its
+notes loads. Upload the release media right after the release is published and
+before announcing it, then open the published release and check every image
+and link.
+<!-- /github-automation: release-notes -->

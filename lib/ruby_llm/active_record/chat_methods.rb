@@ -212,11 +212,11 @@ module RubyLLM
       # RubyLLM::Chat. Each behaves exactly as documented on RubyLLM::Chat,
       # then returns the record so calls chain.
       CHAINABLE_CHAT_DELEGATES = %i[
-        with_tools with_tool_options with_provider_tools with_fallbacks with_temperature
+        with_tools with_mcp with_tool_options with_provider_tools with_fallbacks with_temperature answer decline
         with_max_output_tokens with_thinking with_citations with_caching
         with_end_user with_compaction
         with_provider_options with_headers with_schema
-        before_request before_message after_message before_tool_call after_tool_result
+        before_request before_message after_message before_tool_call after_tool_result after_tool_progress
         before_fallback after_fallback
       ].freeze
 
@@ -225,6 +225,25 @@ module RubyLLM
       # :call-seq: with_tools(*tools)
       #
       # Applies Chat#with_tools and returns this record.
+
+      ##
+      # :method: with_mcp
+      # :call-seq: with_mcp(*servers)
+      #
+      # Applies Chat#with_mcp and returns this record.
+
+      ##
+      # :method: answer
+      # :call-seq: answer(request, **values)
+      #
+      # Applies Chat#answer and returns this record. The answer persists
+      # on the tool call, so any process can resume the call.
+
+      ##
+      # :method: decline
+      # :call-seq: decline(request)
+      #
+      # Applies Chat#decline and returns this record.
 
       ##
       # :method: with_tool_options
@@ -335,6 +354,12 @@ module RubyLLM
       # Applies Chat#after_tool_result and returns this record.
 
       ##
+      # :method: after_tool_progress
+      # :call-seq: after_tool_progress(&block)
+      #
+      # Applies Chat#after_tool_progress and returns this record.
+
+      ##
       # :method: before_fallback
       # :call-seq: before_fallback(&block)
       #
@@ -436,6 +461,25 @@ module RubyLLM
       #
       # Delegates to Chat#tools. See that method for arguments and return values.
 
+      ##
+      # :method: mcp
+      # :call-seq: mcp
+      #
+      # Delegates to Chat#mcp. See that method for arguments and return values.
+
+      ##
+      # :method: awaiting_input?
+      # :call-seq: awaiting_input?
+      #
+      # Delegates to Chat#awaiting_input?. See that method for arguments and return values.
+
+      ##
+      # :method: pending_inputs
+      # :call-seq: pending_inputs
+      #
+      # Delegates to Chat#pending_inputs. Requests persist on their tool
+      # calls, so they survive restarts.
+
       CHAINABLE_CHAT_DELEGATES.each do |name|
         define_method(name) do |*args, **kwargs, &block|
           to_llm.public_send(name, *args, **kwargs, &block)
@@ -449,7 +493,7 @@ module RubyLLM
 
       PASSTHROUGH_CHAT_DELEGATES = %i[
         caching citations compaction concurrency end_user fallbacks headers max_output_tokens provider_options
-        schema provider_tools temperature thinking tool_options tools
+        schema provider_tools temperature thinking tool_options tools mcp awaiting_input? pending_inputs
         add_completion count_tokens each render
       ].freeze
 
@@ -585,7 +629,11 @@ module RubyLLM
       #
       def ask_later(message = nil, with: nil)
         to_llm.raise_if_pending_tool_calls!
-        add_message(role: :user, content: message, attachments: with)
+        if message.is_a?(RubyLLM::MCP::Prompt)
+          message.messages.each { |prompt_message| add_message(prompt_message) }
+        else
+          add_message(role: :user, content: message, attachments: with)
+        end
         self
       end
 
@@ -800,6 +848,8 @@ module RubyLLM
         sync_messages(chat)
         chat.cancellation_checker = proc { consume_persisted_cancellation_request }
         chat.approval_checker = proc { |tool_call| persisted_tool_call_approval(tool_call) }
+        chat.input_checker = proc { |tool_call| persisted_tool_call_input(tool_call) }
+        chat.input_recorder = proc { |tool_call, input| persist_tool_call_input(tool_call, input) }
         install_persistence_callbacks(chat)
       end
 
@@ -811,6 +861,16 @@ module RubyLLM
 
         record.update!(approval: decision)
         self
+      end
+
+      def persisted_tool_call_input(tool_call)
+        record = RubyLLM::ActiveRecord::ToolCall.uncached { find_tool_call(tool_call.id) }
+        record.pending_input if record&.has_attribute?(:pending_input)
+      end
+
+      def persist_tool_call_input(tool_call, input)
+        record = find_tool_call(tool_call.id)
+        record.update!(pending_input: input) if record&.has_attribute?(:pending_input)
       end
 
       def persisted_tool_call_approval(tool_call)

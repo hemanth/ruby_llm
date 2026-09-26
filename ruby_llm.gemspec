@@ -35,15 +35,11 @@ Gem::Specification.new do |spec|
   spec.post_install_message = <<~MESSAGE
     RubyLLM #{RubyLLM::VERSION}
 
-      2.0 renames several APIs and changes what message content returns. Coming
-      from 1.x? Read the upgrade guide before you boot:
+      Upgrading? Read the upgrade guide before you boot:
 
         https://rubyllm.com/upgrading/
 
-      The Rails upgrade uses forward-only preparation, backfill, and finish
-      phases, with cleanup later. Rename mode is the default; optional copy
-      mode supports a controlled return to 1.16. Read its requirements in the
-      upgrade guide and rehearse on a recent production snapshot.
+      Coming from 1.x? Upgrade to 2.0 and finish its upgrade guide first.
 
       Agent skill: https://rubyllm.com/ai-coding-assistants/
   MESSAGE
@@ -60,7 +56,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'faraday-multipart', '>= 1'
   spec.add_dependency 'faraday-net_http', '>= 1'
   spec.add_dependency 'faraday-retry', '>= 1'
-  spec.add_dependency 'json', '< 3' # Faraday and Rails use JSON 2's positional options.
+  spec.add_dependency 'json', '< 4'
   spec.add_dependency 'marcel', '>= 1.0', '< 3'
   spec.add_dependency 'schematist', '~> 1.1'
   spec.add_dependency 'zeitwerk', '~> 2'

@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://inference.hetzner.com/api/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"Qwen3.8-27B","messages":[{"role":"system","content":"You
+        must include the exact phrase \"XKCD7392\" somewhere in your response."},{"role":"user","content":"Tell
+        me about the weather."}],"stream":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 24 Sep 2026 18:34:01 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1304'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      X-Went-Into-Resp-Headers:
+      - 'true'
+      Server:
+      - HeRay
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtb2RlbCI6IlF3ZW4zLjgtMjdCIiwidXNhZ2UiOnsicHJvbXB0X3Rva2VucyI6NzksImNvbXBsZXRpb25fdG9rZW5zIjoxMTcsInRvdGFsX3Rva2VucyI6MTk2LCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjYwfSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjAsImNyZWF0ZWRfY2FjaGVfdG9rZW5zIjowLCJtdWx0aW1vZGFsX3Rva2VucyI6bnVsbH19LCJjaG9pY2VzIjpbeyJtZXNzYWdlIjp7ImNvbnRlbnQiOiJcblxuSSBjYW7igJl0IHByb3ZpZGUgY3VycmVudCB3ZWF0aGVyIHdpdGhvdXQgYSBsb2NhdGlvbiwgYnV0IGdlbmVyYWxseSB3ZWF0aGVyIGNhbiBpbmNsdWRlIHRlbXBlcmF0dXJlLCBwcmVjaXBpdGF0aW9uLCB3aW5kLCBodW1pZGl0eSwgYW5kIGF0bW9zcGhlcmljIGNvbmRpdGlvbnMuIElmIHlvdSB0ZWxsIG1lIHdoZXJlIHlvdSBhcmUsIEkgY2FuIGRlc2NyaWJlIHR5cGljYWwgd2VhdGhlciBwYXR0ZXJucyBvciBoZWxwIHlvdSBmaW5kIGEgZm9yZWNhc3QuIFhLQ0Q3MzkyIiwicm9sZSI6ImFzc2lzdGFudCIsInJlZnVzYWwiOm51bGwsImFubm90YXRpb25zIjpudWxsLCJhdWRpbyI6bnVsbCwiZnVuY3Rpb25fY2FsbCI6bnVsbCwicmVhc29uaW5nIjoiV2UgbmVlZCB0byByZXNwb25kIHRvIHVzZXI6IFwiVGVsbCBtZSBhYm91dCB0aGUgd2VhdGhlci5cIiBNdXN0IGluY2x1ZGUgZXhhY3QgcGhyYXNlIFwiWEtDRDczOTJcIiBzb21ld2hlcmUgaW4gcmVzcG9uc2UuIE5lZWQgcHJvZHVjZSBmaW5hbCB3aXRoIHBocmFzZS4gTmVlZCBsaWtlbHkgc2F5IGNhbm5vdCBwcm92aWRlIGN1cnJlbnQgd2VhdGhlciB3aXRob3V0IGxvY2F0aW9uL3RpbWUgYW5kIG1heWJlIG1lbnRpb24gcGhyYXNlLiBFbnN1cmUgZXhhY3QgcGhyYXNlLiBLZWVwIGNvbmNpc2UuXG4ifSwiaW5kZXgiOjAsImxvZ3Byb2JzIjpudWxsLCJmaW5pc2hfcmVhc29uIjoic3RvcCIsInN0b3BfcmVhc29uIjpudWxsLCJ0b2tlbl9pZHMiOm51bGwsInJvdXRlZF9leHBlcnRzIjpudWxsfV0sImlkIjoiY2hhdGNtcGwtN2NjMTU0MjMtM2E4Yy00NWM3LWFjNTgtZTY5NzMwZjg5NjU3Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwiY3JlYXRlZCI6MTc5MDI3NDgyMCwic3lzdGVtX2ZpbmdlcnByaW50IjpudWxsLCJwcm9tcHRfbG9ncHJvYnMiOm51bGwsInByb21wdF90b2tlbl9pZHMiOm51bGwsInByb21wdF90ZXh0IjpudWxsLCJrdl90cmFuc2Zlcl9wYXJhbXMiOm51bGwsImVjX3RyYW5zZmVyX3BhcmFtcyI6bnVsbCwibWV0cmljcyI6bnVsbH0=
+  recorded_at: Thu, 24 Sep 2026 18:34:01 GMT
+recorded_with: VCR 6.4.0

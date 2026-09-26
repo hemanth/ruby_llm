@@ -28,5 +28,17 @@ RSpec.describe RubyLLM::Providers::GPUStack do
         %r{Unsupported attachment type: application/vnd.openxmlformats-officedocument.wordprocessingml.document}
       )
     end
+
+    it 'sends remote images inline, because clusters often cannot reach the internet' do
+      png = File.binread(File.expand_path('../../fixtures/ruby.png', __dir__))
+      stub_request(:get, 'https://example.com/photo.png')
+        .to_return(body: png, headers: { 'Content-Type' => 'image/png' })
+      attachment = RubyLLM::Attachment.new('https://example.com/photo.png')
+
+      formatted = provider.send(:format_content, 'Describe this image', [attachment])
+
+      data_url = "data:image/png;base64,#{Base64.strict_encode64(png)}"
+      expect(formatted.last).to eq(type: 'image_url', image_url: { url: data_url, detail: 'auto' })
+    end
   end
 end

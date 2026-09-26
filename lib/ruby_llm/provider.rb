@@ -256,7 +256,13 @@ module RubyLLM
       batch_tier = pricing.batch unless long_context_pricing?(pricing, tokens)
       batch = Cost.new(tokens:, model:, category:, tier: :batch) if batch_tier
       amounts = batch_cost_amounts(standard:, batch:, batch_tier:, model:)
-      Cost.from_h(amounts, tokens:)
+      Cost.new(amounts:, missing: batch_cost_missing(amounts, standard), reported: standard.tokens?)
+    end
+
+    def batch_cost_missing(amounts, standard) # :nodoc:
+      amounts.filter_map do |component, amount|
+        component if amount.nil? && (standard.missing?(component) || standard.public_send(component)&.positive?)
+      end
     end
 
     def batch_cost_amounts(standard:, batch:, batch_tier:, model:) # :nodoc:
@@ -579,6 +585,13 @@ module RubyLLM
       # differ from their request ids (Bedrock's region prefixes) override it.
       def resolve_registry_id(model_id, _models, _config = nil)
         model_id
+      end
+
+      # Returns the id of the model that the deployment named +model_id+
+      # runs, or +nil+ when +model_id+ is not a declared deployment.
+      # Providers whose requests name deployments override it.
+      def deployed_model_id(_model_id, _config = nil)
+        nil
       end
 
       # Returns the global registry of providers, a hash mapping slug

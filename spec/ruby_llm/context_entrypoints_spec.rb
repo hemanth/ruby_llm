@@ -21,6 +21,16 @@ RSpec.describe RubyLLM::Context do
     expect(context.embed_later('Hello', model: 'model', provider: :openai, dimensions: 256)).to be(request)
   end
 
+  it 'connects to MCP servers with the context' do
+    url = 'https://mcp.example.com/mcp'
+    mcp_class = Class.new(RubyLLM::MCP)
+    allow(RubyLLM::MCP).to receive(:define).with(url:, prefix: 'docs').and_return(mcp_class)
+    allow(mcp_class).to receive(:new).and_call_original
+
+    expect(context.mcp(url:, prefix: 'docs')).to be_a(mcp_class)
+    expect(mcp_class).to have_received(:new).with(context:)
+  end
+
   it 'extracts text with the context' do
     allow(RubyLLM::OCR).to receive(:ocr).with('report.pdf', model: 'model', context:).and_return(:ocr)
 

@@ -16,15 +16,18 @@ module RubyLLM
   # Models.find delegate to the global registry.
   class Models
     include Enumerable
+    include Lookup
 
     MODELS_DEV_PROVIDER_MAP = { # :nodoc:
       'openai' => 'openai',
       'anthropic' => 'anthropic',
+      'azure' => 'azure',
       'google' => 'gemini',
       'google-vertex' => 'vertexai',
       'amazon-bedrock' => 'bedrock',
       'cohere' => 'cohere',
       'deepseek' => 'deepseek',
+      'hetzner' => 'hetzner',
       'mistral' => 'mistral',
       'ollama-cloud' => 'ollama_cloud',
       'openrouter' => 'openrouter',
@@ -37,7 +40,7 @@ module RubyLLM
     # First-party providers outrank the aggregators that resell their models.
     PROVIDER_PREFERENCE = %w[
       openai anthropic gemini deepseek mistral cohere typesafe perplexity xai
-      vertexai bedrock openrouter azure ollama_cloud ollama gpustack
+      vertexai bedrock openrouter azure hetzner ollama_cloud ollama gpustack
     ].freeze # :nodoc:
     INSTANCE_DELEGATES = (Enumerable.instance_methods(false) + %i[
       all
@@ -216,7 +219,7 @@ module RubyLLM
 
         connection = Transport::Connection.basic do |f|
           f.request :json
-          f.response :json, parser_options: { symbolize_names: true }
+          f.use Transport::JsonResponse, parser_options: { symbolize_names: true }
         end
         { models: parse_models_dev_catalog(connection.get('https://models.dev/api.json').body), fetched: true }
       rescue StandardError => e
@@ -527,7 +530,7 @@ module RubyLLM
     # :startdoc:
 
     def initialize(models = nil) # :nodoc:
-      @models = models || self.class.load_models
+      replace_models(models || self.class.load_models)
     end
 
     # Replaces the models in this registry with those read from the JSON
@@ -535,7 +538,7 @@ module RubyLLM
     # <tt>RubyLLM.config.model_registry_file</tt>. A missing or invalid
     # file falls back to the registry bundled with the gem.
     def load_from_json(file = RubyLLM.config.model_registry_file)
-      @models = self.class.models_from_file(file) || self.class.models_from_bundle
+      replace_models(self.class.models_from_file(file) || self.class.models_from_bundle)
       self
     end
 
@@ -545,7 +548,7 @@ module RubyLLM
       store = RubyLLM.config.model_registry_store
       raise ModelRegistryError, 'No model registry store is configured' unless store
 
-      @models = Array(store.read)
+      replace_models(Array(store.read))
       self
     end
 
@@ -667,14 +670,14 @@ module RubyLLM
         merged_models = self.class.merge_models(self.class.models_from_provider_gems, main_models)
         persisted_models = RubyLLM.config.model_registry_store ? merged_models : main_models
         persist_registry!(persisted_models, published:)
-        @models = stored_models || merged_models
+        replace_models(stored_models || merged_models)
         payload.merge!(model_count: all.size, not_modified: published.not_modified)
       end
       self
     end
 
     def refresh_from_providers(remote_only: false) # :nodoc:
-      @models = self.class.fetch_merged_models(remote_only: remote_only)
+      replace_models(self.class.fetch_merged_models(remote_only: remote_only))
       self
     end
 
@@ -683,6 +686,11 @@ module RubyLLM
     end
 
     private
+
+    def replace_models(models)
+      @models = models.dup
+      @model_index = nil
+    end
 
     # Filters keep the unlisted entries so #find and #unlisted still see them
     # after a chain such as by_provider(:openai).unlisted.
@@ -778,52 +786,6 @@ module RubyLLM
       return unless store
 
       store.respond_to?(:description) ? store.description : store.class.name
-    end
-
-    def find_with_provider(model_id, provider, config = nil)
-      resolved_id = Aliases.resolve(model_id, provider)
-      resolved_id = resolve_provider_registry_id(resolved_id, provider, config)
-      all_including_unlisted.find { |m| m.id == resolved_id && m.provider == provider.to_s } ||
-        all_including_unlisted.find { |m| m.id == model_id && m.provider == provider.to_s } ||
-        raise_model_not_found(model_id, provider: provider)
-    end
-
-    def resolve_provider_registry_id(model_id, provider, config = nil)
-      provider_class = Provider.resolve(provider)
-      return model_id unless provider_class
-
-      provider_class.resolve_registry_id(model_id, self, config || RubyLLM.config)
-    end
-
-    # A name can be one provider's exact id and another's alias:
-    # claude-opus-4 is exact on vertexai, an alias on anthropic.
-    # Provider preference settles it, not the kind of match.
-    def find_without_provider(model_id)
-      resolved_id = Aliases.resolve(model_id)
-      matches = all_including_unlisted.select { |m| [model_id, resolved_id].include?(m.id) }
-                                      .sort_by { |m| m.id == model_id ? 0 : 1 }
-
-      preferred_match(matches) || raise_model_not_found(model_id)
-    end
-
-    def raise_model_not_found(model_id, provider: nil)
-      message = "Unknown model: #{model_id.inspect}"
-      message = "#{message} for provider: #{provider.inspect}" if provider
-
-      raise ModelNotFoundError, "#{message}. #{refresh_registry_guidance}"
-    end
-
-    def refresh_registry_guidance
-      'If the model exists at the provider, refresh the registry with `RubyLLM.models.refresh`.'
-    end
-
-    def preferred_match(candidates)
-      return candidates.first if candidates.size == 1
-
-      candidates.min_by do |model|
-        index = PROVIDER_PREFERENCE.index(model.provider)
-        [model.unlisted? ? 1 : 0, index || PROVIDER_PREFERENCE.length]
-      end
     end
   end
 end
