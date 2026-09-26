@@ -237,6 +237,7 @@ module RubyLLM
     #     puts message.content
     #   end
     #
+    # Raises Error when the provider returns malformed result indices.
     def messages
       return @messages if @messages
 
@@ -287,6 +288,7 @@ module RubyLLM
 
     def collect_results
       results = @provider.batch_results(id, batch_protocol: @batch_protocol)
+      validate_result_indices(results)
       slots = Array.new(result_slot_count(results))
 
       results.each do |index, result, failure_status|
@@ -299,8 +301,22 @@ module RubyLLM
       slots
     end
 
+    def validate_result_indices(results)
+      count = known_request_count
+      indices = results.map(&:first)
+      invalid = indices.find { |index| index.negative? || (count && index >= count) }
+      raise Error, "Invalid batch result index: #{invalid}" if invalid
+
+      duplicate, = indices.tally.find { |_, occurrences| occurrences > 1 }
+      raise Error, "Duplicate batch result index: #{duplicate}" if duplicate
+    end
+
+    def known_request_count
+      chats&.size || requests&.size || @request_count
+    end
+
     def result_slot_count(results)
-      chats&.size || requests&.size || @request_count || ((results.map(&:first).max || -1) + 1)
+      known_request_count || ((results.map(&:first).max || -1) + 1)
     end
 
     def fill_missing_statuses(size)
